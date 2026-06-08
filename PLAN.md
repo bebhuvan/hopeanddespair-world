@@ -9,6 +9,7 @@
 [`CHARTS.md`](CHARTS.md) (the chart vocabulary — kit by job, not type) ·
 [`EXPLAINERS.md`](EXPLAINERS.md) (the explainer repertoire — our moat) ·
 [`PERFORMANCE.md`](PERFORMANCE.md) (fast from day one — the budget + enforcement) ·
+[`DATA.md`](DATA.md) (ingestion & provenance — adapters, validation, openness, the datasets) ·
 this file (build plan, scaling, schema, phases) · `idea.md` (original brief, superseded
 where it conflicts).
 
