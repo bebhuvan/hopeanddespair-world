@@ -1,0 +1,68 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const questions = (await getCollection('questions')).sort((a, b) => a.data.order - b.data.order);
+const published = questions.filter((q) => q.data.status === 'published');
+const drafts = questions.filter((q) => q.data.status !== 'published');
+---
+<BaseLayout title="Archive — Hope & Despair" description="Every question in the atlas.">
+  <header class="ahead">
+    <p class="kicker">Archive</p>
+    <h1>Every question.</h1>
+    <p class="lead">The complete index. The <a href="/">atlas</a> places these on the hope↔despair spectrum; here
+      they are plain and chronological. Subscribe via <a href="/rss.xml">RSS</a>.</p>
+  </header>
+
+  <ol class="alist">
+    {published.map((q) => (
+      <li>
+        <a href={`/questions/${q.id}`}>
+          <span class="num">{q.data.kickerNumber}</span>
+          <span class="body">
+            <span class="title">{q.data.question}</span>
+            <span class="meta">{q.data.theme} · {q.data.verdict}</span>
+          </span>
+          <span class="go">Read →</span>
+        </a>
+      </li>
+    ))}
+    {drafts.map((q) => (
+      <li class="draft">
+        <a href={`/questions/${q.id}`}>
+          <span class="num">{q.data.kickerNumber}</span>
+          <span class="body">
+            <span class="title">{q.data.question}</span>
+            <span class="meta">{q.data.theme} · <em>being written</em></span>
+          </span>
+          <span class="go">Preview →</span>
+        </a>
+      </li>
+    ))}
+  </ol>
+</BaseLayout>
+
+<style>
+  .ahead { padding-block: clamp(3rem, 8vh, 5rem) 0; max-width: 54rem; }
+  .kicker { font-family: var(--font-label); font-size: 0.72rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--accent); }
+  h1 { font-family: var(--font-display); font-weight: 300; font-size: clamp(2.4rem, 6vw, 4rem); letter-spacing: -0.024em; margin-top: 1.2rem; }
+  .lead { max-width: 60ch; margin-top: 1.4rem; font-size: 1.15rem; line-height: 1.6; color: var(--fg-2); }
+  .lead a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--brass-dim); }
+
+  .alist { list-style: none; margin-top: clamp(2rem, 5vh, 3.5rem); }
+  .alist li { border-top: 1px solid var(--rule); }
+  .alist li:last-child { border-bottom: 1px solid var(--rule); }
+  .alist a {
+    display: grid; grid-template-columns: 2.6rem 1fr auto; gap: 0 clamp(1rem, 3vw, 2rem); align-items: baseline;
+    padding-block: clamp(1.3rem, 3vh, 1.9rem); text-decoration: none; color: inherit;
+    transition: padding-left 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .alist a:hover { padding-left: 0.6rem; }
+  .num { font-family: var(--font-mono); font-size: 0.9rem; color: var(--fg-muted); }
+  .title { font-family: var(--font-display); font-weight: 360; font-size: clamp(1.3rem, 2.6vw, 1.9rem); line-height: 1.08; letter-spacing: -0.018em; display: block; }
+  .meta { font-family: var(--font-label); font-size: 0.74rem; color: var(--fg-muted); margin-top: 0.35rem; display: block; }
+  .meta em { font-style: italic; }
+  .go { font-family: var(--font-label); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent); opacity: 0; transition: opacity 0.3s; }
+  .alist a:hover .go { opacity: 1; }
+  .draft .title { color: var(--fg-2); }
+</style>

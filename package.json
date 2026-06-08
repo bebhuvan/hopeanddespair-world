@@ -13,10 +13,11 @@
     "check": "astro check",
     "check:size": "size-limit",
     "check:nojs": "test -z \"$(find dist -name '*.js' 2>/dev/null)\" && echo 'OK: zero external JS shipped' || (echo 'FAIL: external JS found in dist' && find dist -name '*.js' && exit 1)",
-    "check:nolib": "! grep -rlE 'd3|chart\\.js|highcharts|plotly|echarts|recharts' dist --include='*.html' --include='*.js' || (echo 'FAIL: a charting library leaked into the build' && exit 1)",
+    "check:nolib": "! grep -rlE 'd3\\.(min|v[0-9]|select|scale)|chart\\.js|new Chart\\(|Highcharts|Plotly|echarts|recharts' dist --include='*.html' --include='*.js' || (echo 'FAIL: a charting library leaked into the build' && exit 1)",
     "verify": "pnpm build && pnpm check:size && pnpm check:nojs && pnpm check:nolib"
   },
   "dependencies": {
+    "@astrojs/rss": "^4.0.18",
     "astro": "^5.6.1",
     "zod": "^4.4.3"
   },

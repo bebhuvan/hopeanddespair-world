@@ -1,17 +1,25 @@
 ---
+import { repoBaseUrl } from '../lib/repo';
 const year = 2026;
+const repo = repoBaseUrl();
 ---
 <footer>
   <span>CC BY 4.0 · attribution to hopeanddespair.world · source data CC-BY · &copy; {year}</span>
-  <span><a href="/about">About &amp; method</a></span>
+  <nav class="flinks">
+    <a href="/archive">Archive</a>
+    <a href="/about">About</a>
+    <a href="/rss.xml">RSS</a>
+    {repo && <a href={repo} rel="noopener">Source on GitHub ↗</a>}
+  </nav>
 </footer>
 
 <style>
   footer {
     margin-top: 3rem; padding-block: 2.4rem 4rem; border-top: 1px solid var(--rule);
-    display: flex; flex-wrap: wrap; gap: 1.2rem 3rem; justify-content: space-between;
+    display: flex; flex-wrap: wrap; gap: 1.2rem 3rem; justify-content: space-between; align-items: baseline;
     font-family: var(--font-label); font-size: 0.74rem; font-weight: 500; color: var(--fg-muted);
   }
+  .flinks { display: flex; flex-wrap: wrap; gap: 1.4rem; }
   footer a { color: var(--fg-muted); text-decoration: none; border-bottom: 1px solid var(--rule); }
   footer a:hover { color: var(--accent); }
 </style>
