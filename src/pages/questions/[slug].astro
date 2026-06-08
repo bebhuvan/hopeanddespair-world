@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { miniLine, fullChart, signalRead } from '../../lib/charts';
 import { windowSeries } from '../../lib/smooth';
+import { gitHistory, fileHistoryUrl } from '../../lib/repo';
 
 export async function getStaticPaths() {
   const questions = await getCollection('questions');
@@ -54,6 +55,12 @@ const movements = (published ? d.movements ?? [] : []).map((mv) => {
   const r = fullChart({ ...mv.chart, series });
   return { ...mv, ...r, real: !!ref, prov: ref?.provenance ?? null, recipe: ref?.recipe ?? null, dataRef: mv.chart.dataRef };
 });
+
+// Revision history — generated from git (the living-atlas trail). Diff links resolve once a
+// remote exists; until then, entries show the short SHA.
+const contentPath = `src/content/questions/${q.id}.md`;
+const history = gitHistory(contentPath);
+const histUrl = fileHistoryUrl(contentPath);
 
 const title = `${d.question} — Hope & Despair`;
 const sec = ['I', 'II', 'III', 'IV', 'V', 'VI'];
@@ -240,14 +247,26 @@ const sec = ['I', 'II', 'III', 'IV', 'V', 'VI'];
     </section>
   )}
 
-  {published && d.revisions && (
+  {published && (history.length > 0 || d.revisions) && (
     <section class="section">
       <div class="label"><span class="nn">{sec[5]}</span> Revision history</div>
       <ol class="changelog">
-        {d.revisions.map((r) => (<li><time>{r.date}</time><span class="txt" set:html={r.text} /></li>))}
+        {history.length > 0
+          ? history.map((r) => (
+              <li>
+                <time>{r.date}</time>
+                <span class="txt">{r.subject}{' '}
+                  {r.url
+                    ? <a href={r.url} rel="noopener">View diff →</a>
+                    : <span class="sha">{r.short}</span>}
+                </span>
+              </li>
+            ))
+          : d.revisions!.map((r) => (<li><time>{r.date}</time><span class="txt" set:html={r.text} /></li>))}
       </ol>
-      <p class="repo-note">This article is kept up to date as data revises. Every edit — to a number, a word, or a
-        chart — is tracked in the open.</p>
+      <p class="repo-note">Generated from the commit history — every edit to a number, a word, or a chart is
+        tracked in the open.{' '}
+        {histUrl && <a href={histUrl} rel="noopener">Browse the full history &amp; diffs on GitHub →</a>}</p>
     </section>
   )}
 </BaseLayout>
@@ -413,6 +432,9 @@ const sec = ['I', 'II', 'III', 'IV', 'V', 'VI'];
   .changelog li::before { content: ""; position: absolute; left: -5px; top: 0.35rem; width: 9px; height: 9px; border-radius: 50%; background: var(--bg); border: 1.5px solid var(--accent); }
   .changelog time { font-family: var(--font-mono); font-size: 0.76rem; color: var(--accent); display: block; margin-bottom: 0.25rem; }
   .changelog .txt { font-size: 0.98rem; color: var(--fg-2); line-height: 1.5; }
+  .changelog .sha { font-family: var(--font-mono); font-size: 0.72rem; color: var(--fg-muted); }
+  .changelog a, .repo-note a { color: var(--accent); border-bottom: 1px solid var(--brass-dim); text-decoration: none; }
+  .changelog a:hover, .repo-note a:hover { color: var(--fg); }
   .repo-note { margin-top: 1.6rem; color: var(--fg-muted); font-size: 0.97rem; max-width: 60ch; }
 
   .pull { font-family: var(--font-display); font-weight: 300; font-style: italic; font-size: clamp(2rem, 5vw, 3.6rem); line-height: 1.08; letter-spacing: -0.02em; text-align: center; max-width: 18ch; margin: clamp(3.5rem, 9vh, 6.5rem) auto; color: var(--fg); }
