@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "homicide-rates-across-western-europe",
+  "vintage": "2026-06-08",
+  "url": "https://ourworldindata.org/grapher/homicide-rates-across-western-europe",
+  "checksum": "1dab681a11a7822c617120f196768e28d33a29193e3b7cfd3b35524d0876edab",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-08T10:16:55.726Z",
+  "adapterVersion": "1.0.0"
+}

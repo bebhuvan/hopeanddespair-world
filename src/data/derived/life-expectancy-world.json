@@ -1,0 +1,352 @@
+{
+  "indicatorId": "health.life_expectancy.world",
+  "entity": "OWID_WRL",
+  "entityName": "World",
+  "unit": "years",
+  "points": [
+    {
+      "t": 1770,
+      "value": 28.5
+    },
+    {
+      "t": 1800,
+      "value": 28.5
+    },
+    {
+      "t": 1820,
+      "value": 29
+    },
+    {
+      "t": 1850,
+      "value": 29.3
+    },
+    {
+      "t": 1870,
+      "value": 29.7
+    },
+    {
+      "t": 1900,
+      "value": 32
+    },
+    {
+      "t": 1913,
+      "value": 34.1
+    },
+    {
+      "t": 1950,
+      "value": 46.3944
+    },
+    {
+      "t": 1951,
+      "value": 47.1259
+    },
+    {
+      "t": 1952,
+      "value": 48.2183
+    },
+    {
+      "t": 1953,
+      "value": 48.809
+    },
+    {
+      "t": 1954,
+      "value": 49.6514
+    },
+    {
+      "t": 1955,
+      "value": 50.2055
+    },
+    {
+      "t": 1956,
+      "value": 50.7373
+    },
+    {
+      "t": 1957,
+      "value": 51.0636
+    },
+    {
+      "t": 1958,
+      "value": 51.6151
+    },
+    {
+      "t": 1959,
+      "value": 49.5818
+    },
+    {
+      "t": 1960,
+      "value": 47.8198
+    },
+    {
+      "t": 1961,
+      "value": 50.3459
+    },
+    {
+      "t": 1962,
+      "value": 53.2416
+    },
+    {
+      "t": 1963,
+      "value": 53.7161
+    },
+    {
+      "t": 1964,
+      "value": 54.2603
+    },
+    {
+      "t": 1965,
+      "value": 53.9975
+    },
+    {
+      "t": 1966,
+      "value": 54.5644
+    },
+    {
+      "t": 1967,
+      "value": 55.0678
+    },
+    {
+      "t": 1968,
+      "value": 55.6181
+    },
+    {
+      "t": 1969,
+      "value": 55.9999
+    },
+    {
+      "t": 1970,
+      "value": 56.2664
+    },
+    {
+      "t": 1971,
+      "value": 56.0193
+    },
+    {
+      "t": 1972,
+      "value": 57.2155
+    },
+    {
+      "t": 1973,
+      "value": 57.6923
+    },
+    {
+      "t": 1974,
+      "value": 58.0614
+    },
+    {
+      "t": 1975,
+      "value": 58.2681
+    },
+    {
+      "t": 1976,
+      "value": 58.5754
+    },
+    {
+      "t": 1977,
+      "value": 59.1539
+    },
+    {
+      "t": 1978,
+      "value": 59.5129
+    },
+    {
+      "t": 1979,
+      "value": 60.1571
+    },
+    {
+      "t": 1980,
+      "value": 60.502
+    },
+    {
+      "t": 1981,
+      "value": 60.9187
+    },
+    {
+      "t": 1982,
+      "value": 61.3435
+    },
+    {
+      "t": 1983,
+      "value": 61.5211
+    },
+    {
+      "t": 1984,
+      "value": 61.8663
+    },
+    {
+      "t": 1985,
+      "value": 62.2092
+    },
+    {
+      "t": 1986,
+      "value": 62.7297
+    },
+    {
+      "t": 1987,
+      "value": 63.1809
+    },
+    {
+      "t": 1988,
+      "value": 63.3672
+    },
+    {
+      "t": 1989,
+      "value": 63.7817
+    },
+    {
+      "t": 1990,
+      "value": 63.955
+    },
+    {
+      "t": 1991,
+      "value": 64.0642
+    },
+    {
+      "t": 1992,
+      "value": 64.2879
+    },
+    {
+      "t": 1993,
+      "value": 64.4334
+    },
+    {
+      "t": 1994,
+      "value": 64.2995
+    },
+    {
+      "t": 1995,
+      "value": 64.8817
+    },
+    {
+      "t": 1996,
+      "value": 65.1995
+    },
+    {
+      "t": 1997,
+      "value": 65.5406
+    },
+    {
+      "t": 1998,
+      "value": 65.7408
+    },
+    {
+      "t": 1999,
+      "value": 66.0412
+    },
+    {
+      "t": 2000,
+      "value": 66.4333
+    },
+    {
+      "t": 2001,
+      "value": 66.7531
+    },
+    {
+      "t": 2002,
+      "value": 67.068
+    },
+    {
+      "t": 2003,
+      "value": 67.4015
+    },
+    {
+      "t": 2004,
+      "value": 67.7449
+    },
+    {
+      "t": 2005,
+      "value": 68.1405
+    },
+    {
+      "t": 2006,
+      "value": 68.6137
+    },
+    {
+      "t": 2007,
+      "value": 69.0316
+    },
+    {
+      "t": 2008,
+      "value": 69.3017
+    },
+    {
+      "t": 2009,
+      "value": 69.6812
+    },
+    {
+      "t": 2010,
+      "value": 70.089
+    },
+    {
+      "t": 2011,
+      "value": 70.4033
+    },
+    {
+      "t": 2012,
+      "value": 70.824
+    },
+    {
+      "t": 2013,
+      "value": 71.1417
+    },
+    {
+      "t": 2014,
+      "value": 71.4038
+    },
+    {
+      "t": 2015,
+      "value": 71.606
+    },
+    {
+      "t": 2016,
+      "value": 71.8768
+    },
+    {
+      "t": 2017,
+      "value": 72.067
+    },
+    {
+      "t": 2018,
+      "value": 72.3885
+    },
+    {
+      "t": 2019,
+      "value": 72.6093
+    },
+    {
+      "t": 2020,
+      "value": 71.9166
+    },
+    {
+      "t": 2021,
+      "value": 70.865
+    },
+    {
+      "t": 2022,
+      "value": 72.6398
+    },
+    {
+      "t": 2023,
+      "value": 73.1694
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "life_expectancy_0",
+    "url": "https://ourworldindata.org/grapher/life-expectancy",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-08",
+    "checksum": "6336e80067d72cd910e5b03a4150bbb203fb8f22c6a9c0c43e91aba07038720b",
+    "definition": "Period life expectancy is the number of years the average person born in a certain year would live if they experienced the same chances of dying at each age as people did that year.",
+    "attribution": "Our World in Data",
+    "primarySource": "UN WPP; Human Mortality Database; Riley (2005)"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity World"
+    }
+  ],
+  "derivedFrom": [
+    "OWID_WRL"
+  ]
+}

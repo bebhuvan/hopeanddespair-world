@@ -65,6 +65,9 @@ const questions = defineCollection({
       source: z.string(),
       chart: z.object({
         id: z.string(),
+        // when set, the page replaces the inline (illustrative) series with the real derived
+        // series produced by the pipeline (src/data/derived/<dataRef>.json) + its provenance.
+        dataRef: z.string().optional(),
         ymax: z.number(),
         yTicks: z.array(z.number()),
         xTicks: z.array(z.number()),

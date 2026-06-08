@@ -14,7 +14,7 @@ atlas:
   despair: { pos: 0.68, lens: "since 2020" }
 
 caveats:
-  - "Figures in this draft are <b>illustrative</b> pending real ingestion — treat absolute levels as placeholders."
+  - "Mixed sourcing during the build-out: charts that carry a <b>source line and a data download</b> are real; the rest are still <b>illustrative</b> placeholders pending ingestion."
   - "“Violence” here means <b>direct lethal violence</b>; it excludes coercion, structural harm, and the threat of force."
   - "Pre-1900 numbers are <b>regional and sparse</b> — the global long arc is reconstructed, not measured."
   - "The composite verdict is an <b>editorial</b> reading of the signals, not a computed index. Full method below."
@@ -47,13 +47,14 @@ movements:
     dropCap: true
     explainer: "Where parish and coroner records survive, the everyday violence of private life has collapsed. A medieval European was tens of times more likely to be murdered than a person living in the same cities today — a decline so long it predates the state’s monopoly on force."
     sidenote: { mark: "a", text: "Pre-modern figures come from coroners’ rolls and court archives — reliable in their <em>direction</em>, rough in their absolute level." }
-    captionLeft: "<b>Homicides per 100,000 / year</b> · Western Europe"
-    captionRight: "1300 — 2020"
-    source: "Source · Eisner (2003); Our World in Data — illustrative"
+    captionLeft: "<b>Homicides per 100,000 / year</b> · Western Europe (mean of 12 countries)"
+    captionRight: "1250 — 2023"
+    source: "Source · Our World in Data — Eisner (2003) & WHO Mortality Database · CC BY 4.0"
     chart:
       id: "A"
-      ymax: 52
-      yTicks: [0,10,20,30,40,50]
+      dataRef: "homicide-western-europe"
+      ymax: 40
+      yTicks: [0,10,20,30,40]
       xTicks: [1300,1500,1700,1900,2020]
       series:
         - { name: "Homicide", color: "hope", data: [[1300,41],[1400,45],[1500,32],[1600,19],[1700,11],[1800,7.5],[1900,3.2],[1950,1.4],[2000,1.3],[2020,1.1]] }

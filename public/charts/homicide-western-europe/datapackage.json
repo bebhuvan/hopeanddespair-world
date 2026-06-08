@@ -1,0 +1,38 @@
+{
+  "name": "violence-homicide_rate-western_europe",
+  "title": "Homicide rate, Western Europe (long run) — unweighted mean across 12 Western European countries per year",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/homicide-rates-across-western-europe"
+    }
+  ],
+  "created": "2026-06-08",
+  "resources": [
+    {
+      "name": "violence-homicide_rate-western_europe",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "violence_homicide_rate_western_europe",
+            "type": "number",
+            "unit": "homicides per 100,000 people"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "health-life_expectancy-world",
+  "title": "Period life expectancy is the number of years the average person born in a certain year would live if they experienced the same chances of dying at each age as people did that year.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/life-expectancy"
+    }
+  ],
+  "created": "2026-06-08",
+  "resources": [
+    {
+      "name": "health-life_expectancy-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "health_life_expectancy_world",
+            "type": "number",
+            "unit": "years"
+          }
+        ]
+      }
+    }
+  ]
+}

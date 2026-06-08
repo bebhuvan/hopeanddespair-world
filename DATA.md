@@ -280,6 +280,17 @@ some IHME) — chart-and-link, don't re-host.
 
 ## 12. Day-1 build plan
 
+> **Status (2026-06-08): the loop is built and proven end-to-end.** `pnpm data` runs the
+> pipeline: the **OWID adapter** fetches real series, snapshots them (checksum + vintage),
+> the validation core passes them, `derive` records the recipe, and artifacts are emitted
+> (`src/data/derived/*.json`, `public/charts/<id>/{data.csv,datapackage.json,lineage.json}`).
+> The violence article's "seven centuries" chart now renders **real Our World in Data**
+> homicide data (Eisner + WHO, CC BY) with a working **"How this number was made"** panel and
+> data downloads — at 8.8 kB, zero JS. Framework files: `registry/indicators.ts`,
+> `scripts/ingest/owid.ts`, `scripts/lib/{validate,derive,provenance}.ts`, `scripts/pipeline.ts`,
+> `src/lib/data/types.ts`. Next: World Bank + WPP adapters; wire the remaining article charts.
+
+
 1. **Registry + canonical schema + entity table** — the backbone (§4–6), with Frictionless
    `datapackage.json` output.
 2. **Validation core** (§7) with Zod + golden-test harness — wire into `pnpm verify`/CI.

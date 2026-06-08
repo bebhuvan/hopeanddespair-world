@@ -37,9 +37,22 @@ if (published && d.evidence) {
   recentCol = tempCol(ev.recentTemp);
 }
 
+// Real derived series produced by the pipeline (DATA.md). When a movement's chart has a
+// dataRef, swap in the real points + carry its provenance for the "How this number was made"
+// panel and the data download. Charts without a dataRef remain illustrative.
+const derivedSeries = import.meta.glob<{ default: any }>('../../data/derived/*.json', { eager: true });
+const derivedById: Record<string, any> = {};
+for (const [path, mod] of Object.entries(derivedSeries)) {
+  derivedById[path.split('/').pop()!.replace('.json', '')] = (mod as any).default;
+}
+
 const movements = (published ? d.movements ?? [] : []).map((mv) => {
-  const r = fullChart({ ...mv.chart, series: mv.chart.series.map((s) => ({ ...s, color: COL[s.color] })) });
-  return { ...mv, ...r };
+  const ref = mv.chart.dataRef ? derivedById[mv.chart.dataRef] : null;
+  const series = ref
+    ? [{ name: mv.chart.series[0]?.name ?? 'Series', color: COL[mv.chart.series[0]?.color ?? 'hope'], data: ref.points.map((p: any) => [p.t, p.value]) }]
+    : mv.chart.series.map((s) => ({ ...s, color: COL[s.color] }));
+  const r = fullChart({ ...mv.chart, series });
+  return { ...mv, ...r, real: !!ref, prov: ref?.provenance ?? null, recipe: ref?.recipe ?? null, dataRef: mv.chart.dataRef };
 });
 
 const title = `${d.question} — Hope & Despair`;
@@ -129,7 +142,34 @@ const sec = ['I', 'II', 'III', 'IV', 'V', 'VI'];
           <div class="figure">
             <div class="cap"><span set:html={mv.captionLeft} /><span>{mv.captionRight}</span></div>
             <svg viewBox={mv.viewBox} aria-hidden="true" set:html={mv.inner} />
-            <div class="fig-foot"><div class="src">{mv.source}</div></div>
+            <div class="fig-foot">
+              {mv.real && mv.dataRef && (
+                <div class="fig-tools">
+                  <a class="ftool" href={`/charts/${mv.dataRef}/data.csv`} download>↓ Data (CSV)</a>
+                  <a class="ftool" href={`/charts/${mv.dataRef}/datapackage.json`}>↓ Data package</a>
+                </div>
+              )}
+              <div class="src">{mv.source}</div>
+            </div>
+            {mv.real && mv.prov && (
+              <details class="prov">
+                <summary>How this number was made</summary>
+                <div class="prov-body">
+                  <p><b>What it measures.</b> {mv.prov.definition}</p>
+                  {mv.recipe && mv.recipe.length > 0 && (
+                    <p><b>Calculation.</b> {mv.recipe.map((r: any) => r.detail).join('; ')}. The displayed
+                      line is monotone-cubic smoothed for legibility only — it never moves a data point.</p>
+                  )}
+                  <p class="prov-meta">
+                    <span>Source · {mv.prov.attribution}{mv.prov.primarySource ? ` (${mv.prov.primarySource})` : ''}</span>
+                    <span>License · {mv.prov.license}</span>
+                    <span>Vintage · {mv.prov.vintage}</span>
+                    <span>Checksum · <code>{mv.prov.checksum.slice(0, 16)}…</code></span>
+                    <span><a href={mv.prov.url} rel="noopener">source ↗</a> · <a href={`/charts/${mv.dataRef}/lineage.json`}>lineage ↗</a></span>
+                  </p>
+                </div>
+              </details>
+            )}
           </div>
           <div class="take">
             <div class="hope"><div class="t">Hope</div><p>{mv.take.hope}</p></div>
@@ -294,8 +334,24 @@ const sec = ['I', 'II', 'III', 'IV', 'V', 'VI'];
   .figure svg :global(.annot) { stroke: var(--brass-dim); stroke-dasharray: 2 5; stroke-width: 1; }
   .figure svg :global(text.annotL) { fill: var(--accent); font-size: 10px; letter-spacing: 0.12em; }
   .figure svg :global(text.wm) { fill: var(--fg-muted); opacity: 0.42; font-size: 9px; letter-spacing: 0.09em; }
-  .fig-foot { display: flex; align-items: center; justify-content: flex-end; gap: 1rem; margin-top: 0.9rem; }
+  .fig-foot { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 0.9rem; flex-wrap: wrap; }
   .figure .src { font-family: var(--font-mono); font-size: 0.62rem; color: var(--fg-muted); text-align: right; }
+  .fig-tools { display: flex; gap: 0.4rem; }
+  .ftool { font-family: var(--font-label); font-size: 0.64rem; letter-spacing: 0.04em; color: var(--fg-muted); background: none; border: 1px solid var(--rule); padding: 0.42em 0.7em; text-decoration: none; white-space: nowrap; transition: 0.2s; }
+  .ftool:hover { color: var(--accent); border-color: var(--brass-dim); }
+
+  /* "How this number was made" — native <details>, zero JS (PERFORMANCE.md, DATA.md §8) */
+  .prov { margin-top: 1rem; border-top: 1px solid var(--rule); }
+  .prov summary { font-family: var(--font-display); font-style: italic; font-size: 0.98rem; color: var(--accent); cursor: pointer; padding-top: 0.8rem; list-style: none; }
+  .prov summary::-webkit-details-marker { display: none; }
+  .prov summary::before { content: "◐ "; font-style: normal; }
+  .prov[open] summary { margin-bottom: 0.6rem; }
+  .prov-body { color: var(--fg-2); font-size: 0.95rem; line-height: 1.55; max-width: 64ch; }
+  .prov-body p { margin-top: 0.5rem; }
+  .prov-body b { font-style: italic; font-weight: 400; color: var(--fg); }
+  .prov-meta { display: flex; flex-wrap: wrap; gap: 0.3rem 1.2rem; font-family: var(--font-mono); font-size: 0.66rem; color: var(--fg-muted); margin-top: 0.9rem !important; }
+  .prov-meta code { color: var(--fg-2); }
+  .prov-meta a { color: var(--accent); text-decoration: none; }
 
   .take { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.2rem, 2.6vw, 2.2rem); margin-top: 1.7rem; padding-top: 1.3rem; border-top: 1px solid var(--rule); clear: both; }
   .take .t { font-family: var(--font-label); font-size: 0.64rem; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.55rem; display: flex; align-items: center; gap: 0.4em; }

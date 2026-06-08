@@ -1,0 +1,40 @@
+{
+  "entity": {
+    "id": "violence.homicide_rate.western_europe",
+    "unit": "homicides per 100,000 people",
+    "points": 90
+  },
+  "wasDerivedFrom": [
+    "BEL",
+    "Corsica and Sardinia",
+    "England and Wales",
+    "FRA",
+    "DEU",
+    "IRL",
+    "ITA",
+    "NLD",
+    "ESP",
+    "SWE",
+    "Sweden and Finland",
+    "CHE"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "mean_across_entities",
+        "detail": "unweighted mean of the homicide rate across 12 Western European countries, by year (min 1 country present)"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "homicide-rates-across-western-europe",
+      "url": "https://ourworldindata.org/grapher/homicide-rates-across-western-europe",
+      "vintage": "2026-06-08",
+      "checksum": "1dab681a11a7822c617120f196768e28d33a29193e3b7cfd3b35524d0876edab",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Eisner (2003); WHO Mortality Database"
+}
