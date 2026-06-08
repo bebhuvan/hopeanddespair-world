@@ -11,6 +11,7 @@
     "postbuild": "pagefind --site dist",
     "preview": "astro preview",
     "data": "tsx scripts/pipeline.ts",
+    "llm:check": "tsx scripts/llm-check.ts",
     "check": "astro check",
     "check:size": "size-limit",
     "check:nojs": "test -z \"$(find dist -name '*.js' -not -path '*/pagefind/*' 2>/dev/null)\" && echo 'OK: zero external JS on content pages (search index under /pagefind only)' || (echo 'FAIL: external JS found outside /pagefind' && find dist -name '*.js' -not -path '*/pagefind/*' && exit 1)",
