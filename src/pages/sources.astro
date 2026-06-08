@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Aggregate every source cited across published articles.
+const questions = await getCollection('questions');
+const seen = new Map<string, { name: string; url: string; license: string; vintage: string }>();
+for (const q of questions) {
+  for (const s of q.data.sources ?? []) {
+    if (!seen.has(s.name)) seen.set(s.name, { name: s.name, url: s.url, license: s.license, vintage: s.vintage });
+  }
+}
+const sources = [...seen.values()].sort((a, b) => a.name.localeCompare(b.name));
+---
+<BaseLayout title="Sources — Hope & Despair" description="Every open dataset behind the atlas, with license and vintage.">
+  <article class="page">
+    <h1>Sources</h1>
+    <p class="lead">Every dataset behind the atlas is open and credited — with its license and the vintage we
+      archived. Per-article citations live at the foot of each piece.</p>
+    {sources.length === 0 ? (
+      <p class="empty">Sources are listed as articles are published.</p>
+    ) : (
+      <ol class="srcs">
+        {sources.map((s) => (
+          <li><b>{s.name}</b> — <a href={s.url} rel="noopener">{s.url.replace(/^https?:\/\//, '')}</a> · {s.license} · vintage {s.vintage}</li>
+        ))}
+      </ol>
+    )}
+    <p class="back"><a href="/">← Back to the atlas</a></p>
+  </article>
+</BaseLayout>
+
+<style>
+  .page { max-width: 64ch; padding-block: clamp(3rem, 8vh, 5rem) 2rem; }
+  h1 { font-family: var(--font-display); font-weight: 300; font-size: clamp(2.4rem, 6vw, 4rem); letter-spacing: -0.022em; }
+  .lead { font-size: 1.2rem; line-height: 1.6; color: var(--fg-2); margin-top: 1.6rem; }
+  .srcs { list-style: none; counter-reset: s; font-family: var(--font-mono); font-size: 0.85rem; line-height: 1.9; color: var(--fg-muted); margin-top: 1.8rem; }
+  .srcs li { counter-increment: s; position: relative; padding-left: 2.1rem; margin-bottom: 0.6rem; }
+  .srcs li::before { content: counter(s); position: absolute; left: 0; font-family: var(--font-display); font-style: italic; color: var(--accent); font-size: 1.1rem; }
+  .srcs a { color: var(--fg-2); text-decoration: none; border-bottom: 1px solid var(--brass-dim); }
+  .srcs li b { font-weight: 500; color: var(--fg); }
+  .back { margin-top: 2.5rem; }
+  .back a { color: var(--accent); text-decoration: none; }
+</style>

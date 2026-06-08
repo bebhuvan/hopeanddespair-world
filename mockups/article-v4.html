@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Is humanity becoming less violent? — Hope &amp; Despair</title>
+<!-- v4: fluid refinement of v3 per DESIGN.md §2 — cells dissolved into open columns,
+     figures unframed, enclosing boxes → single hairlines, content eyebrows in Fraunces
+     italic instead of uppercase. Lens/chart JS unchanged from v3. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..420&family=Geist:wght@300..600&family=Geist+Mono:wght@300..500&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* MODERN — dark; teal accent replaces gold (--brass kept as the var name) */
+  --bg:#0A0D12; --bg-2:#141A22; --panel:#10151C;
+  --fg:#EEF2F7; --fg-2:#B8C0CC; --fg-muted:#7C8693;
+  --rule:rgba(238,242,247,0.10); --rule-2:rgba(238,242,247,0.20);
+  --brass:#2FE3B6; --brass-dim:rgba(47,227,182,0.34);
+  --ember:#FF6A4D; --ochre:#FFC24B; --teal:#2FE3B6; --slate:#6AA8FF; --plum:#8E93FF;
+  --hope:#2FE3B6; --despair:#FF6A4D; --uncertain:#8E93FF;
+  --font-display:"Fraunces",Georgia,serif;
+  --font-body:"Newsreader","Source Serif 4",Georgia,serif;
+  --font-label:"Geist",ui-sans-serif,system-ui,sans-serif;
+  --font-mono:"Geist Mono",ui-monospace,monospace;
+  --margin:clamp(1.25rem,5.5vw,7rem);
+}
+[data-theme="light"]{
+  /* MODERN — light (primary) */
+  --bg:#FBFCFE; --bg-2:#EEF2F7; --panel:#FFFFFF;
+  --fg:#0D1117; --fg-2:#39414D; --fg-muted:#79828F;
+  --rule:rgba(13,17,23,0.09); --rule-2:rgba(13,17,23,0.18);
+  --brass:#0FA67E; --brass-dim:rgba(15,166,126,0.32);
+  --ember:#F0512E; --ochre:#C7901F; --teal:#0FA67E; --slate:#2F6FE0; --plum:#5B61E6;
+  --hope:#0FA67E; --despair:#F0512E; --uncertain:#5B61E6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{
+  background:var(--bg); color:var(--fg); font-family:var(--font-body);
+  font-size:1.075rem; line-height:1.62; font-weight:360; min-height:100vh; overflow-x:hidden;
+  transition:background .5s,color .5s;
+}
+body::before{content:none}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.wrap{padding-inline:var(--margin)}
+::selection{background:var(--brass);color:var(--bg)}
+
+/* masthead with brass double rule */
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding-block:1.5rem;
+  border-bottom:1px solid var(--brass-dim);position:relative}
+.masthead::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:var(--rule)}
+.wordmark{font-family:var(--font-label);font-weight:500;font-size:.8rem;letter-spacing:.32em;
+  text-transform:uppercase;display:flex;align-items:center;gap:.6em;color:inherit;text-decoration:none}
+.wordmark .glyph{font-size:1.05rem;letter-spacing:0;color:var(--brass)}
+nav{display:flex;gap:1.8rem;align-items:center}
+nav a,.toggle{font-family:var(--font-label);font-weight:400;font-size:.72rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--fg-muted);text-decoration:none;background:none;border:0;cursor:pointer;transition:color .25s}
+nav a:hover,.toggle:hover{color:var(--brass)}
+.toggle{border:1px solid var(--brass-dim);padding:.45em .85em;color:var(--fg-2)}
+.wordmark .glyph{display:inline-block;transition:transform .7s cubic-bezier(.5,0,.2,1)}
+.wordmark:hover .glyph{transform:rotate(180deg)}
+nav a{position:relative}
+nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:currentColor;
+  transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+nav a:hover::after{transform:scaleX(1)}
+
+/* temperature scroll-spine — the thesis, embodied in the chrome */
+.spine{position:fixed;top:0;left:clamp(.55rem,2.6vw,2.6rem);width:2px;height:100vh;z-index:60;pointer-events:none;
+  background:linear-gradient(180deg,color-mix(in srgb,var(--teal) 45%,transparent),
+    color-mix(in srgb,var(--brass) 32%,transparent),color-mix(in srgb,var(--ember) 45%,transparent));opacity:.4}
+.spine-thumb{position:absolute;left:-2px;width:6px;height:52px;border-radius:3px;top:0;
+  transform:translateY(var(--y,0));background:var(--c,var(--brass));transition:background .2s linear}
+@media(max-width:760px){.spine{display:none}}
+
+/* pull-quote interstitial */
+.pull{font-family:var(--font-display);font-weight:300;font-style:italic;font-size:clamp(2rem,5vw,3.6rem);
+  line-height:1.08;letter-spacing:-.02em;text-align:center;max-width:18ch;margin:clamp(3.5rem,9vh,6.5rem) auto;color:var(--fg)}
+.pull::before{content:"◐";display:block;font-style:normal;font-size:1.4rem;color:var(--brass);margin-bottom:1.8rem;opacity:.85}
+.pull cite{display:block;font-family:var(--font-label);font-style:normal;font-size:.7rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--brass);margin-top:1.8rem}
+
+/* article opener */
+.ahead{padding-block:clamp(3rem,8vh,5.5rem) 0;max-width:54rem}
+.kicker{font-family:var(--font-label);font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--brass);display:flex;gap:.8rem;align-items:center}
+.kicker .n{font-family:var(--font-mono);letter-spacing:.04em}
+.kicker::after{content:"";flex:1;height:1px;background:var(--brass-dim);max-width:9rem}
+h1.q{font-family:var(--font-display);font-weight:300;font-size:clamp(2.4rem,6vw,4.7rem);
+  line-height:.98;letter-spacing:-.024em;margin-top:1.5rem;font-optical-sizing:auto;text-wrap:balance}
+h1.q em{font-style:italic;color:var(--brass)}
+.lede{max-width:62ch;margin-top:2.2rem;font-size:clamp(1.1rem,1.5vw,1.3rem);line-height:1.6;color:var(--fg-2)}
+.lede::first-letter{font-family:var(--font-display);font-weight:300;float:left;font-size:4.6rem;
+  line-height:.74;padding:.34rem .6rem .1rem 0;color:var(--brass)}
+
+/* ===== evidence section ===== */
+.evi{margin-top:clamp(2.5rem,6vh,4rem)}
+.evi-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+  border-top:1px solid var(--brass-dim);padding-top:1rem;margin-bottom:1.6rem}
+.evi-head .t{font-family:var(--font-display);font-style:italic;font-size:1.04rem;letter-spacing:0;color:var(--fg-muted)}
+.evi-head .t b{color:var(--brass);font-weight:500;font-style:italic}
+.legend{display:flex;gap:1.2rem;font-family:var(--font-mono);font-size:.66rem;color:var(--fg-muted);flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:.4em}
+.legend i{width:.7em;height:.7em;border-radius:50%}
+
+/* hero chart */
+.chart-frame{position:relative;width:100%;aspect-ratio:1000/300;min-height:200px;background:none}
+#chart{width:100%;height:100%;display:block;overflow:visible}
+.fig-tag{position:absolute;top:.7rem;left:.2rem;font-family:var(--font-mono);font-size:.66rem;
+  letter-spacing:.04em;color:var(--fg-muted)}
+.fig-tag b{color:var(--brass);font-weight:500}
+.fig-tag .val{color:var(--fg);font-size:1.1rem;font-weight:400;margin-left:.3rem}
+
+/* lens axis */
+.axis{margin-top:1.3rem}
+.axis-track{position:relative;height:46px}
+.axis-line{position:absolute;left:0;right:0;top:21px;height:1px;
+  background:linear-gradient(90deg,var(--brass-dim),var(--rule-2))}
+.tick{position:absolute;top:14px;width:1px;height:14px;background:var(--rule-2);transform:translateX(-50%);transition:.3s}
+.tick.active{height:28px;top:7px;background:var(--accent)}
+.stopbtn{position:absolute;top:32px;transform:translateX(-50%);white-space:nowrap;font-family:var(--font-label);
+  font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-muted);background:none;border:0;cursor:pointer;transition:.3s}
+.stopbtn.active{color:var(--fg)}
+.handle{position:absolute;top:21px;width:14px;height:14px;border-radius:50%;background:var(--bg);
+  border:1.5px solid var(--accent);transform:translate(-50%,-50%);
+  box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 18%,transparent),0 0 16px color-mix(in srgb,var(--accent) 40%,transparent);
+  transition:left .55s cubic-bezier(.6,.02,.2,1),border-color .4s,box-shadow .4s;pointer-events:none}
+input[type=range]{position:absolute;left:0;right:0;top:7px;width:100%;height:28px;margin:0;-webkit-appearance:none;background:transparent;cursor:ew-resize}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:34px;height:34px;background:transparent}
+
+/* small multiples — open columns, no compartments (v4) */
+.signals{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(1.4rem,3vw,2.8rem);
+  margin-top:2.6rem;padding-top:1.7rem;border-top:1px solid var(--rule)}
+.sig{position:relative;background:none;padding:0;display:flex;flex-direction:column;gap:.5rem;
+  opacity:0;transform:translateY(10px);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards}
+.sig .v{transition:color .35s}
+.sig .fg{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.06em;color:var(--brass)}
+.sig .nm{font-family:var(--font-display);font-size:1.02rem;line-height:1.1;font-weight:380}
+.sig .un{font-family:var(--font-label);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-muted);margin-top:-.2rem}
+.sig svg{width:100%;height:62px;display:block;overflow:visible;margin-top:.2rem}
+.sig .read{display:flex;align-items:baseline;justify-content:space-between;gap:.5rem;margin-top:.1rem}
+.sig .v{font-family:var(--font-mono);font-size:1.02rem;color:var(--fg);font-variant-numeric:tabular-nums}
+.sig .dir{font-family:var(--font-label);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;display:inline-flex;align-items:center;gap:.3em}
+.sig .arr{font-size:.95rem;line-height:1}
+
+/* composite verdict */
+.composite{display:grid;grid-template-columns:auto 1fr;gap:clamp(1.5rem,5vw,4rem);align-items:start;
+  margin-top:clamp(2.5rem,6vh,3.8rem);padding-top:2.2rem;border-top:1px solid var(--brass-dim)}
+.vlabel{font-family:var(--font-display);font-style:italic;font-size:1.04rem;letter-spacing:0;color:var(--brass)}
+.verdict{font-family:var(--font-display);font-weight:300;font-size:clamp(3.6rem,11vw,8rem);line-height:.9;
+  letter-spacing:-.035em;color:var(--accent);transition:color .5s}
+.verdict .punc{color:var(--fg)}
+.synthesis{font-family:var(--font-body);font-size:clamp(1.18rem,2vw,1.55rem);line-height:1.42;max-width:46ch;font-weight:370;margin-top:.3rem}
+.synthesis .em{font-style:italic;color:var(--accent);transition:color .5s}
+.tally{font-family:var(--font-mono);font-size:.74rem;color:var(--fg-muted);margin-top:1.4rem;letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.tally b{color:var(--fg)}
+.fade{transition:opacity .25s}.fade.out{opacity:0}
+.vantage{margin-top:2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;font-family:var(--font-label);
+  font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-muted)}
+.seg{display:inline-flex;border:1px solid var(--brass-dim)}
+.seg button{font-family:var(--font-label);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;background:none;
+  border:0;color:var(--fg-muted);padding:.55em .9em;cursor:pointer;transition:.25s}
+.seg button.on{background:var(--brass);color:var(--bg)}
+
+/* ===== full-chart movements ===== */
+.movements{margin-top:clamp(2rem,5vh,3rem)}
+.move{border-top:1px solid var(--brass-dim);padding-top:2.2rem;margin-top:clamp(3rem,7vh,5rem)}
+.move .ey{font-family:var(--font-display);font-style:italic;font-weight:400;font-size:1.08rem;letter-spacing:0;color:var(--brass);display:flex;gap:1rem;align-items:center}
+.move .ey::after{content:"";flex:1;height:1px;background:var(--rule)}
+.move .ey .fg{font-family:var(--font-mono);color:var(--fg-muted);letter-spacing:.04em}
+.move h2{font-family:var(--font-display);font-weight:330;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.02;
+  letter-spacing:-.02em;margin-top:1.1rem;max-width:22ch}
+.move .intro{max-width:62ch;margin-top:1.3rem;color:var(--fg-2);font-size:clamp(1.05rem,1.5vw,1.22rem);line-height:1.6}
+.move .intro .drop::first-letter{font-family:var(--font-display);float:left;font-size:3rem;line-height:.8;padding:.2rem .4rem 0 0;color:var(--brass);font-weight:300}
+/* figure — unframed; the chart sits on the page, caption above, tools below (v4) */
+.figure{margin-top:1.9rem;background:none;border:0;padding:0}
+.figure .cap{display:flex;justify-content:space-between;gap:1rem;font-family:var(--font-mono);font-size:.66rem;
+  color:var(--fg-muted);margin-bottom:.8rem;letter-spacing:.03em;flex-wrap:wrap}
+.figure .cap b{color:var(--fg-2);font-weight:400}
+.figure svg{width:100%;height:auto;display:block}
+.figure svg text{font-family:var(--font-mono);font-size:10.5px;fill:var(--fg-muted);letter-spacing:.02em}
+.figure svg text.ser{font-family:var(--font-label);font-size:11px;letter-spacing:.04em;font-weight:500}
+.figure svg .grid{stroke:var(--rule);stroke-dasharray:1 5}
+.figure svg .grid0{stroke:var(--rule-2)}
+.figure svg .annot{stroke:var(--brass-dim);stroke-dasharray:2 5;stroke-width:1}
+.figure svg text.annotL{fill:var(--brass);font-size:10px;letter-spacing:.12em}
+.figure svg path.ln{transition:stroke-dashoffset 1.4s cubic-bezier(.33,0,.13,1)}
+.figure svg path.ar{transition:opacity 1.1s ease .25s}
+.figure svg circle.dot{transition:opacity .4s ease .9s}
+.figure.rise{opacity:0;transform:translateY(16px)}
+.figure.rise.in{opacity:1;transform:none;transition:opacity .8s ease,transform .85s cubic-bezier(.2,.7,.2,1)}
+.fig-foot{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:.9rem;flex-wrap:wrap}
+.figure .src{font-family:var(--font-mono);font-size:.62rem;color:var(--fg-muted);text-align:right}
+.figure .src a{color:var(--fg-muted)}
+.fig-tools{display:flex;gap:.4rem}
+.ftool{font-family:var(--font-label);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--fg-muted);
+  background:none;border:1px solid var(--rule);padding:.42em .7em;cursor:pointer;transition:.2s;white-space:nowrap}
+.ftool:hover{color:var(--brass);border-color:var(--brass-dim)}
+/* take strip — three open columns, a single hairline above (v4) */
+.take{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,2.6vw,2.2rem);
+  margin-top:1.7rem;padding-top:1.3rem;border-top:1px solid var(--rule)}
+.take > div{padding:0}
+.take .t{font-family:var(--font-label);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.55rem;display:flex;align-items:center;gap:.4em}
+.take .t::before{content:"";width:.5em;height:.5em;border-radius:50%;background:currentColor}
+.take .hope .t{color:var(--hope)} .take .despair .t{color:var(--despair)} .take .conf .t{color:var(--uncertain)}
+.take p{font-size:.92rem;color:var(--fg-2);line-height:1.5;max-width:36ch}
+@media(max-width:680px){.take{grid-template-columns:1fr;gap:1.3rem}}
+
+/* prose */
+.section{border-top:1px solid var(--rule);margin-top:clamp(3.5rem,8.5vh,6.5rem);padding-top:2.2rem}
+.section > .label{font-family:var(--font-display);font-style:italic;font-size:1.22rem;letter-spacing:0;
+  color:var(--brass);margin-bottom:1.8rem;display:flex;gap:.7rem;align-items:baseline}
+.section > .label .nn{font-family:var(--font-display);font-style:italic;font-weight:400;font-size:1.55rem;
+  line-height:1;color:var(--brass);letter-spacing:0;margin-right:.3rem}
+.lens{display:grid;grid-template-columns:12rem 1fr;gap:1rem 2.4rem;padding-block:1.4rem;border-bottom:1px solid var(--rule)}
+.lens:last-child{border-bottom:0}
+.lens .who{font-family:var(--font-display);font-style:italic;font-size:1.3rem;font-weight:360}
+.lens .conf{font-family:var(--font-mono);font-size:.64rem;color:var(--fg-muted);margin-top:.35rem;display:block}
+.lens .takes p{margin-bottom:.5rem;max-width:60ch;color:var(--fg-2)}
+.lens .h,.lens .d{font-family:var(--font-label);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;margin-right:.4em}
+.lens .h{color:var(--hope)} .lens .d{color:var(--despair)}
+.duel{display:grid;grid-template-columns:1fr 1fr}
+.duel > div{padding:0 clamp(1rem,3vw,2.4rem)}
+.duel > div:first-child{padding-left:0;border-right:1px solid var(--brass-dim)}
+.duel > div:last-child{padding-right:0}
+.duel h3{font-family:var(--font-display);font-style:italic;font-weight:400;font-size:1.28rem;letter-spacing:0;margin-bottom:1rem}
+.duel .hope h3{color:var(--hope)} .duel .desp h3{color:var(--despair)}
+.duel p{max-width:42ch;color:var(--fg-2)}
+.change{font-family:var(--font-body);font-size:clamp(1.25rem,2.4vw,1.75rem);line-height:1.45;font-weight:360;max-width:54ch}
+.change b{font-style:italic;font-weight:400;color:var(--brass)}
+.sources{font-family:var(--font-mono);font-size:.78rem;line-height:2.1;color:var(--fg-muted)}
+.sources a{color:var(--fg-2);text-decoration:none;border-bottom:1px solid var(--brass-dim)}
+
+/* literary apparatus — margin notes + footnotes */
+.sidenote{float:right;clear:right;width:13.5rem;margin:.3rem 0 1.3rem 2.4rem;font-family:var(--font-body);
+  font-size:.86rem;line-height:1.52;color:var(--fg-muted)}
+.sidenote::before{content:"";display:block;width:2rem;height:1px;background:var(--brass);opacity:.5;margin-bottom:.6rem}
+.sidenote .n{font-family:var(--font-display);font-style:italic;color:var(--brass);font-size:1.05rem;margin-right:.4em}
+.figure,.take{clear:both}
+.fn{font-family:var(--font-label);font-size:.62em;vertical-align:super;line-height:0;color:var(--brass);
+  text-decoration:none;font-weight:600;padding:0 .08em;transition:color .2s}
+.fn:hover{color:var(--ember)}
+.srcs{list-style:none;counter-reset:s;padding:0;font-family:var(--font-mono);font-size:.8rem;line-height:1.9;color:var(--fg-muted)}
+.srcs li{counter-increment:s;position:relative;padding-left:2.1rem;margin-bottom:.5rem;scroll-margin-top:5rem}
+.srcs li::before{content:counter(s);position:absolute;left:0;top:-.05em;font-family:var(--font-display);font-style:italic;color:var(--brass);font-size:1.1rem}
+.srcs li:target::before{color:var(--ember)}
+.srcs a{color:var(--fg-2);text-decoration:none;border-bottom:1px solid var(--brass-dim)}
+.srcs li b{font-weight:500;color:var(--fg)}
+
+/* transparency: caveats / methodology / changelog */
+/* caveats — a left-rule aside, not an enclosed tinted box (v4) */
+.caveats{margin-top:clamp(2rem,5vh,3rem);padding:.2rem 0 .2rem 1.7rem;border:0;
+  border-left:2px solid var(--brass-dim);background:none}
+.caveats-head{font-family:var(--font-display);font-style:italic;font-size:1.06rem;letter-spacing:0;
+  color:var(--brass);display:flex;align-items:center;gap:.5em;margin-bottom:1rem}
+.caveats-head .cv-glyph{font-size:1rem}
+.caveats ul{list-style:none;padding:0;display:grid;gap:.7rem}
+.caveats li{position:relative;padding-left:1.4rem;font-size:.97rem;color:var(--fg-2);line-height:1.5;max-width:66ch}
+.caveats li::before{content:"—";position:absolute;left:0;color:var(--brass)}
+.caveats li b{font-weight:400;font-style:italic;color:var(--fg)}
+
+.method-lead{max-width:60ch;color:var(--fg-2);margin-bottom:1.6rem}
+.method dl{display:grid;grid-template-columns:13rem 1fr;gap:1.1rem 2rem}
+.method dt{font-family:var(--font-display);font-style:italic;font-size:1.18rem;color:var(--fg);line-height:1.2}
+.method dd{margin:0;font-size:1rem;color:var(--fg-2);line-height:1.55;max-width:60ch}
+.method dd b{font-style:italic;font-weight:400;color:var(--brass)}
+.method dd i{color:var(--fg)}
+@media(max-width:680px){.method dl{grid-template-columns:1fr;gap:.3rem 0}.method dt{margin-top:1.1rem}}
+
+.changelog{list-style:none;padding:0;margin:0;border-left:1px solid var(--brass-dim)}
+.changelog li{position:relative;padding:0 0 1.5rem 1.9rem}
+.changelog li::before{content:"";position:absolute;left:-5px;top:.35rem;width:9px;height:9px;border-radius:50%;
+  background:var(--bg);border:1.5px solid var(--brass)}
+.changelog time{font-family:var(--font-mono);font-size:.76rem;color:var(--brass);display:block;margin-bottom:.25rem;letter-spacing:.03em}
+.changelog .txt{font-size:.98rem;color:var(--fg-2);line-height:1.5}
+.changelog a,.repo-note a{color:var(--fg);border-bottom:1px solid var(--brass-dim);text-decoration:none;transition:color .2s}
+.changelog a:hover,.repo-note a:hover{color:var(--brass)}
+.repo-note{margin-top:1.6rem;color:var(--fg-muted);font-size:.97rem;max-width:60ch}
+
+.figure svg text.wm{fill:var(--fg-muted);opacity:.42;font-size:9px;letter-spacing:.09em}
+.srcs .note{display:block;color:var(--fg-muted);opacity:.8}
+@media(max-width:1080px){.sidenote{float:none;width:auto;margin:.8rem 0 1.2rem;padding-left:1.1rem;border-left:2px solid var(--brass-dim)}.sidenote::before{display:none}}
+footer{margin-top:5rem;padding-block:2.5rem 4rem;border-top:1px solid var(--brass-dim);display:flex;flex-wrap:wrap;
+  gap:1.2rem 3rem;justify-content:space-between;font-family:var(--font-label);font-size:.7rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--fg-muted)}
+
+@keyframes rise{to{opacity:1;transform:none}}
+@media(max-width:860px){.signals{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){
+  .composite{grid-template-columns:1fr}.lens{grid-template-columns:1fr;gap:.5rem}
+  .duel{grid-template-columns:1fr}.duel>div:first-child{border-right:0;border-bottom:1px solid var(--brass-dim);padding:0 0 1.4rem;margin-bottom:1.4rem}
+  .duel>div:last-child{padding:0}nav a:not(.toggle){display:none}
+}
+@media (prefers-reduced-motion:reduce){.sig{animation:none;opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="spine"><div class="spine-thumb" id="spineThumb"></div></div>
+<div class="wrap">
+
+  <header class="masthead">
+    <a class="wordmark" href="home-v3.html"><span class="glyph">◐</span> Hope &amp; Despair</a>
+    <nav><a href="#">Atlas</a><a href="#">Method</a><a href="#">Sources</a>
+      <button class="toggle" id="themeToggle">Dark</button></nav>
+  </header>
+
+  <header class="ahead">
+    <p class="kicker"><span class="n">Question 01</span> War &amp; Peace</p>
+    <h1 class="q">Is humanity becoming<br><em>less violent?</em></h1>
+  </header>
+  <p class="lede">No single chart can answer it, so we don't ask one to. Five signals are read at once —
+    and the verdict depends entirely on how far back you set the lens. Slide it across time and watch the
+    evidence converge, then break apart.</p>
+
+  <aside class="caveats">
+    <div class="caveats-head"><span class="cv-glyph">◐</span> Before you read · caveats &amp; blind spots</div>
+    <ul>
+      <li>Figures in this draft are <b>illustrative</b> pending real ingestion — treat absolute levels as placeholders.</li>
+      <li>“Violence” here means <b>direct lethal violence</b>; it excludes coercion, structural harm, and the threat of force.</li>
+      <li>Pre-1900 numbers are <b>regional and sparse</b> — the global long arc is reconstructed, not measured.</li>
+      <li>The composite verdict is an <b>editorial</b> reading of the signals, not a computed index. Full method in §IV.</li>
+    </ul>
+  </aside>
+
+  <!-- ===== EVIDENCE ===== -->
+  <section class="evi">
+    <div class="evi-head">
+      <div class="t">The Evidence · <b id="windowLabel">10,000 years</b> · <span id="rangeLabel" style="color:var(--fg-2)">8000 BCE — 2024</span></div>
+      <div class="legend">
+        <span><i style="background:var(--teal)"></i> improving</span>
+        <span><i style="background:var(--ember)"></i> worsening</span>
+        <span style="color:var(--brass)">drag the lens ↓</span>
+      </div>
+    </div>
+
+    <div class="chart-frame">
+      <div class="fig-tag"><b>FIG. 1</b> Violent deaths / 100k<span class="val" id="heroVal">—</span></div>
+      <svg id="chart" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true"></svg>
+    </div>
+
+    <div class="axis"><div class="axis-track" id="track">
+      <div class="axis-line"></div>
+      <input type="range" id="slider" min="0" max="3" step="1" value="0" aria-label="Time magnification">
+      <div class="handle" id="handle"></div>
+    </div></div>
+
+    <!-- small multiples -->
+    <div class="signals" id="signals"></div>
+
+    <!-- composite verdict -->
+    <div class="composite">
+      <div><div class="vlabel">The verdict</div>
+        <div class="verdict fade" id="verdict">YES<span class="punc">.</span></div></div>
+      <div>
+        <p class="synthesis fade" id="synthesis"></p>
+        <p class="tally fade" id="tally"></p>
+        <div class="vantage"><span>Vantage</span>
+          <span class="seg" id="vseg">
+            <button class="on" data-v="global">Global average</button>
+            <button data-v="hard">Khartoum, today</button>
+          </span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== full-chart movements ===== -->
+  <section class="movements">
+
+    <article class="move">
+      <div class="ey"><span>The long arc</span><span class="fg">FIG. 6</span></div>
+      <h2>Homicide has fallen for seven centuries.</h2>
+      <aside class="sidenote"><span class="n">a</span> Pre-modern figures come from coroners’ rolls and court archives — reliable in their <em>direction</em>, rough in their absolute level.</aside>
+      <p class="intro"><span class="drop">W</span>here parish and coroner records survive, the everyday violence of
+        private life has collapsed. A medieval European was tens of times more likely to be murdered than a
+        person living in the same cities today — a decline so long it predates the state's monopoly on force.</p>
+      <div class="figure">
+        <div class="cap"><span><b>Homicides per 100,000 / year</b> · Western Europe</span><span>1300 — 2020</span></div>
+        <svg id="figA" aria-hidden="true"></svg>
+        <div class="fig-foot">
+          <div class="fig-tools"><button class="ftool" data-dl="csv" data-fig="A">↓ CSV</button><button class="ftool" data-dl="svg" data-fig="A">↓ SVG</button><button class="ftool" data-dl="link">⧉ Permalink</button></div>
+          <div class="src">Source · Eisner (2003); Our World in Data — illustrative</div>
+        </div>
+      </div>
+      <div class="take">
+        <div class="hope"><div class="t">Hope</div><p>A forty-fold fall. The medieval baseline of violent death has all but vanished from daily life.</p></div>
+        <div class="despair"><div class="t">Despair</div><p>“Rare” is not “none,” and the clean line is European — much of the world is far thinner on history.</p></div>
+        <div class="conf"><div class="t">Confusion</div><p>Definitions, coverage, and record-keeping all shift beneath the curve. The slope is real; the precision is not.</p></div>
+      </div>
+    </article>
+
+    <article class="move">
+      <div class="ey"><span>The recent break</span><span class="fg">FIG. 7</span></div>
+      <h2>Displacement is at an all-time high.</h2>
+      <p class="intro"><span class="drop">T</span>he rate signals improved while the human totals did not. The number of people
+        forced from their homes has roughly doubled in a decade, and the curve bends sharply upward after 2022 — a
+        reminder that a falling death <em>rate</em> can sit beside a rising count of ruined lives.</p>
+      <div class="figure">
+        <div class="cap"><span><b>Forcibly displaced people</b> · millions, worldwide</span><span>1951 — 2024</span></div>
+        <svg id="figB" aria-hidden="true"></svg>
+        <div class="fig-foot">
+          <div class="fig-tools"><button class="ftool" data-dl="csv" data-fig="B">↓ CSV</button><button class="ftool" data-dl="svg" data-fig="B">↓ SVG</button><button class="ftool" data-dl="link">⧉ Permalink</button></div>
+          <div class="src">Source · UNHCR Global Trends — illustrative</div>
+        </div>
+      </div>
+      <div class="take">
+        <div class="hope"><div class="t">Hope</div><p>More people are counted, sheltered, and resettled than any system in history could once manage.</p></div>
+        <div class="despair"><div class="t">Despair</div><p>120 million uprooted. The post-war institutions are buckling under a number they were never built for.</p></div>
+        <div class="conf"><div class="t">Confusion</div><p>“Displaced” bundles refugees, the internally displaced, and the stateless — very different fates under one line.</p></div>
+      </div>
+    </article>
+
+    <article class="move">
+      <div class="ey"><span>Who the average hides</span><span class="fg">FIG. 8</span></div>
+      <h2>The global mean is a comfortable lie.</h2>
+      <aside class="sidenote"><span class="n">b</span> A population-weighted mean would sit lower still — the unweighted average already buries the worst-off countries.</aside>
+      <p class="intro"><span class="drop">A</span> single world line stays low and almost flat — and tells you nothing about
+        where the violence actually lives. Pull the same measure apart by country and the average dissolves into
+        catastrophe for some and calm for most. Both readings come from the same dataset.</p>
+      <div class="figure">
+        <div class="cap"><span><b>Violent deaths per 100,000</b> · world vs. selected states</span><span>2010 — 2024</span></div>
+        <svg id="figC" aria-hidden="true"></svg>
+        <div class="fig-foot">
+          <div class="fig-tools"><button class="ftool" data-dl="csv" data-fig="C">↓ CSV</button><button class="ftool" data-dl="svg" data-fig="C">↓ SVG</button><button class="ftool" data-dl="link">⧉ Permalink</button></div>
+          <div class="src">Source · UCDP; ACLED — illustrative</div>
+        </div>
+      </div>
+      <div class="take">
+        <div class="hope"><div class="t">Hope</div><p>For most of humanity, the flat world line is the lived reality: violence is now a tail risk, not a daily one.</p></div>
+        <div class="despair"><div class="t">Despair</div><p>To live inside the spike is to find the world average obscene. Sudan’s line is not a statistic to Sudan.</p></div>
+        <div class="conf"><div class="t">Confusion</div><p>Which line is “the world”? The mean, the median, or the worst-off? Each answers a different moral question.</p></div>
+      </div>
+    </article>
+
+  </section>
+
+  <blockquote class="pull">Humanity is not a line chart.<cite>Progress and catastrophe coexist</cite></blockquote>
+
+  <section class="section">
+    <div class="label"><span class="nn">I</span> The multi-disciplinary read</div>
+    <div class="lens"><div><span class="who">The historian</span><span class="conf">confidence · high</span></div>
+      <div class="takes"><p><span class="h">Hope</span>The organized state slowly crowded out the raid, the feud, and the duel.</p>
+        <p><span class="d">Despair</span>The same state perfected industrial war when it chose to wage it.</p></div></div>
+    <div class="lens"><div><span class="who">The statistician</span><span class="conf">confidence · medium</span></div>
+      <div class="takes"><p><span class="h">Hope</span>Per-capita death rates sit far below their historical band.</p>
+        <p><span class="d">Despair</span>The denominator hides the dead; rare mega-wars dominate true risk.</p></div></div>
+    <div class="lens"><div><span class="who">Someone living it</span><span class="conf">confidence · absolute</span></div>
+      <div class="takes"><p><span class="d">Despair</span>A global average is no comfort under a drone. My street is the only dataset that matters.</p></div></div>
+    <div class="lens"><div><span class="who">The forecaster</span><span class="conf">confidence · low</span></div>
+      <div class="takes"><p><span class="d">Despair</span>Cheap drones, autonomy, and disinformation lower the cost of mass harm.</p>
+        <p><span class="h">Hope</span>The nuclear taboo and economic entanglement still raise the cost of total war.</p></div></div>
+  </section>
+
+  <section class="section">
+    <div class="label"><span class="nn">II</span> The two strongest cases</div>
+    <div class="duel">
+      <div class="hope"><h3>Strongest case for hope</h3>
+        <p>Interstate conquest has become rare and largely illegitimate. For most people alive today,
+          the statistical chance of dying violently is the lowest it has ever been.<a class="fn" href="#s1">1</a></p></div>
+      <div class="desp"><h3>Strongest case for despair</h3>
+        <p>That decline reversed after 2020. Every recent signal turns upward at once,<a class="fn" href="#s2">2</a> and the
+          technologies that made killing expensive are becoming cheap.<a class="fn" href="#s3">3</a></p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="label"><span class="nn">III</span> What would change this verdict</div>
+    <p class="change">A <b>sustained five-year rise</b> across all five signals would retire the long-run
+      optimism. <b>One nuclear exchange</b> would end the argument entirely.</p>
+  </section>
+
+  <section class="section">
+    <div class="label"><span class="nn">IV</span> Methodology</div>
+    <p class="method-lead">Everything done to the numbers between the source and the chart, disclosed in full.
+      Nothing here is a black box; where a choice is editorial rather than measured, we say so.</p>
+    <div class="method"><dl>
+      <dt>Source &amp; vintage</dt><dd>Each series is pulled from the datasets listed in §V, archived at a fixed
+        vintage. The vintage date and the dataset’s own revision are recorded in the figure’s metadata.</dd>
+      <dt>Transformations</dt><dd>Counts are converted to <b>rates per 100,000</b> using mid-year population;
+        currencies are deflated to constant 2021 USD. No series is re-based, capped, or seasonally adjusted.</dd>
+      <dt>Display smoothing</dt><dd>Lines use <b>monotone-cubic interpolation</b> purely for legibility. It is
+        cosmetic — it never moves, adds, or hides a data point, and it cannot overshoot a real value.</dd>
+      <dt>The verdict &amp; tally</dt><dd>Each signal is classed <i>improving</i> or <i>worsening</i> by the sign of
+        its change across the visible window. The headline verdict is an <b>editorial</b> reading of those
+        signals — it is deliberately <b>not</b> a single computed index.</dd>
+      <dt>The vantage toggle</dt><dd>“Khartoum, today” re-weights the two closest stops toward a worst-affected
+        reading. It is illustrative of distributional reality, not a separate measured series.</dd>
+    </dl></div>
+  </section>
+
+  <section class="section">
+    <div class="label"><span class="nn">V</span> Sources &amp; references</div>
+    <ol class="srcs">
+      <li id="s1"><b>Uppsala Conflict Data Program</b> — battle-related deaths, state-based conflict.
+        <a href="#">ucdp.uu.se</a> · CC&nbsp;BY&nbsp;4.0 · vintage 2026-Q1</li>
+      <li id="s2"><b>UNHCR Global Trends</b> — forcibly displaced persons.
+        <a href="#">unhcr.org</a> · public sector information · vintage 2025</li>
+      <li id="s3"><b>Our World in Data — War &amp; Peace</b>, after Eisner (2003) for long-run homicide.
+        <a href="#">ourworldindata.org/war-and-peace</a> · CC&nbsp;BY&nbsp;4.0
+        <span class="note">Series in this draft are illustrative for layout review; real ingestion pending.</span></li>
+    </ol>
+  </section>
+
+  <section class="section">
+    <div class="label"><span class="nn">VI</span> Revision history</div>
+    <ol class="changelog">
+      <li><time>2026-06-08</time><span class="txt">First publication — three movements, five-signal lens, illustrative data. <a href="#">View commit →</a></span></li>
+      <li><time>2026-06-08</time><span class="txt">Added methodology, caveats, and source vintages. <a href="#">View diff →</a></span></li>
+    </ol>
+    <p class="repo-note">This article is kept up to date as data revises. Every edit — to a number, a word, or a
+      chart — is tracked in the open. <a href="#">Browse the full history &amp; diffs on GitHub →</a></p>
+  </section>
+
+  <footer><span>CC BY 4.0 · attribution to hopeanddespair.world · source data CC-BY</span><span>hopeanddespair.world</span></footer>
+</div>
+
+<script>
+const root=document.documentElement,tg=document.getElementById('themeToggle');
+tg.onclick=()=>{const d=root.getAttribute('data-theme')==='dark';root.setAttribute('data-theme',d?'light':'dark');tg.textContent=d?'Dark':'Light';};
+
+/* temperature scroll-spine: marker slides + shifts teal→gold→ember with reading depth */
+const thumb=document.getElementById('spineThumb');let spineTick=false;
+function updateSpine(){spineTick=false;
+  const max=document.documentElement.scrollHeight-window.innerHeight;
+  const p=max>0?Math.min(1,Math.max(0,window.scrollY/max)):0;
+  thumb.style.setProperty('--y',(p*(window.innerHeight-52))+'px');
+  const c=p<.5?`color-mix(in srgb, var(--teal), var(--brass) ${Math.round(p*200)}%)`
+              :`color-mix(in srgb, var(--brass), var(--ember) ${Math.round((p-.5)*200)}%)`;
+  thumb.style.setProperty('--c',c);}
+addEventListener('scroll',()=>{if(!spineTick){spineTick=true;requestAnimationFrame(updateSpine);}},{passive:true});
+addEventListener('resize',updateSpine);updateSpine();
+
+const COOL='var(--teal)',WARM='var(--ember)';
+/* hero series */
+const HERO=[[-8000,520],[-5000,470],[-3000,360],[-1000,300],[0,255],[800,235],[1300,205],[1500,170],[1700,130],[1820,95],[1870,60],[1900,42],[1914,205],[1918,120],[1929,55],[1939,255],[1945,90],[1950,38],[1970,22],[1990,17],[2005,11],[2011,8],[2018,7],[2020,11],[2022,33],[2024,29]];
+/* five signals */
+const SIGNALS=[
+  {fig:'FIG. 2',nm:'Active armed conflicts',un:'count, worldwide',badUp:true,s:[[-8000,4],[1500,12],[1816,20],[1946,18],[1960,30],[1992,52],[2010,38],[2016,50],[2020,56],[2022,57],[2024,59]]},
+  {fig:'FIG. 3',nm:'Forcibly displaced',un:'millions of people',badUp:true,s:[[-8000,0.2],[1900,1],[1951,2],[1980,8],[2000,16],[2011,38],[2018,70],[2020,82],[2022,103],[2024,120]]},
+  {fig:'FIG. 4',nm:'Homicide rate',un:'per 100,000 / year',badUp:true,s:[[-8000,60],[1300,40],[1500,30],[1800,15],[1900,8],[1950,7],[2000,6],[2018,5.4],[2022,5.2],[2024,5]]},
+  {fig:'FIG. 5',nm:'Great-power tension',un:'index, 0–100',badUp:true,s:[[-8000,30],[1946,70],[1990,20],[2000,18],[2014,40],[2020,55],[2022,60],[2024,68]]}
+];
+const STOPS=[
+  {label:'10,000 years',range:'8000 BCE — 2024',from:-8000,to:2024,verdict:'YES',temp:'cool',
+   syn:'Across the long sweep, the deep signals — <span class="em">homicide and the battle-death rate</span> — fall. The story is a slow disarming of everyday life.'},
+  {label:'Since 1900',range:'1900 — 2024',from:1900,to:2024,verdict:'MOSTLY',temp:'cool',
+   syn:'The <span class="em">rate</span> signals still favour peace — but the <span class="em">count</span> signals have climbed since mid-century.'},
+  {label:'Since 2020',range:'2018 — 2024',from:2018,to:2024,verdict:'NO',temp:'warm',
+   syn:'Four of five signals turn upward at once — <span class="em">convergence, not noise.</span> Only the homicide rate holds.'},
+  {label:'A lived day',range:'right now',from:2022,to:2024,verdict:'NO',temp:'warm',
+   syn:'At the global average, risk stays low. <span class="em">Zoom to a single life</span> and the average dissolves.'}
+];
+const HARD={2:{verdict:'NO',syn:'Here the curve is the <span class="em">street outside</span> — and it is rising.'},
+            3:{verdict:'CATASTROPHIC',syn:'For a civilian in Khartoum or Gaza, the verdict is not relative. <span class="em">It is total.</span>'}};
+
+let vantage='global',idx=0;
+const track=document.getElementById('track'),handle=document.getElementById('handle'),slider=document.getElementById('slider');
+STOPS.forEach((s,i)=>{const x=i/(STOPS.length-1)*100;
+  const tk=document.createElement('div');tk.className='tick';tk.style.left=x+'%';track.appendChild(tk);
+  const b=document.createElement('button');b.className='stopbtn';b.style.left=x+'%';b.textContent=s.label;b.onclick=()=>set(i);track.appendChild(b);});
+
+/* build signal cards */
+const sigWrap=document.getElementById('signals');
+SIGNALS.forEach((sig,i)=>{
+  const el=document.createElement('div');el.className='sig';el.style.animationDelay=(.1+i*.08)+'s';
+  el.innerHTML=`<div class="fg">${sig.fig}</div><div class="nm">${sig.nm}</div><div class="un">${sig.un}</div>
+    <svg viewBox="0 0 300 62" preserveAspectRatio="none"></svg>
+    <div class="read"><span class="v">—</span><span class="dir"><span class="arr"></span><span class="lab"></span></span></div>`;
+  sigWrap.appendChild(el); sig.el=el; sig.svg=el.querySelector('svg');
+});
+
+function win(series,from,to){let w=series.filter(p=>p[0]>=from-.001&&p[0]<=to+.001);
+  if(w.length<2){const before=series.filter(p=>p[0]<=to);w=before.slice(-2);}return w;}
+/* monotone-cubic smoothing (Fritsch–Carlson) — elegant curves, no overshoot below baseline */
+function smooth(p){const n=p.length;if(n<3)return p.map((q,i)=>(i?'L':'M')+q[0].toFixed(2)+' '+q[1].toFixed(2)).join(' ');
+  const x=p.map(q=>q[0]),y=p.map(q=>q[1]),dx=[],dy=[],d=[],m=[];
+  for(let i=0;i<n-1;i++){dx[i]=x[i+1]-x[i];dy[i]=y[i+1]-y[i];d[i]=dy[i]/(dx[i]||1e-6);}
+  m[0]=d[0];for(let i=1;i<n-1;i++)m[i]=d[i-1]*d[i]<=0?0:(d[i-1]+d[i])/2;m[n-1]=d[n-2];
+  for(let i=0;i<n-1;i++){if(d[i]===0){m[i]=0;m[i+1]=0;}else{const a=m[i]/d[i],b=m[i+1]/d[i],s=a*a+b*b;if(s>9){const t=3/Math.sqrt(s);m[i]=t*a*d[i];m[i+1]=t*b*d[i];}}}
+  let s='M'+x[0].toFixed(2)+' '+y[0].toFixed(2);
+  for(let i=0;i<n-1;i++){const h=dx[i];s+=' C'+(x[i]+h/3).toFixed(2)+' '+(y[i]+m[i]*h/3).toFixed(2)+' '+(x[i+1]-h/3).toFixed(2)+' '+(y[i+1]-m[i+1]*h/3).toFixed(2)+' '+x[i+1].toFixed(2)+' '+y[i+1].toFixed(2);}
+  return s;}
+function path(data,W,H,pad){const xs=data.map(p=>p[0]),ys=data.map(p=>p[1]);
+  const x0=Math.min(...xs),x1=Math.max(...xs),y1=Math.max(...ys)*1.1,y0=Math.min(...ys)*.9;
+  const X=v=>x1===x0?W/2:pad+(v-x0)/(x1-x0)*(W-2*pad);
+  const Y=v=>y1===y0?H/2:H-pad-((v-y0)/(y1-y0))*(H-2*pad);
+  const pts=data.map(p=>[X(p[0]),Y(p[1])]),d=smooth(pts);
+  const lastX=pts[pts.length-1][0],lastY=pts[pts.length-1][1];
+  return {d,lastX,lastY,area:d+` L ${X(x1).toFixed(1)} ${H} L ${X(x0).toFixed(1)} ${H} Z`};}
+
+function drawHero(from,to,col){const data=win(HERO,from,to);const P=path(data,1000,300,10);
+  document.getElementById('heroVal').textContent=data[data.length-1][1].toFixed(0);
+  document.getElementById('chart').innerHTML=
+   `<defs><linearGradient id="hg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="${col}" stop-opacity="0.30"/><stop offset="1" stop-color="${col}" stop-opacity="0"/></linearGradient></defs>
+    <line x1="0" y1="296" x2="1000" y2="296" stroke="var(--rule)" stroke-width="1"/>
+    <path d="${P.area}" fill="url(#hg)"/>
+    <path d="${P.d}" fill="none" stroke="${col}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+    <circle cx="${P.lastX.toFixed(1)}" cy="${P.lastY.toFixed(1)}" r="4" fill="${col}" stroke="var(--bg)" stroke-width="1.6"/>
+    <text x="994" y="20" text-anchor="end" fill="var(--fg-muted)" opacity="0.4" font-family="'Geist Mono',ui-monospace,monospace" font-size="12" letter-spacing="0.5">hopeanddespair.world</text>`;
+  return data[data.length-1][1]<=data[0][1]; /* fewer deaths than window start = progress */}
+
+function drawSig(sig,from,to){const data=win(sig.s,from,to);const P=path(data,300,62,5);
+  const up=data[data.length-1][1]>data[0][1];const good=up?!sig.badUp:sig.badUp;const col=good?COOL:WARM;
+  const v=data[data.length-1][1];const vtxt=v>=1000?(v/1000).toFixed(0)+'k':(v%1===0?v.toFixed(0):v.toFixed(1));
+  sig.svg.innerHTML=`<defs><linearGradient id="g${sig.fig.replace(/\W/g,'')}" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="${col}" stop-opacity="0.26"/><stop offset="1" stop-color="${col}" stop-opacity="0"/></linearGradient></defs>
+    <path d="${P.area}" fill="url(#g${sig.fig.replace(/\W/g,'')})"/>
+    <path d="${P.d}" fill="none" stroke="${col}" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+    <circle cx="${P.lastX.toFixed(1)}" cy="${P.lastY.toFixed(1)}" r="2.8" fill="${col}"/>`;
+  sig.el.querySelector('.v').textContent=vtxt;
+  sig.el.querySelector('.v').style.color=col;
+  const arr=sig.el.querySelector('.arr');arr.textContent=up?'↑':'↓';arr.style.color=col;
+  const lab=sig.el.querySelector('.lab');lab.textContent=good?'improving':'worsening';lab.style.color=col;
+  return good;}
+
+const verdictEl=document.getElementById('verdict'),synEl=document.getElementById('synthesis'),tallyEl=document.getElementById('tally');
+function set(i){idx=i;slider.value=i;const s=STOPS[i];
+  const ov=(vantage==='hard'&&HARD[i])?HARD[i]:null;
+  const verdict=ov?ov.verdict:s.verdict;const temp=ov?'warm':s.temp;const syn=ov?ov.syn:s.syn;
+  const col=temp==='cool'?COOL:WARM;
+  document.querySelectorAll('.tick').forEach((t,j)=>t.classList.toggle('active',j===i));
+  document.querySelectorAll('.stopbtn').forEach((b,j)=>b.classList.toggle('active',j===i));
+  handle.style.left=(i/(STOPS.length-1)*100)+'%';
+  document.documentElement.style.setProperty('--accent',col);
+  track.style.setProperty('--accent',col);
+  document.getElementById('windowLabel').textContent=s.label;
+  document.getElementById('rangeLabel').textContent=s.range;
+  let good=0,bad=0;
+  (drawHero(s.from,s.to,col)?good++:bad++);
+  SIGNALS.forEach(sig=>{ (drawSig(sig,s.from,s.to)?good++:bad++); });
+  const total=SIGNALS.length+1;
+  verdictEl.classList.add('out');synEl.classList.add('out');tallyEl.classList.add('out');
+  setTimeout(()=>{
+    verdictEl.innerHTML=verdict+'<span class="punc">.</span>';verdictEl.style.color=col;
+    synEl.innerHTML=syn;synEl.style.setProperty('--accent',col);
+    tallyEl.innerHTML=`<b>${bad}</b> of ${total} signals point to deterioration · <b>${good}</b> toward progress`;
+    verdictEl.classList.remove('out');synEl.classList.remove('out');tallyEl.classList.remove('out');
+  },170);
+}
+slider.addEventListener('input',e=>set(+e.target.value));
+document.querySelectorAll('#vseg button').forEach(b=>b.onclick=()=>{vantage=b.dataset.v;
+  document.querySelectorAll('#vseg button').forEach(x=>x.classList.toggle('on',x===b));set(idx);});
+set(0);
+
+/* ===== full axed charts for the movements ===== */
+function fc(svg,o){
+  const W=760,H=410,m={l:50,r:o.series.length>1?78:24,t:24,b:38};
+  const xsAll=[].concat(...o.series.map(s=>s.data.map(p=>p[0])));
+  const x0=o.x0??Math.min(...xsAll), x1=o.x1??Math.max(...xsAll);
+  const ymax=o.ymax;
+  const X=v=>m.l+(v-x0)/(x1-x0)*(W-m.l-m.r);
+  const Y=v=>H-m.b-(v/ymax)*(H-m.t-m.b);
+  let g='';
+  o.yTicks.forEach(t=>{const y=Y(t);g+=`<line class="${t===0?'grid0':'grid'}" x1="${m.l}" y1="${y}" x2="${W-m.r}" y2="${y}"/>`;
+    g+=`<text x="${m.l-8}" y="${y+3.5}" text-anchor="end">${t}</text>`;});
+  o.xTicks.forEach(t=>{const x=X(t);g+=`<text x="${x}" y="${H-m.b+18}" text-anchor="middle">${t}</text>`;});
+  if(o.annot){const x=X(o.annot.x);g+=`<line class="annot" x1="${x}" y1="${m.t}" x2="${x}" y2="${H-m.b}"/>`;
+    g+=`<text class="annotL" x="${x-6}" y="${m.t+9}" text-anchor="end">${o.annot.label}</text>`;}
+  o.series.forEach((s)=>{
+    const pts=s.data.map(p=>[X(p[0]),Y(p[1])]),d=smooth(pts),L=pts[pts.length-1];
+    if(o.series.length===1){const a=d+` L ${X(s.data[s.data.length-1][0]).toFixed(1)} ${H-m.b} L ${X(s.data[0][0]).toFixed(1)} ${H-m.b} Z`;
+      g+=`<defs><linearGradient id="fcg${o.id}" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="${s.color}" stop-opacity="0.24"/><stop offset="1" stop-color="${s.color}" stop-opacity="0"/></linearGradient></defs><path class="ar" d="${a}" fill="url(#fcg${o.id})"/>`;}
+    g+=`<path class="ln" d="${d}" fill="none" stroke="${s.color}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" style="color:${s.color}"/>`;
+    g+=`<circle class="dot" cx="${L[0].toFixed(1)}" cy="${L[1].toFixed(1)}" r="3.7" fill="${s.color}" stroke="var(--panel)" stroke-width="1.8"/>`;
+    if(o.series.length>1)g+=`<text class="ser" x="${(L[0]+8).toFixed(1)}" y="${(L[1]+3.5).toFixed(1)}" fill="${s.color}">${s.name}</text>`;
+  });
+  g+=`<text class="wm" x="${W-2}" y="${H-3}" text-anchor="end">hopeanddespair.world</text>`;
+  svg.setAttribute('viewBox',`0 0 ${W} ${H}`);svg.innerHTML=g;svg.__fig=o;
+}
+fc(document.getElementById('figA'),{id:'A',ymax:52,yTicks:[0,10,20,30,40,50],xTicks:[1300,1500,1700,1900,2020],
+  series:[{name:'Homicide',color:'var(--teal)',data:[[1300,41],[1400,45],[1500,32],[1600,19],[1700,11],[1800,7.5],[1900,3.2],[1950,1.4],[2000,1.3],[2020,1.1]]}]});
+fc(document.getElementById('figB'),{id:'B',ymax:132,yTicks:[0,30,60,90,120],xTicks:[1951,1980,2000,2024],annot:{x:2022,label:'UKRAINE'},
+  series:[{name:'Displaced',color:'var(--ember)',data:[[1951,2],[1970,3],[1990,20],[2000,16],[2011,38],[2018,70],[2022,103],[2024,120]]}]});
+fc(document.getElementById('figC'),{id:'C',x0:2010,x1:2024,ymax:66,yTicks:[0,20,40,60],xTicks:[2010,2015,2020,2024],
+  series:[
+    {name:'Sudan',color:'var(--ember)',data:[[2010,5],[2015,8],[2020,12],[2023,40],[2024,55]]},
+    {name:'Syria',color:'var(--ochre)',data:[[2010,2],[2013,60],[2016,45],[2020,20],[2024,12]]},
+    {name:'World',color:'var(--teal)',data:[[2010,7],[2015,8],[2020,9],[2024,9]]}
+  ]});
+
+/* chart downloads — CSV is generated from the same series the chart draws; SVG is the live artifact */
+function dl(content,name,type){const u=URL.createObjectURL(new Blob([content],{type}));
+  const a=document.createElement('a');a.href=u;a.download=name;a.click();URL.revokeObjectURL(u);}
+function toCSV(o){const years=[...new Set(o.series.flatMap(s=>s.data.map(p=>p[0])))].sort((a,b)=>a-b);
+  let out='year,'+o.series.map(s=>s.name).join(',')+'\n';
+  years.forEach(y=>{out+=y+','+o.series.map(s=>{const pt=s.data.find(p=>p[0]===y);return pt?pt[1]:'';}).join(',')+'\n';});
+  return out;}
+document.addEventListener('click',e=>{const b=e.target.closest('.ftool');if(!b)return;
+  const kind=b.dataset.dl,t=b.textContent;
+  if(kind==='link'){const url=location.href.split('#')[0];(navigator.clipboard?.writeText(url)||Promise.resolve());
+    b.textContent='✓ Copied';setTimeout(()=>b.textContent=t,1300);return;}
+  const svg=document.getElementById('fig'+b.dataset.fig);if(!svg)return;
+  if(kind==='csv')dl(toCSV(svg.__fig),'hopeanddespair-fig'+b.dataset.fig+'.csv','text/csv;charset=utf-8');
+  else if(kind==='svg')dl('<?xml version="1.0" encoding="UTF-8"?>\n'+new XMLSerializer().serializeToString(svg),'hopeanddespair-fig'+b.dataset.fig+'.svg','image/svg+xml');});
+
+/* gentle one-shot fade-up per figure as it enters view (transform/opacity only — no per-frame repaint) */
+const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;
+if(!reduced && 'IntersectionObserver' in window){
+  const obs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});},{threshold:.18});
+  document.querySelectorAll('.figure').forEach(f=>{f.classList.add('rise');obs.observe(f);});
+}
+</script>
+</body>
+</html>

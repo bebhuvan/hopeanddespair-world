@@ -1,0 +1,46 @@
+---
+const nav = [
+  { href: '/', label: 'Atlas' },
+  { href: '/methodology', label: 'Method' },
+  { href: '/sources', label: 'Sources' },
+];
+---
+<header class="masthead reveal">
+  <a class="wordmark" href="/"><span class="glyph">◐</span> Hope &amp; Despair</a>
+  <nav>
+    {nav.map((n) => <a href={n.href}>{n.label}</a>)}
+    <button class="toggle" id="themeToggle" type="button">Dark</button>
+  </nav>
+</header>
+
+<style>
+  .masthead {
+    display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+    padding-block: 1.4rem; border-bottom: 1px solid var(--rule);
+  }
+  .wordmark {
+    font-family: var(--font-label); font-weight: 600; font-size: 0.82rem; letter-spacing: 0.16em;
+    text-transform: uppercase; display: flex; align-items: center; gap: 0.55em; text-decoration: none;
+  }
+  .wordmark .glyph {
+    font-size: 1.1rem; letter-spacing: 0; color: var(--accent); display: inline-block;
+    transition: transform 0.7s cubic-bezier(0.5, 0, 0.2, 1);
+  }
+  .wordmark:hover .glyph { transform: rotate(180deg); }
+  nav { display: flex; gap: 1.6rem; align-items: center; }
+  nav a, .toggle {
+    font-family: var(--font-label); font-weight: 500; font-size: 0.74rem; letter-spacing: 0.04em;
+    color: var(--fg-muted); text-decoration: none; background: none; border: 0; cursor: pointer;
+    transition: color 0.2s; position: relative;
+  }
+  nav a:hover, .toggle:hover { color: var(--fg); }
+  nav a::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 1.5px;
+    background: var(--accent); transform: scaleX(0); transform-origin: left;
+    transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  nav a:hover::after { transform: scaleX(1); }
+  .toggle { border: 1px solid var(--rule-2); padding: 0.45em 0.8em; border-radius: 7px; color: var(--fg-2); }
+  .toggle:hover { border-color: var(--accent); color: var(--accent); }
+  @media (max-width: 680px) { nav a:not(.toggle) { display: none; } }
+</style>

@@ -1,0 +1,70 @@
+/* hopeanddespair.world — canonical design tokens (ported from mockups/*-v4/v5).
+   Light is the PRIMARY theme; dark ships behind a toggle. Colour is a *temperature*
+   (hope = cool, despair = warm, uncertain = neutral), never a stoplight. See DESIGN.md. */
+
+:root {
+  /* surfaces */
+  --bg: #FBFCFE;
+  --bg-2: #EEF2F7;
+  --panel: #FFFFFF;
+
+  /* ink */
+  --fg: #0D1117;
+  --fg-2: #39414D;
+  --fg-muted: #79828F;
+
+  /* rules (hairlines do the structural work — sparingly) */
+  --rule: rgba(13, 17, 23, 0.09);
+  --rule-2: rgba(13, 17, 23, 0.18);
+
+  /* temperature triad + brand accent */
+  --accent: #0FA67E;
+  --hope: #0FA67E;
+  --despair: #F0512E;
+  --uncertain: #5B61E6;
+  --ochre: #C7901F;
+
+  /* aliases used by ported article CSS (keep in sync with the triad above) */
+  --brass: #0FA67E;
+  --brass-dim: rgba(15, 166, 126, 0.32);
+  --teal: #0FA67E;
+  --ember: #F0512E;
+  --slate: #2F6FE0;
+  --plum: #5B61E6;
+
+  /* type */
+  --font-display: "Fraunces Variable", Georgia, serif;
+  --font-body: "Newsreader Variable", "Source Serif 4", Georgia, serif;
+  --font-label: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+
+  /* layout */
+  --margin: clamp(1.25rem, 5.5vw, 7rem);
+  --measure: 64ch;
+}
+
+[data-theme="dark"] {
+  --bg: #0A0D12;
+  --bg-2: #141A22;
+  --panel: #10151C;
+
+  --fg: #EEF2F7;
+  --fg-2: #B8C0CC;
+  --fg-muted: #7C8693;
+
+  --rule: rgba(238, 242, 247, 0.10);
+  --rule-2: rgba(238, 242, 247, 0.20);
+
+  --accent: #2FE3B6;
+  --hope: #2FE3B6;
+  --despair: #FF6A4D;
+  --uncertain: #8E93FF;
+  --ochre: #FFC24B;
+
+  --brass: #2FE3B6;
+  --brass-dim: rgba(47, 227, 182, 0.34);
+  --teal: #2FE3B6;
+  --ember: #FF6A4D;
+  --slate: #6AA8FF;
+  --plum: #8E93FF;
+}

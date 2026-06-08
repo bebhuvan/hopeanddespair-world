@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="About — Hope & Despair" description="Why this exists, and how it is made.">
+  <article class="page">
+    <h1>About</h1>
+    <p class="lead">A living atlas that answers one honest question at a time — <em>is the world getting better
+      or worse?</em> — by weaving open data and plain-spoken narrative into a single, intellectually honest
+      story. The thesis runs through everything: <em>progress and catastrophe coexist; the answer depends on the
+      lens.</em></p>
+
+    <h2>How it is made</h2>
+    <p>This is a one-person project. There is no way one person could research, write, and keep hundreds of
+      these pieces current by hand — so the prose here is written with the help of a large language model,
+      working from open data and edited by a human. The data is open and cited. Every change is tracked in the
+      open. Where the writing is uncertain, it says so.</p>
+
+    <h2>License</h2>
+    <p>Original prose, code, and chart designs are released under <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC&nbsp;BY&nbsp;4.0</a>
+      — reuse freely with attribution to hopeanddespair.world. Source datasets carry their own licenses
+      (typically CC&nbsp;BY) and are credited per-article with license and vintage.</p>
+
+    <p class="back"><a href="/">← Back to the atlas</a></p>
+  </article>
+</BaseLayout>
+
+<style>
+  .page { max-width: 64ch; padding-block: clamp(3rem, 8vh, 5rem) 2rem; }
+  h1 { font-family: var(--font-display); font-weight: 300; font-size: clamp(2.4rem, 6vw, 4rem); letter-spacing: -0.022em; }
+  h2 { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 1.4rem; color: var(--accent); margin-top: 2.4rem; margin-bottom: 0.6rem; }
+  .lead { font-size: 1.2rem; line-height: 1.6; color: var(--fg-2); margin-top: 1.6rem; }
+  .lead em, p em { font-style: italic; color: var(--fg); }
+  p { line-height: 1.65; color: var(--fg-2); margin-top: 0.8rem; }
+  p a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--brass-dim); }
+  .back { margin-top: 2.5rem; }
+  .back a { color: var(--accent); text-decoration: none; }
+</style>

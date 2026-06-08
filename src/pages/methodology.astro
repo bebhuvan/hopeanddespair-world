@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Method — Hope & Despair" description="How the numbers are handled, disclosed in full.">
+  <article class="page">
+    <h1>Method</h1>
+    <p class="lead">Nothing here is a black box. Every transformation between a source and a chart is disclosed —
+      and where a choice is editorial rather than measured, we say so. The detailed methodology lives inside
+      each article, beside the evidence it applies to.</p>
+    <ul>
+      <li><b>Smoothing is cosmetic.</b> Lines use monotone-cubic interpolation for legibility only; it never
+        moves, adds, or hides a data point and cannot overshoot a real value.</li>
+      <li><b>The verdict is editorial.</b> The hope/despair reading is an honest editorial judgement of the
+        signals — deliberately not a single computed index.</li>
+      <li><b>Vintages are fixed.</b> Each series is archived at a recorded vintage so a chart can be reproduced.</li>
+    </ul>
+    <p class="back"><a href="/">← Back to the atlas</a></p>
+  </article>
+</BaseLayout>
+
+<style>
+  .page { max-width: 64ch; padding-block: clamp(3rem, 8vh, 5rem) 2rem; }
+  h1 { font-family: var(--font-display); font-weight: 300; font-size: clamp(2.4rem, 6vw, 4rem); letter-spacing: -0.022em; }
+  .lead { font-size: 1.2rem; line-height: 1.6; color: var(--fg-2); margin-top: 1.6rem; }
+  .lead em { font-style: italic; color: var(--fg); }
+  ul { margin-top: 1.6rem; list-style: none; display: grid; gap: 0.8rem; }
+  li { position: relative; padding-left: 1.4rem; line-height: 1.6; color: var(--fg-2); }
+  li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
+  li b { font-weight: 400; font-style: italic; color: var(--fg); }
+  .back { margin-top: 2.5rem; }
+  .back a { color: var(--accent); text-decoration: none; }
+</style>

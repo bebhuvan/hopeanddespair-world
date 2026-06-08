@@ -1,0 +1,18 @@
+# build output
+dist/
+.astro/
+
+# deps
+node_modules/
+
+# env & secrets — never commit the DeepSeek key
+.env
+.env.*
+!.env.example
+
+# os / editor
+.DS_Store
+*.log
+npm-debug.log*
+.vscode/
+.idea/

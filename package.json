@@ -1,0 +1,38 @@
+{
+  "name": "hopeanddespair-world",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "A living atlas of human progress, suffering, and uncertainty.",
+  "license": "CC-BY-4.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "check:size": "size-limit",
+    "check:nojs": "test -z \"$(find dist -name '*.js' 2>/dev/null)\" && echo 'OK: zero external JS shipped' || (echo 'FAIL: external JS found in dist' && find dist -name '*.js' && exit 1)",
+    "check:nolib": "! grep -rlE 'd3|chart\\.js|highcharts|plotly|echarts|recharts' dist --include='*.html' --include='*.js' || (echo 'FAIL: a charting library leaked into the build' && exit 1)",
+    "verify": "pnpm build && pnpm check:size && pnpm check:nojs && pnpm check:nolib"
+  },
+  "dependencies": {
+    "astro": "^5.6.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@fontsource-variable/fraunces": "^5.1.1",
+    "@fontsource-variable/newsreader": "^5.1.1",
+    "@fontsource/geist-sans": "^5.1.0",
+    "@fontsource/geist-mono": "^5.1.0",
+    "@size-limit/file": "^11.1.6",
+    "size-limit": "^11.1.6",
+    "typescript": "^5.7.3"
+  },
+  "size-limit": [
+    { "name": "article page (HTML + inline CSS/JS, gz)", "path": "dist/questions/is-humanity-becoming-less-violent/index.html", "limit": "100 kB" },
+    { "name": "home page (gz)", "path": "dist/index.html", "limit": "60 kB" }
+  ],
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "sharp"]
+  }
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hope &amp; Despair — A living atlas of human progress, suffering, and uncertainty</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&family=Geist:wght@300..600&family=Geist+Mono:wght@300..500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0B0C0E; --bg-raised:#121317; --fg:#ECEAE3; --fg-muted:#8A8A86;
+  --rule:rgba(236,234,227,0.12); --rule-strong:rgba(236,234,227,0.28);
+  --hope:#86A7B4; --despair:#C05A48; --uncertain:#8A8A86;
+  --font-display:"Fraunces",Georgia,serif;
+  --font-body:"Newsreader","Source Serif 4",Georgia,serif;
+  --font-label:"Geist",ui-sans-serif,system-ui,sans-serif;
+  --font-mono:"Geist Mono",ui-monospace,monospace;
+  --margin:clamp(1.25rem,6vw,8rem);
+}
+[data-theme="light"]{
+  --bg:#FBFBF9; --bg-raised:#F2F2EE; --fg:#16171A; --fg-muted:#6B6B66;
+  --rule:rgba(20,21,24,0.14); --rule-strong:rgba(20,21,24,0.32);
+  --hope:#3E6E7E; --despair:#A63D2B; --uncertain:#6B6B66;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{
+  background:var(--bg); color:var(--fg); font-family:var(--font-body);
+  font-size:1.0625rem; line-height:1.6; font-weight:350;
+  min-height:100vh; overflow-x:hidden;
+  transition:background .5s ease, color .5s ease;
+}
+/* faint film grain for atmosphere */
+body::after{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:9999; opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.wrap{padding-inline:var(--margin)}
+
+/* ---- masthead ---- */
+.masthead{
+  display:flex; align-items:baseline; justify-content:space-between; gap:1.5rem;
+  padding-block:1.6rem; border-bottom:1px solid var(--rule);
+}
+.wordmark{
+  font-family:var(--font-label); font-weight:500; font-size:.78rem;
+  letter-spacing:.34em; text-transform:uppercase;
+  display:flex; align-items:center; gap:.6em;
+}
+.wordmark .glyph{ font-size:1rem; letter-spacing:0; }
+nav{ display:flex; gap:2rem; align-items:center; }
+nav a, .toggle{
+  font-family:var(--font-label); font-weight:400; font-size:.72rem;
+  letter-spacing:.18em; text-transform:uppercase; color:var(--fg-muted);
+  text-decoration:none; background:none; border:0; cursor:pointer;
+  transition:color .25s;
+}
+nav a:hover,.toggle:hover{ color:var(--fg); }
+.toggle{ border:1px solid var(--rule); padding:.45em .8em; border-radius:0; }
+
+/* ---- hero ---- */
+.hero{ padding-block:clamp(3.5rem,11vh,8rem) clamp(2.5rem,7vh,5rem); }
+.eyebrow{
+  font-family:var(--font-label); font-size:.7rem; font-weight:400;
+  letter-spacing:.32em; text-transform:uppercase; color:var(--fg-muted);
+  display:flex; align-items:center; gap:1rem;
+}
+.eyebrow::after{ content:""; flex:1; height:1px; background:var(--rule); max-width:14rem;}
+.statement{
+  font-family:var(--font-display); font-weight:340;
+  font-size:clamp(2.6rem,8.5vw,6.6rem); line-height:.99;
+  letter-spacing:-.02em; margin-top:2.2rem; max-width:18ch;
+}
+.statement .l{ display:block; }
+.statement .better{ color:var(--fg); }
+.statement .worse{ color:var(--fg); }
+.statement .both{
+  font-style:italic; font-weight:300;
+  background:linear-gradient(100deg,var(--hope),var(--fg) 45%,var(--despair));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.dek{
+  font-family:var(--font-body); font-size:clamp(1.05rem,1.7vw,1.35rem);
+  line-height:1.5; color:var(--fg); max-width:46ch; margin-top:2.4rem; font-weight:340;
+}
+.dek em{ font-style:italic; color:var(--fg-muted); }
+
+/* ---- questions index ---- */
+.section-label{
+  font-family:var(--font-label); font-size:.72rem; font-weight:500;
+  letter-spacing:.3em; text-transform:uppercase; color:var(--fg-muted);
+  display:flex; align-items:center; gap:1.2rem; padding-top:3rem;
+}
+.section-label .count{ font-family:var(--font-mono); letter-spacing:0; font-weight:400;}
+.section-label::after{ content:""; flex:1; height:1px; background:var(--rule);}
+
+.qlist{ border-top:1px solid var(--rule); margin-top:2rem; }
+.q{
+  display:grid; grid-template-columns:3.5rem 1fr auto; gap:clamp(1rem,4vw,3rem);
+  align-items:start; padding-block:clamp(1.8rem,4vh,2.8rem);
+  border-bottom:1px solid var(--rule); text-decoration:none; color:inherit;
+  position:relative; transition:padding-left .4s cubic-bezier(.2,.7,.2,1);
+}
+.q::before{
+  content:""; position:absolute; left:-.6rem; top:0; bottom:0; width:1px;
+  background:var(--accent,var(--rule-strong)); transform:scaleY(0);
+  transform-origin:top; transition:transform .45s cubic-bezier(.2,.7,.2,1);
+}
+.q:hover{ padding-left:.8rem; }
+.q:hover::before{ transform:scaleY(1); }
+.q-num{ font-family:var(--font-mono); font-size:.8rem; color:var(--fg-muted); padding-top:.6rem;}
+.q-title{
+  font-family:var(--font-display); font-weight:360; line-height:1.04;
+  font-size:clamp(1.7rem,3.6vw,2.9rem); letter-spacing:-.015em;
+}
+.q-verdict{
+  display:flex; align-items:center; gap:.6em; margin-top:1rem;
+  font-family:var(--font-label); font-size:.74rem; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--fg-muted); font-weight:400;
+}
+.dot{ width:.62em; height:.62em; border-radius:50%; background:var(--accent); flex:none;
+  box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 18%,transparent);}
+.dot.split{ background:linear-gradient(90deg,var(--despair) 0 50%,var(--hope) 50% 100%);}
+
+/* mini zoom axis preview */
+.mini{ width:clamp(8rem,16vw,13rem); padding-top:.7rem; }
+.mini-ticks{ display:flex; align-items:flex-end; gap:3px; height:34px; }
+.mini-ticks span{ flex:1; background:var(--rule-strong); height:35%; }
+.mini-ticks span.lo{ height:22%;} .mini-ticks span.hi{ height:100%; background:var(--accent);}
+.mini-ticks span.mid{ height:62%;}
+.mini-ends{
+  display:flex; justify-content:space-between; margin-top:.5rem;
+  font-family:var(--font-mono); font-size:.62rem; letter-spacing:.04em; color:var(--fg-muted);
+}
+.mini-ends .a{ color:var(--hope);} .mini-ends .b{ color:var(--despair);}
+
+/* ---- footer ---- */
+footer{
+  margin-top:5rem; padding-block:3rem 4rem; border-top:1px solid var(--rule);
+  display:flex; flex-wrap:wrap; gap:1.5rem 3rem; justify-content:space-between;
+  font-family:var(--font-label); font-size:.7rem; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--fg-muted);
+}
+footer a{ color:var(--fg-muted); text-decoration:none; border-bottom:1px solid var(--rule);}
+footer a:hover{ color:var(--fg);}
+
+/* reveal on load */
+.reveal{ opacity:0; transform:translateY(14px); animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards;}
+@keyframes rise{ to{ opacity:1; transform:none; } }
+@media (prefers-reduced-motion:reduce){ .reveal{animation:none;opacity:1;transform:none}}
+
+@media(max-width:680px){
+  .q{ grid-template-columns:2rem 1fr; }
+  .mini{ display:none; }
+  nav{ gap:1rem; } nav a:not(.toggle){ display:none; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead reveal" style="animation-delay:.05s">
+    <div class="wordmark"><span class="glyph">◐</span> Hope &amp; Despair</div>
+    <nav>
+      <a href="#">About</a>
+      <a href="#">Method</a>
+      <a href="#">Sources</a>
+      <button class="toggle" id="themeToggle">Light</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow reveal" style="animation-delay:.12s">A living atlas · since 2026</p>
+    <h1 class="statement">
+      <span class="l better reveal" style="animation-delay:.2s">The world is getting better.</span>
+      <span class="l worse reveal" style="animation-delay:.32s">The world is getting worse.</span>
+      <span class="l both reveal" style="animation-delay:.46s">Both are true.</span>
+    </h1>
+    <p class="dek reveal" style="animation-delay:.6s">
+      Not a verdict, but an instrument. Each question is read at every magnification —
+      from the ten-thousand-year arc down to a single lived day — because
+      <em>the answer changes depending on how closely you look.</em>
+    </p>
+  </section>
+
+  <p class="section-label reveal" style="animation-delay:.7s">
+    <span>The Questions</span><span class="count">03</span>
+  </p>
+
+  <div class="qlist">
+
+    <a class="q reveal" style="--accent:var(--despair);--accent2:var(--hope);animation-delay:.78s" href="article.html">
+      <span class="q-num">01</span>
+      <div>
+        <div class="q-title">Is humanity becoming less violent?</div>
+        <div class="q-verdict"><span class="dot split"></span>Long-run progress, short-run reversal</div>
+      </div>
+      <div class="mini" style="--accent:var(--despair)">
+        <div class="mini-ticks"><span></span><span class="mid"></span><span class="lo"></span><span></span><span class="mid"></span><span class="hi"></span></div>
+        <div class="mini-ends"><span class="a">YES · 10,000y</span><span class="b">NO · 2020→</span></div>
+      </div>
+    </a>
+
+    <a class="q reveal" style="--accent:var(--hope);animation-delay:.86s" href="#">
+      <span class="q-num">02</span>
+      <div>
+        <div class="q-title">Are we beating disease and death?</div>
+        <div class="q-verdict"><span class="dot"></span>Better than it feels</div>
+      </div>
+      <div class="mini" style="--accent:var(--hope)">
+        <div class="mini-ticks"><span class="hi"></span><span class="mid"></span><span class="mid"></span><span class="lo"></span><span class="lo"></span><span class="lo"></span></div>
+        <div class="mini-ends"><span class="a">YES · 200y</span><span class="a">YES · today</span></div>
+      </div>
+    </a>
+
+    <a class="q reveal" style="--accent:var(--despair);animation-delay:.94s" href="#">
+      <span class="q-num">03</span>
+      <div>
+        <div class="q-title">Is the climate stabilizing or breaking?</div>
+        <div class="q-verdict"><span class="dot" style="background:linear-gradient(90deg,var(--despair),var(--hope))"></span>Long-run despair, a hopeful recent turn</div>
+      </div>
+      <div class="mini" style="--accent:var(--despair)">
+        <div class="mini-ticks"><span class="lo"></span><span class="mid"></span><span class="mid"></span><span class="hi"></span><span class="hi"></span><span class="mid"></span></div>
+        <div class="mini-ends"><span class="b">NO · 150y</span><span class="a">MAYBE · 2015→</span></div>
+      </div>
+    </a>
+
+  </div>
+
+  <footer class="reveal" style="animation-delay:1s">
+    <span>Public domain · CC0 prose · sources CC-BY</span>
+    <span>The honest work is to hold both in view.</span>
+    <span>hopeanddespair.world</span>
+  </footer>
+
+</div>
+<script>
+  const t=document.getElementById('themeToggle'), root=document.documentElement;
+  t.addEventListener('click',()=>{
+    const dark=root.getAttribute('data-theme')==='dark';
+    root.setAttribute('data-theme',dark?'light':'dark');
+    t.textContent=dark?'Dark':'Light';
+  });
+</script>
+</body>
+</html>

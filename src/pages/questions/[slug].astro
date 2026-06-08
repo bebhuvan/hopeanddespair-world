@@ -1,0 +1,365 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { miniLine, fullChart, signalRead } from '../../lib/charts';
+import { windowSeries } from '../../lib/smooth';
+
+export async function getStaticPaths() {
+  const questions = await getCollection('questions');
+  return questions.map((q) => ({ params: { slug: q.id }, props: { q } }));
+}
+
+const { q } = Astro.props;
+const d = q.data;
+const COL: Record<string, string> = {
+  hope: 'var(--hope)', despair: 'var(--despair)', uncertain: 'var(--uncertain)', ochre: 'var(--ochre)',
+};
+const tempCol = (t: string) => (t === 'cool' ? 'var(--hope)' : 'var(--despair)');
+const published = d.status === 'published' && d.evidence;
+
+// Evidence — the static four-magnification row + signals (built at compile time; no client JS)
+let windows: any[] = [], signals: any[] = [], tally = '', recentCol = '';
+if (published && d.evidence) {
+  const ev = d.evidence;
+  windows = ev.windows.map((w, i) => {
+    const r = miniLine({ data: windowSeries(ev.hero, w.from, w.to), color: tempCol(w.temp), width: 300, height: 60, area: true, baseline: true, id: 'w' + i });
+    return { ...w, ...r, col: tempCol(w.temp) };
+  });
+  let good = 0, bad = 0;
+  signals = ev.signals.map((s, i) => {
+    const rd = signalRead(s.data, ev.recentFrom, ev.recentTo, s.badUp);
+    rd.good ? good++ : bad++;
+    const col = rd.good ? 'var(--hope)' : 'var(--despair)';
+    const r = miniLine({ data: rd.data, color: col, width: 300, height: 62, area: true, id: 'sig' + i });
+    return { ...s, ...rd, col, ...r };
+  });
+  tally = `<b>${bad}</b> of ${ev.signals.length} signals point to deterioration · <b>${good}</b> toward progress`;
+  recentCol = tempCol(ev.recentTemp);
+}
+
+const movements = (published ? d.movements ?? [] : []).map((mv) => {
+  const r = fullChart({ ...mv.chart, series: mv.chart.series.map((s) => ({ ...s, color: COL[s.color] })) });
+  return { ...mv, ...r };
+});
+
+const title = `${d.question} — Hope & Despair`;
+const sec = ['I', 'II', 'III', 'IV', 'V', 'VI'];
+---
+<BaseLayout title={title} description={d.dek}>
+  <header class="ahead">
+    <p class="kicker"><span class="n">Question {d.kickerNumber}</span> {d.theme}</p>
+    <h1 class="q">{d.question}</h1>
+  </header>
+  <p class="lede">{d.dek}</p>
+
+  {!published && (
+    <p class="draft-note">This article is being written. Its place on the hope↔despair atlas is set — the full
+      evidence, charts, and explanation are on the way. <a href="/">← Back to the atlas</a></p>
+  )}
+
+  {published && d.caveats && (
+    <aside class="caveats">
+      <div class="caveats-head"><span class="cv-glyph">◐</span> Before you read · caveats &amp; blind spots</div>
+      <ul>{d.caveats.map((c) => <li set:html={c} />)}</ul>
+    </aside>
+  )}
+
+  {published && d.evidence && (
+    <section class="evi">
+      <div class="evi-head">
+        <div class="t">The Evidence · <b>one question, four magnifications</b></div>
+        <div class="legend">
+          <span><i style="background:var(--hope)"></i> improving</span>
+          <span><i style="background:var(--despair)"></i> worsening</span>
+          <span style="color:var(--accent)">read left → right →</span>
+        </div>
+      </div>
+
+      <div class="windows">
+        {windows.map((w) => (
+          <div class="win">
+            <div class="wlab">{w.lab}</div>
+            <div class="wrange">{w.range}</div>
+            <svg viewBox={w.viewBox} preserveAspectRatio="none" aria-hidden="true" set:html={w.inner} />
+            <div class="wverdict" style={`color:${w.col}`}>{w.verdict}<span class="punc">.</span></div>
+          </div>
+        ))}
+      </div>
+
+      <p class="evi-read" set:html={d.evidence.readout} />
+
+      <div class="sig-head">The recent signals · {d.evidence.windows[2]?.range ?? 'recent'}</div>
+      <div class="signals">
+        {signals.map((s) => (
+          <div class="sig">
+            <div class="fg">{s.fig}</div>
+            <div class="nm">{s.name}</div>
+            <div class="un">{s.unit}</div>
+            <svg viewBox={s.viewBox} preserveAspectRatio="none" aria-hidden="true" set:html={s.inner} />
+            <div class="read">
+              <span class="v" style={`color:${s.col}`}>{s.value}</span>
+              <span class="dir" style={`color:${s.col}`}><span class="arr">{s.up ? '↑' : '↓'}</span><span class="lab">{s.good ? 'improving' : 'worsening'}</span></span>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="composite">
+        <div><div class="vlabel">The recent verdict</div>
+          <div class="verdict" style={`color:${recentCol}`}>{d.evidence.recentVerdict}<span class="punc">.</span></div></div>
+        <div>
+          <p class="synthesis" set:html={d.evidence.synthesis} />
+          <p class="tally" set:html={tally} />
+          <p class="vantage-note" set:html={d.evidence.vantageNote} />
+        </div>
+      </div>
+    </section>
+  )}
+
+  {movements.length > 0 && (
+    <section class="movements">
+      {movements.map((mv) => (
+        <article class="move">
+          <div class="ey"><span>{mv.eyebrow}</span><span class="fg">{mv.fig}</span></div>
+          <h2>{mv.claim}</h2>
+          {mv.sidenote && (
+            <aside class="sidenote"><span class="n">{mv.sidenote.mark}</span><span set:html={mv.sidenote.text} /></aside>
+          )}
+          <p class:list={['intro', { 'has-drop': mv.dropCap }]} set:html={mv.explainer} />
+          <div class="figure">
+            <div class="cap"><span set:html={mv.captionLeft} /><span>{mv.captionRight}</span></div>
+            <svg viewBox={mv.viewBox} aria-hidden="true" set:html={mv.inner} />
+            <div class="fig-foot"><div class="src">{mv.source}</div></div>
+          </div>
+          <div class="take">
+            <div class="hope"><div class="t">Hope</div><p>{mv.take.hope}</p></div>
+            <div class="despair"><div class="t">Despair</div><p>{mv.take.despair}</p></div>
+            <div class="conf"><div class="t">Confusion</div><p>{mv.take.confusion}</p></div>
+          </div>
+        </article>
+      ))}
+    </section>
+  )}
+
+  {published && d.pullQuote && (
+    <blockquote class="pull">{d.pullQuote.text}<cite>{d.pullQuote.cite}</cite></blockquote>
+  )}
+
+  {published && d.lenses && (
+    <section class="section">
+      <div class="label"><span class="nn">{sec[0]}</span> The multi-disciplinary read</div>
+      {d.lenses.map((l) => (
+        <div class="lens">
+          <div><span class="who">{l.who}</span><span class="conf">confidence · {l.confidence}</span></div>
+          <div class="takes">
+            {l.hope && <p><span class="h">Hope</span>{l.hope}</p>}
+            {l.despair && <p><span class="dd">Despair</span>{l.despair}</p>}
+          </div>
+        </div>
+      ))}
+    </section>
+  )}
+
+  {published && d.hopeCase && d.despairCase && (
+    <section class="section">
+      <div class="label"><span class="nn">{sec[1]}</span> The two strongest cases</div>
+      <div class="duel">
+        <div class="hope"><h3>Strongest case for hope</h3><p>{d.hopeCase}</p></div>
+        <div class="desp"><h3>Strongest case for despair</h3><p>{d.despairCase}</p></div>
+      </div>
+    </section>
+  )}
+
+  {published && d.whatWouldChangeIt && (
+    <section class="section">
+      <div class="label"><span class="nn">{sec[2]}</span> What would change this verdict</div>
+      <p class="change" set:html={d.whatWouldChangeIt} />
+    </section>
+  )}
+
+  {published && d.methodology && (
+    <section class="section">
+      <div class="label"><span class="nn">{sec[3]}</span> Methodology</div>
+      <p class="method-lead">Everything done to the numbers between the source and the chart, disclosed in full.
+        Where a choice is editorial rather than measured, we say so.</p>
+      <div class="method"><dl>
+        {d.methodology.map((m) => (<><dt>{m.term}</dt><dd set:html={m.detail} /></>))}
+      </dl></div>
+    </section>
+  )}
+
+  {published && d.sources && (
+    <section class="section">
+      <div class="label"><span class="nn">{sec[4]}</span> Sources &amp; references</div>
+      <ol class="srcs">
+        {d.sources.map((s) => (
+          <li><b>{s.name}</b> — <a href={s.url} rel="noopener">{s.url.replace(/^https?:\/\//, '')}</a>
+            · {s.license} · vintage {s.vintage}{s.note && <span class="note">{s.note}</span>}</li>
+        ))}
+      </ol>
+    </section>
+  )}
+
+  {published && d.revisions && (
+    <section class="section">
+      <div class="label"><span class="nn">{sec[5]}</span> Revision history</div>
+      <ol class="changelog">
+        {d.revisions.map((r) => (<li><time>{r.date}</time><span class="txt" set:html={r.text} /></li>))}
+      </ol>
+      <p class="repo-note">This article is kept up to date as data revises. Every edit — to a number, a word, or a
+        chart — is tracked in the open.</p>
+    </section>
+  )}
+</BaseLayout>
+
+<style>
+  .ahead { padding-block: clamp(3rem, 8vh, 5.5rem) 0; max-width: 54rem; }
+  .kicker { font-family: var(--font-label); font-size: 0.72rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--accent); display: flex; gap: 0.8rem; align-items: center; }
+  .kicker .n { font-family: var(--font-mono); letter-spacing: 0.04em; }
+  .kicker::after { content: ""; flex: 1; height: 1px; background: var(--brass-dim); max-width: 9rem; }
+  h1.q { font-family: var(--font-display); font-weight: 300; font-size: clamp(2.4rem, 6vw, 4.7rem); line-height: 0.98; letter-spacing: -0.024em; margin-top: 1.5rem; font-optical-sizing: auto; text-wrap: balance; }
+  .lede { max-width: 62ch; margin-top: 2.2rem; font-size: clamp(1.1rem, 1.5vw, 1.3rem); line-height: 1.6; color: var(--fg-2); }
+  .lede::first-letter { font-family: var(--font-display); font-weight: 300; float: left; font-size: 4.6rem; line-height: 0.74; padding: 0.34rem 0.6rem 0.1rem 0; color: var(--accent); }
+  .draft-note { max-width: 60ch; margin-top: 2.5rem; padding-left: 1.6rem; border-left: 2px solid var(--brass-dim); color: var(--fg-2); }
+  .draft-note a { color: var(--accent); text-decoration: none; }
+
+  .caveats { margin-top: clamp(2rem, 5vh, 3rem); padding: 0.2rem 0 0.2rem 1.7rem; border-left: 2px solid var(--brass-dim); }
+  .caveats-head { font-family: var(--font-display); font-style: italic; font-size: 1.06rem; color: var(--accent); display: flex; align-items: center; gap: 0.5em; margin-bottom: 1rem; }
+  .caveats ul { list-style: none; display: grid; gap: 0.7rem; }
+  .caveats li { position: relative; padding-left: 1.4rem; font-size: 0.97rem; color: var(--fg-2); line-height: 1.5; max-width: 66ch; }
+  .caveats li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
+  .caveats li :global(b) { font-weight: 400; font-style: italic; color: var(--fg); }
+
+  .evi { margin-top: clamp(2.5rem, 6vh, 4rem); }
+  .evi-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; border-top: 1px solid var(--brass-dim); padding-top: 1rem; margin-bottom: 1.6rem; flex-wrap: wrap; }
+  .evi-head .t { font-family: var(--font-display); font-style: italic; font-size: 1.04rem; color: var(--fg-muted); }
+  .evi-head .t :global(b) { color: var(--accent); font-weight: 500; font-style: italic; }
+  .legend { display: flex; gap: 1.2rem; font-family: var(--font-mono); font-size: 0.66rem; color: var(--fg-muted); flex-wrap: wrap; }
+  .legend span { display: inline-flex; align-items: center; gap: 0.4em; }
+  .legend i { width: 0.7em; height: 0.7em; border-radius: 50%; }
+
+  .windows { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1rem, 3vw, 2.6rem); margin-top: 1.4rem; padding-top: 1.7rem; border-top: 1px solid var(--brass-dim); }
+  .win { display: flex; flex-direction: column; gap: 0.35rem; }
+  .win .wlab { font-family: var(--font-display); font-style: italic; font-size: 1.06rem; color: var(--fg); line-height: 1.1; }
+  .win .wrange { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.04em; color: var(--fg-muted); }
+  .win svg { width: 100%; height: 60px; display: block; overflow: visible; margin-top: 0.5rem; }
+  .win .wverdict { font-family: var(--font-display); font-weight: 330; font-size: clamp(1.5rem, 2.8vw, 2.1rem); line-height: 1; letter-spacing: -0.02em; margin-top: 0.3rem; }
+  .win .wverdict .punc { color: var(--fg); }
+  .evi-read { max-width: 60ch; margin-top: 1.7rem; color: var(--fg-2); font-size: clamp(1.05rem, 1.5vw, 1.2rem); line-height: 1.6; }
+  .evi-read :global(em) { font-style: italic; font-weight: 400; }
+  .sig-head { font-family: var(--font-display); font-style: italic; font-size: 1.05rem; color: var(--accent); margin-top: clamp(2.2rem, 5.5vh, 3.4rem); }
+  .vantage-note { font-size: 0.95rem; color: var(--fg-muted); margin-top: 1.1rem; max-width: 48ch; line-height: 1.5; }
+  @media (max-width: 680px) { .windows { grid-template-columns: repeat(2, 1fr); gap: 1.6rem; } }
+
+  .signals { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1.4rem, 3vw, 2.8rem); margin-top: 1rem; padding-top: 1.2rem; }
+  .sig { display: flex; flex-direction: column; gap: 0.5rem; }
+  .sig .fg { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.06em; color: var(--accent); }
+  .sig .nm { font-family: var(--font-display); font-size: 1.02rem; line-height: 1.1; font-weight: 380; }
+  .sig .un { font-family: var(--font-label); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg-muted); margin-top: -0.2rem; }
+  .sig svg { width: 100%; height: 62px; display: block; overflow: visible; margin-top: 0.2rem; }
+  .sig .read { display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem; }
+  .sig .v { font-family: var(--font-mono); font-size: 1.02rem; font-variant-numeric: tabular-nums; }
+  .sig .dir { font-family: var(--font-label); font-size: 0.64rem; letter-spacing: 0.08em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.3em; }
+  .sig .arr { font-size: 0.95rem; line-height: 1; }
+  @media (max-width: 860px) { .signals { grid-template-columns: repeat(2, 1fr); } }
+
+  .composite { display: grid; grid-template-columns: auto 1fr; gap: clamp(1.5rem, 5vw, 4rem); align-items: start; margin-top: clamp(2.5rem, 6vh, 3.8rem); padding-top: 2.2rem; border-top: 1px solid var(--brass-dim); }
+  .vlabel { font-family: var(--font-display); font-style: italic; font-size: 1.04rem; color: var(--accent); }
+  .verdict { font-family: var(--font-display); font-weight: 300; font-size: clamp(3.6rem, 11vw, 8rem); line-height: 0.9; letter-spacing: -0.035em; }
+  .verdict .punc { color: var(--fg); }
+  .synthesis { font-family: var(--font-body); font-size: clamp(1.18rem, 2vw, 1.55rem); line-height: 1.42; max-width: 46ch; font-weight: 370; margin-top: 0.3rem; }
+  .synthesis :global(em) { font-style: italic; }
+  .tally { font-family: var(--font-mono); font-size: 0.74rem; color: var(--fg-muted); margin-top: 1.4rem; font-variant-numeric: tabular-nums; }
+  .tally :global(b) { color: var(--fg); }
+  .vantage-note { margin-top: 1.1rem; }
+  @media (max-width: 680px) { .composite { grid-template-columns: 1fr; } }
+
+  .movements { margin-top: clamp(2rem, 5vh, 3rem); }
+  .move { border-top: 1px solid var(--brass-dim); padding-top: 2.2rem; margin-top: clamp(3rem, 7vh, 5rem); }
+  .move .ey { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 1.08rem; color: var(--accent); display: flex; gap: 1rem; align-items: center; }
+  .move .ey::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+  .move .ey .fg { font-family: var(--font-mono); font-style: normal; color: var(--fg-muted); letter-spacing: 0.04em; }
+  .move h2 { font-family: var(--font-display); font-weight: 330; font-size: clamp(1.9rem, 3.6vw, 3rem); line-height: 1.02; letter-spacing: -0.02em; margin-top: 1.1rem; max-width: 22ch; }
+  .intro { max-width: 62ch; margin-top: 1.3rem; color: var(--fg-2); font-size: clamp(1.05rem, 1.5vw, 1.22rem); line-height: 1.6; }
+  .intro :global(em) { font-style: italic; color: var(--fg); }
+  .intro.has-drop::first-letter { font-family: var(--font-display); float: left; font-size: 3rem; line-height: 0.8; padding: 0.2rem 0.4rem 0 0; color: var(--accent); font-weight: 300; }
+  .figure { margin-top: 1.9rem; clear: both; }
+  .figure .cap { display: flex; justify-content: space-between; gap: 1rem; font-family: var(--font-mono); font-size: 0.66rem; color: var(--fg-muted); margin-bottom: 0.8rem; flex-wrap: wrap; }
+  .figure .cap :global(b) { color: var(--fg-2); font-weight: 400; }
+  .figure svg { width: 100%; height: auto; display: block; }
+  .figure svg :global(text) { font-family: var(--font-mono); font-size: 10.5px; fill: var(--fg-muted); }
+  .figure svg :global(text.ser) { font-family: var(--font-label); font-size: 11px; font-weight: 500; }
+  .figure svg :global(.grid) { stroke: var(--rule); stroke-dasharray: 1 5; }
+  .figure svg :global(.grid0) { stroke: var(--rule-2); }
+  .figure svg :global(.annot) { stroke: var(--brass-dim); stroke-dasharray: 2 5; stroke-width: 1; }
+  .figure svg :global(text.annotL) { fill: var(--accent); font-size: 10px; letter-spacing: 0.12em; }
+  .figure svg :global(text.wm) { fill: var(--fg-muted); opacity: 0.42; font-size: 9px; letter-spacing: 0.09em; }
+  .fig-foot { display: flex; align-items: center; justify-content: flex-end; gap: 1rem; margin-top: 0.9rem; }
+  .figure .src { font-family: var(--font-mono); font-size: 0.62rem; color: var(--fg-muted); text-align: right; }
+
+  .take { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.2rem, 2.6vw, 2.2rem); margin-top: 1.7rem; padding-top: 1.3rem; border-top: 1px solid var(--rule); clear: both; }
+  .take .t { font-family: var(--font-label); font-size: 0.64rem; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.55rem; display: flex; align-items: center; gap: 0.4em; }
+  .take .t::before { content: ""; width: 0.5em; height: 0.5em; border-radius: 50%; background: currentColor; }
+  .take .hope .t { color: var(--hope); }
+  .take .despair .t { color: var(--despair); }
+  .take .conf .t { color: var(--uncertain); }
+  .take p { font-size: 0.92rem; color: var(--fg-2); line-height: 1.5; max-width: 36ch; }
+  @media (max-width: 680px) { .take { grid-template-columns: 1fr; gap: 1.3rem; } }
+
+  .sidenote { float: right; clear: right; width: 13.5rem; margin: 0.3rem 0 1.3rem 2.4rem; font-family: var(--font-body); font-size: 0.86rem; line-height: 1.52; color: var(--fg-muted); }
+  .sidenote::before { content: ""; display: block; width: 2rem; height: 1px; background: var(--accent); opacity: 0.5; margin-bottom: 0.6rem; }
+  .sidenote .n { font-family: var(--font-display); font-style: italic; color: var(--accent); font-size: 1.05rem; margin-right: 0.4em; }
+  .sidenote :global(em) { font-style: italic; }
+  @media (max-width: 1080px) { .sidenote { float: none; width: auto; margin: 0.8rem 0 1.2rem; padding-left: 1.1rem; border-left: 2px solid var(--brass-dim); } .sidenote::before { display: none; } }
+
+  .section { border-top: 1px solid var(--rule); margin-top: clamp(3.5rem, 8.5vh, 6.5rem); padding-top: 2.2rem; }
+  .section > .label { font-family: var(--font-display); font-style: italic; font-size: 1.22rem; color: var(--accent); margin-bottom: 1.8rem; display: flex; gap: 0.7rem; align-items: baseline; }
+  .section > .label .nn { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 1.55rem; line-height: 1; color: var(--accent); margin-right: 0.3rem; }
+  .lens { display: grid; grid-template-columns: 12rem 1fr; gap: 1rem 2.4rem; padding-block: 1.4rem; border-bottom: 1px solid var(--rule); }
+  .lens:last-child { border-bottom: 0; }
+  .lens .who { font-family: var(--font-display); font-style: italic; font-size: 1.3rem; font-weight: 360; }
+  .lens .conf { font-family: var(--font-mono); font-size: 0.64rem; color: var(--fg-muted); margin-top: 0.35rem; display: block; }
+  .lens .takes p { margin-bottom: 0.5rem; max-width: 60ch; color: var(--fg-2); }
+  .lens .h, .lens .dd { font-family: var(--font-label); font-size: 0.64rem; letter-spacing: 0.12em; text-transform: uppercase; margin-right: 0.4em; }
+  .lens .h { color: var(--hope); }
+  .lens .dd { color: var(--despair); }
+
+  .duel { display: grid; grid-template-columns: 1fr 1fr; }
+  .duel > div { padding: 0 clamp(1rem, 3vw, 2.4rem); }
+  .duel > div:first-child { padding-left: 0; border-right: 1px solid var(--brass-dim); }
+  .duel > div:last-child { padding-right: 0; }
+  .duel h3 { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 1.28rem; margin-bottom: 1rem; }
+  .duel .hope h3 { color: var(--hope); }
+  .duel .desp h3 { color: var(--despair); }
+  .duel p { max-width: 42ch; color: var(--fg-2); }
+  @media (max-width: 680px) { .duel { grid-template-columns: 1fr; } .duel > div:first-child { border-right: 0; border-bottom: 1px solid var(--brass-dim); padding: 0 0 1.4rem; margin-bottom: 1.4rem; } .duel > div:last-child { padding: 0; } }
+
+  .change { font-family: var(--font-body); font-size: clamp(1.25rem, 2.4vw, 1.75rem); line-height: 1.45; font-weight: 360; max-width: 54ch; }
+  .change :global(b) { font-style: italic; font-weight: 400; color: var(--accent); }
+
+  .method-lead { max-width: 60ch; color: var(--fg-2); margin-bottom: 1.6rem; }
+  .method dl { display: grid; grid-template-columns: 13rem 1fr; gap: 1.1rem 2rem; }
+  .method dt { font-family: var(--font-display); font-style: italic; font-size: 1.18rem; color: var(--fg); line-height: 1.2; }
+  .method dd { margin: 0; font-size: 1rem; color: var(--fg-2); line-height: 1.55; max-width: 60ch; }
+  .method dd :global(b) { font-style: italic; font-weight: 400; color: var(--accent); }
+  .method dd :global(i) { color: var(--fg); }
+  @media (max-width: 680px) { .method dl { grid-template-columns: 1fr; gap: 0.3rem 0; } .method dt { margin-top: 1.1rem; } }
+
+  .srcs { list-style: none; counter-reset: s; font-family: var(--font-mono); font-size: 0.8rem; line-height: 1.9; color: var(--fg-muted); }
+  .srcs li { counter-increment: s; position: relative; padding-left: 2.1rem; margin-bottom: 0.5rem; }
+  .srcs li::before { content: counter(s); position: absolute; left: 0; top: -0.05em; font-family: var(--font-display); font-style: italic; color: var(--accent); font-size: 1.1rem; }
+  .srcs a { color: var(--fg-2); text-decoration: none; border-bottom: 1px solid var(--brass-dim); }
+  .srcs li :global(b) { font-weight: 500; color: var(--fg); }
+  .srcs .note { display: block; color: var(--fg-muted); opacity: 0.8; }
+
+  .changelog { list-style: none; border-left: 1px solid var(--brass-dim); }
+  .changelog li { position: relative; padding: 0 0 1.5rem 1.9rem; }
+  .changelog li::before { content: ""; position: absolute; left: -5px; top: 0.35rem; width: 9px; height: 9px; border-radius: 50%; background: var(--bg); border: 1.5px solid var(--accent); }
+  .changelog time { font-family: var(--font-mono); font-size: 0.76rem; color: var(--accent); display: block; margin-bottom: 0.25rem; }
+  .changelog .txt { font-size: 0.98rem; color: var(--fg-2); line-height: 1.5; }
+  .repo-note { margin-top: 1.6rem; color: var(--fg-muted); font-size: 0.97rem; max-width: 60ch; }
+
+  .pull { font-family: var(--font-display); font-weight: 300; font-style: italic; font-size: clamp(2rem, 5vw, 3.6rem); line-height: 1.08; letter-spacing: -0.02em; text-align: center; max-width: 18ch; margin: clamp(3.5rem, 9vh, 6.5rem) auto; color: var(--fg); }
+  .pull::before { content: "◐"; display: block; font-style: normal; font-size: 1.4rem; color: var(--accent); margin-bottom: 1.8rem; opacity: 0.85; }
+  .pull cite { display: block; font-family: var(--font-label); font-style: normal; font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-top: 1.8rem; }
+</style>

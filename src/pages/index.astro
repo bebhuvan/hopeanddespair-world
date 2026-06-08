@@ -1,0 +1,190 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const questions = (await getCollection('questions')).sort((a, b) => a.data.order - b.data.order);
+const count = String(questions.length).padStart(2, '0');
+
+// temperature at axis position p ∈ [0,1] (0 = hope, 1 = despair). color-mix kept as a string so
+// it re-resolves per theme. Server-computed; emitted as inline style.
+const col = (p: number) =>
+  p < 0.5
+    ? `color-mix(in srgb, var(--hope), var(--uncertain) ${Math.round(p * 200)}%)`
+    : `color-mix(in srgb, var(--uncertain), var(--despair) ${Math.round((p - 0.5) * 200)}%)`;
+const pct = (p: number) => (p * 100).toFixed(1) + '%';
+
+const rows = questions.map((q) => {
+  const { hope, despair } = q.data.atlas;
+  return {
+    id: q.id,
+    num: q.data.kickerNumber,
+    title: q.data.question,
+    verdict: q.data.verdict,
+    left: pct(hope.pos),
+    width: ((despair.pos - hope.pos) * 100).toFixed(1) + '%',
+    hopePos: pct(hope.pos),
+    despairPos: pct(despair.pos),
+    hopeCol: col(hope.pos),
+    despairCol: col(despair.pos),
+    hopeLens: hope.lens,
+    despairLens: despair.lens,
+    grad: `linear-gradient(90deg, ${col(hope.pos)}, ${col(despair.pos)})`,
+  };
+});
+---
+<BaseLayout title="Hope & Despair — A living atlas of human progress, suffering, and uncertainty">
+  <section class="hero">
+    <p class="eyebrow reveal" style="animation-delay:.1s"><span class="live"></span> A living atlas · updated continuously</p>
+    <h1 class="statement">
+      <span class="l reveal" style="animation-delay:.18s">The world is getting better.</span>
+      <span class="l reveal" style="animation-delay:.3s">The world is getting worse.</span>
+      <span class="l both reveal" style="animation-delay:.44s">Both are true.</span>
+    </h1>
+    <p class="dek reveal" style="animation-delay:.58s">Not a verdict, but an instrument. Every question is read at
+      each magnification — from the ten-thousand-year arc to a single lived day — because
+      <em>the answer changes depending on how closely you look.</em></p>
+  </section>
+
+  <p class="section-label reveal" style="animation-delay:.66s"><span>The Atlas</span><span class="count">{count}</span></p>
+  <p class="atlas-lead reveal" style="animation-delay:.7s">Three temperatures — <span class="h">hope</span>,
+    <span class="d">despair</span>, and the <span class="u">uncertain</span> middle between them — and one question
+    read at every lens. Each mark shows <em>how far its verdict travels</em> as you change how closely you look.
+    The wider the bar, the more the answer depends on where you stand.</p>
+
+  <div class="axis-head reveal" style="animation-delay:.74s">
+    <span class="hope">Hope</span><span class="mid">the uncertain middle</span><span class="desp">Despair</span>
+  </div>
+
+  <div class="atlas">
+    {rows.map((r) => (
+      <a class="qrow" href={`/questions/${r.id}`}>
+        <span class="qnum">{r.num}</span>
+        <div class="qmain">
+          <div class="qtop">
+            <div class="qtitle">{r.title}<span class="go">Read →</span></div>
+            <div class="qverdict">{r.verdict}</div>
+          </div>
+          <div class="track">
+            <div class="track-line"></div><div class="track-mid"></div>
+            <div class="bar" style={`left:${r.left};width:${r.width};background:${r.grad}`}></div>
+            <div class="bar-end" style={`left:${r.hopePos};border:2px solid ${r.hopeCol}`}></div>
+            <div class="bar-end" style={`left:${r.despairPos};border:2px solid ${r.despairCol}`}></div>
+            <div class="lens-lab" style={`left:${r.hopePos};color:${r.hopeCol}`}>{r.hopeLens}</div>
+            <div class="lens-lab" style={`left:${r.despairPos}`}>{r.despairLens}</div>
+          </div>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <blockquote class="pull">Make reality harder to simplify.<cite>The Hope &amp; Despair project</cite></blockquote>
+</BaseLayout>
+
+<script is:inline>
+  // Progressive enhancement only: bars are fully visible without JS. If JS + motion allowed,
+  // start them collapsed and grow on scroll-in.
+  (() => {
+    if (matchMedia('(prefers-reduced-motion:reduce)').matches || !('IntersectionObserver' in window)) return;
+    const rows = document.querySelectorAll('.qrow');
+    rows.forEach((r) => r.classList.add('pending'));
+    const obs = new IntersectionObserver((es) => es.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+    }), { threshold: 0.4 });
+    rows.forEach((r) => obs.observe(r));
+  })();
+</script>
+
+<style>
+  .hero { padding-block: clamp(3.5rem, 11vh, 7.5rem) clamp(2rem, 5vh, 3.4rem); }
+  .eyebrow {
+    font-family: var(--font-label); font-size: 0.76rem; font-weight: 600; letter-spacing: 0.04em;
+    color: var(--fg-2); display: flex; align-items: center; gap: 0.7rem;
+  }
+  .eyebrow .live { width: 0.5em; height: 0.5em; border-radius: 50%; background: var(--accent); position: relative; }
+  .eyebrow .live::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--accent); animation: pulse 2.4s infinite; }
+  @keyframes pulse { 0% { transform: scale(1); opacity: 0.7; } 70%, 100% { transform: scale(3); opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .eyebrow .live::after { animation: none; } }
+  .statement {
+    font-family: var(--font-display); font-weight: 340; font-size: clamp(2.8rem, 8.4vw, 6.6rem);
+    line-height: 0.98; letter-spacing: -0.035em; margin-top: 2rem; max-width: 16ch; font-optical-sizing: auto;
+  }
+  .statement .l { display: block; }
+  .statement .both { font-style: italic; font-weight: 360; color: var(--accent); }
+  .dek {
+    font-size: clamp(1.1rem, 1.7vw, 1.42rem); line-height: 1.5; max-width: 48ch; margin-top: 2.2rem;
+    font-weight: 400; color: var(--fg-2);
+  }
+  .dek em { font-style: italic; color: var(--fg); }
+
+  .section-label {
+    font-family: var(--font-label); font-size: 0.74rem; font-weight: 600; letter-spacing: 0.03em;
+    color: var(--fg-muted); display: flex; align-items: center; gap: 1rem; padding-top: clamp(2.5rem, 6vh, 4rem);
+  }
+  .section-label .count { font-family: var(--font-mono); color: var(--accent); }
+  .section-label::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+  .atlas-lead { max-width: 60ch; margin-top: 1.1rem; color: var(--fg-2); font-size: 1.04rem; line-height: 1.55; }
+  .atlas-lead .h { font-style: italic; color: var(--hope); }
+  .atlas-lead .d { font-style: italic; color: var(--despair); }
+  .atlas-lead .u { font-style: italic; color: var(--uncertain); }
+
+  .axis-head {
+    position: relative; display: flex; justify-content: space-between; align-items: baseline;
+    margin-top: 2.2rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--rule);
+    font-family: var(--font-display); font-style: italic; font-size: 1.05rem;
+  }
+  .axis-head .hope { color: var(--hope); }
+  .axis-head .desp { color: var(--despair); }
+  .axis-head .mid { position: absolute; left: 50%; transform: translateX(-50%); color: var(--uncertain); font-size: 0.78rem; }
+
+  .qrow {
+    display: grid; grid-template-columns: 2.6rem 1fr; gap: 0 clamp(1rem, 3vw, 2rem);
+    padding-block: clamp(1.7rem, 3.8vh, 2.4rem); border-bottom: 1px solid var(--rule);
+    text-decoration: none; color: inherit; position: relative; transition: padding-left 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .qrow:hover { padding-left: 0.7rem; }
+  .qrow::before {
+    content: ""; position: absolute; left: -0.7rem; top: 1.7rem; bottom: 1.7rem; width: 2px; border-radius: 2px;
+    background: var(--accent); transform: scaleY(0); transform-origin: center; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .qrow:hover::before { transform: scaleY(1); }
+  .qnum { font-family: var(--font-mono); font-size: 0.9rem; color: var(--fg-muted); transition: color 0.3s; padding-top: 0.35rem; }
+  .qrow:hover .qnum { color: var(--accent); }
+  .qtop { display: flex; justify-content: space-between; align-items: baseline; gap: 1.2rem; flex-wrap: wrap; }
+  .qtitle { font-family: var(--font-display); font-weight: 360; font-size: clamp(1.5rem, 3vw, 2.5rem); letter-spacing: -0.02em; line-height: 1.04; }
+  .qverdict { font-family: var(--font-display); font-style: italic; font-size: clamp(0.92rem, 1.2vw, 1.05rem); color: var(--fg-muted); white-space: nowrap; }
+  .go { font-family: var(--font-label); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent); opacity: 0; transition: opacity 0.3s; margin-left: 0.6em; }
+  .qrow:hover .go { opacity: 1; }
+
+  .track { position: relative; height: 42px; margin-top: 1.15rem; }
+  .track-line { position: absolute; left: 0; right: 0; top: 18px; height: 1px; background: var(--rule); }
+  .track-mid { position: absolute; left: 50%; top: 12px; width: 1px; height: 12px; background: var(--rule-2); transform: translateX(-50%); }
+  .bar {
+    position: absolute; top: 18px; height: 3px; border-radius: 3px;
+    transform: translateY(-50%) scaleX(var(--grow, 1)); transform-origin: left;
+    transition: transform 1s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .bar-end {
+    position: absolute; top: 18px; width: 11px; height: 11px; border-radius: 50%;
+    transform: translate(-50%, -50%) scale(var(--grow, 1)); background: var(--bg);
+    transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) 0.25s;
+  }
+  .lens-lab {
+    position: absolute; top: 26px; font-family: var(--font-mono); font-size: 0.6rem; color: var(--fg-muted);
+    white-space: nowrap; transform: translateX(-50%);
+  }
+  /* progressive enhancement: only when JS adds .pending do bars start collapsed */
+  .qrow.pending .bar, .qrow.pending .bar-end { --grow: 0; }
+  .qrow.pending.in .bar, .qrow.pending.in .bar-end { --grow: 1; }
+  @media (max-width: 680px) { .lens-lab { display: none; } }
+
+  .pull {
+    font-family: var(--font-display); font-weight: 340; font-style: italic; font-size: clamp(2rem, 5vw, 3.6rem);
+    line-height: 1.05; letter-spacing: -0.025em; text-align: center; max-width: 20ch;
+    margin: clamp(4rem, 10vh, 7rem) auto clamp(2rem, 5vh, 3rem); color: var(--fg);
+  }
+  .pull::before { content: "◐"; display: block; font-style: normal; font-size: 1.5rem; color: var(--accent); margin-bottom: 1.6rem; }
+  .pull cite {
+    display: block; font-family: var(--font-label); font-style: normal; font-size: 0.74rem; font-weight: 600;
+    letter-spacing: 0.04em; color: var(--accent); margin-top: 1.6rem;
+  }
+</style>

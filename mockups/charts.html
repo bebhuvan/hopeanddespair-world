@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The chart kit — Hope &amp; Despair</title>
+<!-- The chart VOCABULARY: a small, opinionated set organized by the JOB each chart does
+     (not a catalog of types). Each specimen is the visual spec for one render-charts.ts
+     template. House style = article-v4 (unframed, hairlines, temperature, italic eyebrows).
+     No client charting library; every chart is inline SVG with a baked watermark. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Newsreader:ital,opsz,wght@0,6..72,300..500&family=Geist:wght@300..700&family=Geist+Mono:wght@300..600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBFCFE; --bg-2:#EEF2F7; --panel:#FFFFFF;
+  --fg:#0D1117; --fg-2:#39414D; --fg-muted:#79828F;
+  --rule:rgba(13,17,23,.09); --rule-2:rgba(13,17,23,.18);
+  --accent:#0FA67E; --hope:#0FA67E; --despair:#F0512E; --uncertain:#5B61E6; --ochre:#C7901F;
+  --font-display:"Fraunces",Georgia,serif;
+  --font-body:"Newsreader","Source Serif 4",Georgia,serif;
+  --font-label:"Geist",ui-sans-serif,system-ui,sans-serif;
+  --font-mono:"Geist Mono",ui-monospace,monospace;
+  --margin:clamp(1.25rem,5.5vw,7rem);
+}
+[data-theme="dark"]{
+  --bg:#0A0D12; --bg-2:#141A22; --panel:#10151C;
+  --fg:#EEF2F7; --fg-2:#B8C0CC; --fg-muted:#7C8693;
+  --rule:rgba(238,242,247,.10); --rule-2:rgba(238,242,247,.20);
+  --accent:#2FE3B6; --hope:#2FE3B6; --despair:#FF6A4D; --uncertain:#8E93FF; --ochre:#FFC24B;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:1.075rem;line-height:1.6;
+  font-weight:370;min-height:100vh;overflow-x:hidden;transition:background .4s,color .4s}
+.wrap{padding-inline:var(--margin)}
+::selection{background:var(--accent);color:var(--bg)}
+
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding-block:1.4rem;border-bottom:1px solid var(--rule)}
+.wordmark{font-family:var(--font-label);font-weight:600;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;
+  display:flex;align-items:center;gap:.55em;color:inherit;text-decoration:none}
+.wordmark .glyph{font-size:1.1rem;letter-spacing:0;color:var(--accent);display:inline-block;transition:transform .7s cubic-bezier(.5,0,.2,1)}
+.wordmark:hover .glyph{transform:rotate(180deg)}
+nav{display:flex;gap:1.6rem;align-items:center}
+nav a,.toggle{font-family:var(--font-label);font-weight:500;font-size:.74rem;letter-spacing:.04em;color:var(--fg-muted);text-decoration:none;background:none;border:0;cursor:pointer}
+nav a:hover,.toggle:hover{color:var(--fg)}
+.toggle{border:1px solid var(--rule-2);padding:.45em .8em;border-radius:7px;color:var(--fg-2)}
+
+.head{padding-block:clamp(3rem,8vh,5rem) 0;max-width:60rem}
+.kicker{font-family:var(--font-label);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:var(--font-display);font-weight:320;font-size:clamp(2.2rem,5.5vw,4rem);line-height:1;letter-spacing:-.022em;margin-top:1.2rem}
+.lead{max-width:62ch;margin-top:1.6rem;color:var(--fg-2);font-size:clamp(1.05rem,1.4vw,1.22rem);line-height:1.6}
+.lead em{font-style:italic;color:var(--fg)}
+
+/* specimen */
+.spec{border-top:1px solid var(--rule);margin-top:clamp(3rem,7vh,5rem);padding-top:2rem}
+.spec .ey{font-family:var(--font-display);font-style:italic;font-weight:400;font-size:1.12rem;color:var(--accent);display:flex;gap:1rem;align-items:center}
+.spec .ey .ty{font-family:var(--font-mono);font-style:normal;font-size:.66rem;letter-spacing:.04em;color:var(--fg-muted)}
+.spec .ey::after{content:"";flex:1;height:1px;background:var(--rule)}
+.spec h2{font-family:var(--font-display);font-weight:340;font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.04;letter-spacing:-.018em;margin-top:1rem;max-width:24ch}
+.spec .use{max-width:60ch;margin-top:1rem;color:var(--fg-2);font-size:1rem;line-height:1.55}
+.spec .use b{font-weight:400;font-style:italic;color:var(--fg)}
+.figure{margin-top:1.6rem}
+.figure .cap{display:flex;justify-content:space-between;gap:1rem;font-family:var(--font-mono);font-size:.66rem;color:var(--fg-muted);margin-bottom:.7rem;letter-spacing:.03em;flex-wrap:wrap}
+.figure .cap b{color:var(--fg-2);font-weight:400}
+.figure svg{width:100%;height:auto;display:block}
+.figure svg text{font-family:var(--font-mono);fill:var(--fg-muted)}
+.figure svg text.ax{font-size:10.5px}
+.figure svg text.lab{font-family:var(--font-label);font-size:11px;fill:var(--fg-2)}
+.figure svg text.val{font-size:11px}
+.figure svg text.ser{font-family:var(--font-label);font-size:11px;font-weight:500}
+.figure svg text.annotL{fill:var(--uncertain);font-size:9.5px;letter-spacing:.1em}
+.figure svg text.wm{fill:var(--fg-muted);opacity:.4;font-size:9px;letter-spacing:.09em}
+.figure .src{font-family:var(--font-mono);font-size:.62rem;color:var(--fg-muted);margin-top:.6rem;text-align:right}
+
+/* stat-in-prose specimen (NOT a KPI card — typography in the flow) */
+.stat{margin-top:1.4rem;max-width:60ch}
+.stat .big{font-family:var(--font-display);font-weight:300;font-size:clamp(3.5rem,9vw,6rem);line-height:.92;letter-spacing:-.03em;color:var(--despair)}
+.stat .ctx{font-family:var(--font-body);font-size:1.25rem;line-height:1.45;margin-top:.6rem;color:var(--fg)}
+.stat .scale{font-family:var(--font-mono);font-size:.78rem;color:var(--fg-muted);margin-top:.8rem}
+
+footer{margin-top:5rem;padding-block:2.5rem 4rem;border-top:1px solid var(--rule);font-family:var(--font-label);font-size:.74rem;color:var(--fg-muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <a class="wordmark" href="home-v4.html"><span class="glyph">◐</span> Hope &amp; Despair</a>
+    <nav><a href="home-v4.html">Atlas</a><a href="article-v4.html">Article</a>
+      <button class="toggle" id="themeToggle">Dark</button></nav>
+  </header>
+
+  <header class="head">
+    <p class="kicker">The chart kit</p>
+    <h1>Eight charts, chosen by the job they do.</h1>
+    <p class="lead">Not a catalogue of types — a small vocabulary organised by the <em>question each chart
+      answers</em>. Every template bakes in the temperature colours, the baked watermark, the ↓CSV/↓SVG/↓PNG
+      artifacts, and a plain-language summary. Pick by the job; compose; grow the set only when a real article
+      needs something that isn't here. All data below is illustrative.</p>
+  </header>
+
+  <!-- 1 -->
+  <article class="spec">
+    <div class="ey"><span>The long arc</span><span class="ty">single line · area</span></div>
+    <h2>Is the trend up or down over the long run?</h2>
+    <p class="use">Use when <b>one series over a long span</b> carries the point. The filled area gives weight;
+      the endpoint ring marks “now.” This primitive, drawn small and repeated, becomes the lens’ signal grid.</p>
+    <div class="figure"><div class="cap"><span><b>Homicides per 100,000 / year</b> · Western Europe</span><span>1300 — 2020</span></div>
+      <svg id="c1" aria-label="A long declining line from about 41 per 100,000 in 1300 to roughly 1 today."></svg>
+      <div class="src">Source · illustrative</div></div>
+  </article>
+
+  <!-- 2 -->
+  <article class="spec">
+    <div class="ey"><span>The recent break</span><span class="ty">line · event annotation</span></div>
+    <h2>Did something change lately — and when?</h2>
+    <p class="use">Use when a <b>turning point</b> is the story. A single dated annotation names the cause without
+      a paragraph. Reach for it the moment a long calm line bends.</p>
+    <div class="figure"><div class="cap"><span><b>Forcibly displaced people</b> · millions, worldwide</span><span>1951 — 2024</span></div>
+      <svg id="c2" aria-label="Displacement rising sharply after a 2022 marker labelled Ukraine."></svg>
+      <div class="src">Source · illustrative</div></div>
+  </article>
+
+  <!-- 3 -->
+  <article class="spec">
+    <div class="ey"><span>Who the average hides</span><span class="ty">multi-series lines</span></div>
+    <h2>Does one number mask very different realities?</h2>
+    <p class="use">Use to <b>break a global mean apart</b>. The flat “world” line and a country in crisis on the
+      same axis is the whole hope-and-despair argument in one frame.</p>
+    <div class="figure"><div class="cap"><span><b>Violent deaths per 100,000</b> · world vs. selected states</span><span>2010 — 2024</span></div>
+      <svg id="c3" aria-label="A flat world line beneath sharply rising and falling country lines."></svg>
+      <div class="src">Source · illustrative</div></div>
+  </article>
+
+  <!-- 4 -->
+  <article class="spec">
+    <div class="ey"><span>The spread</span><span class="ty">range / dot strip</span></div>
+    <h2>How unequal is this across places or people?</h2>
+    <p class="use">Use when <b>distribution</b> is the point. Each dot is a place; the dashed line is the average —
+      and you see instantly how few sit near it. (The same primitive as the home atlas, here on real values.)</p>
+    <div class="figure"><div class="cap"><span><b>Violent deaths per 100,000</b> · selected countries, 2024</span><span>average marked</span></div>
+      <svg id="c4" aria-label="Country dots spread far from the dashed world-average line."></svg>
+      <div class="src">Source · illustrative</div></div>
+  </article>
+
+  <!-- 5 -->
+  <article class="spec">
+    <div class="ey"><span>Before &amp; after</span><span class="ty">slope chart</span></div>
+    <h2>Who moved, and who didn’t?</h2>
+    <p class="use">Use for <b>two moments, many entities</b>. Slope and colour do the talking — up or down, better
+      or worse — across a dozen lines without a legend.</p>
+    <div class="figure"><div class="cap"><span><b>Life expectancy at birth</b> · years</span><span>2000 → 2024</span></div>
+      <svg id="c5" aria-label="Slope lines mostly rising from 2000 to 2024, a few falling."></svg>
+      <div class="src">Source · illustrative</div></div>
+  </article>
+
+  <!-- 6 -->
+  <article class="spec">
+    <div class="ey"><span>The composition</span><span class="ty">stacked area · used sparingly</span></div>
+    <h2>What is it made of, and how is the mix changing?</h2>
+    <p class="use">Use when the <b>shifting share</b> matters more than any one line. Kept rare and muted — stacks
+      mislead easily, so we reach for them last, never for decoration.</p>
+    <div class="figure"><div class="cap"><span><b>Electricity generation</b> · share by source</span><span>1990 — 2024</span></div>
+      <svg id="c6" aria-label="Stacked bands showing clean energy's share growing over time."></svg>
+      <div class="src">Source · illustrative</div></div>
+  </article>
+
+  <!-- 7 -->
+  <article class="spec">
+    <div class="ey"><span>The relationship</span><span class="ty">scatter · handle with care</span></div>
+    <h2>Does one thing track another?</h2>
+    <p class="use">Use to show <b>correlation</b> — with a warning in the prose that it isn’t cause. One point is
+      highlighted so a layperson has somewhere to stand before reading the cloud.</p>
+    <div class="figure"><div class="cap"><span><b>Income vs. life expectancy</b> · one dot per country, 2024</span><span>log income (illustrative)</span></div>
+      <svg id="c7" aria-label="An upward-curving cloud of country dots, one highlighted."></svg>
+      <div class="src">Source · illustrative</div></div>
+  </article>
+
+  <!-- 8 -->
+  <article class="spec">
+    <div class="ey"><span>The single fact</span><span class="ty">stat-in-prose · not a KPI card</span></div>
+    <h2>One number that should stop you.</h2>
+    <p class="use">Use when a figure needs <b>no chart, only scale</b>. Typography in the reading flow — never a
+      boxed metric card. Always paired with a human-scale line so the number is felt, not just read.</p>
+    <div class="stat">
+      <div class="big">120,000,000</div>
+      <p class="ctx">people were forcibly displaced by the end of 2024 — roughly one in every sixty-seven humans alive.</p>
+      <p class="scale">≈ the population of Japan · up from 38 million a decade earlier</p>
+    </div>
+  </article>
+
+  <footer>CC BY 4.0 · the chart kit is the visual spec for <b>render-charts.ts</b> · charts ship as static SVG/PNG/CSV artifacts</footer>
+</div>
+
+<script>
+const root=document.documentElement,tg=document.getElementById('themeToggle');
+tg.onclick=()=>{const d=root.getAttribute('data-theme')==='dark';root.setAttribute('data-theme',d?'light':'dark');tg.textContent=d?'Dark':'Light';};
+
+/* monotone-cubic smoothing (Fritsch–Carlson) — shared by every line template */
+function smooth(p){const n=p.length;if(n<3)return p.map((q,i)=>(i?'L':'M')+q[0].toFixed(2)+' '+q[1].toFixed(2)).join(' ');
+  const x=p.map(q=>q[0]),y=p.map(q=>q[1]),dx=[],dy=[],d=[],m=[];
+  for(let i=0;i<n-1;i++){dx[i]=x[i+1]-x[i];dy[i]=y[i+1]-y[i];d[i]=dy[i]/(dx[i]||1e-6);}
+  m[0]=d[0];for(let i=1;i<n-1;i++)m[i]=d[i-1]*d[i]<=0?0:(d[i-1]+d[i])/2;m[n-1]=d[n-2];
+  for(let i=0;i<n-1;i++){if(d[i]===0){m[i]=0;m[i+1]=0;}else{const a=m[i]/d[i],b=m[i+1]/d[i],s=a*a+b*b;if(s>9){const t=3/Math.sqrt(s);m[i]=t*a*d[i];m[i+1]=t*b*d[i];}}}
+  let s='M'+x[0].toFixed(2)+' '+y[0].toFixed(2);
+  for(let i=0;i<n-1;i++){const h=dx[i];s+=' C'+(x[i]+h/3).toFixed(2)+' '+(y[i]+m[i]*h/3).toFixed(2)+' '+(x[i+1]-h/3).toFixed(2)+' '+(y[i+1]-m[i+1]*h/3).toFixed(2)+' '+x[i+1].toFixed(2)+' '+y[i+1].toFixed(2);}
+  return s;}
+const wm=(W,H)=>`<text class="wm" x="${W-2}" y="${H-3}" text-anchor="end">hopeanddespair.world</text>`;
+
+/* === full axed line chart (single area / multi-series / annotation) === */
+function fc(svg,o){
+  const W=760,H=360,m={l:48,r:o.series.length>1?78:24,t:22,b:36};
+  const xsAll=[].concat(...o.series.map(s=>s.data.map(p=>p[0])));
+  const x0=o.x0??Math.min(...xsAll),x1=o.x1??Math.max(...xsAll),ymax=o.ymax;
+  const X=v=>m.l+(v-x0)/(x1-x0)*(W-m.l-m.r), Y=v=>H-m.b-(v/ymax)*(H-m.t-m.b);
+  let g='';
+  o.yTicks.forEach(t=>{const y=Y(t);g+=`<line x1="${m.l}" y1="${y}" x2="${W-m.r}" y2="${y}" stroke="${t===0?'var(--rule-2)':'var(--rule)'}" ${t===0?'':'stroke-dasharray="1 5"'}/><text class="ax" x="${m.l-8}" y="${y+3.5}" text-anchor="end">${t}</text>`;});
+  o.xTicks.forEach(t=>g+=`<text class="ax" x="${X(t)}" y="${H-m.b+18}" text-anchor="middle">${t}</text>`);
+  if(o.annot){const x=X(o.annot.x);g+=`<line x1="${x}" y1="${m.t}" x2="${x}" y2="${H-m.b}" stroke="var(--uncertain)" stroke-dasharray="2 5"/><text class="annotL" x="${x-6}" y="${m.t+9}" text-anchor="end">${o.annot.label}</text>`;}
+  o.series.forEach(s=>{const pts=s.data.map(p=>[X(p[0]),Y(p[1])]),d=smooth(pts),L=pts[pts.length-1];
+    if(o.series.length===1){const a=d+` L ${X(s.data[s.data.length-1][0]).toFixed(1)} ${H-m.b} L ${X(s.data[0][0]).toFixed(1)} ${H-m.b} Z`;
+      g+=`<defs><linearGradient id="kg${o.id}" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="${s.color}" stop-opacity=".22"/><stop offset="1" stop-color="${s.color}" stop-opacity="0"/></linearGradient></defs><path d="${a}" fill="url(#kg${o.id})"/>`;}
+    g+=`<path d="${d}" fill="none" stroke="${s.color}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>`;
+    g+=`<circle cx="${L[0].toFixed(1)}" cy="${L[1].toFixed(1)}" r="3.6" fill="${s.color}" stroke="var(--bg)" stroke-width="1.6"/>`;
+    if(o.series.length>1)g+=`<text class="ser" x="${(L[0]+8).toFixed(1)}" y="${(L[1]+3.5).toFixed(1)}" fill="${s.color}">${s.name}</text>`;});
+  g+=wm(W,H);svg.setAttribute('viewBox',`0 0 ${W} ${H}`);svg.innerHTML=g;
+}
+
+/* === the spread: dot strip with average === */
+function spread(svg,o){
+  const W=760,rowH=32,padT=30,padB=26,m={l:130,r:54};
+  const H=padT+o.rows.length*rowH+padB, X=v=>m.l+(v/o.max)*(W-m.l-m.r);
+  let g='';
+  o.ticks.forEach(t=>g+=`<line x1="${X(t)}" y1="${padT-6}" x2="${X(t)}" y2="${H-padB}" stroke="var(--rule)" stroke-dasharray="1 5"/><text class="ax" x="${X(t)}" y="${H-padB+16}" text-anchor="middle">${t}</text>`);
+  const ax=X(o.avg);g+=`<line x1="${ax}" y1="${padT-12}" x2="${ax}" y2="${H-padB}" stroke="var(--uncertain)" stroke-dasharray="3 4"/><text class="annotL" x="${ax}" y="${padT-16}" text-anchor="middle">world avg ${o.avg}</text>`;
+  o.rows.forEach((r,i)=>{const y=padT+i*rowH+rowH/2,x=X(r.value),col=r.value>o.avg?'var(--despair)':'var(--hope)';
+    g+=`<text class="lab" x="${m.l-12}" y="${y+3.5}" text-anchor="end">${r.name}</text>`;
+    g+=`<line x1="${m.l}" y1="${y}" x2="${x}" y2="${y}" stroke="${col}" stroke-width="2" opacity=".22"/>`;
+    g+=`<circle cx="${x}" cy="${y}" r="4.5" fill="${col}"/><text class="val" x="${x+9}" y="${y+3.5}" fill="${col}">${r.value}</text>`;});
+  g+=wm(W,H);svg.setAttribute('viewBox',`0 0 ${W} ${H}`);svg.innerHTML=g;
+}
+
+/* === before & after: slope chart === */
+function slope(svg,o){
+  const W=760,H=360,m={l:118,r:118,t:30,b:30},xL=m.l,xR=W-m.r,Y=v=>H-m.b-(v/o.max)*(H-m.t-m.b);
+  let g=`<text class="ser" x="${xL}" y="${m.t-12}" text-anchor="middle" fill="var(--fg-muted)">${o.left}</text><text class="ser" x="${xR}" y="${m.t-12}" text-anchor="middle" fill="var(--fg-muted)">${o.right}</text>`;
+  g+=`<line x1="${xL}" y1="${m.t}" x2="${xL}" y2="${H-m.b}" stroke="var(--rule)"/><line x1="${xR}" y1="${m.t}" x2="${xR}" y2="${H-m.b}" stroke="var(--rule)"/>`;
+  o.items.forEach(it=>{const ya=Y(it.a),yb=Y(it.b),better=o.goodDown?it.b<it.a:it.b>it.a,col=better?'var(--hope)':'var(--despair)';
+    g+=`<line x1="${xL}" y1="${ya}" x2="${xR}" y2="${yb}" stroke="${col}" stroke-width="2" opacity=".85"/>`;
+    g+=`<circle cx="${xL}" cy="${ya}" r="3.4" fill="${col}"/><circle cx="${xR}" cy="${yb}" r="3.4" fill="${col}"/>`;
+    g+=`<text class="lab" x="${xL-8}" y="${ya+3.5}" text-anchor="end">${it.name} · ${it.a}</text>`;
+    g+=`<text class="lab" x="${xR+8}" y="${yb+3.5}">${it.b}</text>`;});
+  g+=wm(W,H);svg.setAttribute('viewBox',`0 0 ${W} ${H}`);svg.innerHTML=g;
+}
+
+/* === the composition: stacked area === */
+function stacked(svg,o){
+  const W=760,H=340,m={l:42,r:96,t:22,b:34},xs=o.bands[0].data.map(p=>p[0]),x0=Math.min(...xs),x1=Math.max(...xs);
+  const X=v=>m.l+(v-x0)/(x1-x0)*(W-m.l-m.r),Y=v=>H-m.b-(v/o.max)*(H-m.t-m.b),n=o.bands[0].data.length,cum=Array(n).fill(0);
+  let g='';
+  o.bands.forEach(b=>{const top=b.data.map((p,i)=>{cum[i]+=p[1];return[X(p[0]),Y(cum[i])];});
+    const bot=b.data.map((p,i)=>[X(p[0]),Y(cum[i]-p[1])]).reverse();
+    const d=smooth(top)+' L '+bot.map(q=>q[0].toFixed(1)+' '+q[1].toFixed(1)).join(' L ')+' Z';
+    g+=`<path d="${d}" fill="${b.color}" fill-opacity=".55" stroke="${b.color}" stroke-width="1"/>`;
+    const L=top[top.length-1];g+=`<text class="ser" x="${L[0]+8}" y="${L[1]+4}" fill="${b.color}">${b.name}</text>`;});
+  o.xTicks.forEach(t=>g+=`<text class="ax" x="${X(t)}" y="${H-m.b+16}" text-anchor="middle">${t}</text>`);
+  g+=wm(W,H);svg.setAttribute('viewBox',`0 0 ${W} ${H}`);svg.innerHTML=g;
+}
+
+/* === the relationship: scatter === */
+function scatter(svg,o){
+  const W=760,H=360,m={l:50,r:26,t:22,b:38},X=v=>m.l+(v-o.xMin)/(o.xMax-o.xMin)*(W-m.l-m.r),Y=v=>H-m.b-(v-o.yMin)/(o.yMax-o.yMin)*(H-m.t-m.b);
+  let g='';
+  o.yTicks.forEach(t=>g+=`<line x1="${m.l}" y1="${Y(t)}" x2="${W-m.r}" y2="${Y(t)}" stroke="var(--rule)" stroke-dasharray="1 5"/><text class="ax" x="${m.l-8}" y="${Y(t)+3.5}" text-anchor="end">${t}</text>`);
+  o.xTicks.forEach(t=>g+=`<text class="ax" x="${X(t.v)}" y="${H-m.b+18}" text-anchor="middle">${t.l}</text>`);
+  o.points.forEach(p=>{const hl=p[2]==='hl';g+=`<circle cx="${X(p[0])}" cy="${Y(p[1])}" r="${hl?5:3.4}" fill="${hl?'var(--accent)':'var(--fg-muted)'}" fill-opacity="${hl?1:.5}"/>`;if(p[3])g+=`<text class="lab" x="${X(p[0])+8}" y="${Y(p[1])+3.5}">${p[3]}</text>`;});
+  g+=wm(W,H);svg.setAttribute('viewBox',`0 0 ${W} ${H}`);svg.innerHTML=g;
+}
+
+/* ---- render the kit (illustrative data) ---- */
+fc(document.getElementById('c1'),{id:'1',ymax:52,yTicks:[0,10,20,30,40,50],xTicks:[1300,1500,1700,1900,2020],
+  series:[{name:'Homicide',color:'var(--hope)',data:[[1300,41],[1400,45],[1500,32],[1600,19],[1700,11],[1800,7.5],[1900,3.2],[1950,1.4],[2000,1.3],[2020,1.1]]}]});
+fc(document.getElementById('c2'),{id:'2',ymax:132,yTicks:[0,30,60,90,120],xTicks:[1951,1980,2000,2024],annot:{x:2022,label:'UKRAINE'},
+  series:[{name:'Displaced',color:'var(--despair)',data:[[1951,2],[1970,3],[1990,20],[2000,16],[2011,38],[2018,70],[2022,103],[2024,120]]}]});
+fc(document.getElementById('c3'),{id:'3',x0:2010,x1:2024,ymax:66,yTicks:[0,20,40,60],xTicks:[2010,2015,2020,2024],
+  series:[{name:'Sudan',color:'var(--despair)',data:[[2010,5],[2015,8],[2020,12],[2023,40],[2024,55]]},
+          {name:'Syria',color:'var(--ochre)',data:[[2010,2],[2013,60],[2016,45],[2020,20],[2024,12]]},
+          {name:'World',color:'var(--hope)',data:[[2010,7],[2015,8],[2020,9],[2024,9]]}]});
+spread(document.getElementById('c4'),{max:60,ticks:[0,20,40,60],avg:9,
+  rows:[{name:'Sudan',value:55},{name:'Mexico',value:28},{name:'Brazil',value:22},{name:'United States',value:7},{name:'Germany',value:1},{name:'Japan',value:.3}]});
+slope(document.getElementById('c5'),{left:'2000',right:'2024',max:90,goodDown:false,
+  items:[{name:'Rwanda',a:48,b:69},{name:'Ethiopia',a:51,b:67},{name:'India',a:63,b:72},{name:'China',a:72,b:78},{name:'USA',a:77,b:77},{name:'Russia',a:65,b:72},{name:'Syria',a:73,b:64}]});
+stacked(document.getElementById('c6'),{max:100,xTicks:[1990,2005,2024],
+  bands:[{name:'Coal',color:'var(--despair)',data:[[1990,38],[2005,40],[2024,33]]},
+         {name:'Gas',color:'var(--ochre)',data:[[1990,15],[2005,19],[2024,22]]},
+         {name:'Clean',color:'var(--hope)',data:[[1990,20],[2005,18],[2024,35]]}]});
+scatter(document.getElementById('c7'),{xMin:0,xMax:11,yMin:50,yMax:88,yTicks:[50,60,70,80],
+  xTicks:[{v:1,l:'$1k'},{v:5,l:'$10k'},{v:9,l:'$80k'}],
+  points:[[1.2,55],[1.8,58],[2.5,62],[3,60,'hl','India'],[3.6,66],[4.2,69],[5,71],[6,74],[6.8,77],[7.5,79],[8.4,81],[9.2,82],[9.8,84],[2,57],[4,64],[5.6,72],[7,76]]});
+</script>
+</body>
+</html>

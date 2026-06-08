@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hope &amp; Despair — A living atlas of human progress, suffering, and uncertainty</title>
+<!-- home v4: the "atlas as a spectrum" direction. The 3-card lens triad and the plain
+     question list collapse into ONE component: each question is a track from hope→despair,
+     and a colored bar shows how far its verdict travels across the time-lens. Width = how
+     contested; position = the verdict. The thesis, enacted. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Newsreader:ital,opsz,wght@0,6..72,300..500&family=Geist:wght@300..700&family=Geist+Mono:wght@300..600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBFCFE; --bg-2:#EEF2F7; --panel:#FFFFFF;
+  --fg:#0D1117; --fg-2:#39414D; --fg-muted:#79828F;
+  --rule:rgba(13,17,23,.09); --rule-2:rgba(13,17,23,.18);
+  --accent:#0FA67E; --hope:#0FA67E; --despair:#F0512E; --uncertain:#5B61E6;
+  --font-display:"Fraunces",Georgia,serif;
+  --font-body:"Newsreader","Source Serif 4",Georgia,serif;
+  --font-label:"Geist",ui-sans-serif,system-ui,sans-serif;
+  --font-mono:"Geist Mono",ui-monospace,monospace;
+  --margin:clamp(1.25rem,5.5vw,7rem);
+}
+[data-theme="dark"]{
+  --bg:#0A0D12; --bg-2:#141A22; --panel:#10151C;
+  --fg:#EEF2F7; --fg-2:#B8C0CC; --fg-muted:#7C8693;
+  --rule:rgba(238,242,247,.10); --rule-2:rgba(238,242,247,.20);
+  --accent:#2FE3B6; --hope:#2FE3B6; --despair:#FF6A4D; --uncertain:#8E93FF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:1.08rem;line-height:1.58;
+  font-weight:380;min-height:100vh;overflow-x:hidden;transition:background .4s,color .4s}
+.wrap{padding-inline:var(--margin)}
+::selection{background:var(--accent);color:var(--bg)}
+
+/* temperature scroll-spine */
+.spine{position:fixed;top:0;left:clamp(.55rem,2.4vw,2.4rem);width:2px;height:100vh;z-index:60;pointer-events:none;
+  background:linear-gradient(180deg,color-mix(in srgb,var(--hope) 45%,transparent),
+    color-mix(in srgb,var(--uncertain) 30%,transparent),color-mix(in srgb,var(--despair) 45%,transparent));opacity:.38}
+.spine-thumb{position:absolute;left:-2px;width:6px;height:50px;border-radius:3px;top:0;
+  transform:translateY(var(--y,0));background:var(--c,var(--accent));transition:background .2s linear}
+@media(max-width:760px){.spine{display:none}}
+
+/* masthead */
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding-block:1.4rem;
+  border-bottom:1px solid var(--rule)}
+.wordmark{font-family:var(--font-label);font-weight:600;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;
+  display:flex;align-items:center;gap:.55em;color:inherit;text-decoration:none}
+.wordmark .glyph{font-size:1.1rem;letter-spacing:0;color:var(--accent);display:inline-block;transition:transform .7s cubic-bezier(.5,0,.2,1)}
+.wordmark:hover .glyph{transform:rotate(180deg)}
+nav{display:flex;gap:1.6rem;align-items:center}
+nav a,.toggle{font-family:var(--font-label);font-weight:500;font-size:.74rem;letter-spacing:.04em;
+  color:var(--fg-muted);text-decoration:none;background:none;border:0;cursor:pointer;transition:color .2s;position:relative}
+nav a:hover,.toggle:hover{color:var(--fg)}
+nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1.5px;background:var(--accent);
+  transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+nav a:hover::after{transform:scaleX(1)}
+.toggle{border:1px solid var(--rule-2);padding:.45em .8em;border-radius:7px;color:var(--fg-2)}
+.toggle:hover{border-color:var(--accent);color:var(--accent)}
+
+/* hero */
+.hero{padding-block:clamp(3.5rem,11vh,7.5rem) clamp(2rem,5vh,3.4rem)}
+.eyebrow{font-family:var(--font-label);font-size:.76rem;font-weight:600;letter-spacing:.04em;
+  color:var(--fg-2);display:flex;align-items:center;gap:.7rem}
+.eyebrow .live{width:.5em;height:.5em;border-radius:50%;background:var(--accent);position:relative}
+.eyebrow .live::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--accent);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{transform:scale(1);opacity:.7}70%,100%{transform:scale(3);opacity:0}}
+.statement{font-family:var(--font-display);font-weight:340;font-size:clamp(2.8rem,8.4vw,6.6rem);line-height:.98;
+  letter-spacing:-.035em;margin-top:2rem;max-width:16ch;font-optical-sizing:auto}
+.statement .l{display:block}
+.statement .both{font-style:italic;font-weight:360;color:var(--accent)}
+.dek{font-size:clamp(1.1rem,1.7vw,1.42rem);line-height:1.5;max-width:48ch;margin-top:2.2rem;font-weight:400;color:var(--fg-2)}
+.dek em{font-style:italic;color:var(--fg)}
+
+/* ===== the atlas ===== */
+.section-label{font-family:var(--font-label);font-size:.74rem;font-weight:600;letter-spacing:.03em;
+  color:var(--fg-muted);display:flex;align-items:center;gap:1rem;padding-top:clamp(2.5rem,6vh,4rem)}
+.section-label .count{font-family:var(--font-mono);color:var(--accent)}
+.section-label::after{content:"";flex:1;height:1px;background:var(--rule)}
+.atlas-lead{max-width:60ch;margin-top:1.1rem;color:var(--fg-2);font-size:1.04rem;line-height:1.55}
+.atlas-lead .h{font-style:italic;color:var(--hope)} .atlas-lead .d{font-style:italic;color:var(--despair)}
+.atlas-lead .u{font-style:italic;color:var(--uncertain)}
+
+/* axis header — the poles, in warm italic serif */
+.axis-head{position:relative;display:flex;justify-content:space-between;align-items:baseline;
+  margin-top:2.2rem;padding-bottom:.6rem;border-bottom:1px solid var(--rule);
+  font-family:var(--font-display);font-style:italic;font-size:1.05rem}
+.axis-head .hope{color:var(--hope)} .axis-head .desp{color:var(--despair)}
+.axis-head .mid{position:absolute;left:50%;transform:translateX(-50%);color:var(--uncertain);
+  font-size:.78rem;letter-spacing:0}
+
+/* question rows — each a track from hope→despair */
+.qrow{display:grid;grid-template-columns:2.6rem 1fr;gap:0 clamp(1rem,3vw,2rem);
+  padding-block:clamp(1.7rem,3.8vh,2.4rem);border-bottom:1px solid var(--rule);
+  text-decoration:none;color:inherit;position:relative;transition:padding-left .4s cubic-bezier(.2,.7,.2,1)}
+.qrow:hover{padding-left:.7rem}
+.qrow::before{content:"";position:absolute;left:-.7rem;top:1.7rem;bottom:1.7rem;width:2px;border-radius:2px;
+  background:var(--accent);transform:scaleY(0);transform-origin:center;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.qrow:hover::before{transform:scaleY(1)}
+.qnum{font-family:var(--font-mono);font-size:.9rem;color:var(--fg-muted);transition:color .3s;padding-top:.35rem}
+.qrow:hover .qnum{color:var(--accent)}
+.qtop{display:flex;justify-content:space-between;align-items:baseline;gap:1.2rem;flex-wrap:wrap}
+.qtitle{font-family:var(--font-display);font-weight:360;font-size:clamp(1.5rem,3vw,2.5rem);
+  letter-spacing:-.02em;line-height:1.04}
+.qverdict{font-family:var(--font-display);font-style:italic;font-size:clamp(.92rem,1.2vw,1.05rem);
+  color:var(--fg-muted);white-space:nowrap}
+.go{font-family:var(--font-label);font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--accent);opacity:0;transition:opacity .3s;margin-left:.6em}
+.qrow:hover .go{opacity:1}
+
+.track{position:relative;height:42px;margin-top:1.15rem}
+.track-line{position:absolute;left:0;right:0;top:18px;height:1px;background:var(--rule)}
+.track-mid{position:absolute;left:50%;top:12px;width:1px;height:12px;background:var(--rule-2);transform:translateX(-50%)}
+.bar{position:absolute;top:18px;height:3px;border-radius:3px;transform:translateY(-50%) scaleX(var(--grow,0));
+  transform-origin:left;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.bar-end{position:absolute;top:18px;width:11px;height:11px;border-radius:50%;transform:translate(-50%,-50%) scale(var(--grow,0));
+  background:var(--bg);transition:transform .5s cubic-bezier(.2,.7,.2,1) .25s}
+.lens-lab{position:absolute;top:26px;font-family:var(--font-mono);font-size:.6rem;color:var(--fg-muted);
+  white-space:nowrap;transform:translateX(-50%);opacity:0;transition:opacity .5s ease .4s}
+.qrow.in .bar,.qrow.in .bar-end{--grow:1}
+.qrow.in .lens-lab{opacity:1}
+@media(max-width:680px){.lens-lab{display:none}nav a:not(.toggle){display:none}}
+
+/* closing */
+.pull{font-family:var(--font-display);font-weight:340;font-style:italic;font-size:clamp(2rem,5vw,3.6rem);
+  line-height:1.05;letter-spacing:-.025em;text-align:center;max-width:20ch;margin:clamp(4rem,10vh,7rem) auto clamp(2rem,5vh,3rem);color:var(--fg)}
+.pull::before{content:"◐";display:block;font-style:normal;font-size:1.5rem;color:var(--accent);margin-bottom:1.6rem}
+.pull cite{display:block;font-family:var(--font-label);font-style:normal;font-size:.74rem;font-weight:600;
+  letter-spacing:.04em;color:var(--accent);margin-top:1.6rem}
+footer{margin-top:3rem;padding-block:2.4rem 4rem;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;
+  gap:1.2rem 3rem;justify-content:space-between;font-family:var(--font-label);font-size:.74rem;font-weight:500;color:var(--fg-muted)}
+footer a{color:var(--fg-muted);text-decoration:none;border-bottom:1px solid var(--rule)}
+footer a:hover{color:var(--accent)}
+
+.reveal{opacity:0;transform:translateY(14px);animation:rise .85s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .reveal{animation:none;opacity:1;transform:none}.eyebrow .live::after{animation:none}
+  .bar,.bar-end{transition:none;--grow:1}.lens-lab{transition:none;opacity:1}
+}
+</style>
+</head>
+<body>
+<div class="spine"><div class="spine-thumb" id="spineThumb"></div></div>
+<div class="wrap">
+
+  <header class="masthead reveal" style="animation-delay:.04s">
+    <a class="wordmark" href="home-v4.html"><span class="glyph">◐</span> Hope &amp; Despair</a>
+    <nav><a href="#">Atlas</a><a href="#">Method</a><a href="#">Sources</a>
+      <button class="toggle" id="themeToggle">Dark</button></nav>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow reveal" style="animation-delay:.1s"><span class="live"></span> A living atlas · updated continuously</p>
+    <h1 class="statement">
+      <span class="l reveal" style="animation-delay:.18s">The world is getting better.</span>
+      <span class="l reveal" style="animation-delay:.3s">The world is getting worse.</span>
+      <span class="l both reveal" style="animation-delay:.44s">Both are true.</span>
+    </h1>
+    <p class="dek reveal" style="animation-delay:.58s">Not a verdict, but an instrument. Every question is read at
+      each magnification — from the ten-thousand-year arc to a single lived day — because
+      <em>the answer changes depending on how closely you look.</em></p>
+  </section>
+
+  <p class="section-label reveal" style="animation-delay:.66s"><span>The Atlas</span><span class="count" id="qcount">03</span></p>
+  <p class="atlas-lead reveal" style="animation-delay:.7s">Three temperatures — <span class="h">hope</span>,
+    <span class="d">despair</span>, and the <span class="u">uncertain</span> middle between them — and one question
+    read at every lens. Each mark shows <em>how far its verdict travels</em> as you change how closely you look. The
+    wider the bar, the more the answer depends on where you stand.</p>
+
+  <div class="axis-head reveal" style="animation-delay:.74s">
+    <span class="hope">Hope</span><span class="mid">the uncertain middle</span><span class="desp">Despair</span>
+  </div>
+
+  <div class="atlas" id="atlas"></div>
+
+  <blockquote class="pull">Make reality harder to simplify.<cite>The Hope &amp; Despair project</cite></blockquote>
+
+  <footer class="reveal">
+    <span>CC BY 4.0 · attribution to hopeanddespair.world · source data CC-BY</span>
+    <span><a href="#">hopeanddespair.world</a></span>
+  </footer>
+</div>
+
+<script>
+const root=document.documentElement,tg=document.getElementById('themeToggle');
+tg.onclick=()=>{const d=root.getAttribute('data-theme')==='dark';root.setAttribute('data-theme',d?'light':'dark');tg.textContent=d?'Dark':'Light';};
+
+/* temperature scroll-spine */
+const thumb=document.getElementById('spineThumb');let st=false;
+function updateSpine(){st=false;const max=document.documentElement.scrollHeight-window.innerHeight;
+  const p=max>0?Math.min(1,Math.max(0,window.scrollY/max)):0;
+  thumb.style.setProperty('--y',(p*(window.innerHeight-50))+'px');
+  thumb.style.setProperty('--c',p<.5?`color-mix(in srgb, var(--hope), var(--uncertain) ${Math.round(p*200)}%)`
+                                     :`color-mix(in srgb, var(--uncertain), var(--despair) ${Math.round((p-.5)*200)}%)`);}
+addEventListener('scroll',()=>{if(!st){st=true;requestAnimationFrame(updateSpine);}},{passive:true});
+addEventListener('resize',updateSpine);updateSpine();
+
+/* ===== the atlas: each question placed on a hope↔despair axis =====
+   p ∈ [0,1] : 0 = full hope (left), 1 = full despair (right).
+   hope = the most hopeful lens's reading; desp = the most despairing lens's reading.
+   the bar spans the two; its width = how much the verdict swings with the lens. */
+const QS=[
+  {num:'01',title:'Is humanity becoming less violent?',href:'article-v4.html',
+   verdict:'Long-run progress, short-run reversal',
+   hope:{p:0.12,lab:'10,000-year lens'}, desp:{p:0.68,lab:'since 2020'}},
+  {num:'02',title:'Are we beating disease and death?',href:'#',
+   verdict:'Better than it feels',
+   hope:{p:0.05,lab:'the long view'}, desp:{p:0.27,lab:'still-preventable deaths'}},
+  {num:'03',title:'Is the climate stabilizing or breaking?',href:'#',
+   verdict:'Long-run despair, a hopeful recent turn',
+   hope:{p:0.43,lab:'clean energy on price'}, desp:{p:0.90,lab:'the emissions arc'}},
+];
+const pct=p=>(p*100).toFixed(1)+'%';
+const col=p=> p<.5 ? `color-mix(in srgb, var(--hope), var(--uncertain) ${Math.round(p*200)}%)`
+                    : `color-mix(in srgb, var(--uncertain), var(--despair) ${Math.round((p-.5)*200)}%)`;
+const atlas=document.getElementById('atlas');
+QS.forEach(q=>{
+  const a=document.createElement('a');a.className='qrow';a.href=q.href;
+  const l=pct(q.hope.p), w=((q.desp.p-q.hope.p)*100).toFixed(1)+'%';
+  a.innerHTML=`
+    <span class="qnum">${q.num}</span>
+    <div class="qmain">
+      <div class="qtop">
+        <div class="qtitle">${q.title}<span class="go">Read →</span></div>
+        <div class="qverdict">${q.verdict}</div>
+      </div>
+      <div class="track">
+        <div class="track-line"></div><div class="track-mid"></div>
+        <div class="bar" style="left:${l};width:${w};transform-origin:left;
+          background:linear-gradient(90deg, ${col(q.hope.p)}, ${col(q.desp.p)})"></div>
+        <div class="bar-end" style="left:${pct(q.hope.p)};border:2px solid ${col(q.hope.p)}"></div>
+        <div class="bar-end" style="left:${pct(q.desp.p)};border:2px solid ${col(q.desp.p)}"></div>
+        <div class="lens-lab" style="left:${pct(q.hope.p)};color:${col(q.hope.p)}">${q.hope.lab}</div>
+        <div class="lens-lab" style="left:${pct(q.desp.p)}">${q.desp.lab}</div>
+      </div>
+    </div>`;
+  atlas.appendChild(a);
+});
+document.getElementById('qcount').textContent=String(QS.length).padStart(2,'0');
+
+/* grow each track's bar as it scrolls into view (transform/opacity only) */
+const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;
+if(!reduced && 'IntersectionObserver' in window){
+  const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}}),{threshold:.4});
+  document.querySelectorAll('.qrow').forEach(r=>obs.observe(r));
+}else document.querySelectorAll('.qrow').forEach(r=>r.classList.add('in'));
+</script>
+</body>
+</html>
