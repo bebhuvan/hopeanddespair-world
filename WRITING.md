@@ -131,6 +131,10 @@ committed. Provider is swappable behind one seam.)
 
 ## Anti-AI-tells (banned; enforced in the writing skill)
 
+> **Full catalog: [[ANTI-AI.md]]** — the exhaustive blocklist (lexicon, constructions,
+> structural / punctuation / voice tells), the antidotes, and the self-check protocol. The
+> summary below is the short version; ANTI-AI.md is the reference the skill enforces.
+
 The writing must not carry the lexical or semantic fingerprints of machine prose.
 
 **Banned phrases and constructions:**

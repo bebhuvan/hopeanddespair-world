@@ -5,7 +5,8 @@
 
 **Doc set (keep aligned):** [`NORTH_STAR.md`](NORTH_STAR.md) (why & creed — the anchor) ·
 [`DESIGN.md`](DESIGN.md) (visual philosophy + the V3 boxiness fix + refinement method) ·
-[`WRITING.md`](WRITING.md) (the "Bifocal" voice, article anatomy, anti-AI-tells) ·
+[`WRITING.md`](WRITING.md) (the "Bifocal" voice, article anatomy) ·
+[`ANTI-AI.md`](ANTI-AI.md) (the exhaustive anti-AI-tells catalog + self-check) ·
 [`CHARTS.md`](CHARTS.md) (the chart vocabulary — kit by job, not type) ·
 [`EXPLAINERS.md`](EXPLAINERS.md) (the explainer repertoire — our moat) ·
 [`PERFORMANCE.md`](PERFORMANCE.md) (fast from day one — the budget + enforcement) ·
