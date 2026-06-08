@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "SI.POV.DDAY",
+  "vintage": "2026-06-08",
+  "url": "https://data.worldbank.org/indicator/SI.POV.DDAY",
+  "checksum": "8adda0eab99d96e596c46d0aef7afd4d2e0df5b719d6c80cce63fd4b1b7bf7f5",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-08T10:55:19.440Z",
+  "adapterVersion": "1.0.0"
+}

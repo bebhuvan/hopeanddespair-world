@@ -2,6 +2,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { INDICATORS } from '../registry/indicators.ts';
 import { owid } from './ingest/owid.ts';
+import { worldbank } from './ingest/worldbank.ts';
 import { validateSeries, report } from './lib/validate.ts';
 import { derive } from './lib/derive.ts';
 import { toCSV, datapackage, lineage } from './lib/provenance.ts';
@@ -10,7 +11,7 @@ import type { Adapter, ValidationIssue } from '../src/lib/data/types.ts';
 /* The offline ingestion pipeline (DATA.md §2): fetch → snapshot → normalize → validate →
    derive → validate → write artifacts. Run with `pnpm data`. Static build reads the output. */
 
-const adapters: Record<string, Adapter> = { owid };
+const adapters: Record<string, Adapter> = { owid, worldbank };
 const ROOT = process.cwd();
 const w = (p: string, c: string) => { mkdirSync(dirname(p), { recursive: true }); writeFileSync(p, c); };
 
@@ -22,13 +23,14 @@ for (const spec of INDICATORS) {
   const raw = await adapter.fetch(spec);
 
   // 1. Snapshot — pin the raw bytes by vintage + checksum (DATA.md §1, §2)
-  const snapDir = join(ROOT, 'data/sources', raw.source, raw.vintage, spec.slug);
-  w(join(snapDir, 'raw.csv'), raw.csv);
+  const safeSlug = spec.slug.replace(/[^\w.-]/g, '_');
+  const snapDir = join(ROOT, 'data/sources', raw.source, raw.vintage, safeSlug);
+  w(join(snapDir, `raw.${raw.ext}`), raw.body);
   w(join(snapDir, 'snapshot.json'), JSON.stringify({
     source: raw.source, slug: raw.slug, vintage: raw.vintage, url: raw.url,
     checksum: raw.checksum, license: raw.license, fetchedAt: raw.fetchedAt, adapterVersion: raw.adapterVersion,
   }, null, 2));
-  console.log(`  snapshot ${raw.checksum.slice(0, 12)}… (${(raw.csv.length / 1024).toFixed(0)} kB, ${raw.vintage})`);
+  console.log(`  snapshot ${raw.checksum.slice(0, 12)}… (${(raw.body.length / 1024).toFixed(0)} kB, ${raw.vintage})`);
 
   // 2. Normalize (pure) + validate every entity series
   const series = adapter.normalize(raw, spec);

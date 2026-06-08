@@ -42,12 +42,12 @@ export const owid: Adapter = {
       source: 'owid', slug: spec.slug,
       vintage: new Date().toISOString().slice(0, 10),
       url: base, checksum: sha256(csv), license: 'CC BY 4.0',
-      csv, meta, fetchedAt: new Date().toISOString(), adapterVersion: ADAPTER_VERSION,
+      body: csv, ext: 'csv', meta, fetchedAt: new Date().toISOString(), adapterVersion: ADAPTER_VERSION,
     };
   },
 
   normalize(raw: RawSnapshot, spec: IndicatorSpec): CanonicalSeries[] {
-    const rows = parseCSV(raw.csv);
+    const rows = parseCSV(raw.body);
     const header = rows[0];
     const iEntity = header.indexOf('entity');
     const iCode = header.indexOf('code');

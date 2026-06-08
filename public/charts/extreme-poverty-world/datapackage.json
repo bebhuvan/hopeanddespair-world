@@ -1,0 +1,38 @@
+{
+  "name": "economy-extreme_poverty-world",
+  "title": "Poverty headcount ratio at $3.00 a day (2021 PPP) (% of population)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/SI.POV.DDAY"
+    }
+  ],
+  "created": "2026-06-08",
+  "resources": [
+    {
+      "name": "economy-extreme_poverty-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "economy_extreme_poverty_world",
+            "type": "number",
+            "unit": "% of population"
+          }
+        ]
+      }
+    }
+  ]
+}

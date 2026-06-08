@@ -8,11 +8,12 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "postbuild": "pagefind --site dist",
     "preview": "astro preview",
     "data": "tsx scripts/pipeline.ts",
     "check": "astro check",
     "check:size": "size-limit",
-    "check:nojs": "test -z \"$(find dist -name '*.js' 2>/dev/null)\" && echo 'OK: zero external JS shipped' || (echo 'FAIL: external JS found in dist' && find dist -name '*.js' && exit 1)",
+    "check:nojs": "test -z \"$(find dist -name '*.js' -not -path '*/pagefind/*' 2>/dev/null)\" && echo 'OK: zero external JS on content pages (search index under /pagefind only)' || (echo 'FAIL: external JS found outside /pagefind' && find dist -name '*.js' -not -path '*/pagefind/*' && exit 1)",
     "check:nolib": "! grep -rlE 'd3\\.(min|v[0-9]|select|scale)|chart\\.js|new Chart\\(|Highcharts|Plotly|echarts|recharts' dist --include='*.html' --include='*.js' || (echo 'FAIL: a charting library leaked into the build' && exit 1)",
     "verify": "pnpm build && pnpm check:size && pnpm check:nojs && pnpm check:nolib"
   },
@@ -28,6 +29,7 @@
     "@fontsource/geist-mono": "^5.1.0",
     "@fontsource/geist-sans": "^5.1.0",
     "@size-limit/file": "^11.1.6",
+    "pagefind": "^1.5.2",
     "size-limit": "^11.1.6",
     "tsx": "^4.22.4",
     "typescript": "^5.7.3"

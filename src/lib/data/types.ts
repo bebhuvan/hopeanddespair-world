@@ -43,8 +43,9 @@ export interface RawSnapshot {
   url: string;
   checksum: string;
   license: string;
-  csv: string;                   // raw CSV text (or pointer to R2 if huge — DATA.md §2)
-  meta: any;                     // raw metadata json
+  body: string;                  // raw payload as text (CSV or JSON — or pointer to R2 if huge)
+  ext: string;                   // 'csv' | 'json' — how the snapshot is written to disk
+  meta: any;                     // adapter-specific metadata
   fetchedAt: string;
   adapterVersion: string;
 }
@@ -55,8 +56,8 @@ export interface IndicatorSpec {
   title: string;
   unit: string;
   chartId?: string;              // clean slug for public artifacts + article dataRef
-  adapter: 'owid';
-  slug: string;                  // source chart/dataset slug
+  adapter: 'owid' | 'worldbank';
+  slug: string;                  // source chart slug (OWID) or indicator code (World Bank)
   sourceColumn?: string;         // which column to read (default: the single value column)
   entityFilter?: string[];       // restrict to these source entity names
   derive?: { op: 'mean_across_entities' | 'pick_entity' | 'identity'; entity?: string; minEntities?: number };

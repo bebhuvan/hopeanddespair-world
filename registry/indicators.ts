@@ -28,6 +28,33 @@ export const INDICATORS: IndicatorSpec[] = [
     validate: { min: 0, max: 100, monotonicJump: 0.5, requireProvenance: true },
     primarySource: 'UN WPP; Human Mortality Database; Riley (2005)',
   },
+
+  // World Bank (second keystone — a JSON API, different shape from OWID). Economy indicators
+  // for future articles; proves the framework is multi-source.
+  {
+    id: 'economy.extreme_poverty.world',
+    title: 'Population in extreme poverty (below $2.15/day, 2017 PPP)',
+    unit: '% of population',
+    chartId: 'extreme-poverty-world',
+    adapter: 'worldbank',
+    slug: 'SI.POV.DDAY',
+    entityFilter: ['World'],
+    derive: { op: 'pick_entity', entity: 'WLD' },
+    validate: { min: 0, max: 100, monotonicJump: 1, requireProvenance: true },
+    primarySource: 'World Bank — Poverty and Inequality Platform',
+  },
+  {
+    id: 'economy.gdp_per_capita.world',
+    title: 'GDP per capita (constant 2015 US$)',
+    unit: 'constant 2015 US$',
+    chartId: 'gdp-per-capita-world',
+    adapter: 'worldbank',
+    slug: 'NY.GDP.PCAP.KD',
+    entityFilter: ['World'],
+    derive: { op: 'pick_entity', entity: 'WLD' },
+    validate: { min: 0, max: 200000, monotonicJump: 0.3, requireProvenance: true },
+    primarySource: 'World Bank / OECD national accounts',
+  },
 ];
 
 export const byId = (id: string) => INDICATORS.find((s) => s.id === id);

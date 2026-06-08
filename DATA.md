@@ -287,8 +287,22 @@ some IHME) — chart-and-link, don't re-host.
 > The violence article's "seven centuries" chart now renders **real Our World in Data**
 > homicide data (Eisner + WHO, CC BY) with a working **"How this number was made"** panel and
 > data downloads — at 8.8 kB, zero JS. Framework files: `registry/indicators.ts`,
-> `scripts/ingest/owid.ts`, `scripts/lib/{validate,derive,provenance}.ts`, `scripts/pipeline.ts`,
-> `src/lib/data/types.ts`. Next: World Bank + WPP adapters; wire the remaining article charts.
+> `scripts/ingest/{owid,worldbank}.ts`, `scripts/lib/{validate,derive,provenance}.ts`,
+> `scripts/pipeline.ts`, `src/lib/data/types.ts`.
+>
+> **Multi-source proven:** the **World Bank** adapter (a JSON REST API — a totally different
+> shape from OWID's CSV) now runs through the same pipeline, producing validated World extreme
+> poverty (47.1%→10.4%, 1981–2024) and GDP-per-capita series with full provenance. `RawSnapshot`
+> is generalized to `body`/`ext` (csv|json).
+>
+> **OWID-first, deliberately:** we did *not* build bespoke adapters for UCDP / UNHCR / WHO /
+> NASA / Ember — OWID already re-publishes those series cleanly under CC BY, so a separate
+> adapter would duplicate work and maintenance for a one-person project. Add a primary-source
+> adapter only where OWID lacks the series or being closer to the source matters. World Bank
+> earned one (breadth + a real API OWID doesn't fully mirror).
+>
+> Next: wire the remaining article charts to real data (figB displacement, figC comparison)
+> via OWID.
 
 
 1. **Registry + canonical schema + entity table** — the backbone (§4–6), with Frictionless

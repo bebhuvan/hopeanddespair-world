@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+// Search is the ONE place JavaScript loads (a tool, not content). Pagefind is a static index
+// built at deploy time; its JS + index load only here, only when this page is visited. Content
+// pages stay zero-JS. (PERFORMANCE.md static-first; EXPLAINERS.md interactivity = opt-in.)
+---
+<BaseLayout title="Search — Hope & Despair" description="Search the atlas.">
+  <header class="ahead">
+    <p class="kicker">Search</p>
+    <h1>Find a question.</h1>
+  </header>
+
+  <div id="search" class="search-mount"></div>
+
+  <noscript>
+    <p class="nojs">Search needs JavaScript. You can browse the complete <a href="/archive">archive</a> instead.</p>
+  </noscript>
+
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet" is:inline />
+  <script src="/pagefind/pagefind-ui.js" is:inline></script>
+  <script is:inline>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (typeof PagefindUI === 'undefined') return;
+      new PagefindUI({ element: '#search', showImages: false, showSubResults: true, pageSize: 8 });
+    });
+  </script>
+</BaseLayout>
+
+<style is:global>
+  .search-mount {
+    margin-top: clamp(1.5rem, 4vh, 2.5rem);
+    --pagefind-ui-scale: 0.9;
+    --pagefind-ui-primary: var(--accent);
+    --pagefind-ui-text: var(--fg);
+    --pagefind-ui-background: var(--bg);
+    --pagefind-ui-border: var(--rule-2);
+    --pagefind-ui-tag: var(--bg-2);
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: 8px;
+    --pagefind-ui-font: var(--font-label);
+  }
+  .search-mount .pagefind-ui__result-title { font-family: var(--font-display); }
+  .search-mount .pagefind-ui__result-title a { color: var(--fg); }
+  .search-mount .pagefind-ui__result-excerpt { font-family: var(--font-body); color: var(--fg-2); }
+</style>
+
+<style>
+  .ahead { padding-block: clamp(3rem, 8vh, 5rem) 0; max-width: 54rem; }
+  .kicker { font-family: var(--font-label); font-size: 0.72rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--accent); }
+  h1 { font-family: var(--font-display); font-weight: 300; font-size: clamp(2.4rem, 6vw, 4rem); letter-spacing: -0.024em; margin-top: 1.2rem; }
+  .nojs { margin-top: 2rem; color: var(--fg-2); }
+  .nojs a { color: var(--accent); }
+</style>

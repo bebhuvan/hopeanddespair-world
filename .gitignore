@@ -4,7 +4,7 @@ dist/
 
 # raw source bytes → R2/Git-LFS at scale, not git (DATA.md §2). The snapshot.json manifest
 # (checksum + vintage + license) stays tracked; the bytes are reproducible from it.
-data/sources/**/raw.csv
+data/sources/**/raw.*
 
 # deps
 node_modules/
