@@ -21,7 +21,7 @@
     "verify": "pnpm prose:lint && pnpm build && pnpm check:size && pnpm check:nojs && pnpm check:nolib",
     "og": "tsx scripts/make-og.ts",
     "cf:dev": "wrangler dev",
-    "deploy": "astro build && wrangler deploy"
+    "deploy": "pnpm build && wrangler deploy"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.18",

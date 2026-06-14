@@ -1,6 +1,6 @@
 {
   // Cloudflare Worker serving the static Astro build via Workers Static Assets (NOT Pages).
-  // Deploy: `pnpm run deploy` (runs `astro build` then `wrangler deploy`). Requires `wrangler login`
+  // Deploy: `pnpm run deploy` (runs `pnpm build` — incl. the Pagefind index — then `wrangler deploy`). Requires `wrangler login`
   // once, and the hopeanddespair.world zone already added to this Cloudflare account.
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "hopeanddespair",
@@ -9,7 +9,9 @@
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
-    "html_handling": "auto-trailing-slash",
+    // slash-free canonical URLs: serve `slug/index.html` at `/slug`, and 308-redirect `/slug/` → `/slug`
+    // so any trailing-slash link still resolves. Matches Astro's `trailingSlash: 'never'`.
+    "html_handling": "drop-trailing-slash",
     "not_found_handling": "404-page",
     // run the Worker before serving a matched asset, so the www → apex redirect actually fires
     // (otherwise Cloudflare serves index.html directly and the Worker never sees the request).

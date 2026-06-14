@@ -7,6 +7,11 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://hopeanddespair.world',
   output: 'static',
+  // Slash-FREE canonical URLs (`/questions/slug`, no trailing slash). Internal links and the
+  // sitemap are already authored slash-free; this makes the canonical tag and Astro.url agree with
+  // them, so there is one canonical shape site-wide. The worker (html_handling: drop-trailing-slash)
+  // redirects any `/slug/` → `/slug`, so existing trailing-slash links keep working — nothing breaks.
+  trailingSlash: 'never',
   build: {
     // content-hashed, immutable assets → cache-forever on the CDN
     assets: '_assets',
