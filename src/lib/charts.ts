@@ -394,10 +394,17 @@ const TOKENS: Record<string, string> = {
   '--ink': '#14130F', '--ink-2': '#2B2823', '--ink-3': '#7C7A72',
 };
 
-/** Wrap a rendered chart as a self-contained downloadable SVG: vars resolved to literals,
-    the page's chart styles embedded, a white ground so viewers don't show transparency. */
-export function standaloneSvg(r: Rendered, title: string): string {
+export interface SvgMeta { title: string; subtitle?: string; source?: string }
+
+/** Wrap a rendered chart as a self-contained downloadable SVG. The plot alone is contextless once
+    it leaves the page, so we bake a HEADER (title + subtitle) and a FOOTER (source) around it — the
+    artifact says what it is and where it's from. Vars resolve to literals; a white ground so viewers
+    don't show transparency. Accepts a plain title string too, for back-compat. */
+export function standaloneSvg(r: Rendered, meta: SvgMeta | string): string {
+  const m: SvgMeta = typeof meta === 'string' ? { title: meta } : meta;
   const inner = r.inner.replace(/var\((--[a-z0-9-]+)\)/g, (mm, name: string) => TOKENS[name] ?? mm);
+  const vb = r.viewBox.split(/\s+/).map(Number), W = vb[2], H = vb[3];
+  const PADX = 18, headH = m.subtitle ? 74 : 50, footH = m.source ? 38 : 14;
   const style = [
     'text{font:14px ui-monospace,SFMono-Regular,Menlo,monospace;fill:#7C7A72}',
     'text.ser{font-size:14.5px;font-weight:500}',
@@ -411,6 +418,13 @@ export function standaloneSvg(r: Rendered, title: string): string {
     'text.annotP{font:italic 13.5px Georgia,serif;fill:#2B2823}',
     'text.wm{fill:#7C7A72;opacity:0.22;font-size:9.5px;letter-spacing:0.08em}',
     'path[fill="none"]{stroke-width:2.4px}',
+    'text.ttl{font:600 23px ui-sans-serif,system-ui,sans-serif;fill:#14130F}',
+    'text.sub{font:14px ui-monospace,SFMono-Regular,Menlo,monospace;fill:#7C7A72}',
+    'text.src{font:12.5px ui-monospace,SFMono-Regular,Menlo,monospace;fill:#7C7A72}',
   ].join('');
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${r.viewBox}"><title>${esc(title)}</title><style>${style}</style><rect width="100%" height="100%" fill="#fff"/>${inner}</svg>`;
+  let head = `<text class="ttl" x="${PADX}" y="34">${esc(m.title)}</text>`;
+  if (m.subtitle) head += `<text class="sub" x="${PADX}" y="58">${esc(m.subtitle)}</text>`;
+  const foot = m.source ? `<text class="src" x="${PADX}" y="${(headH + H + 25).toFixed(0)}">${esc(m.source)}</text>` : '';
+  const titleEl = [m.title, m.subtitle].filter(Boolean).join(' · ');
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${headH + H + footH}"><title>${esc(titleEl)}</title><style>${style}</style><rect width="100%" height="100%" fill="#fff"/>${head}<g transform="translate(0 ${headH})">${inner}</g>${foot}</svg>`;
 }

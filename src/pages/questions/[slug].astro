@@ -184,7 +184,7 @@ const figStart = 1;
                     {c.note && <p class="knote" set:html={c.note} />}
                     <div class="kfoot">
                       {!c.linkOnly && (
-                        <span class="tools"><a href={`/charts/${c.dataRef}/chart.svg`} download>↓ image, svg</a><a href={`/charts/${c.dataRef}/data.csv`} download>↓ data, csv</a><a href={`/charts/${c.dataRef}/datapackage.json`}>↓ data package</a><a href={`/charts/${c.dataRef}/lineage.json`}>↗ lineage</a></span>
+                        <span class="tools"><a href={`/charts/${c.dataRef}/chart.png`} download>↓ png</a><a href={`/charts/${c.dataRef}/chart.svg`} download>↓ svg</a><a href={`/charts/${c.dataRef}/data.csv`} download>↓ data, csv</a><a href={`/charts/${c.dataRef}/datapackage.json`}>↓ data package</a><a href={`/charts/${c.dataRef}/lineage.json`}>↗ lineage</a></span>
                       )}
                       <span class="src">{srcLine(c.prov)}{c.linkOnly ? ' · link-only, not for download' : ''}</span>
                     </div>
@@ -197,7 +197,7 @@ const figStart = 1;
                     {dm.regionalChart.note && <p class="knote" set:html={dm.regionalChart.note} />}
                     <div class="kfoot">
                       {!dm.regionalChart.linkOnly && (
-                        <span class="tools"><a href={`/charts/${dm.regionalChart.dataRef}/regions.svg`} download>↓ image, svg</a></span>
+                        <span class="tools"><a href={`/charts/${dm.regionalChart.dataRef}/regions.png`} download>↓ png</a><a href={`/charts/${dm.regionalChart.dataRef}/regions.svg`} download>↓ svg</a></span>
                       )}
                       <span class="src">{srcLine(dm.regionalChart.prov)}</span>
                     </div>
@@ -316,7 +316,7 @@ const figStart = 1;
             <div class="sc"><Chart c={mv} /></div>
             <figcaption>
               {mv.real && mv.dataRef && (
-                <div class="tools"><a href={`/charts/${mv.dataRef}/fig${figStart + i}.svg`} download>↓ image, svg</a><a href={`/charts/${mv.dataRef}/data.csv`} download>↓ data, csv</a><a href={`/charts/${mv.dataRef}/datapackage.json`}>↓ data package</a><a href={`/charts/${mv.dataRef}/lineage.json`}>↗ lineage</a></div>
+                <div class="tools"><a href={`/charts/${mv.dataRef}/fig${figStart + i}.png`} download>↓ png</a><a href={`/charts/${mv.dataRef}/fig${figStart + i}.svg`} download>↓ svg</a><a href={`/charts/${mv.dataRef}/data.csv`} download>↓ data, csv</a><a href={`/charts/${mv.dataRef}/datapackage.json`}>↓ data package</a><a href={`/charts/${mv.dataRef}/lineage.json`}>↗ lineage</a></div>
               )}
               <div class="src">{mv.source}</div>
             </figcaption>
@@ -353,7 +353,7 @@ const figStart = 1;
                   {mv.regionalChart.note && <p class="knote" set:html={mv.regionalChart.note} />}
                   <div class="kfoot">
                     {!mv.regionalChart.linkOnly && (
-                      <span class="tools"><a href={`/charts/${mv.regionalChart.dataRef}/regions.svg`} download>↓ image, svg</a></span>
+                      <span class="tools"><a href={`/charts/${mv.regionalChart.dataRef}/regions.png`} download>↓ png</a><a href={`/charts/${mv.regionalChart.dataRef}/regions.svg`} download>↓ svg</a></span>
                     )}
                     <span class="src">{srcLine(mv.regionalChart.prov)}{mv.regionalChart.linkOnly ? ' · link-only, not for download' : ''}</span>
                   </div>
@@ -366,7 +366,7 @@ const figStart = 1;
                   {mv.countryChart.note && <p class="knote" set:html={mv.countryChart.note} />}
                   <div class="kfoot">
                     {!mv.countryChart.linkOnly && (
-                      <span class="tools"><a href={`/charts/${mv.countryChart.dataRef}/bars.svg`} download>↓ image, svg</a></span>
+                      <span class="tools"><a href={`/charts/${mv.countryChart.dataRef}/bars.png`} download>↓ png</a><a href={`/charts/${mv.countryChart.dataRef}/bars.svg`} download>↓ svg</a></span>
                     )}
                     <span class="src">{srcLine(mv.countryChart.prov)}{mv.countryChart.linkOnly ? ' · link-only, not for download' : ''}</span>
                   </div>
