@@ -44,5 +44,10 @@ const nav = [
     background: var(--hope); transition: right 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
   }
   nav a:hover::after { right: 0; }
-  @media (max-width: 600px) { nav { display: none; } }
+  /* phones: one row can't hold the wordmark + four links, so stack — wordmark, then the nav on its
+     own centred row beneath. Kept visible (no JS hamburger needed for four short links). */
+  @media (max-width: 600px) {
+    .bar { flex-direction: column; height: auto; gap: 0.6rem; padding-block: 0.8rem; }
+    nav { gap: 1.6rem; font-size: 0.96rem; flex-wrap: wrap; justify-content: center; }
+  }
 </style>
