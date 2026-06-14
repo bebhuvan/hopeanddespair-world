@@ -1,0 +1,10 @@
+{
+  "source": "ilostat",
+  "slug": "DF_SDG_0111_SEX_AGE_RT",
+  "vintage": "2026-06-12",
+  "url": "https://sdmx.ilo.org/rest/data/DF_SDG_0111_SEX_AGE_RT/all?startPeriod=1990",
+  "checksum": "ab0fbcb36a924590fb543a97abd2f49d3ede7fcd98729276342cf460076c0175",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:44:47.400Z",
+  "adapterVersion": "1.0.0"
+}

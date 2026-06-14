@@ -1,0 +1,94 @@
+{
+  "chartId": "extreme-poverty-by-country",
+  "kind": "bars",
+  "title": "Extreme poverty by country — where it remains, latest available survey",
+  "unit": "Share living below $3.00 a day (2021 PPP), %",
+  "yearSpan": "2020–2025",
+  "bars": [
+    {
+      "label": "DR Congo",
+      "value": 85.3,
+      "color": "despair"
+    },
+    {
+      "label": "Mozambique",
+      "value": 81.4,
+      "color": "despair"
+    },
+    {
+      "label": "Zambia",
+      "value": 71.7,
+      "color": "despair"
+    },
+    {
+      "label": "Madagascar",
+      "value": 69.2,
+      "color": "despair"
+    },
+    {
+      "label": "Kenya",
+      "value": 45.5,
+      "color": "despair"
+    },
+    {
+      "label": "Nigeria",
+      "value": 41.8,
+      "color": "despair"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 38.6,
+      "color": "despair"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 5.9,
+      "color": "ochre"
+    },
+    {
+      "label": "India",
+      "value": 5.3,
+      "color": "ochre"
+    },
+    {
+      "label": "Indonesia",
+      "value": 4,
+      "color": "hope"
+    },
+    {
+      "label": "Vietnam",
+      "value": 1.6,
+      "color": "hope"
+    },
+    {
+      "label": "China",
+      "value": 0,
+      "color": "hope"
+    }
+  ],
+  "xmax": 90,
+  "xTicks": [
+    0,
+    20,
+    40,
+    60,
+    80
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "share-of-population-in-extreme-poverty",
+    "url": "https://ourworldindata.org/grapher/share-of-population-in-extreme-poverty",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "3b34e23222d6ef7cb34ddf4b067528d3bab7e71a434b29e705908ffc2d9a3271",
+    "definition": "Share of population living below the international extreme-poverty line of $3.00 a day (2021 PPP), latest available survey per country (2020–2025); a curated 12-country spread sorted descending.",
+    "attribution": "World Bank — Poverty and Inequality Platform, via Our World in Data",
+    "primarySource": "World Bank — Poverty and Inequality Platform"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "share below $3.00/day, latest available survey per country, 12 curated countries sorted descending"
+    }
+  ]
+}

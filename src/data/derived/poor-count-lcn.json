@@ -1,0 +1,203 @@
+{
+  "indicatorId": "economy.poor_count.lcn",
+  "entity": "LCN",
+  "entityName": "Latin America & Caribbean",
+  "unit": "million people",
+  "points": [
+    {
+      "t": 1981,
+      "value": 73.48753599999999
+    },
+    {
+      "t": 1982,
+      "value": 77.577749
+    },
+    {
+      "t": 1983,
+      "value": 91.128626
+    },
+    {
+      "t": 1984,
+      "value": 91.7316
+    },
+    {
+      "t": 1985,
+      "value": 87.312657
+    },
+    {
+      "t": 1986,
+      "value": 68.001601
+    },
+    {
+      "t": 1987,
+      "value": 81.229402
+    },
+    {
+      "t": 1988,
+      "value": 84.908366
+    },
+    {
+      "t": 1989,
+      "value": 83.280362
+    },
+    {
+      "t": 1990,
+      "value": 91.356504
+    },
+    {
+      "t": 1991,
+      "value": 90.119537
+    },
+    {
+      "t": 1992,
+      "value": 92.328148
+    },
+    {
+      "t": 1993,
+      "value": 93.73305099999999
+    },
+    {
+      "t": 1994,
+      "value": 92.13197799999999
+    },
+    {
+      "t": 1995,
+      "value": 89.183835
+    },
+    {
+      "t": 1996,
+      "value": 97.213402
+    },
+    {
+      "t": 1997,
+      "value": 96.589765
+    },
+    {
+      "t": 1998,
+      "value": 96.841884
+    },
+    {
+      "t": 1999,
+      "value": 99.766612
+    },
+    {
+      "t": 2000,
+      "value": 94.032231
+    },
+    {
+      "t": 2001,
+      "value": 94.40025399999999
+    },
+    {
+      "t": 2002,
+      "value": 91.43839899999999
+    },
+    {
+      "t": 2003,
+      "value": 89.775258
+    },
+    {
+      "t": 2004,
+      "value": 83.800264
+    },
+    {
+      "t": 2005,
+      "value": 79.01388
+    },
+    {
+      "t": 2006,
+      "value": 67.37219999999999
+    },
+    {
+      "t": 2007,
+      "value": 61.199216
+    },
+    {
+      "t": 2008,
+      "value": 56.911137
+    },
+    {
+      "t": 2009,
+      "value": 55.298474999999996
+    },
+    {
+      "t": 2010,
+      "value": 49.829682
+    },
+    {
+      "t": 2011,
+      "value": 45.88465
+    },
+    {
+      "t": 2012,
+      "value": 45.071540999999996
+    },
+    {
+      "t": 2013,
+      "value": 41.424583999999996
+    },
+    {
+      "t": 2014,
+      "value": 39.728899999999996
+    },
+    {
+      "t": 2015,
+      "value": 37.425667
+    },
+    {
+      "t": 2016,
+      "value": 38.812021
+    },
+    {
+      "t": 2017,
+      "value": 38.814299
+    },
+    {
+      "t": 2018,
+      "value": 38.738944
+    },
+    {
+      "t": 2019,
+      "value": 39.614487
+    },
+    {
+      "t": 2020,
+      "value": 37.592965
+    },
+    {
+      "t": 2021,
+      "value": 40.575371
+    },
+    {
+      "t": 2022,
+      "value": 32.966612999999995
+    },
+    {
+      "t": 2023,
+      "value": 30.404069
+    },
+    {
+      "t": 2024,
+      "value": 28.352762
+    },
+    {
+      "t": 2025,
+      "value": 27.439861
+    },
+    {
+      "t": 2026,
+      "value": 27.040592999999998
+    }
+  ],
+  "provenance": {
+    "source": "pip",
+    "sourceIndicator": "pop_in_poverty @ $3.00/day (2021 PPP)",
+    "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+    "definition": "Number of people in extreme poverty (below $3.00/day, 2021 PPP), Latin America & Caribbean",
+    "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+    "primarySource": "World Bank — Poverty and Inequality Platform"
+  }
+}

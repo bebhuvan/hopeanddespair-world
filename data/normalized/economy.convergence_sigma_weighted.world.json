@@ -1,0 +1,171 @@
+[
+  {
+    "indicatorId": "economy.convergence_sigma_weighted.world",
+    "entity": "SIGMA_WEIGHTED",
+    "entityName": "Income dispersion across people (population-weighted), World",
+    "unit": "standard deviation of ln(GDP per capita)",
+    "points": [
+      {
+        "t": 1990,
+        "value": 1.222950705632509
+      },
+      {
+        "t": 1991,
+        "value": 1.204682091875757
+      },
+      {
+        "t": 1992,
+        "value": 1.1741380114015776
+      },
+      {
+        "t": 1993,
+        "value": 1.1457420584581477
+      },
+      {
+        "t": 1994,
+        "value": 1.125290624468433
+      },
+      {
+        "t": 1995,
+        "value": 1.1048396384352421
+      },
+      {
+        "t": 1996,
+        "value": 1.088537153102457
+      },
+      {
+        "t": 1997,
+        "value": 1.083019067154489
+      },
+      {
+        "t": 1998,
+        "value": 1.0722797708413465
+      },
+      {
+        "t": 1999,
+        "value": 1.0615902442122642
+      },
+      {
+        "t": 2000,
+        "value": 1.0637218125440995
+      },
+      {
+        "t": 2001,
+        "value": 1.0511558639934282
+      },
+      {
+        "t": 2002,
+        "value": 1.0422731034168897
+      },
+      {
+        "t": 2003,
+        "value": 1.0315166488720862
+      },
+      {
+        "t": 2004,
+        "value": 1.021557352419171
+      },
+      {
+        "t": 2005,
+        "value": 1.0092269805260283
+      },
+      {
+        "t": 2006,
+        "value": 0.999502774891635
+      },
+      {
+        "t": 2007,
+        "value": 0.9898541992836805
+      },
+      {
+        "t": 2008,
+        "value": 0.9812699628108709
+      },
+      {
+        "t": 2009,
+        "value": 0.9507795852313697
+      },
+      {
+        "t": 2010,
+        "value": 0.9440671716006026
+      },
+      {
+        "t": 2011,
+        "value": 0.9395492184815887
+      },
+      {
+        "t": 2012,
+        "value": 0.9319541378236071
+      },
+      {
+        "t": 2013,
+        "value": 0.9231840461716171
+      },
+      {
+        "t": 2014,
+        "value": 0.913581488805579
+      },
+      {
+        "t": 2015,
+        "value": 0.9051516018156799
+      },
+      {
+        "t": 2016,
+        "value": 0.8981780819246331
+      },
+      {
+        "t": 2017,
+        "value": 0.896436326060794
+      },
+      {
+        "t": 2018,
+        "value": 0.8941652116067935
+      },
+      {
+        "t": 2019,
+        "value": 0.8955093190806256
+      },
+      {
+        "t": 2020,
+        "value": 0.8998849617876781
+      },
+      {
+        "t": 2021,
+        "value": 0.9119787118727852
+      },
+      {
+        "t": 2022,
+        "value": 0.9107945931207354
+      },
+      {
+        "t": 2023,
+        "value": 0.913654371943491
+      },
+      {
+        "t": 2024,
+        "value": 0.9159384360207582
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "NY.GDP.PCAP.PP.KD × SP.POP.TOTL",
+      "url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "f22786749871412a91da89de74f35782e410628e93d9ba86f77a2f8aae27b472",
+      "definition": "Population-weighted standard deviation of ln(GDP per capita, PPP) across 178 countries (one person = one unit)",
+      "attribution": "World Bank — World Development Indicators (ICP PPP & population)",
+      "primarySource": "World Bank — World Development Indicators (ICP PPP & population)"
+    },
+    "derivedFrom": [
+      "NY.GDP.PCAP.PP.KD",
+      "SP.POP.TOTL"
+    ],
+    "recipe": [
+      {
+        "op": "sigma_weighted",
+        "detail": "Population-weighted standard deviation of ln(GDP per capita, PPP) across 178 countries (one person = one unit), 1990–2024, balanced panel of 178 countries"
+      }
+    ]
+  }
+]

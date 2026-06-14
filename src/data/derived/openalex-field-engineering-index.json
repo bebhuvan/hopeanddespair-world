@@ -1,0 +1,125 @@
+{
+  "indicatorId": "science.openalex_field_engineering_index.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "index, 2000 = 100",
+  "points": [
+    {
+      "t": 2000,
+      "value": 100
+    },
+    {
+      "t": 2001,
+      "value": 107
+    },
+    {
+      "t": 2002,
+      "value": 133.7
+    },
+    {
+      "t": 2003,
+      "value": 135.5
+    },
+    {
+      "t": 2004,
+      "value": 144.7
+    },
+    {
+      "t": 2005,
+      "value": 159.1
+    },
+    {
+      "t": 2006,
+      "value": 170.9
+    },
+    {
+      "t": 2007,
+      "value": 178.8
+    },
+    {
+      "t": 2008,
+      "value": 191.2
+    },
+    {
+      "t": 2009,
+      "value": 202.4
+    },
+    {
+      "t": 2010,
+      "value": 215
+    },
+    {
+      "t": 2011,
+      "value": 227.3
+    },
+    {
+      "t": 2012,
+      "value": 231.6
+    },
+    {
+      "t": 2013,
+      "value": 240.6
+    },
+    {
+      "t": 2014,
+      "value": 245.7
+    },
+    {
+      "t": 2015,
+      "value": 256.3
+    },
+    {
+      "t": 2016,
+      "value": 263.2
+    },
+    {
+      "t": 2017,
+      "value": 225.2
+    },
+    {
+      "t": 2018,
+      "value": 212.3
+    },
+    {
+      "t": 2019,
+      "value": 217.7
+    },
+    {
+      "t": 2020,
+      "value": 214.3
+    },
+    {
+      "t": 2021,
+      "value": 181.5
+    },
+    {
+      "t": 2022,
+      "value": 156.1
+    },
+    {
+      "t": 2023,
+      "value": 169.1
+    },
+    {
+      "t": 2024,
+      "value": 186.9
+    }
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,primary_topic.field.id:https://openalex.org/fields/22&group_by=publication_year",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,primary_topic.field.id:https://openalex.org/fields/22&group_by=publication_year&per-page=100",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-13",
+    "checksum": "abd6af653b0020b39fc3016ad7543fc5f59d74bbcbef696df7f7698de23fc8d5",
+    "definition": "OpenAlex works in Engineering, indexed to 2000 = 100.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "derived_transform",
+      "detail": "divided yearly Engineering work count by its 2000 value and multiplied by 100"
+    }
+  ]
+}

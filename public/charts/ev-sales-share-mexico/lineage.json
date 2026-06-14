@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "transport.ev_sales_share.mexico",
+    "unit": "percent",
+    "points": 15
+  },
+  "wasDerivedFrom": [
+    "Mexico"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Mexico"
+      }
+    ],
+    "agent": "adapter:iea@1.0.0",
+    "used": {
+      "source": "iea",
+      "slug": "evs",
+      "url": "https://api.iea.org/evs?region=Mexico&csv=true",
+      "vintage": "2026-06-13",
+      "checksum": "a722b7ec174ed47f076f57c4148b84d5f2ecb17a45a07398e2e100b9c9c768b0",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+}

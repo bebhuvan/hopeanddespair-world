@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "energy.coal_generation.india",
+    "unit": "terawatt-hours",
+    "points": 26
+  },
+  "wasDerivedFrom": [
+    "IND"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity India"
+      }
+    ],
+    "agent": "adapter:ember@1.0.0",
+    "used": {
+      "source": "ember",
+      "slug": "electricity-generation/yearly",
+      "url": "https://api.ember-energy.org/v1/electricity-generation/yearly?entity=India&start_date=2000",
+      "vintage": "2026-06-13",
+      "checksum": "10a4809ef96fc62ce9a6a3407185118d3423c7164d9f01d8b8087ed02f3c7912",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Ember — Yearly Electricity Data"
+}

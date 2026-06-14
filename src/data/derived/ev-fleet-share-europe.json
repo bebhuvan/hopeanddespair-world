@@ -1,0 +1,92 @@
+{
+  "indicatorId": "transport.ev_fleet_share.europe",
+  "entity": "Europe",
+  "entityName": "Europe",
+  "unit": "percent",
+  "points": [
+    {
+      "t": 2010,
+      "value": 0.010999999940395355
+    },
+    {
+      "t": 2011,
+      "value": 0.017999999225139618
+    },
+    {
+      "t": 2012,
+      "value": 0.028999999165534973
+    },
+    {
+      "t": 2013,
+      "value": 0.04899999871850014
+    },
+    {
+      "t": 2014,
+      "value": 0.0820000022649765
+    },
+    {
+      "t": 2015,
+      "value": 0.15000000596046448
+    },
+    {
+      "t": 2016,
+      "value": 0.2199999988079071
+    },
+    {
+      "t": 2017,
+      "value": 0.30000001192092896
+    },
+    {
+      "t": 2018,
+      "value": 0.4300000071525574
+    },
+    {
+      "t": 2019,
+      "value": 0.5899999737739563
+    },
+    {
+      "t": 2020,
+      "value": 1
+    },
+    {
+      "t": 2021,
+      "value": 1.7999999523162842
+    },
+    {
+      "t": 2022,
+      "value": 2.5
+    },
+    {
+      "t": 2023,
+      "value": 3.5999999046325684
+    },
+    {
+      "t": 2024,
+      "value": 4.400000095367432
+    },
+    {
+      "t": 2025,
+      "value": 5
+    }
+  ],
+  "provenance": {
+    "source": "iea",
+    "sourceIndicator": "EV stock share · Cars · EV",
+    "url": "https://api.iea.org/evs?region=Europe&csv=true",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "5f193edf78f00f6e6a95204f343b4515e7ae1e87d6c8e29a7ad6b5d326d27e23",
+    "definition": "Share of cars on the road that are electric, Europe",
+    "attribution": "IEA — Global EV Data Explorer",
+    "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity Europe"
+    }
+  ],
+  "derivedFrom": [
+    "Europe"
+  ]
+}

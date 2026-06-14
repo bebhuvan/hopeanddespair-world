@@ -1,0 +1,205 @@
+[
+  {
+    "indicatorId": "economy.societal_poverty.ssf",
+    "entity": "SSF",
+    "entityName": "Sub-Saharan Africa",
+    "unit": "% of population",
+    "points": [
+      {
+        "t": 1981,
+        "value": 59.62
+      },
+      {
+        "t": 1982,
+        "value": 60.29
+      },
+      {
+        "t": 1983,
+        "value": 61.71
+      },
+      {
+        "t": 1984,
+        "value": 62.45
+      },
+      {
+        "t": 1985,
+        "value": 62.4
+      },
+      {
+        "t": 1986,
+        "value": 62.39
+      },
+      {
+        "t": 1987,
+        "value": 62.39
+      },
+      {
+        "t": 1988,
+        "value": 62.35000000000001
+      },
+      {
+        "t": 1989,
+        "value": 62.61
+      },
+      {
+        "t": 1990,
+        "value": 63.01
+      },
+      {
+        "t": 1991,
+        "value": 64.23
+      },
+      {
+        "t": 1992,
+        "value": 65.19
+      },
+      {
+        "t": 1993,
+        "value": 65.61
+      },
+      {
+        "t": 1994,
+        "value": 65.86999999999999
+      },
+      {
+        "t": 1995,
+        "value": 65.77
+      },
+      {
+        "t": 1996,
+        "value": 65.2
+      },
+      {
+        "t": 1997,
+        "value": 64.87
+      },
+      {
+        "t": 1998,
+        "value": 64.8
+      },
+      {
+        "t": 1999,
+        "value": 64.49000000000001
+      },
+      {
+        "t": 2000,
+        "value": 63.800000000000004
+      },
+      {
+        "t": 2001,
+        "value": 62.62
+      },
+      {
+        "t": 2002,
+        "value": 62.13999999999999
+      },
+      {
+        "t": 2003,
+        "value": 61.06
+      },
+      {
+        "t": 2004,
+        "value": 58.14
+      },
+      {
+        "t": 2005,
+        "value": 56.71000000000001
+      },
+      {
+        "t": 2006,
+        "value": 55.76
+      },
+      {
+        "t": 2007,
+        "value": 54.72
+      },
+      {
+        "t": 2008,
+        "value": 53.59
+      },
+      {
+        "t": 2009,
+        "value": 53.31
+      },
+      {
+        "t": 2010,
+        "value": 51.92
+      },
+      {
+        "t": 2011,
+        "value": 51.15
+      },
+      {
+        "t": 2012,
+        "value": 50.22
+      },
+      {
+        "t": 2013,
+        "value": 49.53
+      },
+      {
+        "t": 2014,
+        "value": 49
+      },
+      {
+        "t": 2015,
+        "value": 49.08
+      },
+      {
+        "t": 2016,
+        "value": 48.91
+      },
+      {
+        "t": 2017,
+        "value": 48.620000000000005
+      },
+      {
+        "t": 2018,
+        "value": 48.22
+      },
+      {
+        "t": 2019,
+        "value": 48.07
+      },
+      {
+        "t": 2020,
+        "value": 49.33
+      },
+      {
+        "t": 2021,
+        "value": 49.309999999999995
+      },
+      {
+        "t": 2022,
+        "value": 48.92
+      },
+      {
+        "t": 2023,
+        "value": 48.69
+      },
+      {
+        "t": 2024,
+        "value": 48.29
+      },
+      {
+        "t": 2025,
+        "value": 47.74
+      },
+      {
+        "t": 2026,
+        "value": 47.13
+      }
+    ],
+    "provenance": {
+      "source": "pip",
+      "sourceIndicator": "spr @ $3.00/day (2021 PPP)",
+      "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+      "definition": "Societal (relative) poverty rate, Sub-Saharan Africa",
+      "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+      "primarySource": "World Bank — Poverty and Inequality Platform"
+    }
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "indicatorId": "health.cause_injury_wb.eas",
+  "entity": "EAS",
+  "entityName": "East Asia & Pacific",
+  "unit": "% of total deaths",
+  "points": [
+    {
+      "t": 2000,
+      "value": 9.0742891019107
+    },
+    {
+      "t": 2010,
+      "value": 7.77901357728255
+    },
+    {
+      "t": 2015,
+      "value": 7.05773541880919
+    },
+    {
+      "t": 2019,
+      "value": 6.51115623360281
+    },
+    {
+      "t": 2020,
+      "value": 6.21212993497338
+    },
+    {
+      "t": 2021,
+      "value": 5.80365090729228
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SH.DTH.INJR.ZS",
+    "url": "https://data.worldbank.org/indicator/SH.DTH.INJR.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "b3ef34afc25ce125972dc5b09aeeede59a68fd54a83ce71d4fc0bcf80ef158a5",
+    "definition": "Cause of death, by injury (% of total)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO Global Health Estimates, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity EAS"
+    }
+  ],
+  "derivedFrom": [
+    "EAS"
+  ]
+}

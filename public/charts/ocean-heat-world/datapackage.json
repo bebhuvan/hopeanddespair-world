@@ -1,0 +1,38 @@
+{
+  "name": "climate-ocean_heat-world",
+  "title": "Global ocean heat content (0–2000 m), World",
+  "licenses": [
+    {
+      "name": "Public Domain (NOAA NCEI)",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "NOAA National Centers for Environmental Information",
+      "path": "https://www.ncei.noaa.gov/data/oceans/woa/DATA_ANALYSIS/3M_HEAT_CONTENT/DATA/basin/yearly/h22-w0-2000m.dat"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "climate-ocean_heat-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "climate_ocean_heat_world",
+            "type": "number",
+            "unit": "10^22 joules"
+          }
+        ]
+      }
+    }
+  ]
+}

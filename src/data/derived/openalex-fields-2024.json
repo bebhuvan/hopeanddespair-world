@@ -1,0 +1,94 @@
+{
+  "chartId": "openalex-fields-2024",
+  "kind": "bars",
+  "title": "OpenAlex works by field, 2024",
+  "unit": "works, million",
+  "yearSpan": "2024",
+  "bars": [
+    {
+      "label": "Medicine",
+      "value": 1.63,
+      "color": "hope"
+    },
+    {
+      "label": "Social Sciences",
+      "value": 1.44,
+      "color": "hope"
+    },
+    {
+      "label": "Engineering",
+      "value": 1.43,
+      "color": "hope"
+    },
+    {
+      "label": "Computer Science",
+      "value": 0.71,
+      "color": "ochre"
+    },
+    {
+      "label": "Environmental Science",
+      "value": 0.48,
+      "color": "ochre"
+    },
+    {
+      "label": "Arts and Humanities",
+      "value": 0.45,
+      "color": "ochre"
+    },
+    {
+      "label": "Biochemistry, Genetics and Molecular Biology",
+      "value": 0.43,
+      "color": "stone"
+    },
+    {
+      "label": "Agricultural and Biological Sciences",
+      "value": 0.41,
+      "color": "stone"
+    },
+    {
+      "label": "Business, Management and Accounting",
+      "value": 0.33,
+      "color": "stone"
+    },
+    {
+      "label": "Economics, Econometrics and Finance",
+      "value": 0.31,
+      "color": "despair"
+    },
+    {
+      "label": "Psychology",
+      "value": 0.29,
+      "color": "despair"
+    },
+    {
+      "label": "Materials Science",
+      "value": 0.26,
+      "color": "despair"
+    }
+  ],
+  "xmax": 1.8,
+  "xTicks": [
+    0,
+    0.45,
+    0.9,
+    1.35,
+    1.8
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "works group_by primary_topic.field.id",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2024-01-01,to_publication_date:2024-12-31&group_by=primary_topic.field.id&per-page=200",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-13",
+    "checksum": "ec264407825edaa9d1c9378eed610e5bb10fbeb2b6285b4b80da8005c4440498",
+    "definition": "Works published in 2024, grouped by OpenAlex primary topic field.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "openalex_group_by",
+      "detail": "group 2024 works by primary topic field; show the top 12 in millions"
+    }
+  ]
+}

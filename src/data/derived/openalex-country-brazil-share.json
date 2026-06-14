@@ -1,0 +1,125 @@
+{
+  "indicatorId": "science.openalex_country_brazil_share.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "% of OpenAlex works",
+  "points": [
+    {
+      "t": 2000,
+      "value": 0.65
+    },
+    {
+      "t": 2001,
+      "value": 0.71
+    },
+    {
+      "t": 2002,
+      "value": 0.78
+    },
+    {
+      "t": 2003,
+      "value": 0.78
+    },
+    {
+      "t": 2004,
+      "value": 0.81
+    },
+    {
+      "t": 2005,
+      "value": 0.85
+    },
+    {
+      "t": 2006,
+      "value": 0.92
+    },
+    {
+      "t": 2007,
+      "value": 0.98
+    },
+    {
+      "t": 2008,
+      "value": 1.05
+    },
+    {
+      "t": 2009,
+      "value": 1.08
+    },
+    {
+      "t": 2010,
+      "value": 1.12
+    },
+    {
+      "t": 2011,
+      "value": 1.18
+    },
+    {
+      "t": 2012,
+      "value": 1.36
+    },
+    {
+      "t": 2013,
+      "value": 1.41
+    },
+    {
+      "t": 2014,
+      "value": 1.5
+    },
+    {
+      "t": 2015,
+      "value": 1.63
+    },
+    {
+      "t": 2016,
+      "value": 1.73
+    },
+    {
+      "t": 2017,
+      "value": 1.93
+    },
+    {
+      "t": 2018,
+      "value": 2.05
+    },
+    {
+      "t": 2019,
+      "value": 2.09
+    },
+    {
+      "t": 2020,
+      "value": 2.24
+    },
+    {
+      "t": 2021,
+      "value": 2.31
+    },
+    {
+      "t": 2022,
+      "value": 2.13
+    },
+    {
+      "t": 2023,
+      "value": 2.27
+    },
+    {
+      "t": 2024,
+      "value": 2.18
+    }
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:BR&group_by=publication_year / all works",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:BR&group_by=publication_year&per-page=100",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-13",
+    "checksum": "ee4215ac25aba519f739dd26a88838629b0544ccf8963f93d036a230ebbe0710",
+    "definition": "Brazil country-attributed works as a share of all OpenAlex works in the same publication year.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "derived_transform",
+      "detail": "divided Brazil yearly country-attributed work count by all OpenAlex works in the same year"
+    }
+  ]
+}

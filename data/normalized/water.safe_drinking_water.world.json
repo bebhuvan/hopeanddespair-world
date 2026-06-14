@@ -1,0 +1,121 @@
+[
+  {
+    "indicatorId": "water.safe_drinking_water.world",
+    "entity": "WLD",
+    "entityName": "World",
+    "unit": "% of population",
+    "points": [
+      {
+        "t": 2000,
+        "value": 61.2482581100601
+      },
+      {
+        "t": 2001,
+        "value": 61.4811114393704
+      },
+      {
+        "t": 2002,
+        "value": 61.8023813703793
+      },
+      {
+        "t": 2003,
+        "value": 62.1281324963474
+      },
+      {
+        "t": 2004,
+        "value": 62.4557839969167
+      },
+      {
+        "t": 2005,
+        "value": 62.8072334946997
+      },
+      {
+        "t": 2006,
+        "value": 63.1316570759531
+      },
+      {
+        "t": 2007,
+        "value": 63.4492647908181
+      },
+      {
+        "t": 2008,
+        "value": 63.7620533556781
+      },
+      {
+        "t": 2009,
+        "value": 64.2906505441352
+      },
+      {
+        "t": 2010,
+        "value": 64.8164573458294
+      },
+      {
+        "t": 2011,
+        "value": 65.3227715045301
+      },
+      {
+        "t": 2012,
+        "value": 65.8869865001761
+      },
+      {
+        "t": 2013,
+        "value": 66.4713029467872
+      },
+      {
+        "t": 2014,
+        "value": 67.0612035289485
+      },
+      {
+        "t": 2015,
+        "value": 67.6504377531236
+      },
+      {
+        "t": 2016,
+        "value": 68.2411717345558
+      },
+      {
+        "t": 2017,
+        "value": 68.818921544456
+      },
+      {
+        "t": 2018,
+        "value": 69.3903638517939
+      },
+      {
+        "t": 2019,
+        "value": 69.946037359687
+      },
+      {
+        "t": 2020,
+        "value": 70.4784606380115
+      },
+      {
+        "t": 2021,
+        "value": 70.9952769597765
+      },
+      {
+        "t": 2022,
+        "value": 71.5080020640923
+      },
+      {
+        "t": 2023,
+        "value": 71.9907403245118
+      },
+      {
+        "t": 2024,
+        "value": 73.6686144265244
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SH.H2O.SMDW.ZS",
+      "url": "https://data.worldbank.org/indicator/SH.H2O.SMDW.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "4667986b4aca06ead903a829d983ffdccd6955ab41b7d11fd4b6d3016ef29796",
+      "definition": "People using safely managed drinking water services (% of population)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "WHO/UNICEF JMP, via World Bank"
+    }
+  }
+]

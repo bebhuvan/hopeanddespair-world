@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "SH.H2O.SMDW.ZS",
+  "vintage": "2026-06-12",
+  "url": "https://data.worldbank.org/indicator/SH.H2O.SMDW.ZS",
+  "checksum": "4667986b4aca06ead903a829d983ffdccd6955ab41b7d11fd4b6d3016ef29796",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:44:13.120Z",
+  "adapterVersion": "1.0.0"
+}

@@ -1,0 +1,125 @@
+{
+  "indicatorId": "science.openalex_country_indonesia.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "works per year, million",
+  "points": [
+    {
+      "t": 2000,
+      "value": 0
+    },
+    {
+      "t": 2001,
+      "value": 0
+    },
+    {
+      "t": 2002,
+      "value": 0
+    },
+    {
+      "t": 2003,
+      "value": 0
+    },
+    {
+      "t": 2004,
+      "value": 0
+    },
+    {
+      "t": 2005,
+      "value": 0
+    },
+    {
+      "t": 2006,
+      "value": 0
+    },
+    {
+      "t": 2007,
+      "value": 0.01
+    },
+    {
+      "t": 2008,
+      "value": 0.01
+    },
+    {
+      "t": 2009,
+      "value": 0.01
+    },
+    {
+      "t": 2010,
+      "value": 0.01
+    },
+    {
+      "t": 2011,
+      "value": 0.02
+    },
+    {
+      "t": 2012,
+      "value": 0.02
+    },
+    {
+      "t": 2013,
+      "value": 0.03
+    },
+    {
+      "t": 2014,
+      "value": 0.04
+    },
+    {
+      "t": 2015,
+      "value": 0.06
+    },
+    {
+      "t": 2016,
+      "value": 0.09
+    },
+    {
+      "t": 2017,
+      "value": 0.13
+    },
+    {
+      "t": 2018,
+      "value": 0.18
+    },
+    {
+      "t": 2019,
+      "value": 0.23
+    },
+    {
+      "t": 2020,
+      "value": 0.28
+    },
+    {
+      "t": 2021,
+      "value": 0.33
+    },
+    {
+      "t": 2022,
+      "value": 0.36
+    },
+    {
+      "t": 2023,
+      "value": 0.45
+    },
+    {
+      "t": 2024,
+      "value": 0.45
+    }
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:ID&group_by=publication_year",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:ID&group_by=publication_year&per-page=100",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-13",
+    "checksum": "1bbe725c1f6db3553d28e514f703acd38ccc6798275b0c95bbefd29f188c9dc2",
+    "definition": "OpenAlex works per year with at least one authorship institution in Indonesia.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "openalex_group_by",
+      "detail": "filtered works to author-institution country Indonesia, grouped by publication year, 2000-2024, shown in millions"
+    }
+  ]
+}

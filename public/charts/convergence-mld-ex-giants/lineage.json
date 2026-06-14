@@ -1,0 +1,30 @@
+{
+  "entity": {
+    "id": "economy.convergence_mld_ex_giants.world",
+    "unit": "mean log deviation",
+    "points": 35
+  },
+  "wasDerivedFrom": [
+    "NY.GDP.PCAP.PP.KD",
+    "SP.POP.TOTL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "mld_ex_chn_ind",
+        "detail": "Population-weighted between-country mean log deviation of GDP per capita (PPP), 176 countries, excluding China & India, 1990–2024, balanced panel of 176 countries"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "mld_ex_chn_ind",
+      "url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD",
+      "vintage": "2026-06-12",
+      "checksum": "f22786749871412a91da89de74f35782e410628e93d9ba86f77a2f8aae27b472",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "World Bank — World Development Indicators (ICP PPP & population)"
+}

@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "science.openalex_field_computer_science.world",
+    "unit": "works per year, million",
+    "points": 25
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "openalex_group_by",
+        "detail": "filtered works to primary topic field Computer science, grouped by publication year, 2000-2024, shown in millions"
+      }
+    ],
+    "agent": "adapter:openalex@openalex-story-1.0.0",
+    "used": {
+      "source": "openalex",
+      "slug": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,primary_topic.field.id:https://openalex.org/fields/17&group_by=publication_year",
+      "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,primary_topic.field.id:https://openalex.org/fields/17&group_by=publication_year&per-page=100",
+      "vintage": "2026-06-13",
+      "checksum": "b3c502fe6f13f0537668b2be9d185ab61643babf44a38aa85cd52d756c5a31b3",
+      "license": "CC0 1.0"
+    }
+  },
+  "primarySource": "OpenAlex"
+}

@@ -1,0 +1,89 @@
+{
+  "chartId": "safe-water-by-country",
+  "kind": "bars",
+  "title": "Safe drinking water by country",
+  "unit": "Using safely managed drinking water, %",
+  "yearSpan": "2024–2024",
+  "bars": [
+    {
+      "label": "Germany",
+      "value": 99.9,
+      "color": "hope"
+    },
+    {
+      "label": "Japan",
+      "value": 98.7,
+      "color": "hope"
+    },
+    {
+      "label": "United States",
+      "value": 97.6,
+      "color": "hope"
+    },
+    {
+      "label": "Switzerland",
+      "value": 96.7,
+      "color": "hope"
+    },
+    {
+      "label": "Brazil",
+      "value": 88.6,
+      "color": "hope"
+    },
+    {
+      "label": "India",
+      "value": 76.4,
+      "color": "hope"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 59.1,
+      "color": "ochre"
+    },
+    {
+      "label": "Nigeria",
+      "value": 29.9,
+      "color": "despair"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 13.5,
+      "color": "despair"
+    },
+    {
+      "label": "DR Congo",
+      "value": 11.9,
+      "color": "despair"
+    },
+    {
+      "label": "Chad",
+      "value": 6.3,
+      "color": "despair"
+    }
+  ],
+  "xmax": 100,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "provenance": {
+    "source": "wb",
+    "sourceIndicator": "SH.H2O.SMDW.ZS",
+    "url": "https://data.worldbank.org/indicator/SH.H2O.SMDW.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2024–2024",
+    "checksum": "d1de45e8a8cef07650d30b316ee49cd6e4a1692b0cc6ce042283159b73f61120",
+    "definition": "Share of population using safely managed drinking water, latest year per country. A curated 11-country spread sorted descending.",
+    "attribution": "WHO/UNICEF JMP, via World Bank",
+    "primarySource": "WHO/UNICEF Joint Monitoring Programme"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 11 curated countries sorted descending"
+    }
+  ]
+}

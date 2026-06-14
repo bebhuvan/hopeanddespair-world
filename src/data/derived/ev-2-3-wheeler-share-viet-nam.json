@@ -1,0 +1,76 @@
+{
+  "indicatorId": "transport.ev_2_3_wheeler_share.viet-nam",
+  "entity": "Viet Nam",
+  "entityName": "Viet Nam",
+  "unit": "percent",
+  "points": [
+    {
+      "t": 2014,
+      "value": 0.04500000178813934
+    },
+    {
+      "t": 2015,
+      "value": 0.12999999523162842
+    },
+    {
+      "t": 2016,
+      "value": 1.100000023841858
+    },
+    {
+      "t": 2017,
+      "value": 1.2999999523162842
+    },
+    {
+      "t": 2018,
+      "value": 2.700000047683716
+    },
+    {
+      "t": 2019,
+      "value": 5
+    },
+    {
+      "t": 2020,
+      "value": 6.900000095367432
+    },
+    {
+      "t": 2021,
+      "value": 8.699999809265137
+    },
+    {
+      "t": 2022,
+      "value": 7.699999809265137
+    },
+    {
+      "t": 2023,
+      "value": 8.899999618530273
+    },
+    {
+      "t": 2024,
+      "value": 9.899999618530273
+    },
+    {
+      "t": 2025,
+      "value": 22
+    }
+  ],
+  "provenance": {
+    "source": "iea",
+    "sourceIndicator": "EV sales share · 2 and 3 wheelers · EV",
+    "url": "https://api.iea.org/evs?region=Viet%20Nam&csv=true",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "ff4b9e29e44c0f0cbf02625eb839ad898b90a7e4ce105487c9d59451374a13f6",
+    "definition": "Share of new two/three-wheelers sold that are electric, Viet Nam",
+    "attribution": "IEA — Global EV Data Explorer",
+    "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity Viet Nam"
+    }
+  ],
+  "derivedFrom": [
+    "Viet Nam"
+  ]
+}

@@ -1,0 +1,376 @@
+[
+  {
+    "indicatorId": "climate.temperature_anomaly_era5.world",
+    "entity": "World",
+    "entityName": "World",
+    "unit": "°C",
+    "points": [
+      {
+        "t": 1940,
+        "value": -0.063
+      },
+      {
+        "t": 1941,
+        "value": -0.015
+      },
+      {
+        "t": 1942,
+        "value": -0.104
+      },
+      {
+        "t": 1943,
+        "value": -0.1
+      },
+      {
+        "t": 1944,
+        "value": 0.088
+      },
+      {
+        "t": 1945,
+        "value": -0.046
+      },
+      {
+        "t": 1946,
+        "value": -0.044
+      },
+      {
+        "t": 1947,
+        "value": 0
+      },
+      {
+        "t": 1948,
+        "value": -0.065
+      },
+      {
+        "t": 1949,
+        "value": -0.027
+      },
+      {
+        "t": 1950,
+        "value": -0.139
+      },
+      {
+        "t": 1951,
+        "value": -0.005
+      },
+      {
+        "t": 1952,
+        "value": -0.028
+      },
+      {
+        "t": 1953,
+        "value": 0.054
+      },
+      {
+        "t": 1954,
+        "value": -0.143
+      },
+      {
+        "t": 1955,
+        "value": -0.16
+      },
+      {
+        "t": 1956,
+        "value": -0.225
+      },
+      {
+        "t": 1957,
+        "value": 0.029
+      },
+      {
+        "t": 1958,
+        "value": 0.095
+      },
+      {
+        "t": 1959,
+        "value": 0.06
+      },
+      {
+        "t": 1960,
+        "value": 0.01
+      },
+      {
+        "t": 1961,
+        "value": 0.089
+      },
+      {
+        "t": 1962,
+        "value": 0.029
+      },
+      {
+        "t": 1963,
+        "value": 0.066
+      },
+      {
+        "t": 1964,
+        "value": -0.15
+      },
+      {
+        "t": 1965,
+        "value": -0.082
+      },
+      {
+        "t": 1966,
+        "value": -0.005
+      },
+      {
+        "t": 1967,
+        "value": 0.01
+      },
+      {
+        "t": 1968,
+        "value": -0.058
+      },
+      {
+        "t": 1969,
+        "value": 0.078
+      },
+      {
+        "t": 1970,
+        "value": 0.051
+      },
+      {
+        "t": 1971,
+        "value": -0.103
+      },
+      {
+        "t": 1972,
+        "value": 0.029
+      },
+      {
+        "t": 1973,
+        "value": 0.134
+      },
+      {
+        "t": 1974,
+        "value": -0.139
+      },
+      {
+        "t": 1975,
+        "value": -0.116
+      },
+      {
+        "t": 1976,
+        "value": -0.189
+      },
+      {
+        "t": 1977,
+        "value": 0.102
+      },
+      {
+        "t": 1978,
+        "value": 0.043
+      },
+      {
+        "t": 1979,
+        "value": 0.2
+      },
+      {
+        "t": 1980,
+        "value": 0.325
+      },
+      {
+        "t": 1981,
+        "value": 0.363
+      },
+      {
+        "t": 1982,
+        "value": 0.164
+      },
+      {
+        "t": 1983,
+        "value": 0.358
+      },
+      {
+        "t": 1984,
+        "value": 0.142
+      },
+      {
+        "t": 1985,
+        "value": 0.107
+      },
+      {
+        "t": 1986,
+        "value": 0.194
+      },
+      {
+        "t": 1987,
+        "value": 0.349
+      },
+      {
+        "t": 1988,
+        "value": 0.378
+      },
+      {
+        "t": 1989,
+        "value": 0.263
+      },
+      {
+        "t": 1990,
+        "value": 0.496
+      },
+      {
+        "t": 1991,
+        "value": 0.439
+      },
+      {
+        "t": 1992,
+        "value": 0.203
+      },
+      {
+        "t": 1993,
+        "value": 0.254
+      },
+      {
+        "t": 1994,
+        "value": 0.291
+      },
+      {
+        "t": 1995,
+        "value": 0.466
+      },
+      {
+        "t": 1996,
+        "value": 0.333
+      },
+      {
+        "t": 1997,
+        "value": 0.461
+      },
+      {
+        "t": 1998,
+        "value": 0.648
+      },
+      {
+        "t": 1999,
+        "value": 0.378
+      },
+      {
+        "t": 2000,
+        "value": 0.369
+      },
+      {
+        "t": 2001,
+        "value": 0.536
+      },
+      {
+        "t": 2002,
+        "value": 0.632
+      },
+      {
+        "t": 2003,
+        "value": 0.62
+      },
+      {
+        "t": 2004,
+        "value": 0.551
+      },
+      {
+        "t": 2005,
+        "value": 0.72
+      },
+      {
+        "t": 2006,
+        "value": 0.671
+      },
+      {
+        "t": 2007,
+        "value": 0.664
+      },
+      {
+        "t": 2008,
+        "value": 0.528
+      },
+      {
+        "t": 2009,
+        "value": 0.662
+      },
+      {
+        "t": 2010,
+        "value": 0.757
+      },
+      {
+        "t": 2011,
+        "value": 0.617
+      },
+      {
+        "t": 2012,
+        "value": 0.663
+      },
+      {
+        "t": 2013,
+        "value": 0.694
+      },
+      {
+        "t": 2014,
+        "value": 0.735
+      },
+      {
+        "t": 2015,
+        "value": 0.883
+      },
+      {
+        "t": 2016,
+        "value": 1.061
+      },
+      {
+        "t": 2017,
+        "value": 0.97
+      },
+      {
+        "t": 2018,
+        "value": 0.891
+      },
+      {
+        "t": 2019,
+        "value": 1.027
+      },
+      {
+        "t": 2020,
+        "value": 1.053
+      },
+      {
+        "t": 2021,
+        "value": 0.902
+      },
+      {
+        "t": 2022,
+        "value": 0.929
+      },
+      {
+        "t": 2023,
+        "value": 1.23
+      },
+      {
+        "t": 2024,
+        "value": 1.342
+      },
+      {
+        "t": 2025,
+        "value": 1.218
+      }
+    ],
+    "provenance": {
+      "source": "copernicus",
+      "sourceIndicator": "era5_daily_series_2t_global",
+      "url": "https://sites.ecmwf.int/data/climatepulse/data/series/era5_daily_series_2t_global.csv",
+      "license": "Copernicus Climate Change Service (C3S) — free reuse with attribution",
+      "vintage": "2026-06-13",
+      "checksum": "e86797a7d79fbfea28915e220b3722852c20f38afece7684d550a064de36daa5",
+      "definition": "Global temperature anomaly, ERA5 reanalysis (vs 1951–1980), World",
+      "attribution": "Copernicus Climate Change Service (C3S) / ECMWF — ERA5, via Climate Pulse",
+      "primarySource": "Copernicus Climate Change Service (C3S) / ECMWF — ERA5",
+      "notes": "Annual mean of daily ERA5 2 m air temperature (complete years only), expressed as an anomaly vs the 1951–1980 average computed from this series."
+    },
+    "recipe": [
+      {
+        "op": "annual_mean",
+        "detail": "mean of daily ERA5 2 m temperature per year (years with ≥ 360 days)"
+      },
+      {
+        "op": "rebaseline",
+        "detail": "anomaly vs the 1951–1980 mean (13.753°C), recomputed from the absolute series"
+      }
+    ]
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "indicatorId": "transport.ev_2_3_wheeler_share.indonesia",
+    "entity": "Indonesia",
+    "entityName": "Indonesia",
+    "unit": "percent",
+    "points": [
+      {
+        "t": 2015,
+        "value": 0.00011999999696854502
+      },
+      {
+        "t": 2016,
+        "value": 0.00039999998989515007
+      },
+      {
+        "t": 2017,
+        "value": 0.0010999999940395355
+      },
+      {
+        "t": 2018,
+        "value": 0.00419999985024333
+      },
+      {
+        "t": 2019,
+        "value": 0.01600000075995922
+      },
+      {
+        "t": 2020,
+        "value": 0.057999998331069946
+      },
+      {
+        "t": 2021,
+        "value": 0.20999999344348907
+      },
+      {
+        "t": 2022,
+        "value": 0.3100000023841858
+      },
+      {
+        "t": 2023,
+        "value": 0.9900000095367432
+      },
+      {
+        "t": 2024,
+        "value": 1.7000000476837158
+      },
+      {
+        "t": 2025,
+        "value": 1
+      }
+    ],
+    "provenance": {
+      "source": "iea",
+      "sourceIndicator": "EV sales share · 2 and 3 wheelers · EV",
+      "url": "https://api.iea.org/evs?region=Indonesia&csv=true",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "aa64753ec06d2f5a63d032e4c0e75f3abfe40eb25a8ac18fdef604e2603e1fa0",
+      "definition": "Share of new two/three-wheelers sold that are electric, Indonesia",
+      "attribution": "IEA — Global EV Data Explorer",
+      "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+    }
+  }
+]

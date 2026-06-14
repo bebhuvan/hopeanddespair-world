@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "violence.military_spending.world",
+    "unit": "constant 2024 US$",
+    "points": 37
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "military-spending-sipri",
+      "url": "https://ourworldindata.org/grapher/military-spending-sipri",
+      "vintage": "2026-06-12",
+      "checksum": "235e5080fbc1b77d50261b08fb2e86b4529c625d30eb559baa212a8b9db82524",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Stockholm International Peace Research Institute (SIPRI)"
+}

@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "solar-pv-prices",
+  "vintage": "2026-06-12",
+  "url": "https://ourworldindata.org/grapher/solar-pv-prices",
+  "checksum": "c44cc2255423a328d8b02fbf0d516a13214a4c44cd5af2215728da0d5cd8f816",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:44:27.962Z",
+  "adapterVersion": "1.0.0"
+}

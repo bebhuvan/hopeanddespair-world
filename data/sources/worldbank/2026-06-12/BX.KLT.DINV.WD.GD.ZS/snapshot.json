@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "BX.KLT.DINV.WD.GD.ZS",
+  "vintage": "2026-06-12",
+  "url": "https://data.worldbank.org/indicator/BX.KLT.DINV.WD.GD.ZS",
+  "checksum": "721dbe2c182bfd13d01cf0146216793a12f9fed1fad3a1eed6fc0bf387f0437b",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:44:32.572Z",
+  "adapterVersion": "1.0.0"
+}

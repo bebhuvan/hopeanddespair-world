@@ -58,6 +58,11 @@ the minimal core and stays inside the anti-cliché bans (§4).
    Replace most with **small italic Fraunces** or quiet sentence-case. The serif italic is
    the most alive element in the whole system — the verdict word, the pull-quotes, the lens
    names already use it. Make it the connective tissue, not a garnish.
+   *Amended 2026-06-10:* italic-as-connective-tissue overshot — with italic carrying every
+   structural label, the page read as "arbitrary italics everywhere." **Italic is voice
+   only** (pull quote, interlude, the one-line answers, lens names, inline emphasis, the
+   numeral flourishes). Structural labels share one calm voice: **small sentence-case
+   grotesk** (~0.8rem, wt 560–580) — never tracked caps, never italic.
 6. **Let the temperature actually flow.** Today the hope→confusion→despair gradient lives
    only in the scroll-spine. Let the color *temperature* (not stoplight, never a stoplight —
    see §4) carry quietly through the verdict word, an end-marker, a single rule — so the
@@ -119,7 +124,9 @@ have learned (§1) to use *fewer* of even those.
 
 ## 5. The design system (tokens, type, charts)
 
-The token sets, font stack (`Fraunces` / `Newsreader` / `Geist` / `Geist Mono`), and chart
+The token sets, font stack (since 2026-06-10: `Schibsted Grotesk` display / `Source Serif 4`
+text & voice / `Spline Sans Mono` data — the serif **must** be imported from the fontsource
+`opsz` + `opsz-italic` builds, or italics render as synthetic obliques), and chart
 rendering approach (inline `smooth()` monotone-cubic, no client charting library, baked SVG
 watermark, lazy static artifacts) are specified in [[PLAN.md]] §3–4 and are the source of
 truth for those. This file governs *how those parts are composed* — and the composition is
@@ -148,6 +155,28 @@ hairline, no compartments); `.figure` and `.chart-frame` **unframed** (chart sit
 page); `.caveats` is now a **left-rule aside**, not a tinted box; the content eyebrows
 (`.move .ey`, `.evi-head`, section labels, `.duel h3`, caveats/verdict labels) are now
 **Fraunces italic** instead of uppercase Geist; section rhythm loosened for contrast.
+
+**Astro shell typography pass (2026-06-10)** — the "clumsy, haphazard body text" diagnosis
+and fix, in order of impact:
+
+1. **Every italic on the site was fake.** The default `@fontsource-variable` serif import is
+   wght-only + upright; the browser slanted the roman for all italics, and optical sizing
+   was silently dead. Fixed by importing the `opsz.css` + `opsz-italic.css` builds.
+2. **Newsreader → Source Serif 4** for the text voice: Newsreader's small x-height and high
+   contrast read wiry and underweight on screen beside the Schibsted headlines. Body weight
+   420→450 (the text grade).
+3. **A real type scale** (`tokens.css`): four reading sizes — `--fs-lede / --fs-body /
+   --fs-small / --fs-meta` — replaced the hand-tuned 1.00/1.04/1.06/1.08/1.12 drift. Running
+   text never invents its own size. Legibility floor: no mono chrome below ~0.64rem.
+4. **Italic demoted to voice; one label voice** (the §2.5 amendment above).
+5. **Tufte margin notes fixed**: the float was 1rem wider than the space beside the measure
+   (collision). ≥1100px the note hangs in the true right margin via negative right margin —
+   the mirror of the figures' left breakout; below, a left-rule aside in the flow.
+6. **Chart titles promoted to content** (display face at reading size; period stays mono),
+   SVG text sizes rationalized (ticks 14px, series 14.5, era 12.5, callouts 13.5 serif
+   italic), era-annotation label dodging added (see CHARTS.md).
+7. Landing: a "How to read this" triptych (question / distances / temperatures) between the
+   hero and the Atlas — the system explained in three sentences, no boxes.
 
 **Still open (next passes, by subtraction):** push remaining uppercase toward ~5 (the rest
 are genuine UI — nav, toggle, segment buttons, download tools — and may stay); introduce a

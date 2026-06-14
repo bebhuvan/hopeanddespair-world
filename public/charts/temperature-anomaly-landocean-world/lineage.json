@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "climate.temperature_anomaly_landocean.world",
+    "unit": "°C",
+    "points": 175
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "identity",
+        "detail": "normalized directly from source"
+      }
+    ],
+    "agent": "adapter:berkeley@1.0.0",
+    "used": {
+      "source": "berkeley",
+      "slug": "land_ocean",
+      "url": "https://berkeley-earth-temperature.s3.us-west-1.amazonaws.com/Global/Land_and_Ocean_summary.txt",
+      "vintage": "2026-06-13",
+      "checksum": "8f4b3f37846f0aacc270a3cf0090c1d94e857c8b2c7b8d8cdb081134781e819f",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Berkeley Earth — Rohde & Hausfather (2020)"
+}

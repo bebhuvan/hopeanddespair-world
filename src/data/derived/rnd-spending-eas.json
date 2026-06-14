@@ -1,0 +1,140 @@
+{
+  "indicatorId": "science.rnd_spend_gdp.eas",
+  "entity": "EAS",
+  "entityName": "East Asia & Pacific",
+  "unit": "% of GDP",
+  "points": [
+    {
+      "t": 1996,
+      "value": 2.17761443314041
+    },
+    {
+      "t": 1997,
+      "value": 2.25214497778863
+    },
+    {
+      "t": 1998,
+      "value": 2.22079097045838
+    },
+    {
+      "t": 1999,
+      "value": 2.288901550475
+    },
+    {
+      "t": 2000,
+      "value": 2.22442001684859
+    },
+    {
+      "t": 2001,
+      "value": 2.26863159534657
+    },
+    {
+      "t": 2002,
+      "value": 2.23314774390592
+    },
+    {
+      "t": 2003,
+      "value": 2.31372662972767
+    },
+    {
+      "t": 2004,
+      "value": 2.29927188339166
+    },
+    {
+      "t": 2005,
+      "value": 2.37837722354987
+    },
+    {
+      "t": 2006,
+      "value": 2.37772218171407
+    },
+    {
+      "t": 2007,
+      "value": 2.32588386210695
+    },
+    {
+      "t": 2008,
+      "value": 2.330543317584
+    },
+    {
+      "t": 2009,
+      "value": 2.22701159799564
+    },
+    {
+      "t": 2010,
+      "value": 2.37373106141804
+    },
+    {
+      "t": 2011,
+      "value": 2.3067710341572
+    },
+    {
+      "t": 2012,
+      "value": 2.45499343291055
+    },
+    {
+      "t": 2013,
+      "value": 2.25056072360497
+    },
+    {
+      "t": 2014,
+      "value": 2.4389074305372
+    },
+    {
+      "t": 2015,
+      "value": 2.28933572378617
+    },
+    {
+      "t": 2016,
+      "value": 2.30472981167949
+    },
+    {
+      "t": 2017,
+      "value": 2.28399081096573
+    },
+    {
+      "t": 2018,
+      "value": 2.32085667275762
+    },
+    {
+      "t": 2019,
+      "value": 2.32957147134111
+    },
+    {
+      "t": 2020,
+      "value": 2.50323850077846
+    },
+    {
+      "t": 2021,
+      "value": 2.57205418314088
+    },
+    {
+      "t": 2022,
+      "value": 2.71253063573246
+    },
+    {
+      "t": 2023,
+      "value": 2.77406822897594
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "GB.XPD.RSDV.GD.ZS",
+    "url": "https://data.worldbank.org/indicator/GB.XPD.RSDV.GD.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "4d3e7ae2e5be1ea3258f12d3af8a18f7d6d5d9b8fcb596d7f1ab75976ef5b8c3",
+    "definition": "Research and development expenditure (% of GDP)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "UNESCO Institute for Statistics, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity EAS"
+    }
+  ],
+  "derivedFrom": [
+    "EAS"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "source": "noaagml",
+  "slug": "ch4",
+  "vintage": "2026-06-13",
+  "url": "https://gml.noaa.gov/webdata/ccgg/trends/ch4/ch4_annmean_gl.txt",
+  "checksum": "026a15582001534d1abd55e05b078eba5c0755af2d42e1a260dddc5b39b8c0ad",
+  "license": "Public Domain (NOAA GML)",
+  "fetchedAt": "2026-06-13T13:47:04.267Z",
+  "adapterVersion": "1.0.0"
+}

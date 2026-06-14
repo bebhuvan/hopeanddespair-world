@@ -1,0 +1,85 @@
+[
+  {
+    "indicatorId": "transport.ev_bev_share.world",
+    "entity": "OWID_WRL",
+    "entityName": "World",
+    "unit": "%",
+    "points": [
+      {
+        "t": 2010,
+        "value": 0.01127517
+      },
+      {
+        "t": 2011,
+        "value": 0.05877551
+      },
+      {
+        "t": 2012,
+        "value": 0.08428571
+      },
+      {
+        "t": 2013,
+        "value": 0.1587065
+      },
+      {
+        "t": 2014,
+        "value": 0.2666667
+      },
+      {
+        "t": 2015,
+        "value": 0.4315385
+      },
+      {
+        "t": 2016,
+        "value": 0.5724359
+      },
+      {
+        "t": 2017,
+        "value": 0.8866667
+      },
+      {
+        "t": 2018,
+        "value": 1.639024
+      },
+      {
+        "t": 2019,
+        "value": 1.947115
+      },
+      {
+        "t": 2020,
+        "value": 2.95302
+      },
+      {
+        "t": 2021,
+        "value": 6.622727
+      },
+      {
+        "t": 2022,
+        "value": 10.73529
+      },
+      {
+        "t": 2023,
+        "value": 12.48175
+      },
+      {
+        "t": 2024,
+        "value": 13.2
+      },
+      {
+        "t": 2025,
+        "value": 16.50943
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "bev_share_car_sales",
+      "url": "https://ourworldindata.org/grapher/share-car-sales-battery-plugin",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "5e8d981e9f3f2f98141a270b6598e62bf40266c51b5db85feeade7e4548da999",
+      "definition": "Battery-electric share of new cars sold, World",
+      "attribution": "Our World in Data",
+      "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0), via Our World in Data"
+    }
+  }
+]

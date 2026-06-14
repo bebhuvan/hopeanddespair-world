@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "climate.temperature_anomaly.world",
+    "unit": "°C",
+    "points": 146
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "identity",
+        "detail": "normalized directly from source"
+      }
+    ],
+    "agent": "adapter:nasa@1.0.0",
+    "used": {
+      "source": "nasa",
+      "slug": "GISTEMP",
+      "url": "https://raw.githubusercontent.com/datasets/global-temp/main/data/annual.csv",
+      "vintage": "2026-06-12",
+      "checksum": "2f23416944dc639b7f8e87098e65f158a3690446071018b9b466d47186b0eb86",
+      "license": "Public Domain (US Government)"
+    }
+  },
+  "primarySource": "NASA Goddard Institute for Space Studies — GISTEMP v4"
+}

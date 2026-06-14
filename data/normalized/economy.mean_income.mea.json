@@ -1,0 +1,205 @@
+[
+  {
+    "indicatorId": "economy.mean_income.mea",
+    "entity": "MEA",
+    "entityName": "Middle East, North Africa, Afghanistan & Pakistan",
+    "unit": "PPP$ per day (2021)",
+    "points": [
+      {
+        "t": 1981,
+        "value": 9.0318
+      },
+      {
+        "t": 1982,
+        "value": 8.9303
+      },
+      {
+        "t": 1983,
+        "value": 8.6942
+      },
+      {
+        "t": 1984,
+        "value": 8.6658
+      },
+      {
+        "t": 1985,
+        "value": 8.6249
+      },
+      {
+        "t": 1986,
+        "value": 8.2982
+      },
+      {
+        "t": 1987,
+        "value": 8.217
+      },
+      {
+        "t": 1988,
+        "value": 8.1345
+      },
+      {
+        "t": 1989,
+        "value": 8.127
+      },
+      {
+        "t": 1990,
+        "value": 7.8742
+      },
+      {
+        "t": 1991,
+        "value": 7.9392
+      },
+      {
+        "t": 1992,
+        "value": 8.2861
+      },
+      {
+        "t": 1993,
+        "value": 8.3447
+      },
+      {
+        "t": 1994,
+        "value": 8.5196
+      },
+      {
+        "t": 1995,
+        "value": 8.5692
+      },
+      {
+        "t": 1996,
+        "value": 8.8319
+      },
+      {
+        "t": 1997,
+        "value": 9.0468
+      },
+      {
+        "t": 1998,
+        "value": 9.2948
+      },
+      {
+        "t": 1999,
+        "value": 9.366
+      },
+      {
+        "t": 2000,
+        "value": 9.6512
+      },
+      {
+        "t": 2001,
+        "value": 9.6582
+      },
+      {
+        "t": 2002,
+        "value": 9.7714
+      },
+      {
+        "t": 2003,
+        "value": 9.96
+      },
+      {
+        "t": 2004,
+        "value": 11.2943
+      },
+      {
+        "t": 2005,
+        "value": 11.5222
+      },
+      {
+        "t": 2006,
+        "value": 11.9165
+      },
+      {
+        "t": 2007,
+        "value": 12.2986
+      },
+      {
+        "t": 2008,
+        "value": 12.6669
+      },
+      {
+        "t": 2009,
+        "value": 12.1582
+      },
+      {
+        "t": 2010,
+        "value": 12.0018
+      },
+      {
+        "t": 2011,
+        "value": 12.1718
+      },
+      {
+        "t": 2012,
+        "value": 12.1874
+      },
+      {
+        "t": 2013,
+        "value": 12.2143
+      },
+      {
+        "t": 2014,
+        "value": 12.3993
+      },
+      {
+        "t": 2015,
+        "value": 12.6622
+      },
+      {
+        "t": 2016,
+        "value": 12.79
+      },
+      {
+        "t": 2017,
+        "value": 12.9202
+      },
+      {
+        "t": 2018,
+        "value": 12.986
+      },
+      {
+        "t": 2019,
+        "value": 12.905
+      },
+      {
+        "t": 2020,
+        "value": 12.3164
+      },
+      {
+        "t": 2021,
+        "value": 12.5084
+      },
+      {
+        "t": 2022,
+        "value": 13.1392
+      },
+      {
+        "t": 2023,
+        "value": 13.3517
+      },
+      {
+        "t": 2024,
+        "value": 13.3371
+      },
+      {
+        "t": 2025,
+        "value": 13.4742
+      },
+      {
+        "t": 2026,
+        "value": 13.7037
+      }
+    ],
+    "provenance": {
+      "source": "pip",
+      "sourceIndicator": "mean @ $3.00/day (2021 PPP)",
+      "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+      "definition": "Mean income or consumption per day, Middle East, North Africa, Afghanistan & Pakistan",
+      "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+      "primarySource": "World Bank — Poverty and Inequality Platform"
+    }
+  }
+]

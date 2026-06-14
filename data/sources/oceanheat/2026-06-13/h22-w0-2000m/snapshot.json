@@ -1,0 +1,10 @@
+{
+  "source": "oceanheat",
+  "slug": "h22-w0-2000m",
+  "vintage": "2026-06-13",
+  "url": "https://www.ncei.noaa.gov/data/oceans/woa/DATA_ANALYSIS/3M_HEAT_CONTENT/DATA/basin/yearly/h22-w0-2000m.dat",
+  "checksum": "5b0fabf106dc1473f0a658baaced5245bc19e33a39c6d86294a3cf074ac0f5b4",
+  "license": "Public Domain (NOAA NCEI)",
+  "fetchedAt": "2026-06-13T13:47:08.797Z",
+  "adapterVersion": "1.0.0"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "climate-n2o-world",
+  "title": "Measured in tonnes of carbon dioxide-equivalents over a 100-year timescale.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/nitrous-oxide-emissions"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "climate-n2o-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "climate_n2o_world",
+            "type": "number",
+            "unit": "tonnes of CO₂ equivalents"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "violence-nuclear_warheads-world",
+  "title": "Estimated number of nuclear warheads in the stockpiles of nuclear powers.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/nuclear-warhead-stockpiles"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "violence-nuclear_warheads-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "violence_nuclear_warheads_world",
+            "type": "number",
+            "unit": "warheads"
+          }
+        ]
+      }
+    }
+  ]
+}

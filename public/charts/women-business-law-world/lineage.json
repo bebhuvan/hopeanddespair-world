@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "rights.women_business_law.world",
+    "unit": "index (0–100)",
+    "points": 54
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "women-business-and-the-law-index",
+      "url": "https://ourworldindata.org/grapher/women-business-and-the-law-index",
+      "vintage": "2026-06-12",
+      "checksum": "e04da25f0087417f6a4bf8718ce0b29439a1b6c29f7b999f3a729d4df6d0182b",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "World Bank — Women, Business and the Law"
+}

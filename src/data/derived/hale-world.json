@@ -1,0 +1,117 @@
+{
+  "indicatorId": "health.healthy_life_expectancy.world",
+  "entity": "GLOBAL",
+  "entityName": "World",
+  "unit": "years",
+  "points": [
+    {
+      "t": 2000,
+      "value": 58.12344391
+    },
+    {
+      "t": 2001,
+      "value": 58.4026886
+    },
+    {
+      "t": 2002,
+      "value": 58.63424886
+    },
+    {
+      "t": 2003,
+      "value": 58.87212553
+    },
+    {
+      "t": 2004,
+      "value": 59.1535497
+    },
+    {
+      "t": 2005,
+      "value": 59.52212756
+    },
+    {
+      "t": 2006,
+      "value": 60.00627982
+    },
+    {
+      "t": 2007,
+      "value": 60.38600026
+    },
+    {
+      "t": 2008,
+      "value": 60.63910693
+    },
+    {
+      "t": 2009,
+      "value": 61.07864701
+    },
+    {
+      "t": 2010,
+      "value": 61.32394172
+    },
+    {
+      "t": 2011,
+      "value": 61.6807945
+    },
+    {
+      "t": 2012,
+      "value": 61.9854466
+    },
+    {
+      "t": 2013,
+      "value": 62.27469955
+    },
+    {
+      "t": 2014,
+      "value": 62.50830447
+    },
+    {
+      "t": 2015,
+      "value": 62.70617883
+    },
+    {
+      "t": 2016,
+      "value": 62.90679469
+    },
+    {
+      "t": 2017,
+      "value": 63.09978832
+    },
+    {
+      "t": 2018,
+      "value": 63.26988835
+    },
+    {
+      "t": 2019,
+      "value": 63.45014809
+    },
+    {
+      "t": 2020,
+      "value": 62.82664756
+    },
+    {
+      "t": 2021,
+      "value": 61.91107106
+    }
+  ],
+  "provenance": {
+    "source": "who",
+    "sourceIndicator": "WHOSIS_000002",
+    "url": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/WHOSIS_000002",
+    "license": "CC BY-NC-SA 3.0 IGO",
+    "vintage": "2026-06-13",
+    "checksum": "0f92b6689f4dcd12adaa446ddf8e4e1c9a97dcf0f20099b3481cae0868a3dd7a",
+    "definition": "Healthy life expectancy at birth, World",
+    "attribution": "WHO Global Health Observatory",
+    "primarySource": "WHO Global Health Observatory — Global Health Estimates",
+    "notes": "CC BY-NC-SA 3.0 IGO — link-only; charted but not re-hosted."
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity GLOBAL"
+    }
+  ],
+  "derivedFrom": [
+    "GLOBAL"
+  ]
+}

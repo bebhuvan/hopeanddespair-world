@@ -1,0 +1,38 @@
+{
+  "name": "demography-net_migration_rate-lower_middle_income",
+  "title": "Net migration rate, Lower-middle-income countries",
+  "licenses": [
+    {
+      "name": "CC BY 3.0 IGO",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "UN DESA, Population Division — World Population Prospects 2024",
+      "path": "https://population.un.org/wpp/"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "demography-net_migration_rate-lower_middle_income",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "demography_net_migration_rate_lower_middle_income",
+            "type": "number",
+            "unit": "net migrants per 1,000 people"
+          }
+        ]
+      }
+    }
+  ]
+}

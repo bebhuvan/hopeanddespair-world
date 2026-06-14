@@ -1,0 +1,38 @@
+{
+  "name": "health-cause_ncd_wb-lcn",
+  "title": "Cause of death, by non-communicable diseases (% of total)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/SH.DTH.NCOM.ZS"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "health-cause_ncd_wb-lcn",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "health_cause_ncd_wb_lcn",
+            "type": "number",
+            "unit": "% of total deaths"
+          }
+        ]
+      }
+    }
+  ]
+}

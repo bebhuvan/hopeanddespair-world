@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "health.cause_injury_wb.eas",
+    "unit": "% of total deaths",
+    "points": 6
+  },
+  "wasDerivedFrom": [
+    "EAS"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity EAS"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SH.DTH.INJR.ZS",
+      "url": "https://data.worldbank.org/indicator/SH.DTH.INJR.ZS",
+      "vintage": "2026-06-13",
+      "checksum": "b3ef34afc25ce125972dc5b09aeeede59a68fd54a83ce71d4fc0bcf80ef158a5",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "WHO Global Health Estimates, via World Bank"
+}

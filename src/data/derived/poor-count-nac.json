@@ -1,0 +1,203 @@
+{
+  "indicatorId": "economy.poor_count.nac",
+  "entity": "NAC",
+  "entityName": "North America",
+  "unit": "million people",
+  "points": [
+    {
+      "t": 1981,
+      "value": 1.480494
+    },
+    {
+      "t": 1982,
+      "value": 1.838512
+    },
+    {
+      "t": 1983,
+      "value": 1.7030219999999998
+    },
+    {
+      "t": 1984,
+      "value": 1.5672679999999999
+    },
+    {
+      "t": 1985,
+      "value": 1.5637219999999998
+    },
+    {
+      "t": 1986,
+      "value": 1.673889
+    },
+    {
+      "t": 1987,
+      "value": 1.4148399999999999
+    },
+    {
+      "t": 1988,
+      "value": 1.27993
+    },
+    {
+      "t": 1989,
+      "value": 1.459906
+    },
+    {
+      "t": 1990,
+      "value": 1.511132
+    },
+    {
+      "t": 1991,
+      "value": 1.6533639999999998
+    },
+    {
+      "t": 1992,
+      "value": 1.674926
+    },
+    {
+      "t": 1993,
+      "value": 1.8850099999999999
+    },
+    {
+      "t": 1994,
+      "value": 1.956836
+    },
+    {
+      "t": 1995,
+      "value": 1.8544589999999999
+    },
+    {
+      "t": 1996,
+      "value": 1.78898
+    },
+    {
+      "t": 1997,
+      "value": 2.022423
+    },
+    {
+      "t": 1998,
+      "value": 2.350298
+    },
+    {
+      "t": 1999,
+      "value": 2.028475
+    },
+    {
+      "t": 2000,
+      "value": 2.114127
+    },
+    {
+      "t": 2001,
+      "value": 2.6057379999999997
+    },
+    {
+      "t": 2002,
+      "value": 2.494456
+    },
+    {
+      "t": 2003,
+      "value": 2.923752
+    },
+    {
+      "t": 2004,
+      "value": 3.051827
+    },
+    {
+      "t": 2005,
+      "value": 3.029064
+    },
+    {
+      "t": 2006,
+      "value": 3.096694
+    },
+    {
+      "t": 2007,
+      "value": 3.0381
+    },
+    {
+      "t": 2008,
+      "value": 3.299865
+    },
+    {
+      "t": 2009,
+      "value": 2.947351
+    },
+    {
+      "t": 2010,
+      "value": 3.4572439999999998
+    },
+    {
+      "t": 2011,
+      "value": 3.33757
+    },
+    {
+      "t": 2012,
+      "value": 3.3978599999999997
+    },
+    {
+      "t": 2013,
+      "value": 3.43248
+    },
+    {
+      "t": 2014,
+      "value": 4.139602
+    },
+    {
+      "t": 2015,
+      "value": 3.920582
+    },
+    {
+      "t": 2016,
+      "value": 3.741128
+    },
+    {
+      "t": 2017,
+      "value": 4.154336
+    },
+    {
+      "t": 2018,
+      "value": 3.617479
+    },
+    {
+      "t": 2019,
+      "value": 3.3179369999999997
+    },
+    {
+      "t": 2020,
+      "value": 1.122734
+    },
+    {
+      "t": 2021,
+      "value": 1.009587
+    },
+    {
+      "t": 2022,
+      "value": 4.492741
+    },
+    {
+      "t": 2023,
+      "value": 4.060493
+    },
+    {
+      "t": 2024,
+      "value": 3.5769729999999997
+    },
+    {
+      "t": 2025,
+      "value": 3.5780429999999996
+    },
+    {
+      "t": 2026,
+      "value": 3.577844
+    }
+  ],
+  "provenance": {
+    "source": "pip",
+    "sourceIndicator": "pop_in_poverty @ $3.00/day (2021 PPP)",
+    "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+    "definition": "Number of people in extreme poverty (below $3.00/day, 2021 PPP), North America",
+    "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+    "primarySource": "World Bank — Poverty and Inequality Platform"
+  }
+}

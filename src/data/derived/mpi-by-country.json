@@ -1,0 +1,102 @@
+{
+  "chartId": "mpi-by-country",
+  "kind": "bars",
+  "title": "Multidimensional poverty — the most-deprived countries, recent surveys",
+  "unit": "Multidimensional Poverty Index (×100) — deprivation in health, schooling & living standards",
+  "bars": [
+    {
+      "label": "Chad",
+      "value": 51.7,
+      "color": "despair"
+    },
+    {
+      "label": "Niger",
+      "value": 47,
+      "color": "despair"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 36.7,
+      "color": "despair"
+    },
+    {
+      "label": "DR Congo",
+      "value": 33.1,
+      "color": "despair"
+    },
+    {
+      "label": "Pakistan",
+      "value": 19.8,
+      "color": "uncertain"
+    },
+    {
+      "label": "Nigeria",
+      "value": 17.5,
+      "color": "despair"
+    },
+    {
+      "label": "India",
+      "value": 6.9,
+      "color": "uncertain"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 6.7,
+      "color": "uncertain"
+    },
+    {
+      "label": "South Africa",
+      "value": 2.5,
+      "color": "despair"
+    },
+    {
+      "label": "Egypt",
+      "value": 2,
+      "color": "despair"
+    },
+    {
+      "label": "Colombia",
+      "value": 2,
+      "color": "ochre"
+    },
+    {
+      "label": "Philippines",
+      "value": 1.6,
+      "color": "uncertain"
+    },
+    {
+      "label": "China",
+      "value": 1.6,
+      "color": "uncertain"
+    },
+    {
+      "label": "Indonesia",
+      "value": 1.4,
+      "color": "uncertain"
+    }
+  ],
+  "xmax": 65,
+  "xTicks": [
+    0,
+    20,
+    40,
+    60
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "multidimensional-poverty-index-mpi",
+    "url": "https://ourworldindata.org/grapher/multidimensional-poverty-index-mpi",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "15a1848302aeae6d28f13f2ce9b87a625dded1fcf3f4db2f224979dce9b9ebe3",
+    "definition": "Global Multidimensional Poverty Index (national, current-margin estimate), latest available survey per country, ×100; a curated 14-country spread. MPI = headcount × average deprivation intensity across 10 indicators.",
+    "attribution": "OPHI & UNDP, via Our World in Data",
+    "primarySource": "Oxford Poverty & Human Development Initiative (OPHI) — Global MPI"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "MPI ×100, latest available survey per country, 14 curated countries sorted descending"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "indicatorId": "health.healthy_life_expectancy.emr",
+  "entity": "EMR",
+  "entityName": "Eastern Mediterranean (WHO)",
+  "unit": "years",
+  "points": [
+    {
+      "t": 2000,
+      "value": 56.68466286
+    },
+    {
+      "t": 2001,
+      "value": 56.85408061
+    },
+    {
+      "t": 2002,
+      "value": 57.0611548
+    },
+    {
+      "t": 2003,
+      "value": 57.11045706
+    },
+    {
+      "t": 2004,
+      "value": 57.42811054
+    },
+    {
+      "t": 2005,
+      "value": 57.48454732
+    },
+    {
+      "t": 2006,
+      "value": 57.86995238
+    },
+    {
+      "t": 2007,
+      "value": 58.13084838
+    },
+    {
+      "t": 2008,
+      "value": 58.43884588
+    },
+    {
+      "t": 2009,
+      "value": 58.69495249
+    },
+    {
+      "t": 2010,
+      "value": 58.8821682
+    },
+    {
+      "t": 2011,
+      "value": 58.92265226
+    },
+    {
+      "t": 2012,
+      "value": 59.08967658
+    },
+    {
+      "t": 2013,
+      "value": 59.42381297
+    },
+    {
+      "t": 2014,
+      "value": 59.43413991
+    },
+    {
+      "t": 2015,
+      "value": 59.53995225
+    },
+    {
+      "t": 2016,
+      "value": 59.76896537
+    },
+    {
+      "t": 2017,
+      "value": 59.98144121
+    },
+    {
+      "t": 2018,
+      "value": 60.23931049
+    },
+    {
+      "t": 2019,
+      "value": 60.52437172
+    },
+    {
+      "t": 2020,
+      "value": 59.45706643
+    },
+    {
+      "t": 2021,
+      "value": 59.03769239
+    }
+  ],
+  "provenance": {
+    "source": "who",
+    "sourceIndicator": "WHOSIS_000002",
+    "url": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/WHOSIS_000002",
+    "license": "CC BY-NC-SA 3.0 IGO",
+    "vintage": "2026-06-13",
+    "checksum": "0f92b6689f4dcd12adaa446ddf8e4e1c9a97dcf0f20099b3481cae0868a3dd7a",
+    "definition": "Healthy life expectancy at birth, Eastern Mediterranean",
+    "attribution": "WHO Global Health Observatory",
+    "primarySource": "WHO Global Health Observatory — Global Health Estimates",
+    "notes": "CC BY-NC-SA 3.0 IGO — link-only; charted but not re-hosted."
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity EMR"
+    }
+  ],
+  "derivedFrom": [
+    "EMR"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "demography-female_secondary_enrolment-world",
+  "title": "School enrollment, secondary, female (% gross)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/SE.SEC.ENRR.FE"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "demography-female_secondary_enrolment-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "demography_female_secondary_enrolment_world",
+            "type": "number",
+            "unit": "% gross enrolment"
+          }
+        ]
+      }
+    }
+  ]
+}

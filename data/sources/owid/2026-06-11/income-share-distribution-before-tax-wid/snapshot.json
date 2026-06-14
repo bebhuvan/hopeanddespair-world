@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "income-share-distribution-before-tax-wid",
+  "vintage": "2026-06-11",
+  "url": "https://ourworldindata.org/grapher/income-share-distribution-before-tax-wid",
+  "checksum": "e79d030566590c5c7b5e5603a485bacdef2cfd5a3139a9cb4b522556c5ba3503",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T11:44:59.691Z",
+  "adapterVersion": "1.0.0"
+}

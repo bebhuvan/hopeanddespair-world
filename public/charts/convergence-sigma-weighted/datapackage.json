@@ -1,0 +1,38 @@
+{
+  "name": "economy-convergence_sigma_weighted-world",
+  "title": "Population-weighted standard deviation of ln(GDP per capita, PPP) across 178 countries (one person = one unit)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators (ICP PPP & population)",
+      "path": "https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "economy-convergence_sigma_weighted-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "economy_convergence_sigma_weighted_world",
+            "type": "number",
+            "unit": "standard deviation of ln(GDP per capita)"
+          }
+        ]
+      }
+    }
+  ]
+}

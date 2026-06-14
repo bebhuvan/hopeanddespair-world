@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "climate.n2o.world",
+    "unit": "tonnes of CO₂ equivalents",
+    "points": 175
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "nitrous-oxide-emissions",
+      "url": "https://ourworldindata.org/grapher/nitrous-oxide-emissions",
+      "vintage": "2026-06-13",
+      "checksum": "9db7a7f8234deb74eab1b6213fc9ac2eb80168326e418511cbd2d6de9e7bb531",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Jones et al. (2025); Global Carbon Project — via Our World in Data"
+}

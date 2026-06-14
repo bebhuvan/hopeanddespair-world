@@ -1,0 +1,85 @@
+[
+  {
+    "indicatorId": "transport.ev_stock.europe",
+    "entity": "Europe",
+    "entityName": "Europe",
+    "unit": "Vehicles",
+    "points": [
+      {
+        "t": 2010,
+        "value": 29000
+      },
+      {
+        "t": 2011,
+        "value": 48000
+      },
+      {
+        "t": 2012,
+        "value": 76000
+      },
+      {
+        "t": 2013,
+        "value": 130000
+      },
+      {
+        "t": 2014,
+        "value": 220000
+      },
+      {
+        "t": 2015,
+        "value": 400000
+      },
+      {
+        "t": 2016,
+        "value": 600000
+      },
+      {
+        "t": 2017,
+        "value": 870000
+      },
+      {
+        "t": 2018,
+        "value": 1200000
+      },
+      {
+        "t": 2019,
+        "value": 1800000
+      },
+      {
+        "t": 2020,
+        "value": 3100000
+      },
+      {
+        "t": 2021,
+        "value": 5400000
+      },
+      {
+        "t": 2022,
+        "value": 7800000
+      },
+      {
+        "t": 2023,
+        "value": 11000000
+      },
+      {
+        "t": 2024,
+        "value": 13000000
+      },
+      {
+        "t": 2025,
+        "value": 17000000
+      }
+    ],
+    "provenance": {
+      "source": "iea",
+      "sourceIndicator": "EV stock · Cars · EV",
+      "url": "https://api.iea.org/evs?region=Europe&csv=true",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "5f193edf78f00f6e6a95204f343b4515e7ae1e87d6c8e29a7ad6b5d326d27e23",
+      "definition": "Electric cars on the road, Europe",
+      "attribution": "IEA — Global EV Data Explorer",
+      "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+    }
+  }
+]

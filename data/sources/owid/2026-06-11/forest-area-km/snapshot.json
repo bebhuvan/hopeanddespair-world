@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "forest-area-km",
+  "vintage": "2026-06-11",
+  "url": "https://ourworldindata.org/grapher/forest-area-km",
+  "checksum": "30ec5952c844e5c1ad3bf23314025295476e9462c3b527c213f7ca52b0235d1f",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T10:06:52.018Z",
+  "adapterVersion": "1.0.0"
+}

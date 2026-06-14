@@ -1,0 +1,9 @@
+{
+  "source": "worldbank",
+  "slug": "SH.DYN.MORT.Q5",
+  "vintage": "2026-06-13",
+  "url": "https://data.worldbank.org/indicator/SH.DYN.MORT.Q5",
+  "checksum": "17e0ee89169711e76c3491a63df249d0c667338fa4a01dfd1609dfb2b2335fe1",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T10:37:12.811Z"
+}

@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "science.openalex_country_indonesia_multiple.world",
+    "unit": "multiple of 2000 output",
+    "points": 25
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "derived_transform",
+        "detail": "divided Indonesia yearly country-attributed work count by its 2000 value"
+      }
+    ],
+    "agent": "adapter:openalex@openalex-story-1.0.0",
+    "used": {
+      "source": "openalex",
+      "slug": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:ID&group_by=publication_year",
+      "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:ID&group_by=publication_year&per-page=100",
+      "vintage": "2026-06-13",
+      "checksum": "e575cc6c75b45d213483443d3b852f7b70adadf8545c5e3582efd1ef946df268",
+      "license": "CC0 1.0"
+    }
+  },
+  "primarySource": "OpenAlex"
+}

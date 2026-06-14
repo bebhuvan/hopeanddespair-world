@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "annual-co2-emissions-per-country",
+  "vintage": "2026-06-11",
+  "url": "https://ourworldindata.org/grapher/annual-co2-emissions-per-country",
+  "checksum": "8de0ce0bb87ab85150d50add70abf467481ef4165f82720a8af1d8b0cb1791e9",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T10:06:49.193Z",
+  "adapterVersion": "1.0.0"
+}

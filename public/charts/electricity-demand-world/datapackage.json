@@ -1,0 +1,38 @@
+{
+  "name": "energy-electricity_demand-world",
+  "title": "Electricity demand, World",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ember — Yearly Electricity Data",
+      "path": "https://api.ember-energy.org/v1/electricity-generation/yearly?entity=World&start_date=2000"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "energy-electricity_demand-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "energy_electricity_demand_world",
+            "type": "number",
+            "unit": "terawatt-hours"
+          }
+        ]
+      }
+    }
+  ]
+}

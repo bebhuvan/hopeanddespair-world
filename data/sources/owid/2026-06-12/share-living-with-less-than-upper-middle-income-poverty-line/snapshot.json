@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "share-living-with-less-than-upper-middle-income-poverty-line",
+  "vintage": "2026-06-12",
+  "url": "https://ourworldindata.org/grapher/share-living-with-less-than-upper-middle-income-poverty-line",
+  "checksum": "158da4875a69a71080804c1ea87268877f354869488ad76d0f66a11a09a37ad5",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:43:30.897Z",
+  "adapterVersion": "1.0.0"
+}

@@ -1,0 +1,157 @@
+[
+  {
+    "indicatorId": "climate.ghg_sector_agriculture.world",
+    "entity": "OWID_WRL",
+    "entityName": "World",
+    "unit": "tonnes",
+    "points": [
+      {
+        "t": 1990,
+        "value": 5159209984
+      },
+      {
+        "t": 1991,
+        "value": 5139689984
+      },
+      {
+        "t": 1992,
+        "value": 5121809920
+      },
+      {
+        "t": 1993,
+        "value": 5090299904
+      },
+      {
+        "t": 1994,
+        "value": 5134859776
+      },
+      {
+        "t": 1995,
+        "value": 5187049984
+      },
+      {
+        "t": 1996,
+        "value": 5216009728
+      },
+      {
+        "t": 1997,
+        "value": 5141740032
+      },
+      {
+        "t": 1998,
+        "value": 5195939840
+      },
+      {
+        "t": 1999,
+        "value": 5253440000
+      },
+      {
+        "t": 2000,
+        "value": 5249690112
+      },
+      {
+        "t": 2001,
+        "value": 5253459968
+      },
+      {
+        "t": 2002,
+        "value": 5311220224
+      },
+      {
+        "t": 2003,
+        "value": 5307069952
+      },
+      {
+        "t": 2004,
+        "value": 5415859712
+      },
+      {
+        "t": 2005,
+        "value": 5453819904
+      },
+      {
+        "t": 2006,
+        "value": 5513439744
+      },
+      {
+        "t": 2007,
+        "value": 5590720000
+      },
+      {
+        "t": 2008,
+        "value": 5599879680
+      },
+      {
+        "t": 2009,
+        "value": 5597129728
+      },
+      {
+        "t": 2010,
+        "value": 5653960192
+      },
+      {
+        "t": 2011,
+        "value": 5782960128
+      },
+      {
+        "t": 2012,
+        "value": 5805020160
+      },
+      {
+        "t": 2013,
+        "value": 5749170176
+      },
+      {
+        "t": 2014,
+        "value": 5802990080
+      },
+      {
+        "t": 2015,
+        "value": 5824990208
+      },
+      {
+        "t": 2016,
+        "value": 5861970432
+      },
+      {
+        "t": 2017,
+        "value": 5945480192
+      },
+      {
+        "t": 2018,
+        "value": 5923689984
+      },
+      {
+        "t": 2019,
+        "value": 5914629632
+      },
+      {
+        "t": 2020,
+        "value": 6041129984
+      },
+      {
+        "t": 2021,
+        "value": 6093049856
+      },
+      {
+        "t": 2022,
+        "value": 6109929984
+      },
+      {
+        "t": 2023,
+        "value": 6241410048
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "agriculture_ghg_emissions",
+      "url": "https://ourworldindata.org/grapher/ghg-emissions-by-sector",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "6bd8581a73b3c5da14c09d12490ab53cd1ed159b559cf4299351b4e9b816d8fa",
+      "definition": "Emissions are measured in tonnes of carbon dioxide-equivalents.",
+      "attribution": "Our World in Data",
+      "primarySource": "Climate Watch (2026) — via Our World in Data"
+    }
+  }
+]

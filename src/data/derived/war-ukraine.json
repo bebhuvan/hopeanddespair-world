@@ -1,0 +1,44 @@
+{
+  "indicatorId": "violence.current_war.ukraine",
+  "entity": "Russia (Soviet Union), Ukraine",
+  "entityName": "Russia (Soviet Union), Ukraine",
+  "unit": "deaths",
+  "points": [
+    {
+      "t": 2022,
+      "value": 99473
+    },
+    {
+      "t": 2023,
+      "value": 76254
+    },
+    {
+      "t": 2024,
+      "value": 102120
+    },
+    {
+      "t": 2025,
+      "value": 94741
+    }
+  ],
+  "provenance": {
+    "source": "ucdp",
+    "sourceIndicator": "bd_best",
+    "url": "https://ucdp.uu.se/downloads/brd/ucdp-brd-conf-261-csv.zip",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "b34ecb57f1fc0e73d4bfd7b080212da429af3135a8d360b1c902e45506f81147",
+    "definition": "Best estimate of deaths in state-based armed conflict (combatants and civilians killed in the fighting).",
+    "attribution": "Uppsala Conflict Data Program (UCDP), Uppsala University",
+    "primarySource": "UCDP Battle-Related Deaths Dataset"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity Russia (Soviet Union), Ukraine"
+    }
+  ],
+  "derivedFrom": [
+    "Russia (Soviet Union), Ukraine"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "demography.pop_growth_rate.world",
+    "unit": "%",
+    "points": 74
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "population-growth-rates",
+      "url": "https://ourworldindata.org/grapher/population-growth-rates",
+      "vintage": "2026-06-13",
+      "checksum": "7f58990dca85475998be15d85e9f6eac7b513d17c00ba124580a079d4e8e2d08",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UN World Population Prospects (2024) — via Our World in Data"
+}

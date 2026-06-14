@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "technology.electricity_access.world",
+    "unit": "% of population",
+    "points": 26
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "share-of-the-population-with-access-to-electricity",
+      "url": "https://ourworldindata.org/grapher/share-of-the-population-with-access-to-electricity",
+      "vintage": "2026-06-12",
+      "checksum": "a46a927ebbf8e2d7d3f1e869f97d7e23ee402c5f622d274bdf86ee9fea53ec4b",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "World Bank — Sustainable Development Goals (SDG 7.1.1)"
+}

@@ -1,0 +1,317 @@
+[
+  {
+    "indicatorId": "demography.median_age.world",
+    "entity": "OWID_WRL",
+    "entityName": "World",
+    "unit": "years",
+    "points": [
+      {
+        "t": 1950,
+        "value": 22.159
+      },
+      {
+        "t": 1951,
+        "value": 22.123
+      },
+      {
+        "t": 1952,
+        "value": 22.074
+      },
+      {
+        "t": 1953,
+        "value": 22.011
+      },
+      {
+        "t": 1954,
+        "value": 21.937
+      },
+      {
+        "t": 1955,
+        "value": 21.839
+      },
+      {
+        "t": 1956,
+        "value": 21.744
+      },
+      {
+        "t": 1957,
+        "value": 21.639
+      },
+      {
+        "t": 1958,
+        "value": 21.531
+      },
+      {
+        "t": 1959,
+        "value": 21.471
+      },
+      {
+        "t": 1960,
+        "value": 21.455
+      },
+      {
+        "t": 1961,
+        "value": 21.444
+      },
+      {
+        "t": 1962,
+        "value": 21.369
+      },
+      {
+        "t": 1963,
+        "value": 21.201
+      },
+      {
+        "t": 1964,
+        "value": 21.004
+      },
+      {
+        "t": 1965,
+        "value": 20.811
+      },
+      {
+        "t": 1966,
+        "value": 20.626
+      },
+      {
+        "t": 1967,
+        "value": 20.481
+      },
+      {
+        "t": 1968,
+        "value": 20.393
+      },
+      {
+        "t": 1969,
+        "value": 20.333
+      },
+      {
+        "t": 1970,
+        "value": 20.308
+      },
+      {
+        "t": 1971,
+        "value": 20.32
+      },
+      {
+        "t": 1972,
+        "value": 20.363
+      },
+      {
+        "t": 1973,
+        "value": 20.433
+      },
+      {
+        "t": 1974,
+        "value": 20.532
+      },
+      {
+        "t": 1975,
+        "value": 20.659
+      },
+      {
+        "t": 1976,
+        "value": 20.804
+      },
+      {
+        "t": 1977,
+        "value": 20.967
+      },
+      {
+        "t": 1978,
+        "value": 21.132
+      },
+      {
+        "t": 1979,
+        "value": 21.295
+      },
+      {
+        "t": 1980,
+        "value": 21.452
+      },
+      {
+        "t": 1981,
+        "value": 21.589
+      },
+      {
+        "t": 1982,
+        "value": 21.691
+      },
+      {
+        "t": 1983,
+        "value": 21.78
+      },
+      {
+        "t": 1984,
+        "value": 21.874
+      },
+      {
+        "t": 1985,
+        "value": 22.005
+      },
+      {
+        "t": 1986,
+        "value": 22.193
+      },
+      {
+        "t": 1987,
+        "value": 22.388
+      },
+      {
+        "t": 1988,
+        "value": 22.575
+      },
+      {
+        "t": 1989,
+        "value": 22.751
+      },
+      {
+        "t": 1990,
+        "value": 22.923
+      },
+      {
+        "t": 1991,
+        "value": 23.1
+      },
+      {
+        "t": 1992,
+        "value": 23.301
+      },
+      {
+        "t": 1993,
+        "value": 23.52
+      },
+      {
+        "t": 1994,
+        "value": 23.75
+      },
+      {
+        "t": 1995,
+        "value": 23.98
+      },
+      {
+        "t": 1996,
+        "value": 24.209
+      },
+      {
+        "t": 1997,
+        "value": 24.438
+      },
+      {
+        "t": 1998,
+        "value": 24.673
+      },
+      {
+        "t": 1999,
+        "value": 24.907
+      },
+      {
+        "t": 2000,
+        "value": 25.131
+      },
+      {
+        "t": 2001,
+        "value": 25.34
+      },
+      {
+        "t": 2002,
+        "value": 25.541
+      },
+      {
+        "t": 2003,
+        "value": 25.737
+      },
+      {
+        "t": 2004,
+        "value": 25.931
+      },
+      {
+        "t": 2005,
+        "value": 26.123
+      },
+      {
+        "t": 2006,
+        "value": 26.323
+      },
+      {
+        "t": 2007,
+        "value": 26.533
+      },
+      {
+        "t": 2008,
+        "value": 26.744
+      },
+      {
+        "t": 2009,
+        "value": 26.953
+      },
+      {
+        "t": 2010,
+        "value": 27.171
+      },
+      {
+        "t": 2011,
+        "value": 27.392
+      },
+      {
+        "t": 2012,
+        "value": 27.611
+      },
+      {
+        "t": 2013,
+        "value": 27.83
+      },
+      {
+        "t": 2014,
+        "value": 28.058
+      },
+      {
+        "t": 2015,
+        "value": 28.296
+      },
+      {
+        "t": 2016,
+        "value": 28.54
+      },
+      {
+        "t": 2017,
+        "value": 28.786
+      },
+      {
+        "t": 2018,
+        "value": 29.041
+      },
+      {
+        "t": 2019,
+        "value": 29.305
+      },
+      {
+        "t": 2020,
+        "value": 29.575
+      },
+      {
+        "t": 2021,
+        "value": 29.833
+      },
+      {
+        "t": 2022,
+        "value": 30.093
+      },
+      {
+        "t": 2023,
+        "value": 30.364
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "median_age__sex_all__age_all__variant_estimates",
+      "url": "https://ourworldindata.org/grapher/median-age",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "9d8f0ad39ed406efea85c9fdf7d1e2f49fd73d4e0eb1ddf6f01b011912cdfe43",
+      "definition": "The age that divides the population into two halves of equal size — half are younger and half are older.",
+      "attribution": "Our World in Data",
+      "primarySource": "UN World Population Prospects (2024) — via Our World in Data"
+    }
+  }
+]

@@ -1,0 +1,324 @@
+{
+  "indicatorId": "climate.glaciers.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "metres water equivalent",
+  "points": [
+    {
+      "t": 1950,
+      "value": 5.384
+    },
+    {
+      "t": 1951,
+      "value": 5.039
+    },
+    {
+      "t": 1952,
+      "value": 4.479
+    },
+    {
+      "t": 1953,
+      "value": 3.917
+    },
+    {
+      "t": 1954,
+      "value": 3.497
+    },
+    {
+      "t": 1955,
+      "value": 3.87
+    },
+    {
+      "t": 1956,
+      "value": 3.709
+    },
+    {
+      "t": 1957,
+      "value": 3.616
+    },
+    {
+      "t": 1958,
+      "value": 2.747
+    },
+    {
+      "t": 1959,
+      "value": 2.28
+    },
+    {
+      "t": 1960,
+      "value": 1.703
+    },
+    {
+      "t": 1961,
+      "value": 1.267
+    },
+    {
+      "t": 1962,
+      "value": 1.064
+    },
+    {
+      "t": 1963,
+      "value": 0.712
+    },
+    {
+      "t": 1964,
+      "value": 1.031
+    },
+    {
+      "t": 1965,
+      "value": 1.189
+    },
+    {
+      "t": 1966,
+      "value": 0.964
+    },
+    {
+      "t": 1967,
+      "value": 0.845
+    },
+    {
+      "t": 1968,
+      "value": 0.775
+    },
+    {
+      "t": 1969,
+      "value": 0.287
+    },
+    {
+      "t": 1970,
+      "value": 0
+    },
+    {
+      "t": 1971,
+      "value": -0.231
+    },
+    {
+      "t": 1972,
+      "value": -0.51
+    },
+    {
+      "t": 1973,
+      "value": -0.686
+    },
+    {
+      "t": 1974,
+      "value": -0.873
+    },
+    {
+      "t": 1975,
+      "value": -1.098
+    },
+    {
+      "t": 1976,
+      "value": -1.28
+    },
+    {
+      "t": 1977,
+      "value": -1.536
+    },
+    {
+      "t": 1978,
+      "value": -1.724
+    },
+    {
+      "t": 1979,
+      "value": -2.14
+    },
+    {
+      "t": 1980,
+      "value": -2.263
+    },
+    {
+      "t": 1981,
+      "value": -2.454
+    },
+    {
+      "t": 1982,
+      "value": -2.941
+    },
+    {
+      "t": 1983,
+      "value": -2.813
+    },
+    {
+      "t": 1984,
+      "value": -3.072
+    },
+    {
+      "t": 1985,
+      "value": -3.379
+    },
+    {
+      "t": 1986,
+      "value": -3.86
+    },
+    {
+      "t": 1987,
+      "value": -3.763
+    },
+    {
+      "t": 1988,
+      "value": -3.837
+    },
+    {
+      "t": 1989,
+      "value": -4.066
+    },
+    {
+      "t": 1990,
+      "value": -4.55
+    },
+    {
+      "t": 1991,
+      "value": -5.053
+    },
+    {
+      "t": 1992,
+      "value": -5.169
+    },
+    {
+      "t": 1993,
+      "value": -5.301
+    },
+    {
+      "t": 1994,
+      "value": -5.832
+    },
+    {
+      "t": 1995,
+      "value": -6.291
+    },
+    {
+      "t": 1996,
+      "value": -6.763
+    },
+    {
+      "t": 1997,
+      "value": -7.403
+    },
+    {
+      "t": 1998,
+      "value": -8.125
+    },
+    {
+      "t": 1999,
+      "value": -8.823
+    },
+    {
+      "t": 2000,
+      "value": -9.182
+    },
+    {
+      "t": 2001,
+      "value": -9.452
+    },
+    {
+      "t": 2002,
+      "value": -9.88
+    },
+    {
+      "t": 2003,
+      "value": -10.404
+    },
+    {
+      "t": 2004,
+      "value": -11.136
+    },
+    {
+      "t": 2005,
+      "value": -11.952
+    },
+    {
+      "t": 2006,
+      "value": -12.666
+    },
+    {
+      "t": 2007,
+      "value": -13.206
+    },
+    {
+      "t": 2008,
+      "value": -13.58
+    },
+    {
+      "t": 2009,
+      "value": -14.032
+    },
+    {
+      "t": 2010,
+      "value": -14.904
+    },
+    {
+      "t": 2011,
+      "value": -15.652
+    },
+    {
+      "t": 2012,
+      "value": -16.374
+    },
+    {
+      "t": 2013,
+      "value": -17.091
+    },
+    {
+      "t": 2014,
+      "value": -17.8
+    },
+    {
+      "t": 2015,
+      "value": -18.605
+    },
+    {
+      "t": 2016,
+      "value": -19.592
+    },
+    {
+      "t": 2017,
+      "value": -20.258
+    },
+    {
+      "t": 2018,
+      "value": -21.194
+    },
+    {
+      "t": 2019,
+      "value": -22.187
+    },
+    {
+      "t": 2020,
+      "value": -23.07
+    },
+    {
+      "t": 2021,
+      "value": -23.746
+    },
+    {
+      "t": 2022,
+      "value": -24.761
+    },
+    {
+      "t": 2023,
+      "value": -25.979
+    },
+    {
+      "t": 2024,
+      "value": -27.018
+    },
+    {
+      "t": 2025,
+      "value": -28.109
+    }
+  ],
+  "provenance": {
+    "source": "wgms",
+    "sourceIndicator": "REF_regionAVG_cum-rel-1970",
+    "url": "https://wgms.ch/",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "24d8c4922199360102c616eac565f2aa9beccc93dfbbeed0877526c9c76e14e7",
+    "definition": "Glacier mass balance (reference glaciers), World",
+    "attribution": "World Glacier Monitoring Service (WGMS)",
+    "primarySource": "World Glacier Monitoring Service (WGMS)",
+    "notes": "Cumulative mean mass balance of the global reference glaciers, metres water equivalent, relative to 1970."
+  }
+}

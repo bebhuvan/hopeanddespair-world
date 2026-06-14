@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "SP.URB.TOTL.IN.ZS",
+  "vintage": "2026-06-11",
+  "url": "https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS",
+  "checksum": "be4c65d160267c98d5312caaa96039d753293c27c5c312816a7342aa20467c1a",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T14:38:12.755Z",
+  "adapterVersion": "1.0.0"
+}

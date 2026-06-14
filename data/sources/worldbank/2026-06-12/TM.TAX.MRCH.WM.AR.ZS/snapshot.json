@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "TM.TAX.MRCH.WM.AR.ZS",
+  "vintage": "2026-06-12",
+  "url": "https://data.worldbank.org/indicator/TM.TAX.MRCH.WM.AR.ZS",
+  "checksum": "ea254d363f3ea691877f4c94c788ffb783ff92c8ca08a3fb73f08618685c5d60",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:44:30.320Z",
+  "adapterVersion": "1.0.0"
+}

@@ -47,9 +47,11 @@ voice and the thesis in one word. (Spirit-of-Smart-Brevity, but our own structur
 
 ## Article anatomy (one question → many sub-questions)
 
-The article *is* a question; each chart is a sub-question. Top to bottom — reconciling the
-user's "zoom from macro → regional → granular" narrative with the apparatus already built in
-`article-v3.html`:
+The article *is* a question; each chart is a sub-question. There is no target length: a piece
+takes as many movements as the question demands ([[NORTH_STAR.md]] · creed 7), and what is not
+yet charted is logged in the article's gap register, never silently skipped. Top to bottom —
+reconciling the user's "zoom from macro → regional → granular" narrative with the apparatus
+already built in `article-v3.html`:
 
 1. **Opener** — kicker, the question as headline, a lede that frames the puzzle (no answer
    yet).

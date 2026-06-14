@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "transport.ev_sales_share.iceland",
+    "unit": "percent",
+    "points": 14
+  },
+  "wasDerivedFrom": [
+    "Iceland"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Iceland"
+      }
+    ],
+    "agent": "adapter:iea@1.0.0",
+    "used": {
+      "source": "iea",
+      "slug": "evs",
+      "url": "https://api.iea.org/evs?region=Iceland&csv=true",
+      "vintage": "2026-06-13",
+      "checksum": "851ea091b9f5c326d509a580b71f14ff8cabbfda9ab97aac5cbbfc1532132e7d",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+}

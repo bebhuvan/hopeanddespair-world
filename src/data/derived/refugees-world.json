@@ -1,0 +1,498 @@
+{
+  "indicatorId": "violence.refugees.world",
+  "entity": "OWID_WRL",
+  "entityName": "World (sum of countries)",
+  "unit": "people",
+  "points": [
+    {
+      "t": 1960,
+      "value": 150000
+    },
+    {
+      "t": 1961,
+      "value": 302000
+    },
+    {
+      "t": 1962,
+      "value": 322000
+    },
+    {
+      "t": 1963,
+      "value": 353000
+    },
+    {
+      "t": 1964,
+      "value": 1700690
+    },
+    {
+      "t": 1965,
+      "value": 1950280
+    },
+    {
+      "t": 1966,
+      "value": 2106230
+    },
+    {
+      "t": 1967,
+      "value": 953900
+    },
+    {
+      "t": 1968,
+      "value": 1097220
+    },
+    {
+      "t": 1969,
+      "value": 1069810
+    },
+    {
+      "t": 1970,
+      "value": 1107290
+    },
+    {
+      "t": 1971,
+      "value": 1168800
+    },
+    {
+      "t": 1972,
+      "value": 1241720
+    },
+    {
+      "t": 1973,
+      "value": 1029750
+    },
+    {
+      "t": 1974,
+      "value": 1103330
+    },
+    {
+      "t": 1975,
+      "value": 1600010
+    },
+    {
+      "t": 1976,
+      "value": 1789270
+    },
+    {
+      "t": 1977,
+      "value": 2330585
+    },
+    {
+      "t": 1978,
+      "value": 3190760
+    },
+    {
+      "t": 1979,
+      "value": 4357560
+    },
+    {
+      "t": 1980,
+      "value": 6841149
+    },
+    {
+      "t": 1981,
+      "value": 8024548
+    },
+    {
+      "t": 1982,
+      "value": 8586816
+    },
+    {
+      "t": 1983,
+      "value": 8752423
+    },
+    {
+      "t": 1984,
+      "value": 9046128
+    },
+    {
+      "t": 1985,
+      "value": 9920200
+    },
+    {
+      "t": 1986,
+      "value": 10121909
+    },
+    {
+      "t": 1987,
+      "value": 10779142
+    },
+    {
+      "t": 1988,
+      "value": 11971305
+    },
+    {
+      "t": 1989,
+      "value": 12166810
+    },
+    {
+      "t": 1990,
+      "value": 14769941
+    },
+    {
+      "t": 1991,
+      "value": 14504416
+    },
+    {
+      "t": 1992,
+      "value": 14575432
+    },
+    {
+      "t": 1993,
+      "value": 13978289
+    },
+    {
+      "t": 1994,
+      "value": 13846234
+    },
+    {
+      "t": 1995,
+      "value": 12597159
+    },
+    {
+      "t": 1996,
+      "value": 11796356
+    },
+    {
+      "t": 1997,
+      "value": 10798692
+    },
+    {
+      "t": 1998,
+      "value": 10266191
+    },
+    {
+      "t": 1999,
+      "value": 10244574
+    },
+    {
+      "t": 2000,
+      "value": 10835562
+    },
+    {
+      "t": 2001,
+      "value": 10844654
+    },
+    {
+      "t": 2002,
+      "value": 9941068
+    },
+    {
+      "t": 2003,
+      "value": 8941598
+    },
+    {
+      "t": 2004,
+      "value": 8950588
+    },
+    {
+      "t": 2005,
+      "value": 8251618
+    },
+    {
+      "t": 2006,
+      "value": 9424467
+    },
+    {
+      "t": 2007,
+      "value": 10997020
+    },
+    {
+      "t": 2008,
+      "value": 10078044
+    },
+    {
+      "t": 2009,
+      "value": 9977456
+    },
+    {
+      "t": 2010,
+      "value": 10166436
+    },
+    {
+      "t": 2011,
+      "value": 10063988
+    },
+    {
+      "t": 2012,
+      "value": 10170625
+    },
+    {
+      "t": 2013,
+      "value": 11507042
+    },
+    {
+      "t": 2014,
+      "value": 14194448
+    },
+    {
+      "t": 2015,
+      "value": 15899050
+    },
+    {
+      "t": 2016,
+      "value": 16946348
+    },
+    {
+      "t": 2017,
+      "value": 19638247
+    },
+    {
+      "t": 2018,
+      "value": 20041353
+    },
+    {
+      "t": 2019,
+      "value": 20118962
+    },
+    {
+      "t": 2020,
+      "value": 20381512
+    },
+    {
+      "t": 2021,
+      "value": 20822349
+    },
+    {
+      "t": 2022,
+      "value": 29231257
+    },
+    {
+      "t": 2023,
+      "value": 31363566
+    },
+    {
+      "t": 2024,
+      "value": 30685940
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "refugees",
+    "url": "https://ourworldindata.org/grapher/refugee-population-by-country-or-territory-of-origin",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "dbfa5f2e8af547d769b5add7e79b211b0680426d5c3c1d571f4abf849867a20d",
+    "definition": "Refugees by country of origin, World — summed across 211 countries per year",
+    "attribution": "Our World in Data",
+    "primarySource": "UNHCR Refugee Data Finder"
+  },
+  "derivedFrom": [
+    "AFG",
+    "ALB",
+    "DZA",
+    "AND",
+    "AGO",
+    "AIA",
+    "ATG",
+    "ARG",
+    "ARM",
+    "ABW",
+    "AUS",
+    "AUT",
+    "AZE",
+    "BHS",
+    "BHR",
+    "BGD",
+    "BRB",
+    "BLR",
+    "BEL",
+    "BLZ",
+    "BEN",
+    "BMU",
+    "BTN",
+    "BOL",
+    "BIH",
+    "BWA",
+    "BRA",
+    "VGB",
+    "BRN",
+    "BGR",
+    "BFA",
+    "BDI",
+    "KHM",
+    "CMR",
+    "CAN",
+    "CPV",
+    "CYM",
+    "CAF",
+    "TCD",
+    "CHL",
+    "CHN",
+    "COL",
+    "COM",
+    "COG",
+    "CRI",
+    "CIV",
+    "HRV",
+    "CUB",
+    "CUW",
+    "CYP",
+    "CZE",
+    "COD",
+    "DNK",
+    "DJI",
+    "DMA",
+    "DOM",
+    "TLS",
+    "ECU",
+    "EGY",
+    "SLV",
+    "GNQ",
+    "ERI",
+    "EST",
+    "SWZ",
+    "ETH",
+    "FJI",
+    "FIN",
+    "FRA",
+    "GUF",
+    "GAB",
+    "GMB",
+    "GEO",
+    "DEU",
+    "GHA",
+    "GIB",
+    "GRC",
+    "GRD",
+    "GLP",
+    "GTM",
+    "GIN",
+    "GNB",
+    "GUY",
+    "HTI",
+    "HND",
+    "HKG",
+    "HUN",
+    "ISL",
+    "IND",
+    "IDN",
+    "IRN",
+    "IRQ",
+    "IRL",
+    "ISR",
+    "ITA",
+    "JAM",
+    "JPN",
+    "JOR",
+    "KAZ",
+    "KEN",
+    "KIR",
+    "KWT",
+    "KGZ",
+    "LAO",
+    "LVA",
+    "LBN",
+    "LSO",
+    "LBR",
+    "LBY",
+    "LIE",
+    "LTU",
+    "LUX",
+    "MAC",
+    "MDG",
+    "MWI",
+    "MYS",
+    "MDV",
+    "MLI",
+    "MLT",
+    "MHL",
+    "MTQ",
+    "MRT",
+    "MUS",
+    "MEX",
+    "FSM",
+    "MDA",
+    "MCO",
+    "MNG",
+    "MNE",
+    "MAR",
+    "MOZ",
+    "MMR",
+    "NAM",
+    "NRU",
+    "NPL",
+    "NLD",
+    "NCL",
+    "NZL",
+    "NIC",
+    "NER",
+    "NGA",
+    "NIU",
+    "PRK",
+    "MKD",
+    "NOR",
+    "OMN",
+    "PAK",
+    "PLW",
+    "PSE",
+    "PAN",
+    "PNG",
+    "PRY",
+    "PER",
+    "PHL",
+    "POL",
+    "PRT",
+    "PRI",
+    "QAT",
+    "ROU",
+    "RUS",
+    "RWA",
+    "KNA",
+    "LCA",
+    "VCT",
+    "WSM",
+    "SMR",
+    "STP",
+    "SAU",
+    "SEN",
+    "SYC",
+    "SLE",
+    "SGP",
+    "SVK",
+    "SVN",
+    "SLB",
+    "SOM",
+    "ZAF",
+    "KOR",
+    "SSD",
+    "ESP",
+    "LKA",
+    "SDN",
+    "SUR",
+    "SWE",
+    "CHE",
+    "SYR",
+    "TJK",
+    "TZA",
+    "THA",
+    "TGO",
+    "TON",
+    "TTO",
+    "TUN",
+    "TUR",
+    "TKM",
+    "TCA",
+    "TUV",
+    "UGA",
+    "UKR",
+    "ARE",
+    "GBR",
+    "USA",
+    "URY",
+    "UZB",
+    "VUT",
+    "VAT",
+    "VEN",
+    "VNM",
+    "ESH",
+    "YEM",
+    "ZMB",
+    "ZWE"
+  ],
+  "recipe": [
+    {
+      "op": "sum_across_entities",
+      "detail": "sum over 211 ISO3 countries of origin, by year"
+    }
+  ]
+}

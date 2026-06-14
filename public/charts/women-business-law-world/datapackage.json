@@ -1,0 +1,38 @@
+{
+  "name": "rights-women_business_law-world",
+  "title": "The index measures how laws and regulations affect women’s economic opportunity on a scale from 0 to 100, where 100 means equal legal rights for men and women. It is the average score of eight categories: mobility, workplace, pay, marriage, parenthood, entrepreneurship, assets, and pension.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/women-business-and-the-law-index"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "rights-women_business_law-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "rights_women_business_law_world",
+            "type": "number",
+            "unit": "index (0–100)"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+[
+  {
+    "indicatorId": "health.cause_ncd_wb.mea",
+    "entity": "MEA",
+    "entityName": "Middle East, North Africa, Afghanistan & Pakistan",
+    "unit": "% of total deaths",
+    "points": [
+      {
+        "t": 2000,
+        "value": 52.3340737323072
+      },
+      {
+        "t": 2010,
+        "value": 59.6521279683516
+      },
+      {
+        "t": 2015,
+        "value": 62.4348797269739
+      },
+      {
+        "t": 2019,
+        "value": 67.0542953226241
+      },
+      {
+        "t": 2020,
+        "value": 60.0572561733213
+      },
+      {
+        "t": 2021,
+        "value": 56.7873681475238
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SH.DTH.NCOM.ZS",
+      "url": "https://data.worldbank.org/indicator/SH.DTH.NCOM.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "ec1d0a86a0932219587c2658804ee6875d4e6ea77ac1acd7dfe7cb9fdbaaa5d4",
+      "definition": "Cause of death, by non-communicable diseases (% of total)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "WHO Global Health Estimates, via World Bank"
+    }
+  }
+]

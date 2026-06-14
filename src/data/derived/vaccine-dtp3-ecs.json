@@ -1,0 +1,160 @@
+{
+  "indicatorId": "health.vaccine_dtp3_wb.ecs",
+  "entity": "ECS",
+  "entityName": "Europe & Central Asia",
+  "unit": "% of children 12–23 months",
+  "points": [
+    {
+      "t": 1992,
+      "value": 84.6666028538988
+    },
+    {
+      "t": 1993,
+      "value": 80.7411976731653
+    },
+    {
+      "t": 1994,
+      "value": 87.6866238505395
+    },
+    {
+      "t": 1995,
+      "value": 86.5692366102681
+    },
+    {
+      "t": 1996,
+      "value": 89.0272175175644
+    },
+    {
+      "t": 1997,
+      "value": 90.8536099681535
+    },
+    {
+      "t": 1998,
+      "value": 91.6570818729993
+    },
+    {
+      "t": 1999,
+      "value": 92.9186574608232
+    },
+    {
+      "t": 2000,
+      "value": 92.9194691665217
+    },
+    {
+      "t": 2001,
+      "value": 94.0069450426181
+    },
+    {
+      "t": 2002,
+      "value": 92.9132926385535
+    },
+    {
+      "t": 2003,
+      "value": 91.3175609574411
+    },
+    {
+      "t": 2004,
+      "value": 93.9385606121698
+    },
+    {
+      "t": 2005,
+      "value": 95.0111127443644
+    },
+    {
+      "t": 2006,
+      "value": 95.187264580376
+    },
+    {
+      "t": 2007,
+      "value": 95.8547510464808
+    },
+    {
+      "t": 2008,
+      "value": 95.8195350011126
+    },
+    {
+      "t": 2009,
+      "value": 94.9610813170174
+    },
+    {
+      "t": 2010,
+      "value": 94.3664049289252
+    },
+    {
+      "t": 2011,
+      "value": 94.3686758574581
+    },
+    {
+      "t": 2012,
+      "value": 95.5592955033296
+    },
+    {
+      "t": 2013,
+      "value": 94.7792671581658
+    },
+    {
+      "t": 2014,
+      "value": 92.1588838472592
+    },
+    {
+      "t": 2015,
+      "value": 92.6336009508084
+    },
+    {
+      "t": 2016,
+      "value": 91.9395262844719
+    },
+    {
+      "t": 2017,
+      "value": 93.3486151444049
+    },
+    {
+      "t": 2018,
+      "value": 94.3187608325538
+    },
+    {
+      "t": 2019,
+      "value": 94.8166246513518
+    },
+    {
+      "t": 2020,
+      "value": 93.6434439345644
+    },
+    {
+      "t": 2021,
+      "value": 93.538984939432
+    },
+    {
+      "t": 2022,
+      "value": 93.9853834689365
+    },
+    {
+      "t": 2023,
+      "value": 94.0927376985743
+    },
+    {
+      "t": 2024,
+      "value": 93.2567774834318
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SH.IMM.IDPT",
+    "url": "https://data.worldbank.org/indicator/SH.IMM.IDPT",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "48c46f43a9d1fc8a047259a5770fe86b9487ebdd55d31f90fb14927a9d2062f5",
+    "definition": "Immunization, DPT (% of children ages 12-23 months)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO/UNICEF, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity ECS"
+    }
+  ],
+  "derivedFrom": [
+    "ECS"
+  ]
+}

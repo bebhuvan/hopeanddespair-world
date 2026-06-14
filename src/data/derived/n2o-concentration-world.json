@@ -1,0 +1,120 @@
+{
+  "indicatorId": "climate.n2o_concentration.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "parts per billion",
+  "points": [
+    {
+      "t": 2001,
+      "value": 316.36
+    },
+    {
+      "t": 2002,
+      "value": 316.94
+    },
+    {
+      "t": 2003,
+      "value": 317.63
+    },
+    {
+      "t": 2004,
+      "value": 318.25
+    },
+    {
+      "t": 2005,
+      "value": 318.91
+    },
+    {
+      "t": 2006,
+      "value": 319.82
+    },
+    {
+      "t": 2007,
+      "value": 320.44
+    },
+    {
+      "t": 2008,
+      "value": 321.5
+    },
+    {
+      "t": 2009,
+      "value": 322.27
+    },
+    {
+      "t": 2010,
+      "value": 323.18
+    },
+    {
+      "t": 2011,
+      "value": 324.21
+    },
+    {
+      "t": 2012,
+      "value": 325.05
+    },
+    {
+      "t": 2013,
+      "value": 325.94
+    },
+    {
+      "t": 2014,
+      "value": 327.09
+    },
+    {
+      "t": 2015,
+      "value": 328.17
+    },
+    {
+      "t": 2016,
+      "value": 328.95
+    },
+    {
+      "t": 2017,
+      "value": 329.74
+    },
+    {
+      "t": 2018,
+      "value": 330.9
+    },
+    {
+      "t": 2019,
+      "value": 331.88
+    },
+    {
+      "t": 2020,
+      "value": 333.01
+    },
+    {
+      "t": 2021,
+      "value": 334.27
+    },
+    {
+      "t": 2022,
+      "value": 335.62
+    },
+    {
+      "t": 2023,
+      "value": 336.68
+    },
+    {
+      "t": 2024,
+      "value": 337.71
+    },
+    {
+      "t": 2025,
+      "value": 338.86
+    }
+  ],
+  "provenance": {
+    "source": "noaagml",
+    "sourceIndicator": "n2o_annmean_gl",
+    "url": "https://gml.noaa.gov/webdata/ccgg/trends/n2o/n2o_annmean_gl.txt",
+    "license": "Public Domain (NOAA GML)",
+    "vintage": "2026-06-13",
+    "checksum": "77757b8ace75cf12756ee0ccf177f34272052ae7d57b8a9c919541ea3ec5df14",
+    "definition": "Atmospheric nitrous oxide concentration, World",
+    "attribution": "NOAA Global Monitoring Laboratory",
+    "primarySource": "NOAA Global Monitoring Laboratory",
+    "notes": "Globally-averaged annual mean dry-air mole fraction; a well-mixed gas, so one global number."
+  }
+}

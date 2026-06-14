@@ -1,0 +1,84 @@
+{
+  "chartId": "literacy-by-country",
+  "kind": "bars",
+  "title": "Adult literacy by country",
+  "unit": "Adults able to read and write, %",
+  "yearSpan": "2017–2023",
+  "bars": [
+    {
+      "label": "China",
+      "value": 97,
+      "color": "hope"
+    },
+    {
+      "label": "Brazil",
+      "value": 93,
+      "color": "hope"
+    },
+    {
+      "label": "South Africa",
+      "value": 90,
+      "color": "hope"
+    },
+    {
+      "label": "India",
+      "value": 82,
+      "color": "hope"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 79,
+      "color": "hope"
+    },
+    {
+      "label": "Egypt",
+      "value": 71,
+      "color": "ochre"
+    },
+    {
+      "label": "Nigeria",
+      "value": 63.2,
+      "color": "ochre"
+    },
+    {
+      "label": "Niger",
+      "value": 35.6,
+      "color": "despair"
+    },
+    {
+      "label": "Mali",
+      "value": 35,
+      "color": "despair"
+    },
+    {
+      "label": "Chad",
+      "value": 30.6,
+      "color": "despair"
+    }
+  ],
+  "xmax": 100,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "cross-country-literacy-rates",
+    "url": "https://ourworldindata.org/grapher/cross-country-literacy-rates",
+    "license": "CC BY 4.0",
+    "vintage": "2017–2023",
+    "checksum": "d245525cb64325a86b640351a2fe8edcbec75a4508a823c799cbc95eeae2a88b",
+    "definition": "Adult literacy rate (share of people 15+ who can read and write), latest year per country. A curated 10-country spread sorted descending.",
+    "attribution": "UNESCO, via Our World in Data",
+    "primarySource": "UNESCO Institute for Statistics"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 10 curated countries sorted descending"
+    }
+  ]
+}

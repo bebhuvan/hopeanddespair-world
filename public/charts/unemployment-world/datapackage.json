@@ -1,0 +1,38 @@
+{
+  "name": "work-unemployment-world",
+  "title": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "work-unemployment-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "work_unemployment_world",
+            "type": "number",
+            "unit": "% of total labor force"
+          }
+        ]
+      }
+    }
+  ]
+}

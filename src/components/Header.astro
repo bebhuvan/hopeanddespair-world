@@ -1,47 +1,48 @@
 ---
 const nav = [
-  { href: '/', label: 'Atlas' },
+  { href: '/', label: 'The Atlas' },
   { href: '/methodology', label: 'Method' },
   { href: '/sources', label: 'Sources' },
-  { href: '/search', label: 'Search' },
+  { href: '/about', label: 'About' },
 ];
 ---
-<header class="masthead reveal">
-  <a class="wordmark" href="/"><span class="glyph">◐</span> Hope &amp; Despair</a>
-  <nav>
-    {nav.map((n) => <a href={n.href}>{n.label}</a>)}
-    <button class="toggle" id="themeToggle" type="button">Dark</button>
-  </nav>
+<header class="site">
+  <div class="bar">
+    <a class="word" href="/">
+      <svg class="mark" viewBox="0 0 16 16" aria-hidden="true">
+        <!-- the thesis as a mark: one coin, two readings — hope and despair, ringed into one -->
+        <path d="M8 1.6 a6.4 6.4 0 0 0 0 12.8 z" fill="var(--hope)" />
+        <path d="M8 1.6 a6.4 6.4 0 0 1 0 12.8 z" fill="var(--despair)" />
+        <line x1="8" y1="1.2" x2="8" y2="14.8" stroke="var(--bg)" stroke-width="0.8" />
+        <circle cx="8" cy="8" r="6.4" fill="none" stroke="var(--ink)" stroke-width="0.9" />
+      </svg>
+      <span class="wm">Hope <span class="amp">&amp;</span> Despair</span>
+    </a>
+    <nav>{nav.map((n) => <a href={n.href}>{n.label}</a>)}</nav>
+  </div>
 </header>
 
 <style>
-  .masthead {
+  .site {
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar {
     display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
-    padding-block: 1.4rem; border-bottom: 1px solid var(--rule);
+    height: 66px; max-width: calc(var(--col) + var(--gutter));
+    margin-inline: auto; padding-inline: var(--margin);
   }
-  .wordmark {
-    font-family: var(--font-label); font-weight: 600; font-size: 0.82rem; letter-spacing: 0.16em;
-    text-transform: uppercase; display: flex; align-items: center; gap: 0.55em; text-decoration: none;
-  }
-  .wordmark .glyph {
-    font-size: 1.1rem; letter-spacing: 0; color: var(--accent); display: inline-block;
-    transition: transform 0.7s cubic-bezier(0.5, 0, 0.2, 1);
-  }
-  .wordmark:hover .glyph { transform: rotate(180deg); }
-  nav { display: flex; gap: 1.6rem; align-items: center; }
-  nav a, .toggle {
-    font-family: var(--font-label); font-weight: 500; font-size: 0.74rem; letter-spacing: 0.04em;
-    color: var(--fg-muted); text-decoration: none; background: none; border: 0; cursor: pointer;
-    transition: color 0.2s; position: relative;
-  }
-  nav a:hover, .toggle:hover { color: var(--fg); }
+  .word { display: inline-flex; align-items: center; gap: 0.62rem; }
+  .word .mark { width: 1.04rem; height: 1.04rem; display: block; flex: none; }
+  .wm { font-family: var(--display); font-weight: 540; font-size: 1.1rem; letter-spacing: -0.018em; color: var(--ink); }
+  .amp { font-family: var(--serif); font-style: italic; font-weight: 440; color: var(--hope); margin-inline: 0.06em; }
+  nav { display: flex; gap: 1.9rem; font-family: var(--serif); font-size: 1rem; color: var(--ink-2); }
+  nav a { position: relative; padding-bottom: 3px; transition: color 0.3s; }
+  nav a:hover { color: var(--ink); }
   nav a::after {
-    content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 1.5px;
-    background: var(--accent); transform: scaleX(0); transform-origin: left;
-    transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+    content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 1px;
+    background: var(--hope); transition: right 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
   }
-  nav a:hover::after { transform: scaleX(1); }
-  .toggle { border: 1px solid var(--rule-2); padding: 0.45em 0.8em; border-radius: 7px; color: var(--fg-2); }
-  .toggle:hover { border-color: var(--accent); color: var(--accent); }
-  @media (max-width: 680px) { nav a:not(.toggle) { display: none; } }
+  nav a:hover::after { right: 0; }
+  @media (max-width: 600px) { nav { display: none; } }
 </style>

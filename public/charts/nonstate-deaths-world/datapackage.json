@@ -1,0 +1,38 @@
+{
+  "name": "violence-nonstate_deaths-world",
+  "title": "Best estimate of deaths in conflicts between two armed groups, neither of them a state.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Uppsala Conflict Data Program (UCDP), Uppsala University",
+      "path": "https://ucdp.uu.se/downloads/nsos/ucdp-nonstate-261-csv.zip"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "violence-nonstate_deaths-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "violence_nonstate_deaths_world",
+            "type": "number",
+            "unit": "deaths"
+          }
+        ]
+      }
+    }
+  ]
+}

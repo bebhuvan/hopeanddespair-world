@@ -1,0 +1,205 @@
+[
+  {
+    "indicatorId": "economy.mean_income.eas",
+    "entity": "EAS",
+    "entityName": "East Asia & Pacific",
+    "unit": "PPP$ per day (2021)",
+    "points": [
+      {
+        "t": 1981,
+        "value": 4.9441
+      },
+      {
+        "t": 1982,
+        "value": 5.1226
+      },
+      {
+        "t": 1983,
+        "value": 5.2991
+      },
+      {
+        "t": 1984,
+        "value": 5.5195
+      },
+      {
+        "t": 1985,
+        "value": 5.7046
+      },
+      {
+        "t": 1986,
+        "value": 5.8747
+      },
+      {
+        "t": 1987,
+        "value": 6.1267
+      },
+      {
+        "t": 1988,
+        "value": 6.4453
+      },
+      {
+        "t": 1989,
+        "value": 6.4897
+      },
+      {
+        "t": 1990,
+        "value": 6.7023
+      },
+      {
+        "t": 1991,
+        "value": 6.8746
+      },
+      {
+        "t": 1992,
+        "value": 7.0479
+      },
+      {
+        "t": 1993,
+        "value": 7.183
+      },
+      {
+        "t": 1994,
+        "value": 7.4933
+      },
+      {
+        "t": 1995,
+        "value": 7.7878
+      },
+      {
+        "t": 1996,
+        "value": 8.1257
+      },
+      {
+        "t": 1997,
+        "value": 8.2553
+      },
+      {
+        "t": 1998,
+        "value": 8.1002
+      },
+      {
+        "t": 1999,
+        "value": 8.3504
+      },
+      {
+        "t": 2000,
+        "value": 8.6665
+      },
+      {
+        "t": 2001,
+        "value": 8.9376
+      },
+      {
+        "t": 2002,
+        "value": 9.3649
+      },
+      {
+        "t": 2003,
+        "value": 9.703
+      },
+      {
+        "t": 2004,
+        "value": 10.1255
+      },
+      {
+        "t": 2005,
+        "value": 10.6338
+      },
+      {
+        "t": 2006,
+        "value": 11.022
+      },
+      {
+        "t": 2007,
+        "value": 11.5151
+      },
+      {
+        "t": 2008,
+        "value": 11.7742
+      },
+      {
+        "t": 2009,
+        "value": 12.0573
+      },
+      {
+        "t": 2010,
+        "value": 12.801
+      },
+      {
+        "t": 2011,
+        "value": 13.29
+      },
+      {
+        "t": 2012,
+        "value": 13.9511
+      },
+      {
+        "t": 2013,
+        "value": 14.7498
+      },
+      {
+        "t": 2014,
+        "value": 15.4166
+      },
+      {
+        "t": 2015,
+        "value": 16.1565
+      },
+      {
+        "t": 2016,
+        "value": 16.8494
+      },
+      {
+        "t": 2017,
+        "value": 17.5289
+      },
+      {
+        "t": 2018,
+        "value": 18.1577
+      },
+      {
+        "t": 2019,
+        "value": 18.8706
+      },
+      {
+        "t": 2020,
+        "value": 18.5588
+      },
+      {
+        "t": 2021,
+        "value": 19.8671
+      },
+      {
+        "t": 2022,
+        "value": 20.0823
+      },
+      {
+        "t": 2023,
+        "value": 20.9868
+      },
+      {
+        "t": 2024,
+        "value": 21.5163
+      },
+      {
+        "t": 2025,
+        "value": 22.1279
+      },
+      {
+        "t": 2026,
+        "value": 22.7229
+      }
+    ],
+    "provenance": {
+      "source": "pip",
+      "sourceIndicator": "mean @ $3.00/day (2021 PPP)",
+      "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+      "definition": "Mean income or consumption per day, East Asia & Pacific",
+      "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+      "primarySource": "World Bank — Poverty and Inequality Platform"
+    }
+  }
+]

@@ -1,0 +1,6 @@
+# hopeanddespair.world — open data, openly licensed. All crawlers are welcome,
+# search and AI/LLM alike (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, CCBot, …).
+User-agent: *
+Allow: /
+
+Sitemap: https://hopeanddespair.world/sitemap.xml

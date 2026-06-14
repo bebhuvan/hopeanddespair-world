@@ -1,0 +1,10 @@
+{
+  "source": "openalex",
+  "slug": "works?filter=from_publication_date:2020-01-01,to_publication_date:2020-12-31,citation_normalized_percentile.is_in_top_10_percent:true&group_by=authorships.institutions.country_code",
+  "vintage": "2026-06-13",
+  "url": "https://api.openalex.org/works?filter=from_publication_date:2020-01-01,to_publication_date:2020-12-31,citation_normalized_percentile.is_in_top_10_percent:true&group_by=authorships.institutions.country_code&per-page=200",
+  "checksum": "55bb50051e680f5eb28e1ddfeaf55f099f1cf90b85c67ad133fa3aa5650cff3c",
+  "license": "CC0 1.0",
+  "fetchedAt": "2026-06-13T14:30:57.281Z",
+  "adapterVersion": "openalex-story-1.0.0"
+}

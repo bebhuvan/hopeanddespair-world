@@ -1,0 +1,205 @@
+[
+  {
+    "indicatorId": "economy.poor_count.afw",
+    "entity": "AFW",
+    "entityName": "Western and Central Africa",
+    "unit": "million people",
+    "points": [
+      {
+        "t": 1981,
+        "value": 89.16899
+      },
+      {
+        "t": 1982,
+        "value": 94.728439
+      },
+      {
+        "t": 1983,
+        "value": 102.169332
+      },
+      {
+        "t": 1984,
+        "value": 105.92326
+      },
+      {
+        "t": 1985,
+        "value": 106.949659
+      },
+      {
+        "t": 1986,
+        "value": 110.794344
+      },
+      {
+        "t": 1987,
+        "value": 115.590167
+      },
+      {
+        "t": 1988,
+        "value": 119.32121599999999
+      },
+      {
+        "t": 1989,
+        "value": 124.60055899999999
+      },
+      {
+        "t": 1990,
+        "value": 128.59079599999998
+      },
+      {
+        "t": 1991,
+        "value": 134.789625
+      },
+      {
+        "t": 1992,
+        "value": 140.723562
+      },
+      {
+        "t": 1993,
+        "value": 145.64151099999998
+      },
+      {
+        "t": 1994,
+        "value": 150.241174
+      },
+      {
+        "t": 1995,
+        "value": 155.059498
+      },
+      {
+        "t": 1996,
+        "value": 158.419424
+      },
+      {
+        "t": 1997,
+        "value": 160.704182
+      },
+      {
+        "t": 1998,
+        "value": 163.026357
+      },
+      {
+        "t": 1999,
+        "value": 166.209625
+      },
+      {
+        "t": 2000,
+        "value": 169.05446
+      },
+      {
+        "t": 2001,
+        "value": 169.477928
+      },
+      {
+        "t": 2002,
+        "value": 167.826817
+      },
+      {
+        "t": 2003,
+        "value": 169.039222
+      },
+      {
+        "t": 2004,
+        "value": 167.305552
+      },
+      {
+        "t": 2005,
+        "value": 168.987799
+      },
+      {
+        "t": 2006,
+        "value": 170.448667
+      },
+      {
+        "t": 2007,
+        "value": 172.32983099999998
+      },
+      {
+        "t": 2008,
+        "value": 170.968312
+      },
+      {
+        "t": 2009,
+        "value": 172.46080999999998
+      },
+      {
+        "t": 2010,
+        "value": 168.719046
+      },
+      {
+        "t": 2011,
+        "value": 169.10388899999998
+      },
+      {
+        "t": 2012,
+        "value": 167.775581
+      },
+      {
+        "t": 2013,
+        "value": 166.51126299999999
+      },
+      {
+        "t": 2014,
+        "value": 164.592065
+      },
+      {
+        "t": 2015,
+        "value": 168.51630799999998
+      },
+      {
+        "t": 2016,
+        "value": 167.36257799999998
+      },
+      {
+        "t": 2017,
+        "value": 163.179509
+      },
+      {
+        "t": 2018,
+        "value": 159.08490899999998
+      },
+      {
+        "t": 2019,
+        "value": 156.74571799999998
+      },
+      {
+        "t": 2020,
+        "value": 173.987629
+      },
+      {
+        "t": 2021,
+        "value": 180.265727
+      },
+      {
+        "t": 2022,
+        "value": 182.517731
+      },
+      {
+        "t": 2023,
+        "value": 186.178533
+      },
+      {
+        "t": 2024,
+        "value": 185.447485
+      },
+      {
+        "t": 2025,
+        "value": 185.764094
+      },
+      {
+        "t": 2026,
+        "value": 184.636577
+      }
+    ],
+    "provenance": {
+      "source": "pip",
+      "sourceIndicator": "pop_in_poverty @ $3.00/day (2021 PPP)",
+      "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+      "definition": "Number of people in extreme poverty (below $3.00/day, 2021 PPP), Western & Central Africa",
+      "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+      "primarySource": "World Bank — Poverty and Inequality Platform"
+    }
+  }
+]

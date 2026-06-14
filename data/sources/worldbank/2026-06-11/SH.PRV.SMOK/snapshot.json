@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "SH.PRV.SMOK",
+  "vintage": "2026-06-11",
+  "url": "https://data.worldbank.org/indicator/SH.PRV.SMOK",
+  "checksum": "2d0255a845aaffe81095203425aec7765775d7acc13287e4bd11209f9cf8bafd",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T14:36:10.886Z",
+  "adapterVersion": "1.0.0"
+}

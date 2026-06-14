@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "economy.gdp_per_capita_ppp.lcn",
+    "unit": "constant 2021 international $",
+    "points": 35
+  },
+  "wasDerivedFrom": [
+    "LCN"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity LCN"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "NY.GDP.PCAP.PP.KD",
+      "url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD",
+      "vintage": "2026-06-12",
+      "checksum": "c7df8619c8aecf11e0f3f94d17cb4fc137e78f22e1eeb15a8a43bddfb67b05e3",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "World Bank, International Comparison Program / OECD"
+}

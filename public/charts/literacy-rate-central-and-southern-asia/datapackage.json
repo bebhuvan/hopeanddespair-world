@@ -1,0 +1,38 @@
+{
+  "name": "education-literacy_rate-central-and-southern-asia",
+  "title": "Share of adults who can read and write a simple statement about their everyday life.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/cross-country-literacy-rates"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "education-literacy_rate-central-and-southern-asia",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "education_literacy_rate_central_and_southern_asia",
+            "type": "number",
+            "unit": "%"
+          }
+        ]
+      }
+    }
+  ]
+}

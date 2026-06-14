@@ -1,0 +1,38 @@
+{
+  "name": "wellbeing-life_satisfaction-world",
+  "title": "Average of survey responses. The survey question asks respondents their current position on a hypothetical ladder, where the best possible life for them is a 10, and the worst possible life is a 0.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/happiness-cantril-ladder"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "wellbeing-life_satisfaction-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "wellbeing_life_satisfaction_world",
+            "type": "number",
+            "unit": "score (0–10)"
+          }
+        ]
+      }
+    }
+  ]
+}

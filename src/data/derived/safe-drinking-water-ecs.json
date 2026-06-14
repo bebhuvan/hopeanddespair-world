@@ -1,0 +1,128 @@
+{
+  "indicatorId": "water.safe_drinking_water.ecs",
+  "entity": "ECS",
+  "entityName": "Europe & Central Asia",
+  "unit": "% of population",
+  "points": [
+    {
+      "t": 2000,
+      "value": 86.4559301766412
+    },
+    {
+      "t": 2001,
+      "value": 86.5775219193867
+    },
+    {
+      "t": 2002,
+      "value": 86.7532329862862
+    },
+    {
+      "t": 2003,
+      "value": 86.9357293514377
+    },
+    {
+      "t": 2004,
+      "value": 87.3054685113201
+    },
+    {
+      "t": 2005,
+      "value": 88.3955628825605
+    },
+    {
+      "t": 2006,
+      "value": 88.7389845659972
+    },
+    {
+      "t": 2007,
+      "value": 89.0824190669177
+    },
+    {
+      "t": 2008,
+      "value": 89.414510855728
+    },
+    {
+      "t": 2009,
+      "value": 89.7320262071637
+    },
+    {
+      "t": 2010,
+      "value": 90.0217982847391
+    },
+    {
+      "t": 2011,
+      "value": 90.3053869151768
+    },
+    {
+      "t": 2012,
+      "value": 90.5745110635602
+    },
+    {
+      "t": 2013,
+      "value": 90.8504097109291
+    },
+    {
+      "t": 2014,
+      "value": 91.0074039369026
+    },
+    {
+      "t": 2015,
+      "value": 91.1611974987203
+    },
+    {
+      "t": 2016,
+      "value": 91.3683085773326
+    },
+    {
+      "t": 2017,
+      "value": 91.5805550293614
+    },
+    {
+      "t": 2018,
+      "value": 91.7738396471301
+    },
+    {
+      "t": 2019,
+      "value": 91.9686375240446
+    },
+    {
+      "t": 2020,
+      "value": 92.1151976445653
+    },
+    {
+      "t": 2021,
+      "value": 92.2171286282724
+    },
+    {
+      "t": 2022,
+      "value": 92.3150246129194
+    },
+    {
+      "t": 2023,
+      "value": 92.3941362840581
+    },
+    {
+      "t": 2024,
+      "value": 92.468529296819
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SH.H2O.SMDW.ZS",
+    "url": "https://data.worldbank.org/indicator/SH.H2O.SMDW.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "4667986b4aca06ead903a829d983ffdccd6955ab41b7d11fd4b6d3016ef29796",
+    "definition": "People using safely managed drinking water services (% of population)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO/UNICEF JMP, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity ECS"
+    }
+  ],
+  "derivedFrom": [
+    "ECS"
+  ]
+}

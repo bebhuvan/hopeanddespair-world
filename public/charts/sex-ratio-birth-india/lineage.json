@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "demography.sex_ratio_birth.india",
+    "unit": "male births per 100 female births",
+    "points": 75
+  },
+  "wasDerivedFrom": [
+    "IND"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity India"
+      }
+    ],
+    "agent": "adapter:unwpp@1.0.0",
+    "used": {
+      "source": "unwpp",
+      "slug": "wpp-medium",
+      "url": "https://population.un.org/wpp/",
+      "vintage": "2026-06-13",
+      "checksum": "a5c90668daef8cf590cc81cdc1efe793f176b00c65a095ea6ce98cbe5e3059fb",
+      "license": "CC BY 3.0 IGO"
+    }
+  },
+  "primarySource": "UN World Population Prospects 2024"
+}

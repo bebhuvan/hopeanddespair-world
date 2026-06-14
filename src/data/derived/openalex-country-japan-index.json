@@ -1,0 +1,125 @@
+{
+  "indicatorId": "science.openalex_country_japan_index.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "index, 2000 = 100",
+  "points": [
+    {
+      "t": 2000,
+      "value": 100
+    },
+    {
+      "t": 2001,
+      "value": 101.5
+    },
+    {
+      "t": 2002,
+      "value": 134.6
+    },
+    {
+      "t": 2003,
+      "value": 126.6
+    },
+    {
+      "t": 2004,
+      "value": 123.7
+    },
+    {
+      "t": 2005,
+      "value": 128.9
+    },
+    {
+      "t": 2006,
+      "value": 135.7
+    },
+    {
+      "t": 2007,
+      "value": 131.8
+    },
+    {
+      "t": 2008,
+      "value": 137.7
+    },
+    {
+      "t": 2009,
+      "value": 138
+    },
+    {
+      "t": 2010,
+      "value": 138.8
+    },
+    {
+      "t": 2011,
+      "value": 144.4
+    },
+    {
+      "t": 2012,
+      "value": 149.4
+    },
+    {
+      "t": 2013,
+      "value": 149.6
+    },
+    {
+      "t": 2014,
+      "value": 153
+    },
+    {
+      "t": 2015,
+      "value": 153.9
+    },
+    {
+      "t": 2016,
+      "value": 155.8
+    },
+    {
+      "t": 2017,
+      "value": 157.6
+    },
+    {
+      "t": 2018,
+      "value": 162.5
+    },
+    {
+      "t": 2019,
+      "value": 165.3
+    },
+    {
+      "t": 2020,
+      "value": 174.4
+    },
+    {
+      "t": 2021,
+      "value": 174.2
+    },
+    {
+      "t": 2022,
+      "value": 167.1
+    },
+    {
+      "t": 2023,
+      "value": 169.9
+    },
+    {
+      "t": 2024,
+      "value": 166.6
+    }
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:JP&group_by=publication_year",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:JP&group_by=publication_year&per-page=100",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-13",
+    "checksum": "72a13fe5add831547b02bd3f90a54f129d6535281ab22080224e93fd393aab1d",
+    "definition": "Japan country-attributed OpenAlex works, indexed to 2000 = 100.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "derived_transform",
+      "detail": "divided Japan yearly country-attributed work count by its 2000 value and multiplied by 100"
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+[
+  {
+    "indicatorId": "economy.poverty_gap.sas",
+    "entity": "SAS",
+    "entityName": "South Asia",
+    "unit": "% of the poverty line",
+    "points": [
+      {
+        "t": 1981,
+        "value": 16.57
+      },
+      {
+        "t": 1982,
+        "value": 15.809999999999999
+      },
+      {
+        "t": 1983,
+        "value": 14.37
+      },
+      {
+        "t": 1984,
+        "value": 14.180000000000001
+      },
+      {
+        "t": 1985,
+        "value": 13.969999999999999
+      },
+      {
+        "t": 1986,
+        "value": 13.91
+      },
+      {
+        "t": 1987,
+        "value": 14.04
+      },
+      {
+        "t": 1988,
+        "value": 13.86
+      },
+      {
+        "t": 1989,
+        "value": 13.450000000000001
+      },
+      {
+        "t": 1990,
+        "value": 13.089999999999998
+      },
+      {
+        "t": 1991,
+        "value": 12.93
+      },
+      {
+        "t": 1992,
+        "value": 12.55
+      },
+      {
+        "t": 1993,
+        "value": 12.1
+      },
+      {
+        "t": 1994,
+        "value": 11.77
+      },
+      {
+        "t": 1995,
+        "value": 11.600000000000001
+      },
+      {
+        "t": 1996,
+        "value": 11.469999999999999
+      },
+      {
+        "t": 1997,
+        "value": 11.44
+      },
+      {
+        "t": 1998,
+        "value": 11.39
+      },
+      {
+        "t": 1999,
+        "value": 11.26
+      },
+      {
+        "t": 2000,
+        "value": 11.19
+      },
+      {
+        "t": 2001,
+        "value": 11.14
+      },
+      {
+        "t": 2002,
+        "value": 11.1
+      },
+      {
+        "t": 2003,
+        "value": 10.93
+      },
+      {
+        "t": 2004,
+        "value": 10.69
+      },
+      {
+        "t": 2005,
+        "value": 10.100000000000001
+      },
+      {
+        "t": 2006,
+        "value": 9.22
+      },
+      {
+        "t": 2007,
+        "value": 8.4
+      },
+      {
+        "t": 2008,
+        "value": 8
+      },
+      {
+        "t": 2009,
+        "value": 7.35
+      },
+      {
+        "t": 2010,
+        "value": 6.23
+      },
+      {
+        "t": 2011,
+        "value": 5.42
+      },
+      {
+        "t": 2012,
+        "value": 4.82
+      },
+      {
+        "t": 2013,
+        "value": 4.22
+      },
+      {
+        "t": 2014,
+        "value": 3.58
+      },
+      {
+        "t": 2015,
+        "value": 2.97
+      },
+      {
+        "t": 2016,
+        "value": 2.42
+      },
+      {
+        "t": 2017,
+        "value": 1.95
+      },
+      {
+        "t": 2018,
+        "value": 1.5699999999999998
+      },
+      {
+        "t": 2019,
+        "value": 1.35
+      },
+      {
+        "t": 2020,
+        "value": 1.47
+      },
+      {
+        "t": 2021,
+        "value": 1.2
+      },
+      {
+        "t": 2022,
+        "value": 0.9199999999999999
+      },
+      {
+        "t": 2023,
+        "value": 0.69
+      },
+      {
+        "t": 2024,
+        "value": 0.5499999999999999
+      },
+      {
+        "t": 2025,
+        "value": 0.44
+      },
+      {
+        "t": 2026,
+        "value": 0.35000000000000003
+      }
+    ],
+    "provenance": {
+      "source": "pip",
+      "sourceIndicator": "poverty_gap @ $3.00/day (2021 PPP)",
+      "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+      "definition": "Poverty gap at $3.00/day (2021 PPP), South Asia",
+      "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+      "primarySource": "World Bank — Poverty and Inequality Platform"
+    }
+  }
+]

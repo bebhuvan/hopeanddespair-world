@@ -1,0 +1,31 @@
+{
+  "entity": {
+    "id": "climate.temperature_anomaly_era5.world",
+    "unit": "°C",
+    "points": 86
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "annual_mean",
+        "detail": "mean of daily ERA5 2 m temperature per year (years with ≥ 360 days)"
+      },
+      {
+        "op": "rebaseline",
+        "detail": "anomaly vs the 1951–1980 mean (13.753°C), recomputed from the absolute series"
+      }
+    ],
+    "agent": "adapter:copernicus@1.0.0",
+    "used": {
+      "source": "copernicus",
+      "slug": "2t_global",
+      "url": "https://sites.ecmwf.int/data/climatepulse/data/series/era5_daily_series_2t_global.csv",
+      "vintage": "2026-06-13",
+      "checksum": "e86797a7d79fbfea28915e220b3722852c20f38afece7684d550a064de36daa5",
+      "license": "Copernicus Climate Change Service (C3S) — free reuse with attribution"
+    }
+  },
+  "primarySource": "Copernicus Climate Change Service (C3S) / ECMWF — ERA5"
+}

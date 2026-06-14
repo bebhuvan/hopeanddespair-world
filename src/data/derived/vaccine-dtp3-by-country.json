@@ -1,0 +1,89 @@
+{
+  "chartId": "vaccine-dtp3-by-country",
+  "kind": "bars",
+  "title": "Childhood vaccination by country",
+  "unit": "Children with 3 doses of DTP vaccine, %",
+  "yearSpan": "2024–2024",
+  "bars": [
+    {
+      "label": "Japan",
+      "value": 99,
+      "color": "hope"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 97,
+      "color": "hope"
+    },
+    {
+      "label": "China",
+      "value": 97,
+      "color": "hope"
+    },
+    {
+      "label": "India",
+      "value": 94,
+      "color": "hope"
+    },
+    {
+      "label": "United States",
+      "value": 94,
+      "color": "hope"
+    },
+    {
+      "label": "United Kingdom",
+      "value": 92,
+      "color": "hope"
+    },
+    {
+      "label": "Brazil",
+      "value": 91,
+      "color": "hope"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 73,
+      "color": "despair"
+    },
+    {
+      "label": "Somalia",
+      "value": 70,
+      "color": "despair"
+    },
+    {
+      "label": "Nigeria",
+      "value": 67,
+      "color": "despair"
+    },
+    {
+      "label": "DR Congo",
+      "value": 65,
+      "color": "despair"
+    }
+  ],
+  "xmax": 100,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "provenance": {
+    "source": "wb",
+    "sourceIndicator": "SH.IMM.IDPT",
+    "url": "https://data.worldbank.org/indicator/SH.IMM.IDPT",
+    "license": "CC BY 4.0",
+    "vintage": "2024–2024",
+    "checksum": "8f5124721a19d78016394d6b89d320bc6221935de793f27530c2e181cbb7ae6a",
+    "definition": "Share of children aged 12–23 months who received three doses of the diphtheria-tetanus-pertussis vaccine, latest year per country. A curated 11-country spread sorted descending.",
+    "attribution": "WHO/UNICEF, via World Bank",
+    "primarySource": "WHO/UNICEF Estimates of National Immunization Coverage"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 11 curated countries sorted descending"
+    }
+  ]
+}

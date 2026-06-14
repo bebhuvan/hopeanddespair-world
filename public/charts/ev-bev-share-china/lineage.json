@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "transport.ev_bev_share.china",
+    "unit": "%",
+    "points": 16
+  },
+  "wasDerivedFrom": [
+    "CHN"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity China"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "share-car-sales-battery-plugin",
+      "url": "https://ourworldindata.org/grapher/share-car-sales-battery-plugin",
+      "vintage": "2026-06-13",
+      "checksum": "5e8d981e9f3f2f98141a270b6598e62bf40266c51b5db85feeade7e4548da999",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0), via Our World in Data"
+}

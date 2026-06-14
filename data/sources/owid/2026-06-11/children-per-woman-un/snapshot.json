@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "children-per-woman-un",
+  "vintage": "2026-06-11",
+  "url": "https://ourworldindata.org/grapher/children-per-woman-un",
+  "checksum": "54565a461bfba0cd975066579d3324e5e7e05da64acc670ec05a1584bf05aa7b",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T10:06:57.188Z",
+  "adapterVersion": "1.0.0"
+}

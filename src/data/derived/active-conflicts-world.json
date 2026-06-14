@@ -1,0 +1,176 @@
+{
+  "indicatorId": "violence.active_conflicts.world",
+  "entity": "OWID_WRL",
+  "entityName": "World",
+  "unit": "conflicts",
+  "points": [
+    {
+      "t": 1989,
+      "value": 41
+    },
+    {
+      "t": 1990,
+      "value": 49
+    },
+    {
+      "t": 1991,
+      "value": 53
+    },
+    {
+      "t": 1992,
+      "value": 51
+    },
+    {
+      "t": 1993,
+      "value": 44
+    },
+    {
+      "t": 1994,
+      "value": 50
+    },
+    {
+      "t": 1995,
+      "value": 41
+    },
+    {
+      "t": 1996,
+      "value": 41
+    },
+    {
+      "t": 1997,
+      "value": 39
+    },
+    {
+      "t": 1998,
+      "value": 40
+    },
+    {
+      "t": 1999,
+      "value": 40
+    },
+    {
+      "t": 2000,
+      "value": 40
+    },
+    {
+      "t": 2001,
+      "value": 38
+    },
+    {
+      "t": 2002,
+      "value": 33
+    },
+    {
+      "t": 2003,
+      "value": 33
+    },
+    {
+      "t": 2004,
+      "value": 33
+    },
+    {
+      "t": 2005,
+      "value": 33
+    },
+    {
+      "t": 2006,
+      "value": 33
+    },
+    {
+      "t": 2007,
+      "value": 35
+    },
+    {
+      "t": 2008,
+      "value": 39
+    },
+    {
+      "t": 2009,
+      "value": 37
+    },
+    {
+      "t": 2010,
+      "value": 31
+    },
+    {
+      "t": 2011,
+      "value": 37
+    },
+    {
+      "t": 2012,
+      "value": 33
+    },
+    {
+      "t": 2013,
+      "value": 39
+    },
+    {
+      "t": 2014,
+      "value": 46
+    },
+    {
+      "t": 2015,
+      "value": 54
+    },
+    {
+      "t": 2016,
+      "value": 54
+    },
+    {
+      "t": 2017,
+      "value": 54
+    },
+    {
+      "t": 2018,
+      "value": 52
+    },
+    {
+      "t": 2019,
+      "value": 57
+    },
+    {
+      "t": 2020,
+      "value": 57
+    },
+    {
+      "t": 2021,
+      "value": 54
+    },
+    {
+      "t": 2022,
+      "value": 56
+    },
+    {
+      "t": 2023,
+      "value": 59
+    },
+    {
+      "t": 2024,
+      "value": 59
+    },
+    {
+      "t": 2025,
+      "value": 65
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "number_ongoing_conflicts__conflict_type_extrasystemic+number_ongoing_conflicts__conflict_type_intrastate+number_ongoing_conflicts__conflict_type_interstate",
+    "url": "https://ourworldindata.org/grapher/number-of-armed-conflicts",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "db74b8a45cee64fec20e88fdcc435bdaeb82de3f19e07e4f6ebb95fecc7804ae",
+    "definition": "Active state-based conflicts, World",
+    "attribution": "Our World in Data",
+    "primarySource": "Uppsala Conflict Data Program (UCDP) / PRIO"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity World"
+    }
+  ],
+  "derivedFrom": [
+    "OWID_WRL"
+  ]
+}

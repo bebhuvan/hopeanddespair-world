@@ -1,0 +1,9 @@
+{
+  "source": "worldbank",
+  "slug": "",
+  "vintage": "2026-06-11",
+  "url": "https://api.worldbank.org/v2/country?format=json&per_page=400",
+  "checksum": "d985536335fa799f893291d736b6e4e12b871ca9b927acf50b204367a52ab4e3",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T14:43:27.020Z"
+}

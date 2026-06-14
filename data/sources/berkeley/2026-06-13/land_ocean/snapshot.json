@@ -1,0 +1,10 @@
+{
+  "source": "berkeley",
+  "slug": "land_ocean",
+  "vintage": "2026-06-13",
+  "url": "https://berkeley-earth-temperature.s3.us-west-1.amazonaws.com/Global/Land_and_Ocean_summary.txt",
+  "checksum": "8f4b3f37846f0aacc270a3cf0090c1d94e857c8b2c7b8d8cdb081134781e819f",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T12:09:32.454Z",
+  "adapterVersion": "1.0.0"
+}

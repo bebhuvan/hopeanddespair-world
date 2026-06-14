@@ -1,0 +1,88 @@
+{
+  "indicatorId": "transport.ev_sales_share.mexico",
+  "entity": "Mexico",
+  "entityName": "Mexico",
+  "unit": "percent",
+  "points": [
+    {
+      "t": 2011,
+      "value": 0.00039999998989515007
+    },
+    {
+      "t": 2012,
+      "value": 0.009999999776482582
+    },
+    {
+      "t": 2013,
+      "value": 0.0013000000035390258
+    },
+    {
+      "t": 2014,
+      "value": 0.004999999888241291
+    },
+    {
+      "t": 2015,
+      "value": 0.00860000029206276
+    },
+    {
+      "t": 2016,
+      "value": 0.0560000017285347
+    },
+    {
+      "t": 2017,
+      "value": 0.09099999815225601
+    },
+    {
+      "t": 2018,
+      "value": 0.15000000596046448
+    },
+    {
+      "t": 2019,
+      "value": 0.15000000596046448
+    },
+    {
+      "t": 2020,
+      "value": 0.49000000953674316
+    },
+    {
+      "t": 2021,
+      "value": 0.7799999713897705
+    },
+    {
+      "t": 2022,
+      "value": 0.9599999785423279
+    },
+    {
+      "t": 2023,
+      "value": 1.5
+    },
+    {
+      "t": 2024,
+      "value": 2.200000047683716
+    },
+    {
+      "t": 2025,
+      "value": 7
+    }
+  ],
+  "provenance": {
+    "source": "iea",
+    "sourceIndicator": "EV sales share · Cars · EV",
+    "url": "https://api.iea.org/evs?region=Mexico&csv=true",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "a722b7ec174ed47f076f57c4148b84d5f2ecb17a45a07398e2e100b9c9c768b0",
+    "definition": "Share of new cars sold that are electric, Mexico",
+    "attribution": "IEA — Global EV Data Explorer",
+    "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity Mexico"
+    }
+  ],
+  "derivedFrom": [
+    "Mexico"
+  ]
+}

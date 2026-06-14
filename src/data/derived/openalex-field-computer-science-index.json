@@ -1,0 +1,125 @@
+{
+  "indicatorId": "science.openalex_field_computer_science_index.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "index, 2000 = 100",
+  "points": [
+    {
+      "t": 2000,
+      "value": 100
+    },
+    {
+      "t": 2001,
+      "value": 108.2
+    },
+    {
+      "t": 2002,
+      "value": 206.2
+    },
+    {
+      "t": 2003,
+      "value": 181.5
+    },
+    {
+      "t": 2004,
+      "value": 189.3
+    },
+    {
+      "t": 2005,
+      "value": 223.8
+    },
+    {
+      "t": 2006,
+      "value": 245.1
+    },
+    {
+      "t": 2007,
+      "value": 258.6
+    },
+    {
+      "t": 2008,
+      "value": 276.4
+    },
+    {
+      "t": 2009,
+      "value": 304
+    },
+    {
+      "t": 2010,
+      "value": 328.2
+    },
+    {
+      "t": 2011,
+      "value": 349.6
+    },
+    {
+      "t": 2012,
+      "value": 356.7
+    },
+    {
+      "t": 2013,
+      "value": 366.6
+    },
+    {
+      "t": 2014,
+      "value": 376.6
+    },
+    {
+      "t": 2015,
+      "value": 383.5
+    },
+    {
+      "t": 2016,
+      "value": 392.5
+    },
+    {
+      "t": 2017,
+      "value": 394.6
+    },
+    {
+      "t": 2018,
+      "value": 424.1
+    },
+    {
+      "t": 2019,
+      "value": 447.8
+    },
+    {
+      "t": 2020,
+      "value": 476.4
+    },
+    {
+      "t": 2021,
+      "value": 448.1
+    },
+    {
+      "t": 2022,
+      "value": 431.2
+    },
+    {
+      "t": 2023,
+      "value": 483.3
+    },
+    {
+      "t": 2024,
+      "value": 498.8
+    }
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,primary_topic.field.id:https://openalex.org/fields/17&group_by=publication_year",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,primary_topic.field.id:https://openalex.org/fields/17&group_by=publication_year&per-page=100",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-13",
+    "checksum": "fd908977b61fd683c7c6b1be97c0bfc059dfaf1c5ec5bb180ae461a016187330",
+    "definition": "OpenAlex works in Computer science, indexed to 2000 = 100.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "derived_transform",
+      "detail": "divided yearly Computer science work count by its 2000 value and multiplied by 100"
+    }
+  ]
+}

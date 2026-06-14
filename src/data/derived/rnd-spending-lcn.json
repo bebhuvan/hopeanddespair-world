@@ -1,0 +1,124 @@
+{
+  "indicatorId": "science.rnd_spend_gdp.lcn",
+  "entity": "LCN",
+  "entityName": "Latin America & Caribbean",
+  "unit": "% of GDP",
+  "points": [
+    {
+      "t": 2000,
+      "value": 0.557752048764381
+    },
+    {
+      "t": 2001,
+      "value": 0.531209434870493
+    },
+    {
+      "t": 2002,
+      "value": 0.515535075661751
+    },
+    {
+      "t": 2003,
+      "value": 0.551266318675802
+    },
+    {
+      "t": 2004,
+      "value": 0.55592988039945
+    },
+    {
+      "t": 2005,
+      "value": 0.582452904899722
+    },
+    {
+      "t": 2006,
+      "value": 0.582094999520354
+    },
+    {
+      "t": 2007,
+      "value": 0.619133393636029
+    },
+    {
+      "t": 2008,
+      "value": 0.666022186905574
+    },
+    {
+      "t": 2009,
+      "value": 0.692091552827602
+    },
+    {
+      "t": 2010,
+      "value": 0.732677551470128
+    },
+    {
+      "t": 2011,
+      "value": 0.70786630394583
+    },
+    {
+      "t": 2012,
+      "value": 0.680400758148014
+    },
+    {
+      "t": 2013,
+      "value": 0.712889181246214
+    },
+    {
+      "t": 2014,
+      "value": 0.753268869497852
+    },
+    {
+      "t": 2015,
+      "value": 0.728873304585058
+    },
+    {
+      "t": 2016,
+      "value": 0.687370764809588
+    },
+    {
+      "t": 2017,
+      "value": 0.64722954965131
+    },
+    {
+      "t": 2018,
+      "value": 0.638189976830421
+    },
+    {
+      "t": 2019,
+      "value": 0.626039588392781
+    },
+    {
+      "t": 2020,
+      "value": 0.644650990671841
+    },
+    {
+      "t": 2021,
+      "value": 0.617669418317626
+    },
+    {
+      "t": 2022,
+      "value": 0.657505378381314
+    },
+    {
+      "t": 2023,
+      "value": 0.682501882174588
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "GB.XPD.RSDV.GD.ZS",
+    "url": "https://data.worldbank.org/indicator/GB.XPD.RSDV.GD.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "4d3e7ae2e5be1ea3258f12d3af8a18f7d6d5d9b8fcb596d7f1ab75976ef5b8c3",
+    "definition": "Research and development expenditure (% of GDP)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "UNESCO Institute for Statistics, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity LCN"
+    }
+  ],
+  "derivedFrom": [
+    "LCN"
+  ]
+}

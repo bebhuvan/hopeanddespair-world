@@ -1,0 +1,132 @@
+{
+  "indicatorId": "energy.fossil_generation.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "terawatt-hours",
+  "points": [
+    {
+      "t": 2000,
+      "value": 9878.7
+    },
+    {
+      "t": 2001,
+      "value": 10090.69
+    },
+    {
+      "t": 2002,
+      "value": 10520.95
+    },
+    {
+      "t": 2003,
+      "value": 11126.7
+    },
+    {
+      "t": 2004,
+      "value": 11564.04
+    },
+    {
+      "t": 2005,
+      "value": 12125.64
+    },
+    {
+      "t": 2006,
+      "value": 12643.34
+    },
+    {
+      "t": 2007,
+      "value": 13467.15
+    },
+    {
+      "t": 2008,
+      "value": 13606.9
+    },
+    {
+      "t": 2009,
+      "value": 13404.28
+    },
+    {
+      "t": 2010,
+      "value": 14344.52
+    },
+    {
+      "t": 2011,
+      "value": 14963.74
+    },
+    {
+      "t": 2012,
+      "value": 15360.24
+    },
+    {
+      "t": 2013,
+      "value": 15679.04
+    },
+    {
+      "t": 2014,
+      "value": 15961.62
+    },
+    {
+      "t": 2015,
+      "value": 15956.78
+    },
+    {
+      "t": 2016,
+      "value": 16262.99
+    },
+    {
+      "t": 2017,
+      "value": 16622.48
+    },
+    {
+      "t": 2018,
+      "value": 17166.19
+    },
+    {
+      "t": 2019,
+      "value": 17082.73
+    },
+    {
+      "t": 2020,
+      "value": 16585.94
+    },
+    {
+      "t": 2021,
+      "value": 17544.3
+    },
+    {
+      "t": 2022,
+      "value": 17734.86
+    },
+    {
+      "t": 2023,
+      "value": 17947.98
+    },
+    {
+      "t": 2024,
+      "value": 18256.41
+    },
+    {
+      "t": 2025,
+      "value": 18209.3
+    }
+  ],
+  "provenance": {
+    "source": "ember",
+    "sourceIndicator": "electricity-generation/yearly:Fossil:generation_twh",
+    "url": "https://api.ember-energy.org/v1/electricity-generation/yearly?entity=World&start_date=2000",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "90a0fb0ceae7d775c280d2107ffbd09d632c809914e1b0357a6545bc59696272",
+    "definition": "Electricity generated from fossil fuels, World",
+    "attribution": "Ember — Yearly Electricity Data",
+    "primarySource": "Ember — Yearly Electricity Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity World"
+    }
+  ],
+  "derivedFrom": [
+    "World"
+  ]
+}

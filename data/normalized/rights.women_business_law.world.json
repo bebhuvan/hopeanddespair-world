@@ -1,0 +1,237 @@
+[
+  {
+    "indicatorId": "rights.women_business_law.world",
+    "entity": "OWID_WRL",
+    "entityName": "World",
+    "unit": "index (0–100)",
+    "points": [
+      {
+        "t": 1970,
+        "value": 45.70395
+      },
+      {
+        "t": 1971,
+        "value": 45.92105
+      },
+      {
+        "t": 1972,
+        "value": 46.263157
+      },
+      {
+        "t": 1973,
+        "value": 47.14145
+      },
+      {
+        "t": 1974,
+        "value": 47.611843
+      },
+      {
+        "t": 1975,
+        "value": 48.019737
+      },
+      {
+        "t": 1976,
+        "value": 48.38158
+      },
+      {
+        "t": 1977,
+        "value": 48.74671
+      },
+      {
+        "t": 1978,
+        "value": 49.44079
+      },
+      {
+        "t": 1979,
+        "value": 49.726974
+      },
+      {
+        "t": 1980,
+        "value": 50.013157
+      },
+      {
+        "t": 1981,
+        "value": 50.470394
+      },
+      {
+        "t": 1982,
+        "value": 50.848682
+      },
+      {
+        "t": 1983,
+        "value": 51.25329
+      },
+      {
+        "t": 1984,
+        "value": 51.63487
+      },
+      {
+        "t": 1985,
+        "value": 51.95395
+      },
+      {
+        "t": 1986,
+        "value": 52.276318
+      },
+      {
+        "t": 1987,
+        "value": 52.50329
+      },
+      {
+        "t": 1988,
+        "value": 53.082237
+      },
+      {
+        "t": 1989,
+        "value": 53.394737
+      },
+      {
+        "t": 1990,
+        "value": 54.019737
+      },
+      {
+        "t": 1991,
+        "value": 54.42763
+      },
+      {
+        "t": 1992,
+        "value": 54.976974
+      },
+      {
+        "t": 1993,
+        "value": 55.55592
+      },
+      {
+        "t": 1994,
+        "value": 56.31908
+      },
+      {
+        "t": 1995,
+        "value": 57.05592
+      },
+      {
+        "t": 1996,
+        "value": 57.838818
+      },
+      {
+        "t": 1997,
+        "value": 58.648026
+      },
+      {
+        "t": 1998,
+        "value": 59.207237
+      },
+      {
+        "t": 1999,
+        "value": 59.92763
+      },
+      {
+        "t": 2000,
+        "value": 60.648026
+      },
+      {
+        "t": 2001,
+        "value": 61.10855
+      },
+      {
+        "t": 2002,
+        "value": 61.960526
+      },
+      {
+        "t": 2003,
+        "value": 62.901318
+      },
+      {
+        "t": 2004,
+        "value": 63.976974
+      },
+      {
+        "t": 2005,
+        "value": 65.01316
+      },
+      {
+        "t": 2006,
+        "value": 65.927635
+      },
+      {
+        "t": 2007,
+        "value": 66.93092
+      },
+      {
+        "t": 2008,
+        "value": 67.87171
+      },
+      {
+        "t": 2009,
+        "value": 68.87829
+      },
+      {
+        "t": 2010,
+        "value": 69.54276
+      },
+      {
+        "t": 2011,
+        "value": 70.06579
+      },
+      {
+        "t": 2012,
+        "value": 70.6546
+      },
+      {
+        "t": 2013,
+        "value": 71.45066
+      },
+      {
+        "t": 2014,
+        "value": 71.92434
+      },
+      {
+        "t": 2015,
+        "value": 72.460526
+      },
+      {
+        "t": 2016,
+        "value": 73.08224
+      },
+      {
+        "t": 2017,
+        "value": 73.697365
+      },
+      {
+        "t": 2018,
+        "value": 74.40131
+      },
+      {
+        "t": 2019,
+        "value": 75.289474
+      },
+      {
+        "t": 2020,
+        "value": 75.99342
+      },
+      {
+        "t": 2021,
+        "value": 76.60855
+      },
+      {
+        "t": 2022,
+        "value": 77.11842
+      },
+      {
+        "t": 2023,
+        "value": 77.85526
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "sg_law_indx",
+      "url": "https://ourworldindata.org/grapher/women-business-and-the-law-index",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "e04da25f0087417f6a4bf8718ce0b29439a1b6c29f7b999f3a729d4df6d0182b",
+      "definition": "The index measures how laws and regulations affect women’s economic opportunity on a scale from 0 to 100, where 100 means equal legal rights for men and women. It is the average score of eight categories: mobility, workplace, pay, marriage, parenthood, entrepreneurship, assets, and pension.",
+      "attribution": "Our World in Data",
+      "primarySource": "World Bank — Women, Business and the Law"
+    }
+  }
+]

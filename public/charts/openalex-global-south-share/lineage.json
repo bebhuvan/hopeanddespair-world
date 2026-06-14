@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "science.openalex_global_south_participation_share.world",
+    "unit": "% of works",
+    "points": 25
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "ratio",
+        "detail": "divided yearly works with a Global South authorship institution by all yearly works, 2000-2024"
+      }
+    ],
+    "agent": "adapter:openalex@openalex-story-1.0.0",
+    "used": {
+      "source": "openalex",
+      "slug": "global south share",
+      "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.is_global_south:true&group_by=publication_year&per-page=100",
+      "vintage": "2026-06-13",
+      "checksum": "32b126b1c7fdfb8c308198f38dbaa0635b417ddb051b31b160e3be46fcf78822",
+      "license": "CC0 1.0"
+    }
+  },
+  "primarySource": "OpenAlex"
+}

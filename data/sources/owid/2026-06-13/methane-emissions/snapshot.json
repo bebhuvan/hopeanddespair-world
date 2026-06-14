@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "methane-emissions",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/methane-emissions",
+  "checksum": "9f4bba692d5d150fa5b35559095fda8ab7cad2ae58aa1bca6b33d39de65d3ab9",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T13:37:13.035Z",
+  "adapterVersion": "1.0.0"
+}

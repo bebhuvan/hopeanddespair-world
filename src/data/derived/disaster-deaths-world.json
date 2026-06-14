@@ -1,0 +1,116 @@
+{
+  "indicatorId": "climate.disaster_deaths.world",
+  "entity": "OWID_WRL",
+  "entityName": "World",
+  "unit": "deaths",
+  "points": [
+    {
+      "t": 2000,
+      "value": 9042.66
+    },
+    {
+      "t": 2001,
+      "value": 30407.92
+    },
+    {
+      "t": 2002,
+      "value": 9374.939
+    },
+    {
+      "t": 2003,
+      "value": 35179.55
+    },
+    {
+      "t": 2004,
+      "value": 246485.1
+    },
+    {
+      "t": 2005,
+      "value": 96264.48
+    },
+    {
+      "t": 2006,
+      "value": 20419.19
+    },
+    {
+      "t": 2007,
+      "value": 16585.11
+    },
+    {
+      "t": 2008,
+      "value": 232923.44
+    },
+    {
+      "t": 2009,
+      "value": 10451.13
+    },
+    {
+      "t": 2010,
+      "value": 171714.88
+    },
+    {
+      "t": 2011,
+      "value": 32074
+    },
+    {
+      "t": 2012,
+      "value": 9081.42
+    },
+    {
+      "t": 2013,
+      "value": 26873.89
+    },
+    {
+      "t": 2014,
+      "value": 7663.3003
+    },
+    {
+      "t": 2015,
+      "value": 15321.1
+    },
+    {
+      "t": 2016,
+      "value": 8756.02
+    },
+    {
+      "t": 2017,
+      "value": 11049.75
+    },
+    {
+      "t": 2018,
+      "value": 11924.53
+    },
+    {
+      "t": 2019,
+      "value": 9715.17
+    },
+    {
+      "t": 2020,
+      "value": 9311.56
+    },
+    {
+      "t": 2021,
+      "value": 9198.9795
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "death_count__age_group_allages__sex_both_sexes__cause_natural_disasters",
+    "url": "https://ourworldindata.org/grapher/deaths-from-natural-disasters",
+    "license": "IHME Global Burden of Disease — link-only (non-commercial)",
+    "vintage": "2026-06-13",
+    "checksum": "90ce58221374b46e964a73988afb8592b488c0be2cb661e97998e86f04e8515a",
+    "definition": "Estimated number of deaths from natural disasters in both sexes.",
+    "attribution": "Our World in Data",
+    "primarySource": "IHME Global Burden of Disease (2021), via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity World"
+    }
+  ],
+  "derivedFrom": [
+    "OWID_WRL"
+  ]
+}

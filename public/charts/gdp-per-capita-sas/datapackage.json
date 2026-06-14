@@ -1,0 +1,38 @@
+{
+  "name": "economy-gdp_per_capita-sas",
+  "title": "GDP per capita (constant 2015 US$)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/NY.GDP.PCAP.KD"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "economy-gdp_per_capita-sas",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "economy_gdp_per_capita_sas",
+            "type": "number",
+            "unit": "constant 2015 US$"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "climate-ice_antarctica-world",
+  "title": "Antarctica ice-sheet mass change, World",
+  "licenses": [
+    {
+      "name": "Public Domain (NASA/JPL GRACE)",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "NASA/JPL — GRACE & GRACE-FO, via Our World in Data",
+      "path": "https://ourworldindata.org/grapher/ice-sheet-mass-balance"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "climate-ice_antarctica-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "climate_ice_antarctica_world",
+            "type": "number",
+            "unit": "billion tonnes"
+          }
+        ]
+      }
+    }
+  ]
+}

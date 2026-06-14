@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "health.malaria_incidence_wb.eas",
+    "unit": "per 1,000 population at risk",
+    "points": 23
+  },
+  "wasDerivedFrom": [
+    "EAS"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity EAS"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SH.MLR.INCD.P3",
+      "url": "https://data.worldbank.org/indicator/SH.MLR.INCD.P3",
+      "vintage": "2026-06-13",
+      "checksum": "8f32687d9e9ddfb0b907b7061c2a743d980a09688ce7e047a90a1b435ebae772",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "WHO World Malaria Report, via World Bank"
+}

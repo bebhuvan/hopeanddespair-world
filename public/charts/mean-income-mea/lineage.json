@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "economy.mean_income.mea",
+    "unit": "PPP$ per day (2021)",
+    "points": 46
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "identity",
+        "detail": "normalized directly from source"
+      }
+    ],
+    "agent": "adapter:pip@1.0.0",
+    "used": {
+      "source": "pip",
+      "slug": "pip-grp/wb/3.00/2021",
+      "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+      "vintage": "2026-06-12",
+      "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "World Bank — Poverty and Inequality Platform"
+}

@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "technology.mobile_subscriptions.world",
+    "unit": "per 100 people",
+    "points": 41
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "mobile-cellular-subscriptions-per-100-people",
+      "url": "https://ourworldindata.org/grapher/mobile-cellular-subscriptions-per-100-people",
+      "vintage": "2026-06-12",
+      "checksum": "4957ab04abde203572b76f0037b7a1fdf6d91b7323997340f7b310c13c909368",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "International Telecommunication Union — via World Bank / Our World in Data"
+}

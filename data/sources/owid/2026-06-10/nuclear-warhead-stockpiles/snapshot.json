@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "nuclear-warhead-stockpiles",
+  "vintage": "2026-06-10",
+  "url": "https://ourworldindata.org/grapher/nuclear-warhead-stockpiles",
+  "checksum": "2f38e76406e3de5e726cf7d5026af345776afeb6f46cf5ceef22fbc01ddc36ea",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-10T07:13:41.250Z",
+  "adapterVersion": "1.0.0"
+}

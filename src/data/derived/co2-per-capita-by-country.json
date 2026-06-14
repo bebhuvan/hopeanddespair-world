@@ -1,0 +1,89 @@
+{
+  "chartId": "co2-per-capita-by-country",
+  "kind": "bars",
+  "title": "CO₂ per person by country",
+  "unit": "CO₂ emissions per person, tonnes per year",
+  "yearSpan": "2024–2024",
+  "bars": [
+    {
+      "label": "Qatar",
+      "value": 41.3,
+      "color": "despair"
+    },
+    {
+      "label": "United States",
+      "value": 14.2,
+      "color": "despair"
+    },
+    {
+      "label": "Russia",
+      "value": 12.3,
+      "color": "despair"
+    },
+    {
+      "label": "China",
+      "value": 8.7,
+      "color": "despair"
+    },
+    {
+      "label": "Germany",
+      "value": 6.8,
+      "color": "despair"
+    },
+    {
+      "label": "Indonesia",
+      "value": 2.9,
+      "color": "ochre"
+    },
+    {
+      "label": "Brazil",
+      "value": 2.3,
+      "color": "ochre"
+    },
+    {
+      "label": "India",
+      "value": 2.2,
+      "color": "ochre"
+    },
+    {
+      "label": "Nigeria",
+      "value": 0.6,
+      "color": "hope"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 0.1,
+      "color": "hope"
+    },
+    {
+      "label": "DR Congo",
+      "value": 0.1,
+      "color": "hope"
+    }
+  ],
+  "xmax": 45,
+  "xTicks": [
+    0,
+    10,
+    20,
+    30,
+    40
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "co2-emissions-per-capita",
+    "url": "https://ourworldindata.org/grapher/co2-emissions-per-capita",
+    "license": "CC BY 4.0",
+    "vintage": "2024–2024",
+    "checksum": "c7b62f932c2de5912e5c70cfa881fabc5c8fc848300bc8d53f524fad28cb8f96",
+    "definition": "Production-based CO₂ emissions per person (tonnes/year), latest year per country. A curated 11-country spread sorted descending.",
+    "attribution": "Global Carbon Project, via Our World in Data",
+    "primarySource": "Global Carbon Project"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 11 curated countries sorted descending"
+    }
+  ]
+}

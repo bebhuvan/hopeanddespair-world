@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "work.working_poverty.world",
+    "unit": "% of employed",
+    "points": 26
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "identity",
+        "detail": "normalized directly from source"
+      }
+    ],
+    "agent": "adapter:ilostat@1.0.0",
+    "used": {
+      "source": "ilostat",
+      "slug": "DF_SDG_0111_SEX_AGE_RT",
+      "url": "https://sdmx.ilo.org/rest/data/DF_SDG_0111_SEX_AGE_RT/all?startPeriod=1990",
+      "vintage": "2026-06-12",
+      "checksum": "ab0fbcb36a924590fb543a97abd2f49d3ede7fcd98729276342cf460076c0175",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "ILOSTAT — International Labour Organization (SDG 1.1.1)"
+}

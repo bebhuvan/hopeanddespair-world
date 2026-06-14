@@ -1,0 +1,176 @@
+{
+  "indicatorId": "economy.poverty_300.world",
+  "entity": "OWID_WRL",
+  "entityName": "World",
+  "unit": "%",
+  "points": [
+    {
+      "t": 1990,
+      "value": 43.41358244419098
+    },
+    {
+      "t": 1991,
+      "value": 43.117642402648926
+    },
+    {
+      "t": 1992,
+      "value": 42.50909388065338
+    },
+    {
+      "t": 1993,
+      "value": 42.05637872219086
+    },
+    {
+      "t": 1994,
+      "value": 40.73289930820465
+    },
+    {
+      "t": 1995,
+      "value": 39.40418362617493
+    },
+    {
+      "t": 1996,
+      "value": 38.07438015937805
+    },
+    {
+      "t": 1997,
+      "value": 37.688758969306946
+    },
+    {
+      "t": 1998,
+      "value": 37.91733682155609
+    },
+    {
+      "t": 1999,
+      "value": 37.32561469078064
+    },
+    {
+      "t": 2000,
+      "value": 36.20489239692688
+    },
+    {
+      "t": 2001,
+      "value": 35.2544367313385
+    },
+    {
+      "t": 2002,
+      "value": 33.739686012268066
+    },
+    {
+      "t": 2003,
+      "value": 32.15485215187073
+    },
+    {
+      "t": 2004,
+      "value": 30.262309312820435
+    },
+    {
+      "t": 2005,
+      "value": 28.329738974571228
+    },
+    {
+      "t": 2006,
+      "value": 26.992404460906982
+    },
+    {
+      "t": 2007,
+      "value": 25.285276770591736
+    },
+    {
+      "t": 2008,
+      "value": 24.138276278972626
+    },
+    {
+      "t": 2009,
+      "value": 23.06017130613327
+    },
+    {
+      "t": 2010,
+      "value": 20.98396122455597
+    },
+    {
+      "t": 2011,
+      "value": 19.10192221403122
+    },
+    {
+      "t": 2012,
+      "value": 17.825224995613098
+    },
+    {
+      "t": 2013,
+      "value": 15.503941476345062
+    },
+    {
+      "t": 2014,
+      "value": 14.507512748241425
+    },
+    {
+      "t": 2015,
+      "value": 13.421565294265747
+    },
+    {
+      "t": 2016,
+      "value": 12.573675811290741
+    },
+    {
+      "t": 2017,
+      "value": 11.79322600364685
+    },
+    {
+      "t": 2018,
+      "value": 11.11886128783226
+    },
+    {
+      "t": 2019,
+      "value": 10.763254761695862
+    },
+    {
+      "t": 2020,
+      "value": 11.411947757005692
+    },
+    {
+      "t": 2021,
+      "value": 11.326881498098373
+    },
+    {
+      "t": 2022,
+      "value": 10.88874638080597
+    },
+    {
+      "t": 2023,
+      "value": 10.618219524621964
+    },
+    {
+      "t": 2024,
+      "value": 10.40017232298851
+    },
+    {
+      "t": 2025,
+      "value": 10.196655988693237
+    },
+    {
+      "t": 2026,
+      "value": 9.975934773683548
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "headcount_ratio__ppp_version_2021__poverty_line_300__welfare_type_income_or_consumption__table_income_or_consumption_consolidated__survey_comparability_no_spells",
+    "url": "https://ourworldindata.org/grapher/share-of-population-in-extreme-poverty",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "2a3b1658b965af528cce7071543aa512a049a5e45ad38846c0280809f5848606",
+    "definition": "Percentage of population living in households with an income or consumption below $3 per day.",
+    "attribution": "Our World in Data",
+    "primarySource": "World Bank PIP (2021 PPP) — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity World"
+    }
+  ],
+  "derivedFrom": [
+    "OWID_WRL"
+  ]
+}

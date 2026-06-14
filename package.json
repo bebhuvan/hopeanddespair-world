@@ -12,28 +12,37 @@
     "preview": "astro preview",
     "data": "tsx scripts/pipeline.ts",
     "llm:check": "tsx scripts/llm-check.ts",
+    "prose": "tsx scripts/write-prose.ts",
+    "prose:lint": "tsx scripts/prose-lint.ts",
     "check": "astro check",
     "check:size": "size-limit",
     "check:nojs": "test -z \"$(find dist -name '*.js' -not -path '*/pagefind/*' 2>/dev/null)\" && echo 'OK: zero external JS on content pages (search index under /pagefind only)' || (echo 'FAIL: external JS found outside /pagefind' && find dist -name '*.js' -not -path '*/pagefind/*' && exit 1)",
     "check:nolib": "! grep -rlE 'd3\\.(min|v[0-9]|select|scale)|chart\\.js|new Chart\\(|Highcharts|Plotly|echarts|recharts' dist --include='*.html' --include='*.js' || (echo 'FAIL: a charting library leaked into the build' && exit 1)",
-    "verify": "pnpm build && pnpm check:size && pnpm check:nojs && pnpm check:nolib"
+    "verify": "pnpm prose:lint && pnpm build && pnpm check:size && pnpm check:nojs && pnpm check:nolib",
+    "og": "tsx scripts/make-og.ts",
+    "cf:dev": "wrangler dev",
+    "deploy": "astro build && wrangler deploy"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.18",
+    "@fontsource-variable/schibsted-grotesk": "^5.2.8",
+    "@fontsource-variable/source-serif-4": "^5.2.9",
+    "@fontsource-variable/spline-sans-mono": "^5.2.8",
     "astro": "^5.6.1",
     "zod": "^4.4.3"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
     "@fontsource-variable/fraunces": "^5.1.1",
-    "@fontsource-variable/newsreader": "^5.1.1",
     "@fontsource/geist-mono": "^5.1.0",
     "@fontsource/geist-sans": "^5.1.0",
     "@size-limit/file": "^11.1.6",
     "pagefind": "^1.5.2",
+    "sharp": "^0.35.1",
     "size-limit": "^11.1.6",
     "tsx": "^4.22.4",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "wrangler": "^4.100.0"
   },
   "size-limit": [
     {
@@ -45,6 +54,16 @@
       "name": "home page (gz)",
       "path": "dist/index.html",
       "limit": "60 kB"
+    },
+    {
+      "name": "keystone hub (the 23-dimension front door — deliberate exception; world→region→country lens on every dimension, each chart now carrying a portrait mobile twin so the 80% of readers on phones get a phone-first render)",
+      "path": "dist/questions/is-the-world-getting-better-or-worse/index.html",
+      "limit": "168 kB"
+    },
+    {
+      "name": "climate mega-article (the flagship — full climate+energy system, 20 movements; zero-JS static SVG + a portrait mobile twin per chart)",
+      "path": "dist/questions/is-the-climate-stabilizing-or-breaking/index.html",
+      "limit": "130 kB"
     }
   ],
   "pnpm": {

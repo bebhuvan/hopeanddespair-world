@@ -334,7 +334,7 @@
     "sourceIndicator": "life_expectancy_0",
     "url": "https://ourworldindata.org/grapher/life-expectancy",
     "license": "CC BY 4.0",
-    "vintage": "2026-06-08",
+    "vintage": "2026-06-12",
     "checksum": "6336e80067d72cd910e5b03a4150bbb203fb8f22c6a9c0c43e91aba07038720b",
     "definition": "Period life expectancy is the number of years the average person born in a certain year would live if they experienced the same chances of dying at each age as people did that year.",
     "attribution": "Our World in Data",

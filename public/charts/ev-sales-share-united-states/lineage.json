@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "transport.ev_sales_share.united-states",
+    "unit": "percent",
+    "points": 16
+  },
+  "wasDerivedFrom": [
+    "USA"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity USA"
+      }
+    ],
+    "agent": "adapter:iea@1.0.0",
+    "used": {
+      "source": "iea",
+      "slug": "evs",
+      "url": "https://api.iea.org/evs?region=USA&csv=true",
+      "vintage": "2026-06-13",
+      "checksum": "2b72c5c7b84baf0dc61c3fab566b52d6bd026b5e21e06d189083a71089c39057",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+}

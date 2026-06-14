@@ -1,0 +1,203 @@
+{
+  "indicatorId": "economy.poverty_gap.afe",
+  "entity": "AFE",
+  "entityName": "Eastern and Southern Africa",
+  "unit": "% of the poverty line",
+  "points": [
+    {
+      "t": 1981,
+      "value": 27.92
+    },
+    {
+      "t": 1982,
+      "value": 28.23
+    },
+    {
+      "t": 1983,
+      "value": 28.89
+    },
+    {
+      "t": 1984,
+      "value": 29.509999999999998
+    },
+    {
+      "t": 1985,
+      "value": 30.009999999999998
+    },
+    {
+      "t": 1986,
+      "value": 29.630000000000003
+    },
+    {
+      "t": 1987,
+      "value": 29.28
+    },
+    {
+      "t": 1988,
+      "value": 29.330000000000002
+    },
+    {
+      "t": 1989,
+      "value": 28.99
+    },
+    {
+      "t": 1990,
+      "value": 29.509999999999998
+    },
+    {
+      "t": 1991,
+      "value": 30.930000000000003
+    },
+    {
+      "t": 1992,
+      "value": 31.97
+    },
+    {
+      "t": 1993,
+      "value": 32.46
+    },
+    {
+      "t": 1994,
+      "value": 32.78
+    },
+    {
+      "t": 1995,
+      "value": 32.37
+    },
+    {
+      "t": 1996,
+      "value": 31.71
+    },
+    {
+      "t": 1997,
+      "value": 31.72
+    },
+    {
+      "t": 1998,
+      "value": 32.06
+    },
+    {
+      "t": 1999,
+      "value": 31.65
+    },
+    {
+      "t": 2000,
+      "value": 31.319999999999997
+    },
+    {
+      "t": 2001,
+      "value": 30.61
+    },
+    {
+      "t": 2002,
+      "value": 30.59
+    },
+    {
+      "t": 2003,
+      "value": 29.74
+    },
+    {
+      "t": 2004,
+      "value": 27.73
+    },
+    {
+      "t": 2005,
+      "value": 26.450000000000003
+    },
+    {
+      "t": 2006,
+      "value": 25.61
+    },
+    {
+      "t": 2007,
+      "value": 24.32
+    },
+    {
+      "t": 2008,
+      "value": 23.51
+    },
+    {
+      "t": 2009,
+      "value": 23.62
+    },
+    {
+      "t": 2010,
+      "value": 22.36
+    },
+    {
+      "t": 2011,
+      "value": 21.81
+    },
+    {
+      "t": 2012,
+      "value": 20.82
+    },
+    {
+      "t": 2013,
+      "value": 20.27
+    },
+    {
+      "t": 2014,
+      "value": 20.16
+    },
+    {
+      "t": 2015,
+      "value": 20.31
+    },
+    {
+      "t": 2016,
+      "value": 20.75
+    },
+    {
+      "t": 2017,
+      "value": 21.04
+    },
+    {
+      "t": 2018,
+      "value": 21.25
+    },
+    {
+      "t": 2019,
+      "value": 21.58
+    },
+    {
+      "t": 2020,
+      "value": 22.58
+    },
+    {
+      "t": 2021,
+      "value": 22.31
+    },
+    {
+      "t": 2022,
+      "value": 21.88
+    },
+    {
+      "t": 2023,
+      "value": 21.55
+    },
+    {
+      "t": 2024,
+      "value": 21.46
+    },
+    {
+      "t": 2025,
+      "value": 20.990000000000002
+    },
+    {
+      "t": 2026,
+      "value": 20.49
+    }
+  ],
+  "provenance": {
+    "source": "pip",
+    "sourceIndicator": "poverty_gap @ $3.00/day (2021 PPP)",
+    "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+    "definition": "Poverty gap at $3.00/day (2021 PPP), Eastern & Southern Africa",
+    "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+    "primarySource": "World Bank — Poverty and Inequality Platform"
+  }
+}

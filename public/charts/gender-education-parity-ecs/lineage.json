@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "gender.education_parity.ecs",
+    "unit": "ratio, female to male",
+    "points": 51
+  },
+  "wasDerivedFrom": [
+    "ECS"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity ECS"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SE.ENR.PRSC.FM.ZS",
+      "url": "https://data.worldbank.org/indicator/SE.ENR.PRSC.FM.ZS",
+      "vintage": "2026-06-12",
+      "checksum": "c2a8eb4b91943a53296ed99e6c502e3e27541bfb0887d9a34ced3b4434ca8989",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UNESCO Institute for Statistics, via World Bank"
+}

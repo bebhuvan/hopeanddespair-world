@@ -1,0 +1,101 @@
+[
+  {
+    "indicatorId": "safety.road_deaths.eas",
+    "entity": "EAS",
+    "entityName": "East Asia & Pacific",
+    "unit": "per 100,000",
+    "points": [
+      {
+        "t": 2000,
+        "value": 20.2344518175921
+      },
+      {
+        "t": 2001,
+        "value": 20.3902016769817
+      },
+      {
+        "t": 2002,
+        "value": 20.4475109406422
+      },
+      {
+        "t": 2003,
+        "value": 19.7325167096748
+      },
+      {
+        "t": 2004,
+        "value": 19.2731721016234
+      },
+      {
+        "t": 2005,
+        "value": 19.3626509585661
+      },
+      {
+        "t": 2006,
+        "value": 19.2062880772996
+      },
+      {
+        "t": 2007,
+        "value": 19.1431068069383
+      },
+      {
+        "t": 2008,
+        "value": 18.8107694409416
+      },
+      {
+        "t": 2009,
+        "value": 18.8475043387884
+      },
+      {
+        "t": 2010,
+        "value": 18.730047531086
+      },
+      {
+        "t": 2011,
+        "value": 18.8693985359294
+      },
+      {
+        "t": 2012,
+        "value": 18.4713194622087
+      },
+      {
+        "t": 2013,
+        "value": 17.945458327444
+      },
+      {
+        "t": 2014,
+        "value": 17.2885029257618
+      },
+      {
+        "t": 2015,
+        "value": 17.0307621783565
+      },
+      {
+        "t": 2016,
+        "value": 16.866538381531
+      },
+      {
+        "t": 2017,
+        "value": 16.7951957192725
+      },
+      {
+        "t": 2018,
+        "value": 16.6021049064681
+      },
+      {
+        "t": 2019,
+        "value": 16.5089144477994
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SH.STA.TRAF.P5",
+      "url": "https://data.worldbank.org/indicator/SH.STA.TRAF.P5",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "3645888d5849d1a57e9410b5550549b07c5a7a20e749e03421069f8a80f4a6c4",
+      "definition": "Mortality caused by road traffic injury (per 100,000 population)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "WHO, via World Bank"
+    }
+  }
+]

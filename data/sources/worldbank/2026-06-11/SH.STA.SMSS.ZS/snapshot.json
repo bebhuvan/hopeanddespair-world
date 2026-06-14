@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "SH.STA.SMSS.ZS",
+  "vintage": "2026-06-11",
+  "url": "https://data.worldbank.org/indicator/SH.STA.SMSS.ZS",
+  "checksum": "57a53958b374a8cd6174d30a7b1ed4abc376b92658a3a092ead77ed624642c79",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T10:06:54.087Z",
+  "adapterVersion": "1.0.0"
+}

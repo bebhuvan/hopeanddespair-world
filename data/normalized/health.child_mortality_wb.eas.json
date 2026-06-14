@@ -1,0 +1,161 @@
+[
+  {
+    "indicatorId": "health.child_mortality_wb.eas",
+    "entity": "EAS",
+    "entityName": "East Asia & Pacific",
+    "unit": "per 1,000 live births",
+    "points": [
+      {
+        "t": 1990,
+        "value": 56.4
+      },
+      {
+        "t": 1991,
+        "value": 55.2
+      },
+      {
+        "t": 1992,
+        "value": 53.9
+      },
+      {
+        "t": 1993,
+        "value": 52.3
+      },
+      {
+        "t": 1994,
+        "value": 50.6
+      },
+      {
+        "t": 1995,
+        "value": 49.6
+      },
+      {
+        "t": 1996,
+        "value": 47.8
+      },
+      {
+        "t": 1997,
+        "value": 45.9
+      },
+      {
+        "t": 1998,
+        "value": 43.9
+      },
+      {
+        "t": 1999,
+        "value": 41.9
+      },
+      {
+        "t": 2000,
+        "value": 39.6
+      },
+      {
+        "t": 2001,
+        "value": 37.5
+      },
+      {
+        "t": 2002,
+        "value": 35.5
+      },
+      {
+        "t": 2003,
+        "value": 32.6
+      },
+      {
+        "t": 2004,
+        "value": 31.5
+      },
+      {
+        "t": 2005,
+        "value": 28.7
+      },
+      {
+        "t": 2006,
+        "value": 27
+      },
+      {
+        "t": 2007,
+        "value": 25.4
+      },
+      {
+        "t": 2008,
+        "value": 24.9
+      },
+      {
+        "t": 2009,
+        "value": 22.5
+      },
+      {
+        "t": 2010,
+        "value": 21.4
+      },
+      {
+        "t": 2011,
+        "value": 20.3
+      },
+      {
+        "t": 2012,
+        "value": 19.1
+      },
+      {
+        "t": 2013,
+        "value": 18.2
+      },
+      {
+        "t": 2014,
+        "value": 17.2
+      },
+      {
+        "t": 2015,
+        "value": 16.6
+      },
+      {
+        "t": 2016,
+        "value": 15.7
+      },
+      {
+        "t": 2017,
+        "value": 15
+      },
+      {
+        "t": 2018,
+        "value": 14.8
+      },
+      {
+        "t": 2019,
+        "value": 14.3
+      },
+      {
+        "t": 2020,
+        "value": 14.4
+      },
+      {
+        "t": 2021,
+        "value": 14.2
+      },
+      {
+        "t": 2022,
+        "value": 14
+      },
+      {
+        "t": 2023,
+        "value": 13.7
+      },
+      {
+        "t": 2024,
+        "value": 13.2
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SH.DYN.MORT",
+      "url": "https://data.worldbank.org/indicator/SH.DYN.MORT",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "032b7997394a921422ac4cfa34aaf93b253621697207257cb250eacf2711f944",
+      "definition": "Mortality rate, under-5 (per 1,000 live births)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "UN IGME, via World Bank"
+    }
+  }
+]

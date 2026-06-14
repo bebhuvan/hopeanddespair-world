@@ -1,0 +1,85 @@
+{
+  "chartId": "consumption-co2-pc-by-country",
+  "kind": "bars",
+  "title": "Consumption-based CO₂ per person by country",
+  "unit": "Consumption-based CO₂ per person, tonnes per year",
+  "yearSpan": "2023–2023",
+  "bars": [
+    {
+      "label": "United States",
+      "value": 15.8,
+      "color": "despair"
+    },
+    {
+      "label": "Australia",
+      "value": 14.1,
+      "color": "despair"
+    },
+    {
+      "label": "Germany",
+      "value": 9.1,
+      "color": "despair"
+    },
+    {
+      "label": "China",
+      "value": 7.6,
+      "color": "despair"
+    },
+    {
+      "label": "United Kingdom",
+      "value": 7.1,
+      "color": "despair"
+    },
+    {
+      "label": "Sweden",
+      "value": 5.8,
+      "color": "despair"
+    },
+    {
+      "label": "Brazil",
+      "value": 2.2,
+      "color": "ochre"
+    },
+    {
+      "label": "India",
+      "value": 1.8,
+      "color": "ochre"
+    },
+    {
+      "label": "Nigeria",
+      "value": 0.6,
+      "color": "hope"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 0.2,
+      "color": "hope"
+    }
+  ],
+  "xmax": 25,
+  "xTicks": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "consumption-co2-per-capita",
+    "url": "https://ourworldindata.org/grapher/consumption-co2-per-capita",
+    "license": "CC BY 4.0",
+    "vintage": "2023–2023",
+    "checksum": "17d78257d34c11de2849996a2dd6f034a5ce4ab9b943f710f8e94f07cacdc14d",
+    "definition": "Consumption-based CO₂ emissions per person (tonnes/year, counting the carbon embodied in imports), latest year per country. A curated 10-country spread sorted descending.",
+    "attribution": "Global Carbon Budget, via Our World in Data",
+    "primarySource": "Global Carbon Budget (2025)"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 10 curated countries sorted descending"
+    }
+  ]
+}

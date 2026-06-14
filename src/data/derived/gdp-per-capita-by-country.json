@@ -1,0 +1,94 @@
+{
+  "chartId": "gdp-per-capita-by-country",
+  "kind": "bars",
+  "title": "GDP per capita by country",
+  "unit": "GDP per capita, $ thousand (constant 2015)",
+  "yearSpan": "2024–2024",
+  "bars": [
+    {
+      "label": "Switzerland",
+      "value": 90.1,
+      "color": "hope"
+    },
+    {
+      "label": "United States",
+      "value": 66.4,
+      "color": "hope"
+    },
+    {
+      "label": "Germany",
+      "value": 44,
+      "color": "hope"
+    },
+    {
+      "label": "Japan",
+      "value": 37.2,
+      "color": "hope"
+    },
+    {
+      "label": "China",
+      "value": 13.1,
+      "color": "hope"
+    },
+    {
+      "label": "Brazil",
+      "value": 9.6,
+      "color": "ochre"
+    },
+    {
+      "label": "India",
+      "value": 2.4,
+      "color": "ochre"
+    },
+    {
+      "label": "Nigeria",
+      "value": 2.3,
+      "color": "ochre"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 1.9,
+      "color": "despair"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 0.9,
+      "color": "despair"
+    },
+    {
+      "label": "DR Congo",
+      "value": 0.6,
+      "color": "despair"
+    },
+    {
+      "label": "Burundi",
+      "value": 0.3,
+      "color": "despair"
+    }
+  ],
+  "xmax": 100,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "provenance": {
+    "source": "wb",
+    "sourceIndicator": "NY.GDP.PCAP.KD",
+    "url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.KD",
+    "license": "CC BY 4.0",
+    "vintage": "2024–2024",
+    "checksum": "890ce3f379309ebf58aeaed2fa3ae8edb7e63d1a418cd17880139825e3f4b29b",
+    "definition": "GDP per capita in constant 2015 US$, latest year per country, shown in $ thousand. A curated 12-country spread sorted descending.",
+    "attribution": "World Bank national accounts",
+    "primarySource": "World Bank — World Development Indicators"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, ÷1000, 12 curated countries sorted descending"
+    }
+  ]
+}

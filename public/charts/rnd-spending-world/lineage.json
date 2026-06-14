@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "science.rnd_spend_gdp.world",
+    "unit": "% of GDP",
+    "points": 27
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "research-spending-gdp",
+      "url": "https://ourworldindata.org/grapher/research-spending-gdp",
+      "vintage": "2026-06-12",
+      "checksum": "cd026f630fffa05ec2d040d6662240155ba800239004e1cdeccdd7f43a47a782",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UNESCO Institute for Statistics — via Our World in Data"
+}

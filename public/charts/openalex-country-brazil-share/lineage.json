@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "science.openalex_country_brazil_share.world",
+    "unit": "% of OpenAlex works",
+    "points": 25
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "derived_transform",
+        "detail": "divided Brazil yearly country-attributed work count by all OpenAlex works in the same year"
+      }
+    ],
+    "agent": "adapter:openalex@openalex-story-1.0.0",
+    "used": {
+      "source": "openalex",
+      "slug": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:BR&group_by=publication_year / all works",
+      "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:BR&group_by=publication_year&per-page=100",
+      "vintage": "2026-06-13",
+      "checksum": "ee4215ac25aba519f739dd26a88838629b0544ccf8963f93d036a230ebbe0710",
+      "license": "CC0 1.0"
+    }
+  },
+  "primarySource": "OpenAlex"
+}

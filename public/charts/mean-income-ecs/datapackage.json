@@ -1,0 +1,38 @@
+{
+  "name": "economy-mean_income-ecs",
+  "title": "Mean income or consumption per day, Europe & Central Asia",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — Poverty and Inequality Platform (PIP)",
+      "path": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "economy-mean_income-ecs",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "economy_mean_income_ecs",
+            "type": "number",
+            "unit": "PPP$ per day (2021)"
+          }
+        ]
+      }
+    }
+  ]
+}

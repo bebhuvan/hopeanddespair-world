@@ -1,70 +1,82 @@
-/* hopeanddespair.world — canonical design tokens (ported from mockups/*-v4/v5).
-   Light is the PRIMARY theme; dark ships behind a toggle. Colour is a *temperature*
-   (hope = cool, despair = warm, uncertain = neutral), never a stoplight. See DESIGN.md. */
+/* hopeanddespair.world — canonical design tokens (redesign 2026).
+   Light is the primary (and, for now, only) theme. Colour is a *temperature*
+   (hope = deep pine green, despair = terracotta, uncertain = indigo), never a stoplight.
+   The page is built from white + hairlines + type; there are no solid surfaces. */
 
 :root {
   /* surfaces */
-  --bg: #FBFCFE;
-  --bg-2: #EEF2F7;
+  --bg: #FFFFFF;
+  --bg-soft: #FAFAF7;     /* the one warm-white moment, for the closing */
+  --bg-2: #FAFAF7;
   --panel: #FFFFFF;
 
-  /* ink */
-  --fg: #0D1117;
-  --fg-2: #39414D;
-  --fg-muted: #79828F;
+  /* ink (warm near-black → muted) */
+  --ink: #14130F;
+  --ink-2: #2B2823;
+  --ink-3: #7C7A72;
+  --fg: #14130F;
+  --fg-2: #2B2823;
+  --fg-muted: #7C7A72;
+  --on-dark: #ECE7DB;
+  --on-dark-2: #A8A296;
 
-  /* rules (hairlines do the structural work — sparingly) */
-  --rule: rgba(13, 17, 23, 0.09);
-  --rule-2: rgba(13, 17, 23, 0.18);
+  /* hairlines do all the structural work */
+  --line: rgba(20, 19, 15, 0.11);
+  --line-2: rgba(20, 19, 15, 0.20);
+  --rule: rgba(20, 19, 15, 0.11);
+  --rule-2: rgba(20, 19, 15, 0.20);
 
-  /* temperature triad + brand accent */
-  --accent: #0FA67E;
-  --hope: #0FA67E;
-  --despair: #F0512E;
-  --uncertain: #5B61E6;
-  --ochre: #C7901F;
+  /* temperature triad — deep and editorial, used as a jewel not a coat of paint.
+     Refined 2026 from a bright emerald/coral (read loud at display size) to a pine
+     green + terracotta: quieter, still cool-vs-warm, still legible as line colours on white. */
+  --accent: #0F7A52;
+  --hope: #0F7A52;
+  --despair: #C0492B;
+  --uncertain: #5A55E6;
+  --ochre: #C7901A;
+  --stone: #6E7E92; /* the quiet fifth — a secondary series when the four temperatures are spent */
+  --gold: #B8861C;
 
-  /* aliases used by ported article CSS (keep in sync with the triad above) */
-  --brass: #0FA67E;
-  --brass-dim: rgba(15, 166, 126, 0.32);
-  --teal: #0FA67E;
-  --ember: #F0512E;
-  --slate: #2F6FE0;
-  --plum: #5B61E6;
+  /* aliases kept for the not-yet-reskinned pages (archive/about/methodology/sources/search) */
+  --brass: #0F7A52;
+  --brass-dim: rgba(15, 122, 82, 0.30);
+  --teal: #0F7A52;
+  --ember: #C0492B;
+  --slate: #5A55E6;
+  --plum: #5A55E6;
 
-  /* type */
-  --font-display: "Fraunces Variable", Georgia, serif;
-  --font-body: "Newsreader Variable", "Source Serif 4", Georgia, serif;
-  --font-label: "Geist", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Geist Mono", ui-monospace, monospace;
+  /* type — confident grotesque headlines, warm serif voice, mono for data.
+     Source Serif 4: big x-height, low contrast, real italics + optical sizing — built for
+     screen text (Newsreader read wiry and underweight beside the grotesk). */
+  --display: "Schibsted Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
+  --serif: "Source Serif 4 Variable", Georgia, serif;
+  --body: "Source Serif 4 Variable", Georgia, serif;
+  --mono: "Spline Sans Mono Variable", ui-monospace, monospace;
+  /* semantic aliases used by the existing pages */
+  --font-display: var(--display);
+  --font-body: var(--body);
+  --font-serif: var(--serif);
+  --font-label: var(--mono);
+  --font-mono: var(--mono);
+
+  /* the reading scale — every paragraph on the site is one of these four. Display sizes
+     stay per-component (they are composition), but running text never invents its own size:
+     that hand-tuned 1.00/1.04/1.06/1.08/1.12 drift is exactly what read as "haphazard". */
+  --fs-lede: clamp(1.26rem, 1.6vw, 1.44rem);   /* the section-opening read */
+  --fs-body: 1.16rem;                          /* all running text — a touch larger reads warmer for a serif */
+  --fs-small: 0.96rem;                         /* notes, asides, small print */
+  --fs-meta: 0.74rem;                          /* mono chrome: sources, tools, captions */
+  --lh-body: 1.64;   /* tightens on phones below — short lines want less lead */
 
   /* layout */
-  --margin: clamp(1.25rem, 5.5vw, 7rem);
-  --measure: 64ch;
+  --col: 55rem;
+  --measure: 36rem;   /* ~66ch at the (slightly larger) body size — the comfortable book range */
+  --gutter: 6rem;
+  --rgap: clamp(1rem, 3vw, 2.6rem);
+  --margin: clamp(1.25rem, 5vw, 2.5rem);
 }
 
-[data-theme="dark"] {
-  --bg: #0A0D12;
-  --bg-2: #141A22;
-  --panel: #10151C;
-
-  --fg: #EEF2F7;
-  --fg-2: #B8C0CC;
-  --fg-muted: #7C8693;
-
-  --rule: rgba(238, 242, 247, 0.10);
-  --rule-2: rgba(238, 242, 247, 0.20);
-
-  --accent: #2FE3B6;
-  --hope: #2FE3B6;
-  --despair: #FF6A4D;
-  --uncertain: #8E93FF;
-  --ochre: #FFC24B;
-
-  --brass: #2FE3B6;
-  --brass-dim: rgba(47, 227, 182, 0.34);
-  --teal: #2FE3B6;
-  --ember: #FF6A4D;
-  --slate: #6AA8FF;
-  --plum: #8E93FF;
+/* a ~40ch phone line needs less leading than a 68ch desktop line */
+@media (max-width: 680px) {
+  :root { --lh-body: 1.55; }
 }

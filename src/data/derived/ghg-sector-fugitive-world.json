@@ -1,0 +1,164 @@
+{
+  "indicatorId": "climate.ghg_sector_fugitive.world",
+  "entity": "OWID_WRL",
+  "entityName": "World",
+  "unit": "tonnes",
+  "points": [
+    {
+      "t": 1990,
+      "value": 2618149888
+    },
+    {
+      "t": 1991,
+      "value": 2618020096
+    },
+    {
+      "t": 1992,
+      "value": 2551899904
+    },
+    {
+      "t": 1993,
+      "value": 2558469888
+    },
+    {
+      "t": 1994,
+      "value": 2559290112
+    },
+    {
+      "t": 1995,
+      "value": 2634520064
+    },
+    {
+      "t": 1996,
+      "value": 2698020096
+    },
+    {
+      "t": 1997,
+      "value": 2708640000
+    },
+    {
+      "t": 1998,
+      "value": 2687899904
+    },
+    {
+      "t": 1999,
+      "value": 2669220096
+    },
+    {
+      "t": 2000,
+      "value": 2787360000
+    },
+    {
+      "t": 2001,
+      "value": 2807270144
+    },
+    {
+      "t": 2002,
+      "value": 2775200000
+    },
+    {
+      "t": 2003,
+      "value": 2960560128
+    },
+    {
+      "t": 2004,
+      "value": 3051980032
+    },
+    {
+      "t": 2005,
+      "value": 3187590144
+    },
+    {
+      "t": 2006,
+      "value": 3221889792
+    },
+    {
+      "t": 2007,
+      "value": 3266629888
+    },
+    {
+      "t": 2008,
+      "value": 3284499968
+    },
+    {
+      "t": 2009,
+      "value": 3231600128
+    },
+    {
+      "t": 2010,
+      "value": 3342790144
+    },
+    {
+      "t": 2011,
+      "value": 3453469952
+    },
+    {
+      "t": 2012,
+      "value": 3470739968
+    },
+    {
+      "t": 2013,
+      "value": 3485779968
+    },
+    {
+      "t": 2014,
+      "value": 3515600128
+    },
+    {
+      "t": 2015,
+      "value": 3456800000
+    },
+    {
+      "t": 2016,
+      "value": 3379229952
+    },
+    {
+      "t": 2017,
+      "value": 3386790144
+    },
+    {
+      "t": 2018,
+      "value": 3471889920
+    },
+    {
+      "t": 2019,
+      "value": 3532969984
+    },
+    {
+      "t": 2020,
+      "value": 3260950016
+    },
+    {
+      "t": 2021,
+      "value": 3318579968
+    },
+    {
+      "t": 2022,
+      "value": 3349889792
+    },
+    {
+      "t": 2023,
+      "value": 3431770112
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "fugitive_ghg_emissions",
+    "url": "https://ourworldindata.org/grapher/ghg-emissions-by-sector",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "6bd8581a73b3c5da14c09d12490ab53cd1ed159b559cf4299351b4e9b816d8fa",
+    "definition": "Emissions are measured in tonnes of carbon dioxide-equivalents.",
+    "attribution": "Our World in Data",
+    "primarySource": "Climate Watch (2026) — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity World"
+    }
+  ],
+  "derivedFrom": [
+    "OWID_WRL"
+  ]
+}

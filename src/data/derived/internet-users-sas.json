@@ -1,0 +1,108 @@
+{
+  "indicatorId": "technology.internet_users.sas",
+  "entity": "SAS",
+  "entityName": "South Asia",
+  "unit": "% of population",
+  "points": [
+    {
+      "t": 2005,
+      "value": 2.1
+    },
+    {
+      "t": 2006,
+      "value": 2.6
+    },
+    {
+      "t": 2007,
+      "value": 3.7
+    },
+    {
+      "t": 2008,
+      "value": 4.1
+    },
+    {
+      "t": 2009,
+      "value": 4.9
+    },
+    {
+      "t": 2010,
+      "value": 7.1
+    },
+    {
+      "t": 2011,
+      "value": 9.4
+    },
+    {
+      "t": 2012,
+      "value": 10.4
+    },
+    {
+      "t": 2013,
+      "value": 11.7
+    },
+    {
+      "t": 2014,
+      "value": 13
+    },
+    {
+      "t": 2015,
+      "value": 14.7
+    },
+    {
+      "t": 2016,
+      "value": 16.7
+    },
+    {
+      "t": 2017,
+      "value": 18.8
+    },
+    {
+      "t": 2018,
+      "value": 20.9
+    },
+    {
+      "t": 2019,
+      "value": 29.7
+    },
+    {
+      "t": 2020,
+      "value": 42.5
+    },
+    {
+      "t": 2021,
+      "value": 48
+    },
+    {
+      "t": 2022,
+      "value": 54.2
+    },
+    {
+      "t": 2023,
+      "value": 58.3
+    },
+    {
+      "t": 2024,
+      "value": 62.8
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "IT.NET.USER.ZS",
+    "url": "https://data.worldbank.org/indicator/IT.NET.USER.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "421e7831857b839bb172f4ef90ec7714b7b35de99a1e23f400f114cd7c0322cd",
+    "definition": "Individuals using the Internet (% of population)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "ITU, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity SAS"
+    }
+  ],
+  "derivedFrom": [
+    "SAS"
+  ]
+}

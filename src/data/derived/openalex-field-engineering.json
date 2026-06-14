@@ -1,0 +1,125 @@
+{
+  "indicatorId": "science.openalex_field_engineering.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "works per year, million",
+  "points": [
+    {
+      "t": 2000,
+      "value": 0.76
+    },
+    {
+      "t": 2001,
+      "value": 0.82
+    },
+    {
+      "t": 2002,
+      "value": 1.02
+    },
+    {
+      "t": 2003,
+      "value": 1.04
+    },
+    {
+      "t": 2004,
+      "value": 1.11
+    },
+    {
+      "t": 2005,
+      "value": 1.22
+    },
+    {
+      "t": 2006,
+      "value": 1.31
+    },
+    {
+      "t": 2007,
+      "value": 1.37
+    },
+    {
+      "t": 2008,
+      "value": 1.46
+    },
+    {
+      "t": 2009,
+      "value": 1.55
+    },
+    {
+      "t": 2010,
+      "value": 1.64
+    },
+    {
+      "t": 2011,
+      "value": 1.74
+    },
+    {
+      "t": 2012,
+      "value": 1.77
+    },
+    {
+      "t": 2013,
+      "value": 1.84
+    },
+    {
+      "t": 2014,
+      "value": 1.88
+    },
+    {
+      "t": 2015,
+      "value": 1.96
+    },
+    {
+      "t": 2016,
+      "value": 2.01
+    },
+    {
+      "t": 2017,
+      "value": 1.72
+    },
+    {
+      "t": 2018,
+      "value": 1.62
+    },
+    {
+      "t": 2019,
+      "value": 1.66
+    },
+    {
+      "t": 2020,
+      "value": 1.64
+    },
+    {
+      "t": 2021,
+      "value": 1.39
+    },
+    {
+      "t": 2022,
+      "value": 1.19
+    },
+    {
+      "t": 2023,
+      "value": 1.29
+    },
+    {
+      "t": 2024,
+      "value": 1.43
+    }
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,primary_topic.field.id:https://openalex.org/fields/22&group_by=publication_year",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,primary_topic.field.id:https://openalex.org/fields/22&group_by=publication_year&per-page=100",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-13",
+    "checksum": "166294cf64115ab328a902b47dcd3286bdce3d186215478d0be00ce625c61735",
+    "definition": "OpenAlex works per year whose primary topic field is Engineering.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "openalex_group_by",
+      "detail": "filtered works to primary topic field Engineering, grouped by publication year, 2000-2024, shown in millions"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "climate-sea_level-world",
+  "title": "Global mean sea-level rise (vs 1880), World",
+  "licenses": [
+    {
+      "name": "Public Domain",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "CSIRO; NOAA — via U.S. EPA",
+      "path": "https://raw.githubusercontent.com/datasets/sea-level-rise/main/data/epa-sea-level.csv"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "climate-sea_level-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "climate_sea_level_world",
+            "type": "number",
+            "unit": "centimetres"
+          }
+        ]
+      }
+    }
+  ]
+}

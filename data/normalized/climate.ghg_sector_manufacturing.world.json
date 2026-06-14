@@ -1,0 +1,157 @@
+[
+  {
+    "indicatorId": "climate.ghg_sector_manufacturing.world",
+    "entity": "OWID_WRL",
+    "entityName": "World",
+    "unit": "tonnes",
+    "points": [
+      {
+        "t": 1990,
+        "value": 3967889920
+      },
+      {
+        "t": 1991,
+        "value": 3891870208
+      },
+      {
+        "t": 1992,
+        "value": 3760000000
+      },
+      {
+        "t": 1993,
+        "value": 3706370048
+      },
+      {
+        "t": 1994,
+        "value": 3721820160
+      },
+      {
+        "t": 1995,
+        "value": 3944930048
+      },
+      {
+        "t": 1996,
+        "value": 3827500032
+      },
+      {
+        "t": 1997,
+        "value": 3852179968
+      },
+      {
+        "t": 1998,
+        "value": 3849949952
+      },
+      {
+        "t": 1999,
+        "value": 3694600192
+      },
+      {
+        "t": 2000,
+        "value": 3847429888
+      },
+      {
+        "t": 2001,
+        "value": 3866189824
+      },
+      {
+        "t": 2002,
+        "value": 3873080064
+      },
+      {
+        "t": 2003,
+        "value": 4063860224
+      },
+      {
+        "t": 2004,
+        "value": 4490990080
+      },
+      {
+        "t": 2005,
+        "value": 4907939840
+      },
+      {
+        "t": 2006,
+        "value": 5144029696
+      },
+      {
+        "t": 2007,
+        "value": 5429299712
+      },
+      {
+        "t": 2008,
+        "value": 5531569664
+      },
+      {
+        "t": 2009,
+        "value": 5517420032
+      },
+      {
+        "t": 2010,
+        "value": 6028310016
+      },
+      {
+        "t": 2011,
+        "value": 6252780032
+      },
+      {
+        "t": 2012,
+        "value": 6293850112
+      },
+      {
+        "t": 2013,
+        "value": 6330700288
+      },
+      {
+        "t": 2014,
+        "value": 6390759936
+      },
+      {
+        "t": 2015,
+        "value": 6268200448
+      },
+      {
+        "t": 2016,
+        "value": 6118499840
+      },
+      {
+        "t": 2017,
+        "value": 6044899840
+      },
+      {
+        "t": 2018,
+        "value": 6121229824
+      },
+      {
+        "t": 2019,
+        "value": 6126040064
+      },
+      {
+        "t": 2020,
+        "value": 6028179968
+      },
+      {
+        "t": 2021,
+        "value": 6162450432
+      },
+      {
+        "t": 2022,
+        "value": 6147520000
+      },
+      {
+        "t": 2023,
+        "value": 6204729856
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "manufacturing_and_construction_ghg_emissions",
+      "url": "https://ourworldindata.org/grapher/ghg-emissions-by-sector",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "6bd8581a73b3c5da14c09d12490ab53cd1ed159b559cf4299351b4e9b816d8fa",
+      "definition": "Emissions are measured in tonnes of carbon dioxide-equivalents.",
+      "attribution": "Our World in Data",
+      "primarySource": "Climate Watch (2026) — via Our World in Data"
+    }
+  }
+]

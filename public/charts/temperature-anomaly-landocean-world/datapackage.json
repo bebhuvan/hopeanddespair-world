@@ -1,0 +1,38 @@
+{
+  "name": "climate-temperature_anomaly_landocean-world",
+  "title": "Land and ocean temperature anomaly (vs 1951–1980), World",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Berkeley Earth",
+      "path": "https://berkeley-earth-temperature.s3.us-west-1.amazonaws.com/Global/Land_and_Ocean_summary.txt"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "climate-temperature_anomaly_landocean-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "climate_temperature_anomaly_landocean_world",
+            "type": "number",
+            "unit": "°C"
+          }
+        ]
+      }
+    }
+  ]
+}

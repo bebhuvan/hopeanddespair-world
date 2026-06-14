@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "climate.ocean_heat.world",
+    "unit": "10^22 joules",
+    "points": 21
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "identity",
+        "detail": "normalized directly from source"
+      }
+    ],
+    "agent": "adapter:oceanheat@1.0.0",
+    "used": {
+      "source": "oceanheat",
+      "slug": "h22-w0-2000m",
+      "url": "https://www.ncei.noaa.gov/data/oceans/woa/DATA_ANALYSIS/3M_HEAT_CONTENT/DATA/basin/yearly/h22-w0-2000m.dat",
+      "vintage": "2026-06-13",
+      "checksum": "5b0fabf106dc1473f0a658baaced5245bc19e33a39c6d86294a3cf074ac0f5b4",
+      "license": "Public Domain (NOAA NCEI)"
+    }
+  },
+  "primarySource": "NOAA NCEI — Levitus et al."
+}

@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "nature.living_planet_index.world",
+    "unit": "(1970 = 1)",
+    "points": 51
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "living-planet-index-by-region",
+      "url": "https://ourworldindata.org/grapher/living-planet-index-by-region",
+      "vintage": "2026-06-12",
+      "checksum": "327a1fd96966875335aa4bf81220ae1df482de3d334c85c439f18d7620c732f2",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "WWF & Zoological Society of London (2024) — via Our World in Data"
+}

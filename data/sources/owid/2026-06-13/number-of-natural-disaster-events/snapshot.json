@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "number-of-natural-disaster-events",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/number-of-natural-disaster-events",
+  "checksum": "312bbf47ec3f338b433d6fd9430a24020b8d604b845bd1cf18fd8f45e35c7831",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T12:58:00.145Z",
+  "adapterVersion": "1.0.0"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "science-rnd_spend_gdp-ssf",
+  "title": "Research and development expenditure (% of GDP)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/GB.XPD.RSDV.GD.ZS"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "science-rnd_spend_gdp-ssf",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "science_rnd_spend_gdp_ssf",
+            "type": "number",
+            "unit": "% of GDP"
+          }
+        ]
+      }
+    }
+  ]
+}

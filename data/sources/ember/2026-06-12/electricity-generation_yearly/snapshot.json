@@ -1,0 +1,10 @@
+{
+  "source": "ember",
+  "slug": "electricity-generation/yearly",
+  "vintage": "2026-06-12",
+  "url": "https://api.ember-energy.org/v1/electricity-generation/yearly?entity=Africa&start_date=2000",
+  "checksum": "c6cc04d16f81a068f324378218a7fcb1b7ccaadded0dda60c7f0675888da73ef",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:43:15.807Z",
+  "adapterVersion": "1.0.0"
+}

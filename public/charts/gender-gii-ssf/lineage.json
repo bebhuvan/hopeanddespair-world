@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "gender.gii.ssf",
+    "unit": "index (0 = parity)",
+    "points": 24
+  },
+  "wasDerivedFrom": [
+    "Sub-Saharan Africa (UNDP)"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Sub-Saharan Africa (UNDP)"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "gender-inequality-index-from-the-human-development-report",
+      "url": "https://ourworldindata.org/grapher/gender-inequality-index-from-the-human-development-report",
+      "vintage": "2026-06-12",
+      "checksum": "f9f8a91370370ffcc7028567a408c49fe937f986488349268cfe4a7da272c311",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UNDP, Human Development Report"
+}

@@ -1,0 +1,117 @@
+{
+  "indicatorId": "health.ncd_premature_mortality.sear",
+  "entity": "SEAR",
+  "entityName": "South-East Asia (WHO)",
+  "unit": "% probability of dying 30–70",
+  "points": [
+    {
+      "t": 2000,
+      "value": 23.5
+    },
+    {
+      "t": 2001,
+      "value": 23.2
+    },
+    {
+      "t": 2002,
+      "value": 23.2
+    },
+    {
+      "t": 2003,
+      "value": 23
+    },
+    {
+      "t": 2004,
+      "value": 22.5
+    },
+    {
+      "t": 2005,
+      "value": 22.4
+    },
+    {
+      "t": 2006,
+      "value": 22.6
+    },
+    {
+      "t": 2007,
+      "value": 22.6
+    },
+    {
+      "t": 2008,
+      "value": 22.7
+    },
+    {
+      "t": 2009,
+      "value": 22.6
+    },
+    {
+      "t": 2010,
+      "value": 22.8
+    },
+    {
+      "t": 2011,
+      "value": 22.8
+    },
+    {
+      "t": 2012,
+      "value": 22.7
+    },
+    {
+      "t": 2013,
+      "value": 22.2
+    },
+    {
+      "t": 2014,
+      "value": 22
+    },
+    {
+      "t": 2015,
+      "value": 22.3
+    },
+    {
+      "t": 2016,
+      "value": 22.4
+    },
+    {
+      "t": 2017,
+      "value": 22.4
+    },
+    {
+      "t": 2018,
+      "value": 22.8
+    },
+    {
+      "t": 2019,
+      "value": 22.9
+    },
+    {
+      "t": 2020,
+      "value": 22.5
+    },
+    {
+      "t": 2021,
+      "value": 22.3
+    }
+  ],
+  "provenance": {
+    "source": "who",
+    "sourceIndicator": "NCDMORT3070",
+    "url": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/NCDMORT3070",
+    "license": "CC BY-NC-SA 3.0 IGO",
+    "vintage": "2026-06-13",
+    "checksum": "9f13dc5fb9b5f8cbaea61d0b61771473a32c6855125786bc872709dc2b7d089d",
+    "definition": "Premature death from noncommunicable disease (ages 30–70), South-East Asia",
+    "attribution": "WHO Global Health Observatory",
+    "primarySource": "WHO Global Health Observatory — Global Health Estimates",
+    "notes": "CC BY-NC-SA 3.0 IGO — link-only; charted but not re-hosted."
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity SEAR"
+    }
+  ],
+  "derivedFrom": [
+    "SEAR"
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "indicatorId": "science.openalex_field_computer_science.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "works per year, million",
+  "points": [
+    {
+      "t": 2000,
+      "value": 0.14
+    },
+    {
+      "t": 2001,
+      "value": 0.15
+    },
+    {
+      "t": 2002,
+      "value": 0.29
+    },
+    {
+      "t": 2003,
+      "value": 0.26
+    },
+    {
+      "t": 2004,
+      "value": 0.27
+    },
+    {
+      "t": 2005,
+      "value": 0.32
+    },
+    {
+      "t": 2006,
+      "value": 0.35
+    },
+    {
+      "t": 2007,
+      "value": 0.37
+    },
+    {
+      "t": 2008,
+      "value": 0.39
+    },
+    {
+      "t": 2009,
+      "value": 0.43
+    },
+    {
+      "t": 2010,
+      "value": 0.47
+    },
+    {
+      "t": 2011,
+      "value": 0.5
+    },
+    {
+      "t": 2012,
+      "value": 0.51
+    },
+    {
+      "t": 2013,
+      "value": 0.52
+    },
+    {
+      "t": 2014,
+      "value": 0.54
+    },
+    {
+      "t": 2015,
+      "value": 0.55
+    },
+    {
+      "t": 2016,
+      "value": 0.56
+    },
+    {
+      "t": 2017,
+      "value": 0.56
+    },
+    {
+      "t": 2018,
+      "value": 0.61
+    },
+    {
+      "t": 2019,
+      "value": 0.64
+    },
+    {
+      "t": 2020,
+      "value": 0.68
+    },
+    {
+      "t": 2021,
+      "value": 0.64
+    },
+    {
+      "t": 2022,
+      "value": 0.62
+    },
+    {
+      "t": 2023,
+      "value": 0.69
+    },
+    {
+      "t": 2024,
+      "value": 0.71
+    }
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,primary_topic.field.id:https://openalex.org/fields/17&group_by=publication_year",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,primary_topic.field.id:https://openalex.org/fields/17&group_by=publication_year&per-page=100",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-13",
+    "checksum": "b3c502fe6f13f0537668b2be9d185ab61643babf44a38aa85cd52d756c5a31b3",
+    "definition": "OpenAlex works per year whose primary topic field is Computer science.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "openalex_group_by",
+      "detail": "filtered works to primary topic field Computer science, grouped by publication year, 2000-2024, shown in millions"
+    }
+  ]
+}

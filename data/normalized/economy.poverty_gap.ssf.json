@@ -1,0 +1,205 @@
+[
+  {
+    "indicatorId": "economy.poverty_gap.ssf",
+    "entity": "SSF",
+    "entityName": "Sub-Saharan Africa",
+    "unit": "% of the poverty line",
+    "points": [
+      {
+        "t": 1981,
+        "value": 26.779999999999998
+      },
+      {
+        "t": 1982,
+        "value": 27.38
+      },
+      {
+        "t": 1983,
+        "value": 28.48
+      },
+      {
+        "t": 1984,
+        "value": 29.03
+      },
+      {
+        "t": 1985,
+        "value": 28.999999999999996
+      },
+      {
+        "t": 1986,
+        "value": 28.96
+      },
+      {
+        "t": 1987,
+        "value": 29.04
+      },
+      {
+        "t": 1988,
+        "value": 29.099999999999998
+      },
+      {
+        "t": 1989,
+        "value": 29.21
+      },
+      {
+        "t": 1990,
+        "value": 29.69
+      },
+      {
+        "t": 1991,
+        "value": 30.91
+      },
+      {
+        "t": 1992,
+        "value": 31.86
+      },
+      {
+        "t": 1993,
+        "value": 32.07
+      },
+      {
+        "t": 1994,
+        "value": 32.36
+      },
+      {
+        "t": 1995,
+        "value": 32.09
+      },
+      {
+        "t": 1996,
+        "value": 31.55
+      },
+      {
+        "t": 1997,
+        "value": 31.209999999999997
+      },
+      {
+        "t": 1998,
+        "value": 31.03
+      },
+      {
+        "t": 1999,
+        "value": 30.48
+      },
+      {
+        "t": 2000,
+        "value": 30.09
+      },
+      {
+        "t": 2001,
+        "value": 29.04
+      },
+      {
+        "t": 2002,
+        "value": 28.310000000000002
+      },
+      {
+        "t": 2003,
+        "value": 27.36
+      },
+      {
+        "t": 2004,
+        "value": 25.590000000000003
+      },
+      {
+        "t": 2005,
+        "value": 24.51
+      },
+      {
+        "t": 2006,
+        "value": 23.669999999999998
+      },
+      {
+        "t": 2007,
+        "value": 22.61
+      },
+      {
+        "t": 2008,
+        "value": 21.58
+      },
+      {
+        "t": 2009,
+        "value": 21.43
+      },
+      {
+        "t": 2010,
+        "value": 20.05
+      },
+      {
+        "t": 2011,
+        "value": 19.43
+      },
+      {
+        "t": 2012,
+        "value": 18.52
+      },
+      {
+        "t": 2013,
+        "value": 17.93
+      },
+      {
+        "t": 2014,
+        "value": 17.57
+      },
+      {
+        "t": 2015,
+        "value": 17.64
+      },
+      {
+        "t": 2016,
+        "value": 17.580000000000002
+      },
+      {
+        "t": 2017,
+        "value": 17.36
+      },
+      {
+        "t": 2018,
+        "value": 17.119999999999997
+      },
+      {
+        "t": 2019,
+        "value": 17.07
+      },
+      {
+        "t": 2020,
+        "value": 18.11
+      },
+      {
+        "t": 2021,
+        "value": 18
+      },
+      {
+        "t": 2022,
+        "value": 17.64
+      },
+      {
+        "t": 2023,
+        "value": 17.419999999999998
+      },
+      {
+        "t": 2024,
+        "value": 17.2
+      },
+      {
+        "t": 2025,
+        "value": 16.79
+      },
+      {
+        "t": 2026,
+        "value": 16.34
+      }
+    ],
+    "provenance": {
+      "source": "pip",
+      "sourceIndicator": "poverty_gap @ $3.00/day (2021 PPP)",
+      "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+      "definition": "Poverty gap at $3.00/day (2021 PPP), Sub-Saharan Africa",
+      "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+      "primarySource": "World Bank — Poverty and Inequality Platform"
+    }
+  }
+]

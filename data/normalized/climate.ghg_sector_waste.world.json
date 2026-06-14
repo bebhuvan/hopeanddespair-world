@@ -1,0 +1,157 @@
+[
+  {
+    "indicatorId": "climate.ghg_sector_waste.world",
+    "entity": "OWID_WRL",
+    "entityName": "World",
+    "unit": "tonnes",
+    "points": [
+      {
+        "t": 1990,
+        "value": 1343219968
+      },
+      {
+        "t": 1991,
+        "value": 1369079936
+      },
+      {
+        "t": 1992,
+        "value": 1439250048
+      },
+      {
+        "t": 1993,
+        "value": 1506610048
+      },
+      {
+        "t": 1994,
+        "value": 1575389952
+      },
+      {
+        "t": 1995,
+        "value": 1583449984
+      },
+      {
+        "t": 1996,
+        "value": 1587819904
+      },
+      {
+        "t": 1997,
+        "value": 1584989952
+      },
+      {
+        "t": 1998,
+        "value": 1578569984
+      },
+      {
+        "t": 1999,
+        "value": 1578790016
+      },
+      {
+        "t": 2000,
+        "value": 1583550080
+      },
+      {
+        "t": 2001,
+        "value": 1562530048
+      },
+      {
+        "t": 2002,
+        "value": 1566420096
+      },
+      {
+        "t": 2003,
+        "value": 1568960000
+      },
+      {
+        "t": 2004,
+        "value": 1561360000
+      },
+      {
+        "t": 2005,
+        "value": 1558489984
+      },
+      {
+        "t": 2006,
+        "value": 1574300032
+      },
+      {
+        "t": 2007,
+        "value": 1586099968
+      },
+      {
+        "t": 2008,
+        "value": 1601170048
+      },
+      {
+        "t": 2009,
+        "value": 1613139968
+      },
+      {
+        "t": 2010,
+        "value": 1630189952
+      },
+      {
+        "t": 2011,
+        "value": 1614860032
+      },
+      {
+        "t": 2012,
+        "value": 1636220032
+      },
+      {
+        "t": 2013,
+        "value": 1654800000
+      },
+      {
+        "t": 2014,
+        "value": 1702620032
+      },
+      {
+        "t": 2015,
+        "value": 1737689984
+      },
+      {
+        "t": 2016,
+        "value": 1763360000
+      },
+      {
+        "t": 2017,
+        "value": 1794329984
+      },
+      {
+        "t": 2018,
+        "value": 1823170048
+      },
+      {
+        "t": 2019,
+        "value": 1849510016
+      },
+      {
+        "t": 2020,
+        "value": 1869160064
+      },
+      {
+        "t": 2021,
+        "value": 1887219968
+      },
+      {
+        "t": 2022,
+        "value": 1900359936
+      },
+      {
+        "t": 2023,
+        "value": 1948849920
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "waste_ghg_emissions",
+      "url": "https://ourworldindata.org/grapher/ghg-emissions-by-sector",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "6bd8581a73b3c5da14c09d12490ab53cd1ed159b559cf4299351b4e9b816d8fa",
+      "definition": "Emissions are measured in tonnes of carbon dioxide-equivalents.",
+      "attribution": "Our World in Data",
+      "primarySource": "Climate Watch (2026) — via Our World in Data"
+    }
+  }
+]

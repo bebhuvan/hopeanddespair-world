@@ -1,0 +1,57 @@
+{
+  "indicatorId": "economy.poverty_300.ind",
+  "entity": "IND",
+  "entityName": "India",
+  "unit": "%",
+  "points": [
+    {
+      "t": 1977,
+      "value": 59.7
+    },
+    {
+      "t": 1983,
+      "value": 50.87
+    },
+    {
+      "t": 1987,
+      "value": 51.78
+    },
+    {
+      "t": 1993,
+      "value": 47.48
+    },
+    {
+      "t": 2004,
+      "value": 46.42
+    },
+    {
+      "t": 2009,
+      "value": 34.58
+    },
+    {
+      "t": 2011,
+      "value": 27.12
+    },
+    {
+      "t": 2022,
+      "value": 5.25
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "share-of-population-in-extreme-poverty",
+    "url": "https://ourworldindata.org/grapher/share-of-population-in-extreme-poverty",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "c6faa67ee6adcbc8336c64cae90efb84a173d864c52773acca64b2a68b66a824",
+    "definition": "Share of India's population living below $3.00 a day (2021 PPP), all available survey years 1977–2022.",
+    "attribution": "World Bank — Poverty and Inequality Platform, via Our World in Data",
+    "primarySource": "World Bank — Poverty and Inequality Platform"
+  },
+  "recipe": [
+    {
+      "op": "country_series",
+      "detail": "India ($3.00/day) survey points extracted from the OWID grapher"
+    }
+  ]
+}

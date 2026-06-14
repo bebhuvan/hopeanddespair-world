@@ -1,0 +1,30 @@
+{
+  "entity": {
+    "id": "economy.convergence_sigma_weighted.world",
+    "unit": "standard deviation of ln(GDP per capita)",
+    "points": 35
+  },
+  "wasDerivedFrom": [
+    "NY.GDP.PCAP.PP.KD",
+    "SP.POP.TOTL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "sigma_weighted",
+        "detail": "Population-weighted standard deviation of ln(GDP per capita, PPP) across 178 countries (one person = one unit), 1990–2024, balanced panel of 178 countries"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "sigma_weighted",
+      "url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD",
+      "vintage": "2026-06-12",
+      "checksum": "f22786749871412a91da89de74f35782e410628e93d9ba86f77a2f8aae27b472",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "World Bank — World Development Indicators (ICP PPP & population)"
+}

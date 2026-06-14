@@ -1,0 +1,89 @@
+{
+  "chartId": "animals-slaughtered-by-country",
+  "kind": "bars",
+  "title": "Animals slaughtered by country",
+  "unit": "Land animals slaughtered for meat per year, billion",
+  "yearSpan": "2024–2024",
+  "bars": [
+    {
+      "label": "China",
+      "value": 16.4,
+      "color": "stone"
+    },
+    {
+      "label": "United States",
+      "value": 10,
+      "color": "stone"
+    },
+    {
+      "label": "Brazil",
+      "value": 6.6,
+      "color": "stone"
+    },
+    {
+      "label": "Indonesia",
+      "value": 4.9,
+      "color": "stone"
+    },
+    {
+      "label": "India",
+      "value": 3.6,
+      "color": "stone"
+    },
+    {
+      "label": "Russia",
+      "value": 2.7,
+      "color": "stone"
+    },
+    {
+      "label": "Mexico",
+      "value": 2.2,
+      "color": "stone"
+    },
+    {
+      "label": "Japan",
+      "value": 0.9,
+      "color": "stone"
+    },
+    {
+      "label": "France",
+      "value": 0.9,
+      "color": "stone"
+    },
+    {
+      "label": "Germany",
+      "value": 0.7,
+      "color": "stone"
+    },
+    {
+      "label": "Nigeria",
+      "value": 0.4,
+      "color": "stone"
+    }
+  ],
+  "xmax": 20,
+  "xTicks": [
+    0,
+    5,
+    10,
+    15,
+    20
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "animals-slaughtered-for-meat",
+    "url": "https://ourworldindata.org/grapher/animals-slaughtered-for-meat",
+    "license": "CC BY 4.0",
+    "vintage": "2024–2024",
+    "checksum": "d3b185f7a79ba4d55adae5c7e2d8d4a809379f4cb8167d34b5b21daf2fe9f214",
+    "definition": "Land animals (cattle, pigs, chickens, ducks, turkeys, goats, sheep) slaughtered for meat per year, summed across species, latest year per country, shown in billions. A curated 11-country spread sorted descending.",
+    "attribution": "FAO, via Our World in Data",
+    "primarySource": "UN Food and Agriculture Organization (FAO)"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, ÷1000000000, 11 curated countries sorted descending"
+    }
+  ]
+}

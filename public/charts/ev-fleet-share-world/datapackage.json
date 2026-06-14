@@ -1,0 +1,38 @@
+{
+  "name": "transport-ev_fleet_share-world",
+  "title": "Share of cars on the road that are electric, World",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "IEA — Global EV Data Explorer",
+      "path": "https://api.iea.org/evs?region=World&csv=true"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "transport-ev_fleet_share-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "transport_ev_fleet_share_world",
+            "type": "number",
+            "unit": "percent"
+          }
+        ]
+      }
+    }
+  ]
+}

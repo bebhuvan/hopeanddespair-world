@@ -1,0 +1,9 @@
+{
+  "source": "owid",
+  "slug": "economic-inequality-gini-index",
+  "vintage": "2026-06-12",
+  "url": "https://ourworldindata.org/grapher/economic-inequality-gini-index.csv",
+  "checksum": "75ee9f428dbfe32feebdc8bb0ff2ae31b4d2a32e0db12004ff76b3521bd95683",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:56:56.633Z"
+}

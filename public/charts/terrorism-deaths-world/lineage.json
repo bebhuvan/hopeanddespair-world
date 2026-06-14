@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "violence.terrorism_deaths.world",
+    "unit": "deaths",
+    "points": 51
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "terrorism-deaths",
+      "url": "https://ourworldindata.org/grapher/terrorism-deaths",
+      "vintage": "2026-06-12",
+      "checksum": "7a805488e4dc947462fa7c90109f6235840537fd58da054ff75f06a5284f2370",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Global Terrorism Database (START, University of Maryland)"
+}

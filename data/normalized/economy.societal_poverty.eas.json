@@ -1,0 +1,205 @@
+[
+  {
+    "indicatorId": "economy.societal_poverty.eas",
+    "entity": "EAS",
+    "entityName": "East Asia & Pacific",
+    "unit": "% of population",
+    "points": [
+      {
+        "t": 1981,
+        "value": 79.93
+      },
+      {
+        "t": 1982,
+        "value": 79.14
+      },
+      {
+        "t": 1983,
+        "value": 77.99000000000001
+      },
+      {
+        "t": 1984,
+        "value": 75.88000000000001
+      },
+      {
+        "t": 1985,
+        "value": 73.83
+      },
+      {
+        "t": 1986,
+        "value": 72.1
+      },
+      {
+        "t": 1987,
+        "value": 69.57
+      },
+      {
+        "t": 1988,
+        "value": 65.86
+      },
+      {
+        "t": 1989,
+        "value": 70.57
+      },
+      {
+        "t": 1990,
+        "value": 69.76
+      },
+      {
+        "t": 1991,
+        "value": 68.75
+      },
+      {
+        "t": 1992,
+        "value": 67.22
+      },
+      {
+        "t": 1993,
+        "value": 65.68
+      },
+      {
+        "t": 1994,
+        "value": 62.07
+      },
+      {
+        "t": 1995,
+        "value": 58.599999999999994
+      },
+      {
+        "t": 1996,
+        "value": 55.02
+      },
+      {
+        "t": 1997,
+        "value": 54.33
+      },
+      {
+        "t": 1998,
+        "value": 54.61
+      },
+      {
+        "t": 1999,
+        "value": 52.04
+      },
+      {
+        "t": 2000,
+        "value": 49.54
+      },
+      {
+        "t": 2001,
+        "value": 47.06
+      },
+      {
+        "t": 2002,
+        "value": 43.08
+      },
+      {
+        "t": 2003,
+        "value": 39.81
+      },
+      {
+        "t": 2004,
+        "value": 38.269999999999996
+      },
+      {
+        "t": 2005,
+        "value": 36.230000000000004
+      },
+      {
+        "t": 2006,
+        "value": 36.17
+      },
+      {
+        "t": 2007,
+        "value": 34.760000000000005
+      },
+      {
+        "t": 2008,
+        "value": 34.1
+      },
+      {
+        "t": 2009,
+        "value": 33.14
+      },
+      {
+        "t": 2010,
+        "value": 32.23
+      },
+      {
+        "t": 2011,
+        "value": 30.630000000000003
+      },
+      {
+        "t": 2012,
+        "value": 29.67
+      },
+      {
+        "t": 2013,
+        "value": 27.12
+      },
+      {
+        "t": 2014,
+        "value": 26.22
+      },
+      {
+        "t": 2015,
+        "value": 25.169999999999998
+      },
+      {
+        "t": 2016,
+        "value": 24.62
+      },
+      {
+        "t": 2017,
+        "value": 24.14
+      },
+      {
+        "t": 2018,
+        "value": 23.400000000000002
+      },
+      {
+        "t": 2019,
+        "value": 22.46
+      },
+      {
+        "t": 2020,
+        "value": 21.759999999999998
+      },
+      {
+        "t": 2021,
+        "value": 20.549999999999997
+      },
+      {
+        "t": 2022,
+        "value": 20.59
+      },
+      {
+        "t": 2023,
+        "value": 20.119999999999997
+      },
+      {
+        "t": 2024,
+        "value": 19.830000000000002
+      },
+      {
+        "t": 2025,
+        "value": 19.48
+      },
+      {
+        "t": 2026,
+        "value": 19.25
+      }
+    ],
+    "provenance": {
+      "source": "pip",
+      "sourceIndicator": "spr @ $3.00/day (2021 PPP)",
+      "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+      "definition": "Societal (relative) poverty rate, East Asia & Pacific",
+      "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+      "primarySource": "World Bank — Poverty and Inequality Platform"
+    }
+  }
+]

@@ -1,0 +1,164 @@
+{
+  "indicatorId": "work.vulnerable_employment.ssf",
+  "entity": "SSF",
+  "entityName": "Sub-Saharan Africa",
+  "unit": "% of total employment",
+  "points": [
+    {
+      "t": 1991,
+      "value": 74.317339797707
+    },
+    {
+      "t": 1992,
+      "value": 74.3516167432556
+    },
+    {
+      "t": 1993,
+      "value": 74.3759245598967
+    },
+    {
+      "t": 1994,
+      "value": 74.5176990497827
+    },
+    {
+      "t": 1995,
+      "value": 74.5917740461963
+    },
+    {
+      "t": 1996,
+      "value": 74.4462413927273
+    },
+    {
+      "t": 1997,
+      "value": 74.3104720262811
+    },
+    {
+      "t": 1998,
+      "value": 74.2492744779534
+    },
+    {
+      "t": 1999,
+      "value": 74.1374614527113
+    },
+    {
+      "t": 2000,
+      "value": 74.0428757019128
+    },
+    {
+      "t": 2001,
+      "value": 74.0364712699563
+    },
+    {
+      "t": 2002,
+      "value": 73.9449849924276
+    },
+    {
+      "t": 2003,
+      "value": 73.8176934111506
+    },
+    {
+      "t": 2004,
+      "value": 73.6569234110581
+    },
+    {
+      "t": 2005,
+      "value": 73.574467858804
+    },
+    {
+      "t": 2006,
+      "value": 73.390520867964
+    },
+    {
+      "t": 2007,
+      "value": 73.1632798473576
+    },
+    {
+      "t": 2008,
+      "value": 72.9576656973154
+    },
+    {
+      "t": 2009,
+      "value": 72.900006731097
+    },
+    {
+      "t": 2010,
+      "value": 72.7801358664695
+    },
+    {
+      "t": 2011,
+      "value": 72.5768126504279
+    },
+    {
+      "t": 2012,
+      "value": 72.3676238468026
+    },
+    {
+      "t": 2013,
+      "value": 72.1000126569158
+    },
+    {
+      "t": 2014,
+      "value": 71.752870815302
+    },
+    {
+      "t": 2015,
+      "value": 71.4943335724209
+    },
+    {
+      "t": 2016,
+      "value": 71.3835318995765
+    },
+    {
+      "t": 2017,
+      "value": 71.2030443980962
+    },
+    {
+      "t": 2018,
+      "value": 70.9470787780133
+    },
+    {
+      "t": 2019,
+      "value": 70.8015787414501
+    },
+    {
+      "t": 2020,
+      "value": 71.7386332149587
+    },
+    {
+      "t": 2021,
+      "value": 71.3123666314731
+    },
+    {
+      "t": 2022,
+      "value": 71.0190851216922
+    },
+    {
+      "t": 2023,
+      "value": 71.4081328448529
+    },
+    {
+      "t": 2024,
+      "value": 71.1806510788013
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SL.EMP.VULN.ZS",
+    "url": "https://data.worldbank.org/indicator/SL.EMP.VULN.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "b387cb724969c4814dc6c51be3cd494a9e871650d9f5f56836e7f1453d42d219",
+    "definition": "Vulnerable employment, total (% of total employment) (modeled ILO estimate)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "International Labour Organization (modelled), via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity SSF"
+    }
+  ],
+  "derivedFrom": [
+    "SSF"
+  ]
+}

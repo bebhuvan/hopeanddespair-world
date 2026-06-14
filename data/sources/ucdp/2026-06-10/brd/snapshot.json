@@ -1,0 +1,10 @@
+{
+  "source": "ucdp",
+  "slug": "brd",
+  "vintage": "2026-06-10",
+  "url": "https://ucdp.uu.se/downloads/brd/ucdp-brd-conf-261-csv.zip",
+  "checksum": "b34ecb57f1fc0e73d4bfd7b080212da429af3135a8d360b1c902e45506f81147",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-10T07:13:51.177Z",
+  "adapterVersion": "1.0.0"
+}

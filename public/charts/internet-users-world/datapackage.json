@@ -1,0 +1,38 @@
+{
+  "name": "technology-internet_users-world",
+  "title": "Share of the population who used the Internet in the last three months.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/share-of-individuals-using-the-internet"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "technology-internet_users-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "technology_internet_users_world",
+            "type": "number",
+            "unit": "% of population"
+          }
+        ]
+      }
+    }
+  ]
+}

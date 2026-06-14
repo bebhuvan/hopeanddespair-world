@@ -1,0 +1,38 @@
+{
+  "name": "substance-alcohol-world",
+  "title": "Total alcohol consumption per capita (liters of pure alcohol, projected estimates, 15+ years of age)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/SH.ALC.PCAP.LI"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "substance-alcohol-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "substance_alcohol_world",
+            "type": "number",
+            "unit": "litres of pure alcohol per capita"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "battle-related-deaths-in-state-based-conflicts-since-1946",
+  "vintage": "2026-06-11",
+  "url": "https://ourworldindata.org/grapher/battle-related-deaths-in-state-based-conflicts-since-1946",
+  "checksum": "97d9eb61d39fd92f9cb6775f7f866b9e05eda4998dd51f7328a85987a37b3064",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T10:06:33.104Z",
+  "adapterVersion": "1.0.0"
+}

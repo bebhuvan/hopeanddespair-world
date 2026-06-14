@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "economy.extreme_poverty.mea",
+    "unit": "% of population",
+    "points": 41
+  },
+  "wasDerivedFrom": [
+    "MEA"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity MEA"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SI.POV.DDAY",
+      "url": "https://data.worldbank.org/indicator/SI.POV.DDAY",
+      "vintage": "2026-06-12",
+      "checksum": "8adda0eab99d96e596c46d0aef7afd4d2e0df5b719d6c80cce63fd4b1b7bf7f5",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "World Bank — Poverty and Inequality Platform"
+}

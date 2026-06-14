@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "safety.road_deaths.sas",
+    "unit": "per 100,000",
+    "points": 20
+  },
+  "wasDerivedFrom": [
+    "SAS"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity SAS"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SH.STA.TRAF.P5",
+      "url": "https://data.worldbank.org/indicator/SH.STA.TRAF.P5",
+      "vintage": "2026-06-12",
+      "checksum": "3645888d5849d1a57e9410b5550549b07c5a7a20e749e03421069f8a80f4a6c4",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "WHO, via World Bank"
+}

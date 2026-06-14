@@ -1,0 +1,108 @@
+{
+  "indicatorId": "safety.road_deaths.world",
+  "entity": "WLD",
+  "entityName": "World",
+  "unit": "deaths per 100,000 people",
+  "points": [
+    {
+      "t": 2000,
+      "value": 19.1004073200684
+    },
+    {
+      "t": 2001,
+      "value": 19.1583894614591
+    },
+    {
+      "t": 2002,
+      "value": 19.2878464794804
+    },
+    {
+      "t": 2003,
+      "value": 19.0509464878523
+    },
+    {
+      "t": 2004,
+      "value": 18.8520743736843
+    },
+    {
+      "t": 2005,
+      "value": 18.9489191435368
+    },
+    {
+      "t": 2006,
+      "value": 18.9184509525987
+    },
+    {
+      "t": 2007,
+      "value": 18.8649077555521
+    },
+    {
+      "t": 2008,
+      "value": 18.6047163853934
+    },
+    {
+      "t": 2009,
+      "value": 18.3044850330042
+    },
+    {
+      "t": 2010,
+      "value": 18.2044737334791
+    },
+    {
+      "t": 2011,
+      "value": 18.1988535945834
+    },
+    {
+      "t": 2012,
+      "value": 17.9825873451734
+    },
+    {
+      "t": 2013,
+      "value": 17.5508081540915
+    },
+    {
+      "t": 2014,
+      "value": 17.2026852036222
+    },
+    {
+      "t": 2015,
+      "value": 16.9979178152127
+    },
+    {
+      "t": 2016,
+      "value": 16.8799072910581
+    },
+    {
+      "t": 2017,
+      "value": 16.7656242823583
+    },
+    {
+      "t": 2018,
+      "value": 16.7361970474468
+    },
+    {
+      "t": 2019,
+      "value": 16.750183286878
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SH.STA.TRAF.P5",
+    "url": "https://data.worldbank.org/indicator/SH.STA.TRAF.P5",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "3645888d5849d1a57e9410b5550549b07c5a7a20e749e03421069f8a80f4a6c4",
+    "definition": "Mortality caused by road traffic injury (per 100,000 population)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO Global Status Report on Road Safety, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity WLD"
+    }
+  ],
+  "derivedFrom": [
+    "WLD"
+  ]
+}

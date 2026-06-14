@@ -1,0 +1,89 @@
+{
+  "chartId": "cause-ncd-by-country",
+  "kind": "bars",
+  "title": "Share of deaths from chronic disease by country",
+  "unit": "Deaths from noncommunicable disease, % of all deaths",
+  "yearSpan": "2021–2021",
+  "bars": [
+    {
+      "label": "China",
+      "value": 90.7,
+      "color": "stone"
+    },
+    {
+      "label": "Japan",
+      "value": 85.3,
+      "color": "stone"
+    },
+    {
+      "label": "Switzerland",
+      "value": 82.1,
+      "color": "stone"
+    },
+    {
+      "label": "United States",
+      "value": 77.4,
+      "color": "stone"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 63.1,
+      "color": "stone"
+    },
+    {
+      "label": "Brazil",
+      "value": 57.5,
+      "color": "stone"
+    },
+    {
+      "label": "India",
+      "value": 49.1,
+      "color": "stone"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 38.3,
+      "color": "stone"
+    },
+    {
+      "label": "DR Congo",
+      "value": 34.6,
+      "color": "stone"
+    },
+    {
+      "label": "Nigeria",
+      "value": 27.7,
+      "color": "stone"
+    },
+    {
+      "label": "Chad",
+      "value": 23.5,
+      "color": "stone"
+    }
+  ],
+  "xmax": 100,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "provenance": {
+    "source": "wb",
+    "sourceIndicator": "SH.DTH.NCOM.ZS",
+    "url": "https://data.worldbank.org/indicator/SH.DTH.NCOM.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2021–2021",
+    "checksum": "79a74e731a71212bc8c9836e0d21340a0c5c17357dcf80f9fdd784aa03331c53",
+    "definition": "Share of all deaths caused by noncommunicable (chronic) disease — heart disease, cancer, diabetes, and the like — latest year per country. A high share marks the late stage of the transition, where infections no longer kill the young. A curated 11-country spread sorted descending.",
+    "attribution": "WHO Global Health Estimates, via World Bank",
+    "primarySource": "WHO Global Health Estimates"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 11 curated countries sorted descending"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "wellbeing.suicide_rate_wb.ssf",
+    "unit": "per 100,000 people",
+    "points": 22
+  },
+  "wasDerivedFrom": [
+    "SSF"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity SSF"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SH.STA.SUIC.P5",
+      "url": "https://data.worldbank.org/indicator/SH.STA.SUIC.P5",
+      "vintage": "2026-06-13",
+      "checksum": "2acd6aca10e33bc2cc6136d10d1b38313b90a86170a463f2554b11cd7e4757ce",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "WHO, via World Bank"
+}

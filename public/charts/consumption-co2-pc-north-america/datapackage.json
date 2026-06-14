@@ -1,0 +1,38 @@
+{
+  "name": "climate-consumption_co2_pc-north-america",
+  "title": "Annual consumption-based emissions of carbon dioxide (CO₂), measured in tonnes per person.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/consumption-co2-per-capita"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "climate-consumption_co2_pc-north-america",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "climate_consumption_co2_pc_north_america",
+            "type": "number",
+            "unit": "tonnes per person"
+          }
+        ]
+      }
+    }
+  ]
+}

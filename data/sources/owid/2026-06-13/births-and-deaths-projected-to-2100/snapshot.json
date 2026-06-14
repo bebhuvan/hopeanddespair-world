@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "births-and-deaths-projected-to-2100",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/births-and-deaths-projected-to-2100",
+  "checksum": "7b11552ad61e0acea08ef25f53a973944e5283826731864125a20f609d9087c8",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T14:27:25.167Z",
+  "adapterVersion": "1.0.0"
+}

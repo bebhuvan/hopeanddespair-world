@@ -1,0 +1,336 @@
+{
+  "indicatorId": "demography.pop_growth_rate_proj.world",
+  "entity": "OWID_WRL",
+  "entityName": "World",
+  "unit": "%",
+  "points": [
+    {
+      "t": 2024,
+      "value": 0.858
+    },
+    {
+      "t": 2025,
+      "value": 0.841
+    },
+    {
+      "t": 2026,
+      "value": 0.83
+    },
+    {
+      "t": 2027,
+      "value": 0.812
+    },
+    {
+      "t": 2028,
+      "value": 0.795
+    },
+    {
+      "t": 2029,
+      "value": 0.779
+    },
+    {
+      "t": 2030,
+      "value": 0.764
+    },
+    {
+      "t": 2031,
+      "value": 0.748
+    },
+    {
+      "t": 2032,
+      "value": 0.732
+    },
+    {
+      "t": 2033,
+      "value": 0.717
+    },
+    {
+      "t": 2034,
+      "value": 0.701
+    },
+    {
+      "t": 2035,
+      "value": 0.686
+    },
+    {
+      "t": 2036,
+      "value": 0.671
+    },
+    {
+      "t": 2037,
+      "value": 0.654
+    },
+    {
+      "t": 2038,
+      "value": 0.639
+    },
+    {
+      "t": 2039,
+      "value": 0.623
+    },
+    {
+      "t": 2040,
+      "value": 0.607
+    },
+    {
+      "t": 2041,
+      "value": 0.59
+    },
+    {
+      "t": 2042,
+      "value": 0.573
+    },
+    {
+      "t": 2043,
+      "value": 0.556
+    },
+    {
+      "t": 2044,
+      "value": 0.538
+    },
+    {
+      "t": 2045,
+      "value": 0.519
+    },
+    {
+      "t": 2046,
+      "value": 0.5
+    },
+    {
+      "t": 2047,
+      "value": 0.481
+    },
+    {
+      "t": 2048,
+      "value": 0.461
+    },
+    {
+      "t": 2049,
+      "value": 0.441
+    },
+    {
+      "t": 2050,
+      "value": 0.421
+    },
+    {
+      "t": 2051,
+      "value": 0.401
+    },
+    {
+      "t": 2052,
+      "value": 0.382
+    },
+    {
+      "t": 2053,
+      "value": 0.363
+    },
+    {
+      "t": 2054,
+      "value": 0.344
+    },
+    {
+      "t": 2055,
+      "value": 0.327
+    },
+    {
+      "t": 2056,
+      "value": 0.311
+    },
+    {
+      "t": 2057,
+      "value": 0.295
+    },
+    {
+      "t": 2058,
+      "value": 0.28
+    },
+    {
+      "t": 2059,
+      "value": 0.266
+    },
+    {
+      "t": 2060,
+      "value": 0.253
+    },
+    {
+      "t": 2061,
+      "value": 0.241
+    },
+    {
+      "t": 2062,
+      "value": 0.229
+    },
+    {
+      "t": 2063,
+      "value": 0.218
+    },
+    {
+      "t": 2064,
+      "value": 0.208
+    },
+    {
+      "t": 2065,
+      "value": 0.197
+    },
+    {
+      "t": 2066,
+      "value": 0.188
+    },
+    {
+      "t": 2067,
+      "value": 0.177
+    },
+    {
+      "t": 2068,
+      "value": 0.167
+    },
+    {
+      "t": 2069,
+      "value": 0.157
+    },
+    {
+      "t": 2070,
+      "value": 0.147
+    },
+    {
+      "t": 2071,
+      "value": 0.136
+    },
+    {
+      "t": 2072,
+      "value": 0.125
+    },
+    {
+      "t": 2073,
+      "value": 0.115
+    },
+    {
+      "t": 2074,
+      "value": 0.103
+    },
+    {
+      "t": 2075,
+      "value": 0.092
+    },
+    {
+      "t": 2076,
+      "value": 0.081
+    },
+    {
+      "t": 2077,
+      "value": 0.069
+    },
+    {
+      "t": 2078,
+      "value": 0.058
+    },
+    {
+      "t": 2079,
+      "value": 0.046
+    },
+    {
+      "t": 2080,
+      "value": 0.035
+    },
+    {
+      "t": 2081,
+      "value": 0.025
+    },
+    {
+      "t": 2082,
+      "value": 0.015
+    },
+    {
+      "t": 2083,
+      "value": 0.005
+    },
+    {
+      "t": 2084,
+      "value": -0.004
+    },
+    {
+      "t": 2085,
+      "value": -0.013
+    },
+    {
+      "t": 2086,
+      "value": -0.021
+    },
+    {
+      "t": 2087,
+      "value": -0.029
+    },
+    {
+      "t": 2088,
+      "value": -0.037
+    },
+    {
+      "t": 2089,
+      "value": -0.045
+    },
+    {
+      "t": 2090,
+      "value": -0.052
+    },
+    {
+      "t": 2091,
+      "value": -0.059
+    },
+    {
+      "t": 2092,
+      "value": -0.067
+    },
+    {
+      "t": 2093,
+      "value": -0.074
+    },
+    {
+      "t": 2094,
+      "value": -0.082
+    },
+    {
+      "t": 2095,
+      "value": -0.09
+    },
+    {
+      "t": 2096,
+      "value": -0.097
+    },
+    {
+      "t": 2097,
+      "value": -0.105
+    },
+    {
+      "t": 2098,
+      "value": -0.112
+    },
+    {
+      "t": 2099,
+      "value": -0.119
+    },
+    {
+      "t": 2100,
+      "value": -0.127
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "growth_rate__sex_all__age_all__variant_medium__projected",
+    "url": "https://ourworldindata.org/grapher/population-growth-rates",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "7f58990dca85475998be15d85e9f6eac7b513d17c00ba124580a079d4e8e2d08",
+    "definition": "The annual rate at which the population is growing, expressed as a percentage.",
+    "attribution": "Our World in Data",
+    "primarySource": "UN World Population Prospects (2024) — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity World"
+    }
+  ],
+  "derivedFrom": [
+    "OWID_WRL"
+  ]
+}

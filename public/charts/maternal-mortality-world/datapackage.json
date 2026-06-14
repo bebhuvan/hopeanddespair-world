@@ -1,0 +1,38 @@
+{
+  "name": "gender-maternal_mortality-world",
+  "title": "Maternal mortality ratio (modeled estimate, per 100,000 live births)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/SH.STA.MMRT"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "gender-maternal_mortality-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "gender_maternal_mortality_world",
+            "type": "number",
+            "unit": "deaths per 100,000 live births"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "animals-slaughtered-for-meat",
+  "vintage": "2026-06-12",
+  "url": "https://ourworldindata.org/grapher/animals-slaughtered-for-meat",
+  "checksum": "23a2eb36a0769037d7f4375c093c9d36d5461688f45228fd504df48098cc92e8",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:44:55.850Z",
+  "adapterVersion": "1.0.0"
+}

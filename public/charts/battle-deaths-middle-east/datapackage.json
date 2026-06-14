@@ -1,0 +1,38 @@
+{
+  "name": "violence-battle_deaths-middle_east",
+  "title": "Best estimate of deaths in state-based armed conflict (combatants and civilians killed in the fighting).",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Uppsala Conflict Data Program (UCDP), Uppsala University",
+      "path": "https://ucdp.uu.se/downloads/brd/ucdp-brd-conf-261-csv.zip"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "violence-battle_deaths-middle_east",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "violence_battle_deaths_middle_east",
+            "type": "number",
+            "unit": "deaths"
+          }
+        ]
+      }
+    }
+  ]
+}

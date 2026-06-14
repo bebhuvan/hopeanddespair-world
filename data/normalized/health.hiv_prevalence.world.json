@@ -1,0 +1,161 @@
+[
+  {
+    "indicatorId": "health.hiv_prevalence.world",
+    "entity": "WLD",
+    "entityName": "World",
+    "unit": "% of population ages 15–49",
+    "points": [
+      {
+        "t": 1990,
+        "value": 0.3
+      },
+      {
+        "t": 1991,
+        "value": 0.4
+      },
+      {
+        "t": 1992,
+        "value": 0.4
+      },
+      {
+        "t": 1993,
+        "value": 0.5
+      },
+      {
+        "t": 1994,
+        "value": 0.6
+      },
+      {
+        "t": 1995,
+        "value": 0.6
+      },
+      {
+        "t": 1996,
+        "value": 0.6
+      },
+      {
+        "t": 1997,
+        "value": 0.7
+      },
+      {
+        "t": 1998,
+        "value": 0.7
+      },
+      {
+        "t": 1999,
+        "value": 0.7
+      },
+      {
+        "t": 2000,
+        "value": 0.7
+      },
+      {
+        "t": 2001,
+        "value": 0.7
+      },
+      {
+        "t": 2002,
+        "value": 0.7
+      },
+      {
+        "t": 2003,
+        "value": 0.7
+      },
+      {
+        "t": 2004,
+        "value": 0.7
+      },
+      {
+        "t": 2005,
+        "value": 0.7
+      },
+      {
+        "t": 2006,
+        "value": 0.7
+      },
+      {
+        "t": 2007,
+        "value": 0.7
+      },
+      {
+        "t": 2008,
+        "value": 0.7
+      },
+      {
+        "t": 2009,
+        "value": 0.7
+      },
+      {
+        "t": 2010,
+        "value": 0.7
+      },
+      {
+        "t": 2011,
+        "value": 0.7
+      },
+      {
+        "t": 2012,
+        "value": 0.7
+      },
+      {
+        "t": 2013,
+        "value": 0.7
+      },
+      {
+        "t": 2014,
+        "value": 0.7
+      },
+      {
+        "t": 2015,
+        "value": 0.7
+      },
+      {
+        "t": 2016,
+        "value": 0.8
+      },
+      {
+        "t": 2017,
+        "value": 0.8
+      },
+      {
+        "t": 2018,
+        "value": 0.8
+      },
+      {
+        "t": 2019,
+        "value": 0.8
+      },
+      {
+        "t": 2020,
+        "value": 0.8
+      },
+      {
+        "t": 2021,
+        "value": 0.7
+      },
+      {
+        "t": 2022,
+        "value": 0.7
+      },
+      {
+        "t": 2023,
+        "value": 0.7
+      },
+      {
+        "t": 2024,
+        "value": 0.7
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SH.DYN.AIDS.ZS",
+      "url": "https://data.worldbank.org/indicator/SH.DYN.AIDS.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "fed4cde76b916521eb653321c5a6fddfc180f69ca0fc567bfe4ef8cee10c6d3c",
+      "definition": "Prevalence of HIV, total (% of population ages 15-49)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "UNAIDS, via World Bank"
+    }
+  }
+]

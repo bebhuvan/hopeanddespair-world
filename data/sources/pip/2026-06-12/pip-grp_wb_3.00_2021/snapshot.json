@@ -1,0 +1,10 @@
+{
+  "source": "pip",
+  "slug": "pip-grp/wb/3.00/2021",
+  "vintage": "2026-06-12",
+  "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+  "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:44:22.649Z",
+  "adapterVersion": "1.0.0"
+}

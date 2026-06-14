@@ -1,0 +1,38 @@
+{
+  "name": "science-openalex_global_south_participation_share-world",
+  "title": "Share of OpenAlex works with at least one authorship institution marked Global South.",
+  "licenses": [
+    {
+      "name": "CC0 1.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenAlex",
+      "path": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.is_global_south:true&group_by=publication_year&per-page=100"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "science-openalex_global_south_participation_share-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "science_openalex_global_south_participation_share_world",
+            "type": "number",
+            "unit": "% of works"
+          }
+        ]
+      }
+    }
+  ]
+}

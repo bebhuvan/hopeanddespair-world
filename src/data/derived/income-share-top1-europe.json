@@ -1,0 +1,252 @@
+{
+  "indicatorId": "inequality.income_share_top1.europe",
+  "entity": "Europe (WID)",
+  "entityName": "Europe (WID)",
+  "unit": "%",
+  "points": [
+    {
+      "t": 1820,
+      "value": 21.92
+    },
+    {
+      "t": 1850,
+      "value": 22.9
+    },
+    {
+      "t": 1880,
+      "value": 23.32
+    },
+    {
+      "t": 1900,
+      "value": 25.95
+    },
+    {
+      "t": 1910,
+      "value": 25.23
+    },
+    {
+      "t": 1920,
+      "value": 22.4
+    },
+    {
+      "t": 1930,
+      "value": 17.74
+    },
+    {
+      "t": 1940,
+      "value": 15.71
+    },
+    {
+      "t": 1950,
+      "value": 11.48
+    },
+    {
+      "t": 1960,
+      "value": 10.92
+    },
+    {
+      "t": 1970,
+      "value": 9.16
+    },
+    {
+      "t": 1980,
+      "value": 8.22
+    },
+    {
+      "t": 1981,
+      "value": 8.09
+    },
+    {
+      "t": 1982,
+      "value": 7.93
+    },
+    {
+      "t": 1983,
+      "value": 7.92
+    },
+    {
+      "t": 1984,
+      "value": 8
+    },
+    {
+      "t": 1985,
+      "value": 8.16
+    },
+    {
+      "t": 1986,
+      "value": 8.46
+    },
+    {
+      "t": 1987,
+      "value": 8.69
+    },
+    {
+      "t": 1988,
+      "value": 9.08
+    },
+    {
+      "t": 1989,
+      "value": 9.34
+    },
+    {
+      "t": 1990,
+      "value": 9.35
+    },
+    {
+      "t": 1991,
+      "value": 9.4
+    },
+    {
+      "t": 1992,
+      "value": 9.39
+    },
+    {
+      "t": 1993,
+      "value": 9.45
+    },
+    {
+      "t": 1994,
+      "value": 9.61
+    },
+    {
+      "t": 1995,
+      "value": 9.8
+    },
+    {
+      "t": 1996,
+      "value": 10.29
+    },
+    {
+      "t": 1997,
+      "value": 10.74
+    },
+    {
+      "t": 1998,
+      "value": 11.1
+    },
+    {
+      "t": 1999,
+      "value": 10.95
+    },
+    {
+      "t": 2000,
+      "value": 11.07
+    },
+    {
+      "t": 2001,
+      "value": 10.93
+    },
+    {
+      "t": 2002,
+      "value": 10.79
+    },
+    {
+      "t": 2003,
+      "value": 10.97
+    },
+    {
+      "t": 2004,
+      "value": 11.45
+    },
+    {
+      "t": 2005,
+      "value": 12.02
+    },
+    {
+      "t": 2006,
+      "value": 12.26
+    },
+    {
+      "t": 2007,
+      "value": 12.67
+    },
+    {
+      "t": 2008,
+      "value": 12.19
+    },
+    {
+      "t": 2009,
+      "value": 11.74
+    },
+    {
+      "t": 2010,
+      "value": 11.64
+    },
+    {
+      "t": 2011,
+      "value": 11.83
+    },
+    {
+      "t": 2012,
+      "value": 11.62
+    },
+    {
+      "t": 2013,
+      "value": 11.78
+    },
+    {
+      "t": 2014,
+      "value": 12
+    },
+    {
+      "t": 2015,
+      "value": 11.93
+    },
+    {
+      "t": 2016,
+      "value": 11.94
+    },
+    {
+      "t": 2017,
+      "value": 12.15
+    },
+    {
+      "t": 2018,
+      "value": 12.12
+    },
+    {
+      "t": 2019,
+      "value": 11.95
+    },
+    {
+      "t": 2020,
+      "value": 11.99
+    },
+    {
+      "t": 2021,
+      "value": 12.2
+    },
+    {
+      "t": 2022,
+      "value": 12.26
+    },
+    {
+      "t": 2023,
+      "value": 12.11
+    },
+    {
+      "t": 2024,
+      "value": 12.14
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "share_top_1__welfare_type_before_tax__extrapolated_no",
+    "url": "https://ourworldindata.org/grapher/income-share-top-1-before-tax-wid",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "f1e67ccfe48be6f1dd51b9b907e55c92c131d39c15153163fc64e80829f6f5fd",
+    "definition": "The share of income received by the richest 1% of the population. Income here is measured before taxes and benefits.",
+    "attribution": "Our World in Data",
+    "primarySource": "World Inequality Database (WID.world) — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity Europe (WID)"
+    }
+  ],
+  "derivedFrom": [
+    "Europe (WID)"
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "indicatorId": "health.vaccine_measles_wb.ecs",
+  "entity": "ECS",
+  "entityName": "Europe & Central Asia",
+  "unit": "% of children 12–23 months",
+  "points": [
+    {
+      "t": 1992,
+      "value": 81.2597090500581
+    },
+    {
+      "t": 1993,
+      "value": 82.7140618973883
+    },
+    {
+      "t": 1994,
+      "value": 82.7192704828813
+    },
+    {
+      "t": 1995,
+      "value": 83.8792837054185
+    },
+    {
+      "t": 1996,
+      "value": 86.1587066978923
+    },
+    {
+      "t": 1997,
+      "value": 88.0510033071222
+    },
+    {
+      "t": 1998,
+      "value": 88.0822875630195
+    },
+    {
+      "t": 1999,
+      "value": 89.4935999078163
+    },
+    {
+      "t": 2000,
+      "value": 90.7644825251247
+    },
+    {
+      "t": 2001,
+      "value": 91.6469583080201
+    },
+    {
+      "t": 2002,
+      "value": 90.9349931171709
+    },
+    {
+      "t": 2003,
+      "value": 90.4515346810275
+    },
+    {
+      "t": 2004,
+      "value": 91.5369169084298
+    },
+    {
+      "t": 2005,
+      "value": 93.0501575711545
+    },
+    {
+      "t": 2006,
+      "value": 94.3391372560064
+    },
+    {
+      "t": 2007,
+      "value": 94.6415584348811
+    },
+    {
+      "t": 2008,
+      "value": 94.7248505234028
+    },
+    {
+      "t": 2009,
+      "value": 93.656273374957
+    },
+    {
+      "t": 2010,
+      "value": 93.3665196127705
+    },
+    {
+      "t": 2011,
+      "value": 94.1573465943454
+    },
+    {
+      "t": 2012,
+      "value": 94.6779259177525
+    },
+    {
+      "t": 2013,
+      "value": 94.912898094219
+    },
+    {
+      "t": 2014,
+      "value": 93.2974463262476
+    },
+    {
+      "t": 2015,
+      "value": 93.5829187951126
+    },
+    {
+      "t": 2016,
+      "value": 93.0551830775807
+    },
+    {
+      "t": 2017,
+      "value": 94.9121874372641
+    },
+    {
+      "t": 2018,
+      "value": 95.0272637408286
+    },
+    {
+      "t": 2019,
+      "value": 95.4449505156826
+    },
+    {
+      "t": 2020,
+      "value": 93.9432061782962
+    },
+    {
+      "t": 2021,
+      "value": 94.4147339316784
+    },
+    {
+      "t": 2022,
+      "value": 93.8914572599814
+    },
+    {
+      "t": 2023,
+      "value": 94.2822447515305
+    },
+    {
+      "t": 2024,
+      "value": 94.0689363598362
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SH.IMM.MEAS",
+    "url": "https://data.worldbank.org/indicator/SH.IMM.MEAS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "ecbd98414ffa71e4b9cbc08dfc62454af95d354d478fd514c4768fa5f1057ff2",
+    "definition": "Immunization, measles (% of children ages 12-23 months)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO/UNICEF, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity ECS"
+    }
+  ],
+  "derivedFrom": [
+    "ECS"
+  ]
+}

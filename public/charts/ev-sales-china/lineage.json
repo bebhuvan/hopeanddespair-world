@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "transport.ev_sales.china",
+    "unit": "Vehicles",
+    "points": 16
+  },
+  "wasDerivedFrom": [
+    "China"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity China"
+      }
+    ],
+    "agent": "adapter:iea@1.0.0",
+    "used": {
+      "source": "iea",
+      "slug": "evs",
+      "url": "https://api.iea.org/evs?region=China&csv=true",
+      "vintage": "2026-06-13",
+      "checksum": "c8ceb1a9c23ddd3f824d0e3e821ab4d849bc3f4acfb9fea87008496cc0afee4d",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+}

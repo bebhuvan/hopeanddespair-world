@@ -1,0 +1,157 @@
+[
+  {
+    "indicatorId": "climate.ghg_sector_buildings.world",
+    "entity": "OWID_WRL",
+    "entityName": "World",
+    "unit": "tonnes",
+    "points": [
+      {
+        "t": 1990,
+        "value": 3232640000
+      },
+      {
+        "t": 1991,
+        "value": 3262669824
+      },
+      {
+        "t": 1992,
+        "value": 3155610112
+      },
+      {
+        "t": 1993,
+        "value": 3226139904
+      },
+      {
+        "t": 1994,
+        "value": 3141449984
+      },
+      {
+        "t": 1995,
+        "value": 3222360064
+      },
+      {
+        "t": 1996,
+        "value": 3288409856
+      },
+      {
+        "t": 1997,
+        "value": 3274129920
+      },
+      {
+        "t": 1998,
+        "value": 3119610112
+      },
+      {
+        "t": 1999,
+        "value": 3192509952
+      },
+      {
+        "t": 2000,
+        "value": 3173199872
+      },
+      {
+        "t": 2001,
+        "value": 3192339968
+      },
+      {
+        "t": 2002,
+        "value": 3198289920
+      },
+      {
+        "t": 2003,
+        "value": 3285080064
+      },
+      {
+        "t": 2004,
+        "value": 3327639808
+      },
+      {
+        "t": 2005,
+        "value": 3328150016
+      },
+      {
+        "t": 2006,
+        "value": 3300150016
+      },
+      {
+        "t": 2007,
+        "value": 3284719872
+      },
+      {
+        "t": 2008,
+        "value": 3347580160
+      },
+      {
+        "t": 2009,
+        "value": 3293199872
+      },
+      {
+        "t": 2010,
+        "value": 3346279936
+      },
+      {
+        "t": 2011,
+        "value": 3286230016
+      },
+      {
+        "t": 2012,
+        "value": 3223069952
+      },
+      {
+        "t": 2013,
+        "value": 3333629952
+      },
+      {
+        "t": 2014,
+        "value": 3281250048
+      },
+      {
+        "t": 2015,
+        "value": 3301019904
+      },
+      {
+        "t": 2016,
+        "value": 3328489984
+      },
+      {
+        "t": 2017,
+        "value": 3399110144
+      },
+      {
+        "t": 2018,
+        "value": 3427310080
+      },
+      {
+        "t": 2019,
+        "value": 3379330048
+      },
+      {
+        "t": 2020,
+        "value": 3328350208
+      },
+      {
+        "t": 2021,
+        "value": 3368709888
+      },
+      {
+        "t": 2022,
+        "value": 3290649856
+      },
+      {
+        "t": 2023,
+        "value": 3201989888
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "buildings_ghg_emissions",
+      "url": "https://ourworldindata.org/grapher/ghg-emissions-by-sector",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "6bd8581a73b3c5da14c09d12490ab53cd1ed159b559cf4299351b4e9b816d8fa",
+      "definition": "Emissions are measured in tonnes of carbon dioxide-equivalents.",
+      "attribution": "Our World in Data",
+      "primarySource": "Climate Watch (2026) — via Our World in Data"
+    }
+  }
+]

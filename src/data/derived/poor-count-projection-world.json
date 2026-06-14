@@ -1,0 +1,79 @@
+{
+  "indicatorId": "economy.poor_count_projection.world",
+  "entity": "WLD",
+  "entityName": "World",
+  "unit": "million people",
+  "points": [
+    {
+      "t": 2026,
+      "value": 826.023
+    },
+    {
+      "t": 2027,
+      "value": 814.379
+    },
+    {
+      "t": 2028,
+      "value": 787.52
+    },
+    {
+      "t": 2029,
+      "value": 762.814
+    },
+    {
+      "t": 2030,
+      "value": 737.589
+    },
+    {
+      "t": 2031,
+      "value": 750.612
+    },
+    {
+      "t": 2032,
+      "value": 763.992
+    },
+    {
+      "t": 2033,
+      "value": 778.013
+    },
+    {
+      "t": 2034,
+      "value": 792.745
+    },
+    {
+      "t": 2035,
+      "value": 806.187
+    },
+    {
+      "t": 2036,
+      "value": 822.572
+    },
+    {
+      "t": 2037,
+      "value": 837.807
+    },
+    {
+      "t": 2038,
+      "value": 854.966
+    },
+    {
+      "t": 2039,
+      "value": 870.844
+    },
+    {
+      "t": 2040,
+      "value": 888.04
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "headcount__povertyline_300 (World Bank projection)",
+    "url": "https://ourworldindata.org/grapher/projections-extreme-poverty-wb",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "b0d204c7ec0209cc863cd646128677b6a6bf6f777a09fb0893197cdd2a01907a",
+    "definition": "World Bank projection of the number of people below $3.00/day (2021 PPP), 2026–2040. A forward forecast on the Bank's growth path, not an observation — it falls to a trough near 2030, then rises as the remaining poor concentrate in slow-growing economies.",
+    "attribution": "World Bank — Poverty and Inequality Platform (projection), via Our World in Data",
+    "primarySource": "World Bank — Poverty and Inequality Platform"
+  }
+}

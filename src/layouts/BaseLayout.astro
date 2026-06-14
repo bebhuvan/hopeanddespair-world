@@ -1,14 +1,16 @@
 ---
-// Self-hosted fonts (PERFORMANCE.md — no render-blocking Google Fonts).
-import '@fontsource-variable/fraunces';
-import '@fontsource-variable/newsreader';
-import '@fontsource/geist-sans/300.css';
-import '@fontsource/geist-sans/400.css';
-import '@fontsource/geist-sans/500.css';
-import '@fontsource/geist-sans/600.css';
-import '@fontsource/geist-sans/700.css';
-import '@fontsource/geist-mono/400.css';
-import '@fontsource/geist-mono/500.css';
+// Preload ONLY the display face — it sets the hero headline, the LCP element, and is light
+// (~46 KB). The serif (~120 KB) and mono are heavier and not on the LCP path; they swap in
+// async (font-display: swap), so they never compete for the headline's bandwidth.
+import schibstedWoff2 from '@fontsource-variable/schibsted-grotesk/files/schibsted-grotesk-latin-wght-normal.woff2?url';
+
+// Self-hosted fonts (PERFORMANCE.md — no render-blocking Google Fonts). The serif must come from
+// the opsz builds: a default fontsource import is wght-only + upright, which disables optical
+// sizing and renders every italic as a synthetic oblique.
+import '@fontsource-variable/schibsted-grotesk';
+import '@fontsource-variable/source-serif-4/opsz.css';
+import '@fontsource-variable/source-serif-4/opsz-italic.css';
+import '@fontsource-variable/spline-sans-mono';
 import '../styles/tokens.css';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
@@ -17,8 +19,40 @@ import Footer from '../components/Footer.astro';
 interface Props {
   title: string;
   description?: string;
+  image?: string;                                   // og image path, relative to the site root
+  type?: string;                                    // og:type — 'website' | 'article'
+  jsonld?: Record<string, any> | Record<string, any>[];   // page-specific structured data
 }
-const { title, description = 'A living atlas of human progress, suffering, and uncertainty.' } = Astro.props;
+const {
+  title,
+  description = 'A living atlas answering whether the world is getting better or worse — one honest question at a time, with open, cited data. Progress and catastrophe coexist; the answer depends on the lens.',
+  image = '/og.png',
+  type = 'website',
+  jsonld,
+} = Astro.props;
+
+const site = Astro.site!;
+const canonical = new URL(Astro.url.pathname, site).href;
+const ogImage = new URL(image, site).href;
+
+// Sitewide structured data — the publication and its author. Page-specific schema is appended.
+const siteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Hope & Despair',
+  alternateName: 'hopeanddespair.world',
+  url: site.href,
+  description: 'A living atlas of human progress, suffering, and uncertainty.',
+  inLanguage: 'en',
+  license: 'https://creativecommons.org/licenses/by/4.0/',
+  publisher: {
+    '@type': 'Person',
+    name: 'Bhuvan',
+    url: 'https://bebhuvan.com',
+    sameAs: ['https://twitter.com/bebhuvan', 'https://www.linkedin.com/in/bebhuvan'],
+  },
+};
+const lds = [siteLd, ...(jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [])];
 ---
 
 <!doctype html>
@@ -28,76 +62,39 @@ const { title, description = 'A living atlas of human progress, suffering, and u
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <meta name="author" content="Bhuvan" />
+
+    <!-- preload the LCP font (the display headline) only -->
+    <link rel="preload" href={schibstedWoff2} as="font" type="font/woff2" crossorigin />
+
+    <!-- open graph + twitter -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="Hope & Despair" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:creator" content="@bebhuvan" />
+
     <link rel="alternate" type="application/rss+xml" title="Hope & Despair" href="/rss.xml" />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='none' stroke='%230FA67E'/%3E%3Cpath d='M8 1a7 7 0 000 14z' fill='%230FA67E'/%3E%3C/svg%3E" />
-    {/* no-FOUC theme: set before first paint */}
-    <script is:inline>
-      (() => {
-        try {
-          const t = localStorage.getItem('theme');
-          if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
-        } catch (e) {}
-      })();
-    </script>
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 1.6a6.4 6.4 0 000 12.8z' fill='%230F7A52'/%3E%3Cpath d='M8 1.6a6.4 6.4 0 010 12.8z' fill='%23C0492B'/%3E%3Cline x1='8' y1='1.2' x2='8' y2='14.8' stroke='%23fff' stroke-width='0.8'/%3E%3Ccircle cx='8' cy='8' r='6.4' fill='none' stroke='%2314130F' stroke-width='0.9'/%3E%3C/svg%3E" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(lds)} />
   </head>
   <body>
-    <div class="spine" aria-hidden="true"><div class="spine-thumb" id="spineThumb"></div></div>
-    <div class="wrap">
-      <Header />
-      <main data-pagefind-body><slot /></main>
-      <Footer />
-    </div>
-
-    <script is:inline>
-      // theme toggle
-      const tg = document.getElementById('themeToggle');
-      if (tg) tg.addEventListener('click', () => {
-        const root = document.documentElement;
-        const dark = root.getAttribute('data-theme') === 'dark';
-        const next = dark ? 'light' : 'dark';
-        root.setAttribute('data-theme', next);
-        tg.textContent = dark ? 'Dark' : 'Light';
-        try { localStorage.setItem('theme', next); } catch (e) {}
-      });
-
-      // temperature scroll-spine — transform/opacity + a CSS var only (no layout, no repaint thrash)
-      const thumb = document.getElementById('spineThumb');
-      if (thumb) {
-        let queued = false;
-        const update = () => {
-          queued = false;
-          const max = document.documentElement.scrollHeight - window.innerHeight;
-          const p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
-          thumb.style.setProperty('--y', (p * (window.innerHeight - 50)) + 'px');
-          thumb.style.setProperty('--c', p < 0.5
-            ? `color-mix(in srgb, var(--hope), var(--uncertain) ${Math.round(p * 200)}%)`
-            : `color-mix(in srgb, var(--uncertain), var(--despair) ${Math.round((p - 0.5) * 200)}%)`);
-        };
-        addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(update); } }, { passive: true });
-        addEventListener('resize', update);
-        update();
-      }
-    </script>
-
-    <style>
-      .spine {
-        position: fixed; top: 0; left: clamp(0.55rem, 2.4vw, 2.4rem); width: 2px; height: 100vh;
-        z-index: 60; pointer-events: none;
-        background: linear-gradient(180deg,
-          color-mix(in srgb, var(--hope) 45%, transparent),
-          color-mix(in srgb, var(--uncertain) 30%, transparent),
-          color-mix(in srgb, var(--despair) 45%, transparent));
-        opacity: 0.38;
-      }
-      .spine-thumb {
-        position: absolute; left: -2px; width: 6px; height: 50px; border-radius: 3px; top: 0;
-        transform: translateY(var(--y, 0)); background: var(--c, var(--accent));
-        transition: background 0.2s linear;
-      }
-      @media (max-width: 760px) { .spine { display: none; } }
-    </style>
+    <Header />
+    <div class="wrap"><main data-pagefind-body><slot /></main></div>
+    <Footer />
   </body>
 </html>

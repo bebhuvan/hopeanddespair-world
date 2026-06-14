@@ -1,0 +1,60 @@
+{
+  "indicatorId": "substance.smoking.ssf",
+  "entity": "SSF",
+  "entityName": "Sub-Saharan Africa",
+  "unit": "% of adults",
+  "points": [
+    {
+      "t": 2000,
+      "value": 18.2118996063256
+    },
+    {
+      "t": 2005,
+      "value": 15.2434374554072
+    },
+    {
+      "t": 2007,
+      "value": 14.2386618740738
+    },
+    {
+      "t": 2010,
+      "value": 12.9198477307452
+    },
+    {
+      "t": 2015,
+      "value": 11.1103521549077
+    },
+    {
+      "t": 2020,
+      "value": 9.65125223940089
+    },
+    {
+      "t": 2021,
+      "value": 9.39658426107511
+    },
+    {
+      "t": 2022,
+      "value": 9.17194179432596
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SH.PRV.SMOK",
+    "url": "https://data.worldbank.org/indicator/SH.PRV.SMOK",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "2d0255a845aaffe81095203425aec7765775d7acc13287e4bd11209f9cf8bafd",
+    "definition": "Prevalence of current tobacco use (% of adults)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity SSF"
+    }
+  ],
+  "derivedFrom": [
+    "SSF"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "chartId": "hunger-by-country",
+  "kind": "bars",
+  "title": "Undernourishment by country",
+  "unit": "Population that is undernourished, %",
+  "yearSpan": "2023–2023",
+  "bars": [
+    {
+      "label": "Madagascar",
+      "value": 39.5,
+      "color": "despair"
+    },
+    {
+      "label": "DR Congo",
+      "value": 38.5,
+      "color": "despair"
+    },
+    {
+      "label": "Central African Rep.",
+      "value": 29.8,
+      "color": "despair"
+    },
+    {
+      "label": "Nigeria",
+      "value": 19.9,
+      "color": "ochre"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 19.7,
+      "color": "ochre"
+    },
+    {
+      "label": "India",
+      "value": 12,
+      "color": "hope"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 10.4,
+      "color": "hope"
+    },
+    {
+      "label": "China",
+      "value": 2.5,
+      "color": "hope"
+    },
+    {
+      "label": "Brazil",
+      "value": 2.5,
+      "color": "hope"
+    },
+    {
+      "label": "United States",
+      "value": 2.5,
+      "color": "hope"
+    }
+  ],
+  "xmax": 60,
+  "xTicks": [
+    0,
+    20,
+    40,
+    60
+  ],
+  "provenance": {
+    "source": "wb",
+    "sourceIndicator": "SN.ITK.DEFC.ZS",
+    "url": "https://data.worldbank.org/indicator/SN.ITK.DEFC.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2023–2023",
+    "checksum": "cc629598b63bf3b337327aa040e4abf20d1e532fe024b3147b7137e418df8ed9",
+    "definition": "Prevalence of undernourishment (share below minimum dietary energy), latest year per country; values below 2.5% are reported at that floor. A curated 10-country spread sorted descending.",
+    "attribution": "FAO, via World Bank",
+    "primarySource": "UN Food and Agriculture Organization (FAO)"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 10 curated countries sorted descending"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "education.literacy_rate.northern-africa-and-western-asia",
+    "unit": "%",
+    "points": 48
+  },
+  "wasDerivedFrom": [
+    "Northern Africa and Western Asia (SDG)"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Northern Africa and Western Asia (SDG)"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "cross-country-literacy-rates",
+      "url": "https://ourworldindata.org/grapher/cross-country-literacy-rates",
+      "vintage": "2026-06-12",
+      "checksum": "64a430579a7265dd5c26dd4d2e2cf786d780b7096ae4a4b463fc6281e586f80c",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UNESCO; Buringh & van Zanden — via Our World in Data"
+}

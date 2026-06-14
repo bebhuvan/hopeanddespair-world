@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "global-death-rate-in-violent-political-conflicts-over-the-long-run",
+  "vintage": "2026-06-12",
+  "url": "https://ourworldindata.org/grapher/global-death-rate-in-violent-political-conflicts-over-the-long-run",
+  "checksum": "76bbbf97a3f858d9037aaa533b5f132c57fc007a4c1495cdf6d0b159d3e81f47",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:42:53.318Z",
+  "adapterVersion": "1.0.0"
+}

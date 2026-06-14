@@ -1,0 +1,45 @@
+[
+  {
+    "indicatorId": "health.cause_communicable_wb.mea",
+    "entity": "MEA",
+    "entityName": "Middle East, North Africa, Afghanistan & Pakistan",
+    "unit": "% of total deaths",
+    "points": [
+      {
+        "t": 2000,
+        "value": 38.9668737974634
+      },
+      {
+        "t": 2010,
+        "value": 30.5818306311213
+      },
+      {
+        "t": 2015,
+        "value": 24.6236123440862
+      },
+      {
+        "t": 2019,
+        "value": 21.7086998698823
+      },
+      {
+        "t": 2020,
+        "value": 29.0878017363401
+      },
+      {
+        "t": 2021,
+        "value": 30.1166625860611
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SH.DTH.COMM.ZS",
+      "url": "https://data.worldbank.org/indicator/SH.DTH.COMM.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "d0105b7c5670c1f82a039344164afad90d83a1f0d617571decc19ae60892f4c5",
+      "definition": "Cause of death, by communicable diseases and maternal, prenatal and nutrition conditions (% of total)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "WHO Global Health Estimates, via World Bank"
+    }
+  }
+]

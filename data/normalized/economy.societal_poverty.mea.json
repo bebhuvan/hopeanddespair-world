@@ -1,0 +1,205 @@
+[
+  {
+    "indicatorId": "economy.societal_poverty.mea",
+    "entity": "MEA",
+    "entityName": "Middle East, North Africa, Afghanistan & Pakistan",
+    "unit": "% of population",
+    "points": [
+      {
+        "t": 1981,
+        "value": 47.870000000000005
+      },
+      {
+        "t": 1982,
+        "value": 47.46
+      },
+      {
+        "t": 1983,
+        "value": 47.08
+      },
+      {
+        "t": 1984,
+        "value": 46.7
+      },
+      {
+        "t": 1985,
+        "value": 46.32
+      },
+      {
+        "t": 1986,
+        "value": 46.06
+      },
+      {
+        "t": 1987,
+        "value": 45.879999999999995
+      },
+      {
+        "t": 1988,
+        "value": 45.56
+      },
+      {
+        "t": 1989,
+        "value": 45.540000000000006
+      },
+      {
+        "t": 1990,
+        "value": 45.11
+      },
+      {
+        "t": 1991,
+        "value": 42.93
+      },
+      {
+        "t": 1992,
+        "value": 39.4
+      },
+      {
+        "t": 1993,
+        "value": 39.519999999999996
+      },
+      {
+        "t": 1994,
+        "value": 36.97
+      },
+      {
+        "t": 1995,
+        "value": 36.5
+      },
+      {
+        "t": 1996,
+        "value": 34.5
+      },
+      {
+        "t": 1997,
+        "value": 34.12
+      },
+      {
+        "t": 1998,
+        "value": 34.57
+      },
+      {
+        "t": 1999,
+        "value": 34.870000000000005
+      },
+      {
+        "t": 2000,
+        "value": 35.370000000000005
+      },
+      {
+        "t": 2001,
+        "value": 36.16
+      },
+      {
+        "t": 2002,
+        "value": 35.82
+      },
+      {
+        "t": 2003,
+        "value": 34.050000000000004
+      },
+      {
+        "t": 2004,
+        "value": 31.47
+      },
+      {
+        "t": 2005,
+        "value": 30.330000000000002
+      },
+      {
+        "t": 2006,
+        "value": 29.42
+      },
+      {
+        "t": 2007,
+        "value": 28.84
+      },
+      {
+        "t": 2008,
+        "value": 27.82
+      },
+      {
+        "t": 2009,
+        "value": 27.700000000000003
+      },
+      {
+        "t": 2010,
+        "value": 26.38
+      },
+      {
+        "t": 2011,
+        "value": 25.840000000000003
+      },
+      {
+        "t": 2012,
+        "value": 25.21
+      },
+      {
+        "t": 2013,
+        "value": 24.779999999999998
+      },
+      {
+        "t": 2014,
+        "value": 24.83
+      },
+      {
+        "t": 2015,
+        "value": 25.019999999999996
+      },
+      {
+        "t": 2016,
+        "value": 25.290000000000003
+      },
+      {
+        "t": 2017,
+        "value": 25.240000000000002
+      },
+      {
+        "t": 2018,
+        "value": 25.180000000000003
+      },
+      {
+        "t": 2019,
+        "value": 25.5
+      },
+      {
+        "t": 2020,
+        "value": 26.22
+      },
+      {
+        "t": 2021,
+        "value": 26.8
+      },
+      {
+        "t": 2022,
+        "value": 26.58
+      },
+      {
+        "t": 2023,
+        "value": 26.790000000000003
+      },
+      {
+        "t": 2024,
+        "value": 27.02
+      },
+      {
+        "t": 2025,
+        "value": 27.189999999999998
+      },
+      {
+        "t": 2026,
+        "value": 27.089999999999996
+      }
+    ],
+    "provenance": {
+      "source": "pip",
+      "sourceIndicator": "spr @ $3.00/day (2021 PPP)",
+      "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+      "definition": "Societal (relative) poverty rate, Middle East, North Africa, Afghanistan & Pakistan",
+      "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+      "primarySource": "World Bank — Poverty and Inequality Platform"
+    }
+  }
+]

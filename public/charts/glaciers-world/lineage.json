@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "climate.glaciers.world",
+    "unit": "metres water equivalent",
+    "points": 76
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "identity",
+        "detail": "normalized directly from source"
+      }
+    ],
+    "agent": "adapter:wgms@1.0.0",
+    "used": {
+      "source": "wgms",
+      "slug": "mb_ref",
+      "url": "https://wgms.ch/",
+      "vintage": "2026-06-13",
+      "checksum": "24d8c4922199360102c616eac565f2aa9beccc93dfbbeed0877526c9c76e14e7",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "World Glacier Monitoring Service (WGMS)"
+}

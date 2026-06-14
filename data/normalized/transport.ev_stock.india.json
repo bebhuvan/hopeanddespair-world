@@ -1,0 +1,85 @@
+[
+  {
+    "indicatorId": "transport.ev_stock.india",
+    "entity": "India",
+    "entityName": "India",
+    "unit": "Vehicles",
+    "points": [
+      {
+        "t": 2010,
+        "value": 880
+      },
+      {
+        "t": 2011,
+        "value": 1300
+      },
+      {
+        "t": 2012,
+        "value": 2800
+      },
+      {
+        "t": 2013,
+        "value": 2900
+      },
+      {
+        "t": 2014,
+        "value": 3400
+      },
+      {
+        "t": 2015,
+        "value": 4400
+      },
+      {
+        "t": 2016,
+        "value": 4800
+      },
+      {
+        "t": 2017,
+        "value": 7000
+      },
+      {
+        "t": 2018,
+        "value": 7900
+      },
+      {
+        "t": 2019,
+        "value": 8600
+      },
+      {
+        "t": 2020,
+        "value": 12000
+      },
+      {
+        "t": 2021,
+        "value": 24000
+      },
+      {
+        "t": 2022,
+        "value": 72000
+      },
+      {
+        "t": 2023,
+        "value": 150000
+      },
+      {
+        "t": 2024,
+        "value": 250000
+      },
+      {
+        "t": 2025,
+        "value": 410000
+      }
+    ],
+    "provenance": {
+      "source": "iea",
+      "sourceIndicator": "EV stock · Cars · EV",
+      "url": "https://api.iea.org/evs?region=India&csv=true",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "8dd13a74ac53aff12fe7aa229e238c37bbf8576da8fc348b749bb9cd6be3910b",
+      "definition": "Electric cars on the road, India",
+      "attribution": "IEA — Global EV Data Explorer",
+      "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+    }
+  }
+]

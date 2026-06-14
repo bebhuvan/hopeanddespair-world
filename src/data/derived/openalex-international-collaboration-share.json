@@ -1,0 +1,125 @@
+{
+  "indicatorId": "science.openalex_international_collaboration_share.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "% of works",
+  "points": [
+    {
+      "t": 2000,
+      "value": 5.03
+    },
+    {
+      "t": 2001,
+      "value": 5.37
+    },
+    {
+      "t": 2002,
+      "value": 5.72
+    },
+    {
+      "t": 2003,
+      "value": 5.62
+    },
+    {
+      "t": 2004,
+      "value": 5.54
+    },
+    {
+      "t": 2005,
+      "value": 5.78
+    },
+    {
+      "t": 2006,
+      "value": 6.26
+    },
+    {
+      "t": 2007,
+      "value": 6.04
+    },
+    {
+      "t": 2008,
+      "value": 6.29
+    },
+    {
+      "t": 2009,
+      "value": 6.26
+    },
+    {
+      "t": 2010,
+      "value": 6.31
+    },
+    {
+      "t": 2011,
+      "value": 6.5
+    },
+    {
+      "t": 2012,
+      "value": 6.8
+    },
+    {
+      "t": 2013,
+      "value": 7.13
+    },
+    {
+      "t": 2014,
+      "value": 7.34
+    },
+    {
+      "t": 2015,
+      "value": 7.6
+    },
+    {
+      "t": 2016,
+      "value": 7.78
+    },
+    {
+      "t": 2017,
+      "value": 8.3
+    },
+    {
+      "t": 2018,
+      "value": 9.15
+    },
+    {
+      "t": 2019,
+      "value": 9.79
+    },
+    {
+      "t": 2020,
+      "value": 10.71
+    },
+    {
+      "t": 2021,
+      "value": 11.67
+    },
+    {
+      "t": 2022,
+      "value": 12.18
+    },
+    {
+      "t": 2023,
+      "value": 12.31
+    },
+    {
+      "t": 2024,
+      "value": 12.58
+    }
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "countries_distinct_count:>1 / all works, group_by publication_year",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,countries_distinct_count:>1&group_by=publication_year&per-page=100",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-13",
+    "checksum": "7b7db5c37eeeefa136263313c99654525eb2c6687347c2592ad2bebdc10bdf5e",
+    "definition": "Share of OpenAlex works with authorship institutions in more than one country.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "ratio",
+      "detail": "divided yearly works with countries_distinct_count > 1 by all yearly works, 2000-2024"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "source": "owid",
+  "slug": "share-of-population-in-extreme-poverty",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/share-of-population-in-extreme-poverty.csv",
+  "checksum": "d3445498e71fdefd00c78b356518a41637f51125db82521858965f8b72cf097a",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T06:19:06.054Z"
+}

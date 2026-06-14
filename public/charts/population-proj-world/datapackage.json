@@ -1,0 +1,38 @@
+{
+  "name": "demography-population_proj-world",
+  "title": "Population by country, available from 10,000 BCE to 2023, based on data and estimates from different sources.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/population-long-run-with-projections"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "demography-population_proj-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "demography_population_proj_world",
+            "type": "number",
+            "unit": "people"
+          }
+        ]
+      }
+    }
+  ]
+}

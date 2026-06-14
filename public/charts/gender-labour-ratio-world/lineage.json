@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "gender.labour_force_ratio.world",
+    "unit": "%",
+    "points": 35
+  },
+  "wasDerivedFrom": [
+    "WLD"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity WLD"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SL.TLF.CACT.FM.ZS",
+      "url": "https://data.worldbank.org/indicator/SL.TLF.CACT.FM.ZS",
+      "vintage": "2026-06-12",
+      "checksum": "6736787bfa9334e4b5dd61db855b571502000c738aa5dd64f2a6fcdb9ee88a2b",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "International Labour Organization (modelled), via World Bank"
+}

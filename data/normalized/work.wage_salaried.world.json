@@ -1,0 +1,157 @@
+[
+  {
+    "indicatorId": "work.wage_salaried.world",
+    "entity": "WLD",
+    "entityName": "World",
+    "unit": "% of total employment",
+    "points": [
+      {
+        "t": 1991,
+        "value": 47.6237517362368
+      },
+      {
+        "t": 1992,
+        "value": 47.6012550862972
+      },
+      {
+        "t": 1993,
+        "value": 47.6178492802439
+      },
+      {
+        "t": 1994,
+        "value": 47.6484132398824
+      },
+      {
+        "t": 1995,
+        "value": 47.7421258115184
+      },
+      {
+        "t": 1996,
+        "value": 47.9195070840014
+      },
+      {
+        "t": 1997,
+        "value": 48.0777374649287
+      },
+      {
+        "t": 1998,
+        "value": 48.0794363804419
+      },
+      {
+        "t": 1999,
+        "value": 48.2436163870906
+      },
+      {
+        "t": 2000,
+        "value": 48.4348976859114
+      },
+      {
+        "t": 2001,
+        "value": 48.6994203085991
+      },
+      {
+        "t": 2002,
+        "value": 48.8871034174277
+      },
+      {
+        "t": 2003,
+        "value": 48.9707295391208
+      },
+      {
+        "t": 2004,
+        "value": 49.3321245710297
+      },
+      {
+        "t": 2005,
+        "value": 49.7747374213176
+      },
+      {
+        "t": 2006,
+        "value": 50.2274279038626
+      },
+      {
+        "t": 2007,
+        "value": 50.6188437730837
+      },
+      {
+        "t": 2008,
+        "value": 50.9858536131134
+      },
+      {
+        "t": 2009,
+        "value": 50.9866615722443
+      },
+      {
+        "t": 2010,
+        "value": 51.267735164111
+      },
+      {
+        "t": 2011,
+        "value": 51.7221994342427
+      },
+      {
+        "t": 2012,
+        "value": 52.2424364794947
+      },
+      {
+        "t": 2013,
+        "value": 52.4234524279902
+      },
+      {
+        "t": 2014,
+        "value": 52.7599529304246
+      },
+      {
+        "t": 2015,
+        "value": 53.1306095886964
+      },
+      {
+        "t": 2016,
+        "value": 53.3657925549134
+      },
+      {
+        "t": 2017,
+        "value": 53.567523174518
+      },
+      {
+        "t": 2018,
+        "value": 53.7333619953951
+      },
+      {
+        "t": 2019,
+        "value": 53.8015045137435
+      },
+      {
+        "t": 2020,
+        "value": 53.3145182866401
+      },
+      {
+        "t": 2021,
+        "value": 53.3834055993757
+      },
+      {
+        "t": 2022,
+        "value": 53.2469108677146
+      },
+      {
+        "t": 2023,
+        "value": 53.3577318427557
+      },
+      {
+        "t": 2024,
+        "value": 53.5209877859644
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SL.EMP.WORK.ZS",
+      "url": "https://data.worldbank.org/indicator/SL.EMP.WORK.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "e87bad7c230dad2dd6de6c39aa61ebfb57121dd4b395dcb41645865086e566ad",
+      "definition": "Wage and salaried workers, total (% of total employment) (modeled ILO estimate)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "International Labour Organization (modelled), via World Bank"
+    }
+  }
+]

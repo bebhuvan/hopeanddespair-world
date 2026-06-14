@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "demography.contraception_modern.world",
+    "unit": "% of women aged 15–49",
+    "points": 2
+  },
+  "wasDerivedFrom": [
+    "WLD"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity WLD"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SP.DYN.CONM.ZS",
+      "url": "https://data.worldbank.org/indicator/SP.DYN.CONM.ZS",
+      "vintage": "2026-06-13",
+      "checksum": "5c6a18bd97ad4ac92806012486ff6c02cd5a43e1cb564f642bf0ed67b4633aaa",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UN Population Division; DHS — via World Bank"
+}

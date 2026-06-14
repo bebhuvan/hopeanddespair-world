@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "cumulative-co2-emissions",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/cumulative-co2-emissions",
+  "checksum": "bf7e632b90e607c09037eb92a24c906403ec6f12ea39f044a07fa19283b06b61",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T13:37:10.982Z",
+  "adapterVersion": "1.0.0"
+}

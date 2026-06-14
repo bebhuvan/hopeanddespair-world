@@ -1,0 +1,120 @@
+{
+  "indicatorId": "hunger.undernourishment_share.world",
+  "entity": "WLD",
+  "entityName": "World",
+  "unit": "% of population",
+  "points": [
+    {
+      "t": 2001,
+      "value": 12.8
+    },
+    {
+      "t": 2002,
+      "value": 12.9
+    },
+    {
+      "t": 2003,
+      "value": 12.8
+    },
+    {
+      "t": 2004,
+      "value": 12.4
+    },
+    {
+      "t": 2005,
+      "value": 11.9
+    },
+    {
+      "t": 2006,
+      "value": 11
+    },
+    {
+      "t": 2007,
+      "value": 10.1
+    },
+    {
+      "t": 2008,
+      "value": 9.5
+    },
+    {
+      "t": 2009,
+      "value": 9.1
+    },
+    {
+      "t": 2010,
+      "value": 8.7
+    },
+    {
+      "t": 2011,
+      "value": 8.4
+    },
+    {
+      "t": 2012,
+      "value": 8.1
+    },
+    {
+      "t": 2013,
+      "value": 7.8
+    },
+    {
+      "t": 2014,
+      "value": 7.7
+    },
+    {
+      "t": 2015,
+      "value": 7.6
+    },
+    {
+      "t": 2016,
+      "value": 7.5
+    },
+    {
+      "t": 2017,
+      "value": 7.4
+    },
+    {
+      "t": 2018,
+      "value": 7.3
+    },
+    {
+      "t": 2019,
+      "value": 7.8
+    },
+    {
+      "t": 2020,
+      "value": 8.2
+    },
+    {
+      "t": 2021,
+      "value": 8.6
+    },
+    {
+      "t": 2022,
+      "value": 8.6
+    },
+    {
+      "t": 2023,
+      "value": 8.5
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SN.ITK.DEFC.ZS",
+    "url": "https://data.worldbank.org/indicator/SN.ITK.DEFC.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "9216a584571267f95c167386f2dfd08ff5560ba6535fe4795ba194d2d304ab56",
+    "definition": "Prevalence of undernourishment (% of population)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "FAO, via World Bank World Development Indicators"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity WLD"
+    }
+  ],
+  "derivedFrom": [
+    "WLD"
+  ]
+}

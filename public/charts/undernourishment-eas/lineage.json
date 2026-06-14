@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "hunger.undernourishment_share.eas",
+    "unit": "% of population",
+    "points": 23
+  },
+  "wasDerivedFrom": [
+    "EAS"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity EAS"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SN.ITK.DEFC.ZS",
+      "url": "https://data.worldbank.org/indicator/SN.ITK.DEFC.ZS",
+      "vintage": "2026-06-12",
+      "checksum": "9216a584571267f95c167386f2dfd08ff5560ba6535fe4795ba194d2d304ab56",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "FAO, via World Bank"
+}

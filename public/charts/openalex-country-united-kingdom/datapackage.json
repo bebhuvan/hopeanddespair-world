@@ -1,0 +1,38 @@
+{
+  "name": "science-openalex_country_united_kingdom-world",
+  "title": "OpenAlex works per year with at least one authorship institution in United Kingdom.",
+  "licenses": [
+    {
+      "name": "CC0 1.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenAlex",
+      "path": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:GB&group_by=publication_year&per-page=100"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "science-openalex_country_united_kingdom-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "science_openalex_country_united_kingdom_world",
+            "type": "number",
+            "unit": "works per year, million"
+          }
+        ]
+      }
+    }
+  ]
+}

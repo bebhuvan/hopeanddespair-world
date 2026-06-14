@@ -1,0 +1,38 @@
+{
+  "name": "economy-poor_count-afw",
+  "title": "Number of people in extreme poverty (below $3.00/day, 2021 PPP), Western & Central Africa",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — Poverty and Inequality Platform (PIP)",
+      "path": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "economy-poor_count-afw",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "economy_poor_count_afw",
+            "type": "number",
+            "unit": "million people"
+          }
+        ]
+      }
+    }
+  ]
+}

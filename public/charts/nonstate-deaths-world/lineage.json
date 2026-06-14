@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "violence.nonstate_deaths.world",
+    "unit": "deaths",
+    "points": 37
+  },
+  "wasDerivedFrom": [
+    "World"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:ucdp@1.0.0",
+    "used": {
+      "source": "ucdp",
+      "slug": "nonstate",
+      "url": "https://ucdp.uu.se/downloads/nsos/ucdp-nonstate-261-csv.zip",
+      "vintage": "2026-06-12",
+      "checksum": "14077bbef099f19da95f60b7c57f2aaa5cff3a16731b5d71012c6b1ac10954b3",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UCDP Non-state Conflict Dataset"
+}

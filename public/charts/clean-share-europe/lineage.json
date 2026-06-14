@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "energy.clean_share_electricity.europe",
+    "unit": "% of electricity generation",
+    "points": 26
+  },
+  "wasDerivedFrom": [
+    "Europe"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Europe"
+      }
+    ],
+    "agent": "adapter:ember@1.0.0",
+    "used": {
+      "source": "ember",
+      "slug": "electricity-generation/yearly",
+      "url": "https://api.ember-energy.org/v1/electricity-generation/yearly?entity=Europe&start_date=2000",
+      "vintage": "2026-06-13",
+      "checksum": "f329d283d19657221df6e4dcd01b45148a39c657b66f4a30108873041279d337",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Ember — Yearly Electricity Data"
+}

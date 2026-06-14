@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "SP.DYN.LE00.IN",
+  "vintage": "2026-06-13",
+  "url": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN",
+  "checksum": "2ed09ff8d0c9125e4c64f950661461b42ef614afb04b215c14469e3052977915",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T08:43:31.187Z",
+  "adapterVersion": "1.0.0"
+}

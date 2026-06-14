@@ -1,0 +1,29 @@
+[
+  {
+    "indicatorId": "demography.contraception_modern.world",
+    "entity": "WLD",
+    "entityName": "World",
+    "unit": "% of women aged 15–49",
+    "points": [
+      {
+        "t": 1990,
+        "value": 48.9013569465639
+      },
+      {
+        "t": 2000,
+        "value": 54.1379451608453
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SP.DYN.CONM.ZS",
+      "url": "https://data.worldbank.org/indicator/SP.DYN.CONM.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "5c6a18bd97ad4ac92806012486ff6c02cd5a43e1cb564f642bf0ed67b4633aaa",
+      "definition": "Contraceptive prevalence, any modern method (% of married women ages 15-49)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "UN Population Division; DHS — via World Bank"
+    }
+  }
+]

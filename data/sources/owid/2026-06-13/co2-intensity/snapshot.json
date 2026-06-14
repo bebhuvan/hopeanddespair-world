@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "co2-intensity",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/co2-intensity",
+  "checksum": "c275e415586f7257c8bb85bd37d6624a4616bae7d83d4ccc12ffe953531052ad",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T13:37:33.378Z",
+  "adapterVersion": "1.0.0"
+}

@@ -1,0 +1,172 @@
+{
+  "indicatorId": "nature.forest_area.world",
+  "entity": "OWID_WRL",
+  "entityName": "World",
+  "unit": "hectares",
+  "points": [
+    {
+      "t": 1990,
+      "value": 4343532500
+    },
+    {
+      "t": 1991,
+      "value": 4332838000
+    },
+    {
+      "t": 1992,
+      "value": 4322142700
+    },
+    {
+      "t": 1993,
+      "value": 4311448000
+    },
+    {
+      "t": 1994,
+      "value": 4300753400
+    },
+    {
+      "t": 1995,
+      "value": 4290058800
+    },
+    {
+      "t": 1996,
+      "value": 4279364000
+    },
+    {
+      "t": 1997,
+      "value": 4268669200
+    },
+    {
+      "t": 1998,
+      "value": 4257974500
+    },
+    {
+      "t": 1999,
+      "value": 4247279900
+    },
+    {
+      "t": 2000,
+      "value": 4236585200
+    },
+    {
+      "t": 2001,
+      "value": 4233026600
+    },
+    {
+      "t": 2002,
+      "value": 4229468000
+    },
+    {
+      "t": 2003,
+      "value": 4225909200
+    },
+    {
+      "t": 2004,
+      "value": 4222350600
+    },
+    {
+      "t": 2005,
+      "value": 4218792200
+    },
+    {
+      "t": 2006,
+      "value": 4215233500
+    },
+    {
+      "t": 2007,
+      "value": 4211675000
+    },
+    {
+      "t": 2008,
+      "value": 4208116200
+    },
+    {
+      "t": 2009,
+      "value": 4204557600
+    },
+    {
+      "t": 2010,
+      "value": 4200999200
+    },
+    {
+      "t": 2011,
+      "value": 4197086000
+    },
+    {
+      "t": 2012,
+      "value": 4193172700
+    },
+    {
+      "t": 2013,
+      "value": 4189259500
+    },
+    {
+      "t": 2014,
+      "value": 4185346300
+    },
+    {
+      "t": 2015,
+      "value": 4181433000
+    },
+    {
+      "t": 2016,
+      "value": 4178194200
+    },
+    {
+      "t": 2017,
+      "value": 4174955500
+    },
+    {
+      "t": 2018,
+      "value": 4171716600
+    },
+    {
+      "t": 2019,
+      "value": 4168478000
+    },
+    {
+      "t": 2020,
+      "value": 4165239300
+    },
+    {
+      "t": 2021,
+      "value": 4160234200
+    },
+    {
+      "t": 2022,
+      "value": 4155229200
+    },
+    {
+      "t": 2023,
+      "value": 4150224400
+    },
+    {
+      "t": 2024,
+      "value": 4145219300
+    },
+    {
+      "t": 2025,
+      "value": 4140214500
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "_1a_forestarea",
+    "url": "https://ourworldindata.org/grapher/forest-area-km",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "30ec5952c844e5c1ad3bf23314025295476e9462c3b527c213f7ca52b0235d1f",
+    "definition": "Forest area is land under natural or planted stands of trees of at least 5 meters in situ, whether productive or not, and excludes tree stands in agricultural production systems.",
+    "attribution": "Our World in Data",
+    "primarySource": "FAO (2025) — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity World"
+    }
+  ],
+  "derivedFrom": [
+    "OWID_WRL"
+  ]
+}

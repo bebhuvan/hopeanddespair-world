@@ -1,0 +1,341 @@
+[
+  {
+    "indicatorId": "violence.battle_deaths.world",
+    "entity": "OWID_WRL",
+    "entityName": "World",
+    "unit": "deaths",
+    "points": [
+      {
+        "t": 1946,
+        "value": 296386
+      },
+      {
+        "t": 1947,
+        "value": 404784
+      },
+      {
+        "t": 1948,
+        "value": 475588
+      },
+      {
+        "t": 1949,
+        "value": 446646
+      },
+      {
+        "t": 1950,
+        "value": 550676
+      },
+      {
+        "t": 1951,
+        "value": 396167
+      },
+      {
+        "t": 1952,
+        "value": 149073
+      },
+      {
+        "t": 1953,
+        "value": 98934
+      },
+      {
+        "t": 1954,
+        "value": 69519
+      },
+      {
+        "t": 1955,
+        "value": 31164
+      },
+      {
+        "t": 1956,
+        "value": 40580
+      },
+      {
+        "t": 1957,
+        "value": 32188
+      },
+      {
+        "t": 1958,
+        "value": 48037
+      },
+      {
+        "t": 1959,
+        "value": 52460
+      },
+      {
+        "t": 1960,
+        "value": 64873
+      },
+      {
+        "t": 1961,
+        "value": 77804
+      },
+      {
+        "t": 1962,
+        "value": 55938
+      },
+      {
+        "t": 1963,
+        "value": 69801
+      },
+      {
+        "t": 1964,
+        "value": 63348
+      },
+      {
+        "t": 1965,
+        "value": 98568
+      },
+      {
+        "t": 1966,
+        "value": 96786
+      },
+      {
+        "t": 1967,
+        "value": 126717
+      },
+      {
+        "t": 1968,
+        "value": 233327
+      },
+      {
+        "t": 1969,
+        "value": 198673
+      },
+      {
+        "t": 1970,
+        "value": 208784
+      },
+      {
+        "t": 1971,
+        "value": 258085
+      },
+      {
+        "t": 1972,
+        "value": 299083
+      },
+      {
+        "t": 1973,
+        "value": 222940
+      },
+      {
+        "t": 1974,
+        "value": 261646
+      },
+      {
+        "t": 1975,
+        "value": 135684
+      },
+      {
+        "t": 1976,
+        "value": 106722
+      },
+      {
+        "t": 1977,
+        "value": 45550
+      },
+      {
+        "t": 1978,
+        "value": 102573
+      },
+      {
+        "t": 1979,
+        "value": 157289
+      },
+      {
+        "t": 1980,
+        "value": 125492
+      },
+      {
+        "t": 1981,
+        "value": 197263
+      },
+      {
+        "t": 1982,
+        "value": 234509
+      },
+      {
+        "t": 1983,
+        "value": 228286
+      },
+      {
+        "t": 1984,
+        "value": 249266
+      },
+      {
+        "t": 1985,
+        "value": 228466
+      },
+      {
+        "t": 1986,
+        "value": 235400
+      },
+      {
+        "t": 1987,
+        "value": 194655
+      },
+      {
+        "t": 1988,
+        "value": 152503
+      },
+      {
+        "t": 1989,
+        "value": 55667
+      },
+      {
+        "t": 1990,
+        "value": 80297
+      },
+      {
+        "t": 1991,
+        "value": 70355
+      },
+      {
+        "t": 1992,
+        "value": 53410
+      },
+      {
+        "t": 1993,
+        "value": 44954
+      },
+      {
+        "t": 1994,
+        "value": 38523
+      },
+      {
+        "t": 1995,
+        "value": 36755
+      },
+      {
+        "t": 1996,
+        "value": 28903
+      },
+      {
+        "t": 1997,
+        "value": 40389
+      },
+      {
+        "t": 1998,
+        "value": 40238
+      },
+      {
+        "t": 1999,
+        "value": 81462
+      },
+      {
+        "t": 2000,
+        "value": 78674
+      },
+      {
+        "t": 2001,
+        "value": 23623
+      },
+      {
+        "t": 2002,
+        "value": 21157
+      },
+      {
+        "t": 2003,
+        "value": 23265
+      },
+      {
+        "t": 2004,
+        "value": 19716
+      },
+      {
+        "t": 2005,
+        "value": 12437
+      },
+      {
+        "t": 2006,
+        "value": 20287
+      },
+      {
+        "t": 2007,
+        "value": 19381
+      },
+      {
+        "t": 2008,
+        "value": 28867
+      },
+      {
+        "t": 2009,
+        "value": 36006
+      },
+      {
+        "t": 2010,
+        "value": 21652
+      },
+      {
+        "t": 2011,
+        "value": 25636
+      },
+      {
+        "t": 2012,
+        "value": 74155
+      },
+      {
+        "t": 2013,
+        "value": 93495
+      },
+      {
+        "t": 2014,
+        "value": 116005
+      },
+      {
+        "t": 2015,
+        "value": 104479
+      },
+      {
+        "t": 2016,
+        "value": 90764
+      },
+      {
+        "t": 2017,
+        "value": 72137
+      },
+      {
+        "t": 2018,
+        "value": 55166
+      },
+      {
+        "t": 2019,
+        "value": 52676
+      },
+      {
+        "t": 2020,
+        "value": 73139
+      },
+      {
+        "t": 2021,
+        "value": 199816
+      },
+      {
+        "t": 2022,
+        "value": 284981
+      },
+      {
+        "t": 2023,
+        "value": 138917
+      },
+      {
+        "t": 2024,
+        "value": 155038
+      },
+      {
+        "t": 2025,
+        "value": 153643
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "number_deaths_ongoing_conflicts__conflict_type_intrastate__internationalized+number_deaths_ongoing_conflicts__conflict_type_intrastate__non_internationalized+number_deaths_ongoing_conflicts__conflict_type_extrasystemic+number_deaths_ongoing_conflicts__conflict_type_interstate",
+      "url": "https://ourworldindata.org/grapher/battle-related-deaths-in-state-based-conflicts-since-1946",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "5f455601811890812c53e3ff77afbeee2a805b19d1fa898b4c84a691b658c386",
+      "definition": "Battle-related deaths, World",
+      "attribution": "Our World in Data",
+      "primarySource": "Uppsala Conflict Data Program (UCDP)"
+    }
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "NY.GDP.PCAP.PP.KD",
+  "vintage": "2026-06-12",
+  "url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD",
+  "checksum": "c7df8619c8aecf11e0f3f94d17cb4fc137e78f22e1eeb15a8a43bddfb67b05e3",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:42:59.061Z",
+  "adapterVersion": "1.0.0"
+}

@@ -1,0 +1,92 @@
+{
+  "indicatorId": "transport.ev_sales_share.india",
+  "entity": "India",
+  "entityName": "India",
+  "unit": "percent",
+  "points": [
+    {
+      "t": 2010,
+      "value": 0.020999999716877937
+    },
+    {
+      "t": 2011,
+      "value": 0.05700000002980232
+    },
+    {
+      "t": 2012,
+      "value": 0.007300000172108412
+    },
+    {
+      "t": 2013,
+      "value": 0.01600000075995922
+    },
+    {
+      "t": 2014,
+      "value": 0.03799999877810478
+    },
+    {
+      "t": 2015,
+      "value": 0.017000000923871994
+    },
+    {
+      "t": 2016,
+      "value": 0.026000000536441803
+    },
+    {
+      "t": 2017,
+      "value": 0.03099999949336052
+    },
+    {
+      "t": 2018,
+      "value": 0.029999999329447746
+    },
+    {
+      "t": 2019,
+      "value": 0.024000000208616257
+    },
+    {
+      "t": 2020,
+      "value": 0.11999999731779099
+    },
+    {
+      "t": 2021,
+      "value": 0.4099999964237213
+    },
+    {
+      "t": 2022,
+      "value": 1.399999976158142
+    },
+    {
+      "t": 2023,
+      "value": 2.0999999046325684
+    },
+    {
+      "t": 2024,
+      "value": 2.0999999046325684
+    },
+    {
+      "t": 2025,
+      "value": 4
+    }
+  ],
+  "provenance": {
+    "source": "iea",
+    "sourceIndicator": "EV sales share · Cars · EV",
+    "url": "https://api.iea.org/evs?region=India&csv=true",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "8dd13a74ac53aff12fe7aa229e238c37bbf8576da8fc348b749bb9cd6be3910b",
+    "definition": "Share of new cars sold that are electric, India",
+    "attribution": "IEA — Global EV Data Explorer",
+    "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity India"
+    }
+  ],
+  "derivedFrom": [
+    "India"
+  ]
+}

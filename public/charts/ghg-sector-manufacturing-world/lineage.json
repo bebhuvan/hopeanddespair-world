@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "climate.ghg_sector_manufacturing.world",
+    "unit": "tonnes",
+    "points": 34
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "ghg-emissions-by-sector",
+      "url": "https://ourworldindata.org/grapher/ghg-emissions-by-sector",
+      "vintage": "2026-06-13",
+      "checksum": "6bd8581a73b3c5da14c09d12490ab53cd1ed159b559cf4299351b4e9b816d8fa",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Climate Watch (2026) — via Our World in Data"
+}

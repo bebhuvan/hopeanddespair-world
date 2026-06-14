@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "SP.POP.DPND.OL",
+  "vintage": "2026-06-13",
+  "url": "https://data.worldbank.org/indicator/SP.POP.DPND.OL",
+  "checksum": "1fb8e8586cb68e05744b8d71a4711246e37b03ee76c4088daab4c4aa5b520298",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T14:27:26.799Z",
+  "adapterVersion": "1.0.0"
+}

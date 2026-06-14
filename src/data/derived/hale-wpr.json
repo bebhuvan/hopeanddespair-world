@@ -1,0 +1,117 @@
+{
+  "indicatorId": "health.healthy_life_expectancy.wpr",
+  "entity": "WPR",
+  "entityName": "Western Pacific (WHO)",
+  "unit": "years",
+  "points": [
+    {
+      "t": 2000,
+      "value": 63.82239716
+    },
+    {
+      "t": 2001,
+      "value": 64.0721707
+    },
+    {
+      "t": 2002,
+      "value": 64.3307596
+    },
+    {
+      "t": 2003,
+      "value": 64.52077671
+    },
+    {
+      "t": 2004,
+      "value": 64.72143873
+    },
+    {
+      "t": 2005,
+      "value": 65.07105962
+    },
+    {
+      "t": 2006,
+      "value": 65.6504313
+    },
+    {
+      "t": 2007,
+      "value": 66.05504366
+    },
+    {
+      "t": 2008,
+      "value": 66.20277372
+    },
+    {
+      "t": 2009,
+      "value": 66.50690324
+    },
+    {
+      "t": 2010,
+      "value": 66.70234237
+    },
+    {
+      "t": 2011,
+      "value": 66.94663899
+    },
+    {
+      "t": 2012,
+      "value": 67.25389891
+    },
+    {
+      "t": 2013,
+      "value": 67.48845051
+    },
+    {
+      "t": 2014,
+      "value": 67.73983305
+    },
+    {
+      "t": 2015,
+      "value": 67.91826169
+    },
+    {
+      "t": 2016,
+      "value": 68.03907605
+    },
+    {
+      "t": 2017,
+      "value": 68.18766248
+    },
+    {
+      "t": 2018,
+      "value": 68.28595564
+    },
+    {
+      "t": 2019,
+      "value": 68.3514733
+    },
+    {
+      "t": 2020,
+      "value": 68.43637158
+    },
+    {
+      "t": 2021,
+      "value": 68.17250306
+    }
+  ],
+  "provenance": {
+    "source": "who",
+    "sourceIndicator": "WHOSIS_000002",
+    "url": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/WHOSIS_000002",
+    "license": "CC BY-NC-SA 3.0 IGO",
+    "vintage": "2026-06-13",
+    "checksum": "0f92b6689f4dcd12adaa446ddf8e4e1c9a97dcf0f20099b3481cae0868a3dd7a",
+    "definition": "Healthy life expectancy at birth, Western Pacific",
+    "attribution": "WHO Global Health Observatory",
+    "primarySource": "WHO Global Health Observatory — Global Health Estimates",
+    "notes": "CC BY-NC-SA 3.0 IGO — link-only; charted but not re-hosted."
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity WPR"
+    }
+  ],
+  "derivedFrom": [
+    "WPR"
+  ]
+}

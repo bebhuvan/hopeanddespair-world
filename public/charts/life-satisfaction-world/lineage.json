@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "wellbeing.life_satisfaction.world",
+    "unit": "score (0–10)",
+    "points": 14
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "happiness-cantril-ladder",
+      "url": "https://ourworldindata.org/grapher/happiness-cantril-ladder",
+      "vintage": "2026-06-12",
+      "checksum": "930561b9a3ea8fb6d0453ae374ad3f486d1afa9240b100f6db49dc1a0b9eaf9b",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "World Happiness Report — via Our World in Data"
+}

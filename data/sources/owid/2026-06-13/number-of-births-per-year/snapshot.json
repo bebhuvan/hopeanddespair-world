@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "number-of-births-per-year",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/number-of-births-per-year",
+  "checksum": "34dd069d286177dab92c6c30530cb59a578059a147031902fdb7b8be82fc86d8",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T14:27:23.867Z",
+  "adapterVersion": "1.0.0"
+}

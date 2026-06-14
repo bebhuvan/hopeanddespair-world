@@ -1,0 +1,125 @@
+{
+  "indicatorId": "science.openalex_country_china_index.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "index, 2000 = 100",
+  "points": [
+    {
+      "t": 2000,
+      "value": 100
+    },
+    {
+      "t": 2001,
+      "value": 129.3
+    },
+    {
+      "t": 2002,
+      "value": 186.8
+    },
+    {
+      "t": 2003,
+      "value": 243.2
+    },
+    {
+      "t": 2004,
+      "value": 383
+    },
+    {
+      "t": 2005,
+      "value": 527.5
+    },
+    {
+      "t": 2006,
+      "value": 690.7
+    },
+    {
+      "t": 2007,
+      "value": 850.9
+    },
+    {
+      "t": 2008,
+      "value": 962.5
+    },
+    {
+      "t": 2009,
+      "value": 1088
+    },
+    {
+      "t": 2010,
+      "value": 1186.4
+    },
+    {
+      "t": 2011,
+      "value": 1294.1
+    },
+    {
+      "t": 2012,
+      "value": 1181.9
+    },
+    {
+      "t": 2013,
+      "value": 1209
+    },
+    {
+      "t": 2014,
+      "value": 1152.4
+    },
+    {
+      "t": 2015,
+      "value": 1027.1
+    },
+    {
+      "t": 2016,
+      "value": 886.2
+    },
+    {
+      "t": 2017,
+      "value": 973.8
+    },
+    {
+      "t": 2018,
+      "value": 1134
+    },
+    {
+      "t": 2019,
+      "value": 1295.5
+    },
+    {
+      "t": 2020,
+      "value": 1495.4
+    },
+    {
+      "t": 2021,
+      "value": 1655.8
+    },
+    {
+      "t": 2022,
+      "value": 1959.8
+    },
+    {
+      "t": 2023,
+      "value": 2084.6
+    },
+    {
+      "t": 2024,
+      "value": 2357.6
+    }
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:CN&group_by=publication_year",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:CN&group_by=publication_year&per-page=100",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-13",
+    "checksum": "64183537d73d571508f774b2df0468b89cc890abb34e874f6d48a1922c85b0d3",
+    "definition": "China country-attributed OpenAlex works, indexed to 2000 = 100.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "derived_transform",
+      "detail": "divided China yearly country-attributed work count by its 2000 value and multiplied by 100"
+    }
+  ]
+}

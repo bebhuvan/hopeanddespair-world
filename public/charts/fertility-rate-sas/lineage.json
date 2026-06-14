@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "demography.fertility_rate.sas",
+    "unit": "live births per woman",
+    "points": 65
+  },
+  "wasDerivedFrom": [
+    "SAS"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity SAS"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SP.DYN.TFRT.IN",
+      "url": "https://data.worldbank.org/indicator/SP.DYN.TFRT.IN",
+      "vintage": "2026-06-13",
+      "checksum": "3727679ee42206444563522ea742330e49c12d2b97b4ab384baef1eb6d6e3fc7",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UN WPP, via World Bank"
+}

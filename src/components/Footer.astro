@@ -1,25 +1,53 @@
 ---
 import { repoBaseUrl } from '../lib/repo';
 const year = 2026;
-const repo = repoBaseUrl();
+// Prefer the detected origin; fall back to the canonical repo so the link is never missing
+// in a build env where the remote isn't visible.
+const repo = repoBaseUrl() ?? 'https://github.com/bebhuvan/hopeanddespair-world';
 ---
-<footer>
-  <span>CC BY 4.0 · attribution to hopeanddespair.world · source data CC-BY · &copy; {year}</span>
-  <nav class="flinks">
-    <a href="/archive">Archive</a>
-    <a href="/about">About</a>
-    <a href="/rss.xml">RSS</a>
-    {repo && <a href={repo} rel="noopener">Source on GitHub ↗</a>}
-  </nav>
+<footer class="site">
+  <div class="in">
+    <a class="word" href="/" aria-label="Hope & Despair — home">
+      <svg class="mark" viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M8 1.6 a6.4 6.4 0 0 0 0 12.8 z" fill="var(--hope)" />
+        <path d="M8 1.6 a6.4 6.4 0 0 1 0 12.8 z" fill="var(--despair)" />
+        <line x1="8" y1="1.2" x2="8" y2="14.8" stroke="var(--bg)" stroke-width="0.8" />
+        <circle cx="8" cy="8" r="6.4" fill="none" stroke="var(--ink)" stroke-width="0.9" />
+      </svg>
+      <span>Hope <span class="amp">&amp;</span> Despair</span>
+    </a>
+
+    <nav aria-label="Footer">
+      <a href="/">The Atlas</a>
+      <a href="/methodology">Method</a>
+      <a href="/sources">Sources</a>
+      <a href="/about">About</a>
+      <a href="/archive">Archive</a>
+      <a href="/rss.xml">RSS feed</a>
+      <a href={repo} rel="noopener">GitHub&nbsp;↗</a>
+    </nav>
+
+    <p class="lic">© {year} Hope &amp; Despair · original prose, code &amp; chart designs under
+      <a href="/license">CC&nbsp;BY&nbsp;4.0</a> · source datasets keep their own licences, credited per article.</p>
+  </div>
 </footer>
 
 <style>
-  footer {
-    margin-top: 3rem; padding-block: 2.4rem 4rem; border-top: 1px solid var(--rule);
-    display: flex; flex-wrap: wrap; gap: 1.2rem 3rem; justify-content: space-between; align-items: baseline;
-    font-family: var(--font-label); font-size: 0.74rem; font-weight: 500; color: var(--fg-muted);
+  .site { border-top: 1px solid var(--line); margin-top: clamp(4rem, 9vh, 6rem); }
+  .in {
+    max-width: calc(var(--col) + var(--gutter)); margin-inline: auto;
+    padding: 2.8rem var(--margin) 3.6rem;
+    display: grid; gap: 1.4rem;
   }
-  .flinks { display: flex; flex-wrap: wrap; gap: 1.4rem; }
-  footer a { color: var(--fg-muted); text-decoration: none; border-bottom: 1px solid var(--rule); }
-  footer a:hover { color: var(--accent); }
+  .word { display: inline-flex; align-items: center; gap: 0.55rem; font-family: var(--display); font-weight: 540; font-size: 1.02rem; letter-spacing: -0.018em; color: var(--ink); }
+  .word .mark { width: 0.98rem; height: 0.98rem; flex: none; }
+  .word .amp { font-family: var(--serif); font-style: italic; font-weight: 440; color: var(--hope); margin-inline: 0.04em; }
+  nav { display: flex; gap: 0.4rem 1.5rem; flex-wrap: wrap; font-family: var(--mono); font-size: 0.74rem; color: var(--ink-3); }
+  nav a { position: relative; padding-bottom: 2px; transition: color 0.3s; }
+  nav a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 0; height: 1px; background: var(--hope); transition: right 0.4s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  nav a:hover { color: var(--ink); }
+  nav a:hover::after { right: 0; }
+  .lic { font-family: var(--mono); font-size: 0.7rem; line-height: 1.7; color: var(--ink-3); max-width: 56ch; }
+  .lic a { color: var(--ink-2); border-bottom: 1px solid var(--line-2); }
+  .lic a:hover { color: var(--hope); border-color: var(--hope); }
 </style>

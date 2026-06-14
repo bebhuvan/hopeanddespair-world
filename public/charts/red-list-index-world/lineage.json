@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "nature.red_list_index.world",
+    "unit": "index",
+    "points": 32
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "red-list-index",
+      "url": "https://ourworldindata.org/grapher/red-list-index",
+      "vintage": "2026-06-12",
+      "checksum": "f401009204abab4350f44eb83a1f16be058275cd67c91ad7228e0772ea1e532c",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "BirdLife International & IUCN — via Our World in Data"
+}

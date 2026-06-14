@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "demography.female_labour.world",
+    "unit": "% of women aged 15+",
+    "points": 35
+  },
+  "wasDerivedFrom": [
+    "WLD"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity WLD"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SL.TLF.CACT.FE.ZS",
+      "url": "https://data.worldbank.org/indicator/SL.TLF.CACT.FE.ZS",
+      "vintage": "2026-06-13",
+      "checksum": "0f8c7fae1983595ce860369c977720abdb9734a1340be6b735145fb881152dd1",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "International Labour Organization (modelled), via World Bank"
+}

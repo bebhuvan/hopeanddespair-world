@@ -1,0 +1,203 @@
+{
+  "indicatorId": "economy.poverty_gap.nac",
+  "entity": "NAC",
+  "entityName": "North America",
+  "unit": "% of the poverty line",
+  "points": [
+    {
+      "t": 1981,
+      "value": 0.36
+    },
+    {
+      "t": 1982,
+      "value": 0.44999999999999996
+    },
+    {
+      "t": 1983,
+      "value": 0.42
+    },
+    {
+      "t": 1984,
+      "value": 0.37
+    },
+    {
+      "t": 1985,
+      "value": 0.36
+    },
+    {
+      "t": 1986,
+      "value": 0.42
+    },
+    {
+      "t": 1987,
+      "value": 0.32
+    },
+    {
+      "t": 1988,
+      "value": 0.29
+    },
+    {
+      "t": 1989,
+      "value": 0.33999999999999997
+    },
+    {
+      "t": 1990,
+      "value": 0.33999999999999997
+    },
+    {
+      "t": 1991,
+      "value": 0.38
+    },
+    {
+      "t": 1992,
+      "value": 0.36
+    },
+    {
+      "t": 1993,
+      "value": 0.44
+    },
+    {
+      "t": 1994,
+      "value": 0.44
+    },
+    {
+      "t": 1995,
+      "value": 0.43
+    },
+    {
+      "t": 1996,
+      "value": 0.42
+    },
+    {
+      "t": 1997,
+      "value": 0.47000000000000003
+    },
+    {
+      "t": 1998,
+      "value": 0.53
+    },
+    {
+      "t": 1999,
+      "value": 0.45999999999999996
+    },
+    {
+      "t": 2000,
+      "value": 0.48
+    },
+    {
+      "t": 2001,
+      "value": 0.59
+    },
+    {
+      "t": 2002,
+      "value": 0.5499999999999999
+    },
+    {
+      "t": 2003,
+      "value": 0.67
+    },
+    {
+      "t": 2004,
+      "value": 0.7000000000000001
+    },
+    {
+      "t": 2005,
+      "value": 0.69
+    },
+    {
+      "t": 2006,
+      "value": 0.7000000000000001
+    },
+    {
+      "t": 2007,
+      "value": 0.6799999999999999
+    },
+    {
+      "t": 2008,
+      "value": 0.74
+    },
+    {
+      "t": 2009,
+      "value": 0.63
+    },
+    {
+      "t": 2010,
+      "value": 0.74
+    },
+    {
+      "t": 2011,
+      "value": 0.7000000000000001
+    },
+    {
+      "t": 2012,
+      "value": 0.72
+    },
+    {
+      "t": 2013,
+      "value": 0.7100000000000001
+    },
+    {
+      "t": 2014,
+      "value": 0.8699999999999999
+    },
+    {
+      "t": 2015,
+      "value": 0.8
+    },
+    {
+      "t": 2016,
+      "value": 0.7799999999999999
+    },
+    {
+      "t": 2017,
+      "value": 0.86
+    },
+    {
+      "t": 2018,
+      "value": 0.73
+    },
+    {
+      "t": 2019,
+      "value": 0.66
+    },
+    {
+      "t": 2020,
+      "value": 0.21
+    },
+    {
+      "t": 2021,
+      "value": 0.21
+    },
+    {
+      "t": 2022,
+      "value": 0.8999999999999999
+    },
+    {
+      "t": 2023,
+      "value": 0.8099999999999999
+    },
+    {
+      "t": 2024,
+      "value": 0.7000000000000001
+    },
+    {
+      "t": 2025,
+      "value": 0.7000000000000001
+    },
+    {
+      "t": 2026,
+      "value": 0.69
+    }
+  ],
+  "provenance": {
+    "source": "pip",
+    "sourceIndicator": "poverty_gap @ $3.00/day (2021 PPP)",
+    "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+    "definition": "Poverty gap at $3.00/day (2021 PPP), North America",
+    "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+    "primarySource": "World Bank — Poverty and Inequality Platform"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "chartId": "openalex-top10-share-by-country-2020",
+  "kind": "bars",
+  "title": "Top-cited-paper share by country, 2020",
+  "unit": "works in global top 10% by citation percentile, %",
+  "yearSpan": "2020",
+  "bars": [
+    {
+      "label": "Australia",
+      "value": 27.4,
+      "color": "hope"
+    },
+    {
+      "label": "Netherlands",
+      "value": 26.6,
+      "color": "hope"
+    },
+    {
+      "label": "Switzerland",
+      "value": 24.6,
+      "color": "hope"
+    },
+    {
+      "label": "Italy",
+      "value": 24.4,
+      "color": "hope"
+    },
+    {
+      "label": "United Kingdom",
+      "value": 23.5,
+      "color": "hope"
+    },
+    {
+      "label": "China",
+      "value": 22.4,
+      "color": "hope"
+    },
+    {
+      "label": "Spain",
+      "value": 21.3,
+      "color": "hope"
+    },
+    {
+      "label": "Germany",
+      "value": 20.5,
+      "color": "hope"
+    },
+    {
+      "label": "Canada",
+      "value": 20.4,
+      "color": "hope"
+    },
+    {
+      "label": "South Korea",
+      "value": 18.4,
+      "color": "hope"
+    },
+    {
+      "label": "United States",
+      "value": 16.4,
+      "color": "ochre"
+    },
+    {
+      "label": "Poland",
+      "value": 16.3,
+      "color": "ochre"
+    }
+  ],
+  "xmax": 30,
+  "xTicks": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "citation_normalized_percentile.is_in_top_10_percent:true by country / all works by country",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2020-01-01,to_publication_date:2020-12-31,citation_normalized_percentile.is_in_top_10_percent:true&group_by=authorships.institutions.country_code&per-page=200",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-13",
+    "checksum": "c5662f50d997faf849577675bb43c3bcf803176f7488f18949cb97e0ab56578c",
+    "definition": "Share of a country-attributed 2020 works that OpenAlex marks as being in the top 10 percent of citation-normalized percentile. Countries shown have at least 75,000 2020 works.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "openalex_group_by",
+      "detail": "divide top-10-percent cited 2020 works by all 2020 works for each author-institution country"
+    }
+  ]
+}

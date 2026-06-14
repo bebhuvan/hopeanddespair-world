@@ -1,0 +1,203 @@
+{
+  "indicatorId": "economy.poor_count.ecs",
+  "entity": "ECS",
+  "entityName": "Europe & Central Asia",
+  "unit": "million people",
+  "points": [
+    {
+      "t": 1981,
+      "value": 31.934665
+    },
+    {
+      "t": 1982,
+      "value": 32.112327
+    },
+    {
+      "t": 1983,
+      "value": 31.614960999999997
+    },
+    {
+      "t": 1984,
+      "value": 32.019864999999996
+    },
+    {
+      "t": 1985,
+      "value": 32.460432
+    },
+    {
+      "t": 1986,
+      "value": 32.793915
+    },
+    {
+      "t": 1987,
+      "value": 32.993565
+    },
+    {
+      "t": 1988,
+      "value": 32.179643
+    },
+    {
+      "t": 1989,
+      "value": 32.834149
+    },
+    {
+      "t": 1990,
+      "value": 34.177374
+    },
+    {
+      "t": 1991,
+      "value": 38.558102
+    },
+    {
+      "t": 1992,
+      "value": 47.02946
+    },
+    {
+      "t": 1993,
+      "value": 52.240801999999995
+    },
+    {
+      "t": 1994,
+      "value": 65.12262
+    },
+    {
+      "t": 1995,
+      "value": 62.596295999999995
+    },
+    {
+      "t": 1996,
+      "value": 64.224594
+    },
+    {
+      "t": 1997,
+      "value": 58.798947
+    },
+    {
+      "t": 1998,
+      "value": 60.814921
+    },
+    {
+      "t": 1999,
+      "value": 75.735579
+    },
+    {
+      "t": 2000,
+      "value": 66.0273
+    },
+    {
+      "t": 2001,
+      "value": 60.177687999999996
+    },
+    {
+      "t": 2002,
+      "value": 53.599326999999995
+    },
+    {
+      "t": 2003,
+      "value": 51.823816
+    },
+    {
+      "t": 2004,
+      "value": 44.568397999999995
+    },
+    {
+      "t": 2005,
+      "value": 44.087648
+    },
+    {
+      "t": 2006,
+      "value": 38.77737
+    },
+    {
+      "t": 2007,
+      "value": 35.567291
+    },
+    {
+      "t": 2008,
+      "value": 33.007734
+    },
+    {
+      "t": 2009,
+      "value": 33.198259
+    },
+    {
+      "t": 2010,
+      "value": 33.578393
+    },
+    {
+      "t": 2011,
+      "value": 32.431846
+    },
+    {
+      "t": 2012,
+      "value": 32.663349
+    },
+    {
+      "t": 2013,
+      "value": 9.967756
+    },
+    {
+      "t": 2014,
+      "value": 10.920520999999999
+    },
+    {
+      "t": 2015,
+      "value": 10.94791
+    },
+    {
+      "t": 2016,
+      "value": 9.014038
+    },
+    {
+      "t": 2017,
+      "value": 9.062096
+    },
+    {
+      "t": 2018,
+      "value": 7.659152
+    },
+    {
+      "t": 2019,
+      "value": 7.101979
+    },
+    {
+      "t": 2020,
+      "value": 7.83256
+    },
+    {
+      "t": 2021,
+      "value": 7.397799999999999
+    },
+    {
+      "t": 2022,
+      "value": 6.965593999999999
+    },
+    {
+      "t": 2023,
+      "value": 6.053099
+    },
+    {
+      "t": 2024,
+      "value": 5.255665
+    },
+    {
+      "t": 2025,
+      "value": 4.918127999999999
+    },
+    {
+      "t": 2026,
+      "value": 4.706106999999999
+    }
+  ],
+  "provenance": {
+    "source": "pip",
+    "sourceIndicator": "pop_in_poverty @ $3.00/day (2021 PPP)",
+    "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+    "definition": "Number of people in extreme poverty (below $3.00/day, 2021 PPP), Europe & Central Asia",
+    "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+    "primarySource": "World Bank — Poverty and Inequality Platform"
+  }
+}

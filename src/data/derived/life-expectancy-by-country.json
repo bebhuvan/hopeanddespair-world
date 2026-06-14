@@ -1,0 +1,88 @@
+{
+  "chartId": "life-expectancy-by-country",
+  "kind": "bars",
+  "title": "Life expectancy by country",
+  "unit": "Life expectancy at birth, years",
+  "yearSpan": "2024–2024",
+  "bars": [
+    {
+      "label": "Switzerland",
+      "value": 84.4,
+      "color": "hope"
+    },
+    {
+      "label": "Japan",
+      "value": 84,
+      "color": "hope"
+    },
+    {
+      "label": "United States",
+      "value": 78.9,
+      "color": "hope"
+    },
+    {
+      "label": "China",
+      "value": 78,
+      "color": "hope"
+    },
+    {
+      "label": "Brazil",
+      "value": 76,
+      "color": "hope"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 74.9,
+      "color": "hope"
+    },
+    {
+      "label": "India",
+      "value": 72.2,
+      "color": "ochre"
+    },
+    {
+      "label": "DR Congo",
+      "value": 62.1,
+      "color": "despair"
+    },
+    {
+      "label": "Central African Rep.",
+      "value": 57.7,
+      "color": "despair"
+    },
+    {
+      "label": "Chad",
+      "value": 55.2,
+      "color": "despair"
+    },
+    {
+      "label": "Nigeria",
+      "value": 54.6,
+      "color": "despair"
+    }
+  ],
+  "xmax": 90,
+  "xTicks": [
+    0,
+    30,
+    60,
+    90
+  ],
+  "provenance": {
+    "source": "wb",
+    "sourceIndicator": "SP.DYN.LE00.IN",
+    "url": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN",
+    "license": "CC BY 4.0",
+    "vintage": "2024–2024",
+    "checksum": "fdbd2415fb53cce0e4fe2979537af4049e82a3cde0b7f187698a6b1a409f3096",
+    "definition": "Life expectancy at birth in years, latest year per country. A curated 11-country spread sorted descending.",
+    "attribution": "UN WPP / WHO, via World Bank",
+    "primarySource": "UN World Population Prospects"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 11 curated countries sorted descending"
+    }
+  ]
+}

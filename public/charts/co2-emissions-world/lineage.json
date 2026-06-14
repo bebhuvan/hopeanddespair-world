@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "climate.co2_emissions.world",
+    "unit": "tonnes",
+    "points": 275
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "annual-co2-emissions-per-country",
+      "url": "https://ourworldindata.org/grapher/annual-co2-emissions-per-country",
+      "vintage": "2026-06-12",
+      "checksum": "8de0ce0bb87ab85150d50add70abf467481ef4165f82720a8af1d8b0cb1791e9",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Global Carbon Budget (2025) — via Our World in Data"
+}

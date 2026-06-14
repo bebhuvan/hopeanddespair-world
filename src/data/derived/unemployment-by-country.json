@@ -1,0 +1,93 @@
+{
+  "chartId": "unemployment-by-country",
+  "kind": "bars",
+  "title": "Unemployment by country",
+  "unit": "Unemployment, % of the labour force",
+  "yearSpan": "2024–2024",
+  "bars": [
+    {
+      "label": "South Africa",
+      "value": 32.3,
+      "color": "stone"
+    },
+    {
+      "label": "Spain",
+      "value": 11.4,
+      "color": "stone"
+    },
+    {
+      "label": "Brazil",
+      "value": 6.8,
+      "color": "stone"
+    },
+    {
+      "label": "Egypt",
+      "value": 6.8,
+      "color": "stone"
+    },
+    {
+      "label": "China",
+      "value": 4.6,
+      "color": "stone"
+    },
+    {
+      "label": "India",
+      "value": 4.2,
+      "color": "stone"
+    },
+    {
+      "label": "United States",
+      "value": 4,
+      "color": "stone"
+    },
+    {
+      "label": "Germany",
+      "value": 3.4,
+      "color": "stone"
+    },
+    {
+      "label": "Mexico",
+      "value": 2.7,
+      "color": "stone"
+    },
+    {
+      "label": "Japan",
+      "value": 2.5,
+      "color": "stone"
+    },
+    {
+      "label": "Vietnam",
+      "value": 1.6,
+      "color": "stone"
+    },
+    {
+      "label": "Thailand",
+      "value": 0.8,
+      "color": "stone"
+    }
+  ],
+  "xmax": 35,
+  "xTicks": [
+    0,
+    10,
+    20,
+    30
+  ],
+  "provenance": {
+    "source": "wb",
+    "sourceIndicator": "SL.UEM.TOTL.ZS",
+    "url": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2024–2024",
+    "checksum": "6f35478cd3e508cc5c06e97905f9071c52febfdaf10e8caeb4273a5fe3df1999",
+    "definition": "Unemployment as a share of the labour force (ILO modelled estimate), latest year per country. In low-income economies a low rate reflects informal survival work, not security. A curated 12-country spread sorted descending.",
+    "attribution": "ILO, via World Bank",
+    "primarySource": "International Labour Organization (ILO modelled estimate)"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 12 curated countries sorted descending"
+    }
+  ]
+}

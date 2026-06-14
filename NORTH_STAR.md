@@ -72,6 +72,13 @@ sixteen-year-old or a curious sixty-year-old can't follow it, we have failed.
 6. **Auto-updating, in the open.** Each article is backed by a script that re-pulls its
    data on a schedule (every 6–12 months), refreshes the charts, asks an LLM to revise the
    prose, and commits to git — so every change to a number or a sentence is tracked publicly.
+7. **It takes as many charts as it takes.** (Decided 2026-06-10.) These questions are too
+   important to ration by length: an article runs as long, and holds as many charts, as its
+   question honestly demands. Refine-by-subtraction applies to noise, ornament, and
+   repetition — never to coverage. Two disciplines keep "exhaustive" from becoming "bloated":
+   every chart must still earn its place as a sub-question, and **no silent gaps** — every
+   obvious sub-question is either charted, logged in the article's gap register with its
+   blocker, or named in the piece as something the data cannot see.
 
 ## What success looks like
 
@@ -99,6 +106,12 @@ sixteen-year-old or a curious sixty-year-old can't follow it, we have failed.
   innovations (definition boxes, Wikipedia links, the closing box), anti-AI-tells, and the
   disclosure language.
 - [[PLAN.md]] — the build plan, scaling architecture, content schema, and phases.
+- [[EXPLAINERS.md]] — the moat: the signature explainer formats.
+- [[CHARTS.md]] — the chart kit (jobs, not types) and the composition grammar.
+- [[DATA.md]] — ingestion, provenance, validation, license gates.
+- `docs/DATASET-ATLAS.md` — every planned question mapped to its open datasets.
+- `docs/PROSE-SYSTEM.md` — the repeatable prose pipeline and the depth bar.
+- `CLAUDE.md` — the agent-facing context map (commands, invariants, gotchas).
 - `idea.md` — the original CODEX brief, kept for provenance (superseded where it conflicts).
 
 > If a future decision contradicts this file, change reality back — or change this file

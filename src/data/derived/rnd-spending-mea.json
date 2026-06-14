@@ -1,0 +1,36 @@
+{
+  "indicatorId": "science.rnd_spend_gdp.mea",
+  "entity": "MEA",
+  "entityName": "Middle East, North Africa, Afghanistan & Pakistan",
+  "unit": "% of GDP",
+  "points": [
+    {
+      "t": 2005,
+      "value": 0.724245370351517
+    },
+    {
+      "t": 2021,
+      "value": 1.32901982491162
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "GB.XPD.RSDV.GD.ZS",
+    "url": "https://data.worldbank.org/indicator/GB.XPD.RSDV.GD.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "4d3e7ae2e5be1ea3258f12d3af8a18f7d6d5d9b8fcb596d7f1ab75976ef5b8c3",
+    "definition": "Research and development expenditure (% of GDP)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "UNESCO Institute for Statistics, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity MEA"
+    }
+  ],
+  "derivedFrom": [
+    "MEA"
+  ]
+}

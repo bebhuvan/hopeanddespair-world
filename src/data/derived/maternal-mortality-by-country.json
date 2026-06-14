@@ -1,0 +1,88 @@
+{
+  "chartId": "maternal-mortality-by-country",
+  "kind": "bars",
+  "title": "Maternal mortality by country",
+  "unit": "Maternal deaths per 100,000 live births",
+  "yearSpan": "2023–2023",
+  "bars": [
+    {
+      "label": "Nigeria",
+      "value": 993,
+      "color": "despair"
+    },
+    {
+      "label": "Chad",
+      "value": 748,
+      "color": "despair"
+    },
+    {
+      "label": "South Sudan",
+      "value": 692,
+      "color": "despair"
+    },
+    {
+      "label": "DR Congo",
+      "value": 427,
+      "color": "ochre"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 195,
+      "color": "hope"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 115,
+      "color": "hope"
+    },
+    {
+      "label": "India",
+      "value": 80,
+      "color": "hope"
+    },
+    {
+      "label": "Brazil",
+      "value": 67,
+      "color": "hope"
+    },
+    {
+      "label": "United States",
+      "value": 17,
+      "color": "hope"
+    },
+    {
+      "label": "China",
+      "value": 16,
+      "color": "hope"
+    },
+    {
+      "label": "Sweden",
+      "value": 4,
+      "color": "hope"
+    }
+  ],
+  "xmax": 1200,
+  "xTicks": [
+    0,
+    400,
+    800,
+    1200
+  ],
+  "provenance": {
+    "source": "wb",
+    "sourceIndicator": "SH.STA.MMRT",
+    "url": "https://data.worldbank.org/indicator/SH.STA.MMRT",
+    "license": "CC BY 4.0",
+    "vintage": "2023–2023",
+    "checksum": "9403fc17e6f85268af19df7df44757f9dda2353a2e811688320fa06c3131b923",
+    "definition": "Maternal deaths per 100,000 live births (modelled estimate), latest year per country. A curated 11-country spread sorted descending.",
+    "attribution": "WHO/UNICEF/UNFPA/WB/UNDESA (MMEIG), via World Bank",
+    "primarySource": "Maternal Mortality Estimation Inter-agency Group (MMEIG)"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 11 curated countries sorted descending"
+    }
+  ]
+}

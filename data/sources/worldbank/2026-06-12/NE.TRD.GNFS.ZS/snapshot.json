@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "NE.TRD.GNFS.ZS",
+  "vintage": "2026-06-12",
+  "url": "https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS",
+  "checksum": "22f2c0402b967837a485c1a762d9e8e43f1f82ddb38738ae7b0659cdbbe9df28",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:44:28.010Z",
+  "adapterVersion": "1.0.0"
+}

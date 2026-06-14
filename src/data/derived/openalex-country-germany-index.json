@@ -1,0 +1,125 @@
+{
+  "indicatorId": "science.openalex_country_germany_index.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "index, 2000 = 100",
+  "points": [
+    {
+      "t": 2000,
+      "value": 100
+    },
+    {
+      "t": 2001,
+      "value": 103.5
+    },
+    {
+      "t": 2002,
+      "value": 121.8
+    },
+    {
+      "t": 2003,
+      "value": 122.7
+    },
+    {
+      "t": 2004,
+      "value": 130.3
+    },
+    {
+      "t": 2005,
+      "value": 134.1
+    },
+    {
+      "t": 2006,
+      "value": 152.6
+    },
+    {
+      "t": 2007,
+      "value": 152.5
+    },
+    {
+      "t": 2008,
+      "value": 174.9
+    },
+    {
+      "t": 2009,
+      "value": 181
+    },
+    {
+      "t": 2010,
+      "value": 197.3
+    },
+    {
+      "t": 2011,
+      "value": 196.7
+    },
+    {
+      "t": 2012,
+      "value": 209
+    },
+    {
+      "t": 2013,
+      "value": 217.9
+    },
+    {
+      "t": 2014,
+      "value": 227.7
+    },
+    {
+      "t": 2015,
+      "value": 237.3
+    },
+    {
+      "t": 2016,
+      "value": 254.8
+    },
+    {
+      "t": 2017,
+      "value": 252.8
+    },
+    {
+      "t": 2018,
+      "value": 267.8
+    },
+    {
+      "t": 2019,
+      "value": 282
+    },
+    {
+      "t": 2020,
+      "value": 295.8
+    },
+    {
+      "t": 2021,
+      "value": 307.1
+    },
+    {
+      "t": 2022,
+      "value": 296.8
+    },
+    {
+      "t": 2023,
+      "value": 307.6
+    },
+    {
+      "t": 2024,
+      "value": 283.6
+    }
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:DE&group_by=publication_year",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:DE&group_by=publication_year&per-page=100",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-13",
+    "checksum": "499ecb4f6d1eb984f7f14a2f6318b44731dfd5a4ef9221cd51f9be7ffc286e82",
+    "definition": "Germany country-attributed OpenAlex works, indexed to 2000 = 100.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "derived_transform",
+      "detail": "divided Germany yearly country-attributed work count by its 2000 value and multiplied by 100"
+    }
+  ]
+}

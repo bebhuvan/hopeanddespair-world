@@ -1,0 +1,38 @@
+{
+  "name": "science-openalex_country_japan_multiple-world",
+  "title": "Japan country-attributed OpenAlex works as a multiple of its 2000 value.",
+  "licenses": [
+    {
+      "name": "CC0 1.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenAlex",
+      "path": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:JP&group_by=publication_year&per-page=100"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "science-openalex_country_japan_multiple-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "science_openalex_country_japan_multiple_world",
+            "type": "number",
+            "unit": "multiple of 2000 output"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "indicatorId": "economy.mean_income.nac",
+  "entity": "NAC",
+  "entityName": "North America",
+  "unit": "PPP$ per day (2021)",
+  "points": [
+    {
+      "t": 1981,
+      "value": 54.5836
+    },
+    {
+      "t": 1982,
+      "value": 55.2523
+    },
+    {
+      "t": 1983,
+      "value": 56.937
+    },
+    {
+      "t": 1984,
+      "value": 59.0168
+    },
+    {
+      "t": 1985,
+      "value": 60.2173
+    },
+    {
+      "t": 1986,
+      "value": 61.7559
+    },
+    {
+      "t": 1987,
+      "value": 63.5956
+    },
+    {
+      "t": 1988,
+      "value": 64.6762
+    },
+    {
+      "t": 1989,
+      "value": 65.7097
+    },
+    {
+      "t": 1990,
+      "value": 64.0534
+    },
+    {
+      "t": 1991,
+      "value": 63.2545
+    },
+    {
+      "t": 1992,
+      "value": 63.3295
+    },
+    {
+      "t": 1993,
+      "value": 64.3676
+    },
+    {
+      "t": 1994,
+      "value": 65.5185
+    },
+    {
+      "t": 1995,
+      "value": 66.4214
+    },
+    {
+      "t": 1996,
+      "value": 67.1988
+    },
+    {
+      "t": 1997,
+      "value": 69.0947
+    },
+    {
+      "t": 1998,
+      "value": 71.0463
+    },
+    {
+      "t": 1999,
+      "value": 72.7354
+    },
+    {
+      "t": 2000,
+      "value": 73.6849
+    },
+    {
+      "t": 2001,
+      "value": 73.8784
+    },
+    {
+      "t": 2002,
+      "value": 74.0929
+    },
+    {
+      "t": 2003,
+      "value": 75.1365
+    },
+    {
+      "t": 2004,
+      "value": 74.5025
+    },
+    {
+      "t": 2005,
+      "value": 76.1174
+    },
+    {
+      "t": 2006,
+      "value": 77.5022
+    },
+    {
+      "t": 2007,
+      "value": 77.2819
+    },
+    {
+      "t": 2008,
+      "value": 75.5014
+    },
+    {
+      "t": 2009,
+      "value": 76.4605
+    },
+    {
+      "t": 2010,
+      "value": 74.7331
+    },
+    {
+      "t": 2011,
+      "value": 75.6056
+    },
+    {
+      "t": 2012,
+      "value": 75.942
+    },
+    {
+      "t": 2013,
+      "value": 75.6524
+    },
+    {
+      "t": 2014,
+      "value": 76.118
+    },
+    {
+      "t": 2015,
+      "value": 78.8051
+    },
+    {
+      "t": 2016,
+      "value": 82.0643
+    },
+    {
+      "t": 2017,
+      "value": 83.2699
+    },
+    {
+      "t": 2018,
+      "value": 86.7844
+    },
+    {
+      "t": 2019,
+      "value": 92.0274
+    },
+    {
+      "t": 2020,
+      "value": 94.6041
+    },
+    {
+      "t": 2021,
+      "value": 94.9548
+    },
+    {
+      "t": 2022,
+      "value": 88.4705
+    },
+    {
+      "t": 2023,
+      "value": 91.0303
+    },
+    {
+      "t": 2024,
+      "value": 93.2395
+    },
+    {
+      "t": 2025,
+      "value": 94.5458
+    },
+    {
+      "t": 2026,
+      "value": 96.0586
+    }
+  ],
+  "provenance": {
+    "source": "pip",
+    "sourceIndicator": "mean @ $3.00/day (2021 PPP)",
+    "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+    "definition": "Mean income or consumption per day, North America",
+    "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+    "primarySource": "World Bank — Poverty and Inequality Platform"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "chartId": "internet-by-country",
+  "kind": "bars",
+  "title": "Internet use by country",
+  "unit": "People using the internet, %",
+  "yearSpan": "2021–2025",
+  "bars": [
+    {
+      "label": "UAE",
+      "value": 100,
+      "color": "hope"
+    },
+    {
+      "label": "South Korea",
+      "value": 97.9,
+      "color": "hope"
+    },
+    {
+      "label": "United States",
+      "value": 93.1,
+      "color": "hope"
+    },
+    {
+      "label": "China",
+      "value": 92,
+      "color": "hope"
+    },
+    {
+      "label": "Brazil",
+      "value": 84.5,
+      "color": "hope"
+    },
+    {
+      "label": "India",
+      "value": 70,
+      "color": "ochre"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 44.5,
+      "color": "ochre"
+    },
+    {
+      "label": "Nigeria",
+      "value": 39.2,
+      "color": "despair"
+    },
+    {
+      "label": "DR Congo",
+      "value": 30.5,
+      "color": "despair"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 16.7,
+      "color": "despair"
+    },
+    {
+      "label": "Chad",
+      "value": 13.2,
+      "color": "despair"
+    }
+  ],
+  "xmax": 100,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "share-of-individuals-using-the-internet",
+    "url": "https://ourworldindata.org/grapher/share-of-individuals-using-the-internet",
+    "license": "CC BY 4.0",
+    "vintage": "2021–2025",
+    "checksum": "d156e859f0c4072f505a388b16315f286120aa23735bea22da0c4af2d7efbfb9",
+    "definition": "Share of the population using the internet, latest year per country. A curated 11-country spread sorted descending.",
+    "attribution": "ITU, via Our World in Data",
+    "primarySource": "International Telecommunication Union (ITU)"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 11 curated countries sorted descending"
+    }
+  ]
+}

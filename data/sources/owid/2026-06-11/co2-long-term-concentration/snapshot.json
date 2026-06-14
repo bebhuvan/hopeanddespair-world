@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "co2-long-term-concentration",
+  "vintage": "2026-06-11",
+  "url": "https://ourworldindata.org/grapher/co2-long-term-concentration",
+  "checksum": "c5737028fde2a1a33970182980937d970c47694eeefa81d368573d29a4d9e0f0",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T10:06:46.907Z",
+  "adapterVersion": "1.0.0"
+}

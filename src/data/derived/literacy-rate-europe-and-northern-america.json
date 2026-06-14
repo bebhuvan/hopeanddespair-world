@@ -1,0 +1,64 @@
+{
+  "indicatorId": "education.literacy_rate.europe-and-northern-america",
+  "entity": "Europe and Northern America (SDG)",
+  "entityName": "Europe and Northern America (SDG)",
+  "unit": "%",
+  "points": [
+    {
+      "t": 2003,
+      "value": 97.8978
+    },
+    {
+      "t": 2004,
+      "value": 97.95613
+    },
+    {
+      "t": 2005,
+      "value": 98.00925
+    },
+    {
+      "t": 2006,
+      "value": 98.077
+    },
+    {
+      "t": 2018,
+      "value": 98.61607
+    },
+    {
+      "t": 2019,
+      "value": 98.64308
+    },
+    {
+      "t": 2020,
+      "value": 98.66912
+    },
+    {
+      "t": 2021,
+      "value": 98.69566
+    },
+    {
+      "t": 2022,
+      "value": 98.70273
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "literacy_rate",
+    "url": "https://ourworldindata.org/grapher/cross-country-literacy-rates",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "64a430579a7265dd5c26dd4d2e2cf786d780b7096ae4a4b463fc6281e586f80c",
+    "definition": "Share of adults who can read and write a simple statement about their everyday life.",
+    "attribution": "Our World in Data",
+    "primarySource": "UNESCO; Buringh & van Zanden — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity Europe and Northern America (SDG)"
+    }
+  ],
+  "derivedFrom": [
+    "Europe and Northern America (SDG)"
+  ]
+}

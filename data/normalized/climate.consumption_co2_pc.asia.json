@@ -1,0 +1,157 @@
+[
+  {
+    "indicatorId": "climate.consumption_co2_pc.asia",
+    "entity": "OWID_ASI",
+    "entityName": "Asia",
+    "unit": "tonnes per person",
+    "points": [
+      {
+        "t": 1990,
+        "value": 2.0146234
+      },
+      {
+        "t": 1991,
+        "value": 2.0347245
+      },
+      {
+        "t": 1992,
+        "value": 2.1632085
+      },
+      {
+        "t": 1993,
+        "value": 2.1890092
+      },
+      {
+        "t": 1994,
+        "value": 2.1966698
+      },
+      {
+        "t": 1995,
+        "value": 2.276571
+      },
+      {
+        "t": 1996,
+        "value": 2.3166285
+      },
+      {
+        "t": 1997,
+        "value": 2.304052
+      },
+      {
+        "t": 1998,
+        "value": 2.1508706
+      },
+      {
+        "t": 1999,
+        "value": 2.271264
+      },
+      {
+        "t": 2000,
+        "value": 2.322488
+      },
+      {
+        "t": 2001,
+        "value": 2.3180003
+      },
+      {
+        "t": 2002,
+        "value": 2.4012072
+      },
+      {
+        "t": 2003,
+        "value": 2.558687
+      },
+      {
+        "t": 2004,
+        "value": 2.6672738
+      },
+      {
+        "t": 2005,
+        "value": 2.7916584
+      },
+      {
+        "t": 2006,
+        "value": 2.9232285
+      },
+      {
+        "t": 2007,
+        "value": 3.0716639
+      },
+      {
+        "t": 2008,
+        "value": 3.2003696
+      },
+      {
+        "t": 2009,
+        "value": 3.3209457
+      },
+      {
+        "t": 2010,
+        "value": 3.5178826
+      },
+      {
+        "t": 2011,
+        "value": 3.7648385
+      },
+      {
+        "t": 2012,
+        "value": 3.9036684
+      },
+      {
+        "t": 2013,
+        "value": 3.898687
+      },
+      {
+        "t": 2014,
+        "value": 3.9283023
+      },
+      {
+        "t": 2015,
+        "value": 3.944482
+      },
+      {
+        "t": 2016,
+        "value": 3.9062612
+      },
+      {
+        "t": 2017,
+        "value": 3.9848664
+      },
+      {
+        "t": 2018,
+        "value": 4.1089272
+      },
+      {
+        "t": 2019,
+        "value": 4.186913
+      },
+      {
+        "t": 2020,
+        "value": 4.0839405
+      },
+      {
+        "t": 2021,
+        "value": 4.1997247
+      },
+      {
+        "t": 2022,
+        "value": 4.281161
+      },
+      {
+        "t": 2023,
+        "value": 4.402792
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "consumption_emissions_per_capita",
+      "url": "https://ourworldindata.org/grapher/consumption-co2-per-capita",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "9e845d43a12838efe4ae4cb52df3406c17f43554028ec66af7b1ec29102e6577",
+      "definition": "Annual consumption-based emissions of carbon dioxide (CO₂), measured in tonnes per person.",
+      "attribution": "Our World in Data",
+      "primarySource": "Global Carbon Budget (2025) — via Our World in Data"
+    }
+  }
+]

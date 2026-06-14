@@ -1,0 +1,105 @@
+[
+  {
+    "indicatorId": "economy.gdp_per_capita_maddison.world",
+    "entity": "OWID_WRL",
+    "entityName": "World",
+    "unit": "international-$ in 2011 prices",
+    "points": [
+      {
+        "t": 1820,
+        "value": 1127.73
+      },
+      {
+        "t": 1850,
+        "value": 1300.502
+      },
+      {
+        "t": 1870,
+        "value": 1543.2267
+      },
+      {
+        "t": 1900,
+        "value": 2265.4688
+      },
+      {
+        "t": 1920,
+        "value": 2493.3152
+      },
+      {
+        "t": 1940,
+        "value": 3413.199
+      },
+      {
+        "t": 1950,
+        "value": 3360.164
+      },
+      {
+        "t": 1960,
+        "value": 4403.6543
+      },
+      {
+        "t": 1970,
+        "value": 5970.6577
+      },
+      {
+        "t": 1980,
+        "value": 7239.1943
+      },
+      {
+        "t": 1990,
+        "value": 8210.969
+      },
+      {
+        "t": 2000,
+        "value": 9903.86
+      },
+      {
+        "t": 2010,
+        "value": 13121.591
+      },
+      {
+        "t": 2015,
+        "value": 14713.451
+      },
+      {
+        "t": 2016,
+        "value": 15029.054
+      },
+      {
+        "t": 2017,
+        "value": 15416.331
+      },
+      {
+        "t": 2018,
+        "value": 15814.849
+      },
+      {
+        "t": 2019,
+        "value": 16091.449
+      },
+      {
+        "t": 2020,
+        "value": 15461.187
+      },
+      {
+        "t": 2021,
+        "value": 16282.981
+      },
+      {
+        "t": 2022,
+        "value": 16676.75
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "gdp_per_capita",
+      "url": "https://ourworldindata.org/grapher/gdp-per-capita-maddison-project-database",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "3764bd2ceff342198e539a27a87ec85bc2679ed8fc40c09f430a70a21fcdf27b",
+      "definition": "Average economic output per person in a country or region per year. This data is adjusted for inflation and differences in living costs between countries.",
+      "attribution": "Our World in Data",
+      "primarySource": "Maddison Project Database (2023) — via Our World in Data"
+    }
+  }
+]

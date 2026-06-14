@@ -1,0 +1,38 @@
+{
+  "name": "transport-ev_fleet_share-norway",
+  "title": "Share of cars on the road that are electric, Norway",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "IEA — Global EV Data Explorer",
+      "path": "https://api.iea.org/evs?region=Norway&csv=true"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "transport-ev_fleet_share-norway",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "transport_ev_fleet_share_norway",
+            "type": "number",
+            "unit": "percent"
+          }
+        ]
+      }
+    }
+  ]
+}

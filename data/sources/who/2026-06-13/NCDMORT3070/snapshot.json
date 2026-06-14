@@ -1,0 +1,10 @@
+{
+  "source": "who",
+  "slug": "NCDMORT3070",
+  "vintage": "2026-06-13",
+  "url": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/NCDMORT3070",
+  "checksum": "9f13dc5fb9b5f8cbaea61d0b61771473a32c6855125786bc872709dc2b7d089d",
+  "license": "CC BY-NC-SA 3.0 IGO",
+  "fetchedAt": "2026-06-13T08:37:01.077Z",
+  "adapterVersion": "1.0.0"
+}

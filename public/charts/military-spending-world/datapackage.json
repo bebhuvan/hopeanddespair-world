@@ -1,0 +1,38 @@
+{
+  "name": "violence-military_spending-world",
+  "title": "This data is expressed in US dollars. It is adjusted for inflation but does not account for differences in the cost of living between countries.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/military-spending-sipri"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "violence-military_spending-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "violence_military_spending_world",
+            "type": "number",
+            "unit": "constant 2024 US$"
+          }
+        ]
+      }
+    }
+  ]
+}

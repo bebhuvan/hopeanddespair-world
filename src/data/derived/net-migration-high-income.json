@@ -1,0 +1,328 @@
+{
+  "indicatorId": "demography.net_migration_rate.high_income",
+  "entity": "1503",
+  "entityName": "High-income countries",
+  "unit": "net migrants per 1,000 people",
+  "points": [
+    {
+      "t": 1950,
+      "value": -0.239
+    },
+    {
+      "t": 1951,
+      "value": -0.42
+    },
+    {
+      "t": 1952,
+      "value": -0.314
+    },
+    {
+      "t": 1953,
+      "value": 0.318
+    },
+    {
+      "t": 1954,
+      "value": -0.147
+    },
+    {
+      "t": 1955,
+      "value": 0.021
+    },
+    {
+      "t": 1956,
+      "value": -0.126
+    },
+    {
+      "t": 1957,
+      "value": 0.59
+    },
+    {
+      "t": 1958,
+      "value": 0.205
+    },
+    {
+      "t": 1959,
+      "value": 0.431
+    },
+    {
+      "t": 1960,
+      "value": 0.502
+    },
+    {
+      "t": 1961,
+      "value": 0.341
+    },
+    {
+      "t": 1962,
+      "value": 0.778
+    },
+    {
+      "t": 1963,
+      "value": 0.666
+    },
+    {
+      "t": 1964,
+      "value": 2.186
+    },
+    {
+      "t": 1965,
+      "value": 1.176
+    },
+    {
+      "t": 1966,
+      "value": 1.22
+    },
+    {
+      "t": 1967,
+      "value": -0.905
+    },
+    {
+      "t": 1968,
+      "value": 1.561
+    },
+    {
+      "t": 1969,
+      "value": 1.78
+    },
+    {
+      "t": 1970,
+      "value": 1.443
+    },
+    {
+      "t": 1971,
+      "value": 2.385
+    },
+    {
+      "t": 1972,
+      "value": 2.025
+    },
+    {
+      "t": 1973,
+      "value": 1.913
+    },
+    {
+      "t": 1974,
+      "value": 1.403
+    },
+    {
+      "t": 1975,
+      "value": 0.886
+    },
+    {
+      "t": 1976,
+      "value": 1.091
+    },
+    {
+      "t": 1977,
+      "value": 1.025
+    },
+    {
+      "t": 1978,
+      "value": 1.062
+    },
+    {
+      "t": 1979,
+      "value": 1.201
+    },
+    {
+      "t": 1980,
+      "value": 1.682
+    },
+    {
+      "t": 1981,
+      "value": 1.031
+    },
+    {
+      "t": 1982,
+      "value": 0.736
+    },
+    {
+      "t": 1983,
+      "value": 0.922
+    },
+    {
+      "t": 1984,
+      "value": 0.801
+    },
+    {
+      "t": 1985,
+      "value": 1.188
+    },
+    {
+      "t": 1986,
+      "value": 1.504
+    },
+    {
+      "t": 1987,
+      "value": 1.521
+    },
+    {
+      "t": 1988,
+      "value": 1.864
+    },
+    {
+      "t": 1989,
+      "value": 2.127
+    },
+    {
+      "t": 1990,
+      "value": 1.702
+    },
+    {
+      "t": 1991,
+      "value": 3.154
+    },
+    {
+      "t": 1992,
+      "value": 2.899
+    },
+    {
+      "t": 1993,
+      "value": 2.305
+    },
+    {
+      "t": 1994,
+      "value": 2.545
+    },
+    {
+      "t": 1995,
+      "value": 1.727
+    },
+    {
+      "t": 1996,
+      "value": 2.22
+    },
+    {
+      "t": 1997,
+      "value": 2.023
+    },
+    {
+      "t": 1998,
+      "value": 1.505
+    },
+    {
+      "t": 1999,
+      "value": 2.534
+    },
+    {
+      "t": 2000,
+      "value": 2.864
+    },
+    {
+      "t": 2001,
+      "value": 3.293
+    },
+    {
+      "t": 2002,
+      "value": 3.822
+    },
+    {
+      "t": 2003,
+      "value": 3.811
+    },
+    {
+      "t": 2004,
+      "value": 3.768
+    },
+    {
+      "t": 2005,
+      "value": 3.834
+    },
+    {
+      "t": 2006,
+      "value": 3.74
+    },
+    {
+      "t": 2007,
+      "value": 4.965
+    },
+    {
+      "t": 2008,
+      "value": 4.355
+    },
+    {
+      "t": 2009,
+      "value": 3.499
+    },
+    {
+      "t": 2010,
+      "value": 3.567
+    },
+    {
+      "t": 2011,
+      "value": 4.158
+    },
+    {
+      "t": 2012,
+      "value": 3.824
+    },
+    {
+      "t": 2013,
+      "value": 3.903
+    },
+    {
+      "t": 2014,
+      "value": 4.177
+    },
+    {
+      "t": 2015,
+      "value": 4.947
+    },
+    {
+      "t": 2016,
+      "value": 4.187
+    },
+    {
+      "t": 2017,
+      "value": 3.133
+    },
+    {
+      "t": 2018,
+      "value": 3.295
+    },
+    {
+      "t": 2019,
+      "value": 3.785
+    },
+    {
+      "t": 2020,
+      "value": 1.265
+    },
+    {
+      "t": 2021,
+      "value": 2.184
+    },
+    {
+      "t": 2022,
+      "value": 7.542
+    },
+    {
+      "t": 2023,
+      "value": 3.973
+    },
+    {
+      "t": 2024,
+      "value": 2.751
+    }
+  ],
+  "provenance": {
+    "source": "unwpp",
+    "sourceIndicator": "CNMR",
+    "url": "https://population.un.org/wpp/",
+    "license": "CC BY 3.0 IGO",
+    "vintage": "2026-06-13",
+    "checksum": "a816fcfaea5c827f371a25209226a686b1ab0fe121def159fb87ab6aa8850bd3",
+    "definition": "Net migration rate, High-income countries",
+    "attribution": "UN DESA, Population Division — World Population Prospects 2024",
+    "primarySource": "UN World Population Prospects 2024"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity High-income countries"
+    }
+  ],
+  "derivedFrom": [
+    "1503"
+  ]
+}

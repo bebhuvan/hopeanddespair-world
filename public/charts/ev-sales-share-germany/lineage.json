@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "transport.ev_sales_share.germany",
+    "unit": "percent",
+    "points": 16
+  },
+  "wasDerivedFrom": [
+    "Germany"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Germany"
+      }
+    ],
+    "agent": "adapter:iea@1.0.0",
+    "used": {
+      "source": "iea",
+      "slug": "evs",
+      "url": "https://api.iea.org/evs?region=Germany&csv=true",
+      "vintage": "2026-06-13",
+      "checksum": "5b2a745f158ed74650af2d3e7c1eeb0f3ca96a47d2fcab8afeae0bd4f911bd86",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+}

@@ -1,0 +1,108 @@
+{
+  "indicatorId": "technology.internet_users.mea",
+  "entity": "MEA",
+  "entityName": "Middle East, North Africa, Afghanistan & Pakistan",
+  "unit": "% of population",
+  "points": [
+    {
+      "t": 2005,
+      "value": 8.3
+    },
+    {
+      "t": 2006,
+      "value": 9.6
+    },
+    {
+      "t": 2007,
+      "value": 11.7
+    },
+    {
+      "t": 2008,
+      "value": 14.1
+    },
+    {
+      "t": 2009,
+      "value": 16.1
+    },
+    {
+      "t": 2010,
+      "value": 18.3
+    },
+    {
+      "t": 2011,
+      "value": 20.1
+    },
+    {
+      "t": 2012,
+      "value": 22.4
+    },
+    {
+      "t": 2013,
+      "value": 25.2
+    },
+    {
+      "t": 2014,
+      "value": 28.7
+    },
+    {
+      "t": 2015,
+      "value": 31.8
+    },
+    {
+      "t": 2016,
+      "value": 35
+    },
+    {
+      "t": 2017,
+      "value": 39.7
+    },
+    {
+      "t": 2018,
+      "value": 42.3
+    },
+    {
+      "t": 2019,
+      "value": 46
+    },
+    {
+      "t": 2020,
+      "value": 50.6
+    },
+    {
+      "t": 2021,
+      "value": 54.2
+    },
+    {
+      "t": 2022,
+      "value": 57.8
+    },
+    {
+      "t": 2023,
+      "value": 59.5
+    },
+    {
+      "t": 2024,
+      "value": 61.5
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "IT.NET.USER.ZS",
+    "url": "https://data.worldbank.org/indicator/IT.NET.USER.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "421e7831857b839bb172f4ef90ec7714b7b35de99a1e23f400f114cd7c0322cd",
+    "definition": "Individuals using the Internet (% of population)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "ITU, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity MEA"
+    }
+  ],
+  "derivedFrom": [
+    "MEA"
+  ]
+}

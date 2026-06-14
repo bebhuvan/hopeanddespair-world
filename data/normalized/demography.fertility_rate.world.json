@@ -1,0 +1,317 @@
+[
+  {
+    "indicatorId": "demography.fertility_rate.world",
+    "entity": "OWID_WRL",
+    "entityName": "World",
+    "unit": "live births per woman",
+    "points": [
+      {
+        "t": 1950,
+        "value": 4.852
+      },
+      {
+        "t": 1951,
+        "value": 4.816
+      },
+      {
+        "t": 1952,
+        "value": 5.001
+      },
+      {
+        "t": 1953,
+        "value": 4.922
+      },
+      {
+        "t": 1954,
+        "value": 4.998
+      },
+      {
+        "t": 1955,
+        "value": 5.003
+      },
+      {
+        "t": 1956,
+        "value": 4.931
+      },
+      {
+        "t": 1957,
+        "value": 5.068
+      },
+      {
+        "t": 1958,
+        "value": 4.932
+      },
+      {
+        "t": 1959,
+        "value": 4.74
+      },
+      {
+        "t": 1960,
+        "value": 4.696
+      },
+      {
+        "t": 1961,
+        "value": 4.571
+      },
+      {
+        "t": 1962,
+        "value": 5.022
+      },
+      {
+        "t": 1963,
+        "value": 5.308
+      },
+      {
+        "t": 1964,
+        "value": 5.123
+      },
+      {
+        "t": 1965,
+        "value": 5.071
+      },
+      {
+        "t": 1966,
+        "value": 4.961
+      },
+      {
+        "t": 1967,
+        "value": 4.852
+      },
+      {
+        "t": 1968,
+        "value": 4.963
+      },
+      {
+        "t": 1969,
+        "value": 4.866
+      },
+      {
+        "t": 1970,
+        "value": 4.825
+      },
+      {
+        "t": 1971,
+        "value": 4.679
+      },
+      {
+        "t": 1972,
+        "value": 4.545
+      },
+      {
+        "t": 1973,
+        "value": 4.416
+      },
+      {
+        "t": 1974,
+        "value": 4.259
+      },
+      {
+        "t": 1975,
+        "value": 4.08
+      },
+      {
+        "t": 1976,
+        "value": 3.974
+      },
+      {
+        "t": 1977,
+        "value": 3.85
+      },
+      {
+        "t": 1978,
+        "value": 3.787
+      },
+      {
+        "t": 1979,
+        "value": 3.771
+      },
+      {
+        "t": 1980,
+        "value": 3.744
+      },
+      {
+        "t": 1981,
+        "value": 3.711
+      },
+      {
+        "t": 1982,
+        "value": 3.712
+      },
+      {
+        "t": 1983,
+        "value": 3.581
+      },
+      {
+        "t": 1984,
+        "value": 3.553
+      },
+      {
+        "t": 1985,
+        "value": 3.515
+      },
+      {
+        "t": 1986,
+        "value": 3.504
+      },
+      {
+        "t": 1987,
+        "value": 3.476
+      },
+      {
+        "t": 1988,
+        "value": 3.39
+      },
+      {
+        "t": 1989,
+        "value": 3.347
+      },
+      {
+        "t": 1990,
+        "value": 3.31
+      },
+      {
+        "t": 1991,
+        "value": 3.131
+      },
+      {
+        "t": 1992,
+        "value": 3.044
+      },
+      {
+        "t": 1993,
+        "value": 2.98
+      },
+      {
+        "t": 1994,
+        "value": 2.933
+      },
+      {
+        "t": 1995,
+        "value": 2.889
+      },
+      {
+        "t": 1996,
+        "value": 2.846
+      },
+      {
+        "t": 1997,
+        "value": 2.809
+      },
+      {
+        "t": 1998,
+        "value": 2.776
+      },
+      {
+        "t": 1999,
+        "value": 2.75
+      },
+      {
+        "t": 2000,
+        "value": 2.754
+      },
+      {
+        "t": 2001,
+        "value": 2.714
+      },
+      {
+        "t": 2002,
+        "value": 2.684
+      },
+      {
+        "t": 2003,
+        "value": 2.659
+      },
+      {
+        "t": 2004,
+        "value": 2.647
+      },
+      {
+        "t": 2005,
+        "value": 2.63
+      },
+      {
+        "t": 2006,
+        "value": 2.625
+      },
+      {
+        "t": 2007,
+        "value": 2.623
+      },
+      {
+        "t": 2008,
+        "value": 2.626
+      },
+      {
+        "t": 2009,
+        "value": 2.621
+      },
+      {
+        "t": 2010,
+        "value": 2.602
+      },
+      {
+        "t": 2011,
+        "value": 2.588
+      },
+      {
+        "t": 2012,
+        "value": 2.607
+      },
+      {
+        "t": 2013,
+        "value": 2.572
+      },
+      {
+        "t": 2014,
+        "value": 2.564
+      },
+      {
+        "t": 2015,
+        "value": 2.537
+      },
+      {
+        "t": 2016,
+        "value": 2.536
+      },
+      {
+        "t": 2017,
+        "value": 2.504
+      },
+      {
+        "t": 2018,
+        "value": 2.437
+      },
+      {
+        "t": 2019,
+        "value": 2.397
+      },
+      {
+        "t": 2020,
+        "value": 2.322
+      },
+      {
+        "t": 2021,
+        "value": 2.291
+      },
+      {
+        "t": 2022,
+        "value": 2.265
+      },
+      {
+        "t": 2023,
+        "value": 2.251
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "fertility_rate__sex_all__age_all__variant_estimates",
+      "url": "https://ourworldindata.org/grapher/children-per-woman-un",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "54565a461bfba0cd975066579d3324e5e7e05da64acc670ec05a1584bf05aa7b",
+      "definition": "The total fertility rate: the average number of children a woman would have if she experienced the year's age-specific birth rates throughout her childbearing years.",
+      "attribution": "Our World in Data",
+      "primarySource": "UN World Population Prospects (2024) — via Our World in Data"
+    }
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "name": "economy-gdp_per_capita_ppp-eas",
+  "title": "GDP per capita, PPP (constant 2021 international $)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "economy-gdp_per_capita_ppp-eas",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "economy_gdp_per_capita_ppp_eas",
+            "type": "number",
+            "unit": "constant 2021 international $"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "indicatorId": "climate.consumption_co2_pc.europe",
+  "entity": "OWID_EUR",
+  "entityName": "Europe",
+  "unit": "tonnes per person",
+  "points": [
+    {
+      "t": 1990,
+      "value": 10.685311
+    },
+    {
+      "t": 1991,
+      "value": 10.471076
+    },
+    {
+      "t": 1992,
+      "value": 9.012255
+    },
+    {
+      "t": 1993,
+      "value": 8.93355
+    },
+    {
+      "t": 1994,
+      "value": 8.719653
+    },
+    {
+      "t": 1995,
+      "value": 8.710161
+    },
+    {
+      "t": 1996,
+      "value": 8.904927
+    },
+    {
+      "t": 1997,
+      "value": 8.587965
+    },
+    {
+      "t": 1998,
+      "value": 8.547721
+    },
+    {
+      "t": 1999,
+      "value": 8.489186
+    },
+    {
+      "t": 2000,
+      "value": 8.617033
+    },
+    {
+      "t": 2001,
+      "value": 8.8303995
+    },
+    {
+      "t": 2002,
+      "value": 8.793188
+    },
+    {
+      "t": 2003,
+      "value": 9.193856
+    },
+    {
+      "t": 2004,
+      "value": 9.309644
+    },
+    {
+      "t": 2005,
+      "value": 9.470782
+    },
+    {
+      "t": 2006,
+      "value": 9.673784
+    },
+    {
+      "t": 2007,
+      "value": 9.809668
+    },
+    {
+      "t": 2008,
+      "value": 9.735788
+    },
+    {
+      "t": 2009,
+      "value": 8.842221
+    },
+    {
+      "t": 2010,
+      "value": 9.196092
+    },
+    {
+      "t": 2011,
+      "value": 9.005847
+    },
+    {
+      "t": 2012,
+      "value": 8.786035
+    },
+    {
+      "t": 2013,
+      "value": 8.558342
+    },
+    {
+      "t": 2014,
+      "value": 8.2055435
+    },
+    {
+      "t": 2015,
+      "value": 7.967614
+    },
+    {
+      "t": 2016,
+      "value": 8.071351
+    },
+    {
+      "t": 2017,
+      "value": 8.0759
+    },
+    {
+      "t": 2018,
+      "value": 8.057174
+    },
+    {
+      "t": 2019,
+      "value": 7.836174
+    },
+    {
+      "t": 2020,
+      "value": 7.2598405
+    },
+    {
+      "t": 2021,
+      "value": 7.698385
+    },
+    {
+      "t": 2022,
+      "value": 7.690016
+    },
+    {
+      "t": 2023,
+      "value": 7.4831667
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "consumption_emissions_per_capita",
+    "url": "https://ourworldindata.org/grapher/consumption-co2-per-capita",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "9e845d43a12838efe4ae4cb52df3406c17f43554028ec66af7b1ec29102e6577",
+    "definition": "Annual consumption-based emissions of carbon dioxide (CO₂), measured in tonnes per person.",
+    "attribution": "Our World in Data",
+    "primarySource": "Global Carbon Budget (2025) — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity Europe"
+    }
+  ],
+  "derivedFrom": [
+    "OWID_EUR"
+  ]
+}

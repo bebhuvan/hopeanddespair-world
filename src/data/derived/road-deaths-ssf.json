@@ -1,0 +1,108 @@
+{
+  "indicatorId": "safety.road_deaths.ssf",
+  "entity": "SSF",
+  "entityName": "Sub-Saharan Africa",
+  "unit": "per 100,000",
+  "points": [
+    {
+      "t": 2000,
+      "value": 30.0038743474185
+    },
+    {
+      "t": 2001,
+      "value": 29.595511534397
+    },
+    {
+      "t": 2002,
+      "value": 29.8197667978489
+    },
+    {
+      "t": 2003,
+      "value": 29.742671018927
+    },
+    {
+      "t": 2004,
+      "value": 29.2784825643588
+    },
+    {
+      "t": 2005,
+      "value": 28.8940062765127
+    },
+    {
+      "t": 2006,
+      "value": 28.6737827252121
+    },
+    {
+      "t": 2007,
+      "value": 27.873722217828
+    },
+    {
+      "t": 2008,
+      "value": 27.497008807483
+    },
+    {
+      "t": 2009,
+      "value": 27.6354436819458
+    },
+    {
+      "t": 2010,
+      "value": 27.5358715808272
+    },
+    {
+      "t": 2011,
+      "value": 26.9199508916381
+    },
+    {
+      "t": 2012,
+      "value": 26.7435814838458
+    },
+    {
+      "t": 2013,
+      "value": 26.4726064951716
+    },
+    {
+      "t": 2014,
+      "value": 26.6950160814745
+    },
+    {
+      "t": 2015,
+      "value": 26.8103212559884
+    },
+    {
+      "t": 2016,
+      "value": 27.1184292027406
+    },
+    {
+      "t": 2017,
+      "value": 27.0943397999171
+    },
+    {
+      "t": 2018,
+      "value": 27.1332625753943
+    },
+    {
+      "t": 2019,
+      "value": 27.4235787018764
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SH.STA.TRAF.P5",
+    "url": "https://data.worldbank.org/indicator/SH.STA.TRAF.P5",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "3645888d5849d1a57e9410b5550549b07c5a7a20e749e03421069f8a80f4a6c4",
+    "definition": "Mortality caused by road traffic injury (per 100,000 population)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity SSF"
+    }
+  ],
+  "derivedFrom": [
+    "SSF"
+  ]
+}

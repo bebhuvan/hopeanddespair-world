@@ -1,0 +1,9 @@
+{
+  "source": "worldbank",
+  "slug": "SP.POP.TOTL",
+  "vintage": "2026-06-11",
+  "url": "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?format=json&per_page=25000&date=1960:2024",
+  "checksum": "df87edb00d831d36b16799daf2d207547efb39b9230acaa93ea84a17e4977f91",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T14:43:27.453Z"
+}

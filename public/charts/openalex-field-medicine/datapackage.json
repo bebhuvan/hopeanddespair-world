@@ -1,0 +1,38 @@
+{
+  "name": "science-openalex_field_medicine-world",
+  "title": "OpenAlex works per year whose primary topic field is Medicine.",
+  "licenses": [
+    {
+      "name": "CC0 1.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenAlex",
+      "path": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,primary_topic.field.id:https://openalex.org/fields/27&group_by=publication_year&per-page=100"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "science-openalex_field_medicine-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "science_openalex_field_medicine_world",
+            "type": "number",
+            "unit": "works per year, million"
+          }
+        ]
+      }
+    }
+  ]
+}

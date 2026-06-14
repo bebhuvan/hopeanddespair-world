@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "science.openalex_country_united_kingdom_share.world",
+    "unit": "% of OpenAlex works",
+    "points": 25
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "derived_transform",
+        "detail": "divided United Kingdom yearly country-attributed work count by all OpenAlex works in the same year"
+      }
+    ],
+    "agent": "adapter:openalex@openalex-story-1.0.0",
+    "used": {
+      "source": "openalex",
+      "slug": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:GB&group_by=publication_year / all works",
+      "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:GB&group_by=publication_year&per-page=100",
+      "vintage": "2026-06-13",
+      "checksum": "28e8e8c3fab089e2d0b050c4facb6d698439c923d965e7552e5055d3d32d1036",
+      "license": "CC0 1.0"
+    }
+  },
+  "primarySource": "OpenAlex"
+}

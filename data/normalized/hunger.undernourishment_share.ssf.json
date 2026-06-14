@@ -1,0 +1,113 @@
+[
+  {
+    "indicatorId": "hunger.undernourishment_share.ssf",
+    "entity": "SSF",
+    "entityName": "Sub-Saharan Africa",
+    "unit": "% of population",
+    "points": [
+      {
+        "t": 2001,
+        "value": 25.3184228917735
+      },
+      {
+        "t": 2002,
+        "value": 24.7548302960504
+      },
+      {
+        "t": 2003,
+        "value": 24.172473589165
+      },
+      {
+        "t": 2004,
+        "value": 23.2446395636853
+      },
+      {
+        "t": 2005,
+        "value": 22.1298329914054
+      },
+      {
+        "t": 2006,
+        "value": 21.0241674148565
+      },
+      {
+        "t": 2007,
+        "value": 20.2250354541024
+      },
+      {
+        "t": 2008,
+        "value": 19.4547994570966
+      },
+      {
+        "t": 2009,
+        "value": 18.8496494384891
+      },
+      {
+        "t": 2010,
+        "value": 18.4133759896181
+      },
+      {
+        "t": 2011,
+        "value": 18.2465101877143
+      },
+      {
+        "t": 2012,
+        "value": 18.187533460429
+      },
+      {
+        "t": 2013,
+        "value": 17.6919019134649
+      },
+      {
+        "t": 2014,
+        "value": 17.7392260277329
+      },
+      {
+        "t": 2015,
+        "value": 18.1210256353166
+      },
+      {
+        "t": 2016,
+        "value": 18.4348324452781
+      },
+      {
+        "t": 2017,
+        "value": 18.6837332748416
+      },
+      {
+        "t": 2018,
+        "value": 18.8804146691059
+      },
+      {
+        "t": 2019,
+        "value": 19.6440727586176
+      },
+      {
+        "t": 2020,
+        "value": 20.4333263115939
+      },
+      {
+        "t": 2021,
+        "value": 20.8552296047433
+      },
+      {
+        "t": 2022,
+        "value": 21.6109990890393
+      },
+      {
+        "t": 2023,
+        "value": 21.8817365693588
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SN.ITK.DEFC.ZS",
+      "url": "https://data.worldbank.org/indicator/SN.ITK.DEFC.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "9216a584571267f95c167386f2dfd08ff5560ba6535fe4795ba194d2d304ab56",
+      "definition": "Prevalence of undernourishment (% of population)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "FAO, via World Bank"
+    }
+  }
+]

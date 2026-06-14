@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "climate.co2_intensity.africa",
+    "unit": "kilograms per international-$",
+    "points": 74
+  },
+  "wasDerivedFrom": [
+    "OWID_AFR"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Africa"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "co2-intensity",
+      "url": "https://ourworldindata.org/grapher/co2-intensity",
+      "vintage": "2026-06-13",
+      "checksum": "c275e415586f7257c8bb85bd37d6624a4616bae7d83d4ccc12ffe953531052ad",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Global Carbon Budget (2025); Maddison Project — via Our World in Data"
+}

@@ -1,0 +1,125 @@
+[
+  {
+    "indicatorId": "energy.wind_solar_share_electricity.united-states",
+    "entity": "USA",
+    "entityName": "United States",
+    "unit": "% of electricity generation",
+    "points": [
+      {
+        "t": 2000,
+        "value": 0.16
+      },
+      {
+        "t": 2001,
+        "value": 0.2
+      },
+      {
+        "t": 2002,
+        "value": 0.28
+      },
+      {
+        "t": 2003,
+        "value": 0.3
+      },
+      {
+        "t": 2004,
+        "value": 0.37
+      },
+      {
+        "t": 2005,
+        "value": 0.46
+      },
+      {
+        "t": 2006,
+        "value": 0.67
+      },
+      {
+        "t": 2007,
+        "value": 0.85
+      },
+      {
+        "t": 2008,
+        "value": 1.37
+      },
+      {
+        "t": 2009,
+        "value": 1.9
+      },
+      {
+        "t": 2010,
+        "value": 2.33
+      },
+      {
+        "t": 2011,
+        "value": 2.98
+      },
+      {
+        "t": 2012,
+        "value": 3.59
+      },
+      {
+        "t": 2013,
+        "value": 4.36
+      },
+      {
+        "t": 2014,
+        "value": 5.14
+      },
+      {
+        "t": 2015,
+        "value": 5.63
+      },
+      {
+        "t": 2016,
+        "value": 6.9
+      },
+      {
+        "t": 2017,
+        "value": 8.18
+      },
+      {
+        "t": 2018,
+        "value": 8.71
+      },
+      {
+        "t": 2019,
+        "value": 9.69
+      },
+      {
+        "t": 2020,
+        "value": 11.59
+      },
+      {
+        "t": 2021,
+        "value": 13.06
+      },
+      {
+        "t": 2022,
+        "value": 14.91
+      },
+      {
+        "t": 2023,
+        "value": 15.52
+      },
+      {
+        "t": 2024,
+        "value": 17.21
+      },
+      {
+        "t": 2025,
+        "value": 18.88
+      }
+    ],
+    "provenance": {
+      "source": "ember",
+      "sourceIndicator": "electricity-generation/yearly:Wind and solar:share_of_generation_pct",
+      "url": "https://api.ember-energy.org/v1/electricity-generation/yearly?entity=United%20States&start_date=2000",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "ab8695bb836127a98d4261e87080f0636961f3ea6c76d6d132c5359c3f7e22f5",
+      "definition": "Share of electricity from wind and solar, United States",
+      "attribution": "Ember — Yearly Electricity Data",
+      "primarySource": "Ember — Yearly Electricity Data"
+    }
+  }
+]

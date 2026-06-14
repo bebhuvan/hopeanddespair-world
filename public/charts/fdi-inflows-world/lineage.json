@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "trade.fdi_inflows.world",
+    "unit": "% of GDP",
+    "points": 55
+  },
+  "wasDerivedFrom": [
+    "WLD"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity WLD"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "BX.KLT.DINV.WD.GD.ZS",
+      "url": "https://data.worldbank.org/indicator/BX.KLT.DINV.WD.GD.ZS",
+      "vintage": "2026-06-12",
+      "checksum": "721dbe2c182bfd13d01cf0146216793a12f9fed1fad3a1eed6fc0bf387f0437b",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "IMF Balance of Payments — via World Bank"
+}

@@ -1,0 +1,113 @@
+[
+  {
+    "indicatorId": "health.malaria_incidence_wb.wld",
+    "entity": "WLD",
+    "entityName": "World",
+    "unit": "per 1,000 population at risk",
+    "points": [
+      {
+        "t": 2000,
+        "value": 79.8813099417593
+      },
+      {
+        "t": 2001,
+        "value": 80.7118632285731
+      },
+      {
+        "t": 2002,
+        "value": 78.5243680983702
+      },
+      {
+        "t": 2003,
+        "value": 78.6751624463595
+      },
+      {
+        "t": 2004,
+        "value": 78.004932370708
+      },
+      {
+        "t": 2005,
+        "value": 76.5593171374171
+      },
+      {
+        "t": 2006,
+        "value": 73.4298650954255
+      },
+      {
+        "t": 2007,
+        "value": 70.6679532392561
+      },
+      {
+        "t": 2008,
+        "value": 68.888610106043
+      },
+      {
+        "t": 2009,
+        "value": 69.1932272610673
+      },
+      {
+        "t": 2010,
+        "value": 68.1856507676549
+      },
+      {
+        "t": 2011,
+        "value": 65.2035547026601
+      },
+      {
+        "t": 2012,
+        "value": 62.7474088655473
+      },
+      {
+        "t": 2013,
+        "value": 60.3683727514267
+      },
+      {
+        "t": 2014,
+        "value": 58.6870330872827
+      },
+      {
+        "t": 2015,
+        "value": 59.0112453102036
+      },
+      {
+        "t": 2016,
+        "value": 58.6950073871173
+      },
+      {
+        "t": 2017,
+        "value": 59.7315443849572
+      },
+      {
+        "t": 2018,
+        "value": 58.469060432106
+      },
+      {
+        "t": 2019,
+        "value": 57.9897815718
+      },
+      {
+        "t": 2020,
+        "value": 60.2623341938755
+      },
+      {
+        "t": 2022,
+        "value": 60.7281753730123
+      },
+      {
+        "t": 2024,
+        "value": 64.0410829840746
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SH.MLR.INCD.P3",
+      "url": "https://data.worldbank.org/indicator/SH.MLR.INCD.P3",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "8f32687d9e9ddfb0b907b7061c2a743d980a09688ce7e047a90a1b435ebae772",
+      "definition": "Incidence of malaria (per 1,000 population at risk)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "WHO World Malaria Report, via World Bank"
+    }
+  }
+]

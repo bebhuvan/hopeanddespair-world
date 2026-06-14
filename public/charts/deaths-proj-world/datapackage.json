@@ -1,0 +1,38 @@
+{
+  "name": "demography-deaths_proj-world",
+  "title": "The number of deaths in a calendar year.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/births-and-deaths-projected-to-2100"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "demography-deaths_proj-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "demography_deaths_proj_world",
+            "type": "number",
+            "unit": "deaths"
+          }
+        ]
+      }
+    }
+  ]
+}

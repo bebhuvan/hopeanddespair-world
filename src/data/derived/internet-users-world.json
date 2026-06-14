@@ -1,0 +1,112 @@
+{
+  "indicatorId": "technology.internet_users.world",
+  "entity": "OWID_WRL",
+  "entityName": "World",
+  "unit": "% of population",
+  "points": [
+    {
+      "t": 2005,
+      "value": 15.6
+    },
+    {
+      "t": 2006,
+      "value": 17.2
+    },
+    {
+      "t": 2007,
+      "value": 20.2
+    },
+    {
+      "t": 2008,
+      "value": 22.8
+    },
+    {
+      "t": 2009,
+      "value": 25.3
+    },
+    {
+      "t": 2010,
+      "value": 28.4
+    },
+    {
+      "t": 2011,
+      "value": 30.9
+    },
+    {
+      "t": 2012,
+      "value": 33.3
+    },
+    {
+      "t": 2013,
+      "value": 35.3
+    },
+    {
+      "t": 2014,
+      "value": 37.4
+    },
+    {
+      "t": 2015,
+      "value": 39.9
+    },
+    {
+      "t": 2016,
+      "value": 43.6
+    },
+    {
+      "t": 2017,
+      "value": 46.3
+    },
+    {
+      "t": 2018,
+      "value": 49.4
+    },
+    {
+      "t": 2019,
+      "value": 53.9
+    },
+    {
+      "t": 2020,
+      "value": 60.1
+    },
+    {
+      "t": 2021,
+      "value": 63.8
+    },
+    {
+      "t": 2022,
+      "value": 67
+    },
+    {
+      "t": 2023,
+      "value": 69.2
+    },
+    {
+      "t": 2024,
+      "value": 71.2
+    },
+    {
+      "t": 2025,
+      "value": 73.6
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "it_net_user_zs",
+    "url": "https://ourworldindata.org/grapher/share-of-individuals-using-the-internet",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "4a0980b7923baaa042db8596cb5249a7b8de81d55eb751f63a2b5b5ded92b8c1",
+    "definition": "Share of the population who used the Internet in the last three months.",
+    "attribution": "Our World in Data",
+    "primarySource": "International Telecommunication Union — via World Bank / Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity World"
+    }
+  ],
+  "derivedFrom": [
+    "OWID_WRL"
+  ]
+}

@@ -1,5 +1,7 @@
 # hopeanddespair.world
 
+**Live at → [hopeanddespair.world](https://hopeanddespair.world)**
+
 A living atlas of human progress, suffering, and uncertainty. One honest question per article —
 *is the world getting better or worse?* — answered across many dimensions with open data and
 plain-spoken narrative. **The world is getting better. The world is getting worse. Both are true.**

@@ -1,0 +1,164 @@
+{
+  "indicatorId": "work.unemployment.world",
+  "entity": "WLD",
+  "entityName": "World",
+  "unit": "% of total labor force",
+  "points": [
+    {
+      "t": 1991,
+      "value": 5.11939576855541
+    },
+    {
+      "t": 1992,
+      "value": 5.27548969894175
+    },
+    {
+      "t": 1993,
+      "value": 5.54359975807061
+    },
+    {
+      "t": 1994,
+      "value": 5.78918170693904
+    },
+    {
+      "t": 1995,
+      "value": 5.91942696026279
+    },
+    {
+      "t": 1996,
+      "value": 5.98370073084904
+    },
+    {
+      "t": 1997,
+      "value": 6.01013695494246
+    },
+    {
+      "t": 1998,
+      "value": 6.15906586247165
+    },
+    {
+      "t": 1999,
+      "value": 6.27834886767265
+    },
+    {
+      "t": 2000,
+      "value": 6.11126625149596
+    },
+    {
+      "t": 2001,
+      "value": 6.18980812535966
+    },
+    {
+      "t": 2002,
+      "value": 6.41180854857461
+    },
+    {
+      "t": 2003,
+      "value": 6.48390882464603
+    },
+    {
+      "t": 2004,
+      "value": 6.32969211241359
+    },
+    {
+      "t": 2005,
+      "value": 6.22389912094209
+    },
+    {
+      "t": 2006,
+      "value": 5.97374019654838
+    },
+    {
+      "t": 2007,
+      "value": 5.77480901338889
+    },
+    {
+      "t": 2008,
+      "value": 5.82404352868675
+    },
+    {
+      "t": 2009,
+      "value": 6.40934094809211
+    },
+    {
+      "t": 2010,
+      "value": 6.28092769649237
+    },
+    {
+      "t": 2011,
+      "value": 6.14877677051057
+    },
+    {
+      "t": 2012,
+      "value": 6.15180927283385
+    },
+    {
+      "t": 2013,
+      "value": 6.09906293447201
+    },
+    {
+      "t": 2014,
+      "value": 5.95720582647446
+    },
+    {
+      "t": 2015,
+      "value": 5.99825160171964
+    },
+    {
+      "t": 2016,
+      "value": 5.97068694834666
+    },
+    {
+      "t": 2017,
+      "value": 5.89788808678893
+    },
+    {
+      "t": 2018,
+      "value": 5.75951966875999
+    },
+    {
+      "t": 2019,
+      "value": 5.58822341975783
+    },
+    {
+      "t": 2020,
+      "value": 6.58731449706782
+    },
+    {
+      "t": 2021,
+      "value": 6.0451914548011
+    },
+    {
+      "t": 2022,
+      "value": 5.23426188470581
+    },
+    {
+      "t": 2023,
+      "value": 4.84957114230342
+    },
+    {
+      "t": 2024,
+      "value": 4.80587275250158
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SL.UEM.TOTL.ZS",
+    "url": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "a175876f68c936a6ca0cc80e0142069a6574c6de14d657faff9dd9689ca712ea",
+    "definition": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "International Labour Organization (modelled), via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity WLD"
+    }
+  ],
+  "derivedFrom": [
+    "WLD"
+  ]
+}

@@ -1,0 +1,324 @@
+{
+  "indicatorId": "demography.fertility_rate.nigeria",
+  "entity": "NGA",
+  "entityName": "Nigeria",
+  "unit": "live births per woman",
+  "points": [
+    {
+      "t": 1950,
+      "value": 6.419
+    },
+    {
+      "t": 1951,
+      "value": 6.415
+    },
+    {
+      "t": 1952,
+      "value": 6.391
+    },
+    {
+      "t": 1953,
+      "value": 6.396
+    },
+    {
+      "t": 1954,
+      "value": 6.396
+    },
+    {
+      "t": 1955,
+      "value": 6.402
+    },
+    {
+      "t": 1956,
+      "value": 6.409
+    },
+    {
+      "t": 1957,
+      "value": 6.404
+    },
+    {
+      "t": 1958,
+      "value": 6.386
+    },
+    {
+      "t": 1959,
+      "value": 6.375
+    },
+    {
+      "t": 1960,
+      "value": 6.364
+    },
+    {
+      "t": 1961,
+      "value": 6.353
+    },
+    {
+      "t": 1962,
+      "value": 6.356
+    },
+    {
+      "t": 1963,
+      "value": 6.349
+    },
+    {
+      "t": 1964,
+      "value": 6.362
+    },
+    {
+      "t": 1965,
+      "value": 6.367
+    },
+    {
+      "t": 1966,
+      "value": 6.386
+    },
+    {
+      "t": 1967,
+      "value": 6.401
+    },
+    {
+      "t": 1968,
+      "value": 6.42
+    },
+    {
+      "t": 1969,
+      "value": 6.438
+    },
+    {
+      "t": 1970,
+      "value": 6.466
+    },
+    {
+      "t": 1971,
+      "value": 6.532
+    },
+    {
+      "t": 1972,
+      "value": 6.579
+    },
+    {
+      "t": 1973,
+      "value": 6.633
+    },
+    {
+      "t": 1974,
+      "value": 6.703
+    },
+    {
+      "t": 1975,
+      "value": 6.773
+    },
+    {
+      "t": 1976,
+      "value": 6.806
+    },
+    {
+      "t": 1977,
+      "value": 6.862
+    },
+    {
+      "t": 1978,
+      "value": 6.921
+    },
+    {
+      "t": 1979,
+      "value": 6.887
+    },
+    {
+      "t": 1980,
+      "value": 6.847
+    },
+    {
+      "t": 1981,
+      "value": 6.82
+    },
+    {
+      "t": 1982,
+      "value": 6.799
+    },
+    {
+      "t": 1983,
+      "value": 6.775
+    },
+    {
+      "t": 1984,
+      "value": 6.701
+    },
+    {
+      "t": 1985,
+      "value": 6.616
+    },
+    {
+      "t": 1986,
+      "value": 6.557
+    },
+    {
+      "t": 1987,
+      "value": 6.504
+    },
+    {
+      "t": 1988,
+      "value": 6.498
+    },
+    {
+      "t": 1989,
+      "value": 6.494
+    },
+    {
+      "t": 1990,
+      "value": 6.459
+    },
+    {
+      "t": 1991,
+      "value": 6.426
+    },
+    {
+      "t": 1992,
+      "value": 6.391
+    },
+    {
+      "t": 1993,
+      "value": 6.354
+    },
+    {
+      "t": 1994,
+      "value": 6.319
+    },
+    {
+      "t": 1995,
+      "value": 6.273
+    },
+    {
+      "t": 1996,
+      "value": 6.217
+    },
+    {
+      "t": 1997,
+      "value": 6.138
+    },
+    {
+      "t": 1998,
+      "value": 6.069
+    },
+    {
+      "t": 1999,
+      "value": 6.082
+    },
+    {
+      "t": 2000,
+      "value": 6.124
+    },
+    {
+      "t": 2001,
+      "value": 6.128
+    },
+    {
+      "t": 2002,
+      "value": 6.116
+    },
+    {
+      "t": 2003,
+      "value": 6.1
+    },
+    {
+      "t": 2004,
+      "value": 6.09
+    },
+    {
+      "t": 2005,
+      "value": 6.063
+    },
+    {
+      "t": 2006,
+      "value": 6.053
+    },
+    {
+      "t": 2007,
+      "value": 6.027
+    },
+    {
+      "t": 2008,
+      "value": 6.024
+    },
+    {
+      "t": 2009,
+      "value": 5.993
+    },
+    {
+      "t": 2010,
+      "value": 5.948
+    },
+    {
+      "t": 2011,
+      "value": 5.893
+    },
+    {
+      "t": 2012,
+      "value": 5.797
+    },
+    {
+      "t": 2013,
+      "value": 5.694
+    },
+    {
+      "t": 2014,
+      "value": 5.622
+    },
+    {
+      "t": 2015,
+      "value": 5.503
+    },
+    {
+      "t": 2016,
+      "value": 5.343
+    },
+    {
+      "t": 2017,
+      "value": 5.182
+    },
+    {
+      "t": 2018,
+      "value": 5.021
+    },
+    {
+      "t": 2019,
+      "value": 4.861
+    },
+    {
+      "t": 2020,
+      "value": 4.7
+    },
+    {
+      "t": 2021,
+      "value": 4.636
+    },
+    {
+      "t": 2022,
+      "value": 4.552
+    },
+    {
+      "t": 2023,
+      "value": 4.482
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "fertility_rate__sex_all__age_all__variant_estimates",
+    "url": "https://ourworldindata.org/grapher/children-per-woman-un",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "54565a461bfba0cd975066579d3324e5e7e05da64acc670ec05a1584bf05aa7b",
+    "definition": "The total fertility rate: the average number of children a woman would have if she experienced the year's age-specific birth rates throughout her childbearing years.",
+    "attribution": "Our World in Data",
+    "primarySource": "UN World Population Prospects (2024) — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity Nigeria"
+    }
+  ],
+  "derivedFrom": [
+    "NGA"
+  ]
+}

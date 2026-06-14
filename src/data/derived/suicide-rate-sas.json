@@ -1,0 +1,116 @@
+{
+  "indicatorId": "wellbeing.suicide_rate_wb.sas",
+  "entity": "SAS",
+  "entityName": "South Asia",
+  "unit": "per 100,000 people",
+  "points": [
+    {
+      "t": 2000,
+      "value": 14.9517548439758
+    },
+    {
+      "t": 2001,
+      "value": 14.1425235347476
+    },
+    {
+      "t": 2002,
+      "value": 14.1045095703832
+    },
+    {
+      "t": 2003,
+      "value": 13.9642301057987
+    },
+    {
+      "t": 2004,
+      "value": 14.2073033366514
+    },
+    {
+      "t": 2005,
+      "value": 14.4676722577069
+    },
+    {
+      "t": 2006,
+      "value": 14.6165156408933
+    },
+    {
+      "t": 2007,
+      "value": 14.5667806935929
+    },
+    {
+      "t": 2008,
+      "value": 14.4863542680564
+    },
+    {
+      "t": 2009,
+      "value": 14.3596246769436
+    },
+    {
+      "t": 2010,
+      "value": 14.519217063274
+    },
+    {
+      "t": 2011,
+      "value": 14.4552406219083
+    },
+    {
+      "t": 2012,
+      "value": 14.4500989282774
+    },
+    {
+      "t": 2013,
+      "value": 14.2638152063942
+    },
+    {
+      "t": 2014,
+      "value": 13.7706684001895
+    },
+    {
+      "t": 2015,
+      "value": 13.3432388350803
+    },
+    {
+      "t": 2016,
+      "value": 13.3383587484482
+    },
+    {
+      "t": 2017,
+      "value": 13.5749164926873
+    },
+    {
+      "t": 2018,
+      "value": 13.0944223296919
+    },
+    {
+      "t": 2019,
+      "value": 12.8185672094532
+    },
+    {
+      "t": 2020,
+      "value": 11.8913671402274
+    },
+    {
+      "t": 2021,
+      "value": 11.5388461842082
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SH.STA.SUIC.P5",
+    "url": "https://data.worldbank.org/indicator/SH.STA.SUIC.P5",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "2acd6aca10e33bc2cc6136d10d1b38313b90a86170a463f2554b11cd7e4757ce",
+    "definition": "Suicide mortality rate (per 100,000 population)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity SAS"
+    }
+  ],
+  "derivedFrom": [
+    "SAS"
+  ]
+}

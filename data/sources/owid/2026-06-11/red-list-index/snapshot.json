@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "red-list-index",
+  "vintage": "2026-06-11",
+  "url": "https://ourworldindata.org/grapher/red-list-index",
+  "checksum": "f401009204abab4350f44eb83a1f16be058275cd67c91ad7228e0772ea1e532c",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T10:06:51.119Z",
+  "adapterVersion": "1.0.0"
+}

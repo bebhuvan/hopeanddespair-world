@@ -1,0 +1,205 @@
+[
+  {
+    "indicatorId": "economy.poverty_gap.lcn",
+    "entity": "LCN",
+    "entityName": "Latin America & Caribbean",
+    "unit": "% of the poverty line",
+    "points": [
+      {
+        "t": 1981,
+        "value": 8.01
+      },
+      {
+        "t": 1982,
+        "value": 8.290000000000001
+      },
+      {
+        "t": 1983,
+        "value": 9.76
+      },
+      {
+        "t": 1984,
+        "value": 9.53
+      },
+      {
+        "t": 1985,
+        "value": 8.83
+      },
+      {
+        "t": 1986,
+        "value": 6.4399999999999995
+      },
+      {
+        "t": 1987,
+        "value": 7.89
+      },
+      {
+        "t": 1988,
+        "value": 8.38
+      },
+      {
+        "t": 1989,
+        "value": 8.110000000000001
+      },
+      {
+        "t": 1990,
+        "value": 8.66
+      },
+      {
+        "t": 1991,
+        "value": 8.35
+      },
+      {
+        "t": 1992,
+        "value": 8.43
+      },
+      {
+        "t": 1993,
+        "value": 8.41
+      },
+      {
+        "t": 1994,
+        "value": 8.09
+      },
+      {
+        "t": 1995,
+        "value": 7.57
+      },
+      {
+        "t": 1996,
+        "value": 8.42
+      },
+      {
+        "t": 1997,
+        "value": 8.290000000000001
+      },
+      {
+        "t": 1998,
+        "value": 8.19
+      },
+      {
+        "t": 1999,
+        "value": 8.33
+      },
+      {
+        "t": 2000,
+        "value": 7.6899999999999995
+      },
+      {
+        "t": 2001,
+        "value": 7.470000000000001
+      },
+      {
+        "t": 2002,
+        "value": 6.800000000000001
+      },
+      {
+        "t": 2003,
+        "value": 6.59
+      },
+      {
+        "t": 2004,
+        "value": 5.9799999999999995
+      },
+      {
+        "t": 2005,
+        "value": 5.74
+      },
+      {
+        "t": 2006,
+        "value": 4.71
+      },
+      {
+        "t": 2007,
+        "value": 4.02
+      },
+      {
+        "t": 2008,
+        "value": 3.64
+      },
+      {
+        "t": 2009,
+        "value": 3.46
+      },
+      {
+        "t": 2010,
+        "value": 3.08
+      },
+      {
+        "t": 2011,
+        "value": 2.82
+      },
+      {
+        "t": 2012,
+        "value": 2.69
+      },
+      {
+        "t": 2013,
+        "value": 2.3800000000000003
+      },
+      {
+        "t": 2014,
+        "value": 2.22
+      },
+      {
+        "t": 2015,
+        "value": 2.0500000000000003
+      },
+      {
+        "t": 2016,
+        "value": 2.18
+      },
+      {
+        "t": 2017,
+        "value": 2.1999999999999997
+      },
+      {
+        "t": 2018,
+        "value": 2.19
+      },
+      {
+        "t": 2019,
+        "value": 2.2399999999999998
+      },
+      {
+        "t": 2020,
+        "value": 2.1
+      },
+      {
+        "t": 2021,
+        "value": 2.27
+      },
+      {
+        "t": 2022,
+        "value": 1.79
+      },
+      {
+        "t": 2023,
+        "value": 1.63
+      },
+      {
+        "t": 2024,
+        "value": 1.49
+      },
+      {
+        "t": 2025,
+        "value": 1.4500000000000002
+      },
+      {
+        "t": 2026,
+        "value": 1.4200000000000002
+      }
+    ],
+    "provenance": {
+      "source": "pip",
+      "sourceIndicator": "poverty_gap @ $3.00/day (2021 PPP)",
+      "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+      "definition": "Poverty gap at $3.00/day (2021 PPP), Latin America & Caribbean",
+      "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+      "primarySource": "World Bank — Poverty and Inequality Platform"
+    }
+  }
+]

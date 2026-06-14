@@ -270,7 +270,7 @@
     "sourceIndicator": "NY.GDP.PCAP.KD",
     "url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.KD",
     "license": "CC BY 4.0",
-    "vintage": "2026-06-08",
+    "vintage": "2026-06-12",
     "checksum": "1a407055e3d12986873076e5c1f148ac655705982ea9e3cf575d53a1ad0ccfd1",
     "definition": "GDP per capita (constant 2015 US$)",
     "attribution": "World Bank — World Development Indicators",

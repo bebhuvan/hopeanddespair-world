@@ -1,0 +1,160 @@
+{
+  "indicatorId": "nature.forest_pct.mea",
+  "entity": "MEA",
+  "entityName": "Middle East, North Africa, Afghanistan & Pakistan",
+  "unit": "% of land area",
+  "points": [
+    {
+      "t": 1990,
+      "value": 2.10812160160135
+    },
+    {
+      "t": 1991,
+      "value": 2.10737889882002
+    },
+    {
+      "t": 1992,
+      "value": 2.10663286522006
+    },
+    {
+      "t": 1993,
+      "value": 2.10589016361302
+    },
+    {
+      "t": 1994,
+      "value": 2.10514746200598
+    },
+    {
+      "t": 1995,
+      "value": 2.10440476830448
+    },
+    {
+      "t": 1996,
+      "value": 2.10366206669745
+    },
+    {
+      "t": 1997,
+      "value": 2.10291936509041
+    },
+    {
+      "t": 1998,
+      "value": 2.10217666348337
+    },
+    {
+      "t": 1999,
+      "value": 2.10143396187633
+    },
+    {
+      "t": 2000,
+      "value": 2.10069126026929
+    },
+    {
+      "t": 2001,
+      "value": 2.1130182870912
+    },
+    {
+      "t": 2002,
+      "value": 2.12534531391311
+    },
+    {
+      "t": 2003,
+      "value": 2.13770276017892
+    },
+    {
+      "t": 2004,
+      "value": 2.15003166215649
+    },
+    {
+      "t": 2005,
+      "value": 2.16235716465415
+    },
+    {
+      "t": 2006,
+      "value": 2.17467405156357
+    },
+    {
+      "t": 2007,
+      "value": 2.18699773741705
+    },
+    {
+      "t": 2008,
+      "value": 2.19932312299445
+    },
+    {
+      "t": 2009,
+      "value": 2.21208918331652
+    },
+    {
+      "t": 2010,
+      "value": 2.224420151514
+    },
+    {
+      "t": 2011,
+      "value": 2.22318053553176
+    },
+    {
+      "t": 2012,
+      "value": 2.2219412719147
+    },
+    {
+      "t": 2013,
+      "value": 2.2207362503408
+    },
+    {
+      "t": 2014,
+      "value": 2.21951838021883
+    },
+    {
+      "t": 2015,
+      "value": 2.21827821025288
+    },
+    {
+      "t": 2016,
+      "value": 2.21308923020185
+    },
+    {
+      "t": 2017,
+      "value": 2.21348018334205
+    },
+    {
+      "t": 2018,
+      "value": 2.21144100839568
+    },
+    {
+      "t": 2019,
+      "value": 2.21117792872636
+    },
+    {
+      "t": 2020,
+      "value": 2.21036298582825
+    },
+    {
+      "t": 2021,
+      "value": 2.20991635593915
+    },
+    {
+      "t": 2022,
+      "value": 2.20189662489562
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "AG.LND.FRST.ZS",
+    "url": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "6d15eb9d2267f1a84a74bf2c893fcbd2807636adfd6d62bf794da7334ff0e11c",
+    "definition": "Forest area (% of land area)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "FAO, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity MEA"
+    }
+  ],
+  "derivedFrom": [
+    "MEA"
+  ]
+}

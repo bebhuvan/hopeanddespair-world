@@ -1,0 +1,125 @@
+{
+  "indicatorId": "science.openalex_country_india_index.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "index, 2000 = 100",
+  "points": [
+    {
+      "t": 2000,
+      "value": 100
+    },
+    {
+      "t": 2001,
+      "value": 110.2
+    },
+    {
+      "t": 2002,
+      "value": 129.2
+    },
+    {
+      "t": 2003,
+      "value": 138.6
+    },
+    {
+      "t": 2004,
+      "value": 147.7
+    },
+    {
+      "t": 2005,
+      "value": 171.7
+    },
+    {
+      "t": 2006,
+      "value": 211.9
+    },
+    {
+      "t": 2007,
+      "value": 243.7
+    },
+    {
+      "t": 2008,
+      "value": 263.3
+    },
+    {
+      "t": 2009,
+      "value": 299.2
+    },
+    {
+      "t": 2010,
+      "value": 352.9
+    },
+    {
+      "t": 2011,
+      "value": 419.3
+    },
+    {
+      "t": 2012,
+      "value": 525.6
+    },
+    {
+      "t": 2013,
+      "value": 605.9
+    },
+    {
+      "t": 2014,
+      "value": 697.9
+    },
+    {
+      "t": 2015,
+      "value": 725.8
+    },
+    {
+      "t": 2016,
+      "value": 817.9
+    },
+    {
+      "t": 2017,
+      "value": 926.8
+    },
+    {
+      "t": 2018,
+      "value": 979.9
+    },
+    {
+      "t": 2019,
+      "value": 1032.8
+    },
+    {
+      "t": 2020,
+      "value": 1301.6
+    },
+    {
+      "t": 2021,
+      "value": 1453.6
+    },
+    {
+      "t": 2022,
+      "value": 1584.3
+    },
+    {
+      "t": 2023,
+      "value": 1746.4
+    },
+    {
+      "t": 2024,
+      "value": 1917.8
+    }
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:IN&group_by=publication_year",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:IN&group_by=publication_year&per-page=100",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-13",
+    "checksum": "1fbefa10ae8288a508c2f666a40f1d53a61bf701292ece3531d982611476a3f5",
+    "definition": "India country-attributed OpenAlex works, indexed to 2000 = 100.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "derived_transform",
+      "detail": "divided India yearly country-attributed work count by its 2000 value and multiplied by 100"
+    }
+  ]
+}

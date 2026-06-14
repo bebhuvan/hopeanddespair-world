@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "IT.NET.USER.ZS",
+  "vintage": "2026-06-12",
+  "url": "https://data.worldbank.org/indicator/IT.NET.USER.ZS",
+  "checksum": "421e7831857b839bb172f4ef90ec7714b7b35de99a1e23f400f114cd7c0322cd",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:44:17.523Z",
+  "adapterVersion": "1.0.0"
+}

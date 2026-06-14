@@ -1,0 +1,84 @@
+{
+  "indicatorId": "wellbeing.life_satisfaction.world",
+  "entity": "OWID_WRL",
+  "entityName": "World",
+  "unit": "score (0–10)",
+  "points": [
+    {
+      "t": 2011,
+      "value": 5.26148
+    },
+    {
+      "t": 2012,
+      "value": 5.319894
+    },
+    {
+      "t": 2014,
+      "value": 5.2839904
+    },
+    {
+      "t": 2015,
+      "value": 5.246827
+    },
+    {
+      "t": 2016,
+      "value": 5.226976
+    },
+    {
+      "t": 2017,
+      "value": 5.1741133
+    },
+    {
+      "t": 2018,
+      "value": 5.149911
+    },
+    {
+      "t": 2019,
+      "value": 5.0791073
+    },
+    {
+      "t": 2020,
+      "value": 5.1643105
+    },
+    {
+      "t": 2021,
+      "value": 5.1809764
+    },
+    {
+      "t": 2022,
+      "value": 5.223494
+    },
+    {
+      "t": 2023,
+      "value": 5.2622137
+    },
+    {
+      "t": 2024,
+      "value": 5.344821
+    },
+    {
+      "t": 2025,
+      "value": 5.436698
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "cantril_ladder_score",
+    "url": "https://ourworldindata.org/grapher/happiness-cantril-ladder",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "930561b9a3ea8fb6d0453ae374ad3f486d1afa9240b100f6db49dc1a0b9eaf9b",
+    "definition": "Average of survey responses. The survey question asks respondents their current position on a hypothetical ladder, where the best possible life for them is a 10, and the worst possible life is a 0.",
+    "attribution": "Our World in Data",
+    "primarySource": "World Happiness Report — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity World"
+    }
+  ],
+  "derivedFrom": [
+    "OWID_WRL"
+  ]
+}

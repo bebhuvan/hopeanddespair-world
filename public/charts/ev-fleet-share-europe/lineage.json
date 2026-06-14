@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "transport.ev_fleet_share.europe",
+    "unit": "percent",
+    "points": 16
+  },
+  "wasDerivedFrom": [
+    "Europe"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Europe"
+      }
+    ],
+    "agent": "adapter:iea@1.0.0",
+    "used": {
+      "source": "iea",
+      "slug": "evs",
+      "url": "https://api.iea.org/evs?region=Europe&csv=true",
+      "vintage": "2026-06-13",
+      "checksum": "5f193edf78f00f6e6a95204f343b4515e7ae1e87d6c8e29a7ad6b5d326d27e23",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+}

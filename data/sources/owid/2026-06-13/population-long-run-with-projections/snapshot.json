@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "population-long-run-with-projections",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/population-long-run-with-projections",
+  "checksum": "8eed9ee6374769f84bd508573255ca83dd4b6e1c1107e1e574993605249ecf07",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T14:27:28.357Z",
+  "adapterVersion": "1.0.0"
+}

@@ -1,0 +1,53 @@
+[
+  {
+    "indicatorId": "substance.smoking.world",
+    "entity": "WLD",
+    "entityName": "World",
+    "unit": "% of adults",
+    "points": [
+      {
+        "t": 2000,
+        "value": 34.3352527371262
+      },
+      {
+        "t": 2005,
+        "value": 30.7535267105219
+      },
+      {
+        "t": 2007,
+        "value": 29.4296164191541
+      },
+      {
+        "t": 2010,
+        "value": 27.595057390787
+      },
+      {
+        "t": 2015,
+        "value": 24.8790252695582
+      },
+      {
+        "t": 2020,
+        "value": 22.5742252663973
+      },
+      {
+        "t": 2021,
+        "value": 22.1274253191045
+      },
+      {
+        "t": 2022,
+        "value": 21.7413698575614
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SH.PRV.SMOK",
+      "url": "https://data.worldbank.org/indicator/SH.PRV.SMOK",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "2d0255a845aaffe81095203425aec7765775d7acc13287e4bd11209f9cf8bafd",
+      "definition": "Prevalence of current tobacco use (% of adults)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "WHO, via World Bank"
+    }
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "name": "gender-women_in_parliament-world",
+  "title": "Proportion of seats held by women in national parliaments (%)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/SG.GEN.PARL.ZS"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "gender-women_in_parliament-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "gender_women_in_parliament_world",
+            "type": "number",
+            "unit": "% of seats"
+          }
+        ]
+      }
+    }
+  ]
+}

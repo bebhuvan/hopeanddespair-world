@@ -1,0 +1,117 @@
+[
+  {
+    "indicatorId": "violence.homicide_rate_male.world",
+    "entity": "OWID_WRL",
+    "entityName": "World",
+    "unit": "homicides per 100,000 population",
+    "points": [
+      {
+        "t": 2000,
+        "value": 11.050599
+      },
+      {
+        "t": 2001,
+        "value": 11.200932
+      },
+      {
+        "t": 2002,
+        "value": 11.177372
+      },
+      {
+        "t": 2003,
+        "value": 10.894845
+      },
+      {
+        "t": 2004,
+        "value": 10.485636
+      },
+      {
+        "t": 2005,
+        "value": 10.184401
+      },
+      {
+        "t": 2006,
+        "value": 10.033574
+      },
+      {
+        "t": 2007,
+        "value": 9.737518
+      },
+      {
+        "t": 2008,
+        "value": 9.789708
+      },
+      {
+        "t": 2009,
+        "value": 9.798303
+      },
+      {
+        "t": 2010,
+        "value": 9.788656
+      },
+      {
+        "t": 2011,
+        "value": 9.904288
+      },
+      {
+        "t": 2012,
+        "value": 9.956157
+      },
+      {
+        "t": 2013,
+        "value": 9.807121
+      },
+      {
+        "t": 2014,
+        "value": 9.798615
+      },
+      {
+        "t": 2015,
+        "value": 9.572595
+      },
+      {
+        "t": 2016,
+        "value": 9.640263
+      },
+      {
+        "t": 2017,
+        "value": 9.530606
+      },
+      {
+        "t": 2018,
+        "value": 9.118222
+      },
+      {
+        "t": 2019,
+        "value": 8.675194
+      },
+      {
+        "t": 2020,
+        "value": 8.491303
+      },
+      {
+        "t": 2021,
+        "value": 8.848657
+      },
+      {
+        "t": 2022,
+        "value": 8.43684
+      },
+      {
+        "t": 2023,
+        "value": 8.256366
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "value__category_total__sex_male__age_total__unit_of_measurement_rate_per_100_000_population",
+      "url": "https://ourworldindata.org/grapher/homicide-rate-by-sex",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "c8f9ac3cc6d71eafc042c9b16c7d571af6d9c8ba553f31d0a874243e6ad3d918",
+      "definition": "Intentional homicide rate per 100,000 populationof male victims.",
+      "attribution": "Our World in Data",
+      "primarySource": "WHO Mortality Database / UNODC — via Our World in Data"
+    }
+  }
+]

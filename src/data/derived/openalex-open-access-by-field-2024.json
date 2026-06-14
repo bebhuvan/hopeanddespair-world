@@ -1,0 +1,94 @@
+{
+  "chartId": "openalex-open-access-by-field-2024",
+  "kind": "bars",
+  "title": "Open-access share by field, 2024",
+  "unit": "open-access works, % of field output",
+  "yearSpan": "2024",
+  "bars": [
+    {
+      "label": "Earth and Planetary Sciences",
+      "value": 72.1,
+      "color": "hope"
+    },
+    {
+      "label": "Agricultural and Biological Sciences",
+      "value": 72,
+      "color": "hope"
+    },
+    {
+      "label": "Biochemistry, Genetics and Molecular Biology",
+      "value": 68.3,
+      "color": "ochre"
+    },
+    {
+      "label": "Environmental Science",
+      "value": 66.1,
+      "color": "ochre"
+    },
+    {
+      "label": "Mathematics",
+      "value": 66.1,
+      "color": "ochre"
+    },
+    {
+      "label": "Physics and Astronomy",
+      "value": 65.8,
+      "color": "ochre"
+    },
+    {
+      "label": "Neuroscience",
+      "value": 64.7,
+      "color": "ochre"
+    },
+    {
+      "label": "Medicine",
+      "value": 64.6,
+      "color": "ochre"
+    },
+    {
+      "label": "Business, Management and Accounting",
+      "value": 63.8,
+      "color": "ochre"
+    },
+    {
+      "label": "Health Professions",
+      "value": 63.1,
+      "color": "ochre"
+    },
+    {
+      "label": "Economics, Econometrics and Finance",
+      "value": 62.3,
+      "color": "ochre"
+    },
+    {
+      "label": "Decision Sciences",
+      "value": 61.9,
+      "color": "ochre"
+    }
+  ],
+  "xmax": 100,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "works is_oa:true / all works, group_by primary_topic.field.id",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2024-01-01,to_publication_date:2024-12-31,is_oa:true&group_by=primary_topic.field.id&per-page=200",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-13",
+    "checksum": "9af8de6684697b943335cf8baffbbb26fffb17bb32248d2a8905be381b0e35d2",
+    "definition": "Open-access share of 2024 works by OpenAlex primary topic field. Only fields with at least 100,000 works are shown.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "openalex_group_by",
+      "detail": "divide open-access 2024 field counts by total 2024 field counts; show fields with at least 100,000 works"
+    }
+  ]
+}

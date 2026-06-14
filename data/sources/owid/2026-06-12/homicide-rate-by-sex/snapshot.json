@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "homicide-rate-by-sex",
+  "vintage": "2026-06-12",
+  "url": "https://ourworldindata.org/grapher/homicide-rate-by-sex",
+  "checksum": "c8f9ac3cc6d71eafc042c9b16c7d571af6d9c8ba553f31d0a874243e6ad3d918",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:42:56.012Z",
+  "adapterVersion": "1.0.0"
+}

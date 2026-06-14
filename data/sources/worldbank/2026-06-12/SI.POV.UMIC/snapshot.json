@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "SI.POV.UMIC",
+  "vintage": "2026-06-12",
+  "url": "https://data.worldbank.org/indicator/SI.POV.UMIC",
+  "checksum": "7610ac2782dddb0c6fbe500a78e96feee89d37320a7e181015ac4ac3a5d63efb",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:43:30.195Z",
+  "adapterVersion": "1.0.0"
+}

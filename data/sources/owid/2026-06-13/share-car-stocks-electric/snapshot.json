@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "share-car-stocks-electric",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/share-car-stocks-electric",
+  "checksum": "ed42db8110d69eafd70b92d8748865df2694b83959be01c1af5c9022880bed92",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T09:00:58.532Z",
+  "adapterVersion": "1.0.0"
+}

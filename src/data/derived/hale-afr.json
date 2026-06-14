@@ -1,0 +1,117 @@
+{
+  "indicatorId": "health.healthy_life_expectancy.afr",
+  "entity": "AFR",
+  "entityName": "Africa (WHO)",
+  "unit": "years",
+  "points": [
+    {
+      "t": 2000,
+      "value": 45.98467818
+    },
+    {
+      "t": 2001,
+      "value": 46.4120682
+    },
+    {
+      "t": 2002,
+      "value": 46.75235932
+    },
+    {
+      "t": 2003,
+      "value": 47.15018205
+    },
+    {
+      "t": 2004,
+      "value": 47.69537708
+    },
+    {
+      "t": 2005,
+      "value": 48.34150531
+    },
+    {
+      "t": 2006,
+      "value": 49.03473833
+    },
+    {
+      "t": 2007,
+      "value": 49.78525261
+    },
+    {
+      "t": 2008,
+      "value": 50.49982032
+    },
+    {
+      "t": 2009,
+      "value": 51.16741494
+    },
+    {
+      "t": 2010,
+      "value": 51.80500084
+    },
+    {
+      "t": 2011,
+      "value": 52.40310943
+    },
+    {
+      "t": 2012,
+      "value": 52.98959818
+    },
+    {
+      "t": 2013,
+      "value": 53.50797455
+    },
+    {
+      "t": 2014,
+      "value": 53.91570634
+    },
+    {
+      "t": 2015,
+      "value": 54.33386279
+    },
+    {
+      "t": 2016,
+      "value": 54.74135698
+    },
+    {
+      "t": 2017,
+      "value": 55.11765153
+    },
+    {
+      "t": 2018,
+      "value": 55.47509722
+    },
+    {
+      "t": 2019,
+      "value": 55.81317139
+    },
+    {
+      "t": 2020,
+      "value": 55.58462492
+    },
+    {
+      "t": 2021,
+      "value": 55.15623741
+    }
+  ],
+  "provenance": {
+    "source": "who",
+    "sourceIndicator": "WHOSIS_000002",
+    "url": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/WHOSIS_000002",
+    "license": "CC BY-NC-SA 3.0 IGO",
+    "vintage": "2026-06-13",
+    "checksum": "0f92b6689f4dcd12adaa446ddf8e4e1c9a97dcf0f20099b3481cae0868a3dd7a",
+    "definition": "Healthy life expectancy at birth, Africa",
+    "attribution": "WHO Global Health Observatory",
+    "primarySource": "WHO Global Health Observatory — Global Health Estimates",
+    "notes": "CC BY-NC-SA 3.0 IGO — link-only; charted but not re-hosted."
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity AFR"
+    }
+  ],
+  "derivedFrom": [
+    "AFR"
+  ]
+}

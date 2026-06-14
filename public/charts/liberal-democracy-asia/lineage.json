@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "freedom.liberal_democracy_index.asia",
+    "unit": "index (0–1)",
+    "points": 237
+  },
+  "wasDerivedFrom": [
+    "Asia (population-weighted)"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Asia (population-weighted)"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "liberal-democracy-index",
+      "url": "https://ourworldindata.org/grapher/liberal-democracy-index",
+      "vintage": "2026-06-12",
+      "checksum": "8385cefc4a2feb8e3932b5ab00c6b91f69d55e4483e6015c235669f16fdfe261",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "V-Dem (v16) — via Our World in Data"
+}

@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "climate.temperature_country.brazil",
+    "unit": "°C",
+    "points": 86
+  },
+  "wasDerivedFrom": [
+    "BRA"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Brazil"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "annual-temperature-anomalies",
+      "url": "https://ourworldindata.org/grapher/annual-temperature-anomalies",
+      "vintage": "2026-06-13",
+      "checksum": "16911f331e174a18040715d74df1a9d779b7b8db76a57a2b9ffcd7c2aebdf0b5",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Copernicus/ECMWF ERA5 — via Our World in Data"
+}

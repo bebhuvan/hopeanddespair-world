@@ -1,0 +1,132 @@
+{
+  "indicatorId": "technology.electricity_access.world",
+  "entity": "OWID_WRL",
+  "entityName": "World",
+  "unit": "% of population",
+  "points": [
+    {
+      "t": 1998,
+      "value": 73.196236
+    },
+    {
+      "t": 1999,
+      "value": 74.50321
+    },
+    {
+      "t": 2000,
+      "value": 78.2214
+    },
+    {
+      "t": 2001,
+      "value": 78.71524
+    },
+    {
+      "t": 2002,
+      "value": 79.1008
+    },
+    {
+      "t": 2003,
+      "value": 79.964905
+    },
+    {
+      "t": 2004,
+      "value": 79.95215
+    },
+    {
+      "t": 2005,
+      "value": 80.70133
+    },
+    {
+      "t": 2006,
+      "value": 81.35346
+    },
+    {
+      "t": 2007,
+      "value": 81.97116
+    },
+    {
+      "t": 2008,
+      "value": 82.668175
+    },
+    {
+      "t": 2009,
+      "value": 82.86582
+    },
+    {
+      "t": 2010,
+      "value": 83.447136
+    },
+    {
+      "t": 2011,
+      "value": 84.50623
+    },
+    {
+      "t": 2012,
+      "value": 84.93629
+    },
+    {
+      "t": 2013,
+      "value": 85.710686
+    },
+    {
+      "t": 2014,
+      "value": 86.19559
+    },
+    {
+      "t": 2015,
+      "value": 86.923996
+    },
+    {
+      "t": 2016,
+      "value": 88.10448
+    },
+    {
+      "t": 2017,
+      "value": 88.93176
+    },
+    {
+      "t": 2018,
+      "value": 89.797386
+    },
+    {
+      "t": 2019,
+      "value": 90.10839
+    },
+    {
+      "t": 2020,
+      "value": 90.39569
+    },
+    {
+      "t": 2021,
+      "value": 91.33427
+    },
+    {
+      "t": 2022,
+      "value": 91.28831
+    },
+    {
+      "t": 2023,
+      "value": 91.599174
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "eg_elc_accs_zs",
+    "url": "https://ourworldindata.org/grapher/share-of-the-population-with-access-to-electricity",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "a46a927ebbf8e2d7d3f1e869f97d7e23ee402c5f622d274bdf86ee9fea53ec4b",
+    "definition": "Access to electricity means having an electricity source that can provide very basic lighting, and charge a phone or power a radio for 4 hours per day.",
+    "attribution": "Our World in Data",
+    "primarySource": "World Bank — Sustainable Development Goals (SDG 7.1.1)"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity World"
+    }
+  ],
+  "derivedFrom": [
+    "OWID_WRL"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "science.openalex_country_united_states_index.world",
+    "unit": "index, 2000 = 100",
+    "points": 25
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "derived_transform",
+        "detail": "divided United States yearly country-attributed work count by its 2000 value and multiplied by 100"
+      }
+    ],
+    "agent": "adapter:openalex@openalex-story-1.0.0",
+    "used": {
+      "source": "openalex",
+      "slug": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:US&group_by=publication_year",
+      "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:US&group_by=publication_year&per-page=100",
+      "vintage": "2026-06-13",
+      "checksum": "69af94e378712e9cf54802031bca1a9ef8066a4a1cc23175ae8d2566fbc3e109",
+      "license": "CC0 1.0"
+    }
+  },
+  "primarySource": "OpenAlex"
+}

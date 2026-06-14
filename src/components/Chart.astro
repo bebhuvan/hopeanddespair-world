@@ -1,0 +1,50 @@
+---
+// One chart, two renders: the wide desktop SVG and (when present) a portrait mobile twin built
+// for phones — taller plot, legible baked fonts, a legend on top instead of crammed end-labels.
+// The twin swaps in under 680px; charts without one (bars/scatter, until ported) keep the wide
+// render and scale it down. The downloadable SVG always uses the desktop `inner`, so they can't
+// drift. Decorative sparklines don't pass through here.
+const { c } = Astro.props;
+const twin = !!c.m;
+---
+<svg class:list={['chart', 'chart-d', { twin }]} viewBox={c.viewBox} aria-hidden="true" set:html={c.inner} />
+{twin && <svg class="chart chart-m" viewBox={c.m.viewBox} aria-hidden="true" set:html={c.m.inner} />}
+
+<style>
+  /* overflow visible: a mis-estimated label width should show, never silently clip */
+  .chart { width: 100%; height: auto; display: block; overflow: visible; }
+  .chart :global(path[fill="none"]) { stroke-width: 2.4px; }
+  .chart :global(text) { font-family: var(--mono); font-size: 14px; fill: var(--ink-3); }
+  .chart :global(text.ser) { font-size: 14.5px; font-weight: 500; }
+  /* direct labels: the series NAME in the display sans (a word), the VALUE in mono (a number) —
+     mono-on-everything read a touch technical; this is the editorial-data mix. */
+  .chart :global(text.ser tspan.nm) { font-family: var(--display); font-weight: 540; }
+  .chart :global(text.ser tspan.vl) { font-weight: 620; }
+  /* gridlines whisper rather than rule — solid hairlines at a hair of ink, the zero line a touch firmer */
+  .chart :global(.grid) { stroke: color-mix(in srgb, var(--ink) 5%, transparent); }
+  .chart :global(.grid0) { stroke: color-mix(in srgb, var(--ink) 13%, transparent); }
+  .chart :global(.annot) { stroke: var(--line-2); stroke-dasharray: 2 5; stroke-width: 1; }
+  .chart :global(text.annotL) { fill: var(--despair); font-size: 12.5px; letter-spacing: 0.04em; }
+  .chart :global(.annotDot) { fill: var(--ink-2); stroke: var(--panel); stroke-width: 1.3; }
+  .chart :global(text.annotP) { font-family: var(--serif); fill: var(--ink-2); font-size: 13.5px; font-style: italic; }
+  .chart :global(text.wm) { fill: var(--ink-3); opacity: 0.22; font-size: 9.5px; letter-spacing: 0.08em; }
+
+  .chart-m { display: none; }
+  /* mobile: charts FIT the screen — no pan-to-see-values, which feels broken on a phone. */
+  @media (max-width: 680px) {
+    /* line charts have a purpose-built portrait twin — swap to it, bury the wide desktop render */
+    .chart-d.twin { display: none; }
+    .chart-m { display: block; }
+    /* the mobile twin bakes its own font sizes (inline, overriding the base rules above); it only
+       needs a touch more line weight at this scale */
+    .chart-m :global(path[fill="none"]) { stroke-width: 2.8px; }
+    /* charts without a twin yet (bars/scatter) still scale the wide render down — bump their
+       in-chart text so it stays legible at phone width */
+    .chart-d:not(.twin) :global(path[fill="none"]) { stroke-width: 5px; }
+    .chart-d:not(.twin) :global(text) { font-size: 30px; }
+    .chart-d:not(.twin) :global(text.cat) { font-size: 24px; }
+    .chart-d:not(.twin) :global(text.ser) { font-size: 24px; }
+    .chart-d:not(.twin) :global(text.annotL) { font-size: 22px; }
+    .chart-d:not(.twin) :global(text.annotP) { font-size: 24px; }
+  }
+</style>

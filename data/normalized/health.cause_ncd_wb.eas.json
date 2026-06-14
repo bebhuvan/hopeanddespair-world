@@ -1,0 +1,45 @@
+[
+  {
+    "indicatorId": "health.cause_ncd_wb.eas",
+    "entity": "EAS",
+    "entityName": "East Asia & Pacific",
+    "unit": "% of total deaths",
+    "points": [
+      {
+        "t": 2000,
+        "value": 75.2790380986729
+      },
+      {
+        "t": 2010,
+        "value": 81.8277184786942
+      },
+      {
+        "t": 2015,
+        "value": 83.874505877335
+      },
+      {
+        "t": 2019,
+        "value": 85.5377345052091
+      },
+      {
+        "t": 2020,
+        "value": 83.7681787659649
+      },
+      {
+        "t": 2021,
+        "value": 81.0759325802252
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SH.DTH.NCOM.ZS",
+      "url": "https://data.worldbank.org/indicator/SH.DTH.NCOM.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "ec1d0a86a0932219587c2658804ee6875d4e6ea77ac1acd7dfe7cb9fdbaaa5d4",
+      "definition": "Cause of death, by non-communicable diseases (% of total)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "WHO Global Health Estimates, via World Bank"
+    }
+  }
+]

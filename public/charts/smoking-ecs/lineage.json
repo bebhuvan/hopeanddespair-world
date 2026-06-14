@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "substance.smoking.ecs",
+    "unit": "% of adults",
+    "points": 8
+  },
+  "wasDerivedFrom": [
+    "ECS"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity ECS"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SH.PRV.SMOK",
+      "url": "https://data.worldbank.org/indicator/SH.PRV.SMOK",
+      "vintage": "2026-06-12",
+      "checksum": "2d0255a845aaffe81095203425aec7765775d7acc13287e4bd11209f9cf8bafd",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "WHO, via World Bank"
+}

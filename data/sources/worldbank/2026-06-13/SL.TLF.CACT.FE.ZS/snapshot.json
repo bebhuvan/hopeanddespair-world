@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "SL.TLF.CACT.FE.ZS",
+  "vintage": "2026-06-13",
+  "url": "https://data.worldbank.org/indicator/SL.TLF.CACT.FE.ZS",
+  "checksum": "0f8c7fae1983595ce860369c977720abdb9734a1340be6b735145fb881152dd1",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T14:28:53.797Z",
+  "adapterVersion": "1.0.0"
+}

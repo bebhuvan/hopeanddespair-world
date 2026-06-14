@@ -1,0 +1,38 @@
+{
+  "name": "violence-onesided_deaths-world",
+  "title": "Best estimate of civilians deliberately killed by a government or a formally organised armed group.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Uppsala Conflict Data Program (UCDP), Uppsala University",
+      "path": "https://ucdp.uu.se/downloads/nsos/ucdp-onesided-261-csv.zip"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "violence-onesided_deaths-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "violence_onesided_deaths_world",
+            "type": "number",
+            "unit": "deaths"
+          }
+        ]
+      }
+    }
+  ]
+}

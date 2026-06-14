@@ -1,0 +1,125 @@
+{
+  "indicatorId": "science.openalex_country_united_kingdom_share.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "% of OpenAlex works",
+  "points": [
+    {
+      "t": 2000,
+      "value": 3.4
+    },
+    {
+      "t": 2001,
+      "value": 3.39
+    },
+    {
+      "t": 2002,
+      "value": 3.3
+    },
+    {
+      "t": 2003,
+      "value": 3.19
+    },
+    {
+      "t": 2004,
+      "value": 2.99
+    },
+    {
+      "t": 2005,
+      "value": 3.02
+    },
+    {
+      "t": 2006,
+      "value": 3.08
+    },
+    {
+      "t": 2007,
+      "value": 2.94
+    },
+    {
+      "t": 2008,
+      "value": 2.88
+    },
+    {
+      "t": 2009,
+      "value": 2.83
+    },
+    {
+      "t": 2010,
+      "value": 2.78
+    },
+    {
+      "t": 2011,
+      "value": 2.71
+    },
+    {
+      "t": 2012,
+      "value": 2.77
+    },
+    {
+      "t": 2013,
+      "value": 2.78
+    },
+    {
+      "t": 2014,
+      "value": 2.71
+    },
+    {
+      "t": 2015,
+      "value": 2.78
+    },
+    {
+      "t": 2016,
+      "value": 2.83
+    },
+    {
+      "t": 2017,
+      "value": 2.89
+    },
+    {
+      "t": 2018,
+      "value": 3.07
+    },
+    {
+      "t": 2019,
+      "value": 3.1
+    },
+    {
+      "t": 2020,
+      "value": 3.31
+    },
+    {
+      "t": 2021,
+      "value": 3.57
+    },
+    {
+      "t": 2022,
+      "value": 3.42
+    },
+    {
+      "t": 2023,
+      "value": 3.39
+    },
+    {
+      "t": 2024,
+      "value": 3.35
+    }
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:GB&group_by=publication_year / all works",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:GB&group_by=publication_year&per-page=100",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-13",
+    "checksum": "28e8e8c3fab089e2d0b050c4facb6d698439c923d965e7552e5055d3d32d1036",
+    "definition": "United Kingdom country-attributed works as a share of all OpenAlex works in the same publication year.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "derived_transform",
+      "detail": "divided United Kingdom yearly country-attributed work count by all OpenAlex works in the same year"
+    }
+  ]
+}

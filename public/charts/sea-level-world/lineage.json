@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "climate.sea_level.world",
+    "unit": "centimetres",
+    "points": 144
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "identity",
+        "detail": "normalized directly from source"
+      }
+    ],
+    "agent": "adapter:sealevel@1.0.0",
+    "used": {
+      "source": "sealevel",
+      "slug": "epa-sea-level",
+      "url": "https://raw.githubusercontent.com/datasets/sea-level-rise/main/data/epa-sea-level.csv",
+      "vintage": "2026-06-13",
+      "checksum": "f65bea986aca6a7444190e6384356c8d81284603ce391a9f44e3fe679ce96b4a",
+      "license": "Public Domain"
+    }
+  },
+  "primarySource": "CSIRO; NOAA Laboratory for Satellite Altimetry — via U.S. EPA"
+}

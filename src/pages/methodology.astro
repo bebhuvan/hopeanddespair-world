@@ -1,32 +1,87 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const points = [
+  { t: 'Snapshot everything', d: 'No chart is ever drawn from a live API. Every source is fetched once, archived at a fixed vintage with a recorded checksum, and the page is built from that snapshot, so any figure can be reproduced exactly, later, by anyone.' },
+  { t: 'Never invent a number', d: 'Every quantitative claim traces to a derived series you can download under its chart, with full lineage. Where a “World” line doesn’t exist in the source, we build one and record the recipe. The data is open; the working is shown.' },
+  { t: 'Smoothing is cosmetic', d: 'Lines use monotone-cubic interpolation for legibility only. It never moves, adds, or hides a data point, and it cannot overshoot a real value.' },
+  { t: 'The verdict is editorial', d: 'The hope / despair / confusion reading is an honest editorial judgement of the signals, deliberately not a single computed index. Where a choice is a judgement rather than a measurement, the article says so.' },
+  { t: 'Re-host only what is open', d: 'We re-publish data only under CC BY or CC0. Sources that restrict redistribution are cited and linked, never copied. Attribution is generated from the source registry, never hand-typed.' },
+];
 ---
-<BaseLayout title="Method — Hope & Despair" description="How the numbers are handled, disclosed in full.">
+<BaseLayout title="Method — Hope & Despair" description="An honest note on what numbers cannot do, and the rules that turn a source into a chart.">
   <article class="page">
-    <h1>Method</h1>
-    <p class="lead">Nothing here is a black box. Every transformation between a source and a chart is disclosed —
-      and where a choice is editorial rather than measured, we say so. The detailed methodology lives inside
-      each article, beside the evidence it applies to.</p>
-    <ul>
-      <li><b>Smoothing is cosmetic.</b> Lines use monotone-cubic interpolation for legibility only; it never
-        moves, adds, or hides a data point and cannot overshoot a real value.</li>
-      <li><b>The verdict is editorial.</b> The hope/despair reading is an honest editorial judgement of the
-        signals — deliberately not a single computed index.</li>
-      <li><b>Vintages are fixed.</b> Each series is archived at a recorded vintage so a chart can be reproduced.</li>
-    </ul>
-    <p class="back"><a href="/">← Back to the atlas</a></p>
+    <header class="head">
+      <p class="eyebrow">Method</p>
+      <h1>Nothing here is a black box.</h1>
+      <p class="lead">A method, though, is also a set of beliefs about what a number can and cannot carry; so this
+        page begins there, and then sets out the rules that turn a source into a chart.</p>
+    </header>
+
+    <section class="musing">
+      <h2>On the limits of counting</h2>
+      <p class="open">A number is a kind of light. In a dark room it gives you the shape of a thing: its size, its
+        direction, the speed it moves. It gives you none of its colour, and none of its grief.</p>
+      <p>This atlas is built almost entirely from counts, so it is worth saying plainly what a count cannot hold.
+        <em>“Not everything that can be counted counts, and not everything that counts can be counted,”</em> wrote
+        the sociologist William Bruce Cameron in 1963. The line is so reliably hung on Einstein, who never said it,
+        that its own false attribution has become a small lesson in measuring the wrong thing. A death becomes a
+        rate per 100,000; a life becomes a point on a line that does not know its name. The chart buys its clarity
+        at exactly that price, and the price is never printed on the chart.</p>
+      <p>Counts deceive upward as readily as down. A global average is a mercy and a lie at once: it can climb
+        serenely while a single country burns beneath it, can report a comfort assembled out of someone else’s
+        catastrophe. <em>“The map is not the territory,”</em> Alfred Korzybski warned, and one world line is the
+        smallest, palest map into which eight billion separate lives have ever been folded.</p>
+      <p>And still we count, because the alternative is worse. <em>“All models are wrong, but some are useful,”</em>
+        the statistician George Box allowed, and the whole of this site lives inside that second clause. Take the
+        numbers away and only anecdote and mood remain, and mood is the exact product a decade of headlines is built
+        to sell. A count is a lamp raised in a large dark room. It will never show you the room. It will keep you
+        from walking into the walls, and now and then it catches, for a moment, the shape of a door.</p>
+      <p>So we try to keep faith with both at once: to count carefully, cite everything, show the working, and to
+        leave confusion standing as a reading in its own right, never a footnote. The most honest thing a
+        measurement can offer is sometimes only this — that here, at the edge of the lamplight, it can no longer see.</p>
+    </section>
+
+    <section class="practice">
+      <h2>How the numbers are handled</h2>
+      <ol class="rules">
+        {points.map((p, i) => (
+          <li>
+            <span class="n">{String(i + 1).padStart(2, '0')}</span>
+            <div><h3>{p.t}</h3><p>{p.d}</p></div>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <p class="back"><a href="/">← Back to the atlas</a> <span class="sep">·</span> <a href="/sources">Every source ↗</a> <span class="sep">·</span> <a href="/license">License →</a></p>
   </article>
 </BaseLayout>
 
 <style>
-  .page { max-width: 64ch; padding-block: clamp(3rem, 8vh, 5rem) 2rem; }
-  h1 { font-family: var(--font-display); font-weight: 300; font-size: clamp(2.4rem, 6vw, 4rem); letter-spacing: -0.022em; }
-  .lead { font-size: 1.2rem; line-height: 1.6; color: var(--fg-2); margin-top: 1.6rem; }
-  .lead em { font-style: italic; color: var(--fg); }
-  ul { margin-top: 1.6rem; list-style: none; display: grid; gap: 0.8rem; }
-  li { position: relative; padding-left: 1.4rem; line-height: 1.6; color: var(--fg-2); }
-  li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
-  li b { font-weight: 400; font-style: italic; color: var(--fg); }
-  .back { margin-top: 2.5rem; }
-  .back a { color: var(--accent); text-decoration: none; }
+  .page { max-width: 44rem; padding-block: clamp(3rem, 8vh, 5.5rem) 2rem; }
+  .head .eyebrow { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+  .head h1 { font-family: var(--display); font-weight: 620; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.06; letter-spacing: -0.032em; margin-top: 1.1rem; }
+  .lead { max-width: var(--measure); font-family: var(--serif); font-size: var(--fs-lede); line-height: 1.5; color: var(--ink-2); margin-top: 1.4rem; text-wrap: pretty; }
+
+  /* the philosophical frame — why we count, and humbly — comes first */
+  .musing { margin-top: clamp(2.6rem, 6vh, 3.8rem); padding-top: clamp(2rem, 4.5vh, 2.8rem); border-top: 1px solid var(--line-2); }
+  .musing h2 { font-family: var(--display); font-weight: 600; font-size: clamp(1.5rem, 2.6vw, 1.95rem); letter-spacing: -0.022em; color: var(--ink); }
+  .musing .open { font-family: var(--serif); font-size: var(--fs-lede); line-height: 1.5; color: var(--ink); max-width: var(--measure); margin-top: 1.2rem; text-wrap: pretty; }
+  .musing p { font-family: var(--serif); font-size: var(--fs-body); line-height: var(--lh-body); color: var(--ink-2); max-width: var(--measure); margin-top: 1.05rem; text-wrap: pretty; }
+  .musing p em { font-style: italic; color: var(--ink); }
+
+  /* then the practice */
+  .practice { margin-top: clamp(3rem, 7vh, 4.6rem); padding-top: clamp(2rem, 4.5vh, 2.8rem); border-top: 1px solid var(--line-2); }
+  .practice > h2 { font-family: var(--display); font-weight: 600; font-size: clamp(1.5rem, 2.6vw, 1.95rem); letter-spacing: -0.022em; color: var(--ink); }
+  .rules { list-style: none; margin-top: clamp(1.6rem, 4vh, 2.4rem); }
+  .rules li { display: grid; grid-template-columns: 3rem 1fr; gap: 1.4rem; padding: 1.6rem 0; border-top: 1px solid var(--line); }
+  .rules li:first-child { border-top: 0; padding-top: 0; }
+  .rules .n { font-family: var(--serif); font-style: italic; font-size: 1.4rem; color: var(--hope); line-height: 1; }
+  .rules h3 { font-family: var(--display); font-weight: 580; font-size: 1.2rem; letter-spacing: -0.018em; color: var(--ink); }
+  .rules p { max-width: var(--measure); margin-top: 0.5rem; font-size: var(--fs-body); line-height: var(--lh-body); color: var(--ink-2); font-weight: 450; text-wrap: pretty; }
+
+  .back { margin-top: clamp(2.8rem, 6vh, 3.8rem); font-family: var(--mono); font-size: 0.74rem; color: var(--ink-3); }
+  .back a { color: var(--ink-2); border-bottom: 1px solid var(--line-2); }
+  .back a:hover { color: var(--hope); border-color: var(--hope); }
+  .back .sep { margin: 0 0.4em; color: var(--line-2); }
 </style>

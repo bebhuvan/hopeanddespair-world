@@ -1,0 +1,52 @@
+{
+  "indicatorId": "health.cause_communicable_wb.wld",
+  "entity": "WLD",
+  "entityName": "World",
+  "unit": "% of total deaths",
+  "points": [
+    {
+      "t": 2000,
+      "value": 32.4343027896073
+    },
+    {
+      "t": 2010,
+      "value": 24.4851630822405
+    },
+    {
+      "t": 2015,
+      "value": 20.8499179493034
+    },
+    {
+      "t": 2019,
+      "value": 18.2908295889405
+    },
+    {
+      "t": 2020,
+      "value": 22.7744853883909
+    },
+    {
+      "t": 2021,
+      "value": 27.3660870888546
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SH.DTH.COMM.ZS",
+    "url": "https://data.worldbank.org/indicator/SH.DTH.COMM.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "d0105b7c5670c1f82a039344164afad90d83a1f0d617571decc19ae60892f4c5",
+    "definition": "Cause of death, by communicable diseases and maternal, prenatal and nutrition conditions (% of total)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO Global Health Estimates, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity WLD"
+    }
+  ],
+  "derivedFrom": [
+    "WLD"
+  ]
+}

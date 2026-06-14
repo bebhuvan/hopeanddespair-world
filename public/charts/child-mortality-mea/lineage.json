@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "health.child_mortality_wb.mea",
+    "unit": "per 1,000 live births",
+    "points": 35
+  },
+  "wasDerivedFrom": [
+    "MEA"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity MEA"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SH.DYN.MORT",
+      "url": "https://data.worldbank.org/indicator/SH.DYN.MORT",
+      "vintage": "2026-06-13",
+      "checksum": "032b7997394a921422ac4cfa34aaf93b253621697207257cb250eacf2711f944",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UN IGME, via World Bank"
+}

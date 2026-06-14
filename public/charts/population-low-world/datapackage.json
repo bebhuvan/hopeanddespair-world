@@ -1,0 +1,38 @@
+{
+  "name": "demography-population_low-world",
+  "title": "Population, World (UN Low variant projection)",
+  "licenses": [
+    {
+      "name": "CC BY 3.0 IGO",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "UN DESA, Population Division — World Population Prospects 2024",
+      "path": "https://population.un.org/wpp/"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "demography-population_low-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "demography_population_low_world",
+            "type": "number",
+            "unit": "people"
+          }
+        ]
+      }
+    }
+  ]
+}

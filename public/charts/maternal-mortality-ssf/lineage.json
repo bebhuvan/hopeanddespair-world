@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "health.maternal_mortality_wb.ssf",
+    "unit": "deaths per 100,000 live births",
+    "points": 39
+  },
+  "wasDerivedFrom": [
+    "SSF"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity SSF"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SH.STA.MMRT",
+      "url": "https://data.worldbank.org/indicator/SH.STA.MMRT",
+      "vintage": "2026-06-13",
+      "checksum": "d59f41f60f6fb4a180e6b35c74e505806e8979751f854cfa5c6685a16c2affbc",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "WHO/UNICEF/UNFPA/WB/UNDESA (MMEIG), via World Bank"
+}

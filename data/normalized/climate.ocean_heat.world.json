@@ -1,0 +1,106 @@
+[
+  {
+    "indicatorId": "climate.ocean_heat.world",
+    "entity": "World",
+    "entityName": "World",
+    "unit": "10^22 joules",
+    "points": [
+      {
+        "t": 2005,
+        "value": 10.171
+      },
+      {
+        "t": 2006,
+        "value": 12.638
+      },
+      {
+        "t": 2007,
+        "value": 12.394
+      },
+      {
+        "t": 2008,
+        "value": 13.257
+      },
+      {
+        "t": 2009,
+        "value": 13.431
+      },
+      {
+        "t": 2010,
+        "value": 14.537
+      },
+      {
+        "t": 2011,
+        "value": 15.394
+      },
+      {
+        "t": 2012,
+        "value": 16.187
+      },
+      {
+        "t": 2013,
+        "value": 18.65
+      },
+      {
+        "t": 2014,
+        "value": 20.11
+      },
+      {
+        "t": 2015,
+        "value": 22.401
+      },
+      {
+        "t": 2016,
+        "value": 20.799
+      },
+      {
+        "t": 2017,
+        "value": 23.589
+      },
+      {
+        "t": 2018,
+        "value": 24.059
+      },
+      {
+        "t": 2019,
+        "value": 25.436
+      },
+      {
+        "t": 2020,
+        "value": 25.525
+      },
+      {
+        "t": 2021,
+        "value": 27.28
+      },
+      {
+        "t": 2022,
+        "value": 28.192
+      },
+      {
+        "t": 2023,
+        "value": 29.22
+      },
+      {
+        "t": 2024,
+        "value": 30.316
+      },
+      {
+        "t": 2025,
+        "value": 32.533
+      }
+    ],
+    "provenance": {
+      "source": "oceanheat",
+      "sourceIndicator": "WO (world ocean, 0–2000 m)",
+      "url": "https://www.ncei.noaa.gov/data/oceans/woa/DATA_ANALYSIS/3M_HEAT_CONTENT/DATA/basin/yearly/h22-w0-2000m.dat",
+      "license": "Public Domain (NOAA NCEI)",
+      "vintage": "2026-06-13",
+      "checksum": "5b0fabf106dc1473f0a658baaced5245bc19e33a39c6d86294a3cf074ac0f5b4",
+      "definition": "Global ocean heat content (0–2000 m), World",
+      "attribution": "NOAA National Centers for Environmental Information",
+      "primarySource": "NOAA NCEI — Levitus et al.",
+      "notes": "World-ocean heat content anomaly, 0–2000 m, in 10^22 joules. The ocean holds >90% of the planet’s accumulated extra heat."
+    }
+  }
+]

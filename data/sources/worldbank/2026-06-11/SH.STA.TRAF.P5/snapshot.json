@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "SH.STA.TRAF.P5",
+  "vintage": "2026-06-11",
+  "url": "https://data.worldbank.org/indicator/SH.STA.TRAF.P5",
+  "checksum": "3645888d5849d1a57e9410b5550549b07c5a7a20e749e03421069f8a80f4a6c4",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T14:36:18.915Z",
+  "adapterVersion": "1.0.0"
+}

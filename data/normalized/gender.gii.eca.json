@@ -1,0 +1,125 @@
+[
+  {
+    "indicatorId": "gender.gii.eca",
+    "entity": "Europe and Central Asia (UNDP)",
+    "entityName": "Europe and Central Asia (UNDP)",
+    "unit": "index (0 = parity)",
+    "points": [
+      {
+        "t": 1998,
+        "value": 0.446
+      },
+      {
+        "t": 1999,
+        "value": 0.427
+      },
+      {
+        "t": 2000,
+        "value": 0.405
+      },
+      {
+        "t": 2001,
+        "value": 0.387
+      },
+      {
+        "t": 2002,
+        "value": 0.372
+      },
+      {
+        "t": 2003,
+        "value": 0.368
+      },
+      {
+        "t": 2004,
+        "value": 0.351
+      },
+      {
+        "t": 2005,
+        "value": 0.348
+      },
+      {
+        "t": 2006,
+        "value": 0.339
+      },
+      {
+        "t": 2007,
+        "value": 0.321
+      },
+      {
+        "t": 2008,
+        "value": 0.315
+      },
+      {
+        "t": 2009,
+        "value": 0.309
+      },
+      {
+        "t": 2010,
+        "value": 0.307
+      },
+      {
+        "t": 2011,
+        "value": 0.301
+      },
+      {
+        "t": 2012,
+        "value": 0.29
+      },
+      {
+        "t": 2013,
+        "value": 0.284
+      },
+      {
+        "t": 2014,
+        "value": 0.276
+      },
+      {
+        "t": 2015,
+        "value": 0.27
+      },
+      {
+        "t": 2016,
+        "value": 0.26
+      },
+      {
+        "t": 2017,
+        "value": 0.246
+      },
+      {
+        "t": 2018,
+        "value": 0.242
+      },
+      {
+        "t": 2019,
+        "value": 0.232
+      },
+      {
+        "t": 2020,
+        "value": 0.234
+      },
+      {
+        "t": 2021,
+        "value": 0.23
+      },
+      {
+        "t": 2022,
+        "value": 0.226
+      },
+      {
+        "t": 2023,
+        "value": 0.226
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "gii",
+      "url": "https://ourworldindata.org/grapher/gender-inequality-index-from-the-human-development-report",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "f9f8a91370370ffcc7028567a408c49fe937f986488349268cfe4a7da272c311",
+      "definition": "This index captures gender-based disadvantage in reproductive health, empowerment and the labour market; ranges from 0 (full equality) to 1 (maximum inequality), representing the share of potential human development lost because of gender gaps.",
+      "attribution": "Our World in Data",
+      "primarySource": "UNDP, Human Development Report"
+    }
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "SP.ADO.TFRT",
+  "vintage": "2026-06-13",
+  "url": "https://data.worldbank.org/indicator/SP.ADO.TFRT",
+  "checksum": "518becfd65fd345c8d3c728a434dc78c70c685c8660a0c6ded40602c4c30ae96",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T14:28:53.976Z",
+  "adapterVersion": "1.0.0"
+}

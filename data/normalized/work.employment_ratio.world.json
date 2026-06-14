@@ -1,0 +1,157 @@
+[
+  {
+    "indicatorId": "work.employment_ratio.world",
+    "entity": "WLD",
+    "entityName": "World",
+    "unit": "% of population 15+",
+    "points": [
+      {
+        "t": 1991,
+        "value": 62.04947463098
+      },
+      {
+        "t": 1992,
+        "value": 61.8196769483906
+      },
+      {
+        "t": 1993,
+        "value": 61.4041344398681
+      },
+      {
+        "t": 1994,
+        "value": 61.1911654079838
+      },
+      {
+        "t": 1995,
+        "value": 61.0002983476783
+      },
+      {
+        "t": 1996,
+        "value": 60.8424691376247
+      },
+      {
+        "t": 1997,
+        "value": 60.7694477064303
+      },
+      {
+        "t": 1998,
+        "value": 60.5717240381532
+      },
+      {
+        "t": 1999,
+        "value": 60.5146523821243
+      },
+      {
+        "t": 2000,
+        "value": 60.4976181704102
+      },
+      {
+        "t": 2001,
+        "value": 60.2573855671838
+      },
+      {
+        "t": 2002,
+        "value": 59.9474058477377
+      },
+      {
+        "t": 2003,
+        "value": 59.7771306993963
+      },
+      {
+        "t": 2004,
+        "value": 59.7972885123336
+      },
+      {
+        "t": 2005,
+        "value": 59.7849172890591
+      },
+      {
+        "t": 2006,
+        "value": 59.7374471608125
+      },
+      {
+        "t": 2007,
+        "value": 59.706916633285
+      },
+      {
+        "t": 2008,
+        "value": 59.4346003926857
+      },
+      {
+        "t": 2009,
+        "value": 58.8120104418314
+      },
+      {
+        "t": 2010,
+        "value": 58.6253070933278
+      },
+      {
+        "t": 2011,
+        "value": 58.5514967833512
+      },
+      {
+        "t": 2012,
+        "value": 58.3291221199425
+      },
+      {
+        "t": 2013,
+        "value": 58.1981142629847
+      },
+      {
+        "t": 2014,
+        "value": 58.0901026175178
+      },
+      {
+        "t": 2015,
+        "value": 57.9430007283992
+      },
+      {
+        "t": 2016,
+        "value": 57.813416001753
+      },
+      {
+        "t": 2017,
+        "value": 57.6829050691244
+      },
+      {
+        "t": 2018,
+        "value": 57.6409208006304
+      },
+      {
+        "t": 2019,
+        "value": 57.6186342394537
+      },
+      {
+        "t": 2020,
+        "value": 55.7156262826493
+      },
+      {
+        "t": 2021,
+        "value": 56.7337772690142
+      },
+      {
+        "t": 2022,
+        "value": 57.5571682678084
+      },
+      {
+        "t": 2023,
+        "value": 58.2307712154389
+      },
+      {
+        "t": 2024,
+        "value": 58.1945428711446
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SL.EMP.TOTL.SP.ZS",
+      "url": "https://data.worldbank.org/indicator/SL.EMP.TOTL.SP.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "48ecc3c2018cb509a1b97b7cedfcee2c1e9dd7b971e5df1ce67ed6f0a939e99d",
+      "definition": "Employment to population ratio, 15+, total (%) (modeled ILO estimate)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "International Labour Organization (modelled), via World Bank"
+    }
+  }
+]

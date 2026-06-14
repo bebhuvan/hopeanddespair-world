@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "climate.ice_greenland.world",
+    "unit": "billion tonnes",
+    "points": 19
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "identity",
+        "detail": "normalized directly from source"
+      }
+    ],
+    "agent": "adapter:icesheet@1.0.0",
+    "used": {
+      "source": "icesheet",
+      "slug": "ice-sheet-mass-balance",
+      "url": "https://ourworldindata.org/grapher/ice-sheet-mass-balance",
+      "vintage": "2026-06-13",
+      "checksum": "e21029181ea68fee3497ae2265628019a27140085071497a0fa1d038456a00d9",
+      "license": "Public Domain (NASA/JPL GRACE)"
+    }
+  },
+  "primarySource": "NASA/JPL — GRACE & GRACE-FO, via Our World in Data"
+}

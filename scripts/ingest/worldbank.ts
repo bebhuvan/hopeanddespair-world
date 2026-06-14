@@ -8,6 +8,9 @@ import type { Adapter, IndicatorSpec, RawSnapshot, CanonicalSeries } from '../..
 const ADAPTER_VERSION = '1.0.0';
 const sha256 = (s: string) => createHash('sha256').update(s).digest('hex');
 
+// Per-run memo: regional indicators reuse one indicator response (all countries), fetched once.
+const _cache = new Map<string, string>();
+
 export const worldbank: Adapter = {
   id: 'worldbank',
   homepage: 'https://data.worldbank.org',
@@ -15,9 +18,13 @@ export const worldbank: Adapter = {
   async fetch(spec: IndicatorSpec): Promise<RawSnapshot> {
     // spec.slug is the WB indicator code, e.g. "SP.DYN.LE00.IN"
     const api = `https://api.worldbank.org/v2/country/all/indicator/${spec.slug}?format=json&per_page=25000&date=1960:2024`;
-    const res = await fetch(api);
-    if (!res.ok) throw new Error(`World Bank ${spec.slug}: HTTP ${res.status}`);
-    const text = await res.text();
+    let text = _cache.get(api);
+    if (!text) {
+      const res = await fetch(api);
+      if (!res.ok) throw new Error(`World Bank ${spec.slug}: HTTP ${res.status}`);
+      text = await res.text();
+      _cache.set(api, text);
+    }
     const parsed = JSON.parse(text);
     if (!Array.isArray(parsed) || parsed[0]?.message) throw new Error(`World Bank ${spec.slug}: ${JSON.stringify(parsed[0])}`);
     return {

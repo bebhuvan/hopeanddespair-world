@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "annual-temperature-anomalies",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/annual-temperature-anomalies",
+  "checksum": "16911f331e174a18040715d74df1a9d779b7b8db76a57a2b9ffcd7c2aebdf0b5",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T13:39:55.766Z",
+  "adapterVersion": "1.0.0"
+}

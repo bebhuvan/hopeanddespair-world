@@ -1,0 +1,25 @@
+{
+  // Cloudflare Worker serving the static Astro build via Workers Static Assets (NOT Pages).
+  // Deploy: `pnpm run deploy` (runs `astro build` then `wrangler deploy`). Requires `wrangler login`
+  // once, and the hopeanddespair.world zone already added to this Cloudflare account.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hopeanddespair",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-06-01",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+    // run the Worker before serving a matched asset, so the www → apex redirect actually fires
+    // (otherwise Cloudflare serves index.html directly and the Worker never sees the request).
+    "run_worker_first": true
+  },
+  // Both hostnames route to this Worker; the Worker 301s www → apex. wrangler provisions the
+  // custom domains + their DNS on deploy, so there is no separate "add a www record" step.
+  "routes": [
+    { "pattern": "hopeanddespair.world", "custom_domain": true },
+    { "pattern": "www.hopeanddespair.world", "custom_domain": true }
+  ],
+  "observability": { "enabled": true }
+}

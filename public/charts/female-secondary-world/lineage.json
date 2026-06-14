@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "demography.female_secondary_enrolment.world",
+    "unit": "% gross enrolment",
+    "points": 55
+  },
+  "wasDerivedFrom": [
+    "WLD"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity WLD"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SE.SEC.ENRR.FE",
+      "url": "https://data.worldbank.org/indicator/SE.SEC.ENRR.FE",
+      "vintage": "2026-06-13",
+      "checksum": "d6891b0aa4e29364646996bbdb3f77b77b38d4039fdb92413d9c9debc90ba002",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UNESCO Institute for Statistics, via World Bank"
+}

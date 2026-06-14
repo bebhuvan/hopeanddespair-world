@@ -1,0 +1,61 @@
+{
+  "chartId": "openalex-field-growth-multiple-2000-2024",
+  "kind": "bars",
+  "title": "Field output growth, 2000-2024",
+  "unit": "multiple of 2000 output",
+  "yearSpan": "2000-2024",
+  "bars": [
+    {
+      "label": "Computer science",
+      "value": 5,
+      "color": "hope"
+    },
+    {
+      "label": "Environmental science",
+      "value": 3.4,
+      "color": "ochre"
+    },
+    {
+      "label": "Social sciences",
+      "value": 3.3,
+      "color": "ochre"
+    },
+    {
+      "label": "Medicine",
+      "value": 2.9,
+      "color": "ochre"
+    },
+    {
+      "label": "Engineering",
+      "value": 1.9,
+      "color": "stone"
+    }
+  ],
+  "xmax": 6,
+  "xTicks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "selected field yearly counts / 2000 field counts",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2024-01-01,to_publication_date:2024-12-31&group_by=primary_topic.field.id&per-page=200",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-13",
+    "checksum": "dbefd69e3e75d085b4e5942feff3d7cfdcd2c0e714556c80c2ad712603b7c96a",
+    "definition": "Selected OpenAlex fields, with 2024 output divided by 2000 output.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "openalex_group_by",
+      "detail": "computed 2024/2000 output multiple for selected large fields"
+    }
+  ]
+}

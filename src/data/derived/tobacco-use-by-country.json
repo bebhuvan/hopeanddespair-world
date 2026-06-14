@@ -1,0 +1,88 @@
+{
+  "chartId": "tobacco-use-by-country",
+  "kind": "bars",
+  "title": "Tobacco use by country",
+  "unit": "Adults who use tobacco, %",
+  "yearSpan": "2022–2022",
+  "bars": [
+    {
+      "label": "Indonesia",
+      "value": 38.2,
+      "color": "despair"
+    },
+    {
+      "label": "Greece",
+      "value": 32.8,
+      "color": "despair"
+    },
+    {
+      "label": "Russia",
+      "value": 29.2,
+      "color": "despair"
+    },
+    {
+      "label": "United States",
+      "value": 24.3,
+      "color": "ochre"
+    },
+    {
+      "label": "India",
+      "value": 24.3,
+      "color": "ochre"
+    },
+    {
+      "label": "China",
+      "value": 23.4,
+      "color": "ochre"
+    },
+    {
+      "label": "Germany",
+      "value": 21.3,
+      "color": "ochre"
+    },
+    {
+      "label": "United Kingdom",
+      "value": 14.2,
+      "color": "hope"
+    },
+    {
+      "label": "Brazil",
+      "value": 12.2,
+      "color": "hope"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 5.2,
+      "color": "hope"
+    },
+    {
+      "label": "Nigeria",
+      "value": 3.3,
+      "color": "hope"
+    }
+  ],
+  "xmax": 45,
+  "xTicks": [
+    0,
+    15,
+    30,
+    45
+  ],
+  "provenance": {
+    "source": "wb",
+    "sourceIndicator": "SH.PRV.SMOK",
+    "url": "https://data.worldbank.org/indicator/SH.PRV.SMOK",
+    "license": "CC BY 4.0",
+    "vintage": "2022–2022",
+    "checksum": "c2922c2a5c68f3dbb7f1360eab6fb9c2acb048d514f52ad5a78d30f0b5811a7e",
+    "definition": "Prevalence of current tobacco use (any product, including smokeless) among adults, latest year per country. A curated 11-country spread sorted descending.",
+    "attribution": "WHO, via World Bank",
+    "primarySource": "World Health Organization"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 11 curated countries sorted descending"
+    }
+  ]
+}

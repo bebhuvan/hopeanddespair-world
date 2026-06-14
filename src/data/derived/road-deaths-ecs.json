@@ -1,0 +1,108 @@
+{
+  "indicatorId": "safety.road_deaths.ecs",
+  "entity": "ECS",
+  "entityName": "Europe & Central Asia",
+  "unit": "per 100,000",
+  "points": [
+    {
+      "t": 2000,
+      "value": 15.0380173681323
+    },
+    {
+      "t": 2001,
+      "value": 15.111362382658
+    },
+    {
+      "t": 2002,
+      "value": 15.1338826369836
+    },
+    {
+      "t": 2003,
+      "value": 15.0871459553847
+    },
+    {
+      "t": 2004,
+      "value": 14.7120777744287
+    },
+    {
+      "t": 2005,
+      "value": 14.5827612190745
+    },
+    {
+      "t": 2006,
+      "value": 14.1924251470938
+    },
+    {
+      "t": 2007,
+      "value": 14.4999488480938
+    },
+    {
+      "t": 2008,
+      "value": 13.1056704442525
+    },
+    {
+      "t": 2009,
+      "value": 11.3736056954884
+    },
+    {
+      "t": 2010,
+      "value": 10.5971238957955
+    },
+    {
+      "t": 2011,
+      "value": 10.8824471587904
+    },
+    {
+      "t": 2012,
+      "value": 10.4948657734496
+    },
+    {
+      "t": 2013,
+      "value": 10.0583746961568
+    },
+    {
+      "t": 2014,
+      "value": 9.75803836424986
+    },
+    {
+      "t": 2015,
+      "value": 9.24188906654043
+    },
+    {
+      "t": 2016,
+      "value": 8.55293197464336
+    },
+    {
+      "t": 2017,
+      "value": 8.11694962591184
+    },
+    {
+      "t": 2018,
+      "value": 7.80210108133099
+    },
+    {
+      "t": 2019,
+      "value": 7.4476128504112
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SH.STA.TRAF.P5",
+    "url": "https://data.worldbank.org/indicator/SH.STA.TRAF.P5",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "3645888d5849d1a57e9410b5550549b07c5a7a20e749e03421069f8a80f4a6c4",
+    "definition": "Mortality caused by road traffic injury (per 100,000 population)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity ECS"
+    }
+  ],
+  "derivedFrom": [
+    "ECS"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "research-spending-gdp",
+  "vintage": "2026-06-12",
+  "url": "https://ourworldindata.org/grapher/research-spending-gdp",
+  "checksum": "cd026f630fffa05ec2d040d6662240155ba800239004e1cdeccdd7f43a47a782",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:43:36.552Z",
+  "adapterVersion": "1.0.0"
+}

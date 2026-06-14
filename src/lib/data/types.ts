@@ -56,13 +56,35 @@ export interface IndicatorSpec {
   title: string;
   unit: string;
   chartId?: string;              // clean slug for public artifacts + article dataRef
-  adapter: 'owid' | 'worldbank';
-  slug: string;                  // source chart slug (OWID) or indicator code (World Bank)
-  sourceColumn?: string;         // which column to read (default: the single value column)
+  adapter: 'owid' | 'worldbank' | 'ucdp' | 'ember' | 'openalex' | 'nasa' | 'ilostat' | 'convergence' | 'pip' | 'who' | 'berkeley' | 'sealevel' | 'copernicus' | 'iea' | 'unwpp' | 'censusidb' | 'oecd' | 'noaagml' | 'oceanheat' | 'icesheet' | 'wgms';
+  slug: string;                  // OWID chart slug · WB code · UCDP key · Ember path · OpenAlex query · NASA file · ILOSTAT dataflow · WHO GHO indicator code
+  // IEA Global EV Data Explorer (CC BY 4.0): one CSV per region, picked by these three dimensions.
+  iea?: { parameter: string; mode: string; powertrain: string; category?: string };
+  filter?: Record<string, string>; // SDMX dimension filter, e.g. { REF_AREA: 'X01', SEX: 'SEX_T', AGE: 'AGE_YTHADULT_YGE15' }
+  seriesName?: string;           // Ember: which energy source row to read (e.g. "Clean", "Fossil", "Wind and solar")
+  sourceColumn?: string;         // which column to read (default: the single value column; Ember: the metric field)
+  sourceColumns?: string[];      // OWID: sum these columns per row into one value (e.g. conflict types)
   entityFilter?: string[];       // restrict to these source entity names
-  derive?: { op: 'mean_across_entities' | 'pick_entity' | 'identity'; entity?: string; minEntities?: number };
+  yearMin?: number;              // drop rows before this year (e.g. trim deep-time ice-core CO₂ to 1750+)
+  yearMax?: number;              // drop rows after this year (e.g. OpenAlex tags works to future/incomplete years)
+  valueScale?: number;           // multiply each normalized value (e.g. PIP pop_in_poverty ×1e-6 → millions; headcount fraction ×100 → %)
+  // PIP (World Bank Poverty & Inequality Platform) query knobs — the authoritative poverty surface
+  // (counts, mean, societal rate) the WDI REST API doesn't carry. One (povline, ppp) fetch serves
+  // every measure for World + all regions; pick the measure with sourceColumn, scale with valueScale.
+  povline?: number;              // poverty line in PPP$/day (e.g. 3.00 extreme, 4.20 LMIC, 8.30 UMIC)
+  pppVersion?: number;           // PPP base year (2021 current; 2017 prior — for the rebasing chart)
+  pipEndpoint?: 'pip-grp' | 'pip'; // 'pip-grp' = aggregates (World/regions, default); 'pip' = single countries
+  fillGaps?: boolean;            // interpolate non-survey years (disclosed; never drawn as observed)
+  derive?: { op: 'mean_across_entities' | 'pick_entity' | 'sum_across_entities' | 'identity'; entity?: string; minEntities?: number };
+  // Extend a deep-history series with a modern source after a cutoff year (e.g. Brecke 1400–2000
+  // continued by UCDP 2001+). Appended points carry a recipe note; the join is honest, not hidden.
+  stitch?: { slug: string; sourceColumns?: string[]; sourceColumn?: string; after: number };
   validate: { min?: number; max?: number; monotonicJump?: number; requireProvenance?: boolean };
   primarySource?: string;
+  // License gate (DATA.md §9). 'link-only' = chart it but DON'T generate downloadable artifacts
+  // (CC BY-NC-SA / restricted sources we may display but not re-host). Default: re-host.
+  gate?: 'rehost' | 'link-only';
+  license?: string;              // override the adapter's default license (e.g. FAO's CC BY-NC-SA)
 }
 
 export type Severity = 'pass' | 'warn' | 'block';

@@ -1,0 +1,38 @@
+{
+  "name": "energy-clean_share_electricity-europe",
+  "title": "Share of electricity from low-carbon sources, Europe",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Ember — Yearly Electricity Data",
+      "path": "https://api.ember-energy.org/v1/electricity-generation/yearly?entity=Europe&start_date=2000"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "energy-clean_share_electricity-europe",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "energy_clean_share_electricity_europe",
+            "type": "number",
+            "unit": "% of electricity generation"
+          }
+        ]
+      }
+    }
+  ]
+}

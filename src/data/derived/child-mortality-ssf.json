@@ -1,0 +1,168 @@
+{
+  "indicatorId": "health.child_mortality_wb.ssf",
+  "entity": "SSF",
+  "entityName": "Sub-Saharan Africa",
+  "unit": "per 1,000 live births",
+  "points": [
+    {
+      "t": 1990,
+      "value": 178.5
+    },
+    {
+      "t": 1991,
+      "value": 179.8
+    },
+    {
+      "t": 1992,
+      "value": 178.5
+    },
+    {
+      "t": 1993,
+      "value": 176.7
+    },
+    {
+      "t": 1994,
+      "value": 173.5
+    },
+    {
+      "t": 1995,
+      "value": 168.7
+    },
+    {
+      "t": 1996,
+      "value": 169.4
+    },
+    {
+      "t": 1997,
+      "value": 165.5
+    },
+    {
+      "t": 1998,
+      "value": 164.7
+    },
+    {
+      "t": 1999,
+      "value": 155.7
+    },
+    {
+      "t": 2000,
+      "value": 150.4
+    },
+    {
+      "t": 2001,
+      "value": 146.3
+    },
+    {
+      "t": 2002,
+      "value": 138.9
+    },
+    {
+      "t": 2003,
+      "value": 133
+    },
+    {
+      "t": 2004,
+      "value": 127.7
+    },
+    {
+      "t": 2005,
+      "value": 119.8
+    },
+    {
+      "t": 2006,
+      "value": 114
+    },
+    {
+      "t": 2007,
+      "value": 109.1
+    },
+    {
+      "t": 2008,
+      "value": 104.5
+    },
+    {
+      "t": 2009,
+      "value": 102.8
+    },
+    {
+      "t": 2010,
+      "value": 97.2
+    },
+    {
+      "t": 2011,
+      "value": 97.1
+    },
+    {
+      "t": 2012,
+      "value": 90.7
+    },
+    {
+      "t": 2013,
+      "value": 87.6
+    },
+    {
+      "t": 2014,
+      "value": 86.8
+    },
+    {
+      "t": 2015,
+      "value": 85
+    },
+    {
+      "t": 2016,
+      "value": 83.4
+    },
+    {
+      "t": 2017,
+      "value": 82.5
+    },
+    {
+      "t": 2018,
+      "value": 79
+    },
+    {
+      "t": 2019,
+      "value": 78
+    },
+    {
+      "t": 2020,
+      "value": 75.9
+    },
+    {
+      "t": 2021,
+      "value": 77.1
+    },
+    {
+      "t": 2022,
+      "value": 78.3
+    },
+    {
+      "t": 2023,
+      "value": 73.2
+    },
+    {
+      "t": 2024,
+      "value": 71.2
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SH.DYN.MORT",
+    "url": "https://data.worldbank.org/indicator/SH.DYN.MORT",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "032b7997394a921422ac4cfa34aaf93b253621697207257cb250eacf2711f944",
+    "definition": "Mortality rate, under-5 (per 1,000 live births)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "UN IGME, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity SSF"
+    }
+  ],
+  "derivedFrom": [
+    "SSF"
+  ]
+}

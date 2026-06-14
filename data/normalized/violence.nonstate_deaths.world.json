@@ -1,0 +1,169 @@
+[
+  {
+    "indicatorId": "violence.nonstate_deaths.world",
+    "entity": "World",
+    "entityName": "World",
+    "unit": "deaths",
+    "points": [
+      {
+        "t": 1989,
+        "value": 4170
+      },
+      {
+        "t": 1990,
+        "value": 5251
+      },
+      {
+        "t": 1991,
+        "value": 3860
+      },
+      {
+        "t": 1992,
+        "value": 10458
+      },
+      {
+        "t": 1993,
+        "value": 14722
+      },
+      {
+        "t": 1994,
+        "value": 5299
+      },
+      {
+        "t": 1995,
+        "value": 4469
+      },
+      {
+        "t": 1996,
+        "value": 4196
+      },
+      {
+        "t": 1997,
+        "value": 4306
+      },
+      {
+        "t": 1998,
+        "value": 3523
+      },
+      {
+        "t": 1999,
+        "value": 6087
+      },
+      {
+        "t": 2000,
+        "value": 7428
+      },
+      {
+        "t": 2001,
+        "value": 5126
+      },
+      {
+        "t": 2002,
+        "value": 6391
+      },
+      {
+        "t": 2003,
+        "value": 3564
+      },
+      {
+        "t": 2004,
+        "value": 4161
+      },
+      {
+        "t": 2005,
+        "value": 2192
+      },
+      {
+        "t": 2006,
+        "value": 3075
+      },
+      {
+        "t": 2007,
+        "value": 4208
+      },
+      {
+        "t": 2008,
+        "value": 6188
+      },
+      {
+        "t": 2009,
+        "value": 9435
+      },
+      {
+        "t": 2010,
+        "value": 8804
+      },
+      {
+        "t": 2011,
+        "value": 9363
+      },
+      {
+        "t": 2012,
+        "value": 10067
+      },
+      {
+        "t": 2013,
+        "value": 9603
+      },
+      {
+        "t": 2014,
+        "value": 19539
+      },
+      {
+        "t": 2015,
+        "value": 15809
+      },
+      {
+        "t": 2016,
+        "value": 17118
+      },
+      {
+        "t": 2017,
+        "value": 31051
+      },
+      {
+        "t": 2018,
+        "value": 27872
+      },
+      {
+        "t": 2019,
+        "value": 19032
+      },
+      {
+        "t": 2020,
+        "value": 20676
+      },
+      {
+        "t": 2021,
+        "value": 21908
+      },
+      {
+        "t": 2022,
+        "value": 19742
+      },
+      {
+        "t": 2023,
+        "value": 19142
+      },
+      {
+        "t": 2024,
+        "value": 17725
+      },
+      {
+        "t": 2025,
+        "value": 14483
+      }
+    ],
+    "provenance": {
+      "source": "ucdp",
+      "sourceIndicator": "best_fatality_estimate",
+      "url": "https://ucdp.uu.se/downloads/nsos/ucdp-nonstate-261-csv.zip",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "14077bbef099f19da95f60b7c57f2aaa5cff3a16731b5d71012c6b1ac10954b3",
+      "definition": "Best estimate of deaths in conflicts between two armed groups, neither of them a state.",
+      "attribution": "Uppsala Conflict Data Program (UCDP), Uppsala University",
+      "primarySource": "UCDP Non-state Conflict Dataset"
+    }
+  }
+]

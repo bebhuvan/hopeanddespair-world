@@ -1,0 +1,125 @@
+[
+  {
+    "indicatorId": "energy.clean_share_electricity.asia",
+    "entity": "Asia",
+    "entityName": "Asia",
+    "unit": "% of electricity generation",
+    "points": [
+      {
+        "t": 2000,
+        "value": 25.56
+      },
+      {
+        "t": 2001,
+        "value": 25.86
+      },
+      {
+        "t": 2002,
+        "value": 24.84
+      },
+      {
+        "t": 2003,
+        "value": 22.52
+      },
+      {
+        "t": 2004,
+        "value": 23.73
+      },
+      {
+        "t": 2005,
+        "value": 23.27
+      },
+      {
+        "t": 2006,
+        "value": 22.99
+      },
+      {
+        "t": 2007,
+        "value": 21.72
+      },
+      {
+        "t": 2008,
+        "value": 22.94
+      },
+      {
+        "t": 2009,
+        "value": 22.49
+      },
+      {
+        "t": 2010,
+        "value": 23.02
+      },
+      {
+        "t": 2011,
+        "value": 20.81
+      },
+      {
+        "t": 2012,
+        "value": 20.7
+      },
+      {
+        "t": 2013,
+        "value": 21.04
+      },
+      {
+        "t": 2014,
+        "value": 22.47
+      },
+      {
+        "t": 2015,
+        "value": 23.87
+      },
+      {
+        "t": 2016,
+        "value": 24.7
+      },
+      {
+        "t": 2017,
+        "value": 25.51
+      },
+      {
+        "t": 2018,
+        "value": 26.28
+      },
+      {
+        "t": 2019,
+        "value": 27.83
+      },
+      {
+        "t": 2020,
+        "value": 29.29
+      },
+      {
+        "t": 2021,
+        "value": 30.13
+      },
+      {
+        "t": 2022,
+        "value": 31.55
+      },
+      {
+        "t": 2023,
+        "value": 31.95
+      },
+      {
+        "t": 2024,
+        "value": 34.14
+      },
+      {
+        "t": 2025,
+        "value": 37.13
+      }
+    ],
+    "provenance": {
+      "source": "ember",
+      "sourceIndicator": "electricity-generation/yearly:Clean:share_of_generation_pct",
+      "url": "https://api.ember-energy.org/v1/electricity-generation/yearly?entity=Asia&start_date=2000",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "8fbffbb03f310374b513173fcdd739c2a543bfeece86c003d17df7bf4a4f1514",
+      "definition": "Share of electricity from low-carbon sources, Asia",
+      "attribution": "Ember — Yearly Electricity Data",
+      "primarySource": "Ember — Yearly Electricity Data"
+    }
+  }
+]

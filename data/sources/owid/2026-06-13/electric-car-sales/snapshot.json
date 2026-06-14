@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "electric-car-sales",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/electric-car-sales",
+  "checksum": "525e541c2f197a515224e5df2df348ce5fca2ebf7c8e8ee1d074c67374962e99",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T08:43:53.010Z",
+  "adapterVersion": "1.0.0"
+}

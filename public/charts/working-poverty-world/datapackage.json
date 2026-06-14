@@ -1,0 +1,38 @@
+{
+  "name": "work-working_poverty-world",
+  "title": "Working poverty rate — employed living in extreme poverty (<$2.15/day), World",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "ILOSTAT — International Labour Organization",
+      "path": "https://sdmx.ilo.org/rest/data/DF_SDG_0111_SEX_AGE_RT/all?startPeriod=1990"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "work-working_poverty-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "work_working_poverty_world",
+            "type": "number",
+            "unit": "% of employed"
+          }
+        ]
+      }
+    }
+  ]
+}

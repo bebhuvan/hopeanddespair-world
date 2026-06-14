@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "share-car-sales-battery-plugin",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/share-car-sales-battery-plugin",
+  "checksum": "5e8d981e9f3f2f98141a270b6598e62bf40266c51b5db85feeade7e4548da999",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T13:17:08.245Z",
+  "adapterVersion": "1.0.0"
+}

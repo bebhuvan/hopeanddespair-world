@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "economy.poverty_830.world",
+    "unit": "%",
+    "points": 37
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "share-living-with-less-than-upper-middle-income-poverty-line",
+      "url": "https://ourworldindata.org/grapher/share-living-with-less-than-upper-middle-income-poverty-line",
+      "vintage": "2026-06-12",
+      "checksum": "158da4875a69a71080804c1ea87268877f354869488ad76d0f66a11a09a37ad5",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "World Bank PIP (2021 PPP) — via Our World in Data"
+}

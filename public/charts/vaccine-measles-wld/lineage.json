@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "health.vaccine_measles_wb.wld",
+    "unit": "% of children 12–23 months",
+    "points": 45
+  },
+  "wasDerivedFrom": [
+    "WLD"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity WLD"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SH.IMM.MEAS",
+      "url": "https://data.worldbank.org/indicator/SH.IMM.MEAS",
+      "vintage": "2026-06-13",
+      "checksum": "ecbd98414ffa71e4b9cbc08dfc62454af95d354d478fd514c4768fa5f1057ff2",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "WHO/UNICEF, via World Bank"
+}

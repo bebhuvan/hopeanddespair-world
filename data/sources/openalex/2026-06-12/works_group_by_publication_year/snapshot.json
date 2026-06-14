@@ -1,0 +1,10 @@
+{
+  "source": "openalex",
+  "slug": "works?group_by=publication_year",
+  "vintage": "2026-06-12",
+  "url": "https://api.openalex.org/works?group_by=publication_year",
+  "checksum": "115405cc90d594fe506b9b822394bf994bc6734caae06167c59aa6a520533b71",
+  "license": "CC0 1.0",
+  "fetchedAt": "2026-06-12T13:44:24.584Z",
+  "adapterVersion": "1.0.0"
+}

@@ -1,0 +1,264 @@
+{
+  "indicatorId": "education.literacy_rate.world",
+  "entity": "OWID_WRL",
+  "entityName": "World",
+  "unit": "%",
+  "points": [
+    {
+      "t": 1820,
+      "value": 12.046689
+    },
+    {
+      "t": 1870,
+      "value": 18.740555
+    },
+    {
+      "t": 1880,
+      "value": 19.628456
+    },
+    {
+      "t": 1890,
+      "value": 20.516357
+    },
+    {
+      "t": 1900,
+      "value": 21.404259
+    },
+    {
+      "t": 1910,
+      "value": 26.445602
+    },
+    {
+      "t": 1920,
+      "value": 31.623163
+    },
+    {
+      "t": 1930,
+      "value": 32.52763
+    },
+    {
+      "t": 1940,
+      "value": 41.879223
+    },
+    {
+      "t": 1950,
+      "value": 35.959377
+    },
+    {
+      "t": 1960,
+      "value": 41.620377
+    },
+    {
+      "t": 1976,
+      "value": 65.65894
+    },
+    {
+      "t": 1977,
+      "value": 65.94926
+    },
+    {
+      "t": 1978,
+      "value": 66.57221
+    },
+    {
+      "t": 1979,
+      "value": 67.2339
+    },
+    {
+      "t": 1980,
+      "value": 67.8477
+    },
+    {
+      "t": 1981,
+      "value": 68.45067
+    },
+    {
+      "t": 1982,
+      "value": 69.04228
+    },
+    {
+      "t": 1983,
+      "value": 69.61146
+    },
+    {
+      "t": 1984,
+      "value": 70.2725
+    },
+    {
+      "t": 1985,
+      "value": 70.86449
+    },
+    {
+      "t": 1986,
+      "value": 71.41617
+    },
+    {
+      "t": 1987,
+      "value": 72.10954
+    },
+    {
+      "t": 1988,
+      "value": 73.82419
+    },
+    {
+      "t": 1989,
+      "value": 74.34693
+    },
+    {
+      "t": 1990,
+      "value": 74.90702
+    },
+    {
+      "t": 1991,
+      "value": 75.28651
+    },
+    {
+      "t": 1992,
+      "value": 75.69432
+    },
+    {
+      "t": 1993,
+      "value": 76.10245
+    },
+    {
+      "t": 1994,
+      "value": 76.50147
+    },
+    {
+      "t": 1995,
+      "value": 76.91185
+    },
+    {
+      "t": 1996,
+      "value": 77.29632
+    },
+    {
+      "t": 1997,
+      "value": 79.28844
+    },
+    {
+      "t": 1998,
+      "value": 80.4687
+    },
+    {
+      "t": 1999,
+      "value": 80.806
+    },
+    {
+      "t": 2000,
+      "value": 80.97923
+    },
+    {
+      "t": 2001,
+      "value": 81.28601
+    },
+    {
+      "t": 2002,
+      "value": 81.64019
+    },
+    {
+      "t": 2003,
+      "value": 82.11429
+    },
+    {
+      "t": 2004,
+      "value": 82.44728
+    },
+    {
+      "t": 2005,
+      "value": 82.45476
+    },
+    {
+      "t": 2006,
+      "value": 82.42529
+    },
+    {
+      "t": 2007,
+      "value": 83.01185
+    },
+    {
+      "t": 2008,
+      "value": 83.38555
+    },
+    {
+      "t": 2009,
+      "value": 83.60871
+    },
+    {
+      "t": 2010,
+      "value": 84.2272
+    },
+    {
+      "t": 2011,
+      "value": 84.41082
+    },
+    {
+      "t": 2012,
+      "value": 84.60142
+    },
+    {
+      "t": 2013,
+      "value": 84.90313
+    },
+    {
+      "t": 2014,
+      "value": 85.28642
+    },
+    {
+      "t": 2015,
+      "value": 85.67891
+    },
+    {
+      "t": 2016,
+      "value": 86.00014
+    },
+    {
+      "t": 2017,
+      "value": 86.17703
+    },
+    {
+      "t": 2018,
+      "value": 86.43751
+    },
+    {
+      "t": 2019,
+      "value": 86.54794
+    },
+    {
+      "t": 2020,
+      "value": 86.74748
+    },
+    {
+      "t": 2021,
+      "value": 86.92754
+    },
+    {
+      "t": 2022,
+      "value": 87.15536
+    },
+    {
+      "t": 2023,
+      "value": 87.35603
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "literacy_rate",
+    "url": "https://ourworldindata.org/grapher/cross-country-literacy-rates",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "64a430579a7265dd5c26dd4d2e2cf786d780b7096ae4a4b463fc6281e586f80c",
+    "definition": "Share of adults who can read and write a simple statement about their everyday life.",
+    "attribution": "Our World in Data",
+    "primarySource": "UNESCO; Buringh & van Zanden — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity World"
+    }
+  ],
+  "derivedFrom": [
+    "OWID_WRL"
+  ]
+}

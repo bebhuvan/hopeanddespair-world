@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "liberal-democracy-index",
+  "vintage": "2026-06-12",
+  "url": "https://ourworldindata.org/grapher/liberal-democracy-index",
+  "checksum": "8385cefc4a2feb8e3932b5ab00c6b91f69d55e4483e6015c235669f16fdfe261",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:44:08.309Z",
+  "adapterVersion": "1.0.0"
+}

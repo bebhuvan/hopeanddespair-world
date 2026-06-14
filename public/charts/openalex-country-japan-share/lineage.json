@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "science.openalex_country_japan_share.world",
+    "unit": "% of OpenAlex works",
+    "points": 25
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "derived_transform",
+        "detail": "divided Japan yearly country-attributed work count by all OpenAlex works in the same year"
+      }
+    ],
+    "agent": "adapter:openalex@openalex-story-1.0.0",
+    "used": {
+      "source": "openalex",
+      "slug": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:JP&group_by=publication_year / all works",
+      "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:JP&group_by=publication_year&per-page=100",
+      "vintage": "2026-06-13",
+      "checksum": "8975166eb2278d5f2a4902631e1c28b8df1729db8aad4f60fd8784f4147e37bf",
+      "license": "CC0 1.0"
+    }
+  },
+  "primarySource": "OpenAlex"
+}

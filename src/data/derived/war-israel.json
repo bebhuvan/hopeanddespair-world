@@ -1,0 +1,156 @@
+{
+  "indicatorId": "violence.current_war.israel",
+  "entity": "Israel",
+  "entityName": "Israel",
+  "unit": "deaths",
+  "points": [
+    {
+      "t": 1989,
+      "value": 54
+    },
+    {
+      "t": 1990,
+      "value": 71
+    },
+    {
+      "t": 1991,
+      "value": 56
+    },
+    {
+      "t": 1992,
+      "value": 120
+    },
+    {
+      "t": 1993,
+      "value": 171
+    },
+    {
+      "t": 1994,
+      "value": 126
+    },
+    {
+      "t": 1995,
+      "value": 108
+    },
+    {
+      "t": 1996,
+      "value": 162
+    },
+    {
+      "t": 1997,
+      "value": 88
+    },
+    {
+      "t": 1998,
+      "value": 54
+    },
+    {
+      "t": 1999,
+      "value": 41
+    },
+    {
+      "t": 2000,
+      "value": 104
+    },
+    {
+      "t": 2001,
+      "value": 244
+    },
+    {
+      "t": 2002,
+      "value": 613
+    },
+    {
+      "t": 2003,
+      "value": 308
+    },
+    {
+      "t": 2004,
+      "value": 386
+    },
+    {
+      "t": 2005,
+      "value": 123
+    },
+    {
+      "t": 2006,
+      "value": 1649
+    },
+    {
+      "t": 2007,
+      "value": 276
+    },
+    {
+      "t": 2008,
+      "value": 668
+    },
+    {
+      "t": 2009,
+      "value": 696
+    },
+    {
+      "t": 2010,
+      "value": 27
+    },
+    {
+      "t": 2011,
+      "value": 78
+    },
+    {
+      "t": 2012,
+      "value": 235
+    },
+    {
+      "t": 2014,
+      "value": 2378
+    },
+    {
+      "t": 2018,
+      "value": 53
+    },
+    {
+      "t": 2019,
+      "value": 50
+    },
+    {
+      "t": 2021,
+      "value": 269
+    },
+    {
+      "t": 2022,
+      "value": 84
+    },
+    {
+      "t": 2023,
+      "value": 26928
+    },
+    {
+      "t": 2024,
+      "value": 25957
+    },
+    {
+      "t": 2025,
+      "value": 14771
+    }
+  ],
+  "provenance": {
+    "source": "ucdp",
+    "sourceIndicator": "bd_best",
+    "url": "https://ucdp.uu.se/downloads/brd/ucdp-brd-conf-261-csv.zip",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "b34ecb57f1fc0e73d4bfd7b080212da429af3135a8d360b1c902e45506f81147",
+    "definition": "Best estimate of deaths in state-based armed conflict (combatants and civilians killed in the fighting).",
+    "attribution": "Uppsala Conflict Data Program (UCDP), Uppsala University",
+    "primarySource": "UCDP Battle-Related Deaths Dataset"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity Israel"
+    }
+  ],
+  "derivedFrom": [
+    "Israel"
+  ]
+}

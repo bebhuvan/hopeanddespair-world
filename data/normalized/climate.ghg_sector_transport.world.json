@@ -1,0 +1,157 @@
+[
+  {
+    "indicatorId": "climate.ghg_sector_transport.world",
+    "entity": "OWID_WRL",
+    "entityName": "World",
+    "unit": "tonnes",
+    "points": [
+      {
+        "t": 1990,
+        "value": 4726279680
+      },
+      {
+        "t": 1991,
+        "value": 4764569600
+      },
+      {
+        "t": 1992,
+        "value": 4872520192
+      },
+      {
+        "t": 1993,
+        "value": 4915559936
+      },
+      {
+        "t": 1994,
+        "value": 5013539840
+      },
+      {
+        "t": 1995,
+        "value": 5150940160
+      },
+      {
+        "t": 1996,
+        "value": 5360880128
+      },
+      {
+        "t": 1997,
+        "value": 5438929920
+      },
+      {
+        "t": 1998,
+        "value": 5565349888
+      },
+      {
+        "t": 1999,
+        "value": 5729789952
+      },
+      {
+        "t": 2000,
+        "value": 5911510016
+      },
+      {
+        "t": 2001,
+        "value": 5941910016
+      },
+      {
+        "t": 2002,
+        "value": 6097619968
+      },
+      {
+        "t": 2003,
+        "value": 6225560064
+      },
+      {
+        "t": 2004,
+        "value": 6513600000
+      },
+      {
+        "t": 2005,
+        "value": 6658200064
+      },
+      {
+        "t": 2006,
+        "value": 6813640192
+      },
+      {
+        "t": 2007,
+        "value": 7027120128
+      },
+      {
+        "t": 2008,
+        "value": 7033080320
+      },
+      {
+        "t": 2009,
+        "value": 6892389888
+      },
+      {
+        "t": 2010,
+        "value": 7187759616
+      },
+      {
+        "t": 2011,
+        "value": 7307549696
+      },
+      {
+        "t": 2012,
+        "value": 7355680256
+      },
+      {
+        "t": 2013,
+        "value": 7547310080
+      },
+      {
+        "t": 2014,
+        "value": 7673140224
+      },
+      {
+        "t": 2015,
+        "value": 7913990144
+      },
+      {
+        "t": 2016,
+        "value": 8079220224
+      },
+      {
+        "t": 2017,
+        "value": 8274219520
+      },
+      {
+        "t": 2018,
+        "value": 8481469952
+      },
+      {
+        "t": 2019,
+        "value": 8561490432
+      },
+      {
+        "t": 2020,
+        "value": 7422919680
+      },
+      {
+        "t": 2021,
+        "value": 8006360064
+      },
+      {
+        "t": 2022,
+        "value": 8304929792
+      },
+      {
+        "t": 2023,
+        "value": 8483360256
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "transport_ghg_emissions",
+      "url": "https://ourworldindata.org/grapher/ghg-emissions-by-sector",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "6bd8581a73b3c5da14c09d12490ab53cd1ed159b559cf4299351b4e9b816d8fa",
+      "definition": "Emissions are measured in tonnes of carbon dioxide-equivalents.",
+      "attribution": "Our World in Data",
+      "primarySource": "Climate Watch (2026) — via Our World in Data"
+    }
+  }
+]

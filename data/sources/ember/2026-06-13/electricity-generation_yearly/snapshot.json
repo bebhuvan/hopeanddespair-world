@@ -1,0 +1,10 @@
+{
+  "source": "ember",
+  "slug": "electricity-generation/yearly",
+  "vintage": "2026-06-13",
+  "url": "https://api.ember-energy.org/v1/electricity-generation/yearly?entity=United%20States&start_date=2000",
+  "checksum": "ab8695bb836127a98d4261e87080f0636961f3ea6c76d6d132c5359c3f7e22f5",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T08:23:24.081Z",
+  "adapterVersion": "1.0.0"
+}

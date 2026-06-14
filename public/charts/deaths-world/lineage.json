@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "demography.deaths.world",
+    "unit": "deaths",
+    "points": 74
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "births-and-deaths-projected-to-2100",
+      "url": "https://ourworldindata.org/grapher/births-and-deaths-projected-to-2100",
+      "vintage": "2026-06-13",
+      "checksum": "7b11552ad61e0acea08ef25f53a973944e5283826731864125a20f609d9087c8",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UN World Population Prospects (2024) — via Our World in Data"
+}

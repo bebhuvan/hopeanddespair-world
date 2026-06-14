@@ -1,0 +1,88 @@
+{
+  "indicatorId": "trade.trade_share_gdp.ssf",
+  "entity": "SSF",
+  "entityName": "Sub-Saharan Africa",
+  "unit": "% of GDP",
+  "points": [
+    {
+      "t": 1960,
+      "value": 38.7957461229675
+    },
+    {
+      "t": 2011,
+      "value": 65.1480935458417
+    },
+    {
+      "t": 2012,
+      "value": 63.9868573624282
+    },
+    {
+      "t": 2013,
+      "value": 62.322232769437
+    },
+    {
+      "t": 2014,
+      "value": 60.7573821380911
+    },
+    {
+      "t": 2015,
+      "value": 57.3062145931923
+    },
+    {
+      "t": 2016,
+      "value": 55.1399503297354
+    },
+    {
+      "t": 2017,
+      "value": 54.233275881935
+    },
+    {
+      "t": 2018,
+      "value": 56.6953501994876
+    },
+    {
+      "t": 2019,
+      "value": 55.7540212745659
+    },
+    {
+      "t": 2020,
+      "value": 51.2033981131689
+    },
+    {
+      "t": 2021,
+      "value": 55.7046429671208
+    },
+    {
+      "t": 2022,
+      "value": 59.1775548748557
+    },
+    {
+      "t": 2023,
+      "value": 57.3480479141028
+    },
+    {
+      "t": 2024,
+      "value": 56.0208720264168
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "NE.TRD.GNFS.ZS",
+    "url": "https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "22f2c0402b967837a485c1a762d9e8e43f1f82ddb38738ae7b0659cdbbe9df28",
+    "definition": "Trade (% of GDP)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "World Bank national accounts"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity SSF"
+    }
+  ],
+  "derivedFrom": [
+    "SSF"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "inequality.income_share_top1.russia-and-central-asia",
+    "unit": "%",
+    "points": 56
+  },
+  "wasDerivedFrom": [
+    "Russia and Central Asia (WID)"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Russia and Central Asia (WID)"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "income-share-top-1-before-tax-wid",
+      "url": "https://ourworldindata.org/grapher/income-share-top-1-before-tax-wid",
+      "vintage": "2026-06-12",
+      "checksum": "f1e67ccfe48be6f1dd51b9b907e55c92c131d39c15153163fc64e80829f6f5fd",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "World Inequality Database (WID.world) — via Our World in Data"
+}

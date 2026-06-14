@@ -1,0 +1,88 @@
+{
+  "chartId": "pop-65plus-by-country",
+  "kind": "bars",
+  "title": "Share over 65 by country",
+  "unit": "Population aged 65 and over, %",
+  "yearSpan": "2024–2024",
+  "bars": [
+    {
+      "label": "Japan",
+      "value": 29.8,
+      "color": "despair"
+    },
+    {
+      "label": "Italy",
+      "value": 24.6,
+      "color": "despair"
+    },
+    {
+      "label": "Germany",
+      "value": 23.2,
+      "color": "despair"
+    },
+    {
+      "label": "South Korea",
+      "value": 19.3,
+      "color": "ochre"
+    },
+    {
+      "label": "United States",
+      "value": 17.9,
+      "color": "ochre"
+    },
+    {
+      "label": "China",
+      "value": 14.7,
+      "color": "ochre"
+    },
+    {
+      "label": "Brazil",
+      "value": 11,
+      "color": "hope"
+    },
+    {
+      "label": "India",
+      "value": 7.1,
+      "color": "hope"
+    },
+    {
+      "label": "Egypt",
+      "value": 5.1,
+      "color": "hope"
+    },
+    {
+      "label": "Nigeria",
+      "value": 3,
+      "color": "hope"
+    },
+    {
+      "label": "Niger",
+      "value": 2.6,
+      "color": "hope"
+    }
+  ],
+  "xmax": 30,
+  "xTicks": [
+    0,
+    10,
+    20,
+    30
+  ],
+  "provenance": {
+    "source": "wb",
+    "sourceIndicator": "SP.POP.65UP.TO.ZS",
+    "url": "https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2024–2024",
+    "checksum": "cc0a957b16195825e4acfb98a3b47860b1b5f7b8c98d98ba2e77e2b80a49abc8",
+    "definition": "Share of the population aged 65 and over, latest year per country. A curated 11-country spread sorted descending.",
+    "attribution": "UN Population Division, via World Bank",
+    "primarySource": "UN Population Division — World Population Prospects"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 11 curated countries sorted descending"
+    }
+  ]
+}

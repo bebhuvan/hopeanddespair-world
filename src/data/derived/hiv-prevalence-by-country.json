@@ -1,0 +1,78 @@
+{
+  "chartId": "hiv-prevalence-by-country",
+  "kind": "bars",
+  "title": "HIV prevalence by country",
+  "unit": "Adults 15–49 living with HIV, %",
+  "yearSpan": "2024–2024",
+  "bars": [
+    {
+      "label": "Eswatini",
+      "value": 23.4,
+      "color": "despair"
+    },
+    {
+      "label": "South Africa",
+      "value": 17.2,
+      "color": "despair"
+    },
+    {
+      "label": "Lesotho",
+      "value": 17.1,
+      "color": "despair"
+    },
+    {
+      "label": "Botswana",
+      "value": 15.7,
+      "color": "ochre"
+    },
+    {
+      "label": "Zimbabwe",
+      "value": 9.8,
+      "color": "ochre"
+    },
+    {
+      "label": "Kenya",
+      "value": 3,
+      "color": "hope"
+    },
+    {
+      "label": "Nigeria",
+      "value": 1.2,
+      "color": "hope"
+    },
+    {
+      "label": "Brazil",
+      "value": 0.7,
+      "color": "hope"
+    },
+    {
+      "label": "India",
+      "value": 0.2,
+      "color": "hope"
+    }
+  ],
+  "xmax": 30,
+  "xTicks": [
+    0,
+    10,
+    20,
+    30
+  ],
+  "provenance": {
+    "source": "wb",
+    "sourceIndicator": "SH.DYN.AIDS.ZS",
+    "url": "https://data.worldbank.org/indicator/SH.DYN.AIDS.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2024–2024",
+    "checksum": "55dc73db2bdf205e95ac8f6a1e5142ba7028b0f004875e4ff159e772fabe1d1d",
+    "definition": "Share of adults aged 15–49 living with HIV, latest year per country. A curated 9-country spread sorted descending.",
+    "attribution": "UNAIDS, via World Bank",
+    "primarySource": "UNAIDS"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 9 curated countries sorted descending"
+    }
+  ]
+}

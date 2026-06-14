@@ -1,0 +1,177 @@
+[
+  {
+    "indicatorId": "health.maternal_mortality_wb.mea",
+    "entity": "MEA",
+    "entityName": "Middle East, North Africa, Afghanistan & Pakistan",
+    "unit": "deaths per 100,000 live births",
+    "points": [
+      {
+        "t": 1985,
+        "value": 229
+      },
+      {
+        "t": 1986,
+        "value": 215
+      },
+      {
+        "t": 1987,
+        "value": 200
+      },
+      {
+        "t": 1988,
+        "value": 190
+      },
+      {
+        "t": 1989,
+        "value": 179
+      },
+      {
+        "t": 1990,
+        "value": 171
+      },
+      {
+        "t": 1991,
+        "value": 159
+      },
+      {
+        "t": 1992,
+        "value": 150
+      },
+      {
+        "t": 1993,
+        "value": 144
+      },
+      {
+        "t": 1994,
+        "value": 140
+      },
+      {
+        "t": 1995,
+        "value": 134
+      },
+      {
+        "t": 1996,
+        "value": 128
+      },
+      {
+        "t": 1997,
+        "value": 122
+      },
+      {
+        "t": 1998,
+        "value": 115
+      },
+      {
+        "t": 1999,
+        "value": 109
+      },
+      {
+        "t": 2000,
+        "value": 103
+      },
+      {
+        "t": 2001,
+        "value": 97
+      },
+      {
+        "t": 2002,
+        "value": 91
+      },
+      {
+        "t": 2003,
+        "value": 87
+      },
+      {
+        "t": 2004,
+        "value": 83
+      },
+      {
+        "t": 2005,
+        "value": 78
+      },
+      {
+        "t": 2006,
+        "value": 75
+      },
+      {
+        "t": 2007,
+        "value": 71
+      },
+      {
+        "t": 2008,
+        "value": 67
+      },
+      {
+        "t": 2009,
+        "value": 65
+      },
+      {
+        "t": 2010,
+        "value": 63
+      },
+      {
+        "t": 2011,
+        "value": 61
+      },
+      {
+        "t": 2012,
+        "value": 59
+      },
+      {
+        "t": 2013,
+        "value": 57
+      },
+      {
+        "t": 2014,
+        "value": 55
+      },
+      {
+        "t": 2015,
+        "value": 54
+      },
+      {
+        "t": 2016,
+        "value": 53
+      },
+      {
+        "t": 2017,
+        "value": 52
+      },
+      {
+        "t": 2018,
+        "value": 51
+      },
+      {
+        "t": 2019,
+        "value": 51
+      },
+      {
+        "t": 2020,
+        "value": 60
+      },
+      {
+        "t": 2021,
+        "value": 74
+      },
+      {
+        "t": 2022,
+        "value": 50
+      },
+      {
+        "t": 2023,
+        "value": 47
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SH.STA.MMRT",
+      "url": "https://data.worldbank.org/indicator/SH.STA.MMRT",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "d59f41f60f6fb4a180e6b35c74e505806e8979751f854cfa5c6685a16c2affbc",
+      "definition": "Maternal mortality ratio (modeled estimate, per 100,000 live births)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "WHO/UNICEF/UNFPA/WB/UNDESA (MMEIG), via World Bank"
+    }
+  }
+]

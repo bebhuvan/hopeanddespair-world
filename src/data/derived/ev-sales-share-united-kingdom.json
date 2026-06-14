@@ -1,0 +1,92 @@
+{
+  "indicatorId": "transport.ev_sales_share.united-kingdom",
+  "entity": "United Kingdom",
+  "entityName": "United Kingdom",
+  "unit": "percent",
+  "points": [
+    {
+      "t": 2010,
+      "value": 0.013000000268220901
+    },
+    {
+      "t": 2011,
+      "value": 0.06199999898672104
+    },
+    {
+      "t": 2012,
+      "value": 0.12999999523162842
+    },
+    {
+      "t": 2013,
+      "value": 0.1599999964237213
+    },
+    {
+      "t": 2014,
+      "value": 0.5899999737739563
+    },
+    {
+      "t": 2015,
+      "value": 1.100000023841858
+    },
+    {
+      "t": 2016,
+      "value": 1.399999976158142
+    },
+    {
+      "t": 2017,
+      "value": 1.899999976158142
+    },
+    {
+      "t": 2018,
+      "value": 2.5999999046325684
+    },
+    {
+      "t": 2019,
+      "value": 3.200000047683716
+    },
+    {
+      "t": 2020,
+      "value": 11
+    },
+    {
+      "t": 2021,
+      "value": 18
+    },
+    {
+      "t": 2022,
+      "value": 22
+    },
+    {
+      "t": 2023,
+      "value": 23
+    },
+    {
+      "t": 2024,
+      "value": 27
+    },
+    {
+      "t": 2025,
+      "value": 35
+    }
+  ],
+  "provenance": {
+    "source": "iea",
+    "sourceIndicator": "EV sales share · Cars · EV",
+    "url": "https://api.iea.org/evs?region=United%20Kingdom&csv=true",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "767e3027ab778767af0448cdcfba5616224e5f3bce7f9aca317928fdc9ab8e7e",
+    "definition": "Share of new cars sold that are electric, United Kingdom",
+    "attribution": "IEA — Global EV Data Explorer",
+    "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity United Kingdom"
+    }
+  ],
+  "derivedFrom": [
+    "United Kingdom"
+  ]
+}

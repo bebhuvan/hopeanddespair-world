@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "women-business-and-the-law-index",
+  "vintage": "2026-06-11",
+  "url": "https://ourworldindata.org/grapher/women-business-and-the-law-index",
+  "checksum": "e04da25f0087417f6a4bf8718ce0b29439a1b6c29f7b999f3a729d4df6d0182b",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T10:06:50.802Z",
+  "adapterVersion": "1.0.0"
+}

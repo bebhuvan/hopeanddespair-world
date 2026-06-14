@@ -1,0 +1,125 @@
+{
+  "indicatorId": "science.openalex_country_india.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "works per year, million",
+  "points": [
+    {
+      "t": 2000,
+      "value": 0.02
+    },
+    {
+      "t": 2001,
+      "value": 0.03
+    },
+    {
+      "t": 2002,
+      "value": 0.03
+    },
+    {
+      "t": 2003,
+      "value": 0.03
+    },
+    {
+      "t": 2004,
+      "value": 0.03
+    },
+    {
+      "t": 2005,
+      "value": 0.04
+    },
+    {
+      "t": 2006,
+      "value": 0.05
+    },
+    {
+      "t": 2007,
+      "value": 0.06
+    },
+    {
+      "t": 2008,
+      "value": 0.06
+    },
+    {
+      "t": 2009,
+      "value": 0.07
+    },
+    {
+      "t": 2010,
+      "value": 0.08
+    },
+    {
+      "t": 2011,
+      "value": 0.1
+    },
+    {
+      "t": 2012,
+      "value": 0.12
+    },
+    {
+      "t": 2013,
+      "value": 0.14
+    },
+    {
+      "t": 2014,
+      "value": 0.17
+    },
+    {
+      "t": 2015,
+      "value": 0.17
+    },
+    {
+      "t": 2016,
+      "value": 0.19
+    },
+    {
+      "t": 2017,
+      "value": 0.22
+    },
+    {
+      "t": 2018,
+      "value": 0.23
+    },
+    {
+      "t": 2019,
+      "value": 0.24
+    },
+    {
+      "t": 2020,
+      "value": 0.31
+    },
+    {
+      "t": 2021,
+      "value": 0.34
+    },
+    {
+      "t": 2022,
+      "value": 0.38
+    },
+    {
+      "t": 2023,
+      "value": 0.41
+    },
+    {
+      "t": 2024,
+      "value": 0.45
+    }
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:IN&group_by=publication_year",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:IN&group_by=publication_year&per-page=100",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-13",
+    "checksum": "33cfdbc757764404d9f6b02a412c3ae15cfc0e27744af283c976daddc7a14b86",
+    "definition": "OpenAlex works per year with at least one authorship institution in India.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "openalex_group_by",
+      "detail": "filtered works to author-institution country India, grouped by publication year, 2000-2024, shown in millions"
+    }
+  ]
+}

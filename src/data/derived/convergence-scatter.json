@@ -1,0 +1,1171 @@
+{
+  "chartId": "convergence-scatter",
+  "title": "Growth vs starting income, 2000–2024 — do poorer economies grow faster?",
+  "period": [
+    2000,
+    2024
+  ],
+  "n": 183,
+  "unit": "GDP per capita PPP at start ($) vs annualized growth (%/yr); bubble = population",
+  "points": [
+    {
+      "x": 37524.0346018738,
+      "y": 0.7159621022177376,
+      "pop": 99291.5,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 6796.40633958013,
+      "y": 1.1244555202092852,
+      "pop": 27040359,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 6582.01638790869,
+      "y": 4.959382964270312,
+      "pop": 2733077.5,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 54809.1441679423,
+      "y": 0.7696285525948439,
+      "pop": 73811.5,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 95390.7013642316,
+      "y": -1.307312052036632,
+      "pop": 7239987.5,
+      "region": "Middle East, North Africa, Afghanistan & Pakistan"
+    },
+    {
+      "x": 22281.3814299958,
+      "y": 0.7650161258321149,
+      "pop": 41455071.5,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 4589.00825039977,
+      "y": 6.149999361222358,
+      "pop": 3127300,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 25547.6120273679,
+      "y": 0.5811902406484808,
+      "pop": 84342,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 45099.0752097084,
+      "y": 1.2105683011859103,
+      "pop": 23112807,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 53534.3421055422,
+      "y": 0.7301790076680748,
+      "pop": 8594774,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 5656.92989378687,
+      "y": 5.672646955459712,
+      "pop": 9125715,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 1033.47188177042,
+      "y": 0.07110374437056718,
+      "pop": 10258990,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 50455.7338920672,
+      "y": 0.9480981678782715,
+      "pop": 11054930,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 2536.16885867097,
+      "y": 1.7944243618725413,
+      "pop": 10842171.5,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 1428.57400617096,
+      "y": 2.4104307570933,
+      "pop": 17737163.5,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 2712.93512215725,
+      "y": 4.751996345796702,
+      "pop": 154053334,
+      "region": "South Asia"
+    },
+    {
+      "x": 12563.8880988668,
+      "y": 4.1751178636790645,
+      "pop": 7305796.5,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 57968.9956082135,
+      "y": 0.06580862696955828,
+      "pop": 1113126,
+      "region": "Middle East, North Africa, Afghanistan & Pakistan"
+    },
+    {
+      "x": 34597.1621145274,
+      "y": 0.19376488062108344,
+      "pop": 362559,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 7830.53433078343,
+      "y": 4.015600543124695,
+      "pop": 3662012,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 11182.4548339393,
+      "y": 3.9765069295327304,
+      "pop": 9556119.5,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 11363.6868781615,
+      "y": 0.4373813566660297,
+      "pop": 328935.5,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 98019.93147275,
+      "y": 0.45431150621138744,
+      "pop": 63093,
+      "region": "North America"
+    },
+    {
+      "x": 7492.43381815499,
+      "y": 1.7228563437293583,
+      "pop": 10509820.5,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 14005.347187072,
+      "y": 1.4114938086643067,
+      "pop": 193008427.5,
+      "region": "Latin America & Caribbean ",
+      "label": "Brazil"
+    },
+    {
+      "x": 21779.2203006868,
+      "y": 0.011177831546257028,
+      "pop": 272265,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 100323.439918528,
+      "y": -0.9918496159042759,
+      "pop": 394572.5,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 13185.8171514278,
+      "y": 1.3126190733276553,
+      "pop": 2099260.5,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 1245.81399563599,
+      "y": -0.47637975988865655,
+      "pop": 4582053,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 48399.3055389359,
+      "y": 0.6600378646021143,
+      "pop": 35987164.5,
+      "region": "North America"
+    },
+    {
+      "x": 67378.3901472877,
+      "y": 0.8328284504303415,
+      "pop": 8094916,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 17525.2717273479,
+      "y": 2.2651160880454118,
+      "pop": 17634203,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 4066.03627019859,
+      "y": 7.370549606126871,
+      "pop": 1335810000,
+      "region": "East Asia & Pacific",
+      "label": "China"
+    },
+    {
+      "x": 4838.34023729938,
+      "y": 1.3855493885324663,
+      "pop": 24816617,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 3822.94425358926,
+      "y": 1.0486008301995753,
+      "pop": 22018187.5,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 981.422080026496,
+      "y": 2.041884619005056,
+      "pop": 79891853.5,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 7570.58279297342,
+      "y": -0.8446409521600806,
+      "pop": 4742153,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 10813.4942250011,
+      "y": 2.2322646411072844,
+      "pop": 45988148.5,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 2858.85692121457,
+      "y": 0.8222440405722176,
+      "pop": 701354,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 4510.13573659758,
+      "y": 3.254324505158753,
+      "pop": 489097,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 14018.7425010386,
+      "y": 2.7269056306262156,
+      "pop": 4533824.5,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 34307.1247870579,
+      "y": -0.7345664918976407,
+      "pop": 144913.5,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 36121.81640625,
+      "y": 1.5687305838774905,
+      "pop": 1152974.5,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 29427.4070011514,
+      "y": 2.035508866185716,
+      "pop": 10580045.5,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 49875.8764172059,
+      "y": 0.9437566843727948,
+      "pop": 82864050.5,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 14054.6548016043,
+      "y": 1.198636236578099,
+      "pop": 67358,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 57907.5020603903,
+      "y": 0.8745379163781634,
+      "pop": 5658304,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 10896.3184155964,
+      "y": 3.3298416736958325,
+      "pop": 10005873.5,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 11558.220469383,
+      "y": 1.223195646395562,
+      "pop": 38859100.5,
+      "region": "Middle East, North Africa, Afghanistan & Pakistan"
+    },
+    {
+      "x": 9183.05155276919,
+      "y": 1.7378449387264776,
+      "pop": 15412342,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 9981.62775083138,
+      "y": 2.1688444871639527,
+      "pop": 94810771,
+      "region": "Middle East, North Africa, Afghanistan & Pakistan"
+    },
+    {
+      "x": 39945.8971298178,
+      "y": 0.8050781746344585,
+      "pop": 44708352,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 20528.5708195573,
+      "y": 2.9015409268119337,
+      "pop": 1384663,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 810.270749126975,
+      "y": 5.301716514810898,
+      "pop": 99735630.5,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 46968.841714507,
+      "y": 0.7419329473931757,
+      "pop": 5398060,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 9070.99316578265,
+      "y": 1.6851405558667782,
+      "pop": 884846.5,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 45922.4789363701,
+      "y": 0.7363481942519456,
+      "pop": 64735157,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 3555.49951989363,
+      "y": 0.30350528327716864,
+      "pop": 112602,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 21717.2240797447,
+      "y": -0.5737191804639681,
+      "pop": 1907262,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 43115.5630082237,
+      "y": 0.8301444131708339,
+      "pop": 64059257,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 5706.27236527837,
+      "y": 6.136063955710388,
+      "pop": 3888344,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 3327.35199291767,
+      "y": 3.131868229351764,
+      "pop": 27032250.5,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 2358.28765608495,
+      "y": 2.21848221020771,
+      "pop": 11591808.5,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 2658.61770579464,
+      "y": 0.5827145685256514,
+      "pop": 2107536,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 1974.62172274651,
+      "y": 1.3714242882365522,
+      "pop": 1718046.5,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 11767.4708814313,
+      "y": 1.135652401501234,
+      "pop": 1297897.5,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 31386.639783624,
+      "y": 0.7386354521952871,
+      "pop": 10605471,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 11625.050939182,
+      "y": 1.763784341091923,
+      "pop": 112329,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 8770.4040870875,
+      "y": 1.523140494405073,
+      "pop": 15051975.5,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 8025.29326490962,
+      "y": 9.055215224671564,
+      "pop": 797959.5,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 39848.59152924,
+      "y": 2.112074642061616,
+      "pop": 7094550,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 4579.68960840984,
+      "y": 1.5137208200317311,
+      "pop": 8701738,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 21302.2503684536,
+      "y": 2.9100306009109067,
+      "pop": 4167251,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 3267.07646816599,
+      "y": -0.6284886296029524,
+      "pop": 10037854,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 22117.9204303193,
+      "y": 2.539661661919161,
+      "pop": 9886518,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 6056.38197842165,
+      "y": 3.6291465251807007,
+      "pop": 249782860.5,
+      "region": "East Asia & Pacific",
+      "label": "Indonesia"
+    },
+    {
+      "x": 3099.5028215766,
+      "y": 4.804083612450541,
+      "pop": 1254429262,
+      "region": "South Asia",
+      "label": "India"
+    },
+    {
+      "x": 53675.0054596933,
+      "y": 3.318721108644218,
+      "pop": 4600482,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 11643.1218077696,
+      "y": 1.694075519362248,
+      "pop": 78993198.5,
+      "region": "Middle East, North Africa, Afghanistan & Pakistan"
+    },
+    {
+      "x": 12702.1641950921,
+      "y": 0.007498181256715419,
+      "pop": 35233035.5,
+      "region": "Middle East, North Africa, Afghanistan & Pakistan"
+    },
+    {
+      "x": 49338.4714252632,
+      "y": 1.2941897332281238,
+      "pop": 333855.5,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 33275.0631655978,
+      "y": 1.468845373509072,
+      "pop": 8131700,
+      "region": "Middle East, North Africa, Afghanistan & Pakistan"
+    },
+    {
+      "x": 50353.4200415436,
+      "y": 0.23422072424679197,
+      "pop": 57947406,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 9667.92474492316,
+      "y": 0.6647745374894838,
+      "pop": 2723500.5,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 8086.92202690853,
+      "y": 0.6798874351048829,
+      "pop": 8469910.5,
+      "region": "Middle East, North Africa, Afghanistan & Pakistan"
+    },
+    {
+      "x": 39005.9136305044,
+      "y": 0.6968743516975111,
+      "pop": 125409185.5,
+      "region": "East Asia & Pacific",
+      "label": "Japan"
+    },
+    {
+      "x": 12935.864368308,
+      "y": 4.261632493861245,
+      "pop": 18046837,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 3756.63622296879,
+      "y": 1.842071156551565,
+      "pop": 43537917,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 3638.46314292227,
+      "y": 2.755512071684267,
+      "pop": 6060115,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 1922.03179092592,
+      "y": 5.390818328970914,
+      "pop": 15050568.5,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 2481.41524257587,
+      "y": 1.1334137971652467,
+      "pop": 111565.5,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 19840.5800645267,
+      "y": 1.8129727038645498,
+      "pop": 46045.5,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 26404.1588575745,
+      "y": 3.062919237562123,
+      "pop": 49379588,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 60585.3026788164,
+      "y": -1.1351123803455008,
+      "pop": 3425986,
+      "region": "Middle East, North Africa, Afghanistan & Pakistan"
+    },
+    {
+      "x": 2899.01961879748,
+      "y": 4.530947179907522,
+      "pop": 6600515.5,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 1868.17975587618,
+      "y": -0.5274202202133333,
+      "pop": 4270467,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 17747.0188855832,
+      "y": -1.4325191146290939,
+      "pop": 6343022,
+      "region": "Middle East, North Africa, Afghanistan & Pakistan"
+    },
+    {
+      "x": 18818.8855989431,
+      "y": 1.05690625861814,
+      "pop": 169180,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 6428.61341890463,
+      "y": 3.1686926612598234,
+      "pop": 20604527,
+      "region": "South Asia"
+    },
+    {
+      "x": 1932.15793223415,
+      "y": 1.3010398196092656,
+      "pop": 2170668,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 15771.4269595328,
+      "y": 4.564416589347845,
+      "pop": 3193907,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 114141.585295622,
+      "y": 0.4929035695646326,
+      "pop": 556656,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 14554.2131724037,
+      "y": 3.9559744002595356,
+      "pop": 2116837,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 55994.760697993,
+      "y": 2.8770850448065195,
+      "pop": 558800,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 5100.11572265625,
+      "y": 2.441178341839338,
+      "pop": 33252304,
+      "region": "Middle East, North Africa, Afghanistan & Pakistan"
+    },
+    {
+      "x": 5727.07922525352,
+      "y": 4.377702141771792,
+      "pop": 2663487,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 1701.44320253582,
+      "y": -0.11015874109653694,
+      "pop": 24240647,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 13738.2809408875,
+      "y": 2.1533458851795473,
+      "pop": 404909,
+      "region": "South Asia"
+    },
+    {
+      "x": 20470.4937646148,
+      "y": 0.3077400701082903,
+      "pop": 114743279.5,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 3772.2158024995,
+      "y": 2.698769352185759,
+      "pop": 44127,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 11988.2945978824,
+      "y": 2.927323681141962,
+      "pop": 1925354.5,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 2187.71894209604,
+      "y": 1.1975705601547406,
+      "pop": 18018942.5,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 31066.9228903221,
+      "y": 2.9259402055888133,
+      "pop": 479467,
+      "region": "Middle East, North Africa, Afghanistan & Pakistan"
+    },
+    {
+      "x": 1359.93038778036,
+      "y": 5.649127119873842,
+      "pop": 49895466,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 14452.2762793739,
+      "y": 2.771336685173938,
+      "pop": 614237.5,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 5818.24307842901,
+      "y": 4.428816896324869,
+      "pop": 2956543.5,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 711.976393527396,
+      "y": 3.1057713572902172,
+      "pop": 26380709.5,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 5008.60806690014,
+      "y": 1.074906366429048,
+      "pop": 3891418,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 13481.7540541745,
+      "y": 3.0469404598811574,
+      "pop": 1216326,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 1239.39174838676,
+      "y": 1.1523382120808243,
+      "pop": 16485614,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 18532.9096706227,
+      "y": 2.5426050984517072,
+      "pop": 29262744.5,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 7858.38789521253,
+      "y": 1.1197862277999127,
+      "pop": 2424389,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 1190.56674543223,
+      "y": 1.7302699978106517,
+      "pop": 19271021,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 4889.00321939426,
+      "y": 2.0488741370401646,
+      "pop": 179530986,
+      "region": "Sub-Saharan Africa ",
+      "label": "Nigeria"
+    },
+    {
+      "x": 4878.24776981667,
+      "y": 1.8809792166542734,
+      "pop": 5969386.5,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 56016.8727218416,
+      "y": 0.958099735455642,
+      "pop": 16959499,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 77587.2073182558,
+      "y": 0.6692201541798948,
+      "pop": 5031623,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 2340.81563141298,
+      "y": 3.2010754433291897,
+      "pop": 27098781.5,
+      "region": "South Asia"
+    },
+    {
+      "x": 8844.94679373008,
+      "y": 1.4307505016485291,
+      "pop": 11057.5,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 35879.7911310766,
+      "y": 1.3253436080346535,
+      "pop": 4572600,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 42086.0431536301,
+      "y": -0.568188247830359,
+      "pop": 3781834.5,
+      "region": "Middle East, North Africa, Afghanistan & Pakistan"
+    },
+    {
+      "x": 3531.71291531612,
+      "y": 1.8459332991688375,
+      "pop": 203074145.5,
+      "region": "Middle East, North Africa, Afghanistan & Pakistan",
+      "label": "Pakistan"
+    },
+    {
+      "x": 14572.9752457781,
+      "y": 3.8135847235773936,
+      "pop": 3762973,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 7669.0953178046,
+      "y": 2.975094840461863,
+      "pop": 30408089.5,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 4740.43891694569,
+      "y": 3.2639998948975104,
+      "pop": 97734533.5,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 3326.79859970528,
+      "y": 1.0580548250510282,
+      "pop": 8056783,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 18566.3546288772,
+      "y": 3.7029443542524243,
+      "pop": 37408931,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 37298.5450447133,
+      "y": 0.7079189187151262,
+      "pop": 3506950,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 35069.827570513,
+      "y": 0.7708865845025354,
+      "pop": 10492289.5,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 9998.5928544516,
+      "y": 2.0353863101673753,
+      "pop": 6015010.5,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 4520.88992531975,
+      "y": -0.6741852240628028,
+      "pop": 4105652.5,
+      "region": "Middle East, North Africa, Afghanistan & Pakistan"
+    },
+    {
+      "x": 93186.9710440179,
+      "y": 0.7247038887679302,
+      "pop": 1751405.5,
+      "region": "Middle East, North Africa, Afghanistan & Pakistan"
+    },
+    {
+      "x": 14853.6679659943,
+      "y": 4.179807942145156,
+      "pop": 20747387.5,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 20104.75,
+      "y": 3.040241620799981,
+      "pop": 145065360,
+      "region": "Europe & Central Asia",
+      "label": "Russia"
+    },
+    {
+      "x": 1016.66199090104,
+      "y": 4.86094240169563,
+      "pop": 11235249,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 55962.2661342789,
+      "y": 0.4798431705182867,
+      "pop": 25739001,
+      "region": "Middle East, North Africa, Afghanistan & Pakistan"
+    },
+    {
+      "x": 3575.85205078125,
+      "y": -2.7203153858490996,
+      "pop": 39132854,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 3093.28791602615,
+      "y": 1.5255053391125615,
+      "pop": 14235122,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 68314.5444027166,
+      "y": 2.7624355574715764,
+      "pop": 5032373.5,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 2276.82191920056,
+      "y": 0.13756650426116995,
+      "pop": 629833.5,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 1981.50608696758,
+      "y": 1.8631073489686993,
+      "pop": 6532816.5,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 7545.44796218991,
+      "y": 1.8166595537572567,
+      "pop": 6140779.5,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 702.850071117611,
+      "y": 2.8988732785086624,
+      "pop": 13923932,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 11105.9948800547,
+      "y": 3.686137323853522,
+      "pop": 7051411,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 3852.89042721453,
+      "y": 1.4764211869836195,
+      "pop": 189777,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 16220.1790603262,
+      "y": 0.6981881329190642,
+      "pop": 555537,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 18343.237153675,
+      "y": 3.2815134168075057,
+      "pop": 5405394.5,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 30055.5726465546,
+      "y": 2.006588626430254,
+      "pop": 2058162.5,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 48284.8001841043,
+      "y": 1.1070148103877595,
+      "pop": 9720909,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 6106.07478740465,
+      "y": 2.2109789531411073,
+      "pop": 1142118,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 20633.6746950761,
+      "y": 1.4528080416881028,
+      "pop": 101242.5,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 1506.71577205515,
+      "y": 1.9620120663325709,
+      "pop": 14405608,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 2160.98936671986,
+      "y": 1.3120210216308306,
+      "pop": 7327636.5,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 11622.5250278537,
+      "y": 2.6093071134234496,
+      "pop": 67337913,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 1365.23327447129,
+      "y": 5.2002815551992345,
+      "pop": 8437831,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 5112.52948147352,
+      "y": 5.3950462244959665,
+      "pop": 6038587.5,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 3783.78349040621,
+      "y": 0.11637863915783993,
+      "pop": 1072863,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 19637.5545410721,
+      "y": 2.0293593701186996,
+      "pop": 1344053.5,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 9134.41506327005,
+      "y": 1.3976433092472171,
+      "pop": 11021022,
+      "region": "Middle East, North Africa, Afghanistan & Pakistan"
+    },
+    {
+      "x": 14856.914625257,
+      "y": 3.7055657060953484,
+      "pop": 75472311,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 1839.93664550781,
+      "y": 2.9257493723048684,
+      "pop": 51410148,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 1487.00498853512,
+      "y": 2.753798809475823,
+      "pop": 37007621,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 10364.0625,
+      "y": 1.891823091729557,
+      "pop": 43708440.5,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 18752.0578112966,
+      "y": 2.2318471699688036,
+      "pop": 3326397,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 55038.6224959451,
+      "y": 1.3164804738295879,
+      "pop": 311136699.5,
+      "region": "North America",
+      "label": "United States"
+    },
+    {
+      "x": 3410.65044991898,
+      "y": 4.665494116605143,
+      "pop": 30574456.5,
+      "region": "Europe & Central Asia"
+    },
+    {
+      "x": 9999.05879203685,
+      "y": 2.611631519705626,
+      "pop": 107080.5,
+      "region": "Latin America & Caribbean "
+    },
+    {
+      "x": 4349.22348751462,
+      "y": 4.992862464915518,
+      "pop": 89070848.5,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 3342.16726611558,
+      "y": -0.21767553525740743,
+      "pop": 257029,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 4638.59446502597,
+      "y": 2.1042564176702543,
+      "pop": 199852,
+      "region": "East Asia & Pacific"
+    },
+    {
+      "x": 11183.825503143,
+      "y": 0.8142861824887474,
+      "pop": 55583453,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 2220.5653712714,
+      "y": 2.13645596801912,
+      "pop": 15666293.5,
+      "region": "Sub-Saharan Africa "
+    },
+    {
+      "x": 6170.33390832202,
+      "y": -0.7006889635607101,
+      "pop": 14263214,
+      "region": "Sub-Saharan Africa "
+    }
+  ],
+  "fits": {
+    "weighted": {
+      "slope": -1.2041890990613011,
+      "intercept": 14.22382085485801
+    },
+    "unweighted": {
+      "slope": -0.422705686987792,
+      "intercept": 5.838431623067463
+    }
+  },
+  "xTicks": [
+    1000,
+    3000,
+    10000,
+    30000,
+    100000
+  ],
+  "yTicks": [
+    -4,
+    -2,
+    0,
+    2,
+    4,
+    6,
+    8
+  ],
+  "regionColors": {
+    "East Asia & Pacific": "#C0492B",
+    "South Asia": "#C7901A",
+    "Sub-Saharan Africa": "#0F7A52",
+    "Latin America & Caribbean": "#5A55E6",
+    "Europe & Central Asia": "#6E7E92",
+    "Middle East, North Africa, Afghanistan & Pakistan": "#2B8C8C",
+    "North America": "#14130F"
+  },
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "NY.GDP.PCAP.PP.KD × SP.POP.TOTL",
+    "url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "6de4a54f8ed60b892771934b9c8d4abe69b1c53b60c79a4f0d2176de9081404e",
+    "definition": "Annualized growth of GDP per capita (PPP, constant 2021 international $) 2000–2024 vs initial level, 183 countries; OLS fits of growth on ln(initial level), population-weighted and unweighted.",
+    "attribution": "World Bank — World Development Indicators (ICP PPP & population)",
+    "primarySource": "World Bank, International Comparison Program / OECD"
+  },
+  "recipe": [
+    {
+      "op": "convergence_scatter",
+      "detail": "per-country growth 2000–2024 vs ln(initial); weighted slope -1.204, unweighted slope -0.423"
+    }
+  ]
+}

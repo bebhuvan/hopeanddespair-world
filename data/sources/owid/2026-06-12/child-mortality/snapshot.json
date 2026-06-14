@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "child-mortality",
+  "vintage": "2026-06-12",
+  "url": "https://ourworldindata.org/grapher/child-mortality",
+  "checksum": "d8ede251e65ea8325f9520d9223b8abe8c2c592adea5deb9f21dc18115092b07",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:44:50.843Z",
+  "adapterVersion": "1.0.0"
+}

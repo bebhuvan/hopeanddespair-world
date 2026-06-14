@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "share-of-the-population-with-access-to-electricity",
+  "vintage": "2026-06-11",
+  "url": "https://ourworldindata.org/grapher/share-of-the-population-with-access-to-electricity",
+  "checksum": "a46a927ebbf8e2d7d3f1e869f97d7e23ee402c5f622d274bdf86ee9fea53ec4b",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T10:06:55.815Z",
+  "adapterVersion": "1.0.0"
+}

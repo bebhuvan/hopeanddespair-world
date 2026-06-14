@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "health.vaccine_dtp3_wb.lcn",
+    "unit": "% of children 12–23 months",
+    "points": 45
+  },
+  "wasDerivedFrom": [
+    "LCN"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity LCN"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SH.IMM.IDPT",
+      "url": "https://data.worldbank.org/indicator/SH.IMM.IDPT",
+      "vintage": "2026-06-13",
+      "checksum": "48c46f43a9d1fc8a047259a5770fe86b9487ebdd55d31f90fb14927a9d2062f5",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "WHO/UNICEF, via World Bank"
+}

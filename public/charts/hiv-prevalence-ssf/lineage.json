@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "health.hiv_prevalence.ssf",
+    "unit": "% of population ages 15–49",
+    "points": 35
+  },
+  "wasDerivedFrom": [
+    "SSF"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity SSF"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SH.DYN.AIDS.ZS",
+      "url": "https://data.worldbank.org/indicator/SH.DYN.AIDS.ZS",
+      "vintage": "2026-06-13",
+      "checksum": "fed4cde76b916521eb653321c5a6fddfc180f69ca0fc567bfe4ef8cee10c6d3c",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UNAIDS, via World Bank"
+}

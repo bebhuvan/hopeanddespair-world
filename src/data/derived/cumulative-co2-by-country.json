@@ -1,0 +1,89 @@
+{
+  "chartId": "cumulative-co2-by-country",
+  "kind": "bars",
+  "title": "Cumulative CO₂ emissions by country",
+  "unit": "Cumulative CO₂ since 1750, billion tonnes",
+  "yearSpan": "2024–2024",
+  "bars": [
+    {
+      "label": "United States",
+      "value": 434.9,
+      "color": "despair"
+    },
+    {
+      "label": "China",
+      "value": 285.1,
+      "color": "despair"
+    },
+    {
+      "label": "Russia",
+      "value": 122.8,
+      "color": "despair"
+    },
+    {
+      "label": "Germany",
+      "value": 95.1,
+      "color": "despair"
+    },
+    {
+      "label": "United Kingdom",
+      "value": 80.1,
+      "color": "despair"
+    },
+    {
+      "label": "Japan",
+      "value": 69.6,
+      "color": "despair"
+    },
+    {
+      "label": "India",
+      "value": 66.1,
+      "color": "despair"
+    },
+    {
+      "label": "Brazil",
+      "value": 18.2,
+      "color": "ochre"
+    },
+    {
+      "label": "Indonesia",
+      "value": 17.4,
+      "color": "ochre"
+    },
+    {
+      "label": "Nigeria",
+      "value": 4.7,
+      "color": "ochre"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 0.3,
+      "color": "hope"
+    }
+  ],
+  "xmax": 450,
+  "xTicks": [
+    0,
+    100,
+    200,
+    300,
+    400
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "cumulative-co2-emissions",
+    "url": "https://ourworldindata.org/grapher/cumulative-co2-emissions",
+    "license": "CC BY 4.0",
+    "vintage": "2024–2024",
+    "checksum": "f1aa3683c0e9a4672ffad0a0332326447a728c869b42cb7d7fe1adecd71a7188",
+    "definition": "Cumulative production-based CO₂ emissions since 1750 (billion tonnes), latest year per country — the stock of historical responsibility. A curated 11-country spread sorted descending.",
+    "attribution": "Global Carbon Budget, via Our World in Data",
+    "primarySource": "Global Carbon Budget (2025)"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, ÷1000000000, 11 curated countries sorted descending"
+    }
+  ]
+}

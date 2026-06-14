@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "technology.internet_users.eas",
+    "unit": "% of population",
+    "points": 20
+  },
+  "wasDerivedFrom": [
+    "EAS"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity EAS"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "IT.NET.USER.ZS",
+      "url": "https://data.worldbank.org/indicator/IT.NET.USER.ZS",
+      "vintage": "2026-06-12",
+      "checksum": "421e7831857b839bb172f4ef90ec7714b7b35de99a1e23f400f114cd7c0322cd",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "ITU, via World Bank"
+}

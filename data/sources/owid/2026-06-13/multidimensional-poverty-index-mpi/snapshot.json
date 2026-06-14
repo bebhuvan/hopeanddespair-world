@@ -1,0 +1,9 @@
+{
+  "source": "owid",
+  "slug": "multidimensional-poverty-index-mpi",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/multidimensional-poverty-index-mpi.csv",
+  "checksum": "3a1c167777b3b7c2a1c400f8c20d7a6443106dfe9b6ad97cdf53a0e603ed9480",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T06:19:03.776Z"
+}

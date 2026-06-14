@@ -1,0 +1,177 @@
+[
+  {
+    "indicatorId": "gender.maternal_mortality.world",
+    "entity": "WLD",
+    "entityName": "World",
+    "unit": "deaths per 100,000 live births",
+    "points": [
+      {
+        "t": 1985,
+        "value": 460
+      },
+      {
+        "t": 1986,
+        "value": 438
+      },
+      {
+        "t": 1987,
+        "value": 429
+      },
+      {
+        "t": 1988,
+        "value": 414
+      },
+      {
+        "t": 1989,
+        "value": 401
+      },
+      {
+        "t": 1990,
+        "value": 391
+      },
+      {
+        "t": 1991,
+        "value": 395
+      },
+      {
+        "t": 1992,
+        "value": 395
+      },
+      {
+        "t": 1993,
+        "value": 389
+      },
+      {
+        "t": 1994,
+        "value": 382
+      },
+      {
+        "t": 1995,
+        "value": 371
+      },
+      {
+        "t": 1996,
+        "value": 366
+      },
+      {
+        "t": 1997,
+        "value": 358
+      },
+      {
+        "t": 1998,
+        "value": 360
+      },
+      {
+        "t": 1999,
+        "value": 340
+      },
+      {
+        "t": 2000,
+        "value": 328
+      },
+      {
+        "t": 2001,
+        "value": 321
+      },
+      {
+        "t": 2002,
+        "value": 311
+      },
+      {
+        "t": 2003,
+        "value": 301
+      },
+      {
+        "t": 2004,
+        "value": 291
+      },
+      {
+        "t": 2005,
+        "value": 283
+      },
+      {
+        "t": 2006,
+        "value": 276
+      },
+      {
+        "t": 2007,
+        "value": 269
+      },
+      {
+        "t": 2008,
+        "value": 264
+      },
+      {
+        "t": 2009,
+        "value": 258
+      },
+      {
+        "t": 2010,
+        "value": 253
+      },
+      {
+        "t": 2011,
+        "value": 247
+      },
+      {
+        "t": 2012,
+        "value": 239
+      },
+      {
+        "t": 2013,
+        "value": 235
+      },
+      {
+        "t": 2014,
+        "value": 231
+      },
+      {
+        "t": 2015,
+        "value": 228
+      },
+      {
+        "t": 2016,
+        "value": 220
+      },
+      {
+        "t": 2017,
+        "value": 215
+      },
+      {
+        "t": 2018,
+        "value": 211
+      },
+      {
+        "t": 2019,
+        "value": 207
+      },
+      {
+        "t": 2020,
+        "value": 211
+      },
+      {
+        "t": 2021,
+        "value": 242
+      },
+      {
+        "t": 2022,
+        "value": 203
+      },
+      {
+        "t": 2023,
+        "value": 197
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SH.STA.MMRT",
+      "url": "https://data.worldbank.org/indicator/SH.STA.MMRT",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "d59f41f60f6fb4a180e6b35c74e505806e8979751f854cfa5c6685a16c2affbc",
+      "definition": "Maternal mortality ratio (modeled estimate, per 100,000 live births)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "WHO, UNICEF, UNFPA, World Bank Group (MMEIG)"
+    }
+  }
+]

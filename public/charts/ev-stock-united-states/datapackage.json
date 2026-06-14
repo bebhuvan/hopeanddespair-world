@@ -1,0 +1,38 @@
+{
+  "name": "transport-ev_stock-united-states",
+  "title": "Electric cars on the road, United States",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "IEA — Global EV Data Explorer",
+      "path": "https://api.iea.org/evs?region=USA&csv=true"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "transport-ev_stock-united-states",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "transport_ev_stock_united_states",
+            "type": "number",
+            "unit": "Vehicles"
+          }
+        ]
+      }
+    }
+  ]
+}

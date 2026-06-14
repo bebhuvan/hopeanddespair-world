@@ -1,0 +1,79 @@
+{
+  "chartId": "openalex-institution-types-2024",
+  "kind": "bars",
+  "title": "Works by institution type, 2024",
+  "unit": "works, million",
+  "yearSpan": "2024",
+  "bars": [
+    {
+      "label": "education",
+      "value": 5.51,
+      "color": "hope"
+    },
+    {
+      "label": "healthcare",
+      "value": 1.03,
+      "color": "hope"
+    },
+    {
+      "label": "facility",
+      "value": 1.02,
+      "color": "hope"
+    },
+    {
+      "label": "government",
+      "value": 0.54,
+      "color": "ochre"
+    },
+    {
+      "label": "company",
+      "value": 0.4,
+      "color": "ochre"
+    },
+    {
+      "label": "nonprofit",
+      "value": 0.29,
+      "color": "ochre"
+    },
+    {
+      "label": "other",
+      "value": 0.15,
+      "color": "stone"
+    },
+    {
+      "label": "funder",
+      "value": 0.13,
+      "color": "stone"
+    },
+    {
+      "label": "archive",
+      "value": 0.04,
+      "color": "stone"
+    }
+  ],
+  "xmax": 6,
+  "xTicks": [
+    0,
+    1.5,
+    3,
+    4.5,
+    6
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "works group_by authorships.institutions.type",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2024-01-01,to_publication_date:2024-12-31&group_by=authorships.institutions.type&per-page=200",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-13",
+    "checksum": "7b3e2ca6adfa99f7df139d861bf528c92ebd2c3c21b6819d041b074d7dfb30ff",
+    "definition": "Works published in 2024, grouped by type of authorship institutions attached in OpenAlex.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "openalex_group_by",
+      "detail": "group 2024 works by authorship institution type; show counts in millions"
+    }
+  ]
+}

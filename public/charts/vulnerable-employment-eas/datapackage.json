@@ -1,0 +1,38 @@
+{
+  "name": "work-vulnerable_employment-eas",
+  "title": "Vulnerable employment, total (% of total employment) (modeled ILO estimate)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/SL.EMP.VULN.ZS"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "work-vulnerable_employment-eas",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "work_vulnerable_employment_eas",
+            "type": "number",
+            "unit": "% of total employment"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "science.openalex_field_social_sciences_index.world",
+    "unit": "index, 2000 = 100",
+    "points": 25
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "derived_transform",
+        "detail": "divided yearly Social sciences work count by its 2000 value and multiplied by 100"
+      }
+    ],
+    "agent": "adapter:openalex@openalex-story-1.0.0",
+    "used": {
+      "source": "openalex",
+      "slug": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,primary_topic.field.id:https://openalex.org/fields/33&group_by=publication_year",
+      "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,primary_topic.field.id:https://openalex.org/fields/33&group_by=publication_year&per-page=100",
+      "vintage": "2026-06-13",
+      "checksum": "a79de6caf8377b0c7afa055e03c4d1b86a7db482421df068c5c60b9a6cb9a541",
+      "license": "CC0 1.0"
+    }
+  },
+  "primarySource": "OpenAlex"
+}

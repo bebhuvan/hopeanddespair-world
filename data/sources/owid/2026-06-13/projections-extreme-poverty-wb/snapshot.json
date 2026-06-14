@@ -1,0 +1,9 @@
+{
+  "source": "owid",
+  "slug": "projections-extreme-poverty-wb",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/projections-extreme-poverty-wb.csv?useColumnShortNames=true",
+  "checksum": "e82bff96313fee4652244d60526d8a06c368cde89a35bc3972d1a42fa7ded0ed",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T06:24:41.044Z"
+}

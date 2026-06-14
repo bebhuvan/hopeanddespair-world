@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "scientific-and-technical-journal-articles",
+  "vintage": "2026-06-12",
+  "url": "https://ourworldindata.org/grapher/scientific-and-technical-journal-articles",
+  "checksum": "26f3d1fc9b0f587e3d486c5eb0f329a55f34256523985e2585a4c956c08348a1",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:43:37.277Z",
+  "adapterVersion": "1.0.0"
+}

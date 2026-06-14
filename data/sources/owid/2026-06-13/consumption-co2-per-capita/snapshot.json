@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "consumption-co2-per-capita",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/consumption-co2-per-capita",
+  "checksum": "9e845d43a12838efe4ae4cb52df3406c17f43554028ec66af7b1ec29102e6577",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T13:37:37.194Z",
+  "adapterVersion": "1.0.0"
+}

@@ -1,0 +1,121 @@
+[
+  {
+    "indicatorId": "science.rnd_spend_gdp.sas",
+    "entity": "SAS",
+    "entityName": "South Asia",
+    "unit": "% of GDP",
+    "points": [
+      {
+        "t": 1996,
+        "value": 0.623488631237301
+      },
+      {
+        "t": 1997,
+        "value": 0.68669
+      },
+      {
+        "t": 1998,
+        "value": 0.70378
+      },
+      {
+        "t": 1999,
+        "value": 0.72413
+      },
+      {
+        "t": 2000,
+        "value": 0.736011405769646
+      },
+      {
+        "t": 2001,
+        "value": 0.73591
+      },
+      {
+        "t": 2002,
+        "value": 0.72567
+      },
+      {
+        "t": 2003,
+        "value": 0.71929
+      },
+      {
+        "t": 2004,
+        "value": 0.740626265197392
+      },
+      {
+        "t": 2005,
+        "value": 0.82411
+      },
+      {
+        "t": 2006,
+        "value": 0.78632736913797
+      },
+      {
+        "t": 2007,
+        "value": 0.80507
+      },
+      {
+        "t": 2008,
+        "value": 0.826499370275791
+      },
+      {
+        "t": 2009,
+        "value": 0.827694335291312
+      },
+      {
+        "t": 2010,
+        "value": 0.762064289715317
+      },
+      {
+        "t": 2011,
+        "value": 0.75502
+      },
+      {
+        "t": 2012,
+        "value": 0.74399
+      },
+      {
+        "t": 2013,
+        "value": 0.682172287961583
+      },
+      {
+        "t": 2014,
+        "value": 0.678025269899219
+      },
+      {
+        "t": 2015,
+        "value": 0.670154902727138
+      },
+      {
+        "t": 2016,
+        "value": 0.6495461545429
+      },
+      {
+        "t": 2017,
+        "value": 0.64720145189609
+      },
+      {
+        "t": 2018,
+        "value": 0.641760020059033
+      },
+      {
+        "t": 2019,
+        "value": 0.65942
+      },
+      {
+        "t": 2020,
+        "value": 0.629398082132028
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "GB.XPD.RSDV.GD.ZS",
+      "url": "https://data.worldbank.org/indicator/GB.XPD.RSDV.GD.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "4d3e7ae2e5be1ea3258f12d3af8a18f7d6d5d9b8fcb596d7f1ab75976ef5b8c3",
+      "definition": "Research and development expenditure (% of GDP)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "UNESCO Institute for Statistics, via World Bank"
+    }
+  }
+]

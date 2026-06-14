@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "climate.n2o_concentration.world",
+    "unit": "parts per billion",
+    "points": 25
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "identity",
+        "detail": "normalized directly from source"
+      }
+    ],
+    "agent": "adapter:noaagml@1.0.0",
+    "used": {
+      "source": "noaagml",
+      "slug": "n2o",
+      "url": "https://gml.noaa.gov/webdata/ccgg/trends/n2o/n2o_annmean_gl.txt",
+      "vintage": "2026-06-13",
+      "checksum": "77757b8ace75cf12756ee0ccf177f34272052ae7d57b8a9c919541ea3ec5df14",
+      "license": "Public Domain (NOAA GML)"
+    }
+  },
+  "primarySource": "NOAA Global Monitoring Laboratory"
+}

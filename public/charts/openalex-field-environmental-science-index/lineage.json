@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "science.openalex_field_environmental_science_index.world",
+    "unit": "index, 2000 = 100",
+    "points": 25
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "derived_transform",
+        "detail": "divided yearly Environmental science work count by its 2000 value and multiplied by 100"
+      }
+    ],
+    "agent": "adapter:openalex@openalex-story-1.0.0",
+    "used": {
+      "source": "openalex",
+      "slug": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,primary_topic.field.id:https://openalex.org/fields/23&group_by=publication_year",
+      "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,primary_topic.field.id:https://openalex.org/fields/23&group_by=publication_year&per-page=100",
+      "vintage": "2026-06-13",
+      "checksum": "582b75c69fcb8b25fcf4d3fc49dc8bc7264d3d12fc5e7df3a9f4c86a311dd671",
+      "license": "CC0 1.0"
+    }
+  },
+  "primarySource": "OpenAlex"
+}

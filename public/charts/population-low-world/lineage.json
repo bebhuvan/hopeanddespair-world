@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "demography.population_low.world",
+    "unit": "people",
+    "points": 77
+  },
+  "wasDerivedFrom": [
+    "900"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:unwpp@1.0.0",
+    "used": {
+      "source": "unwpp",
+      "slug": "wpp-variants",
+      "url": "https://population.un.org/wpp/",
+      "vintage": "2026-06-13",
+      "checksum": "507e07a8f2b80bfc2efe7190d20bff134bc550aa1c7e1c8b65a27afa1ad80f7b",
+      "license": "CC BY 3.0 IGO"
+    }
+  },
+  "primarySource": "UN World Population Prospects 2024"
+}

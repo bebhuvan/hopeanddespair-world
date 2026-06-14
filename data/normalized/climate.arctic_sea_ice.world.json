@@ -1,0 +1,209 @@
+[
+  {
+    "indicatorId": "climate.arctic_sea_ice.world",
+    "entity": "Arctic Ocean",
+    "entityName": "Arctic Ocean",
+    "unit": "million square kilometers",
+    "points": [
+      {
+        "t": 1979,
+        "value": 7.051
+      },
+      {
+        "t": 1980,
+        "value": 7.667
+      },
+      {
+        "t": 1981,
+        "value": 7.138
+      },
+      {
+        "t": 1982,
+        "value": 7.302
+      },
+      {
+        "t": 1983,
+        "value": 7.395
+      },
+      {
+        "t": 1984,
+        "value": 6.805
+      },
+      {
+        "t": 1985,
+        "value": 6.698
+      },
+      {
+        "t": 1986,
+        "value": 7.411
+      },
+      {
+        "t": 1987,
+        "value": 7.279
+      },
+      {
+        "t": 1988,
+        "value": 7.369
+      },
+      {
+        "t": 1989,
+        "value": 7.008
+      },
+      {
+        "t": 1990,
+        "value": 6.143
+      },
+      {
+        "t": 1991,
+        "value": 6.473
+      },
+      {
+        "t": 1992,
+        "value": 7.474
+      },
+      {
+        "t": 1993,
+        "value": 6.397
+      },
+      {
+        "t": 1994,
+        "value": 7.138
+      },
+      {
+        "t": 1995,
+        "value": 6.08
+      },
+      {
+        "t": 1996,
+        "value": 7.583
+      },
+      {
+        "t": 1997,
+        "value": 6.686
+      },
+      {
+        "t": 1998,
+        "value": 6.536
+      },
+      {
+        "t": 1999,
+        "value": 6.117
+      },
+      {
+        "t": 2000,
+        "value": 6.246
+      },
+      {
+        "t": 2001,
+        "value": 6.732
+      },
+      {
+        "t": 2002,
+        "value": 5.827
+      },
+      {
+        "t": 2003,
+        "value": 6.116
+      },
+      {
+        "t": 2004,
+        "value": 5.984
+      },
+      {
+        "t": 2005,
+        "value": 5.504
+      },
+      {
+        "t": 2006,
+        "value": 5.862
+      },
+      {
+        "t": 2007,
+        "value": 4.267
+      },
+      {
+        "t": 2008,
+        "value": 4.687
+      },
+      {
+        "t": 2009,
+        "value": 5.262
+      },
+      {
+        "t": 2010,
+        "value": 4.865
+      },
+      {
+        "t": 2011,
+        "value": 4.561
+      },
+      {
+        "t": 2012,
+        "value": 3.566
+      },
+      {
+        "t": 2013,
+        "value": 5.208
+      },
+      {
+        "t": 2014,
+        "value": 5.22
+      },
+      {
+        "t": 2015,
+        "value": 4.616
+      },
+      {
+        "t": 2016,
+        "value": 4.528
+      },
+      {
+        "t": 2017,
+        "value": 4.822
+      },
+      {
+        "t": 2018,
+        "value": 4.785
+      },
+      {
+        "t": 2019,
+        "value": 4.364
+      },
+      {
+        "t": 2020,
+        "value": 4.001
+      },
+      {
+        "t": 2021,
+        "value": 4.952
+      },
+      {
+        "t": 2022,
+        "value": 4.897
+      },
+      {
+        "t": 2023,
+        "value": 4.381
+      },
+      {
+        "t": 2024,
+        "value": 4.351
+      },
+      {
+        "t": 2025,
+        "value": 4.747
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "arctic_sea_ice_extent_min",
+      "url": "https://ourworldindata.org/grapher/arctic-sea-ice",
+      "license": "Public Domain (NSIDC Sea Ice Index)",
+      "vintage": "2026-06-13",
+      "checksum": "16d8dfdc2eb6d7a79a9d07f15f351c88dc84cb10bebdd2cea8be708a3204a063",
+      "definition": "Arctic sea-ice extent, September minimum, World",
+      "attribution": "Our World in Data",
+      "primarySource": "National Snow and Ice Data Center (NSIDC) — Sea Ice Index v3"
+    }
+  }
+]

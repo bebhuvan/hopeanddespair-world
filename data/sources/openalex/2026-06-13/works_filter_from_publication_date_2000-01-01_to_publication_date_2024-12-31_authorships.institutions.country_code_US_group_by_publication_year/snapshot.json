@@ -1,0 +1,10 @@
+{
+  "source": "openalex",
+  "slug": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:US&group_by=publication_year",
+  "vintage": "2026-06-13",
+  "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:US&group_by=publication_year&per-page=100",
+  "checksum": "65e0fbd90e6e88d3a30b485204b6b91a384f3bdd627fb1e27caf855d4a026ecf",
+  "license": "CC0 1.0",
+  "fetchedAt": "2026-06-13T14:30:27.940Z",
+  "adapterVersion": "openalex-story-1.0.0"
+}

@@ -1,190 +1,232 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { smartenDeep } from '../lib/typo';
+import { categories } from '../lib/categories';
+import { homeCells } from '../lib/home';
 
-const questions = (await getCollection('questions')).sort((a, b) => a.data.order - b.data.order);
+const questions = (await getCollection('questions'))
+  .map((q) => ({ ...q, data: smartenDeep(q.data) }))
+  .sort((a, b) => a.data.order - b.data.order);
 const count = String(questions.length).padStart(2, '0');
 
-// temperature at axis position p ∈ [0,1] (0 = hope, 1 = despair). color-mix kept as a string so
-// it re-resolves per theme. Server-computed; emitted as inline style.
-const col = (p: number) =>
-  p < 0.5
-    ? `color-mix(in srgb, var(--hope), var(--uncertain) ${Math.round(p * 200)}%)`
-    : `color-mix(in srgb, var(--uncertain), var(--despair) ${Math.round((p - 0.5) * 200)}%)`;
-const pct = (p: number) => (p * 100).toFixed(1) + '%';
+// The "state of the world" wall: every question as a real signature sparkline, coloured by its
+// honest lean on the hope↔despair axis (built in src/lib/home.ts).
+const cells = homeCells(questions);
 
-const rows = questions.map((q) => {
-  const { hope, despair } = q.data.atlas;
-  return {
-    id: q.id,
-    num: q.data.kickerNumber,
-    title: q.data.question,
-    verdict: q.data.verdict,
-    left: pct(hope.pos),
-    width: ((despair.pos - hope.pos) * 100).toFixed(1) + '%',
-    hopePos: pct(hope.pos),
-    despairPos: pct(despair.pos),
-    hopeCol: col(hope.pos),
-    despairCol: col(despair.pos),
-    hopeLens: hope.lens,
-    despairLens: despair.lens,
-    grad: `linear-gradient(90deg, ${col(hope.pos)}, ${col(despair.pos)})`,
-  };
+// Browse-by-domain: the keystone shown apart, the thematic domains as the grid.
+const catCards = categories.map((c) => {
+  const qs = questions.filter((q) => c.themes.includes(q.data.theme));
+  return { ...c, total: qs.length, open: qs.filter((q) => q.data.status === 'published').length };
 });
+const keystone = catCards.find((c) => c.keystone);
+const domains = catCards.filter((c) => !c.keystone && c.total > 0);
+
+// Voices — verifiable lines on hope, despair, progress. The opening mark wears the quote's temperature.
+const voices = [
+  { text: 'Things can be bad, and getting better.', who: 'Hans Rosling', src: 'Factfulness', lean: 'both' },
+  { text: 'Pessimism of the intellect, optimism of the will.', who: 'Antonio Gramsci', src: 'Prison Notebooks', lean: 'both' },
+  { text: 'Not everything that is faced can be changed, but nothing can be changed until it is faced.', who: 'James Baldwin', src: 'As Much Truth As One Can Bear', lean: 'despair' },
+  { text: 'Hope is not the conviction that something will turn out well, but the certainty that something makes sense, regardless of how it turns out.', who: 'Václav Havel', src: 'Disturbing the Peace', lean: 'hope' },
+  { text: 'In the depth of winter, I finally learned that within me there lay an invincible summer.', who: 'Albert Camus', src: 'Return to Tipasa', lean: 'hope' },
+  { text: 'To be truly radical is to make hope possible, rather than despair convincing.', who: 'Raymond Williams', src: 'Resources of Hope', lean: 'both' },
+  { text: 'We must cultivate our garden.', who: 'Voltaire', src: 'Candide', lean: 'both' },
+  { text: 'Hope is the necessary, but insufficient, precondition for survival.', who: 'Cory Doctorow', src: 'on hope vs. optimism', lean: 'hope' },
+];
 ---
 <BaseLayout title="Hope & Despair — A living atlas of human progress, suffering, and uncertainty">
-  <section class="hero">
-    <p class="eyebrow reveal" style="animation-delay:.1s"><span class="live"></span> A living atlas · updated continuously</p>
-    <h1 class="statement">
-      <span class="l reveal" style="animation-delay:.18s">The world is getting better.</span>
-      <span class="l reveal" style="animation-delay:.3s">The world is getting worse.</span>
-      <span class="l both reveal" style="animation-delay:.44s">Both are true.</span>
-    </h1>
-    <p class="dek reveal" style="animation-delay:.58s">Not a verdict, but an instrument. Every question is read at
-      each magnification — from the ten-thousand-year arc to a single lived day — because
-      <em>the answer changes depending on how closely you look.</em></p>
-  </section>
+  <div class="home bleed"><div class="home-in">
 
-  <p class="section-label reveal" style="animation-delay:.66s"><span>The Atlas</span><span class="count">{count}</span></p>
-  <p class="atlas-lead reveal" style="animation-delay:.7s">Three temperatures — <span class="h">hope</span>,
-    <span class="d">despair</span>, and the <span class="u">uncertain</span> middle between them — and one question
-    read at every lens. Each mark shows <em>how far its verdict travels</em> as you change how closely you look.
-    The wider the bar, the more the answer depends on where you stand.</p>
+    <!-- hero: centred, grand — the thesis stated plainly -->
+    <section class="hero">
+      <p class="eyebrow reveal d1">A living atlas, revised in the open.</p>
+      <h1 class="statement">
+        <b class="reveal d2">The world is getting better.</b>
+        <b class="reveal d3">The world is getting worse.</b>
+        <b class="reveal d4">Both are true.</b>
+      </h1>
+      <p class="dek reveal d4">One question at a time, answered only with open data. We read each at two distances:
+        the long arc of the centuries, and the world as it feels this year. The answer usually changes between
+        them, and <em>the change is the point.</em></p>
+    </section>
 
-  <div class="axis-head reveal" style="animation-delay:.74s">
-    <span class="hope">Hope</span><span class="mid">the uncertain middle</span><span class="desp">Despair</span>
-  </div>
+    <!-- the wall: the whole atlas at a glance -->
+    <section id="atlas" class="wall">
+      <div class="sec-head"><span class="sec-eyebrow">The atlas</span><span class="sec-n">{count} questions, each read at two distances</span></div>
+      <p class="wall-lead">Every line is one question’s signature measure, drawn from its own evidence. The colour
+        is where the honest answer leans: <b class="h">toward hope</b>, <b class="d">toward despair</b>, or
+        <b class="u">genuinely both</b>. The mix is the finding.</p>
+      <ol class="grid">
+        {cells.map((c) => (
+          <li class={`cell ${c.live ? 'live' : 'draft'}`} style={`--ac:${c.color}`}>
+            <a href={`/questions/${c.id}`}>
+              <div class="ch"><span class="cn">{c.num}</span><span class="ct">{c.theme}</span>{!c.live && <span class="cs">in progress</span>}</div>
+              <h2 class="cq">{c.question}</h2>
+              {c.spark && (
+                <figure class="cspark">
+                  <svg viewBox={c.spark.viewBox} preserveAspectRatio="none" aria-hidden="true" set:html={c.spark.inner} />
+                  {c.metric && <figcaption class="cm">{c.metric}</figcaption>}
+                </figure>
+              )}
+              <p class="cv">{c.verdict}.</p>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
 
-  <div class="atlas">
-    {rows.map((r) => (
-      <a class="qrow" href={`/questions/${r.id}`}>
-        <span class="qnum">{r.num}</span>
-        <div class="qmain">
-          <div class="qtop">
-            <div class="qtitle">{r.title}<span class="go">Read →</span></div>
-            <div class="qverdict">{r.verdict}</div>
-          </div>
-          <div class="track">
-            <div class="track-line"></div><div class="track-mid"></div>
-            <div class="bar" style={`left:${r.left};width:${r.width};background:${r.grad}`}></div>
-            <div class="bar-end" style={`left:${r.hopePos};border:2px solid ${r.hopeCol}`}></div>
-            <div class="bar-end" style={`left:${r.despairPos};border:2px solid ${r.despairCol}`}></div>
-            <div class="lens-lab" style={`left:${r.hopePos};color:${r.hopeCol}`}>{r.hopeLens}</div>
-            <div class="lens-lab" style={`left:${r.despairPos}`}>{r.despairLens}</div>
-          </div>
-        </div>
-      </a>
-    ))}
-  </div>
+    <!-- the emotional pivot: one line that holds the whole thesis -->
+    <section class="creed">
+      <blockquote>Be joyful<br/>though you have considered<br/>all the facts.</blockquote>
+      <cite>Wendell Berry <span class="csrc">Manifesto: The Mad Farmer Liberation Front, 1973</span></cite>
+    </section>
 
-  <blockquote class="pull">Make reality harder to simplify.<cite>The Hope &amp; Despair project</cite></blockquote>
+    <!-- how to read this -->
+    <section class="how">
+      <span class="sec-eyebrow">How to read this</span>
+      <div class="hgrid">
+        <div class="hi"><h3>One question at a time</h3><p>Each article asks a single honest question and answers
+          it only with open, cited data. Every number traces to its source.</p></div>
+        <div class="hi"><h3>Read at every distance</h3><p>The same measure, seen from the ten-thousand-year arc
+          and from a single year. The verdict often reverses between the two, and that reversal is the thing
+          worth seeing.</p></div>
+        <div class="hi"><h3>Three temperatures</h3><p>Every chart is read three ways: <b class="h">hope</b>,
+          <b class="d">despair</b>, and <b class="u">confusion</b>, which gets equal billing here, never a
+          footnote.</p></div>
+      </div>
+    </section>
+
+    <!-- browse by domain -->
+    <section class="explore">
+      <span class="sec-eyebrow">Browse by domain</span>
+      {keystone && (
+        <a class="key" href={`/categories/${keystone.slug}`}>
+          <span class="kn">{keystone.name}</span>
+          <span class="kb">{keystone.blurb}</span>
+          <span class="kgo">Start here <span class="ar">→</span></span>
+        </a>
+      )}
+      <ul class="doms">
+        {domains.map((c) => (
+          <li><a href={`/categories/${c.slug}`}>
+            <span class="dn">{c.name}</span>
+            <span class="db">{c.blurb}</span>
+            <span class="dc">{c.total} {c.total === 1 ? 'question' : 'questions'}{c.open < c.total ? ` · ${c.open} open` : ''}</span>
+          </a></li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- voices -->
+    <section class="voices">
+      <span class="sec-eyebrow">On hope &amp; despair</span>
+      <p class="vlead">Both are always true. <em>The work is deciding which one you are looking at, and being
+        honest about the lens.</em></p>
+      <ul class="qlist">
+        {voices.map((v) => (
+          <li class={`vq ${v.lean}`}>
+            <blockquote>{v.text}</blockquote>
+            <cite><span class="who">{v.who}</span><span class="src">{v.src}</span></cite>
+          </li>
+        ))}
+      </ul>
+      <p class="vmeta">Revised in the open · data and prose are <a href="/methodology">open and cited</a> · CC&nbsp;BY&nbsp;4.0</p>
+    </section>
+
+  </div></div>
 </BaseLayout>
 
-<script is:inline>
-  // Progressive enhancement only: bars are fully visible without JS. If JS + motion allowed,
-  // start them collapsed and grow on scroll-in.
-  (() => {
-    if (matchMedia('(prefers-reduced-motion:reduce)').matches || !('IntersectionObserver' in window)) return;
-    const rows = document.querySelectorAll('.qrow');
-    rows.forEach((r) => r.classList.add('pending'));
-    const obs = new IntersectionObserver((es) => es.forEach((e) => {
-      if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
-    }), { threshold: 0.4 });
-    rows.forEach((r) => obs.observe(r));
-  })();
-</script>
-
 <style>
-  .hero { padding-block: clamp(3.5rem, 11vh, 7.5rem) clamp(2rem, 5vh, 3.4rem); }
-  .eyebrow {
-    font-family: var(--font-label); font-size: 0.76rem; font-weight: 600; letter-spacing: 0.04em;
-    color: var(--fg-2); display: flex; align-items: center; gap: 0.7rem;
-  }
-  .eyebrow .live { width: 0.5em; height: 0.5em; border-radius: 50%; background: var(--accent); position: relative; }
-  .eyebrow .live::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--accent); animation: pulse 2.4s infinite; }
-  @keyframes pulse { 0% { transform: scale(1); opacity: 0.7; } 70%, 100% { transform: scale(3); opacity: 0; } }
-  @media (prefers-reduced-motion: reduce) { .eyebrow .live::after { animation: none; } }
-  .statement {
-    font-family: var(--font-display); font-weight: 340; font-size: clamp(2.8rem, 8.4vw, 6.6rem);
-    line-height: 0.98; letter-spacing: -0.035em; margin-top: 2rem; max-width: 16ch; font-optical-sizing: auto;
-  }
-  .statement .l { display: block; }
-  .statement .both { font-style: italic; font-weight: 360; color: var(--accent); }
-  .dek {
-    font-size: clamp(1.1rem, 1.7vw, 1.42rem); line-height: 1.5; max-width: 48ch; margin-top: 2.2rem;
-    font-weight: 400; color: var(--fg-2);
-  }
-  .dek em { font-style: italic; color: var(--fg); }
+  /* one wide, calm canvas for the whole landing — every section shares this width and left edge,
+     so the page reads as a single composition instead of a narrow column floating in a void. */
+  .home-in { max-width: min(94vw, 80rem); margin-inline: auto; padding-inline: var(--margin); }
+  .home section { padding-block: clamp(2.8rem, 6vh, 4.6rem); border-top: 1px solid var(--line); }
+  .home .hero { border-top: 0; }
 
-  .section-label {
-    font-family: var(--font-label); font-size: 0.74rem; font-weight: 600; letter-spacing: 0.03em;
-    color: var(--fg-muted); display: flex; align-items: center; gap: 1rem; padding-top: clamp(2.5rem, 6vh, 4rem);
-  }
-  .section-label .count { font-family: var(--font-mono); color: var(--accent); }
-  .section-label::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
-  .atlas-lead { max-width: 60ch; margin-top: 1.1rem; color: var(--fg-2); font-size: 1.04rem; line-height: 1.55; }
-  .atlas-lead .h { font-style: italic; color: var(--hope); }
-  .atlas-lead .d { font-style: italic; color: var(--despair); }
-  .atlas-lead .u { font-style: italic; color: var(--uncertain); }
+  /* ── hero: centred and grand ── */
+  .hero { text-align: center; padding-block: clamp(4rem, 11vh, 7.5rem) clamp(3rem, 7vh, 5rem); }
+  .eyebrow { font-family: var(--serif); font-style: italic; font-size: 1.05rem; color: var(--ink-3); }
+  .statement { font-family: var(--display); font-weight: 600; font-size: clamp(2.2rem, 6vw, 5rem); line-height: 1.06; letter-spacing: -0.036em; margin-top: 1.6rem; text-wrap: nowrap; }
+  .statement b { display: block; font-weight: 600; }
+  .statement b:nth-child(1) { color: var(--hope); }
+  .statement b:nth-child(2) { color: var(--despair); }
+  .statement b:nth-child(3) { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: -0.015em; color: var(--ink); }
+  @media (max-width: 560px) { .statement { text-wrap: balance; font-size: clamp(2rem, 8.4vw, 2.9rem); } }
+  .dek { font-size: clamp(1.18rem, 1.5vw, 1.4rem); line-height: 1.56; max-width: 52ch; margin: 2rem auto 0; color: var(--ink-2); text-wrap: pretty; }
+  .dek em { color: var(--ink); }
 
-  .axis-head {
-    position: relative; display: flex; justify-content: space-between; align-items: baseline;
-    margin-top: 2.2rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--rule);
-    font-family: var(--font-display); font-style: italic; font-size: 1.05rem;
-  }
-  .axis-head .hope { color: var(--hope); }
-  .axis-head .desp { color: var(--despair); }
-  .axis-head .mid { position: absolute; left: 50%; transform: translateX(-50%); color: var(--uncertain); font-size: 0.78rem; }
+  /* ── one calm label voice for every section ── */
+  .sec-eyebrow { font-family: var(--display); font-weight: 580; font-size: 0.84rem; letter-spacing: 0.01em; color: var(--ink-3); display: block; }
+  .sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .sec-head .sec-eyebrow { font-size: 1.04rem; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+  .sec-n { font-family: var(--mono); font-size: 0.74rem; color: var(--ink-3); }
 
-  .qrow {
-    display: grid; grid-template-columns: 2.6rem 1fr; gap: 0 clamp(1rem, 3vw, 2rem);
-    padding-block: clamp(1.7rem, 3.8vh, 2.4rem); border-bottom: 1px solid var(--rule);
-    text-decoration: none; color: inherit; position: relative; transition: padding-left 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
-  }
-  .qrow:hover { padding-left: 0.7rem; }
-  .qrow::before {
-    content: ""; position: absolute; left: -0.7rem; top: 1.7rem; bottom: 1.7rem; width: 2px; border-radius: 2px;
-    background: var(--accent); transform: scaleY(0); transform-origin: center; transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
-  }
-  .qrow:hover::before { transform: scaleY(1); }
-  .qnum { font-family: var(--font-mono); font-size: 0.9rem; color: var(--fg-muted); transition: color 0.3s; padding-top: 0.35rem; }
-  .qrow:hover .qnum { color: var(--accent); }
-  .qtop { display: flex; justify-content: space-between; align-items: baseline; gap: 1.2rem; flex-wrap: wrap; }
-  .qtitle { font-family: var(--font-display); font-weight: 360; font-size: clamp(1.5rem, 3vw, 2.5rem); letter-spacing: -0.02em; line-height: 1.04; }
-  .qverdict { font-family: var(--font-display); font-style: italic; font-size: clamp(0.92rem, 1.2vw, 1.05rem); color: var(--fg-muted); white-space: nowrap; }
-  .go { font-family: var(--font-label); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent); opacity: 0; transition: opacity 0.3s; margin-left: 0.6em; }
-  .qrow:hover .go { opacity: 1; }
+  /* ── the wall ── */
+  .wall-lead { max-width: 62ch; margin-top: 1rem; color: var(--ink-2); font-size: var(--fs-body); line-height: var(--lh-body); font-weight: 450; text-wrap: pretty; }
+  .wall-lead .h { color: var(--hope); font-weight: 560; } .wall-lead .d { color: var(--despair); font-weight: 560; } .wall-lead .u { color: var(--stone); font-weight: 560; }
+  .grid { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); column-gap: clamp(1.8rem, 3vw, 3.4rem); margin-top: clamp(1.8rem, 4vh, 2.6rem); }
+  .cell { border-top: 1px solid var(--line); }
+  .cell:nth-child(-n+3) { border-top: 0; }
+  .cell a { display: flex; flex-direction: column; height: 100%; padding: clamp(1.5rem, 3vh, 2.1rem) 0; }
+  .ch { display: flex; align-items: baseline; gap: 0.6rem; }
+  .cell .cn { font-family: var(--display); font-weight: 600; font-size: 0.92rem; color: var(--ink-3); letter-spacing: 0.01em; transition: color 0.3s; }
+  .cell .ct { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
+  .cell .cs { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); margin-left: auto; }
+  .cq { font-family: var(--display); font-weight: 560; font-size: clamp(1.28rem, 1.5vw, 1.55rem); line-height: 1.08; letter-spacing: -0.022em; margin-top: 0.75rem; min-height: 2.3em; text-wrap: balance; transition: color 0.3s; }
+  .cell a:hover .cq, .cell a:hover .cn { color: var(--ac); }
+  .cell.draft .cq { color: var(--ink-2); font-weight: 500; }
+  .cspark { margin: 1.2rem 0 0; }
+  .cspark svg { width: 100%; height: 64px; display: block; overflow: visible; }
+  .cspark .cm { font-family: var(--mono); font-size: 0.62rem; color: var(--ink-3); margin-top: 0.6rem; line-height: 1.4; }
+  .cv { font-family: var(--serif); font-style: italic; font-size: 1.06rem; line-height: 1.34; color: var(--ink-2); margin-top: auto; padding-top: 1.05rem; text-wrap: pretty; }
+  @media (max-width: 880px) { .grid { grid-template-columns: repeat(2, 1fr); } .cell:nth-child(-n+3) { border-top: 1px solid var(--line); } .cell:nth-child(-n+2) { border-top: 0; } .cq { min-height: 0; } }
+  @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } .cell:nth-child(-n+2) { border-top: 1px solid var(--line); } .cell:first-child { border-top: 0; } }
 
-  .track { position: relative; height: 42px; margin-top: 1.15rem; }
-  .track-line { position: absolute; left: 0; right: 0; top: 18px; height: 1px; background: var(--rule); }
-  .track-mid { position: absolute; left: 50%; top: 12px; width: 1px; height: 12px; background: var(--rule-2); transform: translateX(-50%); }
-  .bar {
-    position: absolute; top: 18px; height: 3px; border-radius: 3px;
-    transform: translateY(-50%) scaleX(var(--grow, 1)); transform-origin: left;
-    transition: transform 1s cubic-bezier(0.2, 0.7, 0.2, 1);
-  }
-  .bar-end {
-    position: absolute; top: 18px; width: 11px; height: 11px; border-radius: 50%;
-    transform: translate(-50%, -50%) scale(var(--grow, 1)); background: var(--bg);
-    transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) 0.25s;
-  }
-  .lens-lab {
-    position: absolute; top: 26px; font-family: var(--font-mono); font-size: 0.6rem; color: var(--fg-muted);
-    white-space: nowrap; transform: translateX(-50%);
-  }
-  /* progressive enhancement: only when JS adds .pending do bars start collapsed */
-  .qrow.pending .bar, .qrow.pending .bar-end { --grow: 0; }
-  .qrow.pending.in .bar, .qrow.pending.in .bar-end { --grow: 1; }
-  @media (max-width: 680px) { .lens-lab { display: none; } }
+  /* ── the creed: one grand, evocative line, centred on white ── */
+  .creed { text-align: center; padding-block: clamp(4rem, 10vh, 7rem) !important; }
+  .creed blockquote { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.12; letter-spacing: -0.018em; color: var(--ink); text-wrap: balance; }
+  .creed cite { display: block; font-style: normal; font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.06em; color: var(--ink-3); margin-top: 1.8rem; }
+  .creed cite::before { content: "— "; }
+  .creed cite .csrc { display: block; margin-top: 0.45rem; letter-spacing: 0.03em; color: color-mix(in srgb, var(--ink-3) 78%, transparent); }
 
-  .pull {
-    font-family: var(--font-display); font-weight: 340; font-style: italic; font-size: clamp(2rem, 5vw, 3.6rem);
-    line-height: 1.05; letter-spacing: -0.025em; text-align: center; max-width: 20ch;
-    margin: clamp(4rem, 10vh, 7rem) auto clamp(2rem, 5vh, 3rem); color: var(--fg);
-  }
-  .pull::before { content: "◐"; display: block; font-style: normal; font-size: 1.5rem; color: var(--accent); margin-bottom: 1.6rem; }
-  .pull cite {
-    display: block; font-family: var(--font-label); font-style: normal; font-size: 0.74rem; font-weight: 600;
-    letter-spacing: 0.04em; color: var(--accent); margin-top: 1.6rem;
-  }
+  /* ── how to read this ── */
+  .hgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.8rem, 3.5vw, 3.4rem); margin-top: clamp(1.4rem, 3vh, 2rem); }
+  .how h3 { font-family: var(--display); font-weight: 580; font-size: 1.08rem; line-height: 1.2; letter-spacing: -0.015em; color: var(--ink); }
+  .how p { margin-top: 0.6rem; font-size: var(--fs-small); line-height: 1.6; color: var(--ink-2); font-weight: 450; max-width: 34ch; text-wrap: pretty; }
+  .how .h { color: var(--hope); } .how .d { color: var(--despair); } .how .u { color: var(--uncertain); }
+  @media (max-width: 680px) { .hgrid { grid-template-columns: 1fr; gap: 1.6rem; } }
+
+  /* ── browse by domain ── */
+  .explore .key { display: grid; gap: 0.5rem; margin-top: clamp(1.4rem, 3vh, 2rem); padding-bottom: clamp(1.6rem, 4vh, 2.4rem); margin-bottom: clamp(1.6rem, 4vh, 2.4rem); border-bottom: 1px solid var(--line-2); }
+  .explore .key .kn { font-family: var(--display); font-weight: 640; font-size: clamp(1.5rem, 2.4vw, 2rem); letter-spacing: -0.028em; line-height: 1.04; color: var(--ink); transition: color 0.3s; }
+  .explore .key:hover .kn { color: var(--hope); }
+  .explore .key .kb { font-family: var(--serif); font-size: var(--fs-lede); line-height: 1.45; color: var(--ink-2); max-width: 52ch; text-wrap: pretty; }
+  .explore .key .kgo { font-family: var(--display); font-weight: 560; font-size: 0.9rem; color: var(--hope); margin-top: 0.2rem; }
+  .explore .key .kgo .ar { display: inline-block; transition: margin-left 0.3s; }
+  .explore .key:hover .kgo .ar { margin-left: 0.3em; }
+  .doms { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.4rem, 3vw, 2.6rem) clamp(1.8rem, 3vw, 3.4rem); }
+  .doms li { border-top: 1px solid var(--line); }
+  .doms a { display: grid; gap: 0.4rem; padding-top: 1.1rem; }
+  .doms .dn { font-family: var(--display); font-weight: 580; font-size: 1.3rem; letter-spacing: -0.02em; line-height: 1.1; color: var(--ink); transition: color 0.3s; }
+  .doms a:hover .dn { color: var(--hope); }
+  .doms .db { font-size: var(--fs-small); line-height: 1.5; color: var(--ink-2); max-width: 34ch; text-wrap: pretty; }
+  .doms .dc { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.04em; color: var(--ink-3); margin-top: 0.15rem; }
+  @media (max-width: 760px) { .doms { grid-template-columns: 1fr; } }
+
+  /* ── voices: a two-column anthology, each opening mark wearing the quote's temperature ── */
+  .vlead { max-width: 56ch; margin-top: clamp(1.2rem, 3vh, 1.8rem); font-family: var(--serif); font-size: var(--fs-lede); line-height: 1.5; color: var(--ink-2); text-wrap: pretty; }
+  .vlead em { font-style: italic; color: var(--ink); }
+  .qlist { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); column-gap: clamp(2.4rem, 5vw, 4.5rem); margin-top: clamp(1.6rem, 3.5vh, 2.4rem); }
+  .vq { position: relative; padding: clamp(1.5rem, 3vh, 2rem) 0 clamp(1.5rem, 3vh, 2rem) 2.4rem; border-top: 1px solid var(--line); }
+  .vq:nth-child(-n+2) { border-top: 0; }
+  .vq::before { content: "\201C"; position: absolute; left: 0; top: clamp(1.5rem, 3vh, 2rem); font-family: var(--serif); font-size: 2.3rem; line-height: 0.7; color: var(--ink-3); }
+  .vq.hope::before { color: var(--hope); } .vq.despair::before { color: var(--despair); } .vq.both::before { color: var(--uncertain); }
+  .vq blockquote { font-family: var(--serif); font-size: clamp(1.24rem, 1.7vw, 1.5rem); line-height: 1.36; color: var(--ink); text-wrap: pretty; }
+  .vq cite { display: block; margin-top: 0.8rem; font-style: normal; }
+  .vq cite .who { font-family: var(--display); font-weight: 580; font-size: 0.95rem; color: var(--ink-2); }
+  .vq cite .src { font-family: var(--mono); font-size: 0.68rem; color: var(--ink-3); margin-left: 0.7em; letter-spacing: 0.02em; }
+  .vmeta { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-3); margin-top: clamp(2rem, 5vh, 3rem); padding-top: 1.4rem; border-top: 1px solid var(--line-2); }
+  .vmeta a { color: var(--ink-2); border-bottom: 1px solid var(--line-2); }
+  .vmeta a:hover { color: var(--hope); border-color: var(--hope); }
+  @media (max-width: 640px) { .qlist { grid-template-columns: 1fr; } .vq:nth-child(2) { border-top: 1px solid var(--line); } .vq:first-child { border-top: 0; } }
 </style>

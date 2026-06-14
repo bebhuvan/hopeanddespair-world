@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "demography.fertility_rate.world",
+    "unit": "live births per woman",
+    "points": 74
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "children-per-woman-un",
+      "url": "https://ourworldindata.org/grapher/children-per-woman-un",
+      "vintage": "2026-06-13",
+      "checksum": "54565a461bfba0cd975066579d3324e5e7e05da64acc670ec05a1584bf05aa7b",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UN World Population Prospects (2024) — via Our World in Data"
+}

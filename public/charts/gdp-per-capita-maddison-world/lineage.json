@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "economy.gdp_per_capita_maddison.world",
+    "unit": "international-$ in 2011 prices",
+    "points": 21
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "gdp-per-capita-maddison-project-database",
+      "url": "https://ourworldindata.org/grapher/gdp-per-capita-maddison-project-database",
+      "vintage": "2026-06-12",
+      "checksum": "3764bd2ceff342198e539a27a87ec85bc2679ed8fc40c09f430a70a21fcdf27b",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Maddison Project Database (2023) — via Our World in Data"
+}

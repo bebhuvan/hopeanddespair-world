@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "SL.EMP.WORK.ZS",
+  "vintage": "2026-06-12",
+  "url": "https://data.worldbank.org/indicator/SL.EMP.WORK.ZS",
+  "checksum": "e87bad7c230dad2dd6de6c39aa61ebfb57121dd4b395dcb41645865086e566ad",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:44:36.150Z",
+  "adapterVersion": "1.0.0"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "technology-electricity_access-world",
+  "title": "Access to electricity means having an electricity source that can provide very basic lighting, and charge a phone or power a radio for 4 hours per day.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/share-of-the-population-with-access-to-electricity"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "technology-electricity_access-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "technology_electricity_access_world",
+            "type": "number",
+            "unit": "% of population"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hope &amp; Despair — a living atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..460;1,9..144,300..420&family=Newsreader:ital,opsz,wght@0,6..72,340..460;1,6..72,340..420&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* surfaces — pure white, one barely-warm tint reserved for a single closing moment */
+    --bg:#FFFFFF; --bg-soft:#FAFAF7; --ink-field:#15140F;
+    /* ink */
+    --ink:#14130F; --ink-2:#46443C; --ink-3:#8B887E; --on-dark:#ECE7DB; --on-dark-2:#A8A296;
+    /* hairlines do all structural work */
+    --line:rgba(20,19,15,.11); --line-2:rgba(20,19,15,.20);
+    /* temperature — deepened a touch for sophistication, used as a jewel not a fill */
+    --hope:#0C8F66; --despair:#CF5A3B; --uncertain:#5A5DC0; --gold:#A9821D;
+    /* type */
+    --display:"Fraunces",Georgia,serif;
+    --body:"Newsreader",Georgia,serif;
+    --mono:"Spline Sans Mono",ui-monospace,monospace;
+    /* measure */
+    --col:54rem; --measure:37rem; --gutter:5.5rem;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-feature-settings:"kern" 1}
+  body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.62;font-weight:400}
+  ::selection{background:#15140F;color:#fff}
+  em{font-style:italic}
+  a{color:inherit;text-decoration:none}
+  .display{font-family:var(--display);font-optical-sizing:auto;font-variation-settings:"SOFT" 0,"WONK" 0}
+
+  /* asymmetric editorial grid: a centred content column with a left gutter for
+     figure numbers / section numerals / quiet labels. One boundary, the whole layout. */
+  .grid{max-width:calc(var(--col) + var(--gutter));margin-inline:auto;padding-inline:clamp(1.25rem,5vw,2.5rem)}
+  .row{display:grid;grid-template-columns:var(--gutter) minmax(0,1fr);gap:0 clamp(1rem,3vw,2.4rem)}
+  .row > .g{grid-column:1}
+  .row > .c{grid-column:2;min-width:0}
+  @media(max-width:680px){
+    .row{grid-template-columns:1fr}
+    .row > .g{grid-column:1;margin-bottom:.5rem}
+  }
+  .glabel{font-family:var(--mono);font-size:.66rem;letter-spacing:.02em;color:var(--ink-3);padding-top:.55rem;line-height:1.5}
+
+  /* ── header ── */
+  header.site{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px) saturate(1.1);border-bottom:1px solid var(--line)}
+  header.site .bar{display:flex;align-items:baseline;justify-content:space-between;height:64px;max-width:calc(var(--col) + var(--gutter));margin-inline:auto;padding-inline:clamp(1.25rem,5vw,2.5rem)}
+  .word{font-family:var(--display);font-weight:380;font-size:1.12rem;letter-spacing:-.01em;display:inline-flex;align-items:baseline;gap:.5ch}
+  .word .amp{font-style:italic;color:var(--hope)}
+  nav.top{display:flex;gap:1.8rem;font-family:var(--body);font-style:italic;font-size:.96rem;color:var(--ink-2)}
+  nav.top a{position:relative;padding-bottom:2px}
+  nav.top a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--ink);transition:right .4s cubic-bezier(.2,.7,.2,1)}
+  nav.top a:hover::after{right:0}
+  @media(max-width:600px){nav.top{display:none}}
+
+  /* ── hero ── */
+  .hero{padding-block:clamp(4rem,11vh,7.5rem) clamp(3rem,7vh,5rem)}
+  .eyebrow{font-family:var(--body);font-style:italic;font-size:1.02rem;color:var(--ink-3);letter-spacing:.005em}
+  .statement{font-family:var(--display);font-optical-sizing:auto;font-variation-settings:"SOFT" 0,"WONK" 0;font-weight:330;font-size:clamp(2.7rem,7.2vw,5.6rem);line-height:1.0;letter-spacing:-.028em;margin-top:1.6rem;max-width:17ch}
+  .statement b{display:block;font-weight:330}
+  .statement b:nth-child(2){color:var(--ink-3)}
+  .statement b:nth-child(3){font-style:italic;font-weight:360;color:var(--hope)}
+  .reveal{opacity:0;transform:translateY(14px);animation:rise 1s cubic-bezier(.2,.7,.2,1) forwards}
+  .d1{animation-delay:.05s}.d2{animation-delay:.16s}.d3{animation-delay:.3s}.d4{animation-delay:.46s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;animation:none}}
+  .dek{font-size:clamp(1.16rem,1.7vw,1.4rem);line-height:1.56;max-width:43ch;margin-top:2rem;color:var(--ink-2)}
+  .dek em{color:var(--ink)}
+
+  /* ── atlas ── */
+  .atlas-head{display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid var(--line-2);padding-top:1rem;margin-top:clamp(2rem,5vh,3.5rem)}
+  .atlas-head .t{font-family:var(--display);font-style:italic;font-weight:380;font-size:1.18rem}
+  .atlas-head .n{font-family:var(--mono);font-size:.74rem;color:var(--ink-3)}
+  .atlas-lead{max-width:48ch;margin-top:1.1rem;color:var(--ink-2);font-size:1.04rem;line-height:1.58}
+  .atlas-lead em{font-style:italic;color:var(--ink)}
+
+  /* featured (published) question — the showcase entry */
+  .feat{display:block;margin-top:clamp(2rem,5vh,3rem);padding-top:clamp(1.8rem,4vh,2.6rem);border-top:1px solid var(--line)}
+  .feat .meta{font-family:var(--mono);font-size:.68rem;color:var(--ink-3);display:flex;gap:1.1rem;align-items:center}
+  .feat .meta .live{color:var(--hope)}
+  .feat-body{display:grid;grid-template-columns:1fr minmax(0,15rem);gap:clamp(1.5rem,4vw,3rem);align-items:end;margin-top:1.1rem}
+  .feat h2{font-family:var(--display);font-optical-sizing:auto;font-weight:340;font-size:clamp(2rem,4.4vw,3.3rem);line-height:1.02;letter-spacing:-.024em;max-width:15ch;transition:color .35s}
+  .feat:hover h2{color:var(--hope)}
+  .feat .verdict{font-family:var(--display);font-style:italic;font-size:1.12rem;color:var(--ink-3);margin-top:.9rem}
+  .feat .flip{margin-top:1.3rem;display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap;font-size:.98rem}
+  .feat .flip .lens{font-style:italic;color:var(--ink-3)}
+  .feat .flip .v{position:relative;padding-left:.95em}
+  .feat .flip .v::before{content:"";position:absolute;left:0;top:.52em;width:.36em;height:.36em;border-radius:50%;background:currentColor}
+  .feat .flip .hope{color:var(--hope)} .feat .flip .desp{color:var(--despair)}
+  .feat .flip .arr{color:var(--line-2);font-family:var(--mono)}
+  .feat figure{margin:0}
+  .feat .spark{width:100%;height:74px;display:block;overflow:visible}
+  .feat .spark path.line{transition:stroke .35s}
+  .feat:hover .spark path.line{stroke:var(--hope)}
+  .feat .axis{font-family:var(--mono);font-size:.62rem;color:var(--ink-3);display:flex;justify-content:space-between;margin-top:.4rem}
+  @media(max-width:680px){.feat-body{grid-template-columns:1fr}.feat figure{order:2}}
+
+  /* draft questions — quiet single rows */
+  .drafts{margin-top:0}
+  .draft{display:grid;grid-template-columns:1fr auto;align-items:baseline;gap:1.5rem;padding-block:clamp(1.4rem,3.2vh,2.1rem);border-top:1px solid var(--line)}
+  .draft .ttl{font-family:var(--display);font-weight:360;font-size:clamp(1.4rem,2.8vw,2rem);line-height:1.08;letter-spacing:-.018em;color:var(--ink-2);transition:color .35s}
+  .draft:hover .ttl{color:var(--ink)}
+  .draft .vd{font-family:var(--display);font-style:italic;font-size:1rem;color:var(--ink-3);margin-top:.35rem}
+  .draft .status{font-family:var(--mono);font-size:.66rem;color:var(--ink-3);white-space:nowrap}
+
+  /* ── article ── */
+  .article{margin-top:clamp(5rem,13vh,9rem)}
+  .kicker{font-family:var(--mono);font-size:.72rem;letter-spacing:.01em;color:var(--hope)}
+  .kicker .sep{color:var(--ink-3)}
+  h1.q{font-family:var(--display);font-optical-sizing:auto;font-variation-settings:"SOFT" 0,"WONK" 0;font-weight:310;font-size:clamp(2.6rem,6.4vw,4.9rem);line-height:.98;letter-spacing:-.026em;margin-top:1.3rem;max-width:15ch}
+  .lede{max-width:var(--measure);margin-top:2rem;font-size:clamp(1.2rem,1.7vw,1.42rem);line-height:1.55;color:var(--ink-2);font-weight:400}
+  .lede .lq{font-family:var(--display);font-style:italic;color:var(--ink)}
+
+  .block{margin-top:clamp(3rem,7vh,5rem)}
+  .block.tight{margin-top:clamp(2.2rem,5vh,3.4rem)}
+
+  /* caveats — no box; a quiet labelled list with hanging dashes */
+  .caveats .label,.explain .label,.evi .label,.move .label,.plain .label{font-family:var(--display);font-style:italic;font-size:1.06rem;color:var(--ink-3)}
+  .caveats ul{list-style:none;display:grid;gap:.7rem;max-width:var(--measure);margin-top:1rem}
+  .caveats li{position:relative;padding-left:1.5rem;color:var(--ink-2);font-size:1.02rem;line-height:1.55}
+  .caveats li::before{content:"—";position:absolute;left:0;color:var(--ink-3)}
+  .caveats b{font-style:italic;font-weight:400;color:var(--ink)}
+
+  /* explainer — set off by hairlines + space, not a tinted card. The term sings in the gutter. */
+  .explain{padding-block:clamp(1.6rem,3.5vh,2.4rem);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .explain .g .tag{font-family:var(--mono);font-size:.64rem;color:var(--gold);line-height:1.6}
+  .explain .term{font-family:var(--display);font-style:italic;font-weight:360;font-size:clamp(1.5rem,3.1vw,2.15rem);line-height:1.06;letter-spacing:-.01em}
+  .explain p{max-width:var(--measure);margin-top:.9rem;font-size:1.06rem;line-height:1.62;color:var(--ink-2)}
+  .explain b{font-style:italic;font-weight:400;color:var(--ink)}
+
+  /* evidence — four magnifications; columns parted by whitespace + one rule, no cells */
+  .evi .head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+  .evi .head .t{font-family:var(--display);font-style:italic;font-size:1.18rem;color:var(--ink-2)}
+  .evi .head .t b{font-style:normal;font-weight:440;color:var(--ink)}
+  .evi .head .legend{font-family:var(--mono);font-size:.64rem;color:var(--ink-3);display:flex;gap:1.1rem}
+  .evi .head .legend i{display:inline-block;width:1.4em;height:2px;vertical-align:.2em;margin-right:.45em}
+  .windows{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(1.2rem,3vw,2.6rem);margin-top:1.6rem;padding-top:1.7rem;border-top:1px solid var(--line-2)}
+  .win .wr{font-family:var(--mono);font-size:.6rem;color:var(--ink-3)}
+  .win .wl{font-family:var(--display);font-style:italic;font-size:1.04rem;margin-top:.15rem}
+  .win svg{width:100%;height:50px;display:block;overflow:visible;margin-top:.7rem}
+  .win .wv{font-family:var(--display);font-weight:320;font-size:clamp(1.5rem,2.9vw,2.15rem);line-height:1;letter-spacing:-.02em;margin-top:.55rem}
+  .win .wv.cool{color:var(--hope)} .win .wv.warm{color:var(--despair)}
+  .win .wv .p{color:var(--ink)}
+  .readout{max-width:56ch;margin-top:1.8rem;font-size:clamp(1.1rem,1.5vw,1.26rem);line-height:1.56;color:var(--ink-2)}
+  .readout em{font-style:italic;color:var(--ink)}
+  @media(max-width:680px){.windows{grid-template-columns:repeat(2,1fr);gap:1.8rem 1.4rem}}
+
+  /* dark interlude — the lived now, rendered as a calm ink field, not a gridded panel */
+  .interlude{background:var(--ink-field);color:var(--on-dark);margin-top:clamp(3.5rem,9vh,6.5rem);border-radius:2px}
+  .interlude .in{max-width:calc(var(--col) + var(--gutter));margin-inline:auto;padding:clamp(2.6rem,7vw,5rem) clamp(1.25rem,5vw,2.5rem)}
+  .interlude .e{font-family:var(--mono);font-size:.66rem;color:var(--despair)}
+  .interlude blockquote{font-family:var(--display);font-optical-sizing:auto;font-weight:320;font-style:italic;font-size:clamp(1.9rem,4.6vw,3.2rem);line-height:1.1;letter-spacing:-.018em;margin-top:1.2rem;max-width:22ch}
+  .interlude blockquote b{font-style:normal;font-weight:380;color:#fff}
+  .interlude .sub{max-width:50ch;margin-top:1.5rem;color:var(--on-dark-2);font-size:1.06rem;line-height:1.6}
+  .interlude .sub b{color:var(--on-dark);font-weight:400}
+
+  /* movement — chart as the hero, figure number lives in the gutter */
+  .move{margin-top:clamp(3.5rem,9vh,6.5rem)}
+  .move .g .fno{font-family:var(--mono);font-size:.66rem;color:var(--ink-3);padding-top:.5rem}
+  .move .ey{font-family:var(--display);font-style:italic;font-size:1.06rem;color:var(--hope)}
+  .move h2{font-family:var(--display);font-optical-sizing:auto;font-weight:330;font-size:clamp(1.9rem,3.8vw,2.9rem);line-height:1.04;letter-spacing:-.02em;margin-top:.7rem;max-width:19ch}
+  .move .answer{max-width:var(--measure);margin-top:1.1rem;font-family:var(--display);font-style:italic;font-weight:360;font-size:clamp(1.35rem,2.3vw,1.72rem);line-height:1.16;color:var(--ink)}
+  .move .intro{max-width:var(--measure);margin-top:1.1rem;color:var(--ink-2);font-size:1.08rem;line-height:1.64}
+  .move .intro em{font-style:italic;color:var(--ink)}
+
+  figure.fig{margin:clamp(1.8rem,4vh,2.6rem) 0 0}
+  figure.fig .cap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.64rem;color:var(--ink-3);margin-bottom:1rem}
+  figure.fig .cap b{color:var(--ink-2);font-weight:500}
+  .chart{width:100%;height:auto;display:block}
+  .chart .ax{font-family:var(--mono);font-size:10px;fill:var(--ink-3)}
+  .chart .lbl{font-family:var(--mono);font-size:10.5px;fill:var(--ink-2)}
+  figure.fig figcaption{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center;margin-top:1rem}
+  .src{font-family:var(--mono);font-size:.62rem;color:var(--ink-3)}
+  .tools{display:flex;gap:1.1rem}
+  .tools a{font-family:var(--mono);font-size:.64rem;color:var(--ink-2);border-bottom:1px solid var(--line-2);padding-bottom:1px}
+  .tools a:hover{color:var(--hope);border-color:var(--hope)}
+
+  details.prov{margin-top:1.2rem;max-width:var(--col)}
+  details.prov summary{font-family:var(--display);font-style:italic;font-size:1rem;color:var(--ink-3);cursor:pointer;list-style:none;border-top:1px solid var(--line);padding-top:.9rem}
+  details.prov summary::-webkit-details-marker{display:none}
+  details.prov summary::before{content:"+ ";font-family:var(--mono);font-style:normal}
+  details.prov[open] summary::before{content:"– "}
+  details.prov .pb{font-size:.96rem;line-height:1.6;color:var(--ink-2);max-width:var(--measure);margin-top:.8rem}
+  details.prov .pb b{font-style:italic;font-weight:400;color:var(--ink)}
+  details.prov .meta{font-family:var(--mono);font-size:.62rem;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;margin-top:.9rem}
+
+  /* the three takes — no boxes; three voices parted by space, each a coloured italic label */
+  .takes{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.4rem,3vw,2.6rem);margin-top:1.8rem;padding-top:1.4rem;border-top:1px solid var(--line)}
+  .takes .t{font-family:var(--display);font-style:italic;font-size:1.02rem;margin-bottom:.5rem}
+  .takes .hope .t{color:var(--hope)} .takes .desp .t{color:var(--despair)} .takes .conf .t{color:var(--uncertain)}
+  .takes p{font-size:.96rem;line-height:1.55;color:var(--ink-2);max-width:34ch}
+  @media(max-width:680px){.takes{grid-template-columns:1fr;gap:1.4rem}}
+
+  /* pull quote — hanging open-quote, generous air */
+  .pull{font-family:var(--display);font-optical-sizing:auto;font-weight:300;font-style:italic;font-size:clamp(2.1rem,5.2vw,3.6rem);line-height:1.08;letter-spacing:-.02em;text-align:center;max-width:19ch;margin:clamp(4.5rem,12vh,8rem) auto clamp(3rem,7vh,4.5rem);position:relative}
+  .pull::before{content:"\201C";position:absolute;top:-.7em;left:50%;transform:translateX(-50%);font-size:2.4rem;color:var(--hope);font-style:normal}
+  .pull cite{display:block;font-family:var(--mono);font-style:normal;font-size:.66rem;color:var(--ink-3);margin-top:1.6rem}
+
+  /* closing — the single warm moment the design budget allows */
+  .plain{margin-top:clamp(3rem,7vh,5rem);background:var(--bg-soft);border-top:1px solid var(--hope);padding:clamp(2.2rem,5.5vw,3.6rem) 0}
+  .plain .inner{max-width:calc(var(--col) + var(--gutter));margin-inline:auto;padding-inline:clamp(1.25rem,5vw,2.5rem)}
+  .plain .e{font-family:var(--mono);font-size:.66rem;color:var(--hope)}
+  .plain h3{font-family:var(--display);font-style:italic;font-weight:360;font-size:clamp(1.8rem,3.6vw,2.6rem);line-height:1.04;letter-spacing:-.016em;margin-top:.6rem;max-width:20ch}
+  .plain p{max-width:var(--measure);margin-top:1.2rem;font-size:1.12rem;line-height:1.62;color:var(--ink-2)}
+  .plain p.first{color:var(--ink)}
+  .plain .disc{margin-top:1.8rem;padding-left:1.2rem;border-left:1px solid var(--line-2);font-style:italic;font-size:.92rem;color:var(--ink-3);max-width:var(--measure)}
+
+  footer.site{border-top:1px solid var(--line);margin-top:clamp(4rem,9vh,6rem)}
+  footer.site .in{max-width:calc(var(--col) + var(--gutter));margin-inline:auto;padding:2.4rem clamp(1.25rem,5vw,2.5rem) 3.4rem;display:flex;justify-content:space-between;gap:1.2rem;flex-wrap:wrap;font-family:var(--mono);font-size:.68rem;color:var(--ink-3)}
+  footer.site nav{display:flex;gap:1.6rem}
+  footer.site a:hover{color:var(--ink)}
+</style>
+</head>
+<body>
+
+<header class="site"><div class="bar">
+  <a class="word" href="#"><span>Hope</span><span class="amp">&amp;</span><span>Despair</span></a>
+  <nav class="top"><a href="#atlas">the atlas</a><a href="#article">a question</a><a href="#">about</a><a href="#">method</a></nav>
+</div></header>
+
+<main class="grid">
+  <!-- HERO -->
+  <section class="hero">
+    <p class="eyebrow reveal d1">A living atlas — read continuously, revised in the open.</p>
+    <h1 class="statement">
+      <b class="reveal d2">The world is getting better.</b>
+      <b class="reveal d3">The world is getting worse.</b>
+      <b class="reveal d4">Both are true.</b>
+    </h1>
+    <p class="dek reveal d4">Not a verdict, but an instrument. Each question is read at every magnification — from the ten-thousand-year arc to a single lived day — because <em>the answer changes depending on how closely you look.</em></p>
+  </section>
+
+  <!-- ATLAS -->
+  <div id="atlas" class="atlas-head">
+    <span class="t">The Atlas</span>
+    <span class="n">03 questions open</span>
+  </div>
+  <p class="atlas-lead">Every question is read at two distances — the long view and the lived now — and we follow the verdict that travels between them. <em>Where it flips, the honest answer is both.</em></p>
+
+  <!-- featured / published -->
+  <a class="feat" href="#article">
+    <div class="meta"><span>Question 01</span><span class="sep">·</span><span>War &amp; Peace</span><span class="sep">·</span><span class="live">published</span></div>
+    <div class="feat-body">
+      <div>
+        <h2 class="display">Is humanity becoming less violent?</h2>
+        <div class="verdict">Long-run progress, short-run reversal.</div>
+        <div class="flip">
+          <span><span class="lens">10,000-year lens</span> <span class="v hope">Yes</span></span>
+          <span class="arr">→</span>
+          <span><span class="lens">since 2020</span> <span class="v desp">No</span></span>
+        </div>
+      </div>
+      <figure>
+        <svg class="spark" viewBox="0 0 260 74" preserveAspectRatio="none" aria-hidden="true">
+          <path class="area" d="M2,16 C40,18 70,34 110,46 C150,57 190,62 224,62 C236,62 246,46 258,38 L258,74 L2,74 Z" fill="color-mix(in srgb,var(--hope) 7%,transparent)"/>
+          <path class="line" d="M2,16 C40,18 70,34 110,46 C150,57 190,62 224,62 C236,62 246,46 258,38" fill="none" stroke="var(--ink-3)" stroke-width="1.75" stroke-linecap="round"/>
+          <circle cx="258" cy="38" r="2.8" fill="var(--despair)"/>
+        </svg>
+        <div class="axis"><span>8000 BCE</span><span>violent deaths / 100k</span><span>2024</span></div>
+      </figure>
+    </div>
+  </a>
+
+  <div class="drafts">
+    <a class="draft" href="#">
+      <div><div class="ttl display">Are we winning the fight against disease?</div><div class="vd">Eradication on one front, fragility on another.</div></div>
+      <div class="status">in progress</div>
+    </a>
+    <a class="draft" href="#">
+      <div><div class="ttl display">Is the planet's climate stabilising?</div><div class="vd">Curves bending, thresholds nearing.</div></div>
+      <div class="status">in progress</div>
+    </a>
+  </div>
+
+  <!-- ARTICLE -->
+  <article class="article" id="article">
+    <div class="row">
+      <div class="g"></div>
+      <div class="c">
+        <p class="kicker">Question 01 <span class="sep">·</span> War &amp; Peace</p>
+        <h1 class="q">Is humanity becoming less violent?</h1>
+        <p class="lede">No single chart can answer it, so we don't ask one to. Five signals are read at once — and the verdict depends entirely on how far back you set the lens. <span class="lq">The same evidence converges, then breaks apart.</span></p>
+      </div>
+    </div>
+
+    <!-- caveats -->
+    <div class="row block caveats">
+      <div class="g"><div class="label">Before<br>you read</div></div>
+      <div class="c">
+        <ul>
+          <li>"Violence" here means <b>direct lethal violence</b> — it excludes coercion, structural harm, and the threat of force.</li>
+          <li>Pre-1900 numbers are <b>regional and sparse</b>; the global long arc is reconstructed, not measured.</li>
+          <li>The composite verdict is an <b>editorial</b> reading of the signals, not a computed index.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- explainer -->
+    <div class="row block explain">
+      <div class="g"><div class="tag">in plain<br>terms</div></div>
+      <div class="c">
+        <div class="term">"Per one&nbsp;hundred&nbsp;thousand people"</div>
+        <p>Raw death counts always climb as the population grows, which makes every era look bloodier than the last. So we count deaths <b>per 100,000 people</b> instead — out of a crowd the size of a small city, how many die violently in a year? It lets a medieval village and a modern megacity be set side by side, honestly. The catch worth holding onto: a falling <b>rate</b> can hide a rising <b>number</b>, when the crowd grows faster than the toll.</p>
+      </div>
+    </div>
+
+    <!-- evidence -->
+    <div class="row block evi">
+      <div class="g"><div class="label">The<br>evidence</div></div>
+      <div class="c">
+        <div class="head">
+          <div class="t">One question, read at <b>four magnifications.</b></div>
+          <div class="legend"><span><i style="background:var(--hope)"></i>improving</span><span><i style="background:var(--despair)"></i>worsening</span></div>
+        </div>
+        <div class="windows">
+          <div class="win"><div class="wr">8000 BCE — 2024</div><div class="wl">Deep history</div><svg viewBox="0 0 120 50" preserveAspectRatio="none"><path d="M2,6 C26,9 46,23 66,32 C86,40 102,44 118,45" fill="none" stroke="var(--hope)" stroke-width="1.75" stroke-linecap="round"/></svg><div class="wv cool">Yes<span class="p">.</span></div></div>
+          <div class="win"><div class="wr">1900 — 2024</div><div class="wl">Since 1900</div><svg viewBox="0 0 120 50" preserveAspectRatio="none"><path d="M2,27 C13,6 21,46 33,16 C43,40 51,9 63,37 C80,42 100,44 118,42" fill="none" stroke="var(--hope)" stroke-width="1.75" stroke-linecap="round"/></svg><div class="wv cool">Mostly<span class="p">.</span></div></div>
+          <div class="win"><div class="wr">2018 — 2024</div><div class="wl">Since 2020</div><svg viewBox="0 0 120 50" preserveAspectRatio="none"><path d="M2,43 C30,41 50,37 70,27 C90,17 105,11 118,5" fill="none" stroke="var(--despair)" stroke-width="1.75" stroke-linecap="round"/></svg><div class="wv warm">No<span class="p">.</span></div></div>
+          <div class="win"><div class="wr">right now</div><div class="wl">A lived day</div><svg viewBox="0 0 120 50" preserveAspectRatio="none"><path d="M2,36 C20,38 36,15 52,26 C70,38 86,7 102,19 C110,24 114,12 118,9" fill="none" stroke="var(--despair)" stroke-width="1.75" stroke-linecap="round"/></svg><div class="wv warm">No<span class="p">.</span></div></div>
+        </div>
+        <p class="readout">Stand ten thousand years back and the answer is <em>yes</em> — the deep arc of everyday violence falls. Step to the last few years and it <em>inverts.</em> Same data, opposite verdicts; the only thing that changed is how closely you looked.</p>
+      </div>
+    </div>
+  </article>
+</main>
+
+<!-- dark interlude (full-bleed) -->
+<section class="interlude"><div class="in">
+  <p class="e">the lived now</p>
+  <blockquote class="display">A global average is no comfort under a drone. <b>My street is the only dataset that matters.</b></blockquote>
+  <p class="sub"><b>120 million people</b> are forcibly displaced — the highest figure ever recorded. Nearly every recent signal turns upward at once. To live inside the spike is to find the world average obscene.</p>
+</div></section>
+
+<main class="grid">
+  <article class="article" style="margin-top:0">
+    <!-- movement -->
+    <div class="row move">
+      <div class="g"><div class="fno">Fig.&nbsp;6</div></div>
+      <div class="c">
+        <div class="ey">The long arc</div>
+        <h2 class="display">Over centuries, has everyday violence actually fallen?</h2>
+        <p class="answer">Homicide has fallen for seven centuries.</p>
+        <p class="intro">Where parish and coroner records survive, the everyday violence of private life has collapsed. A medieval European was <em>tens of times</em> more likely to be murdered than a person living in the same cities today — a decline so long it predates the state's monopoly on force.</p>
+
+        <figure class="fig">
+          <div class="cap"><span><b>Homicides per 100,000 / year</b> — Western Europe, mean of 12 countries</span><span>1300 — 2023</span></div>
+          <svg class="chart" viewBox="0 0 760 380" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <!-- gridlines -->
+            <g stroke="var(--line)" stroke-width="1" stroke-dasharray="1 6">
+              <line x1="60" y1="60" x2="724" y2="60"/><line x1="60" y1="140" x2="724" y2="140"/><line x1="60" y1="220" x2="724" y2="220"/>
+            </g>
+            <line x1="60" y1="300" x2="724" y2="300" stroke="var(--line-2)" stroke-width="1"/>
+            <!-- y ticks -->
+            <g class="ax" text-anchor="end"><text x="48" y="64">40</text><text x="48" y="144">30</text><text x="48" y="224">20</text><text x="48" y="304">10</text></g>
+            <!-- area + line -->
+            <path d="M60,66 C120,40 168,108 224,176 C284,232 344,262 412,282 C492,300 596,306 724,309 L724,300 L60,300 Z" fill="color-mix(in srgb,var(--hope) 6%,transparent)"/>
+            <path d="M60,66 C120,40 168,108 224,176 C284,232 344,262 412,282 C492,300 596,306 724,309" fill="none" stroke="var(--hope)" stroke-width="1.9" stroke-linecap="round"/>
+            <!-- start annotation -->
+            <circle cx="60" cy="66" r="2.6" fill="var(--hope)"/>
+            <text class="lbl" x="74" y="52">≈ 41 per 100k · 1300s</text>
+            <!-- end annotation, direct-labelled -->
+            <circle cx="724" cy="309" r="3" fill="var(--hope)"/>
+            <line x1="724" y1="305" x2="724" y2="250" stroke="var(--line-2)" stroke-width="1"/>
+            <text class="lbl" x="724" y="242" text-anchor="end" fill="var(--hope)">1.1 today</text>
+            <!-- x ticks -->
+            <g class="ax" text-anchor="middle"><text x="60" y="330">1300</text><text x="226" y="330">1500</text><text x="392" y="330">1700</text><text x="558" y="330">1900</text><text x="724" y="330">2020</text></g>
+          </svg>
+          <figcaption>
+            <div class="tools"><a href="#">↓ data, csv</a><a href="#">↓ data package</a><a href="#">↗ lineage</a></div>
+            <div class="src">Our World in Data — Eisner (2003) &amp; WHO Mortality Database · CC BY 4.0</div>
+          </figcaption>
+          <details class="prov">
+            <summary>How this number was made</summary>
+            <div class="pb"><p><b>What it measures.</b> Homicides per 100,000 people per year, as a mean of twelve Western-European countries with continuous records. Pre-modern figures derive from coroners' rolls and court archives — reliable in their direction, rough in their absolute level.</p>
+            <div class="meta"><span>source · OWID, after Eisner (2003)</span><span>license · CC BY 4.0</span><span>vintage · 2025</span><span>checksum · 9f2a…c41e</span></div></div>
+          </details>
+        </figure>
+
+        <div class="takes">
+          <div class="hope"><div class="t">Hope</div><p>A forty-fold fall. The medieval baseline of violent death has all but vanished from daily life.</p></div>
+          <div class="desp"><div class="t">Despair</div><p>"Rare" is not "none," and the clean line is European — much of the world is far thinner on history.</p></div>
+          <div class="conf"><div class="t">Confusion</div><p>Definitions, coverage, and record-keeping all shift beneath the curve. The slope is real; the precision is not.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <blockquote class="pull display">Humanity is not a line chart. A single average can bury a million tragedies.<cite>— Progress and catastrophe coexist</cite></blockquote>
+  </article>
+</main>
+
+<!-- closing -->
+<section class="plain"><div class="inner">
+  <div class="row">
+    <div class="g"></div>
+    <div class="c">
+      <p class="e">in plain words</p>
+      <h3 class="display">Still lost? Read this.</h3>
+      <p class="first">The world is incredibly safe compared to the deep past, and increasingly dangerous compared to five years ago. Both of those are true at exactly the same time.</p>
+      <p>Zoom out across centuries and the chance of dying violently has collapsed — real progress, bought with laws, treaties, and the modern state. Zoom in on the last few years and the machinery of peace is buckling: more people are displaced than ever recorded, and battle deaths are climbing. The long arc bends toward peace; the recent trend has sharply broken that promise.</p>
+      <p class="disc">This is a one-person project. The prose here is written with the help of a large language model, working from open data and edited by a human. The data is open and cited; every change is tracked in the open.</p>
+    </div>
+  </div>
+</div></section>
+
+<footer class="site"><div class="in">
+  <span>© 2026 Hope &amp; Despair — CC BY 4.0</span>
+  <nav><a href="#">archive</a><a href="#">about</a><a href="#">rss</a><a href="#">github</a></nav>
+</div></footer>
+
+<script>
+  // progressive, quiet: sections settle in on first view. Fully visible without JS.
+  (() => {
+    if (matchMedia('(prefers-reduced-motion:reduce)').matches || !('IntersectionObserver' in window)) return;
+    const els = document.querySelectorAll('.block, .move, .feat, .draft, .interlude, .pull, .plain');
+    els.forEach(e => { e.style.opacity = 0; e.style.transform = 'translateY(16px)'; e.style.transition = 'opacity .8s ease, transform .9s cubic-bezier(.2,.7,.2,1)'; });
+    const io = new IntersectionObserver((ents) => ents.forEach(en => {
+      if (en.isIntersecting) { en.target.style.opacity = 1; en.target.style.transform = 'none'; io.unobserve(en.target); }
+    }), { threshold: 0.12 });
+    els.forEach(e => io.observe(e));
+  })();
+</script>
+</body>
+</html>

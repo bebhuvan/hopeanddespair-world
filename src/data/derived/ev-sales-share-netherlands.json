@@ -1,0 +1,92 @@
+{
+  "indicatorId": "transport.ev_sales_share.netherlands",
+  "entity": "Netherlands",
+  "entityName": "Netherlands",
+  "unit": "percent",
+  "points": [
+    {
+      "t": 2010,
+      "value": 0.02500000037252903
+    },
+    {
+      "t": 2011,
+      "value": 0.1599999964237213
+    },
+    {
+      "t": 2012,
+      "value": 1
+    },
+    {
+      "t": 2013,
+      "value": 5.5
+    },
+    {
+      "t": 2014,
+      "value": 3.9000000953674316
+    },
+    {
+      "t": 2015,
+      "value": 3.5
+    },
+    {
+      "t": 2016,
+      "value": 11
+    },
+    {
+      "t": 2017,
+      "value": 6.400000095367432
+    },
+    {
+      "t": 2018,
+      "value": 6.199999809265137
+    },
+    {
+      "t": 2019,
+      "value": 15
+    },
+    {
+      "t": 2020,
+      "value": 25
+    },
+    {
+      "t": 2021,
+      "value": 29
+    },
+    {
+      "t": 2022,
+      "value": 35
+    },
+    {
+      "t": 2023,
+      "value": 44
+    },
+    {
+      "t": 2024,
+      "value": 48
+    },
+    {
+      "t": 2025,
+      "value": 58
+    }
+  ],
+  "provenance": {
+    "source": "iea",
+    "sourceIndicator": "EV sales share · Cars · EV",
+    "url": "https://api.iea.org/evs?region=Netherlands&csv=true",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "fa40de97005a55094c8680c4481d887a7ca69008ee6f428bee127f14c330fcd5",
+    "definition": "Share of new cars sold that are electric, Netherlands",
+    "attribution": "IEA — Global EV Data Explorer",
+    "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity Netherlands"
+    }
+  ],
+  "derivedFrom": [
+    "Netherlands"
+  ]
+}

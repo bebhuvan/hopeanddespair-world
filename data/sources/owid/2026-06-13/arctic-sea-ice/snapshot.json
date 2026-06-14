@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "arctic-sea-ice",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/arctic-sea-ice",
+  "checksum": "16d8dfdc2eb6d7a79a9d07f15f351c88dc84cb10bebdd2cea8be708a3204a063",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T12:09:36.051Z",
+  "adapterVersion": "1.0.0"
+}

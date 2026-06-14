@@ -1,0 +1,38 @@
+{
+  "name": "violence-refugees-world",
+  "title": "Refugees by country of origin, World — summed across 211 countries per year",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/refugee-population-by-country-or-territory-of-origin"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "violence-refugees-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "violence_refugees_world",
+            "type": "number",
+            "unit": "people"
+          }
+        ]
+      }
+    }
+  ]
+}

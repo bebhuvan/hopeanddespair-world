@@ -1,0 +1,53 @@
+[
+  {
+    "indicatorId": "violence.current_war.burkina_faso",
+    "entity": "Burkina Faso",
+    "entityName": "Burkina Faso",
+    "unit": "deaths",
+    "points": [
+      {
+        "t": 2018,
+        "value": 79
+      },
+      {
+        "t": 2019,
+        "value": 349
+      },
+      {
+        "t": 2020,
+        "value": 512
+      },
+      {
+        "t": 2021,
+        "value": 991
+      },
+      {
+        "t": 2022,
+        "value": 2105
+      },
+      {
+        "t": 2023,
+        "value": 4806
+      },
+      {
+        "t": 2024,
+        "value": 2199
+      },
+      {
+        "t": 2025,
+        "value": 3031
+      }
+    ],
+    "provenance": {
+      "source": "ucdp",
+      "sourceIndicator": "bd_best",
+      "url": "https://ucdp.uu.se/downloads/brd/ucdp-brd-conf-261-csv.zip",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "b34ecb57f1fc0e73d4bfd7b080212da429af3135a8d360b1c902e45506f81147",
+      "definition": "Best estimate of deaths in state-based armed conflict (combatants and civilians killed in the fighting).",
+      "attribution": "Uppsala Conflict Data Program (UCDP), Uppsala University",
+      "primarySource": "UCDP Battle-Related Deaths Dataset"
+    }
+  }
+]

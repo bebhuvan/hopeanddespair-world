@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "climate.temperature_anomaly_land.world",
+    "unit": "°C",
+    "points": 175
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "identity",
+        "detail": "normalized directly from source"
+      }
+    ],
+    "agent": "adapter:berkeley@1.0.0",
+    "used": {
+      "source": "berkeley",
+      "slug": "land",
+      "url": "https://berkeley-earth-temperature.s3.us-west-1.amazonaws.com/Global/Complete_TAVG_summary.txt",
+      "vintage": "2026-06-13",
+      "checksum": "56021deacae0d8b951a608915930f4a4d2fa6e1520dee6cf084d1a6babb7e14e",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Berkeley Earth — Rohde & Hausfather (2020)"
+}

@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "health.cause_communicable_wb.ssf",
+    "unit": "% of total deaths",
+    "points": 6
+  },
+  "wasDerivedFrom": [
+    "SSF"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity SSF"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SH.DTH.COMM.ZS",
+      "url": "https://data.worldbank.org/indicator/SH.DTH.COMM.ZS",
+      "vintage": "2026-06-13",
+      "checksum": "d0105b7c5670c1f82a039344164afad90d83a1f0d617571decc19ae60892f4c5",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "WHO Global Health Estimates, via World Bank"
+}

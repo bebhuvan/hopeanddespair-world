@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "work.youth_unemployment.world",
+    "unit": "% of labour force aged 15–24",
+    "points": 34
+  },
+  "wasDerivedFrom": [
+    "WLD"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity WLD"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SL.UEM.1524.ZS",
+      "url": "https://data.worldbank.org/indicator/SL.UEM.1524.ZS",
+      "vintage": "2026-06-12",
+      "checksum": "450977a9b81241d89aa703ca1425bf17caaf155c5ffb669d83fd226001a0b2a0",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "International Labour Organization (modelled), via World Bank"
+}

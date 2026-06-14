@@ -1,0 +1,157 @@
+[
+  {
+    "indicatorId": "climate.ghg_sector_electricity_heat.world",
+    "entity": "OWID_WRL",
+    "entityName": "World",
+    "unit": "tonnes",
+    "points": [
+      {
+        "t": 1990,
+        "value": 8624079872
+      },
+      {
+        "t": 1991,
+        "value": 8766550016
+      },
+      {
+        "t": 1992,
+        "value": 8922909696
+      },
+      {
+        "t": 1993,
+        "value": 8973129728
+      },
+      {
+        "t": 1994,
+        "value": 9073999872
+      },
+      {
+        "t": 1995,
+        "value": 9264320512
+      },
+      {
+        "t": 1996,
+        "value": 9629209600
+      },
+      {
+        "t": 1997,
+        "value": 9902130176
+      },
+      {
+        "t": 1998,
+        "value": 10128119808
+      },
+      {
+        "t": 1999,
+        "value": 10190950400
+      },
+      {
+        "t": 2000,
+        "value": 10585950208
+      },
+      {
+        "t": 2001,
+        "value": 10849489920
+      },
+      {
+        "t": 2002,
+        "value": 11033900032
+      },
+      {
+        "t": 2003,
+        "value": 11650480128
+      },
+      {
+        "t": 2004,
+        "value": 12033800192
+      },
+      {
+        "t": 2005,
+        "value": 12406280192
+      },
+      {
+        "t": 2006,
+        "value": 12907240448
+      },
+      {
+        "t": 2007,
+        "value": 13468460032
+      },
+      {
+        "t": 2008,
+        "value": 13497709568
+      },
+      {
+        "t": 2009,
+        "value": 13283489792
+      },
+      {
+        "t": 2010,
+        "value": 14195299328
+      },
+      {
+        "t": 2011,
+        "value": 14814340096
+      },
+      {
+        "t": 2012,
+        "value": 15110860800
+      },
+      {
+        "t": 2013,
+        "value": 15410669568
+      },
+      {
+        "t": 2014,
+        "value": 15340440576
+      },
+      {
+        "t": 2015,
+        "value": 15078219776
+      },
+      {
+        "t": 2016,
+        "value": 15096450048
+      },
+      {
+        "t": 2017,
+        "value": 15450420224
+      },
+      {
+        "t": 2018,
+        "value": 15863179264
+      },
+      {
+        "t": 2019,
+        "value": 15782370304
+      },
+      {
+        "t": 2020,
+        "value": 15311129600
+      },
+      {
+        "t": 2021,
+        "value": 16444560384
+      },
+      {
+        "t": 2022,
+        "value": 16651350016
+      },
+      {
+        "t": 2023,
+        "value": 17006499840
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "electricity_and_heat_ghg_emissions",
+      "url": "https://ourworldindata.org/grapher/ghg-emissions-by-sector",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "6bd8581a73b3c5da14c09d12490ab53cd1ed159b559cf4299351b4e9b816d8fa",
+      "definition": "Emissions are measured in tonnes of carbon dioxide-equivalents.",
+      "attribution": "Our World in Data",
+      "primarySource": "Climate Watch (2026) — via Our World in Data"
+    }
+  }
+]

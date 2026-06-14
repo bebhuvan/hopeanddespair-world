@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "nature.forest_pct.sas",
+    "unit": "% of land area",
+    "points": 33
+  },
+  "wasDerivedFrom": [
+    "SAS"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity SAS"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "AG.LND.FRST.ZS",
+      "url": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS",
+      "vintage": "2026-06-12",
+      "checksum": "6d15eb9d2267f1a84a74bf2c893fcbd2807636adfd6d62bf794da7334ff0e11c",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "FAO, via World Bank"
+}

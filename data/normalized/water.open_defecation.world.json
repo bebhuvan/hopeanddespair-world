@@ -1,0 +1,121 @@
+[
+  {
+    "indicatorId": "water.open_defecation.world",
+    "entity": "WLD",
+    "entityName": "World",
+    "unit": "% of population",
+    "points": [
+      {
+        "t": 2000,
+        "value": 21.9637522394107
+      },
+      {
+        "t": 2001,
+        "value": 21.2362753467055
+      },
+      {
+        "t": 2002,
+        "value": 19.9930250206746
+      },
+      {
+        "t": 2003,
+        "value": 19.3210449568961
+      },
+      {
+        "t": 2004,
+        "value": 18.6161205131621
+      },
+      {
+        "t": 2005,
+        "value": 17.8924553732137
+      },
+      {
+        "t": 2006,
+        "value": 17.0744547481682
+      },
+      {
+        "t": 2007,
+        "value": 16.353558309669
+      },
+      {
+        "t": 2008,
+        "value": 15.608057342181
+      },
+      {
+        "t": 2009,
+        "value": 14.8804022475134
+      },
+      {
+        "t": 2010,
+        "value": 14.1553378322974
+      },
+      {
+        "t": 2011,
+        "value": 13.5141714052592
+      },
+      {
+        "t": 2012,
+        "value": 12.7838392335352
+      },
+      {
+        "t": 2013,
+        "value": 12.0548752895194
+      },
+      {
+        "t": 2014,
+        "value": 11.3213033217092
+      },
+      {
+        "t": 2015,
+        "value": 10.641384417809
+      },
+      {
+        "t": 2016,
+        "value": 9.8651327906228
+      },
+      {
+        "t": 2017,
+        "value": 9.27282629210641
+      },
+      {
+        "t": 2018,
+        "value": 8.54188256494731
+      },
+      {
+        "t": 2019,
+        "value": 7.81915058475867
+      },
+      {
+        "t": 2020,
+        "value": 7.09879397211719
+      },
+      {
+        "t": 2021,
+        "value": 6.39622845801938
+      },
+      {
+        "t": 2022,
+        "value": 5.71773594739963
+      },
+      {
+        "t": 2023,
+        "value": 4.946669758336
+      },
+      {
+        "t": 2024,
+        "value": 4.34965950164471
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SH.STA.ODFC.ZS",
+      "url": "https://data.worldbank.org/indicator/SH.STA.ODFC.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "33d41f8013b971dc368aa1d414a13caf62e1321e820ce69572efdf3a385a64a9",
+      "definition": "People practicing open defecation (% of population)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "WHO/UNICEF JMP, via World Bank"
+    }
+  }
+]

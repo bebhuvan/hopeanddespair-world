@@ -1,0 +1,176 @@
+{
+  "indicatorId": "violence.battle_deaths.europe",
+  "entity": "Europe",
+  "entityName": "Europe",
+  "unit": "deaths",
+  "points": [
+    {
+      "t": 1989,
+      "value": 287
+    },
+    {
+      "t": 1990,
+      "value": 236
+    },
+    {
+      "t": 1991,
+      "value": 3400
+    },
+    {
+      "t": 1992,
+      "value": 24592
+    },
+    {
+      "t": 1993,
+      "value": 16717
+    },
+    {
+      "t": 1994,
+      "value": 8758
+    },
+    {
+      "t": 1995,
+      "value": 11479
+    },
+    {
+      "t": 1996,
+      "value": 2721
+    },
+    {
+      "t": 1997,
+      "value": 29
+    },
+    {
+      "t": 1998,
+      "value": 1298
+    },
+    {
+      "t": 1999,
+      "value": 7258
+    },
+    {
+      "t": 2000,
+      "value": 2907
+    },
+    {
+      "t": 2001,
+      "value": 863
+    },
+    {
+      "t": 2002,
+      "value": 1289
+    },
+    {
+      "t": 2003,
+      "value": 480
+    },
+    {
+      "t": 2004,
+      "value": 1178
+    },
+    {
+      "t": 2005,
+      "value": 707
+    },
+    {
+      "t": 2006,
+      "value": 259
+    },
+    {
+      "t": 2007,
+      "value": 176
+    },
+    {
+      "t": 2008,
+      "value": 1055
+    },
+    {
+      "t": 2009,
+      "value": 697
+    },
+    {
+      "t": 2010,
+      "value": 418
+    },
+    {
+      "t": 2011,
+      "value": 359
+    },
+    {
+      "t": 2012,
+      "value": 541
+    },
+    {
+      "t": 2013,
+      "value": 321
+    },
+    {
+      "t": 2014,
+      "value": 5118
+    },
+    {
+      "t": 2015,
+      "value": 2051
+    },
+    {
+      "t": 2016,
+      "value": 907
+    },
+    {
+      "t": 2017,
+      "value": 536
+    },
+    {
+      "t": 2018,
+      "value": 273
+    },
+    {
+      "t": 2019,
+      "value": 337
+    },
+    {
+      "t": 2020,
+      "value": 7764
+    },
+    {
+      "t": 2021,
+      "value": 248
+    },
+    {
+      "t": 2022,
+      "value": 99838
+    },
+    {
+      "t": 2023,
+      "value": 76813
+    },
+    {
+      "t": 2024,
+      "value": 102201
+    },
+    {
+      "t": 2025,
+      "value": 94741
+    }
+  ],
+  "provenance": {
+    "source": "ucdp",
+    "sourceIndicator": "bd_best",
+    "url": "https://ucdp.uu.se/downloads/brd/ucdp-brd-conf-261-csv.zip",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "b34ecb57f1fc0e73d4bfd7b080212da429af3135a8d360b1c902e45506f81147",
+    "definition": "Best estimate of deaths in state-based armed conflict (combatants and civilians killed in the fighting).",
+    "attribution": "Uppsala Conflict Data Program (UCDP), Uppsala University",
+    "primarySource": "UCDP Battle-Related Deaths Dataset"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity Europe"
+    }
+  ],
+  "derivedFrom": [
+    "Europe"
+  ]
+}

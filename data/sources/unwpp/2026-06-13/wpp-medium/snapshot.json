@@ -1,0 +1,10 @@
+{
+  "source": "unwpp",
+  "slug": "wpp-medium",
+  "vintage": "2026-06-13",
+  "url": "https://population.un.org/wpp/",
+  "checksum": "a5c90668daef8cf590cc81cdc1efe793f176b00c65a095ea6ce98cbe5e3059fb",
+  "license": "CC BY 3.0 IGO",
+  "fetchedAt": "2026-06-13T15:11:22.108Z",
+  "adapterVersion": "1.0.0"
+}

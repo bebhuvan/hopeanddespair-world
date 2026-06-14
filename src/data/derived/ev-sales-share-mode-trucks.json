@@ -1,0 +1,92 @@
+{
+  "indicatorId": "transport.ev_sales_share_mode.trucks",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "percent",
+  "points": [
+    {
+      "t": 2010,
+      "value": 0.0008900000248104334
+    },
+    {
+      "t": 2011,
+      "value": 0.004000000189989805
+    },
+    {
+      "t": 2012,
+      "value": 0.0006200000061653554
+    },
+    {
+      "t": 2013,
+      "value": 0.0008399999933317304
+    },
+    {
+      "t": 2014,
+      "value": 0.0012000000569969416
+    },
+    {
+      "t": 2015,
+      "value": 0.4399999976158142
+    },
+    {
+      "t": 2016,
+      "value": 1.100000023841858
+    },
+    {
+      "t": 2017,
+      "value": 1.5
+    },
+    {
+      "t": 2018,
+      "value": 0.7300000190734863
+    },
+    {
+      "t": 2019,
+      "value": 0.5
+    },
+    {
+      "t": 2020,
+      "value": 0.3100000023841858
+    },
+    {
+      "t": 2021,
+      "value": 0.6600000262260437
+    },
+    {
+      "t": 2022,
+      "value": 1.600000023841858
+    },
+    {
+      "t": 2023,
+      "value": 2.200000047683716
+    },
+    {
+      "t": 2024,
+      "value": 4.5
+    },
+    {
+      "t": 2025,
+      "value": 9
+    }
+  ],
+  "provenance": {
+    "source": "iea",
+    "sourceIndicator": "EV sales share · Trucks · EV",
+    "url": "https://api.iea.org/evs?region=World&csv=true",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "5f9f8654b105f326009ebfa71cfe8c4bd472aeab4c1713b4f69fd4c5a7d1d1c3",
+    "definition": "Share of new trucks sold that are electric, World",
+    "attribution": "IEA — Global EV Data Explorer",
+    "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity World"
+    }
+  ],
+  "derivedFrom": [
+    "World"
+  ]
+}

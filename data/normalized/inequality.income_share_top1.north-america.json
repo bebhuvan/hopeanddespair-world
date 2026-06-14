@@ -1,0 +1,245 @@
+[
+  {
+    "indicatorId": "inequality.income_share_top1.north-america",
+    "entity": "North America (WID)",
+    "entityName": "North America (WID)",
+    "unit": "%",
+    "points": [
+      {
+        "t": 1820,
+        "value": 15.72
+      },
+      {
+        "t": 1850,
+        "value": 16.92
+      },
+      {
+        "t": 1880,
+        "value": 14.76
+      },
+      {
+        "t": 1900,
+        "value": 15.71
+      },
+      {
+        "t": 1910,
+        "value": 20.17
+      },
+      {
+        "t": 1920,
+        "value": 18.88
+      },
+      {
+        "t": 1930,
+        "value": 19.01
+      },
+      {
+        "t": 1940,
+        "value": 20.43
+      },
+      {
+        "t": 1950,
+        "value": 16.36
+      },
+      {
+        "t": 1960,
+        "value": 12.42
+      },
+      {
+        "t": 1970,
+        "value": 10.51
+      },
+      {
+        "t": 1980,
+        "value": 10.22
+      },
+      {
+        "t": 1981,
+        "value": 10.49
+      },
+      {
+        "t": 1982,
+        "value": 10.78
+      },
+      {
+        "t": 1983,
+        "value": 11.33
+      },
+      {
+        "t": 1984,
+        "value": 11.97
+      },
+      {
+        "t": 1985,
+        "value": 12.09
+      },
+      {
+        "t": 1986,
+        "value": 11.81
+      },
+      {
+        "t": 1987,
+        "value": 13.04
+      },
+      {
+        "t": 1988,
+        "value": 14.97
+      },
+      {
+        "t": 1989,
+        "value": 14.43
+      },
+      {
+        "t": 1990,
+        "value": 14.52
+      },
+      {
+        "t": 1991,
+        "value": 13.5
+      },
+      {
+        "t": 1992,
+        "value": 14.55
+      },
+      {
+        "t": 1993,
+        "value": 14.04
+      },
+      {
+        "t": 1994,
+        "value": 13.92
+      },
+      {
+        "t": 1995,
+        "value": 14.42
+      },
+      {
+        "t": 1996,
+        "value": 15.15
+      },
+      {
+        "t": 1997,
+        "value": 15.9
+      },
+      {
+        "t": 1998,
+        "value": 16.25
+      },
+      {
+        "t": 1999,
+        "value": 16.66
+      },
+      {
+        "t": 2000,
+        "value": 17.27
+      },
+      {
+        "t": 2001,
+        "value": 16.52
+      },
+      {
+        "t": 2002,
+        "value": 16.02
+      },
+      {
+        "t": 2003,
+        "value": 16.25
+      },
+      {
+        "t": 2004,
+        "value": 16.98
+      },
+      {
+        "t": 2005,
+        "value": 17.96
+      },
+      {
+        "t": 2006,
+        "value": 18.39
+      },
+      {
+        "t": 2007,
+        "value": 18.26
+      },
+      {
+        "t": 2008,
+        "value": 17.8
+      },
+      {
+        "t": 2009,
+        "value": 16.57
+      },
+      {
+        "t": 2010,
+        "value": 17.75
+      },
+      {
+        "t": 2011,
+        "value": 17.91
+      },
+      {
+        "t": 2012,
+        "value": 19.28
+      },
+      {
+        "t": 2013,
+        "value": 18.28
+      },
+      {
+        "t": 2014,
+        "value": 18.75
+      },
+      {
+        "t": 2015,
+        "value": 18.7
+      },
+      {
+        "t": 2016,
+        "value": 18.47
+      },
+      {
+        "t": 2017,
+        "value": 18.86
+      },
+      {
+        "t": 2018,
+        "value": 19.04
+      },
+      {
+        "t": 2019,
+        "value": 18.84
+      },
+      {
+        "t": 2020,
+        "value": 18.03
+      },
+      {
+        "t": 2021,
+        "value": 19.75
+      },
+      {
+        "t": 2022,
+        "value": 20.48
+      },
+      {
+        "t": 2023,
+        "value": 20.49
+      },
+      {
+        "t": 2024,
+        "value": 20.5
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "share_top_1__welfare_type_before_tax__extrapolated_no",
+      "url": "https://ourworldindata.org/grapher/income-share-top-1-before-tax-wid",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "f1e67ccfe48be6f1dd51b9b907e55c92c131d39c15153163fc64e80829f6f5fd",
+      "definition": "The share of income received by the richest 1% of the population. Income here is measured before taxes and benefits.",
+      "attribution": "Our World in Data",
+      "primarySource": "World Inequality Database (WID.world) — via Our World in Data"
+    }
+  }
+]

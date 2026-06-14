@@ -11,6 +11,7 @@ export interface GenerateOpts {
   model?: string;
   temperature?: number;
   maxTokens?: number;
+  json?: boolean;        // request a strict JSON object back (DeepSeek json_object mode)
 }
 
 export function providerInfo() {
@@ -43,6 +44,7 @@ export async function generate(prompt: string, opts: GenerateOpts = {}): Promise
       model, messages, stream: false,
       temperature: opts.temperature ?? 0.7,
       max_tokens: opts.maxTokens ?? 2048,
+      ...(opts.json ? { response_format: { type: 'json_object' } } : {}),
     }),
   });
   if (!res.ok) {

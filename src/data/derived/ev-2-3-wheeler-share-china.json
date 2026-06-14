@@ -1,0 +1,84 @@
+{
+  "indicatorId": "transport.ev_2_3_wheeler_share.china",
+  "entity": "China",
+  "entityName": "China",
+  "unit": "percent",
+  "points": [
+    {
+      "t": 2012,
+      "value": 13
+    },
+    {
+      "t": 2013,
+      "value": 15
+    },
+    {
+      "t": 2014,
+      "value": 16
+    },
+    {
+      "t": 2015,
+      "value": 18
+    },
+    {
+      "t": 2016,
+      "value": 18
+    },
+    {
+      "t": 2017,
+      "value": 20
+    },
+    {
+      "t": 2018,
+      "value": 32
+    },
+    {
+      "t": 2019,
+      "value": 37
+    },
+    {
+      "t": 2020,
+      "value": 45
+    },
+    {
+      "t": 2021,
+      "value": 55
+    },
+    {
+      "t": 2022,
+      "value": 43
+    },
+    {
+      "t": 2023,
+      "value": 43
+    },
+    {
+      "t": 2024,
+      "value": 44
+    },
+    {
+      "t": 2025,
+      "value": 50
+    }
+  ],
+  "provenance": {
+    "source": "iea",
+    "sourceIndicator": "EV sales share · 2 and 3 wheelers · EV",
+    "url": "https://api.iea.org/evs?region=China&csv=true",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "c8ceb1a9c23ddd3f824d0e3e821ab4d849bc3f4acfb9fea87008496cc0afee4d",
+    "definition": "Share of new two/three-wheelers sold that are electric, China",
+    "attribution": "IEA — Global EV Data Explorer",
+    "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity China"
+    }
+  ],
+  "derivedFrom": [
+    "China"
+  ]
+}

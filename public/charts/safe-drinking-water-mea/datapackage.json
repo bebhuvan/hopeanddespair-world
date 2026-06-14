@@ -1,0 +1,38 @@
+{
+  "name": "water-safe_drinking_water-mea",
+  "title": "People using safely managed drinking water services (% of population)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/SH.H2O.SMDW.ZS"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "water-safe_drinking_water-mea",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "water_safe_drinking_water_mea",
+            "type": "number",
+            "unit": "% of population"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "deaths-from-natural-disasters",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/deaths-from-natural-disasters",
+  "checksum": "90ce58221374b46e964a73988afb8592b488c0be2cb661e97998e86f04e8515a",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T12:58:00.648Z",
+  "adapterVersion": "1.0.0"
+}

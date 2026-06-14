@@ -1,0 +1,176 @@
+{
+  "indicatorId": "violence.battle_deaths.africa",
+  "entity": "Africa",
+  "entityName": "Africa",
+  "unit": "deaths",
+  "points": [
+    {
+      "t": 1989,
+      "value": 35390
+    },
+    {
+      "t": 1990,
+      "value": 64839
+    },
+    {
+      "t": 1991,
+      "value": 25480
+    },
+    {
+      "t": 1992,
+      "value": 6887
+    },
+    {
+      "t": 1993,
+      "value": 15064
+    },
+    {
+      "t": 1994,
+      "value": 9606
+    },
+    {
+      "t": 1995,
+      "value": 6806
+    },
+    {
+      "t": 1996,
+      "value": 8188
+    },
+    {
+      "t": 1997,
+      "value": 24107
+    },
+    {
+      "t": 1998,
+      "value": 23573
+    },
+    {
+      "t": 1999,
+      "value": 61435
+    },
+    {
+      "t": 2000,
+      "value": 59896
+    },
+    {
+      "t": 2001,
+      "value": 10636
+    },
+    {
+      "t": 2002,
+      "value": 7452
+    },
+    {
+      "t": 2003,
+      "value": 6358
+    },
+    {
+      "t": 2004,
+      "value": 6045
+    },
+    {
+      "t": 2005,
+      "value": 1600
+    },
+    {
+      "t": 2006,
+      "value": 3694
+    },
+    {
+      "t": 2007,
+      "value": 3349
+    },
+    {
+      "t": 2008,
+      "value": 4678
+    },
+    {
+      "t": 2009,
+      "value": 5600
+    },
+    {
+      "t": 2010,
+      "value": 3993
+    },
+    {
+      "t": 2011,
+      "value": 8463
+    },
+    {
+      "t": 2012,
+      "value": 6520
+    },
+    {
+      "t": 2013,
+      "value": 7201
+    },
+    {
+      "t": 2014,
+      "value": 10341
+    },
+    {
+      "t": 2015,
+      "value": 10283
+    },
+    {
+      "t": 2016,
+      "value": 9916
+    },
+    {
+      "t": 2017,
+      "value": 9425
+    },
+    {
+      "t": 2018,
+      "value": 6839
+    },
+    {
+      "t": 2019,
+      "value": 8393
+    },
+    {
+      "t": 2020,
+      "value": 30310
+    },
+    {
+      "t": 2021,
+      "value": 135079
+    },
+    {
+      "t": 2022,
+      "value": 175302
+    },
+    {
+      "t": 2023,
+      "value": 27687
+    },
+    {
+      "t": 2024,
+      "value": 17387
+    },
+    {
+      "t": 2025,
+      "value": 32497
+    }
+  ],
+  "provenance": {
+    "source": "ucdp",
+    "sourceIndicator": "bd_best",
+    "url": "https://ucdp.uu.se/downloads/brd/ucdp-brd-conf-261-csv.zip",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "b34ecb57f1fc0e73d4bfd7b080212da429af3135a8d360b1c902e45506f81147",
+    "definition": "Best estimate of deaths in state-based armed conflict (combatants and civilians killed in the fighting).",
+    "attribution": "Uppsala Conflict Data Program (UCDP), Uppsala University",
+    "primarySource": "UCDP Battle-Related Deaths Dataset"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity Africa"
+    }
+  ],
+  "derivedFrom": [
+    "Africa"
+  ]
+}

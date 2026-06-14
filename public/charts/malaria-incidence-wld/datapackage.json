@@ -1,0 +1,38 @@
+{
+  "name": "health-malaria_incidence_wb-wld",
+  "title": "Incidence of malaria (per 1,000 population at risk)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/SH.MLR.INCD.P3"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "health-malaria_incidence_wb-wld",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "health_malaria_incidence_wb_wld",
+            "type": "number",
+            "unit": "per 1,000 population at risk"
+          }
+        ]
+      }
+    }
+  ]
+}

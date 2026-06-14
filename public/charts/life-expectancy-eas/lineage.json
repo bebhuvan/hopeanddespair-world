@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "health.life_expectancy_wb.eas",
+    "unit": "years",
+    "points": 65
+  },
+  "wasDerivedFrom": [
+    "EAS"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity EAS"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SP.DYN.LE00.IN",
+      "url": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN",
+      "vintage": "2026-06-13",
+      "checksum": "2ed09ff8d0c9125e4c64f950661461b42ef614afb04b215c14469e3052977915",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UN WPP / WHO, via World Bank"
+}

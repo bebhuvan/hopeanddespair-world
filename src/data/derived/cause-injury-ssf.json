@@ -1,0 +1,52 @@
+{
+  "indicatorId": "health.cause_injury_wb.ssf",
+  "entity": "SSF",
+  "entityName": "Sub-Saharan Africa",
+  "unit": "% of total deaths",
+  "points": [
+    {
+      "t": 2000,
+      "value": 6.43324510440886
+    },
+    {
+      "t": 2010,
+      "value": 7.13508756971998
+    },
+    {
+      "t": 2015,
+      "value": 8.24968501885494
+    },
+    {
+      "t": 2019,
+      "value": 8.94662236096527
+    },
+    {
+      "t": 2020,
+      "value": 8.65283203410205
+    },
+    {
+      "t": 2021,
+      "value": 8.64746219766241
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SH.DTH.INJR.ZS",
+    "url": "https://data.worldbank.org/indicator/SH.DTH.INJR.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "b3ef34afc25ce125972dc5b09aeeede59a68fd54a83ce71d4fc0bcf80ef158a5",
+    "definition": "Cause of death, by injury (% of total)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO Global Health Estimates, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity SSF"
+    }
+  ],
+  "derivedFrom": [
+    "SSF"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "economy-convergence_mld_all-world",
+  "title": "Population-weighted between-country mean log deviation of GDP per capita (PPP), 178 countries",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators (ICP PPP & population)",
+      "path": "https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "economy-convergence_mld_all-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "economy_convergence_mld_all_world",
+            "type": "number",
+            "unit": "mean log deviation"
+          }
+        ]
+      }
+    }
+  ]
+}

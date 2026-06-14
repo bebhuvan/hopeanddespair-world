@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "economy.poverty_685.world",
+    "unit": "% of population",
+    "points": 43
+  },
+  "wasDerivedFrom": [
+    "WLD"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity WLD"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SI.POV.UMIC",
+      "url": "https://data.worldbank.org/indicator/SI.POV.UMIC",
+      "vintage": "2026-06-12",
+      "checksum": "7610ac2782dddb0c6fbe500a78e96feee89d37320a7e181015ac4ac3a5d63efb",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "World Bank — Poverty and Inequality Platform"
+}

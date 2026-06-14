@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "demography.pop_65plus_wb.ssf",
+    "unit": "% of total population",
+    "points": 65
+  },
+  "wasDerivedFrom": [
+    "SSF"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity SSF"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SP.POP.65UP.TO.ZS",
+      "url": "https://data.worldbank.org/indicator/SP.POP.65UP.TO.ZS",
+      "vintage": "2026-06-13",
+      "checksum": "e99e21dda09c8ebdec252abe3171690434a5179a64eefe0345f17c0fad0213bf",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UN WPP, via World Bank"
+}

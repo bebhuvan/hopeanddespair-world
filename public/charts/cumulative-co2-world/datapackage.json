@@ -1,0 +1,38 @@
+{
+  "name": "climate-cumulative_co2-world",
+  "title": "Total cumulative emissions of carbon dioxide (CO₂), excluding land-use change, since the first year of available data, measured in tonnes.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/cumulative-co2-emissions"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "climate-cumulative_co2-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "climate_cumulative_co2_world",
+            "type": "number",
+            "unit": "tonnes"
+          }
+        ]
+      }
+    }
+  ]
+}

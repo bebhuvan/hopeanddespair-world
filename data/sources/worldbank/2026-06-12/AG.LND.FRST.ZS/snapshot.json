@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "AG.LND.FRST.ZS",
+  "vintage": "2026-06-12",
+  "url": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS",
+  "checksum": "6d15eb9d2267f1a84a74bf2c893fcbd2807636adfd6d62bf794da7334ff0e11c",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:44:21.394Z",
+  "adapterVersion": "1.0.0"
+}

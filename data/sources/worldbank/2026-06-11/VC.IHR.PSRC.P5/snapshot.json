@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "VC.IHR.PSRC.P5",
+  "vintage": "2026-06-11",
+  "url": "https://data.worldbank.org/indicator/VC.IHR.PSRC.P5",
+  "checksum": "b5447b1df299df378944c52959b164f65a05c73f14aba2b2aa3db70abdddd9ff",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T10:06:41.329Z",
+  "adapterVersion": "1.0.0"
+}

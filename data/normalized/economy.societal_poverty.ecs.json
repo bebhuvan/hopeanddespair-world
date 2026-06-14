@@ -1,0 +1,205 @@
+[
+  {
+    "indicatorId": "economy.societal_poverty.ecs",
+    "entity": "ECS",
+    "entityName": "Europe & Central Asia",
+    "unit": "% of population",
+    "points": [
+      {
+        "t": 1981,
+        "value": 18.5
+      },
+      {
+        "t": 1982,
+        "value": 18.509999999999998
+      },
+      {
+        "t": 1983,
+        "value": 18.490000000000002
+      },
+      {
+        "t": 1984,
+        "value": 18.56
+      },
+      {
+        "t": 1985,
+        "value": 18.52
+      },
+      {
+        "t": 1986,
+        "value": 18.75
+      },
+      {
+        "t": 1987,
+        "value": 18.77
+      },
+      {
+        "t": 1988,
+        "value": 18.740000000000002
+      },
+      {
+        "t": 1989,
+        "value": 18.63
+      },
+      {
+        "t": 1990,
+        "value": 18.98
+      },
+      {
+        "t": 1991,
+        "value": 19.33
+      },
+      {
+        "t": 1992,
+        "value": 20.330000000000002
+      },
+      {
+        "t": 1993,
+        "value": 21.310000000000002
+      },
+      {
+        "t": 1994,
+        "value": 22.63
+      },
+      {
+        "t": 1995,
+        "value": 22.28
+      },
+      {
+        "t": 1996,
+        "value": 22.41
+      },
+      {
+        "t": 1997,
+        "value": 21.490000000000002
+      },
+      {
+        "t": 1998,
+        "value": 21.45
+      },
+      {
+        "t": 1999,
+        "value": 22.48
+      },
+      {
+        "t": 2000,
+        "value": 22.009999999999998
+      },
+      {
+        "t": 2001,
+        "value": 21.4
+      },
+      {
+        "t": 2002,
+        "value": 20.69
+      },
+      {
+        "t": 2003,
+        "value": 20.46
+      },
+      {
+        "t": 2004,
+        "value": 19.85
+      },
+      {
+        "t": 2005,
+        "value": 19.650000000000002
+      },
+      {
+        "t": 2006,
+        "value": 19.06
+      },
+      {
+        "t": 2007,
+        "value": 18.37
+      },
+      {
+        "t": 2008,
+        "value": 17.89
+      },
+      {
+        "t": 2009,
+        "value": 17.93
+      },
+      {
+        "t": 2010,
+        "value": 17.66
+      },
+      {
+        "t": 2011,
+        "value": 17.53
+      },
+      {
+        "t": 2012,
+        "value": 17.59
+      },
+      {
+        "t": 2013,
+        "value": 15.67
+      },
+      {
+        "t": 2014,
+        "value": 15.870000000000001
+      },
+      {
+        "t": 2015,
+        "value": 15.709999999999999
+      },
+      {
+        "t": 2016,
+        "value": 15.629999999999999
+      },
+      {
+        "t": 2017,
+        "value": 15.39
+      },
+      {
+        "t": 2018,
+        "value": 14.97
+      },
+      {
+        "t": 2019,
+        "value": 15.06
+      },
+      {
+        "t": 2020,
+        "value": 14.760000000000002
+      },
+      {
+        "t": 2021,
+        "value": 14.84
+      },
+      {
+        "t": 2022,
+        "value": 14.6
+      },
+      {
+        "t": 2023,
+        "value": 14.299999999999999
+      },
+      {
+        "t": 2024,
+        "value": 14.19
+      },
+      {
+        "t": 2025,
+        "value": 14.02
+      },
+      {
+        "t": 2026,
+        "value": 13.950000000000001
+      }
+    ],
+    "provenance": {
+      "source": "pip",
+      "sourceIndicator": "spr @ $3.00/day (2021 PPP)",
+      "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+      "definition": "Societal (relative) poverty rate, Europe & Central Asia",
+      "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+      "primarySource": "World Bank — Poverty and Inequality Platform"
+    }
+  }
+]

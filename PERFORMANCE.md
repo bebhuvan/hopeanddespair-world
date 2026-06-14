@@ -46,6 +46,14 @@ Per article page, on a mid-range mobile over 4G:
 Build **fails** if a budget is exceeded (see Enforcement). Numbers are a starting line — tighten
 as we measure, never loosen silently.
 
+**The one declared exception (2026-06-13):** the keystone hub
+(`is-the-world-getting-better-or-worse`) is not one article but the 23-dimension front door, with the
+world→region→country lens on every dimension. It runs ~105 KB brotli (~176 KB gzip) and is gated
+**separately at 120 KB brotli** in the `size-limit` config — tracked tightly so creep is caught, but
+held above the 100 KB page budget on purpose. It carries **zero client JS** like every other page, so
+the cost is download + a larger static SVG DOM (~7.5k nodes), not execution. Every *other* page stays
+held to the strict budget; this is the deliberate one-off, not a loosening of the rule.
+
 ## How each layer earns its speed
 
 **Charts — pre-baked, never computed at request time.**

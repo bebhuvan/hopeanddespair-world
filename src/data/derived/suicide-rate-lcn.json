@@ -1,0 +1,116 @@
+{
+  "indicatorId": "wellbeing.suicide_rate_wb.lcn",
+  "entity": "LCN",
+  "entityName": "Latin America & Caribbean",
+  "unit": "per 100,000 people",
+  "points": [
+    {
+      "t": 2000,
+      "value": 5.45081194998082
+    },
+    {
+      "t": 2001,
+      "value": 5.67841525804601
+    },
+    {
+      "t": 2002,
+      "value": 5.61982589450318
+    },
+    {
+      "t": 2003,
+      "value": 5.59229314407337
+    },
+    {
+      "t": 2004,
+      "value": 5.55959006244397
+    },
+    {
+      "t": 2005,
+      "value": 5.58215111644517
+    },
+    {
+      "t": 2006,
+      "value": 5.53414365828598
+    },
+    {
+      "t": 2007,
+      "value": 5.58707635151708
+    },
+    {
+      "t": 2008,
+      "value": 5.76976885164749
+    },
+    {
+      "t": 2009,
+      "value": 5.80025091856928
+    },
+    {
+      "t": 2010,
+      "value": 5.65289924408734
+    },
+    {
+      "t": 2011,
+      "value": 5.9362573824108
+    },
+    {
+      "t": 2012,
+      "value": 5.94637798161291
+    },
+    {
+      "t": 2013,
+      "value": 5.88449176268896
+    },
+    {
+      "t": 2014,
+      "value": 6.10786851435686
+    },
+    {
+      "t": 2015,
+      "value": 6.28111243278145
+    },
+    {
+      "t": 2016,
+      "value": 6.46564831230856
+    },
+    {
+      "t": 2017,
+      "value": 6.66983271073193
+    },
+    {
+      "t": 2018,
+      "value": 6.63215122557093
+    },
+    {
+      "t": 2019,
+      "value": 6.7181725808829
+    },
+    {
+      "t": 2020,
+      "value": 6.52559177815593
+    },
+    {
+      "t": 2021,
+      "value": 6.88229896897105
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SH.STA.SUIC.P5",
+    "url": "https://data.worldbank.org/indicator/SH.STA.SUIC.P5",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "2acd6aca10e33bc2cc6136d10d1b38313b90a86170a463f2554b11cd7e4757ce",
+    "definition": "Suicide mortality rate (per 100,000 population)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity LCN"
+    }
+  ],
+  "derivedFrom": [
+    "LCN"
+  ]
+}

@@ -1,0 +1,125 @@
+[
+  {
+    "indicatorId": "energy.coal_generation.united-states",
+    "entity": "USA",
+    "entityName": "United States",
+    "unit": "terawatt-hours",
+    "points": [
+      {
+        "t": 2000,
+        "value": 1966.27
+      },
+      {
+        "t": 2001,
+        "value": 1903.96
+      },
+      {
+        "t": 2002,
+        "value": 1933.13
+      },
+      {
+        "t": 2003,
+        "value": 1973.74
+      },
+      {
+        "t": 2004,
+        "value": 1978.3
+      },
+      {
+        "t": 2005,
+        "value": 2012.87
+      },
+      {
+        "t": 2006,
+        "value": 1990.51
+      },
+      {
+        "t": 2007,
+        "value": 2016.46
+      },
+      {
+        "t": 2008,
+        "value": 1985.8
+      },
+      {
+        "t": 2009,
+        "value": 1755.9
+      },
+      {
+        "t": 2010,
+        "value": 1847.29
+      },
+      {
+        "t": 2011,
+        "value": 1733.43
+      },
+      {
+        "t": 2012,
+        "value": 1514.04
+      },
+      {
+        "t": 2013,
+        "value": 1581.11
+      },
+      {
+        "t": 2014,
+        "value": 1581.71
+      },
+      {
+        "t": 2015,
+        "value": 1352.4
+      },
+      {
+        "t": 2016,
+        "value": 1239.15
+      },
+      {
+        "t": 2017,
+        "value": 1205.84
+      },
+      {
+        "t": 2018,
+        "value": 1149.49
+      },
+      {
+        "t": 2019,
+        "value": 964.96
+      },
+      {
+        "t": 2020,
+        "value": 773.39
+      },
+      {
+        "t": 2021,
+        "value": 898
+      },
+      {
+        "t": 2022,
+        "value": 831.51
+      },
+      {
+        "t": 2023,
+        "value": 675.11
+      },
+      {
+        "t": 2024,
+        "value": 652.16
+      },
+      {
+        "t": 2025,
+        "value": 737.15
+      }
+    ],
+    "provenance": {
+      "source": "ember",
+      "sourceIndicator": "electricity-generation/yearly:Coal:generation_twh",
+      "url": "https://api.ember-energy.org/v1/electricity-generation/yearly?entity=United%20States&start_date=2000",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "ab8695bb836127a98d4261e87080f0636961f3ea6c76d6d132c5359c3f7e22f5",
+      "definition": "Electricity generated from coal, United States",
+      "attribution": "Ember — Yearly Electricity Data",
+      "primarySource": "Ember — Yearly Electricity Data"
+    }
+  }
+]

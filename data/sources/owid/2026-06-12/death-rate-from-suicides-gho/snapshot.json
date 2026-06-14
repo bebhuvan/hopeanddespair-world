@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "death-rate-from-suicides-gho",
+  "vintage": "2026-06-12",
+  "url": "https://ourworldindata.org/grapher/death-rate-from-suicides-gho",
+  "checksum": "c190e25795dcce98a3db959bfabb8598bce4e98cfd9528b90f4a50d4a24eb366",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:43:28.906Z",
+  "adapterVersion": "1.0.0"
+}

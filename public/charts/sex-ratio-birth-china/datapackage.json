@@ -1,0 +1,38 @@
+{
+  "name": "demography-sex_ratio_birth-china",
+  "title": "Sex ratio at birth, China",
+  "licenses": [
+    {
+      "name": "CC BY 3.0 IGO",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "UN DESA, Population Division — World Population Prospects 2024",
+      "path": "https://population.un.org/wpp/"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "demography-sex_ratio_birth-china",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "demography_sex_ratio_birth_china",
+            "type": "number",
+            "unit": "male births per 100 female births"
+          }
+        ]
+      }
+    }
+  ]
+}

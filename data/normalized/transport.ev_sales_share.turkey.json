@@ -1,0 +1,77 @@
+[
+  {
+    "indicatorId": "transport.ev_sales_share.turkey",
+    "entity": "Turkiye",
+    "entityName": "Turkiye",
+    "unit": "percent",
+    "points": [
+      {
+        "t": 2012,
+        "value": 0.01600000075995922
+      },
+      {
+        "t": 2013,
+        "value": 0.0001500000071246177
+      },
+      {
+        "t": 2014,
+        "value": 0.012000000104308128
+      },
+      {
+        "t": 2015,
+        "value": 0.029999999329447746
+      },
+      {
+        "t": 2016,
+        "value": 0.017000000923871994
+      },
+      {
+        "t": 2017,
+        "value": 0.014999999664723873
+      },
+      {
+        "t": 2018,
+        "value": 0.04500000178813934
+      },
+      {
+        "t": 2019,
+        "value": 0.08399999886751175
+      },
+      {
+        "t": 2020,
+        "value": 0.20999999344348907
+      },
+      {
+        "t": 2021,
+        "value": 0.6299999952316284
+      },
+      {
+        "t": 2022,
+        "value": 1.2999999523162842
+      },
+      {
+        "t": 2023,
+        "value": 7.199999809265137
+      },
+      {
+        "t": 2024,
+        "value": 11
+      },
+      {
+        "t": 2025,
+        "value": 22
+      }
+    ],
+    "provenance": {
+      "source": "iea",
+      "sourceIndicator": "EV sales share · Cars · EV",
+      "url": "https://api.iea.org/evs?region=Turkiye&csv=true",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "64a51538ba846e8bf0f60b7e4d0a17dcf8a74440da32764f8cc3844cd23a4d2f",
+      "definition": "Share of new cars sold that are electric, Turkey",
+      "attribution": "IEA — Global EV Data Explorer",
+      "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+    }
+  }
+]

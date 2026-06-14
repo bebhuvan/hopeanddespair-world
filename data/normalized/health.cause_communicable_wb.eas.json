@@ -1,0 +1,45 @@
+[
+  {
+    "indicatorId": "health.cause_communicable_wb.eas",
+    "entity": "EAS",
+    "entityName": "East Asia & Pacific",
+    "unit": "% of total deaths",
+    "points": [
+      {
+        "t": 2000,
+        "value": 15.6466727994164
+      },
+      {
+        "t": 2010,
+        "value": 10.393267944023
+      },
+      {
+        "t": 2015,
+        "value": 9.06775870385593
+      },
+      {
+        "t": 2019,
+        "value": 7.95110926118827
+      },
+      {
+        "t": 2020,
+        "value": 9.12698957281438
+      },
+      {
+        "t": 2021,
+        "value": 11.3479937550005
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SH.DTH.COMM.ZS",
+      "url": "https://data.worldbank.org/indicator/SH.DTH.COMM.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "d0105b7c5670c1f82a039344164afad90d83a1f0d617571decc19ae60892f4c5",
+      "definition": "Cause of death, by communicable diseases and maternal, prenatal and nutrition conditions (% of total)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "WHO Global Health Estimates, via World Bank"
+    }
+  }
+]

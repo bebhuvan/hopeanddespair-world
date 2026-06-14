@@ -1,0 +1,125 @@
+[
+  {
+    "indicatorId": "work.working_poverty.world",
+    "entity": "World",
+    "entityName": "World",
+    "unit": "% of employed",
+    "points": [
+      {
+        "t": 2000,
+        "value": 34.727
+      },
+      {
+        "t": 2001,
+        "value": 33.561
+      },
+      {
+        "t": 2002,
+        "value": 32.179
+      },
+      {
+        "t": 2003,
+        "value": 30.22
+      },
+      {
+        "t": 2004,
+        "value": 28.133
+      },
+      {
+        "t": 2005,
+        "value": 25.963
+      },
+      {
+        "t": 2006,
+        "value": 24.687
+      },
+      {
+        "t": 2007,
+        "value": 23.039
+      },
+      {
+        "t": 2008,
+        "value": 21.962
+      },
+      {
+        "t": 2009,
+        "value": 20.897
+      },
+      {
+        "t": 2010,
+        "value": 18.853
+      },
+      {
+        "t": 2011,
+        "value": 17.091
+      },
+      {
+        "t": 2012,
+        "value": 15.719
+      },
+      {
+        "t": 2013,
+        "value": 13.21
+      },
+      {
+        "t": 2014,
+        "value": 12.123
+      },
+      {
+        "t": 2015,
+        "value": 10.989
+      },
+      {
+        "t": 2016,
+        "value": 10.207
+      },
+      {
+        "t": 2017,
+        "value": 9.588
+      },
+      {
+        "t": 2018,
+        "value": 8.986
+      },
+      {
+        "t": 2019,
+        "value": 8.602
+      },
+      {
+        "t": 2020,
+        "value": 9.264
+      },
+      {
+        "t": 2021,
+        "value": 8.907
+      },
+      {
+        "t": 2022,
+        "value": 8.592
+      },
+      {
+        "t": 2023,
+        "value": 8.302
+      },
+      {
+        "t": 2024,
+        "value": 8.088
+      },
+      {
+        "t": 2025,
+        "value": 7.903
+      }
+    ],
+    "provenance": {
+      "source": "ilostat",
+      "sourceIndicator": "DF_SDG_0111_SEX_AGE_RT [REF_AREA=X01, SEX=SEX_T, AGE=AGE_YTHADULT_YGE15]",
+      "url": "https://sdmx.ilo.org/rest/data/DF_SDG_0111_SEX_AGE_RT/all?startPeriod=1990",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "ab0fbcb36a924590fb543a97abd2f49d3ede7fcd98729276342cf460076c0175",
+      "definition": "Working poverty rate — employed living in extreme poverty (<$2.15/day), World",
+      "attribution": "ILOSTAT — International Labour Organization",
+      "primarySource": "ILOSTAT — International Labour Organization (SDG 1.1.1)"
+    }
+  }
+]

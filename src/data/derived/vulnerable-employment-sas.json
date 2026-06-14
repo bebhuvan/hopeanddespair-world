@@ -1,0 +1,164 @@
+{
+  "indicatorId": "work.vulnerable_employment.sas",
+  "entity": "SAS",
+  "entityName": "South Asia",
+  "unit": "% of total employment",
+  "points": [
+    {
+      "t": 1991,
+      "value": 83.304517149977
+    },
+    {
+      "t": 1992,
+      "value": 83.088525312932
+    },
+    {
+      "t": 1993,
+      "value": 82.8859635027553
+    },
+    {
+      "t": 1994,
+      "value": 82.6139078901067
+    },
+    {
+      "t": 1995,
+      "value": 82.3542061451981
+    },
+    {
+      "t": 1996,
+      "value": 82.0774933709923
+    },
+    {
+      "t": 1997,
+      "value": 81.8428535319857
+    },
+    {
+      "t": 1998,
+      "value": 81.6543841254318
+    },
+    {
+      "t": 1999,
+      "value": 81.4087735805198
+    },
+    {
+      "t": 2000,
+      "value": 81.1715697316202
+    },
+    {
+      "t": 2001,
+      "value": 81.0685991695239
+    },
+    {
+      "t": 2002,
+      "value": 80.9769170370775
+    },
+    {
+      "t": 2003,
+      "value": 80.8782658838413
+    },
+    {
+      "t": 2004,
+      "value": 80.6577445832629
+    },
+    {
+      "t": 2005,
+      "value": 80.4874700036057
+    },
+    {
+      "t": 2006,
+      "value": 80.276979110895
+    },
+    {
+      "t": 2007,
+      "value": 80.0329306192878
+    },
+    {
+      "t": 2008,
+      "value": 79.8705217841186
+    },
+    {
+      "t": 2009,
+      "value": 79.6490290385669
+    },
+    {
+      "t": 2010,
+      "value": 79.3756004738067
+    },
+    {
+      "t": 2011,
+      "value": 78.1296931714559
+    },
+    {
+      "t": 2012,
+      "value": 76.8799855918877
+    },
+    {
+      "t": 2013,
+      "value": 76.3513964303743
+    },
+    {
+      "t": 2014,
+      "value": 75.768271305338
+    },
+    {
+      "t": 2015,
+      "value": 75.118150297453
+    },
+    {
+      "t": 2016,
+      "value": 74.4363498396603
+    },
+    {
+      "t": 2017,
+      "value": 73.6533776875322
+    },
+    {
+      "t": 2018,
+      "value": 73.0640715501015
+    },
+    {
+      "t": 2019,
+      "value": 72.5594598148319
+    },
+    {
+      "t": 2020,
+      "value": 72.5516675286937
+    },
+    {
+      "t": 2021,
+      "value": 72.1776610575913
+    },
+    {
+      "t": 2022,
+      "value": 71.7403515616901
+    },
+    {
+      "t": 2023,
+      "value": 70.7827235479598
+    },
+    {
+      "t": 2024,
+      "value": 70.1950000711577
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SL.EMP.VULN.ZS",
+    "url": "https://data.worldbank.org/indicator/SL.EMP.VULN.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "b387cb724969c4814dc6c51be3cd494a9e871650d9f5f56836e7f1453d42d219",
+    "definition": "Vulnerable employment, total (% of total employment) (modeled ILO estimate)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "International Labour Organization (modelled), via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity SAS"
+    }
+  ],
+  "derivedFrom": [
+    "SAS"
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "indicatorId": "science.openalex_country_united_states_multiple.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "multiple of 2000 output",
+  "points": [
+    {
+      "t": 2000,
+      "value": 1
+    },
+    {
+      "t": 2001,
+      "value": 1.03
+    },
+    {
+      "t": 2002,
+      "value": 1.36
+    },
+    {
+      "t": 2003,
+      "value": 1.31
+    },
+    {
+      "t": 2004,
+      "value": 1.32
+    },
+    {
+      "t": 2005,
+      "value": 1.43
+    },
+    {
+      "t": 2006,
+      "value": 1.53
+    },
+    {
+      "t": 2007,
+      "value": 1.56
+    },
+    {
+      "t": 2008,
+      "value": 1.7
+    },
+    {
+      "t": 2009,
+      "value": 1.72
+    },
+    {
+      "t": 2010,
+      "value": 1.8
+    },
+    {
+      "t": 2011,
+      "value": 1.92
+    },
+    {
+      "t": 2012,
+      "value": 1.94
+    },
+    {
+      "t": 2013,
+      "value": 2.05
+    },
+    {
+      "t": 2014,
+      "value": 2.11
+    },
+    {
+      "t": 2015,
+      "value": 2.17
+    },
+    {
+      "t": 2016,
+      "value": 2.2
+    },
+    {
+      "t": 2017,
+      "value": 2.26
+    },
+    {
+      "t": 2018,
+      "value": 2.5
+    },
+    {
+      "t": 2019,
+      "value": 2.63
+    },
+    {
+      "t": 2020,
+      "value": 3.16
+    },
+    {
+      "t": 2021,
+      "value": 2.94
+    },
+    {
+      "t": 2022,
+      "value": 3.84
+    },
+    {
+      "t": 2023,
+      "value": 2.83
+    },
+    {
+      "t": 2024,
+      "value": 2.68
+    }
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:US&group_by=publication_year",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:US&group_by=publication_year&per-page=100",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-13",
+    "checksum": "91c45013ded5d16317c790e8bd3bc82f976fc78bc5fa055422c9a601fc769c2d",
+    "definition": "United States country-attributed OpenAlex works as a multiple of its 2000 value.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "derived_transform",
+      "detail": "divided United States yearly country-attributed work count by its 2000 value"
+    }
+  ]
+}

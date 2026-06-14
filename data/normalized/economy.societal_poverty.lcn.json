@@ -1,0 +1,205 @@
+[
+  {
+    "indicatorId": "economy.societal_poverty.lcn",
+    "entity": "LCN",
+    "entityName": "Latin America & Caribbean",
+    "unit": "% of population",
+    "points": [
+      {
+        "t": 1981,
+        "value": 34.46
+      },
+      {
+        "t": 1982,
+        "value": 34.78
+      },
+      {
+        "t": 1983,
+        "value": 35.99
+      },
+      {
+        "t": 1984,
+        "value": 35.75
+      },
+      {
+        "t": 1985,
+        "value": 35.3
+      },
+      {
+        "t": 1986,
+        "value": 33.269999999999996
+      },
+      {
+        "t": 1987,
+        "value": 34.46
+      },
+      {
+        "t": 1988,
+        "value": 34.410000000000004
+      },
+      {
+        "t": 1989,
+        "value": 34.13
+      },
+      {
+        "t": 1990,
+        "value": 34.61
+      },
+      {
+        "t": 1991,
+        "value": 34.18
+      },
+      {
+        "t": 1992,
+        "value": 34.150000000000006
+      },
+      {
+        "t": 1993,
+        "value": 34.65
+      },
+      {
+        "t": 1994,
+        "value": 34.5
+      },
+      {
+        "t": 1995,
+        "value": 34.1
+      },
+      {
+        "t": 1996,
+        "value": 34.839999999999996
+      },
+      {
+        "t": 1997,
+        "value": 34.839999999999996
+      },
+      {
+        "t": 1998,
+        "value": 34.54
+      },
+      {
+        "t": 1999,
+        "value": 34.77
+      },
+      {
+        "t": 2000,
+        "value": 34.2
+      },
+      {
+        "t": 2001,
+        "value": 34.06
+      },
+      {
+        "t": 2002,
+        "value": 33.910000000000004
+      },
+      {
+        "t": 2003,
+        "value": 33.379999999999995
+      },
+      {
+        "t": 2004,
+        "value": 32.74
+      },
+      {
+        "t": 2005,
+        "value": 32.32
+      },
+      {
+        "t": 2006,
+        "value": 31.230000000000004
+      },
+      {
+        "t": 2007,
+        "value": 30.620000000000005
+      },
+      {
+        "t": 2008,
+        "value": 30
+      },
+      {
+        "t": 2009,
+        "value": 29.659999999999997
+      },
+      {
+        "t": 2010,
+        "value": 28.92
+      },
+      {
+        "t": 2011,
+        "value": 28.37
+      },
+      {
+        "t": 2012,
+        "value": 28.4
+      },
+      {
+        "t": 2013,
+        "value": 27.900000000000002
+      },
+      {
+        "t": 2014,
+        "value": 27.500000000000004
+      },
+      {
+        "t": 2015,
+        "value": 27.13
+      },
+      {
+        "t": 2016,
+        "value": 27.339999999999996
+      },
+      {
+        "t": 2017,
+        "value": 27.089999999999996
+      },
+      {
+        "t": 2018,
+        "value": 26.93
+      },
+      {
+        "t": 2019,
+        "value": 27.139999999999997
+      },
+      {
+        "t": 2020,
+        "value": 25.88
+      },
+      {
+        "t": 2021,
+        "value": 26.76
+      },
+      {
+        "t": 2022,
+        "value": 25.82
+      },
+      {
+        "t": 2023,
+        "value": 25.81
+      },
+      {
+        "t": 2024,
+        "value": 25.46
+      },
+      {
+        "t": 2025,
+        "value": 25.34
+      },
+      {
+        "t": 2026,
+        "value": 25.25
+      }
+    ],
+    "provenance": {
+      "source": "pip",
+      "sourceIndicator": "spr @ $3.00/day (2021 PPP)",
+      "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+      "definition": "Societal (relative) poverty rate, Latin America & Caribbean",
+      "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+      "primarySource": "World Bank — Poverty and Inequality Platform"
+    }
+  }
+]

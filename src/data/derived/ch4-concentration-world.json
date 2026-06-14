@@ -1,0 +1,188 @@
+{
+  "indicatorId": "climate.ch4_concentration.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "parts per billion",
+  "points": [
+    {
+      "t": 1984,
+      "value": 1644.84
+    },
+    {
+      "t": 1985,
+      "value": 1657.29
+    },
+    {
+      "t": 1986,
+      "value": 1670.09
+    },
+    {
+      "t": 1987,
+      "value": 1682.7
+    },
+    {
+      "t": 1988,
+      "value": 1693.21
+    },
+    {
+      "t": 1989,
+      "value": 1704.52
+    },
+    {
+      "t": 1990,
+      "value": 1714.46
+    },
+    {
+      "t": 1991,
+      "value": 1724.76
+    },
+    {
+      "t": 1992,
+      "value": 1735.48
+    },
+    {
+      "t": 1993,
+      "value": 1736.48
+    },
+    {
+      "t": 1994,
+      "value": 1742.05
+    },
+    {
+      "t": 1995,
+      "value": 1748.88
+    },
+    {
+      "t": 1996,
+      "value": 1751.3
+    },
+    {
+      "t": 1997,
+      "value": 1754.51
+    },
+    {
+      "t": 1998,
+      "value": 1765.54
+    },
+    {
+      "t": 1999,
+      "value": 1772.3
+    },
+    {
+      "t": 2000,
+      "value": 1773.22
+    },
+    {
+      "t": 2001,
+      "value": 1771.29
+    },
+    {
+      "t": 2002,
+      "value": 1772.66
+    },
+    {
+      "t": 2003,
+      "value": 1777.33
+    },
+    {
+      "t": 2004,
+      "value": 1777.05
+    },
+    {
+      "t": 2005,
+      "value": 1774.26
+    },
+    {
+      "t": 2006,
+      "value": 1774.96
+    },
+    {
+      "t": 2007,
+      "value": 1781.38
+    },
+    {
+      "t": 2008,
+      "value": 1787.01
+    },
+    {
+      "t": 2009,
+      "value": 1793.54
+    },
+    {
+      "t": 2010,
+      "value": 1798.89
+    },
+    {
+      "t": 2011,
+      "value": 1803.1
+    },
+    {
+      "t": 2012,
+      "value": 1808.12
+    },
+    {
+      "t": 2013,
+      "value": 1813.42
+    },
+    {
+      "t": 2014,
+      "value": 1822.53
+    },
+    {
+      "t": 2015,
+      "value": 1834.26
+    },
+    {
+      "t": 2016,
+      "value": 1843.12
+    },
+    {
+      "t": 2017,
+      "value": 1849.58
+    },
+    {
+      "t": 2018,
+      "value": 1857.34
+    },
+    {
+      "t": 2019,
+      "value": 1866.54
+    },
+    {
+      "t": 2020,
+      "value": 1878.72
+    },
+    {
+      "t": 2021,
+      "value": 1894.81
+    },
+    {
+      "t": 2022,
+      "value": 1910.94
+    },
+    {
+      "t": 2023,
+      "value": 1921.43
+    },
+    {
+      "t": 2024,
+      "value": 1929.43
+    },
+    {
+      "t": 2025,
+      "value": 1935.72
+    }
+  ],
+  "provenance": {
+    "source": "noaagml",
+    "sourceIndicator": "ch4_annmean_gl",
+    "url": "https://gml.noaa.gov/webdata/ccgg/trends/ch4/ch4_annmean_gl.txt",
+    "license": "Public Domain (NOAA GML)",
+    "vintage": "2026-06-13",
+    "checksum": "026a15582001534d1abd55e05b078eba5c0755af2d42e1a260dddc5b39b8c0ad",
+    "definition": "Atmospheric methane concentration, World",
+    "attribution": "NOAA Global Monitoring Laboratory",
+    "primarySource": "NOAA Global Monitoring Laboratory",
+    "notes": "Globally-averaged annual mean dry-air mole fraction; a well-mixed gas, so one global number."
+  }
+}

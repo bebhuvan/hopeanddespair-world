@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "science.openalex_country_germany_index.world",
+    "unit": "index, 2000 = 100",
+    "points": 25
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "derived_transform",
+        "detail": "divided Germany yearly country-attributed work count by its 2000 value and multiplied by 100"
+      }
+    ],
+    "agent": "adapter:openalex@openalex-story-1.0.0",
+    "used": {
+      "source": "openalex",
+      "slug": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:DE&group_by=publication_year",
+      "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:DE&group_by=publication_year&per-page=100",
+      "vintage": "2026-06-13",
+      "checksum": "499ecb4f6d1eb984f7f14a2f6318b44731dfd5a4ef9221cd51f9be7ffc286e82",
+      "license": "CC0 1.0"
+    }
+  },
+  "primarySource": "OpenAlex"
+}

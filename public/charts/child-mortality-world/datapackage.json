@@ -1,0 +1,38 @@
+{
+  "name": "health-child_mortality-world",
+  "title": "The long-run estimated share of newborns who die before reaching the age of five.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/child-mortality"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "health-child_mortality-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "health_child_mortality_world",
+            "type": "number",
+            "unit": "deaths per 100 live births"
+          }
+        ]
+      }
+    }
+  ]
+}

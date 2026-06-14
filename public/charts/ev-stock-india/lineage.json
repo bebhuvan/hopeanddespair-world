@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "transport.ev_stock.india",
+    "unit": "Vehicles",
+    "points": 16
+  },
+  "wasDerivedFrom": [
+    "India"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity India"
+      }
+    ],
+    "agent": "adapter:iea@1.0.0",
+    "used": {
+      "source": "iea",
+      "slug": "evs",
+      "url": "https://api.iea.org/evs?region=India&csv=true",
+      "vintage": "2026-06-13",
+      "checksum": "8dd13a74ac53aff12fe7aa229e238c37bbf8576da8fc348b749bb9cd6be3910b",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+}

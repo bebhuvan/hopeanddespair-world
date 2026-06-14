@@ -1,0 +1,132 @@
+{
+  "indicatorId": "energy.coal_generation.china",
+  "entity": "CHN",
+  "entityName": "China",
+  "unit": "terawatt-hours",
+  "points": [
+    {
+      "t": 2000,
+      "value": 1060.26
+    },
+    {
+      "t": 2001,
+      "value": 1129.14
+    },
+    {
+      "t": 2002,
+      "value": 1282.57
+    },
+    {
+      "t": 2003,
+      "value": 1519.97
+    },
+    {
+      "t": 2004,
+      "value": 1722.42
+    },
+    {
+      "t": 2005,
+      "value": 1980.15
+    },
+    {
+      "t": 2006,
+      "value": 2302.42
+    },
+    {
+      "t": 2007,
+      "value": 2656.7
+    },
+    {
+      "t": 2008,
+      "value": 2708.91
+    },
+    {
+      "t": 2009,
+      "value": 2911.52
+    },
+    {
+      "t": 2010,
+      "value": 3233.6
+    },
+    {
+      "t": 2011,
+      "value": 3690.87
+    },
+    {
+      "t": 2012,
+      "value": 3748.19
+    },
+    {
+      "t": 2013,
+      "value": 4077.37
+    },
+    {
+      "t": 2014,
+      "value": 4203.06
+    },
+    {
+      "t": 2015,
+      "value": 4046.17
+    },
+    {
+      "t": 2016,
+      "value": 4156.35
+    },
+    {
+      "t": 2017,
+      "value": 4430.03
+    },
+    {
+      "t": 2018,
+      "value": 4763.85
+    },
+    {
+      "t": 2019,
+      "value": 4855.12
+    },
+    {
+      "t": 2020,
+      "value": 4921.89
+    },
+    {
+      "t": 2021,
+      "value": 5333.8
+    },
+    {
+      "t": 2022,
+      "value": 5414.72
+    },
+    {
+      "t": 2023,
+      "value": 5752.74
+    },
+    {
+      "t": 2024,
+      "value": 5827.6
+    },
+    {
+      "t": 2025,
+      "value": 5773.02
+    }
+  ],
+  "provenance": {
+    "source": "ember",
+    "sourceIndicator": "electricity-generation/yearly:Coal:generation_twh",
+    "url": "https://api.ember-energy.org/v1/electricity-generation/yearly?entity=China&start_date=2000",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "cbf7e251147a4116e1c18ef9cebe892a845cb954cf2b816907d109cfdcdb1578",
+    "definition": "Electricity generated from coal, China",
+    "attribution": "Ember — Yearly Electricity Data",
+    "primarySource": "Ember — Yearly Electricity Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity China"
+    }
+  ],
+  "derivedFrom": [
+    "CHN"
+  ]
+}

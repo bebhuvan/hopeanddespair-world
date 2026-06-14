@@ -1,0 +1,94 @@
+{
+  "chartId": "child-mortality-by-country",
+  "kind": "bars",
+  "title": "Child mortality by country",
+  "unit": "Deaths before age 5, per 1,000 live births",
+  "yearSpan": "2024–2024",
+  "bars": [
+    {
+      "label": "Nigeria",
+      "value": 115.6,
+      "color": "despair"
+    },
+    {
+      "label": "Somalia",
+      "value": 101.1,
+      "color": "despair"
+    },
+    {
+      "label": "Chad",
+      "value": 97.3,
+      "color": "despair"
+    },
+    {
+      "label": "DR Congo",
+      "value": 89.7,
+      "color": "despair"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 44.5,
+      "color": "ochre"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 30.5,
+      "color": "hope"
+    },
+    {
+      "label": "India",
+      "value": 26.6,
+      "color": "hope"
+    },
+    {
+      "label": "Brazil",
+      "value": 14.2,
+      "color": "hope"
+    },
+    {
+      "label": "United States",
+      "value": 6.5,
+      "color": "hope"
+    },
+    {
+      "label": "China",
+      "value": 5.7,
+      "color": "hope"
+    },
+    {
+      "label": "Japan",
+      "value": 2.4,
+      "color": "hope"
+    },
+    {
+      "label": "Finland",
+      "value": 2.4,
+      "color": "hope"
+    }
+  ],
+  "xmax": 120,
+  "xTicks": [
+    0,
+    30,
+    60,
+    90,
+    120
+  ],
+  "provenance": {
+    "source": "wb",
+    "sourceIndicator": "SH.DYN.MORT",
+    "url": "https://data.worldbank.org/indicator/SH.DYN.MORT",
+    "license": "CC BY 4.0",
+    "vintage": "2024–2024",
+    "checksum": "12c5201b4ed68922f521a18f9e08df470d60e8b8c8c9d1951bb7f3d98ddc9444",
+    "definition": "Under-five mortality rate: deaths before age five per 1,000 live births, latest year per country. A curated 12-country spread sorted descending.",
+    "attribution": "UN IGME, via World Bank",
+    "primarySource": "UN Inter-agency Group for Child Mortality Estimation"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 12 curated countries sorted descending"
+    }
+  ]
+}

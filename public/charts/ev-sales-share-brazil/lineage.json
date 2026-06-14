@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "transport.ev_sales_share.brazil",
+    "unit": "percent",
+    "points": 16
+  },
+  "wasDerivedFrom": [
+    "Brazil"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Brazil"
+      }
+    ],
+    "agent": "adapter:iea@1.0.0",
+    "used": {
+      "source": "iea",
+      "slug": "evs",
+      "url": "https://api.iea.org/evs?region=Brazil&csv=true",
+      "vintage": "2026-06-13",
+      "checksum": "374ede66ab9b489c953ebc2970a2523a97801be8b5c2b06739b1f9cb3aafafc8",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+}

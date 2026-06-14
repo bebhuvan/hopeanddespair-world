@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "SH.ALC.PCAP.LI",
+  "vintage": "2026-06-12",
+  "url": "https://data.worldbank.org/indicator/SH.ALC.PCAP.LI",
+  "checksum": "c16d7a0e98614d742287a821a8146b995a7fd339a45b1800e3065270398b4558",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:44:53.751Z",
+  "adapterVersion": "1.0.0"
+}

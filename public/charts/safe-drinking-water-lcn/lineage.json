@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "water.safe_drinking_water.lcn",
+    "unit": "% of population",
+    "points": 25
+  },
+  "wasDerivedFrom": [
+    "LCN"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity LCN"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SH.H2O.SMDW.ZS",
+      "url": "https://data.worldbank.org/indicator/SH.H2O.SMDW.ZS",
+      "vintage": "2026-06-12",
+      "checksum": "4667986b4aca06ead903a829d983ffdccd6955ab41b7d11fd4b6d3016ef29796",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "WHO/UNICEF JMP, via World Bank"
+}

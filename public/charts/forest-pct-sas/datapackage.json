@@ -1,0 +1,38 @@
+{
+  "name": "nature-forest_pct-sas",
+  "title": "Forest area (% of land area)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/AG.LND.FRST.ZS"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "nature-forest_pct-sas",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "nature_forest_pct_sas",
+            "type": "number",
+            "unit": "% of land area"
+          }
+        ]
+      }
+    }
+  ]
+}

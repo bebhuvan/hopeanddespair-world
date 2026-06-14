@@ -1,9 +1,13 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { miniLine, fullChart, signalRead } from '../../lib/charts';
+import { miniLine, signalRead } from '../../lib/charts';
 import { windowSeries } from '../../lib/smooth';
 import { gitHistory, fileHistoryUrl } from '../../lib/repo';
+import { smartenDeep } from '../../lib/typo';
+import { buildMovements } from '../../lib/article-charts';
+import { buildDimensions } from '../../lib/keystone-charts';
+import Chart from '../../components/Chart.astro';
 
 export async function getStaticPaths() {
   const questions = await getCollection('questions');
@@ -11,10 +15,7 @@ export async function getStaticPaths() {
 }
 
 const { q } = Astro.props;
-const d = q.data;
-const COL: Record<string, string> = {
-  hope: 'var(--hope)', despair: 'var(--despair)', uncertain: 'var(--uncertain)', ochre: 'var(--ochre)',
-};
+const d = smartenDeep(q.data);
 const tempCol = (t: string) => (t === 'cool' ? 'var(--hope)' : 'var(--despair)');
 const published = d.status === 'published' && d.evidence;
 
@@ -23,7 +24,7 @@ let windows: any[] = [], signals: any[] = [], tally = '', recentCol = '';
 if (published && d.evidence) {
   const ev = d.evidence;
   windows = ev.windows.map((w, i) => {
-    const r = miniLine({ data: windowSeries(ev.hero, w.from, w.to), color: tempCol(w.temp), width: 300, height: 60, area: true, baseline: true, id: 'w' + i });
+    const r = miniLine({ data: windowSeries(ev.hero, w.from, w.to), color: tempCol(w.temp), width: 300, height: 56, area: true, baseline: true, id: 'w' + i });
     return { ...w, ...r, col: tempCol(w.temp) };
   });
   let good = 0, bad = 0;
@@ -31,413 +32,820 @@ if (published && d.evidence) {
     const rd = signalRead(s.data, ev.recentFrom, ev.recentTo, s.badUp);
     rd.good ? good++ : bad++;
     const col = rd.good ? 'var(--hope)' : 'var(--despair)';
-    const r = miniLine({ data: rd.data, color: col, width: 300, height: 62, area: true, id: 'sig' + i });
+    const r = miniLine({ data: rd.data, color: col, width: 300, height: 50, area: true, id: 'sig' + i });
     return { ...s, ...rd, col, ...r };
   });
   tally = `<b>${bad}</b> of ${ev.signals.length} signals point to deterioration · <b>${good}</b> toward progress`;
   recentCol = tempCol(ev.recentTemp);
 }
 
-// Real derived series produced by the pipeline (DATA.md). When a movement's chart has a
-// dataRef, swap in the real points + carry its provenance for the "How this number was made"
-// panel and the data download. Charts without a dataRef remain illustrative.
-const derivedSeries = import.meta.glob<{ default: any }>('../../data/derived/*.json', { eager: true });
-const derivedById: Record<string, any> = {};
-for (const [path, mod] of Object.entries(derivedSeries)) {
-  derivedById[path.split('/').pop()!.replace('.json', '')] = (mod as any).default;
-}
+// Rendered movement charts — built in src/lib/article-charts.ts, shared with the
+// standalone chart.svg download endpoint so the page and the artifact can never drift.
+// A movements-led article (real charts, no single-metric evidence panel) is also a full render,
+// not a stub — as long as it is published and has movements.
+const hasMovements = d.status === 'published' && (d.movements?.length ?? 0) > 0;
+const movements = buildMovements((published || hasMovements) ? d.movements ?? [] : []);
 
-const movements = (published ? d.movements ?? [] : []).map((mv) => {
-  const ref = mv.chart.dataRef ? derivedById[mv.chart.dataRef] : null;
-  const series = ref
-    ? [{ name: mv.chart.series[0]?.name ?? 'Series', color: COL[mv.chart.series[0]?.color ?? 'hope'], data: ref.points.map((p: any) => [p.t, p.value]) }]
-    : mv.chart.series.map((s) => ({ ...s, color: COL[s.color] }));
-  const r = fullChart({ ...mv.chart, series });
-  return { ...mv, ...r, real: !!ref, prov: ref?.provenance ?? null, recipe: ref?.recipe ?? null, dataRef: mv.chart.dataRef };
-});
+// The keystone hub — each dimension a mini-suite of real derived series, grouped by temperature.
+const dimensions = buildDimensions(d.dimensions ?? []);
+const isHub = dimensions.length > 0;
+// The hub has no single-metric `evidence` block, so it isn't "published" in the old sense — but it
+// still renders its full back matter (cases, what-would-change-it, methodology, sources, closing).
+// A movements-led article (real charts, no evidence panel) likewise earns its back matter.
+const showArticle = published || isHub || hasMovements;
+const clusters = [
+  { key: 'better', label: 'What we are winning', sub: 'where the verdict is clearly yes' },
+  { key: 'worse', label: 'What we are losing', sub: 'where the verdict is clearly no' },
+  { key: 'both', label: 'What is genuinely both', sub: 'where the verdict splits — and the article is most itself' },
+];
+// The attribution line under each chart, generated from the series' own provenance (never hand-typed).
+const srcLine = (p: any) => p ? `Source · ${p.attribution}${p.primarySource ? ` — ${p.primarySource}` : ''} · ${p.license}` : '';
 
-// Revision history — generated from git (the living-atlas trail). Diff links resolve once a
-// remote exists; until then, entries show the short SHA.
+// Revision history — generated from git (the living-atlas trail).
 const contentPath = `src/content/questions/${q.id}.md`;
 const history = gitHistory(contentPath);
 const histUrl = fileHistoryUrl(contentPath);
 
+// The lived-now interlude — a tonal pivot drawn from the article's own data (the "living it"
+// lens, falling back to the vantage note). The despair read, spoken in despair colour.
+const livedLens = (published ? d.lenses ?? [] : []).find((l) => /liv/i.test(l.who) && l.despair);
+const interludeRaw = livedLens?.despair ?? (published ? d.evidence?.vantageNote ?? null : null);
+let ilLead: string | null = interludeRaw, ilPunch = '';
+if (interludeRaw) {
+  const m = interludeRaw.match(/^(.*\.)\s+([^.]+\.?)$/);   // lead sentence(s) + the closing punch
+  if (m) { ilLead = m[1]; ilPunch = m[2]; }
+}
+// No sub-text under the quote: it used to repeat the composite's vantage note verbatim
+// two screens later — the quote stands alone.
+
+// The closing "Still lost? Read this." box + AI disclosure, authored as the markdown body.
+const { Content } = await render(q);
+
+// Recipe steps arrive as lowercase fragments; print them as sentences, not a semicolon chain.
+const sentence = (s: string) => s.charAt(0).toUpperCase() + s.slice(1).replace(/\.?$/, '.');
+
 const title = `${d.question} — Hope & Despair`;
+
+// Citation + disclosure metadata. The canonical URL and BibTeX let the atlas be cited the way
+// a dataset or article is — selectable text, no client JS needed (the reader copies it).
+// The metric the evidence panel zooms — named so "one number, four magnifications" has an
+// antecedent. heroLabel is authored as "name / unit"; the first segment is the number's name.
+const heroName = (d.evidence?.heroLabel ?? '').split(/\s*[/·]\s*/)[0];
+const canonical = `https://hopeanddespair.world/questions/${q.id}`;
+const pubYear = new Date(q.data.publishedAt).getFullYear();
+const updated = history[0]?.date ?? null;
+const citation = `Hope & Despair. “${d.question}.” Hope & Despair, ${pubYear}. ${canonical}.`;
+const bibtex = `@misc{hopeanddespair:${q.id},
+  author       = {{Hope & Despair}},
+  title        = {{${d.question}}},
+  year         = {${pubYear}},
+  howpublished = {\\url{${canonical}}},
+  note         = {hopeanddespair.world${updated ? `, updated ${updated}` : ''}}
+}`;
+
+// Article structured data — grounds search engines and LLMs in what this page is, when it
+// changed, who made it, and that it is free + openly licensed.
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: d.question,
+  description: d.dek,
+  url: canonical,
+  datePublished: new Date(q.data.publishedAt).toISOString().slice(0, 10),
+  dateModified: updated ?? new Date(q.data.publishedAt).toISOString().slice(0, 10),
+  inLanguage: 'en',
+  isAccessibleForFree: true,
+  license: 'https://creativecommons.org/licenses/by/4.0/',
+  author: { '@type': 'Person', name: 'Bhuvan', url: 'https://bebhuvan.com' },
+  publisher: { '@type': 'Organization', name: 'Hope & Despair', url: 'https://hopeanddespair.world' },
+  mainEntityOfPage: canonical,
+};
+
 const sec = ['I', 'II', 'III', 'IV', 'V', 'VI'];
+// Figures are the movement charts, numbered from 1 — the evidence sparklines are not
+// figures (the old scheme started readers at "Fig. 6" with no visible 1–5).
+const figStart = 1;
 ---
-<BaseLayout title={title} description={d.dek}>
-  <header class="ahead">
-    <p class="kicker"><span class="n">Question {d.kickerNumber}</span> {d.theme}</p>
-    <h1 class="q">{d.question}</h1>
-  </header>
-  <p class="lede">{d.dek}</p>
-
-  {!published && (
-    <p class="draft-note">This article is being written. Its place on the hope↔despair atlas is set — the full
-      evidence, charts, and explanation are on the way. <a href="/">← Back to the atlas</a></p>
-  )}
-
-  {published && d.caveats && (
-    <aside class="caveats">
-      <div class="caveats-head"><span class="cv-glyph">◐</span> Before you read · caveats &amp; blind spots</div>
-      <ul>{d.caveats.map((c) => <li set:html={c} />)}</ul>
-    </aside>
-  )}
-
-  {published && d.evidence && (
-    <section class="evi">
-      <div class="evi-head">
-        <div class="t">The Evidence · <b>one question, four magnifications</b></div>
-        <div class="legend">
-          <span><i style="background:var(--hope)"></i> improving</span>
-          <span><i style="background:var(--despair)"></i> worsening</span>
-          <span style="color:var(--accent)">read left → right →</span>
-        </div>
+<BaseLayout title={title} description={d.dek} type="article" jsonld={articleLd}>
+  <article class="qbody">
+    <!-- header -->
+    <div class="row">
+      <div class="g"></div>
+      <div class="c">
+        <p class="kicker">Question {d.kickerNumber} <span class="sep">·</span> {d.theme}</p>
+        <h1 class="title">{d.question}</h1>
+        <p class="lede">{d.dek}</p>
       </div>
+    </div>
 
-      <div class="windows">
-        {windows.map((w) => (
-          <div class="win">
-            <div class="wlab">{w.lab}</div>
-            <div class="wrange">{w.range}</div>
-            <svg viewBox={w.viewBox} preserveAspectRatio="none" aria-hidden="true" set:html={w.inner} />
-            <div class="wverdict" style={`color:${w.col}`}>{w.verdict}<span class="punc">.</span></div>
+    {showArticle && d.intro && (
+      <div class="row block">
+        <div class="g"></div>
+        <div class="c intro">{d.intro.map((p: string) => <p set:html={p} />)}</div>
+      </div>
+    )}
+
+    {!published && !isHub && !hasMovements && (
+      <div class="row block">
+        <div class="g"></div>
+        <div class="c"><p class="draft-note">This article is being written. Its place on the hope↔despair atlas is
+          set — the full evidence, charts, and explanation are on the way. <a href="/">← Back to the atlas</a></p></div>
+      </div>
+    )}
+
+    {isHub && clusters.map((cl) => {
+      const dims = dimensions.filter((dm: any) => dm.cluster === cl.key);
+      if (!dims.length) return null;
+      return (
+        <section class="cluster">
+          <div class="row block"><div class="g"></div><div class="c">
+            <div class="cl-head"><span class="cl-t">{cl.label}</span><span class="cl-s">{cl.sub}</span></div>
+          </div></div>
+          {dims.map((dm: any) => (
+            <div class="row dim">
+              <div class="g"><div class={`epi epi-${dm.epistemic}`}>{dm.epistemic}</div></div>
+              <div class="c">
+                <div class="dverdict">
+                  <span style={`color:${tempCol(dm.verdictTemp)}`}>{dm.verdict}</span>
+                  {dm.verdict2 && <><span class="vslash">/</span><span style={`color:${tempCol(dm.verdict2Temp)}`}>{dm.verdict2}</span></>}
+                </div>
+                <h2 class="dname">{dm.name}</h2>
+                <p class="dim-claim">{dm.claim}</p>
+                {dm.explainer && <p class="dim-ex">{dm.explainer}</p>}
+
+                {[dm.carryingChart, dm.counterChart, ...(dm.secondaryCharts ?? [])].filter(Boolean).map((c: any) => (
+                  <figure class="kfig">
+                    <figcaption class="kcap"><span class="lab" set:html={c.label} /><span class="u">{c.unit} <span class="yr">· {c.span}</span></span></figcaption>
+                    <div class="sc"><Chart c={c} /></div>
+                    {c.note && <p class="knote" set:html={c.note} />}
+                    <div class="kfoot">
+                      {!c.linkOnly && (
+                        <span class="tools"><a href={`/charts/${c.dataRef}/chart.svg`} download>↓ image, svg</a><a href={`/charts/${c.dataRef}/data.csv`} download>↓ data, csv</a><a href={`/charts/${c.dataRef}/datapackage.json`}>↓ data package</a><a href={`/charts/${c.dataRef}/lineage.json`}>↗ lineage</a></span>
+                      )}
+                      <span class="src">{srcLine(c.prov)}{c.linkOnly ? ' · link-only, not for download' : ''}</span>
+                    </div>
+                  </figure>
+                ))}
+                {dm.regionalChart && (
+                  <figure class="kfig">
+                    <figcaption class="kcap"><span class="lab" set:html={dm.regional.label} /><span class="u yr">{dm.regionalChart.span}</span></figcaption>
+                    <div class="sc"><Chart c={dm.regionalChart} /></div>
+                    {dm.regionalChart.note && <p class="knote" set:html={dm.regionalChart.note} />}
+                    <div class="kfoot">
+                      {!dm.regionalChart.linkOnly && (
+                        <span class="tools"><a href={`/charts/${dm.regionalChart.dataRef}/regions.svg`} download>↓ image, svg</a></span>
+                      )}
+                      <span class="src">{srcLine(dm.regionalChart.prov)}</span>
+                    </div>
+                  </figure>
+                )}
+                {dm.countryChart && (
+                  <figure class="kfig">
+                    <figcaption class="kcap"><span class="lab" set:html={dm.countries.label} /><span class="u">{dm.countryChart.unit} {dm.countryChart.span && <span class="yr">· {dm.countryChart.span}</span>}</span></figcaption>
+                    <div class="sc"><Chart c={dm.countryChart} /></div>
+                    {dm.countryChart.note && <p class="knote" set:html={dm.countryChart.note} />}
+                    <div class="kfoot">
+                      <span class="src">{srcLine(dm.countryChart.prov)}</span>
+                    </div>
+                  </figure>
+                )}
+                {dm.countryTrendChart && (
+                  <figure class="kfig">
+                    <figcaption class="kcap"><span class="lab" set:html={dm.countryTrend.label} /><span class="u yr">{dm.countryTrendChart.span}</span></figcaption>
+                    <div class="sc"><Chart c={dm.countryTrendChart} /></div>
+                    {dm.countryTrendChart.note && <p class="knote" set:html={dm.countryTrendChart.note} />}
+                    <div class="kfoot">
+                      <span class="src">{srcLine(dm.countryTrendChart.prov)}</span>
+                    </div>
+                  </figure>
+                )}
+
+                <div class="takes">
+                  <div class="hope"><div class="t">Hope</div><p>{dm.take.hope}</p></div>
+                  <div class="desp"><div class="t">Despair</div><p>{dm.take.despair}</p></div>
+                  <div class="conf"><div class="t">Confusion</div><p>{dm.take.confusion}</p></div>
+                </div>
+                {dm.deepLink && <a class="deep" href={dm.deepLink}>Go deeper into {dm.name.toLowerCase()} →</a>}
+              </div>
+            </div>
+          ))}
+        </section>
+      );
+    })}
+
+    {showArticle && d.caveats && (
+      <div class="row block caveats">
+        <div class="g"><div class="glabel">Before<br>you read</div></div>
+        <div class="c"><ul>{d.caveats.map((c) => <li set:html={c} />)}</ul></div>
+      </div>
+    )}
+
+    {published && d.evidence && (
+      <div class="row block evi">
+        <div class="g"><div class="glabel">The<br>evidence</div></div>
+        <div class="c">
+          <div class="head">
+            <div class="t"><b>One number, read at four magnifications.</b> That number is
+              {heroName && <b class="metric">{heroName}</b>} — the same measure, zoomed from the longest view
+              this question allows down to the most recent.</div>
+            <div class="legend"><span><i style="background:var(--hope)"></i>improving</span><span><i style="background:var(--despair)"></i>worsening</span></div>
           </div>
-        ))}
-      </div>
+          <div class="windows zoom">
+            {windows.map((w, i) => (
+              <div class="win">
+                <div class="wn">{String(i + 1).padStart(2, '0')}{i < windows.length - 1 && <span class="ar">→</span>}</div>
+                <div class="wr">{w.range}</div>
+                <div class="wl">{w.lab}</div>
+                <svg viewBox={w.viewBox} preserveAspectRatio="none" aria-hidden="true" set:html={w.inner} />
+                <div class:list={['wv', w.temp === 'cool' ? 'cool' : 'warm']}>{w.verdict}<span class="p">.</span></div>
+              </div>
+            ))}
+          </div>
+          <p class="readout" set:html={d.evidence.readout} />
 
-      <p class="evi-read" set:html={d.evidence.readout} />
+          <div class="sig-head">Now four <em>separate</em> signals <span class="r">· different measures, {d.evidence.windows[2]?.range ?? 'recent'}</span></div>
+          <div class="signals">
+            {signals.map((s) => (
+              <div class="sig">
+                <div class="nm">{s.name}</div>
+                <div class="un">{s.unit}</div>
+                <svg viewBox={s.viewBox} preserveAspectRatio="none" aria-hidden="true" set:html={s.inner} />
+                <div class="rd"><span class="v">{s.value}</span><span class="dir" style={`color:${s.col}`}>{s.up ? '↑' : '↓'} {s.good ? 'improving' : 'worsening'}</span></div>
+              </div>
+            ))}
+          </div>
 
-      <div class="sig-head">The recent signals · {d.evidence.windows[2]?.range ?? 'recent'}</div>
-      <div class="signals">
-        {signals.map((s) => (
-          <div class="sig">
-            <div class="fg">{s.fig}</div>
-            <div class="nm">{s.name}</div>
-            <div class="un">{s.unit}</div>
-            <svg viewBox={s.viewBox} preserveAspectRatio="none" aria-hidden="true" set:html={s.inner} />
-            <div class="read">
-              <span class="v" style={`color:${s.col}`}>{s.value}</span>
-              <span class="dir" style={`color:${s.col}`}><span class="arr">{s.up ? '↑' : '↓'}</span><span class="lab">{s.good ? 'improving' : 'worsening'}</span></span>
+          <div class="composite">
+            <div><div class="vlab">The recent verdict</div><div class="vbig" style={`color:${recentCol}`}>{d.evidence.recentVerdict}<span class="p">.</span></div></div>
+            <div>
+              <p class="synth" set:html={d.evidence.synthesis} />
+              <p class="tally" set:html={tally} />
+              <p class="vantage" set:html={d.evidence.vantageNote} />
             </div>
           </div>
-        ))}
-      </div>
-
-      <div class="composite">
-        <div><div class="vlabel">The recent verdict</div>
-          <div class="verdict" style={`color:${recentCol}`}>{d.evidence.recentVerdict}<span class="punc">.</span></div></div>
-        <div>
-          <p class="synthesis" set:html={d.evidence.synthesis} />
-          <p class="tally" set:html={tally} />
-          <p class="vantage-note" set:html={d.evidence.vantageNote} />
         </div>
       </div>
-    </section>
-  )}
+    )}
 
-  {movements.length > 0 && (
-    <section class="movements">
-      {movements.map((mv) => (
-        <article class="move">
-          <div class="ey"><span>{mv.eyebrow}</span><span class="fg">{mv.fig}</span></div>
-          <h2>{mv.claim}</h2>
-          {mv.sidenote && (
-            <aside class="sidenote"><span class="n">{mv.sidenote.mark}</span><span set:html={mv.sidenote.text} /></aside>
-          )}
-          <p class:list={['intro', { 'has-drop': mv.dropCap }]} set:html={mv.explainer} />
-          <div class="figure">
+    <!-- the lived-now interlude: a temperature shift, not a black slab -->
+    {published && ilLead && (
+      <section class="interlude bleed">
+        <div class="in">
+          <p class="e">the lived now</p>
+          <blockquote>{ilLead}{ilPunch && <> <b>{ilPunch}</b></>}</blockquote>
+        </div>
+      </section>
+    )}
+
+    <!-- movements -->
+    {movements.map((mv, i) => (
+      <div class="row move">
+        <div class="g"><div class="fno">Fig.&nbsp;{figStart + i}</div></div>
+        <div class="c">
+          <div class="ey">{mv.eyebrow}</div>
+          <h2>{mv.question ?? mv.claim}</h2>
+          {mv.sidenote && (<aside class="sidenote"><span class="n">{mv.sidenote.mark}.</span><span set:html={mv.sidenote.text} /></aside>)}
+          {mv.question && <p class="answer">{mv.claim}</p>}
+          {mv.explainer.split(/\n\n+/).map((para: string) => <p class="intro" set:html={para} />)}
+          <figure class="fig">
             <div class="cap"><span set:html={mv.captionLeft} /><span>{mv.captionRight}</span></div>
-            <svg viewBox={mv.viewBox} aria-hidden="true" set:html={mv.inner} />
-            <div class="fig-foot">
+            <div class="sc"><Chart c={mv} /></div>
+            <figcaption>
               {mv.real && mv.dataRef && (
-                <div class="fig-tools">
-                  <a class="ftool" href={`/charts/${mv.dataRef}/data.csv`} download>↓ Data (CSV)</a>
-                  <a class="ftool" href={`/charts/${mv.dataRef}/datapackage.json`}>↓ Data package</a>
-                </div>
+                <div class="tools"><a href={`/charts/${mv.dataRef}/fig${figStart + i}.svg`} download>↓ image, svg</a><a href={`/charts/${mv.dataRef}/data.csv`} download>↓ data, csv</a><a href={`/charts/${mv.dataRef}/datapackage.json`}>↓ data package</a><a href={`/charts/${mv.dataRef}/lineage.json`}>↗ lineage</a></div>
               )}
               <div class="src">{mv.source}</div>
-            </div>
+            </figcaption>
             {mv.real && mv.prov && (
               <details class="prov">
                 <summary>How this number was made</summary>
-                <div class="prov-body">
+                <div class="pb">
                   <p><b>What it measures.</b> {mv.prov.definition}</p>
                   {mv.recipe && mv.recipe.length > 0 && (
-                    <p><b>Calculation.</b> {mv.recipe.map((r: any) => r.detail).join('; ')}. The displayed
-                      line is monotone-cubic smoothed for legibility only — it never moves a data point.</p>
+                    <>
+                      <p><b>Calculation.</b> {mv.recipe.map((r: any) => sentence(r.detail)).join(' ')}</p>
+                      {mv.kind !== 'bars' && (
+                        <p class="fine">The displayed line is monotone-cubic smoothed for legibility only — it never
+                          moves a data point.</p>
+                      )}
+                    </>
                   )}
-                  <p class="prov-meta">
-                    <span>Source · {mv.prov.attribution}{mv.prov.primarySource ? ` (${mv.prov.primarySource})` : ''}</span>
-                    <span>License · {mv.prov.license}</span>
-                    <span>Vintage · {mv.prov.vintage}</span>
-                    <span>Checksum · <code>{mv.prov.checksum.slice(0, 16)}…</code></span>
-                    <span><a href={mv.prov.url} rel="noopener">source ↗</a> · <a href={`/charts/${mv.dataRef}/lineage.json`}>lineage ↗</a></span>
-                  </p>
+                  <div class="meta">
+                    <span>source · {mv.prov.attribution}{mv.prov.primarySource ? ` (${mv.prov.primarySource})` : ''}</span>
+                    <span>license · {mv.prov.license}</span>
+                    <span>vintage · {mv.prov.vintage}</span>
+                    <span>checksum · {mv.prov.checksum.slice(0, 12)}…</span>
+                  </div>
                 </div>
               </details>
             )}
-          </div>
-          <div class="take">
+          </figure>
+          {(mv.regionalChart || mv.countryChart) && (
+            <div class="levels">
+              {mv.regionalChart && (
+                <figure class="kfig">
+                  <figcaption class="kcap"><span class="lab" set:html={mv.regional.label} /><span class="u yr">{mv.regionalChart.span}</span></figcaption>
+                  <div class="sc"><Chart c={mv.regionalChart} /></div>
+                  {mv.regionalChart.note && <p class="knote" set:html={mv.regionalChart.note} />}
+                  <div class="kfoot">
+                    {!mv.regionalChart.linkOnly && (
+                      <span class="tools"><a href={`/charts/${mv.regionalChart.dataRef}/regions.svg`} download>↓ image, svg</a></span>
+                    )}
+                    <span class="src">{srcLine(mv.regionalChart.prov)}{mv.regionalChart.linkOnly ? ' · link-only, not for download' : ''}</span>
+                  </div>
+                </figure>
+              )}
+              {mv.countryChart && (
+                <figure class="kfig">
+                  <figcaption class="kcap"><span class="lab" set:html={mv.countries.label} /><span class="u">{mv.countryChart.unit} {mv.countryChart.span && <span class="yr">· {mv.countryChart.span}</span>}</span></figcaption>
+                  <div class="sc"><Chart c={mv.countryChart} /></div>
+                  {mv.countryChart.note && <p class="knote" set:html={mv.countryChart.note} />}
+                  <div class="kfoot">
+                    {!mv.countryChart.linkOnly && (
+                      <span class="tools"><a href={`/charts/${mv.countryChart.dataRef}/bars.svg`} download>↓ image, svg</a></span>
+                    )}
+                    <span class="src">{srcLine(mv.countryChart.prov)}{mv.countryChart.linkOnly ? ' · link-only, not for download' : ''}</span>
+                  </div>
+                </figure>
+              )}
+            </div>
+          )}
+          <div class="takes">
             <div class="hope"><div class="t">Hope</div><p>{mv.take.hope}</p></div>
-            <div class="despair"><div class="t">Despair</div><p>{mv.take.despair}</p></div>
+            <div class="desp"><div class="t">Despair</div><p>{mv.take.despair}</p></div>
             <div class="conf"><div class="t">Confusion</div><p>{mv.take.confusion}</p></div>
           </div>
-        </article>
-      ))}
-    </section>
-  )}
+        </div>
+      </div>
+    ))}
 
-  {published && d.pullQuote && (
-    <blockquote class="pull">{d.pullQuote.text}<cite>{d.pullQuote.cite}</cite></blockquote>
-  )}
+    {showArticle && d.pullQuote && (
+      <blockquote class="pull">{d.pullQuote.text}<cite>— {d.pullQuote.cite}</cite></blockquote>
+    )}
 
-  {published && d.lenses && (
-    <section class="section">
-      <div class="label"><span class="nn">{sec[0]}</span> The multi-disciplinary read</div>
-      {d.lenses.map((l) => (
-        <div class="lens">
-          <div><span class="who">{l.who}</span><span class="conf">confidence · {l.confidence}</span></div>
-          <div class="takes">
-            {l.hope && <p><span class="h">Hope</span>{l.hope}</p>}
-            {l.despair && <p><span class="dd">Despair</span>{l.despair}</p>}
+    {showArticle && d.lenses && (
+      <div class="row sec">
+        <div class="g"><div class="num">{sec[0]}</div></div>
+        <div class="c">
+          <div class="seclabel">The multi-disciplinary read</div>
+          <p class="seclead">One question, read by the fields that actually study it. Each voice is given both its
+            most hopeful and its darkest honest reading — with a note on how settled the evidence underneath is.</p>
+          {d.lenses.map((l) => (
+            <div class="lens">
+              <div class="voice"><span class="who">{l.who}</span><span class="conf">confidence · {l.confidence}</span></div>
+              <div class="reads">
+                {l.hope && <p class="read hope"><span class="tag">the hopeful read</span>{l.hope}</p>}
+                {l.despair && <p class="read desp"><span class="tag">the darker read</span>{l.despair}</p>}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {showArticle && d.hopeCase && d.despairCase && (
+      <div class="row sec">
+        <div class="g"><div class="num">{sec[1]}</div></div>
+        <div class="c">
+          <div class="seclabel">The two strongest cases</div>
+          <div class="duel">
+            <div class="hp"><h3>Strongest case for hope</h3><p>{d.hopeCase}</p></div>
+            <div class="dp"><h3>Strongest case for despair</h3><p>{d.despairCase}</p></div>
           </div>
         </div>
-      ))}
-    </section>
-  )}
-
-  {published && d.hopeCase && d.despairCase && (
-    <section class="section">
-      <div class="label"><span class="nn">{sec[1]}</span> The two strongest cases</div>
-      <div class="duel">
-        <div class="hope"><h3>Strongest case for hope</h3><p>{d.hopeCase}</p></div>
-        <div class="desp"><h3>Strongest case for despair</h3><p>{d.despairCase}</p></div>
       </div>
-    </section>
-  )}
+    )}
 
-  {published && d.whatWouldChangeIt && (
-    <section class="section">
-      <div class="label"><span class="nn">{sec[2]}</span> What would change this verdict</div>
-      <p class="change" set:html={d.whatWouldChangeIt} />
-    </section>
-  )}
+    {showArticle && d.whatWouldChangeIt && (
+      <div class="row sec">
+        <div class="g"><div class="num">{sec[2]}</div></div>
+        <div class="c"><div class="seclabel">What would change this verdict</div>
+          <div class="change">{d.whatWouldChangeIt.split(/\n\n+/).map((para: string) => <p set:html={para} />)}</div>
+        </div>
+      </div>
+    )}
 
-  {published && d.methodology && (
-    <section class="section">
-      <div class="label"><span class="nn">{sec[3]}</span> Methodology</div>
-      <p class="method-lead">Everything done to the numbers between the source and the chart, disclosed in full.
-        Where a choice is editorial rather than measured, we say so.</p>
-      <div class="method"><dl>
-        {d.methodology.map((m) => (<><dt>{m.term}</dt><dd set:html={m.detail} /></>))}
-      </dl></div>
-    </section>
-  )}
+    {showArticle && d.methodology && (
+      <div class="row sec method">
+        <div class="g"><div class="num">{sec[3]}</div></div>
+        <div class="c">
+          <div class="seclabel">Methodology</div>
+          <p class="seclead">Everything done to the numbers between the source and the chart, disclosed in full. Where
+            a choice is editorial rather than measured, we say so.</p>
+          <dl>{d.methodology.map((m) => (<><dt>{m.term}</dt><dd set:html={m.detail} /></>))}</dl>
+        </div>
+      </div>
+    )}
 
-  {published && d.sources && (
-    <section class="section">
-      <div class="label"><span class="nn">{sec[4]}</span> Sources &amp; references</div>
-      <ol class="srcs">
-        {d.sources.map((s) => (
-          <li><b>{s.name}</b> — <a href={s.url} rel="noopener">{s.url.replace(/^https?:\/\//, '')}</a>
-            · {s.license} · vintage {s.vintage}{s.note && <span class="note">{s.note}</span>}</li>
-        ))}
-      </ol>
-    </section>
-  )}
+    {showArticle && d.sources && (
+      <div class="row sec">
+        <div class="g"><div class="num">{sec[4]}</div></div>
+        <div class="c">
+          <div class="seclabel">Sources &amp; references</div>
+          <ol class="srcs">
+            {d.sources.map((s) => (
+              <li><b>{s.name}</b> — <a href={s.url} rel="noopener" target="_blank">{s.url.replace(/^https?:\/\//, '').replace(/\/$/, '')}<span class="ext"> ↗</span></a> · {s.license} · vintage {s.vintage}{s.note && <span class="note">{s.note}</span>}</li>
+            ))}
+          </ol>
 
-  {published && (history.length > 0 || d.revisions) && (
-    <section class="section">
-      <div class="label"><span class="nn">{sec[5]}</span> Revision history</div>
-      <ol class="changelog">
-        {history.length > 0
-          ? history.map((r) => (
-              <li>
-                <time>{r.date}</time>
-                <span class="txt">{r.subject}{' '}
-                  {r.url
-                    ? <a href={r.url} rel="noopener">View diff →</a>
-                    : <span class="sha">{r.short}</span>}
-                </span>
-              </li>
-            ))
-          : d.revisions!.map((r) => (<li><time>{r.date}</time><span class="txt" set:html={r.text} /></li>))}
-      </ol>
-      <p class="repo-note">Generated from the commit history — every edit to a number, a word, or a chart is
-        tracked in the open.{' '}
-        {histUrl && <a href={histUrl} rel="noopener">Browse the full history &amp; diffs on GitHub →</a>}</p>
-    </section>
-  )}
+          <details class="cite">
+            <summary>Cite this page</summary>
+            <div class="cb">
+              <p class="cl">Reference</p>
+              <p class="ct">{citation}</p>
+              <p class="cl">BibTeX</p>
+              <pre class="bx">{bibtex}</pre>
+              <p class="cn">Original prose, code, and chart designs are released under <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener" target="_blank">CC&nbsp;BY&nbsp;4.0&nbsp;↗</a> — reuse freely with attribution. Source datasets keep their own licences, listed above. Add your access date when citing.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    )}
+
+    {showArticle && (history.length > 0 || d.revisions) && (
+      <div class="row sec">
+        <div class="g"><div class="num">{sec[5]}</div></div>
+        <div class="c">
+          <div class="seclabel">Revision history</div>
+          <ol class="changelog">
+            {history.length > 0
+              ? history.map((r) => (
+                  <li><time>{r.date}</time><span class="txt">{r.subject}{' '}{r.url ? <a href={r.url} rel="noopener">View diff →</a> : <span class="sha">{r.short}</span>}</span></li>
+                ))
+              : d.revisions!.map((r) => (<li><time>{r.date}</time><span class="txt" set:html={r.text} /></li>))}
+          </ol>
+          <p class="repo-note">Generated from the commit history — every edit to a number, a word, or a chart is
+            tracked in the open.{' '}{histUrl && <a href={histUrl} rel="noopener">Browse the full history &amp; diffs on GitHub →</a>}</p>
+        </div>
+      </div>
+    )}
+
+    {showArticle && (
+      <section class="plain bleed"><div class="inner"><div class="row"><div class="g"></div><div class="c">
+        <p class="e">in plain words</p>
+        <div class="plain-body"><Content /></div>
+      </div></div></div></section>
+    )}
+
+    {showArticle && (
+      <aside class="disclosure row" aria-label="How this was written">
+        <div class="g">
+          <svg class="dmark" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 1.6 a6.4 6.4 0 0 0 0 12.8 z" fill="var(--hope)" />
+            <path d="M8 1.6 a6.4 6.4 0 0 1 0 12.8 z" fill="var(--despair)" />
+            <line x1="8" y1="1.2" x2="8" y2="14.8" stroke="var(--bg)" stroke-width="0.8" />
+            <circle cx="8" cy="8" r="6.4" fill="none" stroke="var(--ink)" stroke-width="0.9" />
+          </svg>
+        </div>
+        <div class="c">
+          <p class="dl">How this was written</p>
+          <p class="dt"><b>This is a one-person project, made with AI assistance.</b> One person cannot research,
+            write, and keep hundreds of these questions current by hand. So the prose here is drafted with a large
+            language model working only from the open, cited data — then read, checked, and edited by a human. The
+            numbers are never the model’s: every figure traces to a named, openly-licensed source and can be
+            downloaded under its chart. Where the evidence is thin or the call is a judgement, the writing says so.</p>
+          <p class="dm"><a href="/about">How the atlas is made →</a><a href="/methodology">The method in full →</a></p>
+        </div>
+      </aside>
+    )}
+  </article>
 </BaseLayout>
 
 <style>
-  .ahead { padding-block: clamp(3rem, 8vh, 5.5rem) 0; max-width: 54rem; }
-  .kicker { font-family: var(--font-label); font-size: 0.72rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--accent); display: flex; gap: 0.8rem; align-items: center; }
-  .kicker .n { font-family: var(--font-mono); letter-spacing: 0.04em; }
-  .kicker::after { content: ""; flex: 1; height: 1px; background: var(--brass-dim); max-width: 9rem; }
-  h1.q { font-family: var(--font-display); font-weight: 300; font-size: clamp(2.4rem, 6vw, 4.7rem); line-height: 0.98; letter-spacing: -0.024em; margin-top: 1.5rem; font-optical-sizing: auto; text-wrap: balance; }
-  .lede { max-width: 62ch; margin-top: 2.2rem; font-size: clamp(1.1rem, 1.5vw, 1.3rem); line-height: 1.6; color: var(--fg-2); }
-  .lede::first-letter { font-family: var(--font-display); font-weight: 300; float: left; font-size: 4.6rem; line-height: 0.74; padding: 0.34rem 0.6rem 0.1rem 0; color: var(--accent); }
-  .draft-note { max-width: 60ch; margin-top: 2.5rem; padding-left: 1.6rem; border-left: 2px solid var(--brass-dim); color: var(--fg-2); }
-  .draft-note a { color: var(--accent); text-decoration: none; }
+  .qbody { padding-top: clamp(2.5rem, 7vh, 5rem); }
+  .block { margin-top: clamp(3rem, 7vh, 5rem); }
 
-  .caveats { margin-top: clamp(2rem, 5vh, 3rem); padding: 0.2rem 0 0.2rem 1.7rem; border-left: 2px solid var(--brass-dim); }
-  .caveats-head { font-family: var(--font-display); font-style: italic; font-size: 1.06rem; color: var(--accent); display: flex; align-items: center; gap: 0.5em; margin-bottom: 1rem; }
-  .caveats ul { list-style: none; display: grid; gap: 0.7rem; }
-  .caveats li { position: relative; padding-left: 1.4rem; font-size: 0.97rem; color: var(--fg-2); line-height: 1.5; max-width: 66ch; }
-  .caveats li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
-  .caveats li :global(b) { font-weight: 400; font-style: italic; color: var(--fg); }
+  .kicker { font-family: var(--mono); font-size: 0.82rem; letter-spacing: 0.02em; color: var(--hope); }
+  .kicker .sep { color: var(--ink-3); }
+  .title { font-family: var(--display); font-weight: 640; font-size: clamp(2.7rem, 6.2vw, 5rem); line-height: 1.04; letter-spacing: -0.04em; margin-top: 1.4rem; max-width: 15ch; text-wrap: balance; }
+  .lede { max-width: var(--measure); margin-top: 2.1rem; font-size: clamp(1.32rem, 1.9vw, 1.6rem); line-height: 1.46; color: var(--ink-2); text-wrap: pretty; }
+  .draft-note { max-width: 60ch; padding-left: 1.4rem; border-left: 2px solid color-mix(in srgb, var(--hope) 45%, transparent); color: var(--ink-2); }
+  .draft-note a { color: var(--hope); }
 
-  .evi { margin-top: clamp(2.5rem, 6vh, 4rem); }
-  .evi-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; border-top: 1px solid var(--brass-dim); padding-top: 1rem; margin-bottom: 1.6rem; flex-wrap: wrap; }
-  .evi-head .t { font-family: var(--font-display); font-style: italic; font-size: 1.04rem; color: var(--fg-muted); }
-  .evi-head .t :global(b) { color: var(--accent); font-weight: 500; font-style: italic; }
-  .legend { display: flex; gap: 1.2rem; font-family: var(--font-mono); font-size: 0.66rem; color: var(--fg-muted); flex-wrap: wrap; }
-  .legend span { display: inline-flex; align-items: center; gap: 0.4em; }
-  .legend i { width: 0.7em; height: 0.7em; border-radius: 50%; }
+  /* the one label voice — small sentence-case grotesk, never italic, never tracked caps.
+     Italic is reserved for voice (quotes, answers, names, emphasis); when it also did the
+     labels, the page read as arbitrary italics everywhere. */
+  .glabel { font-family: var(--display); font-weight: 560; font-size: 0.8rem; letter-spacing: 0.02em; line-height: 1.4; color: var(--ink-3); padding-top: 0.3rem; }
 
-  .windows { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1rem, 3vw, 2.6rem); margin-top: 1.4rem; padding-top: 1.7rem; border-top: 1px solid var(--brass-dim); }
-  .win { display: flex; flex-direction: column; gap: 0.35rem; }
-  .win .wlab { font-family: var(--font-display); font-style: italic; font-size: 1.06rem; color: var(--fg); line-height: 1.1; }
-  .win .wrange { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.04em; color: var(--fg-muted); }
-  .win svg { width: 100%; height: 60px; display: block; overflow: visible; margin-top: 0.5rem; }
-  .win .wverdict { font-family: var(--font-display); font-weight: 330; font-size: clamp(1.5rem, 2.8vw, 2.1rem); line-height: 1; letter-spacing: -0.02em; margin-top: 0.3rem; }
-  .win .wverdict .punc { color: var(--fg); }
-  .evi-read { max-width: 60ch; margin-top: 1.7rem; color: var(--fg-2); font-size: clamp(1.05rem, 1.5vw, 1.2rem); line-height: 1.6; }
-  .evi-read :global(em) { font-style: italic; font-weight: 400; }
-  .sig-head { font-family: var(--font-display); font-style: italic; font-size: 1.05rem; color: var(--accent); margin-top: clamp(2.2rem, 5.5vh, 3.4rem); }
-  .vantage-note { font-size: 0.95rem; color: var(--fg-muted); margin-top: 1.1rem; max-width: 48ch; line-height: 1.5; }
-  @media (max-width: 680px) { .windows { grid-template-columns: repeat(2, 1fr); gap: 1.6rem; } }
+  /* caveats — one quiet left-rule aside, not a dash list: the em-dash markers fought the
+     em-dashes inside the prose (the same glyph doing two jobs inches apart). */
+  .caveats ul { list-style: none; display: grid; gap: 0.9rem; max-width: var(--measure); padding-left: 1.4rem; border-left: 1px solid var(--line-2); }
+  .caveats li { color: var(--ink-2); font-size: var(--fs-body); line-height: var(--lh-body); font-weight: 450; text-wrap: pretty; }
+  .caveats :global(b) { font-weight: 560; color: var(--ink); }
 
-  .signals { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1.4rem, 3vw, 2.8rem); margin-top: 1rem; padding-top: 1.2rem; }
-  .sig { display: flex; flex-direction: column; gap: 0.5rem; }
-  .sig .fg { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.06em; color: var(--accent); }
-  .sig .nm { font-family: var(--font-display); font-size: 1.02rem; line-height: 1.1; font-weight: 380; }
-  .sig .un { font-family: var(--font-label); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--fg-muted); margin-top: -0.2rem; }
-  .sig svg { width: 100%; height: 62px; display: block; overflow: visible; margin-top: 0.2rem; }
-  .sig .read { display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem; }
-  .sig .v { font-family: var(--font-mono); font-size: 1.02rem; font-variant-numeric: tabular-nums; }
-  .sig .dir { font-family: var(--font-label); font-size: 0.64rem; letter-spacing: 0.08em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.3em; }
-  .sig .arr { font-size: 0.95rem; line-height: 1; }
-  @media (max-width: 860px) { .signals { grid-template-columns: repeat(2, 1fr); } }
+  /* evidence */
+  .evi .head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .evi .head .t { font-family: var(--serif); font-size: var(--fs-lede); line-height: 1.45; color: var(--ink-2); text-wrap: balance; }
+  .evi .head .t b { font-weight: 560; color: var(--ink); }
+  .evi .head .t .metric { border-bottom: 1px solid color-mix(in srgb, var(--hope) 45%, transparent); }
+  .evi .head .legend { font-family: var(--mono); font-size: 0.68rem; color: var(--ink-3); display: flex; gap: 1.1rem; }
+  .evi .head .legend i { display: inline-block; width: 1.4em; height: 2px; vertical-align: 0.2em; margin-right: 0.45em; }
+  .windows { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1.2rem, 3vw, 2.6rem); margin-top: 1.6rem; padding-top: 1.7rem; border-top: 1px solid var(--line-2); }
+  /* the numbered, arrow-linked sequence says "one metric, progressively zoomed" */
+  .win .wn { font-family: var(--mono); font-size: 0.66rem; color: var(--hope); letter-spacing: 0.08em; margin-bottom: 0.6rem; display: flex; align-items: baseline; justify-content: space-between; }
+  .win .wn .ar { color: var(--line-2); }
+  .win .wr { font-family: var(--mono); font-size: 0.66rem; color: var(--ink-3); }
+  .win .wl { font-family: var(--serif); font-weight: 540; font-size: 1.04rem; margin-top: 0.15rem; letter-spacing: 0.004em; }
+  .win svg { width: 100%; height: 50px; display: block; overflow: visible; margin-top: 0.7rem; }
+  .win .wv { font-family: var(--display); font-weight: 560; font-size: clamp(1.5rem, 2.9vw, 2.1rem); line-height: 1; letter-spacing: -0.03em; margin-top: 0.6rem; }
+  .win .wv.cool { color: var(--hope); } .win .wv.warm { color: var(--despair); }
+  .win .wv .p { color: var(--ink); }
+  .readout { max-width: 56ch; margin-top: 1.8rem; font-size: var(--fs-lede); line-height: 1.56; color: var(--ink-2); text-wrap: pretty; }
+  .readout :global(em) { font-style: italic; color: var(--ink); }
 
-  .composite { display: grid; grid-template-columns: auto 1fr; gap: clamp(1.5rem, 5vw, 4rem); align-items: start; margin-top: clamp(2.5rem, 6vh, 3.8rem); padding-top: 2.2rem; border-top: 1px solid var(--brass-dim); }
-  .vlabel { font-family: var(--font-display); font-style: italic; font-size: 1.04rem; color: var(--accent); }
-  .verdict { font-family: var(--font-display); font-weight: 300; font-size: clamp(3.6rem, 11vw, 8rem); line-height: 0.9; letter-spacing: -0.035em; }
-  .verdict .punc { color: var(--fg); }
-  .synthesis { font-family: var(--font-body); font-size: clamp(1.18rem, 2vw, 1.55rem); line-height: 1.42; max-width: 46ch; font-weight: 370; margin-top: 0.3rem; }
-  .synthesis :global(em) { font-style: italic; }
-  .tally { font-family: var(--font-mono); font-size: 0.74rem; color: var(--fg-muted); margin-top: 1.4rem; font-variant-numeric: tabular-nums; }
-  .tally :global(b) { color: var(--fg); }
-  .vantage-note { margin-top: 1.1rem; }
+  /* a firm divider + a contrasting label make this block read as a different kind of evidence */
+  .sig-head { font-family: var(--serif); font-size: 1.12rem; color: var(--ink-2); margin-top: clamp(2.8rem, 7vh, 4.2rem); padding-top: clamp(1.8rem, 4vh, 2.6rem); border-top: 1px solid var(--line-2); }
+  .sig-head em { font-style: italic; color: var(--ink); }
+  .sig-head .r { font-family: var(--mono); font-style: normal; font-size: 0.68rem; color: var(--ink-3); }
+  .signals { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1.4rem, 3vw, 2.6rem); margin-top: 1.3rem; padding-top: 1.4rem; border-top: 1px solid var(--line); }
+  .sig .nm { font-family: var(--display); font-weight: 500; font-size: 1.04rem; line-height: 1.1; }
+  .sig .un { font-family: var(--mono); font-size: 0.66rem; color: var(--ink-3); margin-top: 0.15rem; }
+  .sig svg { width: 100%; height: 46px; display: block; overflow: visible; margin-top: 0.6rem; }
+  .sig .rd { display: flex; align-items: baseline; justify-content: space-between; margin-top: 0.5rem; gap: 0.4rem; }
+  .sig .v { font-family: var(--mono); font-size: 0.95rem; }
+  .sig .dir { font-family: var(--mono); font-size: 0.66rem; white-space: nowrap; }
+  @media (max-width: 760px) { .signals, .windows { grid-template-columns: repeat(2, 1fr); gap: 1.8rem 1.4rem; } }
+
+  /* The verdict column is capped so a LONG verdict ("Past the line", "Hotter, yet turning") wraps
+     into a poster-style stack instead of claiming the whole row and starving the synthesis — while
+     a short one ("No") still sits compact and lets the synthesis run wide. The cap fits the longest
+     single word at the display size; the synthesis takes the rest as 1fr. */
+  /* verdict-left / synthesis-right. The verdict column is capped tighter (15rem) and the verdict
+     type a step smaller, so a long synthesis fills the rest of the row and reads wide instead of
+     dribbling down a narrow channel beside a half-empty poster. */
+  .composite { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: clamp(1.6rem, 4vw, 3rem); align-items: start; margin-top: clamp(2.4rem, 6vh, 3.6rem); padding-top: 1.8rem; border-top: 1px solid var(--line-2); }
+  .composite > * { min-width: 0; }
+  .composite .vlab { font-family: var(--display); font-weight: 560; font-size: 0.8rem; letter-spacing: 0.02em; color: var(--ink-3); }
+  .composite .vbig { font-family: var(--display); font-weight: 600; font-size: clamp(2.5rem, 5.2vw, 3.8rem); line-height: 0.94; letter-spacing: -0.035em; margin-top: 0.3rem; text-wrap: balance; }
+  .composite .vbig .p { color: var(--ink); }
+  .composite .synth { font-family: var(--serif); font-size: clamp(1.18rem, 1.7vw, 1.46rem); line-height: 1.46; max-width: 52ch; font-weight: 400; }
+  .composite .synth :global(em) { font-style: italic; }
+  .composite .tally { font-family: var(--mono); font-size: var(--fs-meta); color: var(--ink-3); margin-top: 1.2rem; }
+  .composite .tally :global(b) { color: var(--ink); }
+  .composite .vantage { margin-top: 1rem; max-width: 46ch; font-size: var(--fs-body); line-height: var(--lh-body); color: var(--ink-2); font-weight: 450; }
   @media (max-width: 680px) { .composite { grid-template-columns: 1fr; } }
 
-  .movements { margin-top: clamp(2rem, 5vh, 3rem); }
-  .move { border-top: 1px solid var(--brass-dim); padding-top: 2.2rem; margin-top: clamp(3rem, 7vh, 5rem); }
-  .move .ey { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 1.08rem; color: var(--accent); display: flex; gap: 1rem; align-items: center; }
-  .move .ey::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
-  .move .ey .fg { font-family: var(--font-mono); font-style: normal; color: var(--fg-muted); letter-spacing: 0.04em; }
-  .move h2 { font-family: var(--font-display); font-weight: 330; font-size: clamp(1.9rem, 3.6vw, 3rem); line-height: 1.02; letter-spacing: -0.02em; margin-top: 1.1rem; max-width: 22ch; }
-  .intro { max-width: 62ch; margin-top: 1.3rem; color: var(--fg-2); font-size: clamp(1.05rem, 1.5vw, 1.22rem); line-height: 1.6; }
-  .intro :global(em) { font-style: italic; color: var(--fg); }
-  .intro.has-drop::first-letter { font-family: var(--font-display); float: left; font-size: 3rem; line-height: 0.8; padding: 0.2rem 0.4rem 0 0; color: var(--accent); font-weight: 300; }
-  .figure { margin-top: 1.9rem; clear: both; }
-  .figure .cap { display: flex; justify-content: space-between; gap: 1rem; font-family: var(--font-mono); font-size: 0.66rem; color: var(--fg-muted); margin-bottom: 0.8rem; flex-wrap: wrap; }
-  .figure .cap :global(b) { color: var(--fg-2); font-weight: 400; }
-  .figure svg { width: 100%; height: auto; display: block; }
-  .figure svg :global(text) { font-family: var(--font-mono); font-size: 10.5px; fill: var(--fg-muted); }
-  .figure svg :global(text.ser) { font-family: var(--font-label); font-size: 11px; font-weight: 500; }
-  .figure svg :global(.grid) { stroke: var(--rule); stroke-dasharray: 1 5; }
-  .figure svg :global(.grid0) { stroke: var(--rule-2); }
-  .figure svg :global(.annot) { stroke: var(--brass-dim); stroke-dasharray: 2 5; stroke-width: 1; }
-  .figure svg :global(text.annotL) { fill: var(--accent); font-size: 10px; letter-spacing: 0.12em; }
-  .figure svg :global(text.wm) { fill: var(--fg-muted); opacity: 0.42; font-size: 9px; letter-spacing: 0.09em; }
-  .fig-foot { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 0.9rem; flex-wrap: wrap; }
-  .figure .src { font-family: var(--font-mono); font-size: 0.62rem; color: var(--fg-muted); text-align: right; }
-  .fig-tools { display: flex; gap: 0.4rem; }
-  .ftool { font-family: var(--font-label); font-size: 0.64rem; letter-spacing: 0.04em; color: var(--fg-muted); background: none; border: 1px solid var(--rule); padding: 0.42em 0.7em; text-decoration: none; white-space: nowrap; transition: 0.2s; }
-  .ftool:hover { color: var(--accent); border-color: var(--brass-dim); }
+  /* movement */
+  .move { margin-top: clamp(3.5rem, 9vh, 6.5rem); }
+  .move .g .fno { font-family: var(--mono); font-size: 0.7rem; color: var(--ink-3); padding-top: 0.5rem; }
+  .move .ey { font-family: var(--display); font-weight: 580; font-size: 0.84rem; letter-spacing: 0.04em; color: var(--hope); }
+  .move h2 { font-family: var(--display); font-weight: 560; font-size: clamp(2rem, 4.2vw, 3.1rem); line-height: 1.05; letter-spacing: -0.03em; margin-top: 0.8rem; max-width: 19ch; text-wrap: balance; }
+  .move .answer { max-width: var(--measure); margin-top: 1.1rem; font-family: var(--serif); font-style: italic; font-weight: 440; font-size: clamp(1.35rem, 2.3vw, 1.72rem); line-height: 1.22; color: var(--ink); text-wrap: pretty; }
+  .move .intro { max-width: var(--measure); margin-top: 1.1rem; color: var(--ink-2); font-size: var(--fs-body); line-height: var(--lh-body); font-weight: 450; text-wrap: pretty; }
+  .move .intro + .intro { margin-top: 0.9rem; }
+  .move .intro :global(em) { font-style: italic; color: var(--ink); }
+  /* Tufte margin notes. The old float (13rem + 2.4rem gap) was wider than the free space
+     beside the 38rem measure, so notes collided with the prose. Wide screens: hang the note
+     in the true right margin, fully clear of the text (negative right margin pulls it past
+     the column edge — the breakout mirror of the figures' left breakout). Narrower screens:
+     a quiet left-rule aside in the flow. */
+  .sidenote { font-family: var(--serif); font-size: var(--fs-small); line-height: 1.52; color: var(--ink-3); margin: 1rem 0 1.2rem; padding-left: 1.1rem; border-left: 1px solid var(--line-2); max-width: var(--measure); }
+  .sidenote .n { font-style: italic; color: var(--hope); margin-right: 0.35em; }
+  .sidenote :global(em) { font-style: italic; color: var(--ink-2); }
+  @media (min-width: 1100px) {
+    .sidenote { float: right; clear: right; width: 10.5rem; margin: 0.4rem -4rem 1.4rem 2rem; padding-left: 0; border-left: 0; font-size: 0.88rem; }
+    .sidenote::before { content: ""; display: block; width: 2rem; height: 1px; background: var(--hope); opacity: 0.6; margin-bottom: 0.6rem; }
+  }
 
-  /* "How this number was made" — native <details>, zero JS (PERFORMANCE.md, DATA.md §8) */
-  .prov { margin-top: 1rem; border-top: 1px solid var(--rule); }
-  .prov summary { font-family: var(--font-display); font-style: italic; font-size: 0.98rem; color: var(--accent); cursor: pointer; padding-top: 0.8rem; list-style: none; }
-  .prov summary::-webkit-details-marker { display: none; }
-  .prov summary::before { content: "◐ "; font-style: normal; }
-  .prov[open] summary { margin-bottom: 0.6rem; }
-  .prov-body { color: var(--fg-2); font-size: 0.95rem; line-height: 1.55; max-width: 64ch; }
-  .prov-body p { margin-top: 0.5rem; }
-  .prov-body b { font-style: italic; font-weight: 400; color: var(--fg); }
-  .prov-meta { display: flex; flex-wrap: wrap; gap: 0.3rem 1.2rem; font-family: var(--font-mono); font-size: 0.66rem; color: var(--fg-muted); margin-top: 0.9rem !important; }
-  .prov-meta code { color: var(--fg-2); }
-  .prov-meta a { color: var(--accent); text-decoration: none; }
+  figure.fig { clear: both; margin: clamp(2rem, 4.5vh, 3.2rem) 0 0; }
+  @media (min-width: 681px) { figure.fig { margin-left: calc(-1 * (var(--gutter) + 2.6rem)); width: calc(100% + var(--gutter) + 2.6rem); } }
+  /* the chart title is content, not chrome — it reads at text size in the display face;
+     only the period/meta on the right stays mono-small. */
+  figure.fig .cap { display: flex; align-items: baseline; justify-content: space-between; gap: 0.4rem 1.5rem; flex-wrap: wrap; margin-bottom: 1.1rem; }
+  figure.fig .cap > span:first-child { font-family: var(--display); font-size: 1.06rem; font-weight: 460; letter-spacing: -0.01em; color: var(--ink-2); }
+  figure.fig .cap :global(b) { color: var(--ink); font-weight: 620; }
+  figure.fig .cap > span:last-child { font-family: var(--mono); font-size: var(--fs-meta); color: var(--ink-3); }
+  /* chart SVG styling + the desktop/mobile render swap live in Chart.astro (which owns the svgs);
+     this file keeps only how a chart is POSITIONED in the article grid (.sc, figure widths). */
+  /* chart credit, matching the sub-charts' quiet band: the downloads recede to the source's weight —
+     faint links, not a button-bar, underlining only on hover, so the metadata never shouts. */
+  figure.fig figcaption { display: flex; justify-content: space-between; gap: 0.4rem 1.6rem; flex-wrap: wrap; align-items: baseline; margin-top: 0.95rem; }
+  .src { font-family: var(--mono); font-size: var(--fs-meta); color: var(--ink-3); }
+  .tools { display: flex; gap: 1.15rem; flex-wrap: wrap; }
+  .tools a { font-family: var(--mono); font-size: var(--fs-meta); color: var(--ink-3); text-decoration: none; transition: color 0.15s ease; }
+  .tools a:hover { color: var(--hope); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 
-  .take { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.2rem, 2.6vw, 2.2rem); margin-top: 1.7rem; padding-top: 1.3rem; border-top: 1px solid var(--rule); clear: both; }
-  .take .t { font-family: var(--font-label); font-size: 0.64rem; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 0.55rem; display: flex; align-items: center; gap: 0.4em; }
-  .take .t::before { content: ""; width: 0.5em; height: 0.5em; border-radius: 50%; background: currentColor; }
-  .take .hope .t { color: var(--hope); }
-  .take .despair .t { color: var(--despair); }
-  .take .conf .t { color: var(--uncertain); }
-  .take p { font-size: 0.92rem; color: var(--fg-2); line-height: 1.5; max-width: 36ch; }
-  @media (max-width: 680px) { .take { grid-template-columns: 1fr; gap: 1.3rem; } }
+  details.prov { margin-top: 1.2rem; }
+  details.prov summary { font-family: var(--mono); font-size: var(--fs-meta); letter-spacing: 0.02em; color: var(--ink-3); cursor: pointer; list-style: none; border-top: 1px solid var(--line); padding-top: 0.9rem; }
+  details.prov summary:hover { color: var(--ink-2); }
+  details.prov summary::-webkit-details-marker { display: none; }
+  details.prov summary::before { content: "+ "; font-family: var(--mono); font-style: normal; }
+  details.prov[open] summary::before { content: "– "; }
+  details.prov .pb { font-size: var(--fs-small); line-height: 1.6; color: var(--ink-2); max-width: var(--measure); margin-top: 0.8rem; font-weight: 450; }
+  details.prov .pb p + p { margin-top: 0.55rem; }
+  details.prov .pb :global(b) { font-weight: 560; color: var(--ink); }
+  details.prov .pb .fine { font-style: italic; color: var(--ink-3); font-size: 0.88rem; }
+  details.prov .meta { font-family: var(--mono); font-size: 0.7rem; color: var(--ink-3); display: flex; flex-wrap: wrap; gap: 0.3rem 1.4rem; margin-top: 1rem; }
 
-  .sidenote { float: right; clear: right; width: 13.5rem; margin: 0.3rem 0 1.3rem 2.4rem; font-family: var(--font-body); font-size: 0.86rem; line-height: 1.52; color: var(--fg-muted); }
-  .sidenote::before { content: ""; display: block; width: 2rem; height: 1px; background: var(--accent); opacity: 0.5; margin-bottom: 0.6rem; }
-  .sidenote .n { font-family: var(--font-display); font-style: italic; color: var(--accent); font-size: 1.05rem; margin-right: 0.4em; }
-  .sidenote :global(em) { font-style: italic; }
-  @media (max-width: 1080px) { .sidenote { float: none; width: auto; margin: 0.8rem 0 1.2rem; padding-left: 1.1rem; border-left: 2px solid var(--brass-dim); } .sidenote::before { display: none; } }
+  /* the take strips — each column is capped by its temperature tick (the duel's design
+     language), and the text sits a step below body size: commentary, not more article.
+     Open columns, no boxes; the ticks anchor what used to dangle. */
+  /* the other two magnifications, side by side under the global chart — world → region → country
+     in one section (the keystone discipline, applied to every movement). */
+  .levels { display: grid; grid-template-columns: 1fr; gap: clamp(2.6rem, 6vh, 4rem); margin-top: clamp(2.2rem, 5vh, 3.4rem); padding-top: clamp(1.9rem, 4vh, 2.7rem); border-top: 1px solid var(--line); }
+  /* sub-charts share the main chart's left edge + width (same gutter extension as figure.fig),
+     so the world / region / country lenses line up exactly. Grid gap handles vertical spacing. */
+  .levels .kfig { margin: 0; }
+  .levels .kfig + .kfig { margin-top: 0; padding: 0; border: 0; }
+  .levels .kfig .sc .chart { width: 100%; }
+  @media (min-width: 681px) { .levels .kfig { margin-left: calc(-1 * (var(--gutter) + 2.6rem)); width: calc(100% + var(--gutter) + 2.6rem); } }
+  .takes { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.4rem, 3vw, 2.6rem); margin-top: 2.2rem; }
+  .takes > div { position: relative; padding-top: 1rem; }
+  .takes > div::before { content: ""; position: absolute; top: 0; left: 0; width: 1.6rem; height: 2px; border-radius: 2px; }
+  .takes .hope::before { background: var(--hope); } .takes .desp::before { background: var(--despair); } .takes .conf::before { background: var(--uncertain); }
+  .takes .t { font-family: var(--display); font-weight: 580; font-size: 0.8rem; letter-spacing: 0.04em; margin-bottom: 0.5rem; }
+  .takes .hope .t { color: var(--hope); } .takes .desp .t { color: var(--despair); } .takes .conf .t { color: var(--uncertain); }
+  .takes p { font-size: var(--fs-small); line-height: 1.58; color: var(--ink-2); max-width: 34ch; font-weight: 450; }
+  @media (max-width: 680px) { .takes { grid-template-columns: 1fr; gap: 1.7rem; } }
+  /* movement takes span the wider evidence zone, aligning under the chart — same as the keystone's
+     .dim .takes. The prose above stays in the narrow text column (max-width: var(--measure)). */
+  @media (min-width: 681px) { .move .takes { margin-left: calc(-1 * (var(--gutter) + 2.6rem)); width: calc(100% + var(--gutter) + 2.6rem); } }
 
-  .section { border-top: 1px solid var(--rule); margin-top: clamp(3.5rem, 8.5vh, 6.5rem); padding-top: 2.2rem; }
-  .section > .label { font-family: var(--font-display); font-style: italic; font-size: 1.22rem; color: var(--accent); margin-bottom: 1.8rem; display: flex; gap: 0.7rem; align-items: baseline; }
-  .section > .label .nn { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 1.55rem; line-height: 1; color: var(--accent); margin-right: 0.3rem; }
-  .lens { display: grid; grid-template-columns: 12rem 1fr; gap: 1rem 2.4rem; padding-block: 1.4rem; border-bottom: 1px solid var(--rule); }
-  .lens:last-child { border-bottom: 0; }
-  .lens .who { font-family: var(--font-display); font-style: italic; font-size: 1.3rem; font-weight: 360; }
-  .lens .conf { font-family: var(--font-mono); font-size: 0.64rem; color: var(--fg-muted); margin-top: 0.35rem; display: block; }
-  .lens .takes p { margin-bottom: 0.5rem; max-width: 60ch; color: var(--fg-2); }
-  .lens .h, .lens .dd { font-family: var(--font-label); font-size: 0.64rem; letter-spacing: 0.12em; text-transform: uppercase; margin-right: 0.4em; }
-  .lens .h { color: var(--hope); }
-  .lens .dd { color: var(--despair); }
+  .pull { font-family: var(--serif); font-weight: 400; font-style: italic; font-size: clamp(2.1rem, 4.7vw, 3.1rem); line-height: 1.14; letter-spacing: -0.015em; text-align: center; max-width: 30ch; margin: clamp(4.5rem, 12vh, 8rem) auto clamp(3rem, 7vh, 4.5rem); position: relative; color: var(--ink); text-wrap: balance; }
+  .pull::before { content: "\201C"; position: absolute; top: -0.72em; left: 50%; transform: translateX(-50%); font-family: var(--serif); font-size: 2.8rem; line-height: 1; color: var(--hope); font-style: normal; opacity: 0.85; }
+  .pull cite { display: block; font-family: var(--mono); font-style: normal; font-size: 0.7rem; letter-spacing: 0.04em; color: var(--ink-3); margin-top: 1.7rem; }
 
+  /* numbered lower sections */
+  .sec { margin-top: clamp(3.5rem, 9vh, 6rem); }
+  .sec .g .num { font-family: var(--serif); font-style: italic; font-weight: 420; font-size: 3rem; color: var(--hope); line-height: 0.9; }
+  .seclabel { font-family: var(--display); font-weight: 600; font-size: clamp(1.5rem, 2.8vw, 1.9rem); line-height: 1.1; letter-spacing: -0.022em; color: var(--ink); padding-bottom: 1.4rem; border-bottom: 1px solid var(--line-2); margin-bottom: 1.6rem; text-wrap: balance; }
+  .seclead { max-width: var(--measure); color: var(--ink-2); font-size: var(--fs-body); line-height: var(--lh-body); font-weight: 450; }
+
+  /* lenses — a panel of voices, not a table. The name carries the voice (serif italic);
+     each reading wears a quiet hope/despair colour rule instead of a repeated word-label. */
+  .lens { display: grid; grid-template-columns: 13rem 1fr; gap: 1.1rem 3rem; padding-block: 1.7rem; border-top: 1px solid var(--line); align-items: start; }
+  .lens:first-of-type { border-top: 0; padding-top: 0.3rem; }
+  .lens .who { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 1.46rem; line-height: 1.08; color: var(--ink); display: block; }
+  .lens .conf { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); margin-top: 0.55rem; display: block; }
+  .lens .read { position: relative; padding-left: 1.1rem; max-width: 56ch; color: var(--ink-2); font-size: var(--fs-body); line-height: var(--lh-body); font-weight: 450; text-wrap: pretty; }
+  .lens .read + .read { margin-top: 0.75rem; }
+  .lens .read::before { content: ""; position: absolute; left: 0; top: 0.5em; bottom: 0.25em; width: 2px; border-radius: 2px; }
+  .lens .read.hope::before { background: var(--hope); }
+  .lens .read.desp::before { background: var(--despair); }
+  .lens .read .tag { display: block; font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.45rem; }
+  .lens .read.hope .tag { color: var(--hope); }
+  .lens .read.desp .tag { color: var(--despair); }
+  @media (max-width: 600px) { .lens { grid-template-columns: 1fr; gap: 0.7rem; } }
+
+  /* the two cases face off across a central hairline — the site's hope↔despair tension,
+     drawn rather than stated. A short colour tick caps each side; no boxes, no fills. */
   .duel { display: grid; grid-template-columns: 1fr 1fr; }
-  .duel > div { padding: 0 clamp(1rem, 3vw, 2.4rem); }
-  .duel > div:first-child { padding-left: 0; border-right: 1px solid var(--brass-dim); }
-  .duel > div:last-child { padding-right: 0; }
-  .duel h3 { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 1.28rem; margin-bottom: 1rem; }
-  .duel .hope h3 { color: var(--hope); }
-  .duel .desp h3 { color: var(--despair); }
-  .duel p { max-width: 42ch; color: var(--fg-2); }
-  @media (max-width: 680px) { .duel { grid-template-columns: 1fr; } .duel > div:first-child { border-right: 0; border-bottom: 1px solid var(--brass-dim); padding: 0 0 1.4rem; margin-bottom: 1.4rem; } .duel > div:last-child { padding: 0; } }
+  .duel .hp { padding-right: clamp(2rem, 5vw, 3.6rem); }
+  .duel .dp { padding-left: clamp(2rem, 5vw, 3.6rem); border-left: 1px solid var(--line-2); }
+  .duel h3 { position: relative; font-family: var(--display); font-weight: 580; font-size: 0.95rem; letter-spacing: 0.02em; padding-top: 1.05rem; margin-bottom: 0.9rem; }
+  .duel h3::before { content: ""; position: absolute; top: 0; left: 0; width: 1.6rem; height: 2px; border-radius: 2px; }
+  .duel .hp h3 { color: var(--hope); } .duel .dp h3 { color: var(--despair); }
+  .duel .hp h3::before { background: var(--hope); } .duel .dp h3::before { background: var(--despair); }
+  .duel p { max-width: 40ch; color: var(--ink-2); font-size: var(--fs-body); line-height: var(--lh-body); font-weight: 450; text-wrap: pretty; }
+  @media (max-width: 600px) { .duel { grid-template-columns: 1fr; gap: 1.8rem; } .duel .hp { padding-right: 0; } .duel .dp { padding-left: 0; border-left: 0; padding-top: 1.6rem; border-top: 1px solid var(--line-2); } }
 
-  .change { font-family: var(--font-body); font-size: clamp(1.25rem, 2.4vw, 1.75rem); line-height: 1.45; font-weight: 360; max-width: 54ch; }
-  .change :global(b) { font-style: italic; font-weight: 400; color: var(--accent); }
+  /* the verdict-changers: a calm, framed passage at lede size — it used to be set at headline
+     size, so a full paragraph read as a wall. A quiet hope rule gives it shape; multiple authored
+     paragraphs (split on a blank line) break the block so it flows instead of clamping. */
+  .change { max-width: var(--measure); padding-left: 1.3rem; border-left: 2px solid color-mix(in srgb, var(--hope) 38%, transparent); }
+  .change p { font-family: var(--serif); font-size: var(--fs-lede); line-height: 1.52; font-weight: 400; color: var(--ink); text-wrap: pretty; }
+  .change p + p { margin-top: 1rem; }
+  .change p :global(b) { font-weight: 600; color: var(--hope); }
 
-  .method-lead { max-width: 60ch; color: var(--fg-2); margin-bottom: 1.6rem; }
-  .method dl { display: grid; grid-template-columns: 13rem 1fr; gap: 1.1rem 2rem; }
-  .method dt { font-family: var(--font-display); font-style: italic; font-size: 1.18rem; color: var(--fg); line-height: 1.2; }
-  .method dd { margin: 0; font-size: 1rem; color: var(--fg-2); line-height: 1.55; max-width: 60ch; }
-  .method dd :global(b) { font-style: italic; font-weight: 400; color: var(--accent); }
-  .method dd :global(i) { color: var(--fg); }
-  @media (max-width: 680px) { .method dl { grid-template-columns: 1fr; gap: 0.3rem 0; } .method dt { margin-top: 1.1rem; } }
+  /* methodology as a true reference list: each term/detail pair sits on its own ruled row with
+     real air, so the entries stop collapsing into one block. */
+  .method dl { display: grid; grid-template-columns: 13rem 1fr; gap: 0 2.6rem; margin-top: 1.7rem; }
+  .method dt { font-family: var(--serif); font-weight: 600; font-size: 1.16rem; color: var(--ink); line-height: 1.32; letter-spacing: 0.005em; padding: 1.5rem 0; border-top: 1px solid var(--line); }
+  .method dd { margin: 0; font-size: var(--fs-body); color: var(--ink-2); line-height: var(--lh-body); max-width: 58ch; font-weight: 450; text-wrap: pretty; padding: 1.5rem 0; border-top: 1px solid var(--line); }
+  .method dt:first-of-type, .method dd:first-of-type { border-top: 0; padding-top: 0.2rem; }
+  .method dd :global(b) { font-weight: 560; color: var(--ink); }
+  .method dd :global(i) { color: var(--ink); }
+  @media (max-width: 600px) {
+    .method dl { grid-template-columns: 1fr; gap: 0; }
+    .method dt { padding: 1.3rem 0 0.4rem; }
+    .method dd { border-top: 0; padding: 0 0 1.3rem; }
+    .method dd:first-of-type { padding-top: 0; }
+  }
 
-  .srcs { list-style: none; counter-reset: s; font-family: var(--font-mono); font-size: 0.8rem; line-height: 1.9; color: var(--fg-muted); }
+  .srcs { list-style: none; counter-reset: s; font-family: var(--mono); font-size: 0.78rem; line-height: 1.85; color: var(--ink-3); margin-top: 1.4rem; }
   .srcs li { counter-increment: s; position: relative; padding-left: 2.1rem; margin-bottom: 0.5rem; }
-  .srcs li::before { content: counter(s); position: absolute; left: 0; top: -0.05em; font-family: var(--font-display); font-style: italic; color: var(--accent); font-size: 1.1rem; }
-  .srcs a { color: var(--fg-2); text-decoration: none; border-bottom: 1px solid var(--brass-dim); }
-  .srcs li :global(b) { font-weight: 500; color: var(--fg); }
-  .srcs .note { display: block; color: var(--fg-muted); opacity: 0.8; }
+  .srcs li::before { content: counter(s); position: absolute; left: 0; top: -0.05em; font-family: var(--serif); font-style: italic; color: var(--hope); font-size: 1.05rem; }
+  .srcs :global(b) { color: var(--ink); font-weight: 500; font-family: var(--serif); font-size: 0.94rem; }
+  .srcs a { color: var(--ink-2); border-bottom: 1px solid var(--line-2); }
+  .srcs a:hover { color: var(--hope); border-color: var(--hope); }
+  .srcs .ext { border: 0; color: var(--ink-3); }
+  .srcs .note { display: block; color: var(--ink-3); font-family: var(--serif); font-style: italic; font-size: 0.86rem; }
 
-  .changelog { list-style: none; border-left: 1px solid var(--brass-dim); }
+  /* cite this page — selectable reference + BibTeX, no client JS (the reader copies the text) */
+  .cite { margin-top: 2.2rem; max-width: var(--measure); }
+  .cite summary { font-family: var(--mono); font-size: var(--fs-meta); letter-spacing: 0.02em; color: var(--ink-3); cursor: pointer; list-style: none; padding-top: 1rem; border-top: 1px solid var(--line); }
+  .cite summary::-webkit-details-marker { display: none; }
+  .cite summary::before { content: "+ "; font-family: var(--mono); }
+  .cite[open] summary::before { content: "– "; }
+  .cite summary:hover { color: var(--ink-2); }
+  .cite .cl { font-family: var(--display); font-weight: 580; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); margin: 1.2rem 0 0.45rem; }
+  .cite .ct { font-family: var(--serif); font-size: 1rem; line-height: 1.55; color: var(--ink-2); }
+  .cite .bx { font-family: var(--mono); font-size: 0.74rem; line-height: 1.65; color: var(--ink-2); background: var(--bg); border: 1px solid var(--line-2); padding: 0.9rem 1rem; overflow-x: auto; white-space: pre; }
+  .cite .cn { font-size: var(--fs-small); line-height: 1.55; color: var(--ink-3); margin-top: 1.1rem; }
+  .cite .cn a { color: var(--ink-2); border-bottom: 1px solid var(--line-2); }
+  .cite .cn a:hover { color: var(--hope); border-color: var(--hope); }
+
+  /* the AI-assistance disclosure — a prominent closing band, the split mark in the gutter; honest,
+     plain, never fine print. Pairs with the same disclosure on /about. */
+  .disclosure { margin-top: clamp(3rem, 8vh, 5rem); padding-top: clamp(1.8rem, 4.5vh, 2.7rem); border-top: 1px solid var(--line-2); }
+  .disclosure .dmark { width: 1.5rem; height: 1.5rem; margin-top: 0.35rem; }
+  .disclosure .dl { font-family: var(--display); font-weight: 600; font-size: 0.82rem; letter-spacing: 0.02em; color: var(--ink-3); margin-bottom: 0.8rem; }
+  .disclosure .dt { max-width: var(--measure); font-size: var(--fs-body); line-height: var(--lh-body); color: var(--ink-2); font-weight: 450; text-wrap: pretty; }
+  .disclosure .dt :global(b) { font-weight: 600; color: var(--ink); }
+  .disclosure .dm { display: flex; gap: 1.6rem 2rem; flex-wrap: wrap; margin-top: 1.1rem; }
+  .disclosure .dm a { font-family: var(--display); font-weight: 540; font-size: 0.9rem; color: var(--hope); border-bottom: 1px solid color-mix(in srgb, var(--hope) 38%, transparent); padding-bottom: 1px; }
+  .disclosure .dm a:hover { border-color: var(--hope); }
+
+  .changelog { list-style: none; border-left: 1px solid var(--line-2); margin-top: 1.4rem; }
   .changelog li { position: relative; padding: 0 0 1.5rem 1.9rem; }
-  .changelog li::before { content: ""; position: absolute; left: -5px; top: 0.35rem; width: 9px; height: 9px; border-radius: 50%; background: var(--bg); border: 1.5px solid var(--accent); }
-  .changelog time { font-family: var(--font-mono); font-size: 0.76rem; color: var(--accent); display: block; margin-bottom: 0.25rem; }
-  .changelog .txt { font-size: 0.98rem; color: var(--fg-2); line-height: 1.5; }
-  .changelog .sha { font-family: var(--font-mono); font-size: 0.72rem; color: var(--fg-muted); }
-  .changelog a, .repo-note a { color: var(--accent); border-bottom: 1px solid var(--brass-dim); text-decoration: none; }
-  .changelog a:hover, .repo-note a:hover { color: var(--fg); }
-  .repo-note { margin-top: 1.6rem; color: var(--fg-muted); font-size: 0.97rem; max-width: 60ch; }
+  .changelog li::before { content: ""; position: absolute; left: -4.5px; top: 0.45rem; width: 8px; height: 8px; border-radius: 50%; background: var(--bg); border: 1.5px solid var(--hope); }
+  .changelog time { font-family: var(--mono); font-size: 0.68rem; color: var(--hope); display: block; margin-bottom: 0.25rem; }
+  .changelog .txt { font-size: var(--fs-small); color: var(--ink-2); line-height: 1.5; font-weight: 450; }
+  .changelog .sha { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-3); }
+  .changelog a { color: var(--hope); border-bottom: 1px solid var(--line-2); }
+  .repo-note { margin-top: 1.4rem; color: var(--ink-3); font-size: var(--fs-small); max-width: 54ch; }
+  .repo-note a { color: var(--hope); border-bottom: 1px solid var(--line-2); }
 
-  .pull { font-family: var(--font-display); font-weight: 300; font-style: italic; font-size: clamp(2rem, 5vw, 3.6rem); line-height: 1.08; letter-spacing: -0.02em; text-align: center; max-width: 18ch; margin: clamp(3.5rem, 9vh, 6.5rem) auto; color: var(--fg); }
-  .pull::before { content: "◐"; display: block; font-style: normal; font-size: 1.4rem; color: var(--accent); margin-bottom: 1.8rem; opacity: 0.85; }
-  .pull cite { display: block; font-family: var(--font-label); font-style: normal; font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-top: 1.8rem; }
+  /* the lived-now interlude — the despair pivot, kept in the page's own hairline language:
+     a faint despair wash + a coral top rule, never a black slab. Mirrors the warm closing. */
+  .interlude { margin-top: clamp(3.5rem, 9vh, 6.5rem); background: color-mix(in srgb, var(--despair) 3%, var(--bg)); border-top: 1px solid var(--despair); }
+  .interlude .in { max-width: calc(var(--col) + var(--gutter)); margin-inline: auto; padding: clamp(3rem, 7.5vw, 5.2rem) var(--margin); }
+  .interlude .e { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.06em; color: var(--despair); padding-left: 2.4rem; }
+  .interlude blockquote { position: relative; font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(1.8rem, 4.2vw, 2.9rem); line-height: 1.18; letter-spacing: -0.012em; margin-top: 1.4rem; max-width: 42ch; padding-left: 2.4rem; color: var(--ink); text-wrap: pretty; }
+  .interlude blockquote::before { content: "\201C"; position: absolute; left: 0; top: 0.2em; font-family: var(--serif); font-style: normal; font-size: 2.4rem; line-height: 1; color: var(--despair); opacity: 0.5; }
+  .interlude blockquote b { font-weight: 400; color: var(--despair); }
+
+  /* closing — the single warm moment (a faint hope wash) */
+  .plain { margin-top: clamp(3.5rem, 9vh, 6rem); background: color-mix(in srgb, var(--hope) 3.5%, var(--bg)); border-top: 1px solid var(--hope); padding-block: clamp(2.6rem, 6vw, 4rem); }
+  .plain .inner { max-width: calc(var(--col) + var(--gutter)); margin-inline: auto; padding-inline: var(--margin); }
+  .plain .e { font-family: var(--mono); font-size: 0.7rem; color: var(--hope); }
+  .plain-body :global(h3) { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(1.8rem, 3.6vw, 2.6rem); line-height: 1.04; letter-spacing: -0.012em; margin-top: 0.6rem; max-width: 22ch; }
+  .plain-body :global(p) { max-width: var(--measure); margin-top: 1.2rem; font-size: var(--fs-body); line-height: var(--lh-body); color: var(--ink-2); font-weight: 450; text-wrap: pretty; }
+  .plain-body :global(p:first-of-type) { color: var(--ink); }
+  .plain-body :global(em) { font-style: italic; }
+  .plain-body :global(blockquote) { margin-top: 1.8rem; padding-left: 1.2rem; border-left: 1px solid var(--line-2); max-width: var(--measure); }
+  .plain-body :global(blockquote p) { margin-top: 0; font-size: 0.95rem; font-style: italic; color: var(--ink-3); line-height: 1.55; }
+
+  /* the denser opening — paragraphs after the dek that set up the thesis and how to read */
+  .intro p { max-width: var(--measure); font-size: clamp(1.16rem, 1.7vw, 1.36rem); line-height: 1.5; color: var(--ink-2); font-weight: 400; text-wrap: pretty; }
+  .intro p + p { margin-top: 1.1rem; }
+  .intro p :global(em) { font-style: italic; color: var(--ink); }
+  .intro p :global(b) { font-weight: 560; color: var(--ink); }
+
+  /* ── the keystone hub — temperature-clustered dimension mini-suites ── */
+  .cluster { margin-top: clamp(3rem, 8vh, 5.5rem); }
+  .cl-head { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; border-top: 2px solid var(--ink); padding-top: 1rem; }
+  .cl-t { font-family: var(--display); font-weight: 640; font-size: clamp(1.6rem, 3vw, 2.2rem); letter-spacing: -0.03em; }
+  .cl-s { font-family: var(--serif); font-style: italic; color: var(--ink-3); font-size: 1.05rem; }
+
+  .dim { margin-top: clamp(3.4rem, 9vh, 6rem); }
+  .dim .g .epi { margin-top: 0.5rem; }
+
+  /* the verdict as a bold coloured eyebrow above the name — never in the gutter (it collided there) */
+  .dverdict { font-family: var(--display); font-weight: 640; font-size: clamp(1.4rem, 3vw, 2.1rem); line-height: 1; letter-spacing: -0.03em; }
+  .dverdict .vslash { color: var(--line-2); margin: 0 0.45em; font-weight: 400; }
+  .dname { font-family: var(--display); font-weight: 560; font-size: clamp(2rem, 4.6vw, 3.3rem); line-height: 1.02; letter-spacing: -0.035em; margin-top: 0.55rem; max-width: 20ch; text-wrap: balance; }
+  .epi { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); border: 1px solid var(--line-2); border-radius: 2px; padding: 0.15em 0.5em; display: inline-block; }
+  .epi-contested { color: var(--despair); border-color: color-mix(in srgb, var(--despair) 40%, transparent); }
+  .epi-measured { color: var(--hope); border-color: color-mix(in srgb, var(--hope) 40%, transparent); }
+  .dim-claim { max-width: var(--measure); margin-top: 1.1rem; font-family: var(--serif); font-style: italic; font-weight: 440; font-size: clamp(1.35rem, 2.3vw, 1.72rem); line-height: 1.22; color: var(--ink); text-wrap: pretty; }
+  .dim-ex { max-width: var(--measure); margin-top: 1rem; color: var(--ink-2); font-size: var(--fs-body); line-height: var(--lh-body); font-weight: 450; text-wrap: pretty; }
+
+  /* the flagship chart — big, full-width, breaking into the left margin like the movement figures */
+  .kfig { margin: clamp(2rem, 4.5vh, 3rem) 0 0; }
+  @media (min-width: 681px) { .kfig { margin-left: calc(-1 * (var(--gutter) + 2.6rem)); width: calc(100% + var(--gutter) + 2.6rem); } }
+  /* stacked charts in one dimension: a faint rule + generous space so each reads as its own figure,
+     not one run-on block (the footer of one sat right under the title of the next). */
+  .kfig + .kfig { margin-top: clamp(2.8rem, 6vh, 4.2rem); padding-top: clamp(2.4rem, 5vh, 3.2rem); border-top: 1px solid var(--line); }
+  .kcap { display: flex; align-items: baseline; justify-content: space-between; gap: 0.4rem 1.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
+  .kcap .lab { font-family: var(--display); font-size: 1.1rem; font-weight: 560; letter-spacing: -0.01em; color: var(--ink); }
+  .kcap .lab :global(b) { color: var(--ink); font-weight: 660; }
+  .kcap .u { font-family: var(--mono); font-size: var(--fs-meta); color: var(--ink-3); white-space: nowrap; }
+  .kcap .yr { color: var(--ink-2); }
+  .kfig .sc { overflow: visible; }
+  /* the per-chart "read" — the insight to take from this chart. Unclamped: it flows the full
+     chart width, a step up in size, so it reads as real commentary, not a caption. */
+  .knote { margin-top: 1.2rem; font-family: var(--serif); font-size: clamp(1.05rem, 1.4vw, 1.2rem); line-height: 1.55; color: var(--ink-2); font-weight: 400; text-wrap: pretty; }
+  .knote :global(b) { color: var(--ink); font-weight: 600; }
+  .knote :global(em) { font-style: italic; color: var(--ink); }
+  @media (max-width: 680px) { .kfig .sc { overflow-x: visible; } }
+
+  /* The evidence zone — charts, the three reads, and the link out — all share the chart's left
+     edge (the intro text stays in the reading column). A hairline above the reads marks them as
+     commentary on the charts rather than a fourth chart. */
+  .dim .takes { margin-top: clamp(2.2rem, 5vh, 3.2rem); padding-top: clamp(1.5rem, 3.5vh, 2.2rem); border-top: 1px solid var(--line-2); }
+  @media (min-width: 681px) {
+    .dim .takes { margin-left: calc(-1 * (var(--gutter) + 2.6rem)); width: calc(100% + var(--gutter) + 2.6rem); }
+    .dim .deep { margin-left: calc(-1 * (var(--gutter) + 2.6rem)); }
+  }
+
+  /* download + attribution footer, mirroring the movement figures' "↓ image / data / lineage · Source" */
+  /* quiet reference band: links recede to the same weight as the source line, underline only on
+     hover — so 66 charts' worth of download tools don't shout under every figure. */
+  .kfoot { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem 1.5rem; flex-wrap: wrap; margin-top: 1.3rem; }
+  .kfoot .tools { display: flex; gap: 1.05rem; flex-wrap: wrap; }   /* links inherit the quiet .tools a rule */
+  .kfoot .src { font-family: var(--mono); font-size: var(--fs-meta); color: var(--ink-3); }
+
+  .deep { display: inline-block; margin-top: 1.8rem; font-family: var(--display); font-weight: 560; font-size: 0.9rem; color: var(--hope); border-bottom: 1px solid color-mix(in srgb, var(--hope) 40%, transparent); }
+  .deep:hover { border-color: var(--hope); }
 </style>

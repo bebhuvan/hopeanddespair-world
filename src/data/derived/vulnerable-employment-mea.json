@@ -1,0 +1,164 @@
+{
+  "indicatorId": "work.vulnerable_employment.mea",
+  "entity": "MEA",
+  "entityName": "Middle East, North Africa, Afghanistan & Pakistan",
+  "unit": "% of total employment",
+  "points": [
+    {
+      "t": 1991,
+      "value": 44.7162385853249
+    },
+    {
+      "t": 1992,
+      "value": 44.4468080674751
+    },
+    {
+      "t": 1993,
+      "value": 44.3241618297758
+    },
+    {
+      "t": 1994,
+      "value": 43.9010492937728
+    },
+    {
+      "t": 1995,
+      "value": 43.6938574934061
+    },
+    {
+      "t": 1996,
+      "value": 43.5928265622586
+    },
+    {
+      "t": 1997,
+      "value": 42.7964348092232
+    },
+    {
+      "t": 1998,
+      "value": 43.0314772133519
+    },
+    {
+      "t": 1999,
+      "value": 42.618914492621
+    },
+    {
+      "t": 2000,
+      "value": 42.5577177354008
+    },
+    {
+      "t": 2001,
+      "value": 42.2428776131895
+    },
+    {
+      "t": 2002,
+      "value": 41.099990503069
+    },
+    {
+      "t": 2003,
+      "value": 41.1693939914434
+    },
+    {
+      "t": 2004,
+      "value": 41.8059053421093
+    },
+    {
+      "t": 2005,
+      "value": 40.3257062107228
+    },
+    {
+      "t": 2006,
+      "value": 39.7867196787017
+    },
+    {
+      "t": 2007,
+      "value": 39.8796225475943
+    },
+    {
+      "t": 2008,
+      "value": 39.5762517643013
+    },
+    {
+      "t": 2009,
+      "value": 39.3698181104137
+    },
+    {
+      "t": 2010,
+      "value": 38.9827980401839
+    },
+    {
+      "t": 2011,
+      "value": 38.5551728472984
+    },
+    {
+      "t": 2012,
+      "value": 37.9178774808715
+    },
+    {
+      "t": 2013,
+      "value": 38.2769969695694
+    },
+    {
+      "t": 2014,
+      "value": 37.9848926616511
+    },
+    {
+      "t": 2015,
+      "value": 37.7944597596987
+    },
+    {
+      "t": 2016,
+      "value": 37.3696068705475
+    },
+    {
+      "t": 2017,
+      "value": 37.189738148672
+    },
+    {
+      "t": 2018,
+      "value": 36.4099460320122
+    },
+    {
+      "t": 2019,
+      "value": 37.4137738390855
+    },
+    {
+      "t": 2020,
+      "value": 37.0734058291725
+    },
+    {
+      "t": 2021,
+      "value": 37.1490769029874
+    },
+    {
+      "t": 2022,
+      "value": 36.4637820923661
+    },
+    {
+      "t": 2023,
+      "value": 36.3899609966073
+    },
+    {
+      "t": 2024,
+      "value": 36.275594372544
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SL.EMP.VULN.ZS",
+    "url": "https://data.worldbank.org/indicator/SL.EMP.VULN.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "b387cb724969c4814dc6c51be3cd494a9e871650d9f5f56836e7f1453d42d219",
+    "definition": "Vulnerable employment, total (% of total employment) (modeled ILO estimate)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "International Labour Organization (modelled), via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity MEA"
+    }
+  ],
+  "derivedFrom": [
+    "MEA"
+  ]
+}

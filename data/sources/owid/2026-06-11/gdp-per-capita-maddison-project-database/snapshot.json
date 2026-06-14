@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "gdp-per-capita-maddison-project-database",
+  "vintage": "2026-06-11",
+  "url": "https://ourworldindata.org/grapher/gdp-per-capita-maddison-project-database",
+  "checksum": "3764bd2ceff342198e539a27a87ec85bc2679ed8fc40c09f430a70a21fcdf27b",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T11:35:02.116Z",
+  "adapterVersion": "1.0.0"
+}

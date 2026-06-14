@@ -1,0 +1,38 @@
+{
+  "name": "transport-ev_sales_share_mode-buses",
+  "title": "Share of new buses sold that are electric, World",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "IEA — Global EV Data Explorer",
+      "path": "https://api.iea.org/evs?region=World&csv=true"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "transport-ev_sales_share_mode-buses",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "transport_ev_sales_share_mode_buses",
+            "type": "number",
+            "unit": "percent"
+          }
+        ]
+      }
+    }
+  ]
+}

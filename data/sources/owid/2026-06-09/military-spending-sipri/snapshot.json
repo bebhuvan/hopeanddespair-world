@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "military-spending-sipri",
+  "vintage": "2026-06-09",
+  "url": "https://ourworldindata.org/grapher/military-spending-sipri",
+  "checksum": "235e5080fbc1b77d50261b08fb2e86b4529c625d30eb559baa212a8b9db82524",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-09T14:50:04.714Z",
+  "adapterVersion": "1.0.0"
+}

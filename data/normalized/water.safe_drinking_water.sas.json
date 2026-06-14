@@ -1,0 +1,121 @@
+[
+  {
+    "indicatorId": "water.safe_drinking_water.sas",
+    "entity": "SAS",
+    "entityName": "South Asia",
+    "unit": "% of population",
+    "points": [
+      {
+        "t": 2000,
+        "value": 41.0414002827735
+      },
+      {
+        "t": 2001,
+        "value": 42.3387305615407
+      },
+      {
+        "t": 2002,
+        "value": 43.6712969398121
+      },
+      {
+        "t": 2003,
+        "value": 45.0149672750992
+      },
+      {
+        "t": 2004,
+        "value": 46.3694526498138
+      },
+      {
+        "t": 2005,
+        "value": 47.8320836297037
+      },
+      {
+        "t": 2006,
+        "value": 49.3154920002066
+      },
+      {
+        "t": 2007,
+        "value": 50.8090289921688
+      },
+      {
+        "t": 2008,
+        "value": 52.312642790202
+      },
+      {
+        "t": 2009,
+        "value": 53.8240460739803
+      },
+      {
+        "t": 2010,
+        "value": 55.3436208870871
+      },
+      {
+        "t": 2011,
+        "value": 56.873835758716
+      },
+      {
+        "t": 2012,
+        "value": 58.4168751999494
+      },
+      {
+        "t": 2013,
+        "value": 59.9705807877529
+      },
+      {
+        "t": 2014,
+        "value": 61.5347356742574
+      },
+      {
+        "t": 2015,
+        "value": 63.108644558754
+      },
+      {
+        "t": 2016,
+        "value": 64.6907078532209
+      },
+      {
+        "t": 2017,
+        "value": 66.2802218670174
+      },
+      {
+        "t": 2018,
+        "value": 67.8769128877962
+      },
+      {
+        "t": 2019,
+        "value": 69.480735456421
+      },
+      {
+        "t": 2020,
+        "value": 71.0903353119232
+      },
+      {
+        "t": 2021,
+        "value": 72.7058981854924
+      },
+      {
+        "t": 2022,
+        "value": 74.3252481732266
+      },
+      {
+        "t": 2023,
+        "value": 75.9444675309209
+      },
+      {
+        "t": 2024,
+        "value": 77.5514601972461
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SH.H2O.SMDW.ZS",
+      "url": "https://data.worldbank.org/indicator/SH.H2O.SMDW.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "4667986b4aca06ead903a829d983ffdccd6955ab41b7d11fd4b6d3016ef29796",
+      "definition": "People using safely managed drinking water services (% of population)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "WHO/UNICEF JMP, via World Bank"
+    }
+  }
+]

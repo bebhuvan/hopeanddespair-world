@@ -44,6 +44,17 @@ core; an article must be complete, fast, and fully understandable with **zero Ja
   reference points and the pessimist's — stacked. Same numbers, both honest stories.
 - **The small-multiple signal grid (static).** Five signals at a glance; the composite
   "4 of 5 point to deterioration" read straight off them.
+- **★ The divergence pair (static).** The regional thesis made structural: the same metric,
+  two stacked panels — *where it is happening* (the leaders) above *where it is not* (the
+  laggards or the locked-out), the world line ghosted through both. One glance answers the
+  question laypeople actually ask: "okay, but where?" Signature for transition-type
+  questions (green energy, rights, vaccination), where the world is several worlds moving
+  at different speeds.
+- **The direction-and-pace verdict.** For transition questions, a single verdict word lies:
+  "is it happening?" and "is it fast enough?" have different answers. Where a chart uses the
+  pace template ([[CHARTS.md]] v2), the verdict slot carries **two words, two temperatures**
+  — *Happening · cool / Too slowly · warm*. The honest split verdict is the thesis in
+  miniature, and nobody else does it.
 
 **Optional progressive enhancements (post-launch, never required, never day-one):** a *lens
 slider* that re-windows in place, and *"in your lifetime"* (enter a birth year, re-anchor to
@@ -65,6 +76,12 @@ tiny island that hydrates only if present; the page works fully without them. Th
   run out and human experience begins. A data site that marks its own blind spots as a
   *feature* is rare and unmistakably ours. (Honours the brief's "fuzziness of human existence.")
 - **The honest caveats panel.** Disclosure *before* the evidence, not buried after. (Built.)
+- **The disagreement panel.** When two credible sources genuinely disagree (Living Planet
+  Index vs its critics; disruptiveness-of-science studies), don't pick a winner or average
+  them — plot both lines, label both sources, and say in one sentence *why* they diverge
+  (method, coverage, definition). Cross-source divergence already flows out of validation
+  ([[DATA.md]] §7.6); this is where it surfaces as content. The reader learns the deepest
+  lesson the site can teach: the number depends on how you count.
 
 ### Pillar 3 — layperson-first scaffolding
 

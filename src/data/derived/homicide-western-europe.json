@@ -370,7 +370,7 @@
     "sourceIndicator": "death_rate_per_100_000_population_eisner_who",
     "url": "https://ourworldindata.org/grapher/homicide-rates-across-western-europe",
     "license": "CC BY 4.0",
-    "vintage": "2026-06-08",
+    "vintage": "2026-06-12",
     "checksum": "1dab681a11a7822c617120f196768e28d33a29193e3b7cfd3b35524d0876edab",
     "definition": "Homicide rate, Western Europe (long run) — unweighted mean across 12 Western European countries per year",
     "attribution": "Our World in Data",

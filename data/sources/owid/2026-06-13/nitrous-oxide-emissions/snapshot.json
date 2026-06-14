@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "nitrous-oxide-emissions",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/nitrous-oxide-emissions",
+  "checksum": "9db7a7f8234deb74eab1b6213fc9ac2eb80168326e418511cbd2d6de9e7bb531",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T13:37:15.069Z",
+  "adapterVersion": "1.0.0"
+}

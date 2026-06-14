@@ -1,0 +1,10 @@
+{
+  "source": "iea",
+  "slug": "evs",
+  "vintage": "2026-06-13",
+  "url": "https://api.iea.org/evs?region=World&csv=true",
+  "checksum": "5f9f8654b105f326009ebfa71cfe8c4bd472aeab4c1713b4f69fd4c5a7d1d1c3",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T13:17:08.693Z",
+  "adapterVersion": "1.0.0"
+}

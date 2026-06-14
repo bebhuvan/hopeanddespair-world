@@ -1,0 +1,168 @@
+{
+  "indicatorId": "demography.female_labour.world",
+  "entity": "WLD",
+  "entityName": "World",
+  "unit": "% of women aged 15+",
+  "points": [
+    {
+      "t": 1990,
+      "value": 51.1763408013001
+    },
+    {
+      "t": 1991,
+      "value": 51.1331762547953
+    },
+    {
+      "t": 1992,
+      "value": 51.0546304954177
+    },
+    {
+      "t": 1993,
+      "value": 50.8230076692369
+    },
+    {
+      "t": 1994,
+      "value": 50.9052840430167
+    },
+    {
+      "t": 1995,
+      "value": 50.8827997837743
+    },
+    {
+      "t": 1996,
+      "value": 50.8482719738938
+    },
+    {
+      "t": 1997,
+      "value": 50.8655430642236
+    },
+    {
+      "t": 1998,
+      "value": 50.8710757391261
+    },
+    {
+      "t": 1999,
+      "value": 50.9953547223446
+    },
+    {
+      "t": 2000,
+      "value": 50.9627998491673
+    },
+    {
+      "t": 2001,
+      "value": 50.8211605735693
+    },
+    {
+      "t": 2002,
+      "value": 50.7121538093779
+    },
+    {
+      "t": 2003,
+      "value": 50.660958758536
+    },
+    {
+      "t": 2004,
+      "value": 50.600497131926
+    },
+    {
+      "t": 2005,
+      "value": 50.6071680012442
+    },
+    {
+      "t": 2006,
+      "value": 50.3543559340242
+    },
+    {
+      "t": 2007,
+      "value": 50.2190340623475
+    },
+    {
+      "t": 2008,
+      "value": 49.9080776947947
+    },
+    {
+      "t": 2009,
+      "value": 49.6873782866243
+    },
+    {
+      "t": 2010,
+      "value": 49.3502777396598
+    },
+    {
+      "t": 2011,
+      "value": 49.154906097423
+    },
+    {
+      "t": 2012,
+      "value": 48.8986543312152
+    },
+    {
+      "t": 2013,
+      "value": 48.7493486836512
+    },
+    {
+      "t": 2014,
+      "value": 48.5946413653695
+    },
+    {
+      "t": 2015,
+      "value": 48.5463086828544
+    },
+    {
+      "t": 2016,
+      "value": 48.4632199883405
+    },
+    {
+      "t": 2017,
+      "value": 48.3737139576476
+    },
+    {
+      "t": 2018,
+      "value": 48.3048226894161
+    },
+    {
+      "t": 2019,
+      "value": 48.2843403158836
+    },
+    {
+      "t": 2020,
+      "value": 46.9801551174139
+    },
+    {
+      "t": 2021,
+      "value": 47.8921671536065
+    },
+    {
+      "t": 2022,
+      "value": 48.3162129639077
+    },
+    {
+      "t": 2023,
+      "value": 49.0297087675013
+    },
+    {
+      "t": 2024,
+      "value": 49.0782841403016
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SL.TLF.CACT.FE.ZS",
+    "url": "https://data.worldbank.org/indicator/SL.TLF.CACT.FE.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "0f8c7fae1983595ce860369c977720abdb9734a1340be6b735145fb881152dd1",
+    "definition": "Labor force participation rate, female (% of female population ages 15+) (modeled ILO estimate)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "International Labour Organization (modelled), via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity WLD"
+    }
+  ],
+  "derivedFrom": [
+    "WLD"
+  ]
+}

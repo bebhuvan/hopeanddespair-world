@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "transport.ev_sales_share.netherlands",
+    "unit": "percent",
+    "points": 16
+  },
+  "wasDerivedFrom": [
+    "Netherlands"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Netherlands"
+      }
+    ],
+    "agent": "adapter:iea@1.0.0",
+    "used": {
+      "source": "iea",
+      "slug": "evs",
+      "url": "https://api.iea.org/evs?region=Netherlands&csv=true",
+      "vintage": "2026-06-13",
+      "checksum": "fa40de97005a55094c8680c4481d887a7ca69008ee6f428bee127f14c330fcd5",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+}

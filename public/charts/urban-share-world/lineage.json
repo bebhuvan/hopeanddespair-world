@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "housing.urban_share.world",
+    "unit": "% of population",
+    "points": 65
+  },
+  "wasDerivedFrom": [
+    "WLD"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity WLD"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SP.URB.TOTL.IN.ZS",
+      "url": "https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS",
+      "vintage": "2026-06-12",
+      "checksum": "be4c65d160267c98d5312caaa96039d753293c27c5c312816a7342aa20467c1a",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UN DESA World Urbanization Prospects, via World Bank"
+}

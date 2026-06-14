@@ -1,0 +1,252 @@
+{
+  "indicatorId": "inequality.income_share_top1.russia-and-central-asia",
+  "entity": "Russia and Central Asia (WID)",
+  "entityName": "Russia and Central Asia (WID)",
+  "unit": "%",
+  "points": [
+    {
+      "t": 1820,
+      "value": 16.75
+    },
+    {
+      "t": 1850,
+      "value": 17.13
+    },
+    {
+      "t": 1880,
+      "value": 16.98
+    },
+    {
+      "t": 1900,
+      "value": 18.55
+    },
+    {
+      "t": 1910,
+      "value": 18.4
+    },
+    {
+      "t": 1920,
+      "value": 4.29
+    },
+    {
+      "t": 1930,
+      "value": 4.23
+    },
+    {
+      "t": 1940,
+      "value": 4.33
+    },
+    {
+      "t": 1950,
+      "value": 6.11
+    },
+    {
+      "t": 1960,
+      "value": 5.05
+    },
+    {
+      "t": 1970,
+      "value": 4.85
+    },
+    {
+      "t": 1980,
+      "value": 4.32
+    },
+    {
+      "t": 1981,
+      "value": 4.49
+    },
+    {
+      "t": 1982,
+      "value": 4.66
+    },
+    {
+      "t": 1983,
+      "value": 4.83
+    },
+    {
+      "t": 1984,
+      "value": 4.99
+    },
+    {
+      "t": 1985,
+      "value": 5.17
+    },
+    {
+      "t": 1986,
+      "value": 5.35
+    },
+    {
+      "t": 1987,
+      "value": 5.5
+    },
+    {
+      "t": 1988,
+      "value": 5.67
+    },
+    {
+      "t": 1989,
+      "value": 5.99
+    },
+    {
+      "t": 1990,
+      "value": 7.87
+    },
+    {
+      "t": 1991,
+      "value": 9.48
+    },
+    {
+      "t": 1992,
+      "value": 11.46
+    },
+    {
+      "t": 1993,
+      "value": 12.44
+    },
+    {
+      "t": 1994,
+      "value": 13.48
+    },
+    {
+      "t": 1995,
+      "value": 15.01
+    },
+    {
+      "t": 1996,
+      "value": 17.56
+    },
+    {
+      "t": 1997,
+      "value": 16.56
+    },
+    {
+      "t": 1998,
+      "value": 15.9
+    },
+    {
+      "t": 1999,
+      "value": 19.07
+    },
+    {
+      "t": 2000,
+      "value": 22.17
+    },
+    {
+      "t": 2001,
+      "value": 24.94
+    },
+    {
+      "t": 2002,
+      "value": 24.12
+    },
+    {
+      "t": 2003,
+      "value": 23.34
+    },
+    {
+      "t": 2004,
+      "value": 22.22
+    },
+    {
+      "t": 2005,
+      "value": 23.89
+    },
+    {
+      "t": 2006,
+      "value": 24.83
+    },
+    {
+      "t": 2007,
+      "value": 26.06
+    },
+    {
+      "t": 2008,
+      "value": 23.01
+    },
+    {
+      "t": 2009,
+      "value": 20.48
+    },
+    {
+      "t": 2010,
+      "value": 19.07
+    },
+    {
+      "t": 2011,
+      "value": 20.22
+    },
+    {
+      "t": 2012,
+      "value": 19.12
+    },
+    {
+      "t": 2013,
+      "value": 19.93
+    },
+    {
+      "t": 2014,
+      "value": 19.42
+    },
+    {
+      "t": 2015,
+      "value": 18.94
+    },
+    {
+      "t": 2016,
+      "value": 19.69
+    },
+    {
+      "t": 2017,
+      "value": 20.1
+    },
+    {
+      "t": 2018,
+      "value": 19.97
+    },
+    {
+      "t": 2019,
+      "value": 19.97
+    },
+    {
+      "t": 2020,
+      "value": 22.82
+    },
+    {
+      "t": 2021,
+      "value": 23.08
+    },
+    {
+      "t": 2022,
+      "value": 23.08
+    },
+    {
+      "t": 2023,
+      "value": 23.11
+    },
+    {
+      "t": 2024,
+      "value": 22.96
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "share_top_1__welfare_type_before_tax__extrapolated_no",
+    "url": "https://ourworldindata.org/grapher/income-share-top-1-before-tax-wid",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "f1e67ccfe48be6f1dd51b9b907e55c92c131d39c15153163fc64e80829f6f5fd",
+    "definition": "The share of income received by the richest 1% of the population. Income here is measured before taxes and benefits.",
+    "attribution": "Our World in Data",
+    "primarySource": "World Inequality Database (WID.world) — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity Russia and Central Asia (WID)"
+    }
+  ],
+  "derivedFrom": [
+    "Russia and Central Asia (WID)"
+  ]
+}

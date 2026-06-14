@@ -1,0 +1,169 @@
+[
+  {
+    "indicatorId": "economy.poverty_300.ssf",
+    "entity": "WB_SSA",
+    "entityName": "Sub-Saharan Africa (WB)",
+    "unit": "%",
+    "points": [
+      {
+        "t": 1990,
+        "value": 61.501967906951904
+      },
+      {
+        "t": 1991,
+        "value": 62.759023904800415
+      },
+      {
+        "t": 1992,
+        "value": 63.84671330451965
+      },
+      {
+        "t": 1993,
+        "value": 64.54741358757019
+      },
+      {
+        "t": 1994,
+        "value": 64.60856795310974
+      },
+      {
+        "t": 1995,
+        "value": 64.44746851921082
+      },
+      {
+        "t": 1996,
+        "value": 63.85735869407654
+      },
+      {
+        "t": 1997,
+        "value": 63.474851846694946
+      },
+      {
+        "t": 1998,
+        "value": 63.42548727989197
+      },
+      {
+        "t": 1999,
+        "value": 63.11529874801636
+      },
+      {
+        "t": 2000,
+        "value": 62.43366003036499
+      },
+      {
+        "t": 2001,
+        "value": 61.24559044837952
+      },
+      {
+        "t": 2002,
+        "value": 60.84868311882019
+      },
+      {
+        "t": 2003,
+        "value": 59.85421538352966
+      },
+      {
+        "t": 2004,
+        "value": 56.894081830978394
+      },
+      {
+        "t": 2005,
+        "value": 55.35099506378174
+      },
+      {
+        "t": 2006,
+        "value": 54.27336096763611
+      },
+      {
+        "t": 2007,
+        "value": 53.10760736465454
+      },
+      {
+        "t": 2008,
+        "value": 51.86541676521301
+      },
+      {
+        "t": 2009,
+        "value": 51.39480233192444
+      },
+      {
+        "t": 2010,
+        "value": 49.402403831481934
+      },
+      {
+        "t": 2011,
+        "value": 48.410990834236145
+      },
+      {
+        "t": 2012,
+        "value": 47.163644433021545
+      },
+      {
+        "t": 2013,
+        "value": 46.138569712638855
+      },
+      {
+        "t": 2014,
+        "value": 45.3067421913147
+      },
+      {
+        "t": 2015,
+        "value": 45.367634296417236
+      },
+      {
+        "t": 2016,
+        "value": 45.13600766658783
+      },
+      {
+        "t": 2017,
+        "value": 44.596296548843384
+      },
+      {
+        "t": 2018,
+        "value": 44.134995341300964
+      },
+      {
+        "t": 2019,
+        "value": 43.87303590774536
+      },
+      {
+        "t": 2020,
+        "value": 46.00026607513428
+      },
+      {
+        "t": 2021,
+        "value": 46.21462821960449
+      },
+      {
+        "t": 2022,
+        "value": 45.7093209028244
+      },
+      {
+        "t": 2023,
+        "value": 45.6446647644043
+      },
+      {
+        "t": 2024,
+        "value": 45.08971571922302
+      },
+      {
+        "t": 2025,
+        "value": 44.249194860458374
+      },
+      {
+        "t": 2026,
+        "value": 43.28920543193817
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "headcount_ratio__ppp_version_2021__poverty_line_300__welfare_type_income_or_consumption__table_income_or_consumption_consolidated__survey_comparability_no_spells",
+      "url": "https://ourworldindata.org/grapher/share-of-population-in-extreme-poverty",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "2a3b1658b965af528cce7071543aa512a049a5e45ad38846c0280809f5848606",
+      "definition": "Percentage of population living in households with an income or consumption below $3 per day.",
+      "attribution": "Our World in Data",
+      "primarySource": "World Bank PIP (2021 PPP) — via Our World in Data"
+    }
+  }
+]

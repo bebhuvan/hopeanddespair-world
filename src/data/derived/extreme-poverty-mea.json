@@ -1,0 +1,192 @@
+{
+  "indicatorId": "economy.extreme_poverty.mea",
+  "entity": "MEA",
+  "entityName": "Middle East, North Africa, Afghanistan & Pakistan",
+  "unit": "% of population",
+  "points": [
+    {
+      "t": 1984,
+      "value": 36.2
+    },
+    {
+      "t": 1985,
+      "value": 35.7
+    },
+    {
+      "t": 1986,
+      "value": 35.5
+    },
+    {
+      "t": 1987,
+      "value": 35.5
+    },
+    {
+      "t": 1988,
+      "value": 35.1
+    },
+    {
+      "t": 1989,
+      "value": 34.9
+    },
+    {
+      "t": 1990,
+      "value": 34.2
+    },
+    {
+      "t": 1991,
+      "value": 32
+    },
+    {
+      "t": 1992,
+      "value": 28.2
+    },
+    {
+      "t": 1993,
+      "value": 28.3
+    },
+    {
+      "t": 1994,
+      "value": 25.7
+    },
+    {
+      "t": 1995,
+      "value": 25.3
+    },
+    {
+      "t": 1996,
+      "value": 23.1
+    },
+    {
+      "t": 1997,
+      "value": 22.7
+    },
+    {
+      "t": 1998,
+      "value": 23.1
+    },
+    {
+      "t": 1999,
+      "value": 23.4
+    },
+    {
+      "t": 2000,
+      "value": 23.8
+    },
+    {
+      "t": 2001,
+      "value": 24.6
+    },
+    {
+      "t": 2002,
+      "value": 24.2
+    },
+    {
+      "t": 2003,
+      "value": 22.2
+    },
+    {
+      "t": 2004,
+      "value": 19.9
+    },
+    {
+      "t": 2005,
+      "value": 18.8
+    },
+    {
+      "t": 2006,
+      "value": 17.6
+    },
+    {
+      "t": 2007,
+      "value": 16.7
+    },
+    {
+      "t": 2008,
+      "value": 14.7
+    },
+    {
+      "t": 2009,
+      "value": 15.2
+    },
+    {
+      "t": 2010,
+      "value": 13.4
+    },
+    {
+      "t": 2011,
+      "value": 13
+    },
+    {
+      "t": 2012,
+      "value": 12.3
+    },
+    {
+      "t": 2013,
+      "value": 11.6
+    },
+    {
+      "t": 2014,
+      "value": 11.5
+    },
+    {
+      "t": 2015,
+      "value": 11.3
+    },
+    {
+      "t": 2016,
+      "value": 11.3
+    },
+    {
+      "t": 2017,
+      "value": 11.1
+    },
+    {
+      "t": 2018,
+      "value": 11.1
+    },
+    {
+      "t": 2019,
+      "value": 11.6
+    },
+    {
+      "t": 2020,
+      "value": 12.6
+    },
+    {
+      "t": 2021,
+      "value": 13.4
+    },
+    {
+      "t": 2022,
+      "value": 13.5
+    },
+    {
+      "t": 2023,
+      "value": 13.9
+    },
+    {
+      "t": 2024,
+      "value": 14.4
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SI.POV.DDAY",
+    "url": "https://data.worldbank.org/indicator/SI.POV.DDAY",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "8adda0eab99d96e596c46d0aef7afd4d2e0df5b719d6c80cce63fd4b1b7bf7f5",
+    "definition": "Poverty headcount ratio at $3.00 a day (2021 PPP) (% of population)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "World Bank — Poverty and Inequality Platform"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity MEA"
+    }
+  ],
+  "derivedFrom": [
+    "MEA"
+  ]
+}

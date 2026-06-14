@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "population-growth-rates",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/population-growth-rates",
+  "checksum": "7f58990dca85475998be15d85e9f6eac7b513d17c00ba124580a079d4e8e2d08",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T14:27:20.587Z",
+  "adapterVersion": "1.0.0"
+}

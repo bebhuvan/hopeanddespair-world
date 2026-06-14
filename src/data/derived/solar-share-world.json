@@ -1,0 +1,132 @@
+{
+  "indicatorId": "energy.solar_share_electricity.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "% of electricity generation",
+  "points": [
+    {
+      "t": 2000,
+      "value": 0.01
+    },
+    {
+      "t": 2001,
+      "value": 0.01
+    },
+    {
+      "t": 2002,
+      "value": 0.01
+    },
+    {
+      "t": 2003,
+      "value": 0.01
+    },
+    {
+      "t": 2004,
+      "value": 0.02
+    },
+    {
+      "t": 2005,
+      "value": 0.02
+    },
+    {
+      "t": 2006,
+      "value": 0.03
+    },
+    {
+      "t": 2007,
+      "value": 0.04
+    },
+    {
+      "t": 2008,
+      "value": 0.06
+    },
+    {
+      "t": 2009,
+      "value": 0.1
+    },
+    {
+      "t": 2010,
+      "value": 0.15
+    },
+    {
+      "t": 2011,
+      "value": 0.29
+    },
+    {
+      "t": 2012,
+      "value": 0.43
+    },
+    {
+      "t": 2013,
+      "value": 0.57
+    },
+    {
+      "t": 2014,
+      "value": 0.83
+    },
+    {
+      "t": 2015,
+      "value": 1.07
+    },
+    {
+      "t": 2016,
+      "value": 1.33
+    },
+    {
+      "t": 2017,
+      "value": 1.75
+    },
+    {
+      "t": 2018,
+      "value": 2.17
+    },
+    {
+      "t": 2019,
+      "value": 2.6
+    },
+    {
+      "t": 2020,
+      "value": 3.19
+    },
+    {
+      "t": 2021,
+      "value": 3.73
+    },
+    {
+      "t": 2022,
+      "value": 4.61
+    },
+    {
+      "t": 2023,
+      "value": 5.61
+    },
+    {
+      "t": 2024,
+      "value": 6.93
+    },
+    {
+      "t": 2025,
+      "value": 8.75
+    }
+  ],
+  "provenance": {
+    "source": "ember",
+    "sourceIndicator": "electricity-generation/yearly:Solar:share_of_generation_pct",
+    "url": "https://api.ember-energy.org/v1/electricity-generation/yearly?entity=World&start_date=2000",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "90a0fb0ceae7d775c280d2107ffbd09d632c809914e1b0357a6545bc59696272",
+    "definition": "Share of electricity from solar, World",
+    "attribution": "Ember — Yearly Electricity Data",
+    "primarySource": "Ember — Yearly Electricity Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity World"
+    }
+  ],
+  "derivedFrom": [
+    "World"
+  ]
+}

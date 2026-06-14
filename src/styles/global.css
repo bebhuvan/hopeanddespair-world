@@ -1,46 +1,72 @@
-/* global base — reset, body, shared utilities. Kept lean; component styles live with
+/* global base — reset, body, shared layout utilities. Component styles live with
    their components. The hairline aesthetic is cheap by nature (no shadows, no images). */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
+  /* clip horizontal overflow at the root so a wide chart (which pans inside its own .sc box) or a
+     100vw full-bleed band can never make the whole page scroll left-right on mobile. `clip` keeps
+     vertical scrolling normal and doesn't create a nested scroll container the way `hidden` would. */
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  /* kerning + standard and contextual ligatures — the serif's real f-ligatures and joins,
+     off by default in some engines, are what make running text look typeset rather than set. */
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  font-size: 106.25%;            /* ~17px root — the type scale is tuned to this */
 }
 
 body {
   background: var(--bg);
-  color: var(--fg);
-  font-family: var(--font-body);
-  font-size: 1.075rem;
-  line-height: 1.6;
-  font-weight: 380;
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-weight: 450;   /* the text grade — 420 read thin and uneven on screen */
+  font-optical-sizing: auto;
+  hanging-punctuation: first allow-end;  /* progressive (Safari): quotes hang into the margin */
   min-height: 100vh;
   overflow-x: hidden;
-  transition: background 0.4s, color 0.4s;
 }
 
-.wrap { padding-inline: var(--margin); }
+/* old-style figures in running prose — dates and counts settle into the line instead of
+   standing at cap height. Charts, mono chrome, and display verdicts keep lining figures
+   (their faces don't carry the feature, so the rule is a no-op there). */
+main p, main li, main dd, main blockquote { font-variant-numeric: oldstyle-nums; }
 
-::selection { background: var(--accent); color: var(--bg); }
-
-a { color: inherit; }
-
-/* one-shot entrance — transform/opacity only (never layout-affecting). PERFORMANCE.md. */
-.reveal {
-  opacity: 0;
-  transform: translateY(14px);
-  animation: rise 0.85s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+/* phone-width lines (~40ch) get a much better rag with hyphenation on */
+@media (max-width: 680px) {
+  main p, main li, main dd { hyphens: auto; }
 }
+
+::selection { background: var(--ink); color: #fff; }
+a { color: inherit; text-decoration: none; }
+em { font-style: italic; }
+
+/* one centred column + a left gutter for figure numbers / section numerals — the whole layout */
+.wrap { max-width: calc(var(--col) + var(--gutter)); margin-inline: auto; padding-inline: var(--margin); }
+.row { display: grid; grid-template-columns: var(--gutter) minmax(0, 1fr); gap: 0 var(--rgap); }
+.row > .g { grid-column: 1; }
+.row > .c { grid-column: 2; min-width: 0; }
+@media (max-width: 680px) {
+  /* .c must come back to column 1 too — leaving it in column 2 makes the grid keep an
+     implicit gutter column on phones, indenting all content by the label's width. */
+  .row { grid-template-columns: 1fr; }
+  .row > .g { grid-column: 1; margin-bottom: 0.5rem; }
+  .row > .c { grid-column: 1; }
+}
+
+/* full-viewport breakout for the rare edge-to-edge section (the lived-now interlude) */
+.bleed { width: 100vw; margin-inline: calc(50% - 50vw); }
+
+/* one-shot entrance — CSS only; content is fully visible without JS (PERFORMANCE.md) */
+.reveal { opacity: 0; transform: translateY(14px); animation: rise 1s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; }
+.d1 { animation-delay: 0.05s; } .d2 { animation-delay: 0.16s; } .d3 { animation-delay: 0.3s; } .d4 { animation-delay: 0.46s; }
 @keyframes rise { to { opacity: 1; transform: none; } }
-
 @media (prefers-reduced-motion: reduce) {
   .reveal { animation: none; opacity: 1; transform: none; }
   * { scroll-behavior: auto !important; }
 }
 
-/* visually-hidden (for skip links / a11y labels) */
-.vh {
-  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
-}
+/* visually-hidden (skip links / a11y labels) */
+.vh { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }

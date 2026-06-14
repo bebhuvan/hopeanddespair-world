@@ -1,0 +1,38 @@
+{
+  "name": "climate-temperature_anomaly-world",
+  "title": "Global surface temperature anomaly (vs 1951–1980), World",
+  "licenses": [
+    {
+      "name": "Public Domain (US Government)",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "NASA GISS — GISTEMP v4",
+      "path": "https://raw.githubusercontent.com/datasets/global-temp/main/data/annual.csv"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "climate-temperature_anomaly-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "climate_temperature_anomaly_world",
+            "type": "number",
+            "unit": "°C"
+          }
+        ]
+      }
+    }
+  ]
+}

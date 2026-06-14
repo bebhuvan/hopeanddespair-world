@@ -1,0 +1,245 @@
+[
+  {
+    "indicatorId": "inequality.income_share_top10.world",
+    "entity": "OWID_WRL",
+    "entityName": "World",
+    "unit": "%",
+    "points": [
+      {
+        "t": 1820,
+        "value": 50.43
+      },
+      {
+        "t": 1850,
+        "value": 53.92
+      },
+      {
+        "t": 1880,
+        "value": 57.1
+      },
+      {
+        "t": 1900,
+        "value": 58.86
+      },
+      {
+        "t": 1910,
+        "value": 58.9
+      },
+      {
+        "t": 1920,
+        "value": 56.75
+      },
+      {
+        "t": 1930,
+        "value": 52.59
+      },
+      {
+        "t": 1940,
+        "value": 52.67
+      },
+      {
+        "t": 1950,
+        "value": 51.71
+      },
+      {
+        "t": 1960,
+        "value": 50.22
+      },
+      {
+        "t": 1970,
+        "value": 49.26
+      },
+      {
+        "t": 1980,
+        "value": 51.47
+      },
+      {
+        "t": 1981,
+        "value": 51.38
+      },
+      {
+        "t": 1982,
+        "value": 50.98
+      },
+      {
+        "t": 1983,
+        "value": 51.1
+      },
+      {
+        "t": 1984,
+        "value": 51.5
+      },
+      {
+        "t": 1985,
+        "value": 51.8
+      },
+      {
+        "t": 1986,
+        "value": 52.11
+      },
+      {
+        "t": 1987,
+        "value": 52.38
+      },
+      {
+        "t": 1988,
+        "value": 52.87
+      },
+      {
+        "t": 1989,
+        "value": 53.33
+      },
+      {
+        "t": 1990,
+        "value": 53.62
+      },
+      {
+        "t": 1991,
+        "value": 54.28
+      },
+      {
+        "t": 1992,
+        "value": 55.22
+      },
+      {
+        "t": 1993,
+        "value": 55.4
+      },
+      {
+        "t": 1994,
+        "value": 55.95
+      },
+      {
+        "t": 1995,
+        "value": 56.06
+      },
+      {
+        "t": 1996,
+        "value": 56.67
+      },
+      {
+        "t": 1997,
+        "value": 56.73
+      },
+      {
+        "t": 1998,
+        "value": 57.39
+      },
+      {
+        "t": 1999,
+        "value": 57.67
+      },
+      {
+        "t": 2000,
+        "value": 58.05
+      },
+      {
+        "t": 2001,
+        "value": 57.84
+      },
+      {
+        "t": 2002,
+        "value": 57.56
+      },
+      {
+        "t": 2003,
+        "value": 57.55
+      },
+      {
+        "t": 2004,
+        "value": 57.45
+      },
+      {
+        "t": 2005,
+        "value": 57.48
+      },
+      {
+        "t": 2006,
+        "value": 57.28
+      },
+      {
+        "t": 2007,
+        "value": 57.03
+      },
+      {
+        "t": 2008,
+        "value": 56.45
+      },
+      {
+        "t": 2009,
+        "value": 55.51
+      },
+      {
+        "t": 2010,
+        "value": 55.23
+      },
+      {
+        "t": 2011,
+        "value": 55.1
+      },
+      {
+        "t": 2012,
+        "value": 54.68
+      },
+      {
+        "t": 2013,
+        "value": 54.53
+      },
+      {
+        "t": 2014,
+        "value": 54.02
+      },
+      {
+        "t": 2015,
+        "value": 53.96
+      },
+      {
+        "t": 2016,
+        "value": 53.78
+      },
+      {
+        "t": 2017,
+        "value": 53.82
+      },
+      {
+        "t": 2018,
+        "value": 53.68
+      },
+      {
+        "t": 2019,
+        "value": 53.33
+      },
+      {
+        "t": 2020,
+        "value": 53.49
+      },
+      {
+        "t": 2021,
+        "value": 53.88
+      },
+      {
+        "t": 2022,
+        "value": 53.84
+      },
+      {
+        "t": 2023,
+        "value": 53.7
+      },
+      {
+        "t": 2024,
+        "value": 53.59
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "share_top_10__welfare_type_before_tax__extrapolated_no",
+      "url": "https://ourworldindata.org/grapher/income-share-top-10-before-tax-wid",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "59ceaeece7b30f39dd4588bd676c7b4b73a1448af143d05f786363d754ff985d",
+      "definition": "The share of income received by the richest 10% of the population. Income here is measured before taxes and benefits.",
+      "attribution": "Our World in Data",
+      "primarySource": "World Inequality Database (WID.world) — via Our World in Data"
+    }
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "energy.clean_share_electricity.asia",
+    "unit": "% of electricity generation",
+    "points": 26
+  },
+  "wasDerivedFrom": [
+    "Asia"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Asia"
+      }
+    ],
+    "agent": "adapter:ember@1.0.0",
+    "used": {
+      "source": "ember",
+      "slug": "electricity-generation/yearly",
+      "url": "https://api.ember-energy.org/v1/electricity-generation/yearly?entity=Asia&start_date=2000",
+      "vintage": "2026-06-13",
+      "checksum": "8fbffbb03f310374b513173fcdd739c2a543bfeece86c003d17df7bf4a4f1514",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Ember — Yearly Electricity Data"
+}

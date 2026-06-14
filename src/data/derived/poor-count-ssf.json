@@ -1,0 +1,203 @@
+{
+  "indicatorId": "economy.poor_count.ssf",
+  "entity": "SSF",
+  "entityName": "Sub-Saharan Africa",
+  "unit": "million people",
+  "points": [
+    {
+      "t": 1981,
+      "value": 231.183811
+    },
+    {
+      "t": 1982,
+      "value": 242.08345
+    },
+    {
+      "t": 1983,
+      "value": 255.906521
+    },
+    {
+      "t": 1984,
+      "value": 266.786702
+    },
+    {
+      "t": 1985,
+      "value": 274.712677
+    },
+    {
+      "t": 1986,
+      "value": 282.256313
+    },
+    {
+      "t": 1987,
+      "value": 290.50991799999997
+    },
+    {
+      "t": 1988,
+      "value": 299.26923
+    },
+    {
+      "t": 1989,
+      "value": 309.092589
+    },
+    {
+      "t": 1990,
+      "value": 320.618795
+    },
+    {
+      "t": 1991,
+      "value": 336.150937
+    },
+    {
+      "t": 1992,
+      "value": 351.331903
+    },
+    {
+      "t": 1993,
+      "value": 365.061315
+    },
+    {
+      "t": 1994,
+      "value": 375.24778399999997
+    },
+    {
+      "t": 1995,
+      "value": 384.353262
+    },
+    {
+      "t": 1996,
+      "value": 391.16076999999996
+    },
+    {
+      "t": 1997,
+      "value": 399.164037
+    },
+    {
+      "t": 1998,
+      "value": 409.604089
+    },
+    {
+      "t": 1999,
+      "value": 418.616793
+    },
+    {
+      "t": 2000,
+      "value": 425.251333
+    },
+    {
+      "t": 2001,
+      "value": 428.46714399999996
+    },
+    {
+      "t": 2002,
+      "value": 437.29643899999996
+    },
+    {
+      "t": 2003,
+      "value": 441.91333799999995
+    },
+    {
+      "t": 2004,
+      "value": 431.628761
+    },
+    {
+      "t": 2005,
+      "value": 431.552379
+    },
+    {
+      "t": 2006,
+      "value": 434.875797
+    },
+    {
+      "t": 2007,
+      "value": 437.375585
+    },
+    {
+      "t": 2008,
+      "value": 439.122094
+    },
+    {
+      "t": 2009,
+      "value": 447.31326099999995
+    },
+    {
+      "t": 2010,
+      "value": 441.986829
+    },
+    {
+      "t": 2011,
+      "value": 445.152671
+    },
+    {
+      "t": 2012,
+      "value": 445.682442
+    },
+    {
+      "t": 2013,
+      "value": 448.112961
+    },
+    {
+      "t": 2014,
+      "value": 452.14363299999997
+    },
+    {
+      "t": 2015,
+      "value": 465.13217099999997
+    },
+    {
+      "t": 2016,
+      "value": 475.202796
+    },
+    {
+      "t": 2017,
+      "value": 482.059933
+    },
+    {
+      "t": 2018,
+      "value": 489.89712099999997
+    },
+    {
+      "t": 2019,
+      "value": 499.852352
+    },
+    {
+      "t": 2020,
+      "value": 537.750202
+    },
+    {
+      "t": 2021,
+      "value": 554.118896
+    },
+    {
+      "t": 2022,
+      "value": 561.862876
+    },
+    {
+      "t": 2023,
+      "value": 575.0725659999999
+    },
+    {
+      "t": 2024,
+      "value": 582.128513
+    },
+    {
+      "t": 2025,
+      "value": 585.321572
+    },
+    {
+      "t": 2026,
+      "value": 586.592725
+    }
+  ],
+  "provenance": {
+    "source": "pip",
+    "sourceIndicator": "pop_in_poverty @ $3.00/day (2021 PPP)",
+    "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+    "definition": "Number of people in extreme poverty (below $3.00/day, 2021 PPP), Sub-Saharan Africa",
+    "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+    "primarySource": "World Bank — Poverty and Inequality Platform"
+  }
+}

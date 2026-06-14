@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "transport.ev_2_3_wheeler_share.indonesia",
+    "unit": "percent",
+    "points": 11
+  },
+  "wasDerivedFrom": [
+    "Indonesia"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Indonesia"
+      }
+    ],
+    "agent": "adapter:iea@1.0.0",
+    "used": {
+      "source": "iea",
+      "slug": "evs",
+      "url": "https://api.iea.org/evs?region=Indonesia&csv=true",
+      "vintage": "2026-06-13",
+      "checksum": "aa64753ec06d2f5a63d032e4c0e75f3abfe40eb25a8ac18fdef604e2603e1fa0",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+}

@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "climate.cumulative_co2.world",
+    "unit": "tonnes",
+    "points": 275
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "cumulative-co2-emissions",
+      "url": "https://ourworldindata.org/grapher/cumulative-co2-emissions",
+      "vintage": "2026-06-13",
+      "checksum": "bf7e632b90e607c09037eb92a24c906403ec6f12ea39f044a07fa19283b06b61",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Global Carbon Budget (2025) — via Our World in Data"
+}

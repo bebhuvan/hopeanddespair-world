@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "energy.coal_generation.united-states",
+    "unit": "terawatt-hours",
+    "points": 26
+  },
+  "wasDerivedFrom": [
+    "USA"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity United States"
+      }
+    ],
+    "agent": "adapter:ember@1.0.0",
+    "used": {
+      "source": "ember",
+      "slug": "electricity-generation/yearly",
+      "url": "https://api.ember-energy.org/v1/electricity-generation/yearly?entity=United%20States&start_date=2000",
+      "vintage": "2026-06-13",
+      "checksum": "ab8695bb836127a98d4261e87080f0636961f3ea6c76d6d132c5359c3f7e22f5",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Ember — Yearly Electricity Data"
+}

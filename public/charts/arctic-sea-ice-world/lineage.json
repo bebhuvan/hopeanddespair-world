@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "climate.arctic_sea_ice.world",
+    "unit": "million square kilometers",
+    "points": 47
+  },
+  "wasDerivedFrom": [
+    "Arctic Ocean"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Arctic Ocean"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "arctic-sea-ice",
+      "url": "https://ourworldindata.org/grapher/arctic-sea-ice",
+      "vintage": "2026-06-13",
+      "checksum": "16d8dfdc2eb6d7a79a9d07f15f351c88dc84cb10bebdd2cea8be708a3204a063",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "National Snow and Ice Data Center (NSIDC) — Sea Ice Index v3"
+}

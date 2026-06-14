@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "SH.MLR.INCD.P3",
+  "vintage": "2026-06-11",
+  "url": "https://data.worldbank.org/indicator/SH.MLR.INCD.P3",
+  "checksum": "8f32687d9e9ddfb0b907b7061c2a743d980a09688ce7e047a90a1b435ebae772",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T14:35:58.549Z",
+  "adapterVersion": "1.0.0"
+}

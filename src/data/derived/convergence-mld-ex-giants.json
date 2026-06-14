@@ -1,0 +1,169 @@
+{
+  "indicatorId": "economy.convergence_mld_ex_giants.world",
+  "entity": "MLD_EX_CHN_IND",
+  "entityName": "Between-country income inequality, excluding China & India, World",
+  "unit": "mean log deviation",
+  "points": [
+    {
+      "t": 1990,
+      "value": 0.5393250581916778
+    },
+    {
+      "t": 1991,
+      "value": 0.5439346795570439
+    },
+    {
+      "t": 1992,
+      "value": 0.5476902730406213
+    },
+    {
+      "t": 1993,
+      "value": 0.5482270893362471
+    },
+    {
+      "t": 1994,
+      "value": 0.5583017466518687
+    },
+    {
+      "t": 1995,
+      "value": 0.5587877210188621
+    },
+    {
+      "t": 1996,
+      "value": 0.5570037205879507
+    },
+    {
+      "t": 1997,
+      "value": 0.5625702487349624
+    },
+    {
+      "t": 1998,
+      "value": 0.5759418932225537
+    },
+    {
+      "t": 1999,
+      "value": 0.5839420923903359
+    },
+    {
+      "t": 2000,
+      "value": 0.5904763889510551
+    },
+    {
+      "t": 2001,
+      "value": 0.5866762322396417
+    },
+    {
+      "t": 2002,
+      "value": 0.5813286557643434
+    },
+    {
+      "t": 2003,
+      "value": 0.580375530028035
+    },
+    {
+      "t": 2004,
+      "value": 0.574100047741504
+    },
+    {
+      "t": 2005,
+      "value": 0.569146752996961
+    },
+    {
+      "t": 2006,
+      "value": 0.5647396198723503
+    },
+    {
+      "t": 2007,
+      "value": 0.5584848757114447
+    },
+    {
+      "t": 2008,
+      "value": 0.5477915809994844
+    },
+    {
+      "t": 2009,
+      "value": 0.5263192555750998
+    },
+    {
+      "t": 2010,
+      "value": 0.5230731843217823
+    },
+    {
+      "t": 2011,
+      "value": 0.5197943711716584
+    },
+    {
+      "t": 2012,
+      "value": 0.5131303449518543
+    },
+    {
+      "t": 2013,
+      "value": 0.5062470327051813
+    },
+    {
+      "t": 2014,
+      "value": 0.5013014157573998
+    },
+    {
+      "t": 2015,
+      "value": 0.49965399803305105
+    },
+    {
+      "t": 2016,
+      "value": 0.49691285039582006
+    },
+    {
+      "t": 2017,
+      "value": 0.49704094645745683
+    },
+    {
+      "t": 2018,
+      "value": 0.49665211662630376
+    },
+    {
+      "t": 2019,
+      "value": 0.49676524453774423
+    },
+    {
+      "t": 2020,
+      "value": 0.4964430553809398
+    },
+    {
+      "t": 2021,
+      "value": 0.5123236005204855
+    },
+    {
+      "t": 2022,
+      "value": 0.5142205742512965
+    },
+    {
+      "t": 2023,
+      "value": 0.5162175851885388
+    },
+    {
+      "t": 2024,
+      "value": 0.5160243936719856
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "NY.GDP.PCAP.PP.KD × SP.POP.TOTL",
+    "url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "f22786749871412a91da89de74f35782e410628e93d9ba86f77a2f8aae27b472",
+    "definition": "Population-weighted between-country mean log deviation of GDP per capita (PPP), 176 countries, excluding China & India",
+    "attribution": "World Bank — World Development Indicators (ICP PPP & population)",
+    "primarySource": "World Bank — World Development Indicators (ICP PPP & population)"
+  },
+  "derivedFrom": [
+    "NY.GDP.PCAP.PP.KD",
+    "SP.POP.TOTL"
+  ],
+  "recipe": [
+    {
+      "op": "mld_ex_chn_ind",
+      "detail": "Population-weighted between-country mean log deviation of GDP per capita (PPP), 176 countries, excluding China & India, 1990–2024, balanced panel of 176 countries"
+    }
+  ]
+}

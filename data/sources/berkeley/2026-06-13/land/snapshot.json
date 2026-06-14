@@ -1,0 +1,10 @@
+{
+  "source": "berkeley",
+  "slug": "land",
+  "vintage": "2026-06-13",
+  "url": "https://berkeley-earth-temperature.s3.us-west-1.amazonaws.com/Global/Complete_TAVG_summary.txt",
+  "checksum": "56021deacae0d8b951a608915930f4a4d2fa6e1520dee6cf084d1a6babb7e14e",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T12:09:31.492Z",
+  "adapterVersion": "1.0.0"
+}

@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "economy.poverty_300.eas",
+    "unit": "%",
+    "points": 37
+  },
+  "wasDerivedFrom": [
+    "WB_EAP"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity East Asia and Pacific (WB)"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "share-of-population-in-extreme-poverty",
+      "url": "https://ourworldindata.org/grapher/share-of-population-in-extreme-poverty",
+      "vintage": "2026-06-12",
+      "checksum": "2a3b1658b965af528cce7071543aa512a049a5e45ad38846c0280809f5848606",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "World Bank PIP (2021 PPP) — via Our World in Data"
+}

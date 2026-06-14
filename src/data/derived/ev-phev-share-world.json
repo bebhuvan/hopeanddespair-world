@@ -1,0 +1,92 @@
+{
+  "indicatorId": "transport.ev_phev_share.world",
+  "entity": "OWID_WRL",
+  "entityName": "World",
+  "unit": "%",
+  "points": [
+    {
+      "t": 2010,
+      "value": 0.00072483
+    },
+    {
+      "t": 2011,
+      "value": 0.01322449
+    },
+    {
+      "t": 2012,
+      "value": 0.08571429
+    },
+    {
+      "t": 2013,
+      "value": 0.1312935
+    },
+    {
+      "t": 2014,
+      "value": 0.1733333
+    },
+    {
+      "t": 2015,
+      "value": 0.2484615
+    },
+    {
+      "t": 2016,
+      "value": 0.3775641
+    },
+    {
+      "t": 2017,
+      "value": 0.5133333
+    },
+    {
+      "t": 2018,
+      "value": 0.7609756
+    },
+    {
+      "t": 2019,
+      "value": 0.7528846
+    },
+    {
+      "t": 2020,
+      "value": 1.44698
+    },
+    {
+      "t": 2021,
+      "value": 2.677273
+    },
+    {
+      "t": 2022,
+      "value": 4.264706
+    },
+    {
+      "t": 2023,
+      "value": 5.518248
+    },
+    {
+      "t": 2024,
+      "value": 7.8
+    },
+    {
+      "t": 2025,
+      "value": 8.490566
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "phev_share_car_sales",
+    "url": "https://ourworldindata.org/grapher/share-car-sales-battery-plugin",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "5e8d981e9f3f2f98141a270b6598e62bf40266c51b5db85feeade7e4548da999",
+    "definition": "Plug-in hybrid share of new cars sold, World",
+    "attribution": "Our World in Data",
+    "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0), via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity World"
+    }
+  ],
+  "derivedFrom": [
+    "OWID_WRL"
+  ]
+}

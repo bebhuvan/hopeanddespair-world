@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "SH.STA.MMRT",
+  "vintage": "2026-06-11",
+  "url": "https://data.worldbank.org/indicator/SH.STA.MMRT",
+  "checksum": "d59f41f60f6fb4a180e6b35c74e505806e8979751f854cfa5c6685a16c2affbc",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T10:06:56.458Z",
+  "adapterVersion": "1.0.0"
+}

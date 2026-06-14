@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "work.unemployment.world",
+    "unit": "% of total labor force",
+    "points": 34
+  },
+  "wasDerivedFrom": [
+    "WLD"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity WLD"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SL.UEM.TOTL.ZS",
+      "url": "https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS",
+      "vintage": "2026-06-12",
+      "checksum": "a175876f68c936a6ca0cc80e0142069a6574c6de14d657faff9dd9689ca712ea",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "International Labour Organization (modelled), via World Bank"
+}

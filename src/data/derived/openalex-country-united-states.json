@@ -1,0 +1,125 @@
+{
+  "indicatorId": "science.openalex_country_united_states.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "works per year, million",
+  "points": [
+    {
+      "t": 2000,
+      "value": 0.45
+    },
+    {
+      "t": 2001,
+      "value": 0.47
+    },
+    {
+      "t": 2002,
+      "value": 0.61
+    },
+    {
+      "t": 2003,
+      "value": 0.59
+    },
+    {
+      "t": 2004,
+      "value": 0.6
+    },
+    {
+      "t": 2005,
+      "value": 0.65
+    },
+    {
+      "t": 2006,
+      "value": 0.69
+    },
+    {
+      "t": 2007,
+      "value": 0.7
+    },
+    {
+      "t": 2008,
+      "value": 0.77
+    },
+    {
+      "t": 2009,
+      "value": 0.78
+    },
+    {
+      "t": 2010,
+      "value": 0.81
+    },
+    {
+      "t": 2011,
+      "value": 0.86
+    },
+    {
+      "t": 2012,
+      "value": 0.88
+    },
+    {
+      "t": 2013,
+      "value": 0.93
+    },
+    {
+      "t": 2014,
+      "value": 0.95
+    },
+    {
+      "t": 2015,
+      "value": 0.98
+    },
+    {
+      "t": 2016,
+      "value": 0.99
+    },
+    {
+      "t": 2017,
+      "value": 1.02
+    },
+    {
+      "t": 2018,
+      "value": 1.13
+    },
+    {
+      "t": 2019,
+      "value": 1.19
+    },
+    {
+      "t": 2020,
+      "value": 1.42
+    },
+    {
+      "t": 2021,
+      "value": 1.33
+    },
+    {
+      "t": 2022,
+      "value": 1.73
+    },
+    {
+      "t": 2023,
+      "value": 1.28
+    },
+    {
+      "t": 2024,
+      "value": 1.21
+    }
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:US&group_by=publication_year",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:US&group_by=publication_year&per-page=100",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-13",
+    "checksum": "65e0fbd90e6e88d3a30b485204b6b91a384f3bdd627fb1e27caf855d4a026ecf",
+    "definition": "OpenAlex works per year with at least one authorship institution in United States.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "openalex_group_by",
+      "detail": "filtered works to author-institution country United States, grouped by publication year, 2000-2024, shown in millions"
+    }
+  ]
+}

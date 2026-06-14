@@ -1,0 +1,328 @@
+{
+  "indicatorId": "demography.sex_ratio_birth.world",
+  "entity": "900",
+  "entityName": "World",
+  "unit": "male births per 100 female births",
+  "points": [
+    {
+      "t": 1950,
+      "value": 105.4
+    },
+    {
+      "t": 1951,
+      "value": 105.4
+    },
+    {
+      "t": 1952,
+      "value": 105.4
+    },
+    {
+      "t": 1953,
+      "value": 105.4
+    },
+    {
+      "t": 1954,
+      "value": 105.4
+    },
+    {
+      "t": 1955,
+      "value": 105.4
+    },
+    {
+      "t": 1956,
+      "value": 105.4
+    },
+    {
+      "t": 1957,
+      "value": 105.4
+    },
+    {
+      "t": 1958,
+      "value": 105.3
+    },
+    {
+      "t": 1959,
+      "value": 105.3
+    },
+    {
+      "t": 1960,
+      "value": 105.3
+    },
+    {
+      "t": 1961,
+      "value": 105.3
+    },
+    {
+      "t": 1962,
+      "value": 105.4
+    },
+    {
+      "t": 1963,
+      "value": 105.4
+    },
+    {
+      "t": 1964,
+      "value": 105.4
+    },
+    {
+      "t": 1965,
+      "value": 105.4
+    },
+    {
+      "t": 1966,
+      "value": 105.4
+    },
+    {
+      "t": 1967,
+      "value": 105.4
+    },
+    {
+      "t": 1968,
+      "value": 105.4
+    },
+    {
+      "t": 1969,
+      "value": 105.5
+    },
+    {
+      "t": 1970,
+      "value": 105.5
+    },
+    {
+      "t": 1971,
+      "value": 105.5
+    },
+    {
+      "t": 1972,
+      "value": 105.5
+    },
+    {
+      "t": 1973,
+      "value": 105.5
+    },
+    {
+      "t": 1974,
+      "value": 105.5
+    },
+    {
+      "t": 1975,
+      "value": 105.6
+    },
+    {
+      "t": 1976,
+      "value": 105.6
+    },
+    {
+      "t": 1977,
+      "value": 105.6
+    },
+    {
+      "t": 1978,
+      "value": 105.6
+    },
+    {
+      "t": 1979,
+      "value": 105.7
+    },
+    {
+      "t": 1980,
+      "value": 105.7
+    },
+    {
+      "t": 1981,
+      "value": 105.8
+    },
+    {
+      "t": 1982,
+      "value": 105.8
+    },
+    {
+      "t": 1983,
+      "value": 105.8
+    },
+    {
+      "t": 1984,
+      "value": 105.9
+    },
+    {
+      "t": 1985,
+      "value": 106
+    },
+    {
+      "t": 1986,
+      "value": 106.1
+    },
+    {
+      "t": 1987,
+      "value": 106.3
+    },
+    {
+      "t": 1988,
+      "value": 106.5
+    },
+    {
+      "t": 1989,
+      "value": 106.6
+    },
+    {
+      "t": 1990,
+      "value": 106.8
+    },
+    {
+      "t": 1991,
+      "value": 106.8
+    },
+    {
+      "t": 1992,
+      "value": 106.9
+    },
+    {
+      "t": 1993,
+      "value": 107.1
+    },
+    {
+      "t": 1994,
+      "value": 107.2
+    },
+    {
+      "t": 1995,
+      "value": 107.3
+    },
+    {
+      "t": 1996,
+      "value": 107.3
+    },
+    {
+      "t": 1997,
+      "value": 107.4
+    },
+    {
+      "t": 1998,
+      "value": 107.4
+    },
+    {
+      "t": 1999,
+      "value": 107.4
+    },
+    {
+      "t": 2000,
+      "value": 107.5
+    },
+    {
+      "t": 2001,
+      "value": 107.4
+    },
+    {
+      "t": 2002,
+      "value": 107.3
+    },
+    {
+      "t": 2003,
+      "value": 107.3
+    },
+    {
+      "t": 2004,
+      "value": 107.4
+    },
+    {
+      "t": 2005,
+      "value": 107.3
+    },
+    {
+      "t": 2006,
+      "value": 107.3
+    },
+    {
+      "t": 2007,
+      "value": 107.3
+    },
+    {
+      "t": 2008,
+      "value": 107.3
+    },
+    {
+      "t": 2009,
+      "value": 107.3
+    },
+    {
+      "t": 2010,
+      "value": 107.2
+    },
+    {
+      "t": 2011,
+      "value": 107.1
+    },
+    {
+      "t": 2012,
+      "value": 107.1
+    },
+    {
+      "t": 2013,
+      "value": 106.9
+    },
+    {
+      "t": 2014,
+      "value": 106.9
+    },
+    {
+      "t": 2015,
+      "value": 106.7
+    },
+    {
+      "t": 2016,
+      "value": 106.7
+    },
+    {
+      "t": 2017,
+      "value": 106.5
+    },
+    {
+      "t": 2018,
+      "value": 106.4
+    },
+    {
+      "t": 2019,
+      "value": 106.3
+    },
+    {
+      "t": 2020,
+      "value": 105.8
+    },
+    {
+      "t": 2021,
+      "value": 105.7
+    },
+    {
+      "t": 2022,
+      "value": 105.6
+    },
+    {
+      "t": 2023,
+      "value": 105.5
+    },
+    {
+      "t": 2024,
+      "value": 105.4
+    }
+  ],
+  "provenance": {
+    "source": "unwpp",
+    "sourceIndicator": "SRB",
+    "url": "https://population.un.org/wpp/",
+    "license": "CC BY 3.0 IGO",
+    "vintage": "2026-06-13",
+    "checksum": "a5c90668daef8cf590cc81cdc1efe793f176b00c65a095ea6ce98cbe5e3059fb",
+    "definition": "Sex ratio at birth, World",
+    "attribution": "UN DESA, Population Division — World Population Prospects 2024",
+    "primarySource": "UN World Population Prospects 2024"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity World"
+    }
+  ],
+  "derivedFrom": [
+    "900"
+  ]
+}

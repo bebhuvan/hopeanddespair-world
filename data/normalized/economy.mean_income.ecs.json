@@ -1,0 +1,205 @@
+[
+  {
+    "indicatorId": "economy.mean_income.ecs",
+    "entity": "ECS",
+    "entityName": "Europe & Central Asia",
+    "unit": "PPP$ per day (2021)",
+    "points": [
+      {
+        "t": 1981,
+        "value": 24.8158
+      },
+      {
+        "t": 1982,
+        "value": 25.091
+      },
+      {
+        "t": 1983,
+        "value": 25.1789
+      },
+      {
+        "t": 1984,
+        "value": 25.471
+      },
+      {
+        "t": 1985,
+        "value": 25.7533
+      },
+      {
+        "t": 1986,
+        "value": 26.3094
+      },
+      {
+        "t": 1987,
+        "value": 27.2053
+      },
+      {
+        "t": 1988,
+        "value": 27.9217
+      },
+      {
+        "t": 1989,
+        "value": 28.4965
+      },
+      {
+        "t": 1990,
+        "value": 28.6448
+      },
+      {
+        "t": 1991,
+        "value": 28.4178
+      },
+      {
+        "t": 1992,
+        "value": 27.945
+      },
+      {
+        "t": 1993,
+        "value": 27.0516
+      },
+      {
+        "t": 1994,
+        "value": 27.0151
+      },
+      {
+        "t": 1995,
+        "value": 27.7361
+      },
+      {
+        "t": 1996,
+        "value": 27.854
+      },
+      {
+        "t": 1997,
+        "value": 28.0871
+      },
+      {
+        "t": 1998,
+        "value": 28.9955
+      },
+      {
+        "t": 1999,
+        "value": 28.8633
+      },
+      {
+        "t": 2000,
+        "value": 29.9948
+      },
+      {
+        "t": 2001,
+        "value": 30.6362
+      },
+      {
+        "t": 2002,
+        "value": 31.2769
+      },
+      {
+        "t": 2003,
+        "value": 32.0785
+      },
+      {
+        "t": 2004,
+        "value": 33.2776
+      },
+      {
+        "t": 2005,
+        "value": 33.8636
+      },
+      {
+        "t": 2006,
+        "value": 34.7342
+      },
+      {
+        "t": 2007,
+        "value": 37.1823
+      },
+      {
+        "t": 2008,
+        "value": 38.1296
+      },
+      {
+        "t": 2009,
+        "value": 37.9811
+      },
+      {
+        "t": 2010,
+        "value": 38.033
+      },
+      {
+        "t": 2011,
+        "value": 37.9929
+      },
+      {
+        "t": 2012,
+        "value": 37.9147
+      },
+      {
+        "t": 2013,
+        "value": 38.3901
+      },
+      {
+        "t": 2014,
+        "value": 38.7024
+      },
+      {
+        "t": 2015,
+        "value": 38.9822
+      },
+      {
+        "t": 2016,
+        "value": 39.542
+      },
+      {
+        "t": 2017,
+        "value": 40.0166
+      },
+      {
+        "t": 2018,
+        "value": 40.7695
+      },
+      {
+        "t": 2019,
+        "value": 41.4686
+      },
+      {
+        "t": 2020,
+        "value": 42.7254
+      },
+      {
+        "t": 2021,
+        "value": 45.5235
+      },
+      {
+        "t": 2022,
+        "value": 45.8702
+      },
+      {
+        "t": 2023,
+        "value": 47.7557
+      },
+      {
+        "t": 2024,
+        "value": 48.6875
+      },
+      {
+        "t": 2025,
+        "value": 49.2533
+      },
+      {
+        "t": 2026,
+        "value": 49.9208
+      }
+    ],
+    "provenance": {
+      "source": "pip",
+      "sourceIndicator": "mean @ $3.00/day (2021 PPP)",
+      "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+      "definition": "Mean income or consumption per day, Europe & Central Asia",
+      "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+      "primarySource": "World Bank — Poverty and Inequality Platform"
+    }
+  }
+]

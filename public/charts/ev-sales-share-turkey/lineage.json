@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "transport.ev_sales_share.turkey",
+    "unit": "percent",
+    "points": 14
+  },
+  "wasDerivedFrom": [
+    "Turkiye"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Turkiye"
+      }
+    ],
+    "agent": "adapter:iea@1.0.0",
+    "used": {
+      "source": "iea",
+      "slug": "evs",
+      "url": "https://api.iea.org/evs?region=Turkiye&csv=true",
+      "vintage": "2026-06-13",
+      "checksum": "64a51538ba846e8bf0f60b7e4d0a17dcf8a74440da32764f8cc3844cd23a4d2f",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+}

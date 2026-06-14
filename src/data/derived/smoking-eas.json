@@ -1,0 +1,60 @@
+{
+  "indicatorId": "substance.smoking.eas",
+  "entity": "EAS",
+  "entityName": "East Asia & Pacific",
+  "unit": "% of adults",
+  "points": [
+    {
+      "t": 2000,
+      "value": 29.9468209175097
+    },
+    {
+      "t": 2005,
+      "value": 28.3615108695231
+    },
+    {
+      "t": 2007,
+      "value": 27.7829555831967
+    },
+    {
+      "t": 2010,
+      "value": 27.0864279083596
+    },
+    {
+      "t": 2015,
+      "value": 25.9865953516797
+    },
+    {
+      "t": 2020,
+      "value": 25.0153186135364
+    },
+    {
+      "t": 2021,
+      "value": 24.7138557204019
+    },
+    {
+      "t": 2022,
+      "value": 24.6404445882366
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SH.PRV.SMOK",
+    "url": "https://data.worldbank.org/indicator/SH.PRV.SMOK",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "2d0255a845aaffe81095203425aec7765775d7acc13287e4bd11209f9cf8bafd",
+    "definition": "Prevalence of current tobacco use (% of adults)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity EAS"
+    }
+  ],
+  "derivedFrom": [
+    "EAS"
+  ]
+}

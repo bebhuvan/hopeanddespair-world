@@ -1,0 +1,157 @@
+[
+  {
+    "indicatorId": "gender.gii.lcn",
+    "entity": "Latin America and the Caribbean (UNDP)",
+    "entityName": "Latin America and the Caribbean (UNDP)",
+    "unit": "index (0 = parity)",
+    "points": [
+      {
+        "t": 1990,
+        "value": 0.555
+      },
+      {
+        "t": 1991,
+        "value": 0.544
+      },
+      {
+        "t": 1992,
+        "value": 0.536
+      },
+      {
+        "t": 1993,
+        "value": 0.534
+      },
+      {
+        "t": 1994,
+        "value": 0.529
+      },
+      {
+        "t": 1995,
+        "value": 0.521
+      },
+      {
+        "t": 1996,
+        "value": 0.514
+      },
+      {
+        "t": 1997,
+        "value": 0.508
+      },
+      {
+        "t": 1998,
+        "value": 0.495
+      },
+      {
+        "t": 1999,
+        "value": 0.485
+      },
+      {
+        "t": 2000,
+        "value": 0.481
+      },
+      {
+        "t": 2001,
+        "value": 0.478
+      },
+      {
+        "t": 2002,
+        "value": 0.47
+      },
+      {
+        "t": 2003,
+        "value": 0.458
+      },
+      {
+        "t": 2004,
+        "value": 0.455
+      },
+      {
+        "t": 2005,
+        "value": 0.448
+      },
+      {
+        "t": 2006,
+        "value": 0.446
+      },
+      {
+        "t": 2007,
+        "value": 0.444
+      },
+      {
+        "t": 2008,
+        "value": 0.44
+      },
+      {
+        "t": 2009,
+        "value": 0.434
+      },
+      {
+        "t": 2010,
+        "value": 0.431
+      },
+      {
+        "t": 2011,
+        "value": 0.429
+      },
+      {
+        "t": 2012,
+        "value": 0.422
+      },
+      {
+        "t": 2013,
+        "value": 0.419
+      },
+      {
+        "t": 2014,
+        "value": 0.413
+      },
+      {
+        "t": 2015,
+        "value": 0.408
+      },
+      {
+        "t": 2016,
+        "value": 0.404
+      },
+      {
+        "t": 2017,
+        "value": 0.4
+      },
+      {
+        "t": 2018,
+        "value": 0.393
+      },
+      {
+        "t": 2019,
+        "value": 0.39
+      },
+      {
+        "t": 2020,
+        "value": 0.395
+      },
+      {
+        "t": 2021,
+        "value": 0.39
+      },
+      {
+        "t": 2022,
+        "value": 0.385
+      },
+      {
+        "t": 2023,
+        "value": 0.384
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "gii",
+      "url": "https://ourworldindata.org/grapher/gender-inequality-index-from-the-human-development-report",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "f9f8a91370370ffcc7028567a408c49fe937f986488349268cfe4a7da272c311",
+      "definition": "This index captures gender-based disadvantage in reproductive health, empowerment and the labour market; ranges from 0 (full equality) to 1 (maximum inequality), representing the share of potential human development lost because of gender gaps.",
+      "attribution": "Our World in Data",
+      "primarySource": "UNDP, Human Development Report"
+    }
+  }
+]

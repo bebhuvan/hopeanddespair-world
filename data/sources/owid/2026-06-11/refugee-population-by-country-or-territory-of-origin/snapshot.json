@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "refugee-population-by-country-or-territory-of-origin",
+  "vintage": "2026-06-11",
+  "url": "https://ourworldindata.org/grapher/refugee-population-by-country-or-territory-of-origin",
+  "checksum": "dbfa5f2e8af547d769b5add7e79b211b0680426d5c3c1d571f4abf849867a20d",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T10:06:35.093Z",
+  "adapterVersion": "1.0.0"
+}

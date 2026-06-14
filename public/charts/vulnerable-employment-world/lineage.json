@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "work.vulnerable_employment.world",
+    "unit": "% of total employment",
+    "points": 34
+  },
+  "wasDerivedFrom": [
+    "WLD"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity WLD"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SL.EMP.VULN.ZS",
+      "url": "https://data.worldbank.org/indicator/SL.EMP.VULN.ZS",
+      "vintage": "2026-06-12",
+      "checksum": "b387cb724969c4814dc6c51be3cd494a9e871650d9f5f56836e7f1453d42d219",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "International Labour Organization (modelled), via World Bank"
+}

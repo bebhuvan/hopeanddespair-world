@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "climate.consumption_co2_pc.europe",
+    "unit": "tonnes per person",
+    "points": 34
+  },
+  "wasDerivedFrom": [
+    "OWID_EUR"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Europe"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "consumption-co2-per-capita",
+      "url": "https://ourworldindata.org/grapher/consumption-co2-per-capita",
+      "vintage": "2026-06-13",
+      "checksum": "9e845d43a12838efe4ae4cb52df3406c17f43554028ec66af7b1ec29102e6577",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Global Carbon Budget (2025) — via Our World in Data"
+}

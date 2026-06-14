@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Not found — Hope & Despair" description="That page isn’t here.">
+  <section class="nf">
+    <p class="code">404</p>
+    <h1>That page isn’t here.</h1>
+    <p class="lead">The link may be old, or the question may not be written yet. Either way, the atlas is open at
+      the front door.</p>
+    <p class="back"><a href="/">← Back to the atlas</a></p>
+  </section>
+</BaseLayout>
+<style>
+  .nf { max-width: 40rem; padding-block: clamp(4rem, 12vh, 8rem); text-align: center; margin-inline: auto; }
+  .code { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.12em; color: var(--despair); }
+  .nf h1 { font-family: var(--display); font-weight: 620; font-size: clamp(2rem, 5vw, 3.2rem); letter-spacing: -0.03em; margin-top: 1rem; }
+  .lead { font-family: var(--serif); font-size: var(--fs-lede); line-height: 1.5; color: var(--ink-2); margin: 1.2rem auto 0; max-width: 46ch; text-wrap: pretty; }
+  .back { margin-top: 2rem; font-family: var(--mono); font-size: 0.74rem; }
+  .back a { color: var(--ink-2); border-bottom: 1px solid var(--line-2); }
+  .back a:hover { color: var(--hope); border-color: var(--hope); }
+</style>

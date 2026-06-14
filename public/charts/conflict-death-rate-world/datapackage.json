@@ -1,0 +1,38 @@
+{
+  "name": "violence-conflict_death_rate-world",
+  "title": "The estimated number of deaths in ongoing armed conflicts that year.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/global-death-rate-in-violent-political-conflicts-over-the-long-run"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "violence-conflict_death_rate-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "violence_conflict_death_rate_world",
+            "type": "number",
+            "unit": "deaths per 100,000 people"
+          }
+        ]
+      }
+    }
+  ]
+}

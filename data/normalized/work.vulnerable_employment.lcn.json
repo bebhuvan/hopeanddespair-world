@@ -1,0 +1,157 @@
+[
+  {
+    "indicatorId": "work.vulnerable_employment.lcn",
+    "entity": "LCN",
+    "entityName": "Latin America & Caribbean",
+    "unit": "% of total employment",
+    "points": [
+      {
+        "t": 1991,
+        "value": 34.8997546022852
+      },
+      {
+        "t": 1992,
+        "value": 34.9799148296983
+      },
+      {
+        "t": 1993,
+        "value": 35.1041193742373
+      },
+      {
+        "t": 1994,
+        "value": 34.7044195807354
+      },
+      {
+        "t": 1995,
+        "value": 34.4350205207992
+      },
+      {
+        "t": 1996,
+        "value": 33.8957287255633
+      },
+      {
+        "t": 1997,
+        "value": 33.9706330080515
+      },
+      {
+        "t": 1998,
+        "value": 33.8780501274414
+      },
+      {
+        "t": 1999,
+        "value": 34.0642717916563
+      },
+      {
+        "t": 2000,
+        "value": 33.5862304932028
+      },
+      {
+        "t": 2001,
+        "value": 33.5173402632645
+      },
+      {
+        "t": 2002,
+        "value": 33.6554596581476
+      },
+      {
+        "t": 2003,
+        "value": 33.5284004471939
+      },
+      {
+        "t": 2004,
+        "value": 33.2061220445983
+      },
+      {
+        "t": 2005,
+        "value": 32.8777982752298
+      },
+      {
+        "t": 2006,
+        "value": 32.2492660335138
+      },
+      {
+        "t": 2007,
+        "value": 31.7092983821222
+      },
+      {
+        "t": 2008,
+        "value": 31.2828042339015
+      },
+      {
+        "t": 2009,
+        "value": 31.6923951983247
+      },
+      {
+        "t": 2010,
+        "value": 31.4909371018506
+      },
+      {
+        "t": 2011,
+        "value": 31.4414247342713
+      },
+      {
+        "t": 2012,
+        "value": 31.2741706053665
+      },
+      {
+        "t": 2013,
+        "value": 31.2304042660471
+      },
+      {
+        "t": 2014,
+        "value": 31.0629530753278
+      },
+      {
+        "t": 2015,
+        "value": 31.5109044340834
+      },
+      {
+        "t": 2016,
+        "value": 31.7228496499045
+      },
+      {
+        "t": 2017,
+        "value": 32.0992940540058
+      },
+      {
+        "t": 2018,
+        "value": 32.3478871418633
+      },
+      {
+        "t": 2019,
+        "value": 32.4180077411519
+      },
+      {
+        "t": 2020,
+        "value": 33.176863892024
+      },
+      {
+        "t": 2021,
+        "value": 33.7517535061374
+      },
+      {
+        "t": 2022,
+        "value": 32.871638056438
+      },
+      {
+        "t": 2023,
+        "value": 32.0556231672656
+      },
+      {
+        "t": 2024,
+        "value": 31.5978364277851
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SL.EMP.VULN.ZS",
+      "url": "https://data.worldbank.org/indicator/SL.EMP.VULN.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "b387cb724969c4814dc6c51be3cd494a9e871650d9f5f56836e7f1453d42d219",
+      "definition": "Vulnerable employment, total (% of total employment) (modeled ILO estimate)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "International Labour Organization (modelled), via World Bank"
+    }
+  }
+]

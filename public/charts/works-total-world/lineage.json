@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "science.works_total.world",
+    "unit": "works per year",
+    "points": 125
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "identity",
+        "detail": "normalized directly from source"
+      }
+    ],
+    "agent": "adapter:openalex@1.0.0",
+    "used": {
+      "source": "openalex",
+      "slug": "works?group_by=publication_year",
+      "url": "https://api.openalex.org/works?group_by=publication_year",
+      "vintage": "2026-06-12",
+      "checksum": "115405cc90d594fe506b9b822394bf994bc6734caae06167c59aa6a520533b71",
+      "license": "CC0 1.0"
+    }
+  },
+  "primarySource": "OpenAlex"
+}

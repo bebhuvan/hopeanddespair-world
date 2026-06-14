@@ -1,0 +1,164 @@
+{
+  "indicatorId": "climate.consumption_co2_pc.north-america",
+  "entity": "OWID_NAM",
+  "entityName": "North America",
+  "unit": "tonnes per person",
+  "points": [
+    {
+      "t": 1990,
+      "value": 13.992308
+    },
+    {
+      "t": 1991,
+      "value": 13.655298
+    },
+    {
+      "t": 1992,
+      "value": 14.019625
+    },
+    {
+      "t": 1993,
+      "value": 13.896943
+    },
+    {
+      "t": 1994,
+      "value": 13.970585
+    },
+    {
+      "t": 1995,
+      "value": 13.875554
+    },
+    {
+      "t": 1996,
+      "value": 14.105777
+    },
+    {
+      "t": 1997,
+      "value": 14.287326
+    },
+    {
+      "t": 1998,
+      "value": 14.629359
+    },
+    {
+      "t": 1999,
+      "value": 14.698901
+    },
+    {
+      "t": 2000,
+      "value": 15.283893
+    },
+    {
+      "t": 2001,
+      "value": 14.947163
+    },
+    {
+      "t": 2002,
+      "value": 15.066116
+    },
+    {
+      "t": 2003,
+      "value": 15.245375
+    },
+    {
+      "t": 2004,
+      "value": 15.364387
+    },
+    {
+      "t": 2005,
+      "value": 15.490738
+    },
+    {
+      "t": 2006,
+      "value": 15.247764
+    },
+    {
+      "t": 2007,
+      "value": 14.931087
+    },
+    {
+      "t": 2008,
+      "value": 14.159952
+    },
+    {
+      "t": 2009,
+      "value": 13.031546
+    },
+    {
+      "t": 2010,
+      "value": 13.298991
+    },
+    {
+      "t": 2011,
+      "value": 12.918681
+    },
+    {
+      "t": 2012,
+      "value": 12.461107
+    },
+    {
+      "t": 2013,
+      "value": 12.518716
+    },
+    {
+      "t": 2014,
+      "value": 12.540004
+    },
+    {
+      "t": 2015,
+      "value": 12.256342
+    },
+    {
+      "t": 2016,
+      "value": 11.849077
+    },
+    {
+      "t": 2017,
+      "value": 11.703953
+    },
+    {
+      "t": 2018,
+      "value": 11.904942
+    },
+    {
+      "t": 2019,
+      "value": 11.606329
+    },
+    {
+      "t": 2020,
+      "value": 10.5247555
+    },
+    {
+      "t": 2021,
+      "value": 11.236958
+    },
+    {
+      "t": 2022,
+      "value": 11.340977
+    },
+    {
+      "t": 2023,
+      "value": 11.042253
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "consumption_emissions_per_capita",
+    "url": "https://ourworldindata.org/grapher/consumption-co2-per-capita",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "9e845d43a12838efe4ae4cb52df3406c17f43554028ec66af7b1ec29102e6577",
+    "definition": "Annual consumption-based emissions of carbon dioxide (CO₂), measured in tonnes per person.",
+    "attribution": "Our World in Data",
+    "primarySource": "Global Carbon Budget (2025) — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity North America"
+    }
+  ],
+  "derivedFrom": [
+    "OWID_NAM"
+  ]
+}

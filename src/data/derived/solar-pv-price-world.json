@@ -1,0 +1,228 @@
+{
+  "indicatorId": "energy.solar_pv_price.world",
+  "entity": "OWID_WRL",
+  "entityName": "World",
+  "unit": "constant 2024 US$ per watt",
+  "points": [
+    {
+      "t": 1975,
+      "value": 128.26924
+    },
+    {
+      "t": 1976,
+      "value": 96.507935
+    },
+    {
+      "t": 1977,
+      "value": 70.407074
+    },
+    {
+      "t": 1978,
+      "value": 49.813416
+    },
+    {
+      "t": 1979,
+      "value": 41.855152
+    },
+    {
+      "t": 1980,
+      "value": 35.46944
+    },
+    {
+      "t": 1981,
+      "value": 28.358482
+    },
+    {
+      "t": 1982,
+      "value": 25.479465
+    },
+    {
+      "t": 1983,
+      "value": 20.569576
+    },
+    {
+      "t": 1984,
+      "value": 19.113127
+    },
+    {
+      "t": 1985,
+      "value": 16.686186
+    },
+    {
+      "t": 1986,
+      "value": 13.802792
+    },
+    {
+      "t": 1987,
+      "value": 11.734707
+    },
+    {
+      "t": 1988,
+      "value": 10.960708
+    },
+    {
+      "t": 1989,
+      "value": 11.327412
+    },
+    {
+      "t": 1990,
+      "value": 11.7160635
+    },
+    {
+      "t": 1991,
+      "value": 10.853333
+    },
+    {
+      "t": 1992,
+      "value": 10.111405
+    },
+    {
+      "t": 1993,
+      "value": 9.45594
+    },
+    {
+      "t": 1994,
+      "value": 8.945153
+    },
+    {
+      "t": 1995,
+      "value": 8.270751
+    },
+    {
+      "t": 1996,
+      "value": 7.7322893
+    },
+    {
+      "t": 1997,
+      "value": 7.705326
+    },
+    {
+      "t": 1998,
+      "value": 6.9432726
+    },
+    {
+      "t": 1999,
+      "value": 6.413923
+    },
+    {
+      "t": 2000,
+      "value": 6.2943754
+    },
+    {
+      "t": 2001,
+      "value": 6.089497
+    },
+    {
+      "t": 2002,
+      "value": 5.5689664
+    },
+    {
+      "t": 2003,
+      "value": 5.2943115
+    },
+    {
+      "t": 2004,
+      "value": 4.5554976
+    },
+    {
+      "t": 2005,
+      "value": 4.604172
+    },
+    {
+      "t": 2006,
+      "value": 5.0185194
+    },
+    {
+      "t": 2007,
+      "value": 5.055688
+    },
+    {
+      "t": 2008,
+      "value": 4.607598
+    },
+    {
+      "t": 2009,
+      "value": 3.0796502
+    },
+    {
+      "t": 2010,
+      "value": 2.4433622
+    },
+    {
+      "t": 2011,
+      "value": 2.0047348
+    },
+    {
+      "t": 2012,
+      "value": 1.0804502
+    },
+    {
+      "t": 2013,
+      "value": 0.8332635
+    },
+    {
+      "t": 2014,
+      "value": 0.7689895
+    },
+    {
+      "t": 2015,
+      "value": 0.7156806
+    },
+    {
+      "t": 2016,
+      "value": 0.6617146
+    },
+    {
+      "t": 2017,
+      "value": 0.5557844
+    },
+    {
+      "t": 2018,
+      "value": 0.49517947
+    },
+    {
+      "t": 2019,
+      "value": 0.45422456
+    },
+    {
+      "t": 2020,
+      "value": 0.35966694
+    },
+    {
+      "t": 2021,
+      "value": 0.32287797
+    },
+    {
+      "t": 2022,
+      "value": 0.35583413
+    },
+    {
+      "t": 2023,
+      "value": 0.3129992
+    },
+    {
+      "t": 2024,
+      "value": 0.2579602
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "cost",
+    "url": "https://ourworldindata.org/grapher/solar-pv-prices",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "c44cc2255423a328d8b02fbf0d516a13214a4c44cd5af2215728da0d5cd8f816",
+    "definition": "This data is expressed in US dollars per watt, adjusted for inflation.",
+    "attribution": "Our World in Data",
+    "primarySource": "Nemet (2009); Farmer & Lafond (2016); IRENA — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity World"
+    }
+  ],
+  "derivedFrom": [
+    "OWID_WRL"
+  ]
+}

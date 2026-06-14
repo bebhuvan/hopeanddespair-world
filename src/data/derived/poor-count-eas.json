@@ -1,0 +1,203 @@
+{
+  "indicatorId": "economy.poor_count.eas",
+  "entity": "EAS",
+  "entityName": "East Asia & Pacific",
+  "unit": "million people",
+  "points": [
+    {
+      "t": 1981,
+      "value": 1218.4482189999999
+    },
+    {
+      "t": 1982,
+      "value": 1225.510421
+    },
+    {
+      "t": 1983,
+      "value": 1226.455057
+    },
+    {
+      "t": 1984,
+      "value": 1211.522248
+    },
+    {
+      "t": 1985,
+      "value": 1196.859297
+    },
+    {
+      "t": 1986,
+      "value": 1186.266723
+    },
+    {
+      "t": 1987,
+      "value": 1161.991798
+    },
+    {
+      "t": 1988,
+      "value": 1114.81484
+    },
+    {
+      "t": 1989,
+      "value": 1215.647516
+    },
+    {
+      "t": 1990,
+      "value": 1218.386337
+    },
+    {
+      "t": 1991,
+      "value": 1217.186896
+    },
+    {
+      "t": 1992,
+      "value": 1204.1379689999999
+    },
+    {
+      "t": 1993,
+      "value": 1189.78385
+    },
+    {
+      "t": 1994,
+      "value": 1134.6428449999999
+    },
+    {
+      "t": 1995,
+      "value": 1081.893978
+    },
+    {
+      "t": 1996,
+      "value": 1022.3707509999999
+    },
+    {
+      "t": 1997,
+      "value": 1019.4717469999999
+    },
+    {
+      "t": 1998,
+      "value": 1038.215864
+    },
+    {
+      "t": 1999,
+      "value": 997.689623
+    },
+    {
+      "t": 2000,
+      "value": 955.1366539999999
+    },
+    {
+      "t": 2001,
+      "value": 911.5035959999999
+    },
+    {
+      "t": 2002,
+      "value": 835.149922
+    },
+    {
+      "t": 2003,
+      "value": 762.155267
+    },
+    {
+      "t": 2004,
+      "value": 697.097724
+    },
+    {
+      "t": 2005,
+      "value": 616.601891
+    },
+    {
+      "t": 2006,
+      "value": 596.286912
+    },
+    {
+      "t": 2007,
+      "value": 541.906935
+    },
+    {
+      "t": 2008,
+      "value": 510.615345
+    },
+    {
+      "t": 2009,
+      "value": 469.612492
+    },
+    {
+      "t": 2010,
+      "value": 417.489378
+    },
+    {
+      "t": 2011,
+      "value": 340.581378
+    },
+    {
+      "t": 2012,
+      "value": 297.894582
+    },
+    {
+      "t": 2013,
+      "value": 203.76261399999999
+    },
+    {
+      "t": 2014,
+      "value": 177.298304
+    },
+    {
+      "t": 2015,
+      "value": 139.37832
+    },
+    {
+      "t": 2016,
+      "value": 116.215927
+    },
+    {
+      "t": 2017,
+      "value": 96.55490499999999
+    },
+    {
+      "t": 2018,
+      "value": 77.153466
+    },
+    {
+      "t": 2019,
+      "value": 60.958285
+    },
+    {
+      "t": 2020,
+      "value": 64.525474
+    },
+    {
+      "t": 2021,
+      "value": 62.251884
+    },
+    {
+      "t": 2022,
+      "value": 57.382152999999995
+    },
+    {
+      "t": 2023,
+      "value": 52.108585
+    },
+    {
+      "t": 2024,
+      "value": 47.161466999999995
+    },
+    {
+      "t": 2025,
+      "value": 42.482718999999996
+    },
+    {
+      "t": 2026,
+      "value": 39.145722
+    }
+  ],
+  "provenance": {
+    "source": "pip",
+    "sourceIndicator": "pop_in_poverty @ $3.00/day (2021 PPP)",
+    "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+    "definition": "Number of people in extreme poverty (below $3.00/day, 2021 PPP), East Asia & Pacific",
+    "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+    "primarySource": "World Bank — Poverty and Inequality Platform"
+  }
+}

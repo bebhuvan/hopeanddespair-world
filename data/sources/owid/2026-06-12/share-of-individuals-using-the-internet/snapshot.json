@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "share-of-individuals-using-the-internet",
+  "vintage": "2026-06-12",
+  "url": "https://ourworldindata.org/grapher/share-of-individuals-using-the-internet",
+  "checksum": "4a0980b7923baaa042db8596cb5249a7b8de81d55eb751f63a2b5b5ded92b8c1",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:43:43.299Z",
+  "adapterVersion": "1.0.0"
+}

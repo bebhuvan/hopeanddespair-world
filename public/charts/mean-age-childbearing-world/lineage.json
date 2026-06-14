@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "demography.mean_age_childbearing.world",
+    "unit": "years",
+    "points": 75
+  },
+  "wasDerivedFrom": [
+    "900"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:unwpp@1.0.0",
+    "used": {
+      "source": "unwpp",
+      "slug": "wpp-medium",
+      "url": "https://population.un.org/wpp/",
+      "vintage": "2026-06-13",
+      "checksum": "a816fcfaea5c827f371a25209226a686b1ab0fe121def159fb87ab6aa8850bd3",
+      "license": "CC BY 3.0 IGO"
+    }
+  },
+  "primarySource": "UN World Population Prospects 2024"
+}

@@ -1,0 +1,161 @@
+[
+  {
+    "indicatorId": "economy.gdp_per_capita_ppp.ssf",
+    "entity": "SSF",
+    "entityName": "Sub-Saharan Africa",
+    "unit": "constant 2021 international $",
+    "points": [
+      {
+        "t": 1990,
+        "value": 3775.44715824752
+      },
+      {
+        "t": 1991,
+        "value": 3692.96647842761
+      },
+      {
+        "t": 1992,
+        "value": 3585.8898110554
+      },
+      {
+        "t": 1993,
+        "value": 3446.39871711459
+      },
+      {
+        "t": 1994,
+        "value": 3382.89870693516
+      },
+      {
+        "t": 1995,
+        "value": 3400.79211336698
+      },
+      {
+        "t": 1996,
+        "value": 3482.83538248151
+      },
+      {
+        "t": 1997,
+        "value": 3531.2526143186
+      },
+      {
+        "t": 1998,
+        "value": 3529.4672266836
+      },
+      {
+        "t": 1999,
+        "value": 3509.31810136229
+      },
+      {
+        "t": 2000,
+        "value": 3534.51732241584
+      },
+      {
+        "t": 2001,
+        "value": 3592.16950119331
+      },
+      {
+        "t": 2002,
+        "value": 3732.08528410955
+      },
+      {
+        "t": 2003,
+        "value": 3787.21190581541
+      },
+      {
+        "t": 2004,
+        "value": 3938.52474735639
+      },
+      {
+        "t": 2005,
+        "value": 4064.79469856722
+      },
+      {
+        "t": 2006,
+        "value": 4196.01742141953
+      },
+      {
+        "t": 2007,
+        "value": 4334.88334721941
+      },
+      {
+        "t": 2008,
+        "value": 4442.56054105323
+      },
+      {
+        "t": 2009,
+        "value": 4476.26595816638
+      },
+      {
+        "t": 2010,
+        "value": 4629.34154572117
+      },
+      {
+        "t": 2011,
+        "value": 4716.82196328525
+      },
+      {
+        "t": 2012,
+        "value": 4779.45095832875
+      },
+      {
+        "t": 2013,
+        "value": 4893.03086171617
+      },
+      {
+        "t": 2014,
+        "value": 4999.52219488023
+      },
+      {
+        "t": 2015,
+        "value": 5016.22753000527
+      },
+      {
+        "t": 2016,
+        "value": 4948.61002148455
+      },
+      {
+        "t": 2017,
+        "value": 4944.82716564733
+      },
+      {
+        "t": 2018,
+        "value": 4954.56228767375
+      },
+      {
+        "t": 2019,
+        "value": 4956.28204569314
+      },
+      {
+        "t": 2020,
+        "value": 4674.72999524284
+      },
+      {
+        "t": 2021,
+        "value": 4720.35761389047
+      },
+      {
+        "t": 2022,
+        "value": 4796.06641542138
+      },
+      {
+        "t": 2023,
+        "value": 4810.21576811861
+      },
+      {
+        "t": 2024,
+        "value": 4872.63561420471
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "NY.GDP.PCAP.PP.KD",
+      "url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.KD",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "c7df8619c8aecf11e0f3f94d17cb4fc137e78f22e1eeb15a8a43bddfb67b05e3",
+      "definition": "GDP per capita, PPP (constant 2021 international $)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "World Bank, International Comparison Program / OECD"
+    }
+  }
+]

@@ -10,6 +10,9 @@ export default defineConfig({
   build: {
     // content-hashed, immutable assets → cache-forever on the CDN
     assets: '_assets',
+    // inline ALL CSS into the HTML — kills the render-blocking stylesheet requests (the biggest
+    // LCP/FCP cost on a static page). Our per-page CSS is small and brotli-compresses well.
+    inlineStylesheets: 'always',
   },
   prefetch: false,
   compressHTML: true,

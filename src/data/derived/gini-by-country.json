@@ -1,0 +1,102 @@
+{
+  "chartId": "gini-by-country",
+  "kind": "bars",
+  "title": "Income inequality (Gini) — a curated spread, latest available survey",
+  "unit": "Gini index (0 = everyone equal · 100 = one person holds all)",
+  "bars": [
+    {
+      "label": "Namibia",
+      "value": 59.1,
+      "color": "despair"
+    },
+    {
+      "label": "Colombia",
+      "value": 54.4,
+      "color": "despair"
+    },
+    {
+      "label": "South Africa",
+      "value": 54.1,
+      "color": "despair"
+    },
+    {
+      "label": "Brazil",
+      "value": 50.3,
+      "color": "despair"
+    },
+    {
+      "label": "Mexico",
+      "value": 42.6,
+      "color": "despair"
+    },
+    {
+      "label": "United States",
+      "value": 41.8,
+      "color": "ochre"
+    },
+    {
+      "label": "China",
+      "value": 36,
+      "color": "ochre"
+    },
+    {
+      "label": "Indonesia",
+      "value": 34.4,
+      "color": "ochre"
+    },
+    {
+      "label": "Germany",
+      "value": 33.7,
+      "color": "ochre"
+    },
+    {
+      "label": "United Kingdom",
+      "value": 32.4,
+      "color": "ochre"
+    },
+    {
+      "label": "Sweden",
+      "value": 29.3,
+      "color": "hope"
+    },
+    {
+      "label": "Poland",
+      "value": 28.5,
+      "color": "hope"
+    },
+    {
+      "label": "India",
+      "value": 25.5,
+      "color": "hope"
+    },
+    {
+      "label": "Slovenia",
+      "value": 24.7,
+      "color": "hope"
+    }
+  ],
+  "xmax": 70,
+  "xTicks": [
+    0,
+    20,
+    40,
+    60
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "economic-inequality-gini-index",
+    "url": "https://ourworldindata.org/grapher/economic-inequality-gini-index",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "bd9b0879894b99217186b0520aa638b77b3c97af505d8fdc6557c811cd1f86ec",
+    "definition": "Gini index of income or consumption, latest available survey per country (2015–2025); rescaled ×100. A curated 14-country spread.",
+    "attribution": "World Bank — Poverty and Inequality Platform, via Our World in Data",
+    "primarySource": "World Bank — Poverty and Inequality Platform"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest Gini survey per country, ×100, 14 curated countries sorted descending"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "work-youth_unemployment-world",
+  "title": "Unemployment, youth total (% of total labor force ages 15-24) (modeled ILO estimate)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/SL.UEM.1524.ZS"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "work-youth_unemployment-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "work_youth_unemployment_world",
+            "type": "number",
+            "unit": "% of labour force aged 15–24"
+          }
+        ]
+      }
+    }
+  ]
+}

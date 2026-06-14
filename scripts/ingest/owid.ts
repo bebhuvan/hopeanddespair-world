@@ -52,15 +52,19 @@ export const owid: Adapter = {
     const iEntity = header.indexOf('entity');
     const iCode = header.indexOf('code');
     const iYear = header.indexOf('year');
-    const valueCol = spec.sourceColumn ?? header[header.length - 1];
-    const iVal = header.indexOf(valueCol);
-    if (iEntity < 0 || iYear < 0 || iVal < 0) throw new Error(`OWID ${spec.slug}: unexpected columns ${header.join(',')}`);
+    // One value, or several columns summed per row (e.g. conflict counts by type → a total).
+    const valCols = spec.sourceColumns ?? [spec.sourceColumn ?? header[header.length - 1]];
+    const iVals = valCols.map((c) => header.indexOf(c));
+    if (iEntity < 0 || iYear < 0 || iVals.some((i) => i < 0))
+      throw new Error(`OWID ${spec.slug}: unexpected columns ${header.join(',')} (wanted ${valCols.join(',')})`);
+    const valueCol = valCols.join('+');
 
     // Provenance pulled from the metadata, with OWID's CC BY default.
     const colMeta = (raw.meta?.columns && Object.values(raw.meta.columns)[0]) as any || {};
     const origins = (colMeta.origins as any[]) || [];
     const producers = [...new Set(origins.map((o) => o.producer).filter(Boolean))];
-    const definition = colMeta.descriptionShort || spec.title;
+    // A summed total isn't described by any single source column, so use the registry title.
+    const definition = spec.sourceColumns ? spec.title : (colMeta.descriptionShort || spec.title);
     const attribution = colMeta.attributionShort || producers.join('; ') || 'Our World in Data';
     const sourceUnit = colMeta.unit || spec.unit; // the source's declared unit — validated vs registry
 
@@ -70,9 +74,10 @@ export const owid: Adapter = {
       const entityName = row[iEntity];
       if (spec.entityFilter && !spec.entityFilter.includes(entityName)) continue;
       const year = parseInt(row[iYear], 10);
-      const raw_v = row[iVal];
-      if (raw_v === '' || raw_v == null) continue;
-      const value = Number(raw_v);
+      if (spec.yearMin != null && year < spec.yearMin) continue;   // trim deep-time rows (e.g. ice-core CO₂)
+      const present = iVals.map((i) => row[i]).filter((v) => v !== '' && v != null);
+      if (present.length === 0) continue;            // no value in any wanted column this row
+      const value = present.reduce((a, v) => a + Number(v), 0);
       if (!Number.isFinite(value) || !Number.isFinite(year)) continue;
       const entity = (iCode >= 0 && row[iCode]) ? row[iCode] : entityName;
       if (!byEntity.has(entity)) {

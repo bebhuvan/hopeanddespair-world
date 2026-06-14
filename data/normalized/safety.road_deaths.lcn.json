@@ -1,0 +1,101 @@
+[
+  {
+    "indicatorId": "safety.road_deaths.lcn",
+    "entity": "LCN",
+    "entityName": "Latin America & Caribbean",
+    "unit": "per 100,000",
+    "points": [
+      {
+        "t": 2000,
+        "value": 17.6007391965402
+      },
+      {
+        "t": 2001,
+        "value": 17.8265751260444
+      },
+      {
+        "t": 2002,
+        "value": 17.9662721012718
+      },
+      {
+        "t": 2003,
+        "value": 17.8292022583642
+      },
+      {
+        "t": 2004,
+        "value": 18.3531880190612
+      },
+      {
+        "t": 2005,
+        "value": 18.4335497490081
+      },
+      {
+        "t": 2006,
+        "value": 18.7614317877565
+      },
+      {
+        "t": 2007,
+        "value": 19.1463440112855
+      },
+      {
+        "t": 2008,
+        "value": 19.5976574239489
+      },
+      {
+        "t": 2009,
+        "value": 19.1894211767572
+      },
+      {
+        "t": 2010,
+        "value": 19.1300478333117
+      },
+      {
+        "t": 2011,
+        "value": 19.210331313482
+      },
+      {
+        "t": 2012,
+        "value": 19.5393060440841
+      },
+      {
+        "t": 2013,
+        "value": 19.0295593591481
+      },
+      {
+        "t": 2014,
+        "value": 18.9655410709852
+      },
+      {
+        "t": 2015,
+        "value": 18.3035013153302
+      },
+      {
+        "t": 2016,
+        "value": 18.1019452123526
+      },
+      {
+        "t": 2017,
+        "value": 17.9124343379574
+      },
+      {
+        "t": 2018,
+        "value": 17.4499583782517
+      },
+      {
+        "t": 2019,
+        "value": 17.2953168821434
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SH.STA.TRAF.P5",
+      "url": "https://data.worldbank.org/indicator/SH.STA.TRAF.P5",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "3645888d5849d1a57e9410b5550549b07c5a7a20e749e03421069f8a80f4a6c4",
+      "definition": "Mortality caused by road traffic injury (per 100,000 population)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "WHO, via World Bank"
+    }
+  }
+]

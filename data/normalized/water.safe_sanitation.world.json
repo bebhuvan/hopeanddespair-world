@@ -1,0 +1,121 @@
+[
+  {
+    "indicatorId": "water.safe_sanitation.world",
+    "entity": "WLD",
+    "entityName": "World",
+    "unit": "% of population",
+    "points": [
+      {
+        "t": 2000,
+        "value": 31.2881753488683
+      },
+      {
+        "t": 2001,
+        "value": 31.7087434420936
+      },
+      {
+        "t": 2002,
+        "value": 31.7419634773852
+      },
+      {
+        "t": 2003,
+        "value": 32.8230329882714
+      },
+      {
+        "t": 2004,
+        "value": 33.9741773747051
+      },
+      {
+        "t": 2005,
+        "value": 35.1225131480724
+      },
+      {
+        "t": 2006,
+        "value": 36.3082374282218
+      },
+      {
+        "t": 2007,
+        "value": 37.5761814141134
+      },
+      {
+        "t": 2008,
+        "value": 38.8632329735263
+      },
+      {
+        "t": 2009,
+        "value": 40.1596495006398
+      },
+      {
+        "t": 2010,
+        "value": 41.4802190631092
+      },
+      {
+        "t": 2011,
+        "value": 42.7735516177887
+      },
+      {
+        "t": 2012,
+        "value": 44.1283185421492
+      },
+      {
+        "t": 2013,
+        "value": 45.529984674652
+      },
+      {
+        "t": 2014,
+        "value": 46.9428255166604
+      },
+      {
+        "t": 2015,
+        "value": 48.3909273358928
+      },
+      {
+        "t": 2016,
+        "value": 49.8540496593313
+      },
+      {
+        "t": 2017,
+        "value": 51.3238898147764
+      },
+      {
+        "t": 2018,
+        "value": 52.7837361641671
+      },
+      {
+        "t": 2019,
+        "value": 54.2444074543503
+      },
+      {
+        "t": 2020,
+        "value": 55.1861809905804
+      },
+      {
+        "t": 2021,
+        "value": 56.1070680480859
+      },
+      {
+        "t": 2022,
+        "value": 57.0318690086871
+      },
+      {
+        "t": 2023,
+        "value": 57.8004059354749
+      },
+      {
+        "t": 2024,
+        "value": 58.4951883486035
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SH.STA.SMSS.ZS",
+      "url": "https://data.worldbank.org/indicator/SH.STA.SMSS.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "57a53958b374a8cd6174d30a7b1ed4abc376b92658a3a092ead77ed624642c79",
+      "definition": "People using safely managed sanitation services (% of population)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "WHO/UNICEF JMP, via World Bank"
+    }
+  }
+]

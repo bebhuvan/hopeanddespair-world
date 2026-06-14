@@ -1,0 +1,128 @@
+{
+  "indicatorId": "health.tb_incidence_wb.ssf",
+  "entity": "SSF",
+  "entityName": "Sub-Saharan Africa",
+  "unit": "per 100,000 people",
+  "points": [
+    {
+      "t": 2000,
+      "value": 359
+    },
+    {
+      "t": 2001,
+      "value": 364
+    },
+    {
+      "t": 2002,
+      "value": 371
+    },
+    {
+      "t": 2003,
+      "value": 379
+    },
+    {
+      "t": 2004,
+      "value": 382
+    },
+    {
+      "t": 2005,
+      "value": 381
+    },
+    {
+      "t": 2006,
+      "value": 379
+    },
+    {
+      "t": 2007,
+      "value": 373
+    },
+    {
+      "t": 2008,
+      "value": 361
+    },
+    {
+      "t": 2009,
+      "value": 353
+    },
+    {
+      "t": 2010,
+      "value": 342
+    },
+    {
+      "t": 2011,
+      "value": 334
+    },
+    {
+      "t": 2012,
+      "value": 322
+    },
+    {
+      "t": 2013,
+      "value": 309
+    },
+    {
+      "t": 2014,
+      "value": 299
+    },
+    {
+      "t": 2015,
+      "value": 285
+    },
+    {
+      "t": 2016,
+      "value": 267
+    },
+    {
+      "t": 2017,
+      "value": 256
+    },
+    {
+      "t": 2018,
+      "value": 246
+    },
+    {
+      "t": 2019,
+      "value": 236
+    },
+    {
+      "t": 2020,
+      "value": 228
+    },
+    {
+      "t": 2021,
+      "value": 222
+    },
+    {
+      "t": 2022,
+      "value": 216
+    },
+    {
+      "t": 2023,
+      "value": 210
+    },
+    {
+      "t": 2024,
+      "value": 205
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SH.TBS.INCD",
+    "url": "https://data.worldbank.org/indicator/SH.TBS.INCD",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "114d145ce4937d72e187ffe4cf54621d7c730542790d9c8e88fb14bce17924e0",
+    "definition": "Incidence of tuberculosis (per 100,000 people)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO Global TB Report, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity SSF"
+    }
+  ],
+  "derivedFrom": [
+    "SSF"
+  ]
+}

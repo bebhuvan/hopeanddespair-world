@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "electric-car-stocks",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/electric-car-stocks",
+  "checksum": "ffbeb6f2b76134f029b52becfdb36f22f63c50ba0edd6dac7d70a7b6f2856d1e",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T08:43:52.119Z",
+  "adapterVersion": "1.0.0"
+}

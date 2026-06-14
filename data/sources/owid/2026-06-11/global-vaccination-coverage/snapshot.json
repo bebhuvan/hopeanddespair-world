@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "global-vaccination-coverage",
+  "vintage": "2026-06-11",
+  "url": "https://ourworldindata.org/grapher/global-vaccination-coverage",
+  "checksum": "1dbae16eed116c26365abeb5cd67ff87e52f05f6380328e8e7016d4f124cdd5c",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T14:35:54.380Z",
+  "adapterVersion": "1.0.0"
+}

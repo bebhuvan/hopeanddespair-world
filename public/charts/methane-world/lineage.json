@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "climate.methane.world",
+    "unit": "tonnes of CO₂ equivalents",
+    "points": 175
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "methane-emissions",
+      "url": "https://ourworldindata.org/grapher/methane-emissions",
+      "vintage": "2026-06-13",
+      "checksum": "9f4bba692d5d150fa5b35559095fda8ab7cad2ae58aa1bca6b33d39de65d3ab9",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Jones et al. (2025); Global Carbon Project — via Our World in Data"
+}

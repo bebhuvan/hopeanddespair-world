@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "SH.HIV.INCD.ZS",
+  "vintage": "2026-06-12",
+  "url": "https://data.worldbank.org/indicator/SH.HIV.INCD.ZS",
+  "checksum": "1a3ab2542070740f908a46943d95378c7ed19dbe74da7bb36133aa7dc8db7462",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:44:53.335Z",
+  "adapterVersion": "1.0.0"
+}

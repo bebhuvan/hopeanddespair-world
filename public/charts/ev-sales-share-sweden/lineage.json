@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "transport.ev_sales_share.sweden",
+    "unit": "percent",
+    "points": 16
+  },
+  "wasDerivedFrom": [
+    "Sweden"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Sweden"
+      }
+    ],
+    "agent": "adapter:iea@1.0.0",
+    "used": {
+      "source": "iea",
+      "slug": "evs",
+      "url": "https://api.iea.org/evs?region=Sweden&csv=true",
+      "vintage": "2026-06-13",
+      "checksum": "20681b6bf950a4dc1a79f2348b33f96c72bf33093dc5e6b7ceefe14f7bd94e17",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+}

@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "happiness-cantril-ladder",
+  "vintage": "2026-06-11",
+  "url": "https://ourworldindata.org/grapher/happiness-cantril-ladder",
+  "checksum": "930561b9a3ea8fb6d0453ae374ad3f486d1afa9240b100f6db49dc1a0b9eaf9b",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T10:06:52.307Z",
+  "adapterVersion": "1.0.0"
+}

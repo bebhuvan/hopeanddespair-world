@@ -1,0 +1,60 @@
+{
+  "indicatorId": "substance.smoking.mea",
+  "entity": "MEA",
+  "entityName": "Middle East, North Africa, Afghanistan & Pakistan",
+  "unit": "% of adults",
+  "points": [
+    {
+      "t": 2000,
+      "value": 27.9219744515727
+    },
+    {
+      "t": 2005,
+      "value": 25.0971907882966
+    },
+    {
+      "t": 2007,
+      "value": 24.2063356505135
+    },
+    {
+      "t": 2010,
+      "value": 22.8523119282105
+    },
+    {
+      "t": 2015,
+      "value": 20.9840315226911
+    },
+    {
+      "t": 2020,
+      "value": 19.6080844328644
+    },
+    {
+      "t": 2021,
+      "value": 19.3785718940494
+    },
+    {
+      "t": 2022,
+      "value": 19.1056717026646
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SH.PRV.SMOK",
+    "url": "https://data.worldbank.org/indicator/SH.PRV.SMOK",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "2d0255a845aaffe81095203425aec7765775d7acc13287e4bd11209f9cf8bafd",
+    "definition": "Prevalence of current tobacco use (% of adults)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity MEA"
+    }
+  ],
+  "derivedFrom": [
+    "MEA"
+  ]
+}

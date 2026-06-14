@@ -1,0 +1,10 @@
+{
+  "source": "openalex",
+  "slug": "works?filter=from_publication_date:2024-01-01,to_publication_date:2024-12-31,is_oa:true&group_by=primary_topic.field.id",
+  "vintage": "2026-06-13",
+  "url": "https://api.openalex.org/works?filter=from_publication_date:2024-01-01,to_publication_date:2024-12-31,is_oa:true&group_by=primary_topic.field.id&per-page=200",
+  "checksum": "c0fa1da4bd077813ec2ec134a7282f68a41bc42b25c258de549c27bd208b06d1",
+  "license": "CC0 1.0",
+  "fetchedAt": "2026-06-13T14:30:55.718Z",
+  "adapterVersion": "openalex-story-1.0.0"
+}

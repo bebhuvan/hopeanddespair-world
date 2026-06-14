@@ -1,0 +1,94 @@
+{
+  "chartId": "road-deaths-by-country",
+  "kind": "bars",
+  "title": "Road deaths by country",
+  "unit": "Road traffic deaths per 100,000 people",
+  "yearSpan": "2019–2019",
+  "bars": [
+    {
+      "label": "Saudi Arabia",
+      "value": 35.9,
+      "color": "despair"
+    },
+    {
+      "label": "DR Congo",
+      "value": 34.9,
+      "color": "despair"
+    },
+    {
+      "label": "Thailand",
+      "value": 32.2,
+      "color": "despair"
+    },
+    {
+      "label": "South Africa",
+      "value": 22.2,
+      "color": "ochre"
+    },
+    {
+      "label": "Nigeria",
+      "value": 20.7,
+      "color": "ochre"
+    },
+    {
+      "label": "China",
+      "value": 17.4,
+      "color": "ochre"
+    },
+    {
+      "label": "Brazil",
+      "value": 16,
+      "color": "ochre"
+    },
+    {
+      "label": "India",
+      "value": 15.6,
+      "color": "ochre"
+    },
+    {
+      "label": "United States",
+      "value": 12.7,
+      "color": "hope"
+    },
+    {
+      "label": "Japan",
+      "value": 3.6,
+      "color": "hope"
+    },
+    {
+      "label": "United Kingdom",
+      "value": 3.2,
+      "color": "hope"
+    },
+    {
+      "label": "Sweden",
+      "value": 3.1,
+      "color": "hope"
+    }
+  ],
+  "xmax": 40,
+  "xTicks": [
+    0,
+    10,
+    20,
+    30,
+    40
+  ],
+  "provenance": {
+    "source": "wb",
+    "sourceIndicator": "SH.STA.TRAF.P5",
+    "url": "https://data.worldbank.org/indicator/SH.STA.TRAF.P5",
+    "license": "CC BY 4.0",
+    "vintage": "2019–2019",
+    "checksum": "b690b2b5e6e6c6f8c5cad3dfb7af81e1699a9251f574188ec3d059c145863a11",
+    "definition": "Estimated road traffic deaths per 100,000 people, latest year per country. A curated 12-country spread sorted descending.",
+    "attribution": "WHO, via World Bank",
+    "primarySource": "World Health Organization — Global Status Report on Road Safety"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 12 curated countries sorted descending"
+    }
+  ]
+}

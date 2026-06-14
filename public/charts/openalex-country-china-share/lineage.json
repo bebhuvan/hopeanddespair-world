@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "science.openalex_country_china_share.world",
+    "unit": "% of OpenAlex works",
+    "points": 25
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "derived_transform",
+        "detail": "divided China yearly country-attributed work count by all OpenAlex works in the same year"
+      }
+    ],
+    "agent": "adapter:openalex@openalex-story-1.0.0",
+    "used": {
+      "source": "openalex",
+      "slug": "works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:CN&group_by=publication_year / all works",
+      "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,authorships.institutions.country_code:CN&group_by=publication_year&per-page=100",
+      "vintage": "2026-06-13",
+      "checksum": "80a6809e9a79b6c2f45701b26085021697f2959b32783146fe30bb7ec85af7f6",
+      "license": "CC0 1.0"
+    }
+  },
+  "primarySource": "OpenAlex"
+}

@@ -1,0 +1,9 @@
+{
+  "source": "owid",
+  "slug": "co2-emissions-per-capita",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/co2-emissions-per-capita.csv",
+  "checksum": "bb2378c14a36983435af32973bf20a3093f1227303f1577d4b1a01a037ed6a10",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T07:13:20.277Z"
+}

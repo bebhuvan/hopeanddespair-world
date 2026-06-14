@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "energy.wind_solar_share_electricity.world",
+    "unit": "% of electricity generation",
+    "points": 26
+  },
+  "wasDerivedFrom": [
+    "World"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:ember@1.0.0",
+    "used": {
+      "source": "ember",
+      "slug": "electricity-generation/yearly",
+      "url": "https://api.ember-energy.org/v1/electricity-generation/yearly?entity=World&start_date=2000",
+      "vintage": "2026-06-13",
+      "checksum": "90a0fb0ceae7d775c280d2107ffbd09d632c809914e1b0357a6545bc59696272",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Ember — Yearly Electricity Data"
+}

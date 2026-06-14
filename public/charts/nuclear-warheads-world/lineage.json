@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "violence.nuclear_warheads.world",
+    "unit": "warheads",
+    "points": 82
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "nuclear-warhead-stockpiles",
+      "url": "https://ourworldindata.org/grapher/nuclear-warhead-stockpiles",
+      "vintage": "2026-06-12",
+      "checksum": "2f38e76406e3de5e726cf7d5026af345776afeb6f46cf5ceef22fbc01ddc36ea",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Federation of American Scientists — Nuclear Notebook"
+}

@@ -1,0 +1,94 @@
+{
+  "chartId": "gender-gap-by-country",
+  "kind": "bars",
+  "title": "Gender inequality by country",
+  "unit": "Gender Inequality Index (0 = equal · 1 = most unequal)",
+  "yearSpan": "2023–2023",
+  "bars": [
+    {
+      "label": "Yemen",
+      "value": 0.84,
+      "color": "despair"
+    },
+    {
+      "label": "Nigeria",
+      "value": 0.68,
+      "color": "despair"
+    },
+    {
+      "label": "Afghanistan",
+      "value": 0.66,
+      "color": "despair"
+    },
+    {
+      "label": "DR Congo",
+      "value": 0.6,
+      "color": "despair"
+    },
+    {
+      "label": "India",
+      "value": 0.4,
+      "color": "ochre"
+    },
+    {
+      "label": "Egypt",
+      "value": 0.4,
+      "color": "ochre"
+    },
+    {
+      "label": "Brazil",
+      "value": 0.39,
+      "color": "ochre"
+    },
+    {
+      "label": "United States",
+      "value": 0.17,
+      "color": "hope"
+    },
+    {
+      "label": "China",
+      "value": 0.13,
+      "color": "hope"
+    },
+    {
+      "label": "Germany",
+      "value": 0.06,
+      "color": "hope"
+    },
+    {
+      "label": "Norway",
+      "value": 0,
+      "color": "hope"
+    },
+    {
+      "label": "Denmark",
+      "value": 0,
+      "color": "hope"
+    }
+  ],
+  "xmax": 0.9,
+  "xTicks": [
+    0,
+    0.2,
+    0.4,
+    0.6,
+    0.8
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "gender-inequality-index-from-the-human-development-report",
+    "url": "https://ourworldindata.org/grapher/gender-inequality-index-from-the-human-development-report",
+    "license": "CC BY 4.0",
+    "vintage": "2023–2023",
+    "checksum": "40583c5f2fbc791b890e01762b61a4c64848df0f770f2a58cbf67f83c183bf85",
+    "definition": "Gender Inequality Index (reproductive health, empowerment, labour-market participation), latest year per country. A curated 12-country spread sorted descending.",
+    "attribution": "UNDP HDR, via Our World in Data",
+    "primarySource": "UN Development Programme — Human Development Report"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 12 curated countries sorted descending"
+    }
+  ]
+}

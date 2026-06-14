@@ -1,0 +1,176 @@
+{
+  "indicatorId": "violence.onesided_deaths.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "deaths",
+  "points": [
+    {
+      "t": 1989,
+      "value": 8108
+    },
+    {
+      "t": 1990,
+      "value": 9857
+    },
+    {
+      "t": 1991,
+      "value": 9746
+    },
+    {
+      "t": 1992,
+      "value": 11703
+    },
+    {
+      "t": 1993,
+      "value": 14109
+    },
+    {
+      "t": 1994,
+      "value": 779685
+    },
+    {
+      "t": 1995,
+      "value": 21085
+    },
+    {
+      "t": 1996,
+      "value": 54291
+    },
+    {
+      "t": 1997,
+      "value": 21204
+    },
+    {
+      "t": 1998,
+      "value": 17333
+    },
+    {
+      "t": 1999,
+      "value": 14601
+    },
+    {
+      "t": 2000,
+      "value": 8514
+    },
+    {
+      "t": 2001,
+      "value": 8927
+    },
+    {
+      "t": 2002,
+      "value": 13848
+    },
+    {
+      "t": 2003,
+      "value": 13552
+    },
+    {
+      "t": 2004,
+      "value": 12286
+    },
+    {
+      "t": 2005,
+      "value": 5816
+    },
+    {
+      "t": 2006,
+      "value": 4474
+    },
+    {
+      "t": 2007,
+      "value": 5014
+    },
+    {
+      "t": 2008,
+      "value": 4489
+    },
+    {
+      "t": 2009,
+      "value": 6113
+    },
+    {
+      "t": 2010,
+      "value": 3750
+    },
+    {
+      "t": 2011,
+      "value": 6926
+    },
+    {
+      "t": 2012,
+      "value": 6470
+    },
+    {
+      "t": 2013,
+      "value": 11679
+    },
+    {
+      "t": 2014,
+      "value": 15339
+    },
+    {
+      "t": 2015,
+      "value": 10883
+    },
+    {
+      "t": 2016,
+      "value": 7937
+    },
+    {
+      "t": 2017,
+      "value": 9349
+    },
+    {
+      "t": 2018,
+      "value": 5187
+    },
+    {
+      "t": 2019,
+      "value": 5536
+    },
+    {
+      "t": 2020,
+      "value": 8948
+    },
+    {
+      "t": 2021,
+      "value": 12030
+    },
+    {
+      "t": 2022,
+      "value": 12172
+    },
+    {
+      "t": 2023,
+      "value": 11341
+    },
+    {
+      "t": 2024,
+      "value": 14260
+    },
+    {
+      "t": 2025,
+      "value": 76453
+    }
+  ],
+  "provenance": {
+    "source": "ucdp",
+    "sourceIndicator": "best_fatality_estimate",
+    "url": "https://ucdp.uu.se/downloads/nsos/ucdp-onesided-261-csv.zip",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "603a9f8eb084b025b3097cc797012e0a533abe8b2089c7169e16688cd40a1d5c",
+    "definition": "Best estimate of civilians deliberately killed by a government or a formally organised armed group.",
+    "attribution": "Uppsala Conflict Data Program (UCDP), Uppsala University",
+    "primarySource": "UCDP One-sided Violence Dataset"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity World"
+    }
+  ],
+  "derivedFrom": [
+    "World"
+  ]
+}

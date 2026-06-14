@@ -1,0 +1,85 @@
+[
+  {
+    "indicatorId": "transport.ev_sales_share_mode.buses",
+    "entity": "World",
+    "entityName": "World",
+    "unit": "percent",
+    "points": [
+      {
+        "t": 2010,
+        "value": 0.0560000017285347
+      },
+      {
+        "t": 2011,
+        "value": 0.03999999910593033
+      },
+      {
+        "t": 2012,
+        "value": 0.11999999731779099
+      },
+      {
+        "t": 2013,
+        "value": 0.23000000417232513
+      },
+      {
+        "t": 2014,
+        "value": 0.6299999952316284
+      },
+      {
+        "t": 2015,
+        "value": 3.5
+      },
+      {
+        "t": 2016,
+        "value": 5
+      },
+      {
+        "t": 2017,
+        "value": 5.699999809265137
+      },
+      {
+        "t": 2018,
+        "value": 5.599999904632568
+      },
+      {
+        "t": 2019,
+        "value": 5
+      },
+      {
+        "t": 2020,
+        "value": 5.199999809265137
+      },
+      {
+        "t": 2021,
+        "value": 4.400000095367432
+      },
+      {
+        "t": 2022,
+        "value": 5.099999904632568
+      },
+      {
+        "t": 2023,
+        "value": 3.9000000953674316
+      },
+      {
+        "t": 2024,
+        "value": 4.800000190734863
+      },
+      {
+        "t": 2025,
+        "value": 5
+      }
+    ],
+    "provenance": {
+      "source": "iea",
+      "sourceIndicator": "EV sales share · Buses · EV",
+      "url": "https://api.iea.org/evs?region=World&csv=true",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-13",
+      "checksum": "5f9f8654b105f326009ebfa71cfe8c4bd472aeab4c1713b4f69fd4c5a7d1d1c3",
+      "definition": "Share of new buses sold that are electric, World",
+      "attribution": "IEA — Global EV Data Explorer",
+      "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+    }
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "trade.trade_share_gdp.ssf",
+    "unit": "% of GDP",
+    "points": 15
+  },
+  "wasDerivedFrom": [
+    "SSF"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity SSF"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "NE.TRD.GNFS.ZS",
+      "url": "https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS",
+      "vintage": "2026-06-12",
+      "checksum": "22f2c0402b967837a485c1a762d9e8e43f1f82ddb38738ae7b0659cdbbe9df28",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "World Bank national accounts"
+}

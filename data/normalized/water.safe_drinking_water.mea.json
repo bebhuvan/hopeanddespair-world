@@ -1,0 +1,121 @@
+[
+  {
+    "indicatorId": "water.safe_drinking_water.mea",
+    "entity": "MEA",
+    "entityName": "Middle East, North Africa, Afghanistan & Pakistan",
+    "unit": "% of population",
+    "points": [
+      {
+        "t": 2000,
+        "value": 62.1348448052178
+      },
+      {
+        "t": 2001,
+        "value": 62.2878088837451
+      },
+      {
+        "t": 2002,
+        "value": 62.3623498083038
+      },
+      {
+        "t": 2003,
+        "value": 62.4585119120747
+      },
+      {
+        "t": 2004,
+        "value": 62.6423421559232
+      },
+      {
+        "t": 2005,
+        "value": 62.8431629651539
+      },
+      {
+        "t": 2006,
+        "value": 63.0636002969757
+      },
+      {
+        "t": 2007,
+        "value": 63.3100694168004
+      },
+      {
+        "t": 2008,
+        "value": 63.4934717005847
+      },
+      {
+        "t": 2009,
+        "value": 63.6309158074858
+      },
+      {
+        "t": 2010,
+        "value": 63.7882572473169
+      },
+      {
+        "t": 2011,
+        "value": 63.9277758122719
+      },
+      {
+        "t": 2012,
+        "value": 64.0752567167458
+      },
+      {
+        "t": 2013,
+        "value": 64.2673494485519
+      },
+      {
+        "t": 2014,
+        "value": 64.4766253668384
+      },
+      {
+        "t": 2015,
+        "value": 64.7101071513081
+      },
+      {
+        "t": 2016,
+        "value": 64.9504508423167
+      },
+      {
+        "t": 2017,
+        "value": 65.1017222087437
+      },
+      {
+        "t": 2018,
+        "value": 65.2185494487559
+      },
+      {
+        "t": 2019,
+        "value": 65.3123749106628
+      },
+      {
+        "t": 2020,
+        "value": 65.3596576745015
+      },
+      {
+        "t": 2021,
+        "value": 65.4013845406908
+      },
+      {
+        "t": 2022,
+        "value": 65.510713403374
+      },
+      {
+        "t": 2023,
+        "value": 65.584056055675
+      },
+      {
+        "t": 2024,
+        "value": 65.6173396110979
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SH.H2O.SMDW.ZS",
+      "url": "https://data.worldbank.org/indicator/SH.H2O.SMDW.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "4667986b4aca06ead903a829d983ffdccd6955ab41b7d11fd4b6d3016ef29796",
+      "definition": "People using safely managed drinking water services (% of population)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "WHO/UNICEF JMP, via World Bank"
+    }
+  }
+]

@@ -1,0 +1,116 @@
+{
+  "indicatorId": "wellbeing.suicide_rate_wb.eas",
+  "entity": "EAS",
+  "entityName": "East Asia & Pacific",
+  "unit": "per 100,000 people",
+  "points": [
+    {
+      "t": 2000,
+      "value": 12.9239721207177
+    },
+    {
+      "t": 2001,
+      "value": 12.6554011767078
+    },
+    {
+      "t": 2002,
+      "value": 12.6285228594254
+    },
+    {
+      "t": 2003,
+      "value": 12.8812133541944
+    },
+    {
+      "t": 2004,
+      "value": 12.7583310688871
+    },
+    {
+      "t": 2005,
+      "value": 12.2666311200291
+    },
+    {
+      "t": 2006,
+      "value": 11.3914948722547
+    },
+    {
+      "t": 2007,
+      "value": 10.9922858282
+    },
+    {
+      "t": 2008,
+      "value": 10.6429441178392
+    },
+    {
+      "t": 2009,
+      "value": 10.4749388134142
+    },
+    {
+      "t": 2010,
+      "value": 10.100392906534
+    },
+    {
+      "t": 2011,
+      "value": 9.68727168971424
+    },
+    {
+      "t": 2012,
+      "value": 9.13029778647681
+    },
+    {
+      "t": 2013,
+      "value": 8.88497902765146
+    },
+    {
+      "t": 2014,
+      "value": 8.664367010172
+    },
+    {
+      "t": 2015,
+      "value": 8.5296867370952
+    },
+    {
+      "t": 2016,
+      "value": 8.39143541241926
+    },
+    {
+      "t": 2017,
+      "value": 8.32039629180601
+    },
+    {
+      "t": 2018,
+      "value": 8.42457962465567
+    },
+    {
+      "t": 2019,
+      "value": 8.43846374347386
+    },
+    {
+      "t": 2020,
+      "value": 8.44629375639557
+    },
+    {
+      "t": 2021,
+      "value": 8.60606658958021
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SH.STA.SUIC.P5",
+    "url": "https://data.worldbank.org/indicator/SH.STA.SUIC.P5",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "2acd6aca10e33bc2cc6136d10d1b38313b90a86170a463f2554b11cd7e4757ce",
+    "definition": "Suicide mortality rate (per 100,000 population)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity EAS"
+    }
+  ],
+  "derivedFrom": [
+    "EAS"
+  ]
+}

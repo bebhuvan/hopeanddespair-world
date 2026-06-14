@@ -1,0 +1,10 @@
+{
+  "source": "icesheet",
+  "slug": "ice-sheet-mass-balance",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/ice-sheet-mass-balance",
+  "checksum": "e21029181ea68fee3497ae2265628019a27140085071497a0fa1d038456a00d9",
+  "license": "Public Domain (NASA/JPL GRACE)",
+  "fetchedAt": "2026-06-13T13:47:11.641Z",
+  "adapterVersion": "1.0.0"
+}

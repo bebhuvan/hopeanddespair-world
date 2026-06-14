@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "work.child_labour.world",
+    "unit": "children",
+    "points": 2
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "identity",
+        "detail": "normalized directly from source"
+      }
+    ],
+    "agent": "adapter:ilostat@1.0.0",
+    "used": {
+      "source": "ilostat",
+      "slug": "DF_CLD_XCHL_SEX_AGE_NB",
+      "url": "https://sdmx.ilo.org/rest/data/DF_CLD_XCHL_SEX_AGE_NB/all?startPeriod=1990",
+      "vintage": "2026-06-12",
+      "checksum": "5ddbda8bc2c53b8235d38931cfd336a2d15b17481a92bd33b36deac4e5007d98",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "ILO & UNICEF — Global Estimates of Child Labour"
+}

@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "demography.adolescent_fertility.world",
+    "unit": "births per 1,000 women aged 15–19",
+    "points": 65
+  },
+  "wasDerivedFrom": [
+    "WLD"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity WLD"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SP.ADO.TFRT",
+      "url": "https://data.worldbank.org/indicator/SP.ADO.TFRT",
+      "vintage": "2026-06-13",
+      "checksum": "518becfd65fd345c8d3c728a434dc78c70c685c8660a0c6ded40602c4c30ae96",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UN Population Division, via World Bank"
+}

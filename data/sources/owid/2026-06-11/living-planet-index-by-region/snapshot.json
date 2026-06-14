@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "living-planet-index-by-region",
+  "vintage": "2026-06-11",
+  "url": "https://ourworldindata.org/grapher/living-planet-index-by-region",
+  "checksum": "327a1fd96966875335aa4bf81220ae1df482de3d334c85c439f18d7620c732f2",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T10:06:51.720Z",
+  "adapterVersion": "1.0.0"
+}

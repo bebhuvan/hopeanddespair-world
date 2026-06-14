@@ -1,0 +1,10 @@
+{
+  "source": "who",
+  "slug": "WHOSIS_000002",
+  "vintage": "2026-06-13",
+  "url": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/WHOSIS_000002",
+  "checksum": "0f92b6689f4dcd12adaa446ddf8e4e1c9a97dcf0f20099b3481cae0868a3dd7a",
+  "license": "CC BY-NC-SA 3.0 IGO",
+  "fetchedAt": "2026-06-13T08:36:39.390Z",
+  "adapterVersion": "1.0.0"
+}

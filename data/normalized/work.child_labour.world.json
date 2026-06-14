@@ -1,0 +1,29 @@
+[
+  {
+    "indicatorId": "work.child_labour.world",
+    "entity": "World",
+    "entityName": "World",
+    "unit": "children",
+    "points": [
+      {
+        "t": 2020,
+        "value": 159986191
+      },
+      {
+        "t": 2024,
+        "value": 137562330
+      }
+    ],
+    "provenance": {
+      "source": "ilostat",
+      "sourceIndicator": "DF_CLD_XCHL_SEX_AGE_NB [REF_AREA=X01, SEX=SEX_T, AGE=AGE_CLDVERSION_Y05-17]",
+      "url": "https://sdmx.ilo.org/rest/data/DF_CLD_XCHL_SEX_AGE_NB/all?startPeriod=1990",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "5ddbda8bc2c53b8235d38931cfd336a2d15b17481a92bd33b36deac4e5007d98",
+      "definition": "Children in child labour, aged 5–17, World",
+      "attribution": "ILOSTAT — International Labour Organization",
+      "primarySource": "ILO & UNICEF — Global Estimates of Child Labour"
+    }
+  }
+]

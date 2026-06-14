@@ -1,0 +1,89 @@
+{
+  "chartId": "happiness-by-country",
+  "kind": "bars",
+  "title": "Life satisfaction by country",
+  "unit": "Self-reported life satisfaction (0 = worst · 10 = best possible life)",
+  "yearSpan": "2025–2025",
+  "bars": [
+    {
+      "label": "Finland",
+      "value": 7.8,
+      "color": "hope"
+    },
+    {
+      "label": "Denmark",
+      "value": 7.5,
+      "color": "hope"
+    },
+    {
+      "label": "United States",
+      "value": 6.8,
+      "color": "hope"
+    },
+    {
+      "label": "Brazil",
+      "value": 6.6,
+      "color": "hope"
+    },
+    {
+      "label": "China",
+      "value": 6.1,
+      "color": "hope"
+    },
+    {
+      "label": "Nigeria",
+      "value": 4.8,
+      "color": "ochre"
+    },
+    {
+      "label": "India",
+      "value": 4.5,
+      "color": "ochre"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 4,
+      "color": "ochre"
+    },
+    {
+      "label": "Egypt",
+      "value": 3.9,
+      "color": "ochre"
+    },
+    {
+      "label": "Zimbabwe",
+      "value": 3.3,
+      "color": "despair"
+    },
+    {
+      "label": "Afghanistan",
+      "value": 1.4,
+      "color": "despair"
+    }
+  ],
+  "xmax": 8,
+  "xTicks": [
+    0,
+    2,
+    4,
+    6,
+    8
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "happiness-cantril-ladder",
+    "url": "https://ourworldindata.org/grapher/happiness-cantril-ladder",
+    "license": "CC BY 4.0",
+    "vintage": "2025–2025",
+    "checksum": "e1bb7f5e9aafdc9d3af9397295a1bac36bcd6a604b4077341ad8382a1fefd6ba",
+    "definition": "Self-reported life satisfaction on a 0–10 Cantril ladder, latest survey per country. A curated 11-country spread sorted descending.",
+    "attribution": "World Happiness Report, via Our World in Data",
+    "primarySource": "World Happiness Report (Gallup World Poll)"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 11 curated countries sorted descending"
+    }
+  ]
+}

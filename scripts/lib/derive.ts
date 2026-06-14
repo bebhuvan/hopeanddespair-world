@@ -15,6 +15,25 @@ export function derive(series: CanonicalSeries[], spec: IndicatorSpec): Canonica
     return { ...hit, recipe: [{ op: 'pick_entity', detail: `selected entity ${want}` }], derivedFrom: [hit.entity] };
   }
 
+  if (op === 'sum_across_entities') {
+    // Sum every country (ISO3-coded) per year into a world total. Excludes OWID aggregate rows
+    // (regions, "World") so nothing is double-counted. Used where the source has no World line.
+    const countries = series.filter((s) => /^[A-Z]{3}$/.test(s.entity));
+    if (!countries.length) throw new Error(`derive sum_across_entities: no ISO3 entities for ${spec.id}`);
+    const byYear = new Map<number, number>();
+    for (const s of countries) for (const p of s.points)
+      byYear.set(p.t, (byYear.get(p.t) ?? 0) + p.value);
+    const points = [...byYear.entries()].map(([t, value]) => ({ t, value })).sort((a, b) => a.t - b.t);
+    const proto = countries[0];
+    return {
+      indicatorId: spec.id, entity: 'OWID_WRL', entityName: 'World (sum of countries)',
+      unit: spec.unit, points,
+      provenance: { ...proto.provenance, definition: `${spec.title} — summed across ${countries.length} countries per year` },
+      derivedFrom: countries.map((s) => s.entity),
+      recipe: [{ op: 'sum_across_entities', detail: `sum over ${countries.length} ISO3 countries of origin, by year` }],
+    };
+  }
+
   if (op === 'mean_across_entities') {
     const minE = spec.derive!.minEntities ?? 1;
     const byYear = new Map<number, number[]>();

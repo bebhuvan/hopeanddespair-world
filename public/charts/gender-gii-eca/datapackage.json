@@ -1,0 +1,38 @@
+{
+  "name": "gender-gii-eca",
+  "title": "This index captures gender-based disadvantage in reproductive health, empowerment and the labour market; ranges from 0 (full equality) to 1 (maximum inequality), representing the share of potential human development lost because of gender gaps.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/gender-inequality-index-from-the-human-development-report"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "gender-gii-eca",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "gender_gii_eca",
+            "type": "number",
+            "unit": "index (0 = parity)"
+          }
+        ]
+      }
+    }
+  ]
+}

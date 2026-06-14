@@ -1,0 +1,188 @@
+{
+  "indicatorId": "education.literacy_rate.sub-saharan-africa",
+  "entity": "Sub-Saharan Africa (SDG)",
+  "entityName": "Sub-Saharan Africa (SDG)",
+  "unit": "%",
+  "points": [
+    {
+      "t": 1984,
+      "value": 49.00235
+    },
+    {
+      "t": 1985,
+      "value": 49.37137
+    },
+    {
+      "t": 1986,
+      "value": 49.70577
+    },
+    {
+      "t": 1987,
+      "value": 50.36095
+    },
+    {
+      "t": 1988,
+      "value": 50.89607
+    },
+    {
+      "t": 1989,
+      "value": 51.45966
+    },
+    {
+      "t": 1990,
+      "value": 52.11274
+    },
+    {
+      "t": 1991,
+      "value": 52.47592
+    },
+    {
+      "t": 1992,
+      "value": 52.97165
+    },
+    {
+      "t": 1993,
+      "value": 53.5766
+    },
+    {
+      "t": 1994,
+      "value": 54.20362
+    },
+    {
+      "t": 1995,
+      "value": 54.63169
+    },
+    {
+      "t": 1996,
+      "value": 55.26828
+    },
+    {
+      "t": 1997,
+      "value": 56.09558
+    },
+    {
+      "t": 1998,
+      "value": 56.75086
+    },
+    {
+      "t": 1999,
+      "value": 57.59484
+    },
+    {
+      "t": 2000,
+      "value": 56.3906
+    },
+    {
+      "t": 2001,
+      "value": 57.14965
+    },
+    {
+      "t": 2002,
+      "value": 57.85295
+    },
+    {
+      "t": 2003,
+      "value": 58.36514
+    },
+    {
+      "t": 2004,
+      "value": 59.04088
+    },
+    {
+      "t": 2005,
+      "value": 58.71344
+    },
+    {
+      "t": 2006,
+      "value": 58.41726
+    },
+    {
+      "t": 2007,
+      "value": 58.17579
+    },
+    {
+      "t": 2008,
+      "value": 58.48229
+    },
+    {
+      "t": 2009,
+      "value": 58.94138
+    },
+    {
+      "t": 2010,
+      "value": 59.61513
+    },
+    {
+      "t": 2011,
+      "value": 61.13006
+    },
+    {
+      "t": 2012,
+      "value": 62.3788
+    },
+    {
+      "t": 2013,
+      "value": 63.23391
+    },
+    {
+      "t": 2014,
+      "value": 63.92325
+    },
+    {
+      "t": 2015,
+      "value": 64.52015
+    },
+    {
+      "t": 2016,
+      "value": 65.10612
+    },
+    {
+      "t": 2017,
+      "value": 65.44503
+    },
+    {
+      "t": 2018,
+      "value": 67.06734
+    },
+    {
+      "t": 2019,
+      "value": 67.71821
+    },
+    {
+      "t": 2020,
+      "value": 67.9072
+    },
+    {
+      "t": 2021,
+      "value": 67.89861
+    },
+    {
+      "t": 2022,
+      "value": 68.2313
+    },
+    {
+      "t": 2023,
+      "value": 68.5022
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "literacy_rate",
+    "url": "https://ourworldindata.org/grapher/cross-country-literacy-rates",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "64a430579a7265dd5c26dd4d2e2cf786d780b7096ae4a4b463fc6281e586f80c",
+    "definition": "Share of adults who can read and write a simple statement about their everyday life.",
+    "attribution": "Our World in Data",
+    "primarySource": "UNESCO; Buringh & van Zanden — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity Sub-Saharan Africa (SDG)"
+    }
+  ],
+  "derivedFrom": [
+    "Sub-Saharan Africa (SDG)"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "transport.ev_sales_share.united-kingdom",
+    "unit": "percent",
+    "points": 16
+  },
+  "wasDerivedFrom": [
+    "United Kingdom"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity United Kingdom"
+      }
+    ],
+    "agent": "adapter:iea@1.0.0",
+    "used": {
+      "source": "iea",
+      "slug": "evs",
+      "url": "https://api.iea.org/evs?region=United%20Kingdom&csv=true",
+      "vintage": "2026-06-13",
+      "checksum": "767e3027ab778767af0448cdcfba5616224e5f3bce7f9aca317928fdc9ab8e7e",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+}

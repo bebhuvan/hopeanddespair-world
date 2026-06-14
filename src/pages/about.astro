@@ -1,37 +1,141 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const essay = 'https://bhuvan.substack.com/p/between-hope-and-despair';
 ---
-<BaseLayout title="About — Hope & Despair" description="Why this exists, and how it is made.">
-  <article class="page">
-    <h1>About</h1>
-    <p class="lead">A living atlas that answers one honest question at a time — <em>is the world getting better
-      or worse?</em> — by weaving open data and plain-spoken narrative into a single, intellectually honest
-      story. The thesis runs through everything: <em>progress and catastrophe coexist; the answer depends on the
-      lens.</em></p>
+<BaseLayout title="About — Hope & Despair" description="Why this atlas exists, who makes it, and how — including, plainly, the part AI plays.">
+  <article class="about">
+    <header class="head">
+      <p class="eyebrow">About</p>
+      <h1>I could not decide whether the world was getting better or worse. So I built this instead of deciding.</h1>
+    </header>
 
-    <h2>How it is made</h2>
-    <p>This is a one-person project. There is no way one person could research, write, and keep hundreds of
-      these pieces current by hand — so the prose here is written with the help of a large language model,
-      working from open data and edited by a human. The data is open and cited. Every change is tracked in the
-      open. Where the writing is uncertain, it says so.</p>
+    <section class="s">
+      <p class="lead">I’m Bhuvan. I work in finance, and for the better part of a decade I went back and forth on
+        the same question without ever landing. This atlas is what came out of not landing.</p>
+    </section>
 
-    <h2>License</h2>
-    <p>Original prose, code, and chart designs are released under <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">CC&nbsp;BY&nbsp;4.0</a>
-      — reuse freely with attribution to hopeanddespair.world. Source datasets carry their own licenses
-      (typically CC&nbsp;BY) and are credited per-article with license and vintage.</p>
+    <section class="s">
+      <h2>Where it started</h2>
+      <p>Around 2017 I read Steven Pinker and the long-run optimists — the charts where almost everything you
+        can count, from child mortality to literacy to extreme poverty, has bent the right way for two centuries.
+        It should have settled the question for me. It didn’t. I had spent my life assuming I was a pessimist,
+        and then I noticed something awkward: I <em>invest</em> like an optimist. I put money to work on the bet
+        that things compound and improve. My self-image said one thing; what I actually did with my savings said
+        the opposite. That gap is where this began.</p>
+    </section>
+
+    <section class="s">
+      <h2>Two true stories</h2>
+      <p>One story is the optimist’s. The economist Joel Mokyr puts it about as strongly as it can be put:
+        a person near the bottom of the ladder today lives better, in almost every measurable dimension, than the
+        popes and emperors of the past. By the numbers, he is right.</p>
+      <p>The other story belongs to people like Daniel Schmachtenberger: we improve on the handful of metrics we
+        choose to measure and optimise for, and quietly lose ground on the ones we don’t — soils, oceans,
+        attention, trust, the odds of a genuinely bad century. By a different set of numbers, he is also right.</p>
+      <p>Both cases are made by serious people with real evidence. The mistake I kept making was assuming one of
+        them had to win.</p>
+    </section>
+
+    <section class="s">
+      <h2>Hope is not optimism</h2>
+      <p>The line that finally unstuck me came from Cory Doctorow. An optimist, he says, doesn’t bother to equip
+        the Titanic with lifeboats, because the ship cannot sink. Optimism and pessimism are both just
+        predictions — and a prediction tells you to sit still, because the ending is already written. Hope is a
+        different thing. Hope is what you do while the outcome is still open. “Hope is the necessary, but
+        insufficient, precondition for survival.” That stance — not the prediction, but the practice — is the one
+        this site tries to take.</p>
+    </section>
+
+    <section class="s">
+      <h2>What this is</h2>
+      <p>A living atlas. It asks one honest question at a time — <em>is the world winning against poverty? is it
+        becoming less violent? is the climate stabilising or breaking?</em> — and answers it with open, cited data
+        and plain writing, nothing else. Each question is read at every magnification, from the ten-thousand-year
+        arc down to a single lived day, because the answer usually changes with the distance you stand at. And
+        every reading comes in three temperatures: hope, despair, and confusion — the last of which gets equal
+        billing here rather than a footnote.</p>
+      <p>Underneath all of it is one idea: progress and catastrophe are both real, at the same time. The work
+        isn’t to pick a side. It’s to be honest about which one you’re looking at, and through which lens. There’s
+        a <a href={essay} rel="noopener" target="_blank">longer essay</a> on how I got here, if you want the full
+        version.</p>
+    </section>
+
+    <section class="s">
+      <h2>Who makes this</h2>
+      <p>My name is Bhuvan. I work in finance, and in my own time I build small, one-person websites that try to
+        drag useful things out of wherever they are buried and set them down in plain language. This is one of them.</p>
+      <p>The others lean the same way. <a href="https://thisindianlife.today" rel="noopener" target="_blank">This
+        Indian Life</a> hauls the most important numbers about life in India out of horrible government PDFs and
+        explains them; <a href="https://akshara.ink" rel="noopener" target="_blank">Akshara</a> digitises
+        public-domain literature and history. A few more carry the same spirit —
+        <a href="https://seneca.ink" rel="noopener" target="_blank">Seneca</a>,
+        <a href="https://smallweb.blog" rel="noopener" target="_blank">Smallweb</a>,
+        <a href="https://tipsheet.markets" rel="noopener" target="_blank">Tipsheet</a>,
+        <a href="https://paperlanterns.ink" rel="noopener" target="_blank">Paper Lanterns</a> — each a small
+        attempt at one useful thing.</p>
+      <p>I am not a developer by training; I build these with the help of large language models, which is the only
+        reason one person can attempt them at all. I’m strongest on economics and finance and genuinely shaky on a
+        great deal outside it, so where this atlas wanders past what I know, it leans hard on cited sources and says
+        plainly when it is unsure. You can reach me at <a href="mailto:bhuvan@bebhuvan.com">bhuvan@bebhuvan.com</a>
+        or <a href="https://twitter.com/bebhuvan" rel="noopener" target="_blank">@bebhuvan</a>.</p>
+    </section>
+
+    <aside class="disclosure" aria-label="How this is made">
+      <svg class="dmark" viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M8 1.6 a6.4 6.4 0 0 0 0 12.8 z" fill="var(--hope)" />
+        <path d="M8 1.6 a6.4 6.4 0 0 1 0 12.8 z" fill="var(--despair)" />
+        <line x1="8" y1="1.2" x2="8" y2="14.8" stroke="var(--bg)" stroke-width="0.8" />
+        <circle cx="8" cy="8" r="6.4" fill="none" stroke="var(--ink)" stroke-width="0.9" />
+      </svg>
+      <div class="dbody">
+        <p class="dl">How it is made — including the AI part</p>
+        <p class="dt"><b>This is a one-person project, made with AI assistance, and I’d rather state that plainly
+          than bury it.</b> One person cannot research, write, fact-check, and keep hundreds of questions like
+          these current by hand — it simply isn’t possible. So the prose is drafted with a large language model
+          working only from data I have already ingested and cited, and then I read it, check it, and edit it.</p>
+        <p class="dt">The numbers are never the model’s invention. Every figure traces to a named, openly-licensed
+          source; the data and its full lineage are downloadable under each chart. Where the evidence is thin or a
+          verdict is a judgement call, the writing says so. Every change is tracked in public, commit by commit.</p>
+      </div>
+    </aside>
+
+    <section class="s">
+      <h2>License &amp; reuse</h2>
+      <p>The original prose, code, and chart designs are released under
+        <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener" target="_blank">CC&nbsp;BY&nbsp;4.0&nbsp;↗</a>
+        — reuse them freely with attribution to hopeanddespair.world. The source datasets keep their own licences
+        (usually CC&nbsp;BY), credited per article with licence and vintage. Where a source doesn’t allow
+        re-hosting, I link to it rather than copying its numbers. The <a href="/license">full terms are here</a>.</p>
+    </section>
 
     <p class="back"><a href="/">← Back to the atlas</a></p>
   </article>
 </BaseLayout>
 
 <style>
-  .page { max-width: 64ch; padding-block: clamp(3rem, 8vh, 5rem) 2rem; }
-  h1 { font-family: var(--font-display); font-weight: 300; font-size: clamp(2.4rem, 6vw, 4rem); letter-spacing: -0.022em; }
-  h2 { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 1.4rem; color: var(--accent); margin-top: 2.4rem; margin-bottom: 0.6rem; }
-  .lead { font-size: 1.2rem; line-height: 1.6; color: var(--fg-2); margin-top: 1.6rem; }
-  .lead em, p em { font-style: italic; color: var(--fg); }
-  p { line-height: 1.65; color: var(--fg-2); margin-top: 0.8rem; }
-  p a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--brass-dim); }
-  .back { margin-top: 2.5rem; }
-  .back a { color: var(--accent); text-decoration: none; }
+  .about { max-width: 42rem; padding-block: clamp(3rem, 8vh, 5.5rem) 2rem; }
+  .head .eyebrow { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+  .head h1 { font-family: var(--display); font-weight: 620; font-size: clamp(2rem, 4.4vw, 3.2rem); line-height: 1.08; letter-spacing: -0.032em; margin-top: 1.1rem; max-width: 20ch; text-wrap: balance; }
+
+  .s { margin-top: clamp(2.2rem, 5vh, 3.2rem); }
+  .s h2 { font-family: var(--display); font-weight: 580; font-size: 1.34rem; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 0.9rem; }
+  .lead { font-family: var(--serif); font-size: var(--fs-lede); line-height: 1.5; color: var(--ink); text-wrap: pretty; }
+  .s p { max-width: var(--measure); font-size: var(--fs-body); line-height: var(--lh-body); color: var(--ink-2); font-weight: 450; text-wrap: pretty; }
+  .s p + p { margin-top: 0.95rem; }
+  .s p em { font-style: italic; color: var(--ink); }
+  .s a { color: var(--ink); border-bottom: 1px solid var(--line-2); }
+  .s a:hover { color: var(--hope); border-color: var(--hope); }
+
+  /* the AI disclosure — prominent, the split mark beside it, never fine print */
+  .disclosure { margin-top: clamp(2.8rem, 7vh, 4.4rem); padding-top: clamp(1.8rem, 4.5vh, 2.6rem); border-top: 1px solid var(--line-2); display: grid; grid-template-columns: auto 1fr; gap: 1.2rem; align-items: start; }
+  .disclosure .dmark { width: 1.6rem; height: 1.6rem; margin-top: 0.3rem; }
+  .disclosure .dl { font-family: var(--display); font-weight: 600; font-size: 0.84rem; letter-spacing: 0.02em; color: var(--ink-3); margin-bottom: 0.8rem; }
+  .disclosure .dt { max-width: var(--measure); font-size: var(--fs-body); line-height: var(--lh-body); color: var(--ink-2); font-weight: 450; text-wrap: pretty; }
+  .disclosure .dt + .dt { margin-top: 0.9rem; }
+  .disclosure .dt :global(b) { font-weight: 600; color: var(--ink); }
+  @media (max-width: 560px) { .disclosure { grid-template-columns: 1fr; gap: 0.8rem; } }
+
+  .back { margin-top: clamp(2.6rem, 6vh, 3.6rem); font-family: var(--mono); font-size: 0.74rem; }
+  .back a { color: var(--ink-2); border-bottom: 1px solid var(--line-2); }
+  .back a:hover { color: var(--hope); border-color: var(--hope); }
 </style>

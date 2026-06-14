@@ -1,0 +1,118 @@
+{
+  "chartId": "fertility-by-country",
+  "kind": "bars",
+  "title": "Fertility by country",
+  "unit": "Births per woman",
+  "yearSpan": "2024–2024",
+  "bars": [
+    {
+      "label": "DR Congo",
+      "value": 5.98,
+      "color": "ochre"
+    },
+    {
+      "label": "Niger",
+      "value": 5.93,
+      "color": "ochre"
+    },
+    {
+      "label": "Nigeria",
+      "value": 4.38,
+      "color": "ochre"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 3.91,
+      "color": "ochre"
+    },
+    {
+      "label": "Pakistan",
+      "value": 3.55,
+      "color": "hope"
+    },
+    {
+      "label": "Egypt",
+      "value": 2.73,
+      "color": "hope"
+    },
+    {
+      "label": "Indonesia",
+      "value": 2.12,
+      "color": "hope"
+    },
+    {
+      "label": "India",
+      "value": 1.96,
+      "color": "hope"
+    },
+    {
+      "label": "Iran",
+      "value": 1.68,
+      "color": "hope"
+    },
+    {
+      "label": "United States",
+      "value": 1.63,
+      "color": "hope"
+    },
+    {
+      "label": "France",
+      "value": 1.61,
+      "color": "hope"
+    },
+    {
+      "label": "Brazil",
+      "value": 1.61,
+      "color": "hope"
+    },
+    {
+      "label": "Italy",
+      "value": 1.18,
+      "color": "despair"
+    },
+    {
+      "label": "Japan",
+      "value": 1.15,
+      "color": "despair"
+    },
+    {
+      "label": "Spain",
+      "value": 1.1,
+      "color": "despair"
+    },
+    {
+      "label": "China",
+      "value": 1.01,
+      "color": "despair"
+    },
+    {
+      "label": "South Korea",
+      "value": 0.75,
+      "color": "despair"
+    }
+  ],
+  "xmax": 7,
+  "xTicks": [
+    0,
+    2,
+    4,
+    6
+  ],
+  "provenance": {
+    "source": "wb",
+    "sourceIndicator": "SP.DYN.TFRT.IN",
+    "url": "https://data.worldbank.org/indicator/SP.DYN.TFRT.IN",
+    "license": "CC BY 4.0",
+    "vintage": "2024–2024",
+    "checksum": "6bc419249827caa54f4a591a557b1d4334e57110367e271d464d9e1392363fdd",
+    "definition": "Total fertility rate (births per woman), latest year per country. Replacement level is about 2.1. A curated 17-country spread sorted descending.",
+    "attribution": "UN Population Division, via World Bank",
+    "primarySource": "UN Population Division — World Population Prospects"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 17 curated countries sorted descending"
+    }
+  ]
+}

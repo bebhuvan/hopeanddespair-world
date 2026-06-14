@@ -1,0 +1,38 @@
+{
+  "name": "wellbeing-suicide_rate_wb-lcn",
+  "title": "Suicide mortality rate (per 100,000 population)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/SH.STA.SUIC.P5"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "wellbeing-suicide_rate_wb-lcn",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "wellbeing_suicide_rate_wb_lcn",
+            "type": "number",
+            "unit": "per 100,000 people"
+          }
+        ]
+      }
+    }
+  ]
+}

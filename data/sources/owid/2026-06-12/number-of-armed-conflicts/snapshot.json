@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "number-of-armed-conflicts",
+  "vintage": "2026-06-12",
+  "url": "https://ourworldindata.org/grapher/number-of-armed-conflicts",
+  "checksum": "db74b8a45cee64fec20e88fdcc435bdaeb82de3f19e07e4f6ebb95fecc7804ae",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:42:21.705Z",
+  "adapterVersion": "1.0.0"
+}

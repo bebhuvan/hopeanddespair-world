@@ -1,0 +1,10 @@
+{
+  "source": "nasa",
+  "slug": "GISTEMP",
+  "vintage": "2026-06-11",
+  "url": "https://raw.githubusercontent.com/datasets/global-temp/main/data/annual.csv",
+  "checksum": "2f23416944dc639b7f8e87098e65f158a3690446071018b9b466d47186b0eb86",
+  "license": "Public Domain (US Government)",
+  "fetchedAt": "2026-06-11T11:25:56.835Z",
+  "adapterVersion": "1.0.0"
+}

@@ -1,0 +1,203 @@
+{
+  "indicatorId": "economy.poor_count.mea",
+  "entity": "MEA",
+  "entityName": "Middle East, North Africa, Afghanistan & Pakistan",
+  "unit": "million people",
+  "points": [
+    {
+      "t": 1981,
+      "value": 110.588574
+    },
+    {
+      "t": 1982,
+      "value": 112.217725
+    },
+    {
+      "t": 1983,
+      "value": 113.698747
+    },
+    {
+      "t": 1984,
+      "value": 115.397134
+    },
+    {
+      "t": 1985,
+      "value": 117.532877
+    },
+    {
+      "t": 1986,
+      "value": 120.572875
+    },
+    {
+      "t": 1987,
+      "value": 124.637638
+    },
+    {
+      "t": 1988,
+      "value": 126.773612
+    },
+    {
+      "t": 1989,
+      "value": 130.185013
+    },
+    {
+      "t": 1990,
+      "value": 131.180985
+    },
+    {
+      "t": 1991,
+      "value": 126.027245
+    },
+    {
+      "t": 1992,
+      "value": 114.440663
+    },
+    {
+      "t": 1993,
+      "value": 118.172017
+    },
+    {
+      "t": 1994,
+      "value": 110.12084
+    },
+    {
+      "t": 1995,
+      "value": 111.24134
+    },
+    {
+      "t": 1996,
+      "value": 103.931871
+    },
+    {
+      "t": 1997,
+      "value": 104.677154
+    },
+    {
+      "t": 1998,
+      "value": 109.227806
+    },
+    {
+      "t": 1999,
+      "value": 113.112538
+    },
+    {
+      "t": 2000,
+      "value": 117.92858199999999
+    },
+    {
+      "t": 2001,
+      "value": 124.528629
+    },
+    {
+      "t": 2002,
+      "value": 125.203454
+    },
+    {
+      "t": 2003,
+      "value": 117.84075299999999
+    },
+    {
+      "t": 2004,
+      "value": 108.209651
+    },
+    {
+      "t": 2005,
+      "value": 104.786352
+    },
+    {
+      "t": 2006,
+      "value": 100.55847
+    },
+    {
+      "t": 2007,
+      "value": 97.688729
+    },
+    {
+      "t": 2008,
+      "value": 87.820082
+    },
+    {
+      "t": 2009,
+      "value": 93.287336
+    },
+    {
+      "t": 2010,
+      "value": 83.52856
+    },
+    {
+      "t": 2011,
+      "value": 82.90735699999999
+    },
+    {
+      "t": 2012,
+      "value": 80.252173
+    },
+    {
+      "t": 2013,
+      "value": 77.63274799999999
+    },
+    {
+      "t": 2014,
+      "value": 78.231268
+    },
+    {
+      "t": 2015,
+      "value": 78.66528699999999
+    },
+    {
+      "t": 2016,
+      "value": 80.20487899999999
+    },
+    {
+      "t": 2017,
+      "value": 79.494154
+    },
+    {
+      "t": 2018,
+      "value": 80.754048
+    },
+    {
+      "t": 2019,
+      "value": 86.431466
+    },
+    {
+      "t": 2020,
+      "value": 95.334803
+    },
+    {
+      "t": 2021,
+      "value": 103.132161
+    },
+    {
+      "t": 2022,
+      "value": 105.281908
+    },
+    {
+      "t": 2023,
+      "value": 110.818141
+    },
+    {
+      "t": 2024,
+      "value": 116.84864499999999
+    },
+    {
+      "t": 2025,
+      "value": 121.27727999999999
+    },
+    {
+      "t": 2026,
+      "value": 122.061404
+    }
+  ],
+  "provenance": {
+    "source": "pip",
+    "sourceIndicator": "pop_in_poverty @ $3.00/day (2021 PPP)",
+    "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+    "definition": "Number of people in extreme poverty (below $3.00/day, 2021 PPP), Middle East, North Africa, Afghanistan & Pakistan",
+    "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+    "primarySource": "World Bank — Poverty and Inequality Platform"
+  }
+}

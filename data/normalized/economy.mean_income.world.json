@@ -1,0 +1,205 @@
+[
+  {
+    "indicatorId": "economy.mean_income.world",
+    "entity": "WLD",
+    "entityName": "World",
+    "unit": "PPP$ per day (2021)",
+    "points": [
+      {
+        "t": 1981,
+        "value": 11.8277
+      },
+      {
+        "t": 1982,
+        "value": 11.897
+      },
+      {
+        "t": 1983,
+        "value": 11.9324
+      },
+      {
+        "t": 1984,
+        "value": 12.1143
+      },
+      {
+        "t": 1985,
+        "value": 12.2316
+      },
+      {
+        "t": 1986,
+        "value": 12.5877
+      },
+      {
+        "t": 1987,
+        "value": 12.7393
+      },
+      {
+        "t": 1988,
+        "value": 12.9311
+      },
+      {
+        "t": 1989,
+        "value": 13.0531
+      },
+      {
+        "t": 1990,
+        "value": 12.8885
+      },
+      {
+        "t": 1991,
+        "value": 12.7959
+      },
+      {
+        "t": 1992,
+        "value": 12.7246
+      },
+      {
+        "t": 1993,
+        "value": 12.693
+      },
+      {
+        "t": 1994,
+        "value": 12.8483
+      },
+      {
+        "t": 1995,
+        "value": 13.1042
+      },
+      {
+        "t": 1996,
+        "value": 13.2394
+      },
+      {
+        "t": 1997,
+        "value": 13.4065
+      },
+      {
+        "t": 1998,
+        "value": 13.5693
+      },
+      {
+        "t": 1999,
+        "value": 13.635
+      },
+      {
+        "t": 2000,
+        "value": 13.9725
+      },
+      {
+        "t": 2001,
+        "value": 14.1159
+      },
+      {
+        "t": 2002,
+        "value": 14.3114
+      },
+      {
+        "t": 2003,
+        "value": 14.5639
+      },
+      {
+        "t": 2004,
+        "value": 14.9428
+      },
+      {
+        "t": 2005,
+        "value": 15.3288
+      },
+      {
+        "t": 2006,
+        "value": 15.7394
+      },
+      {
+        "t": 2007,
+        "value": 16.2765
+      },
+      {
+        "t": 2008,
+        "value": 16.4366
+      },
+      {
+        "t": 2009,
+        "value": 16.4732
+      },
+      {
+        "t": 2010,
+        "value": 16.6742
+      },
+      {
+        "t": 2011,
+        "value": 16.9281
+      },
+      {
+        "t": 2012,
+        "value": 17.1822
+      },
+      {
+        "t": 2013,
+        "value": 17.4959
+      },
+      {
+        "t": 2014,
+        "value": 17.7649
+      },
+      {
+        "t": 2015,
+        "value": 18.2015
+      },
+      {
+        "t": 2016,
+        "value": 18.6489
+      },
+      {
+        "t": 2017,
+        "value": 18.9805
+      },
+      {
+        "t": 2018,
+        "value": 19.435
+      },
+      {
+        "t": 2019,
+        "value": 19.9361
+      },
+      {
+        "t": 2020,
+        "value": 19.8286
+      },
+      {
+        "t": 2021,
+        "value": 20.546
+      },
+      {
+        "t": 2022,
+        "value": 20.4869
+      },
+      {
+        "t": 2023,
+        "value": 21.1746
+      },
+      {
+        "t": 2024,
+        "value": 21.6153
+      },
+      {
+        "t": 2025,
+        "value": 21.9464
+      },
+      {
+        "t": 2026,
+        "value": 22.2981
+      }
+    ],
+    "provenance": {
+      "source": "pip",
+      "sourceIndicator": "mean @ $3.00/day (2021 PPP)",
+      "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-12",
+      "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+      "definition": "Mean income or consumption per day, World",
+      "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+      "primarySource": "World Bank — Poverty and Inequality Platform"
+    }
+  }
+]

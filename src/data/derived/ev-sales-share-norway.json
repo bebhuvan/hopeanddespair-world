@@ -1,0 +1,92 @@
+{
+  "indicatorId": "transport.ev_sales_share.norway",
+  "entity": "Norway",
+  "entityName": "Norway",
+  "unit": "percent",
+  "points": [
+    {
+      "t": 2010,
+      "value": 0.2800000011920929
+    },
+    {
+      "t": 2011,
+      "value": 1.399999976158142
+    },
+    {
+      "t": 2012,
+      "value": 3.0999999046325684
+    },
+    {
+      "t": 2013,
+      "value": 5.800000190734863
+    },
+    {
+      "t": 2014,
+      "value": 15
+    },
+    {
+      "t": 2015,
+      "value": 22
+    },
+    {
+      "t": 2016,
+      "value": 29
+    },
+    {
+      "t": 2017,
+      "value": 39
+    },
+    {
+      "t": 2018,
+      "value": 49
+    },
+    {
+      "t": 2019,
+      "value": 56
+    },
+    {
+      "t": 2020,
+      "value": 75
+    },
+    {
+      "t": 2021,
+      "value": 86
+    },
+    {
+      "t": 2022,
+      "value": 89
+    },
+    {
+      "t": 2023,
+      "value": 90
+    },
+    {
+      "t": 2024,
+      "value": 92
+    },
+    {
+      "t": 2025,
+      "value": 97
+    }
+  ],
+  "provenance": {
+    "source": "iea",
+    "sourceIndicator": "EV sales share · Cars · EV",
+    "url": "https://api.iea.org/evs?region=Norway&csv=true",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "7777065f35c8180940e6b79ce6c86dad4e964035130636cd79b8eb3383d99065",
+    "definition": "Share of new cars sold that are electric, Norway",
+    "attribution": "IEA — Global EV Data Explorer",
+    "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity Norway"
+    }
+  ],
+  "derivedFrom": [
+    "Norway"
+  ]
+}

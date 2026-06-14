@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "SH.IMM.MEAS",
+  "vintage": "2026-06-13",
+  "url": "https://data.worldbank.org/indicator/SH.IMM.MEAS",
+  "checksum": "ecbd98414ffa71e4b9cbc08dfc62454af95d354d478fd514c4768fa5f1057ff2",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T08:43:34.295Z",
+  "adapterVersion": "1.0.0"
+}

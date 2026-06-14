@@ -1,0 +1,203 @@
+{
+  "indicatorId": "economy.poor_count.afe",
+  "entity": "AFE",
+  "entityName": "Eastern and Southern Africa",
+  "unit": "million people",
+  "points": [
+    {
+      "t": 1981,
+      "value": 142.01482099999998
+    },
+    {
+      "t": 1982,
+      "value": 147.355011
+    },
+    {
+      "t": 1983,
+      "value": 153.73719
+    },
+    {
+      "t": 1984,
+      "value": 160.863442
+    },
+    {
+      "t": 1985,
+      "value": 167.763017
+    },
+    {
+      "t": 1986,
+      "value": 171.46196899999998
+    },
+    {
+      "t": 1987,
+      "value": 174.919751
+    },
+    {
+      "t": 1988,
+      "value": 179.948014
+    },
+    {
+      "t": 1989,
+      "value": 184.49203
+    },
+    {
+      "t": 1990,
+      "value": 192.027999
+    },
+    {
+      "t": 1991,
+      "value": 201.361312
+    },
+    {
+      "t": 1992,
+      "value": 210.608341
+    },
+    {
+      "t": 1993,
+      "value": 219.419804
+    },
+    {
+      "t": 1994,
+      "value": 225.006611
+    },
+    {
+      "t": 1995,
+      "value": 229.29376499999998
+    },
+    {
+      "t": 1996,
+      "value": 232.741346
+    },
+    {
+      "t": 1997,
+      "value": 238.45985499999998
+    },
+    {
+      "t": 1998,
+      "value": 246.577732
+    },
+    {
+      "t": 1999,
+      "value": 252.407167
+    },
+    {
+      "t": 2000,
+      "value": 256.196873
+    },
+    {
+      "t": 2001,
+      "value": 258.989216
+    },
+    {
+      "t": 2002,
+      "value": 269.469622
+    },
+    {
+      "t": 2003,
+      "value": 272.874116
+    },
+    {
+      "t": 2004,
+      "value": 264.32320899999996
+    },
+    {
+      "t": 2005,
+      "value": 262.56458
+    },
+    {
+      "t": 2006,
+      "value": 264.42713
+    },
+    {
+      "t": 2007,
+      "value": 265.045754
+    },
+    {
+      "t": 2008,
+      "value": 268.153783
+    },
+    {
+      "t": 2009,
+      "value": 274.852451
+    },
+    {
+      "t": 2010,
+      "value": 273.267783
+    },
+    {
+      "t": 2011,
+      "value": 276.04878199999996
+    },
+    {
+      "t": 2012,
+      "value": 277.906861
+    },
+    {
+      "t": 2013,
+      "value": 281.601698
+    },
+    {
+      "t": 2014,
+      "value": 287.551568
+    },
+    {
+      "t": 2015,
+      "value": 296.615863
+    },
+    {
+      "t": 2016,
+      "value": 307.840218
+    },
+    {
+      "t": 2017,
+      "value": 318.880424
+    },
+    {
+      "t": 2018,
+      "value": 330.812211
+    },
+    {
+      "t": 2019,
+      "value": 343.106634
+    },
+    {
+      "t": 2020,
+      "value": 363.762572
+    },
+    {
+      "t": 2021,
+      "value": 373.853169
+    },
+    {
+      "t": 2022,
+      "value": 379.345145
+    },
+    {
+      "t": 2023,
+      "value": 388.894033
+    },
+    {
+      "t": 2024,
+      "value": 396.68102799999997
+    },
+    {
+      "t": 2025,
+      "value": 399.557478
+    },
+    {
+      "t": 2026,
+      "value": 401.956148
+    }
+  ],
+  "provenance": {
+    "source": "pip",
+    "sourceIndicator": "pop_in_poverty @ $3.00/day (2021 PPP)",
+    "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=3&ppp_version=2021&format=json&group_by=wb",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "e8545e7cd76594d1a9c4f7c5dd0c506f8415f6b45ea1968e8fe0497ed8011d38",
+    "definition": "Number of people in extreme poverty (below $3.00/day, 2021 PPP), Eastern & Southern Africa",
+    "attribution": "World Bank — Poverty and Inequality Platform (PIP)",
+    "primarySource": "World Bank — Poverty and Inequality Platform"
+  }
+}

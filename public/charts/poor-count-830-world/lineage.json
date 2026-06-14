@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "economy.poor_count_830.world",
+    "unit": "million people",
+    "points": 46
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "identity",
+        "detail": "normalized directly from source"
+      }
+    ],
+    "agent": "adapter:pip@1.0.0",
+    "used": {
+      "source": "pip",
+      "slug": "pip-grp/wb/8.30/2021",
+      "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=8.3&ppp_version=2021&format=json&group_by=wb",
+      "vintage": "2026-06-12",
+      "checksum": "7380cba3a8d11617e9cd6f621f9586b818b5f49526924f82c4b2ec988c7abca3",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "World Bank — Poverty and Inequality Platform"
+}

@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "mobile-cellular-subscriptions-per-100-people",
+  "vintage": "2026-06-11",
+  "url": "https://ourworldindata.org/grapher/mobile-cellular-subscriptions-per-100-people",
+  "checksum": "4957ab04abde203572b76f0037b7a1fdf6d91b7323997340f7b310c13c909368",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T10:06:55.511Z",
+  "adapterVersion": "1.0.0"
+}

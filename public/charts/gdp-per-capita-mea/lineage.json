@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "economy.gdp_per_capita.mea",
+    "unit": "constant 2015 US$",
+    "points": 65
+  },
+  "wasDerivedFrom": [
+    "MEA"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity MEA"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "NY.GDP.PCAP.KD",
+      "url": "https://data.worldbank.org/indicator/NY.GDP.PCAP.KD",
+      "vintage": "2026-06-12",
+      "checksum": "1a407055e3d12986873076e5c1f148ac655705982ea9e3cf575d53a1ad0ccfd1",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "World Bank / OECD"
+}

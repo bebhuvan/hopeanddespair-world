@@ -1,0 +1,152 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { smartenDeep } from '../../lib/typo';
+import { categories, categoryForTheme } from '../../lib/categories';
+
+export async function getStaticPaths() {
+  return categories.map((c) => ({ params: { slug: c.slug }, props: { cat: c } }));
+}
+
+const { cat } = Astro.props;
+
+const all = (await getCollection('questions'))
+  .map((q) => ({ ...q, data: smartenDeep(q.data) }))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const inCat = all.filter((q) => cat.themes.includes(q.data.theme));
+const pct = (n: number) => `${(n * 100).toFixed(1)}%`;
+const items = inCat.map((q) => ({
+  id: q.id,
+  num: q.data.kickerNumber,
+  theme: q.data.theme,
+  question: q.data.question,
+  verdict: q.data.verdict,
+  live: q.data.status === 'published' && !!q.data.evidence,
+  hope: q.data.atlas.hope,
+  despair: q.data.atlas.despair,
+}));
+
+// the other domains, for the cross-links at the foot
+const others = categories.filter((c) => c.slug !== cat.slug);
+const liveCount = items.filter((i) => i.live).length;
+---
+<BaseLayout title={`${cat.name} — Hope & Despair`} description={cat.blurb}>
+  <section class="chead">
+    <p class="crumb"><a href="/">The Atlas</a> <span class="sep">/</span> Browse by domain</p>
+    <h1>{cat.name}</h1>
+    <p class="blurb">{cat.blurb}</p>
+    <p class="count">{items.length} {items.length === 1 ? 'question' : 'questions'}{liveCount < items.length && ` · ${liveCount} open`}</p>
+  </section>
+
+  <section class="atlas-wrap">
+    <div class="row scale-row" aria-hidden="true">
+      <div class="g"></div>
+      <div class="c"><div class="scale">
+        <span class="rule"></span>
+        <div class="labs"><span class="lab h">hope</span><span class="lab d">despair</span></div>
+      </div></div>
+    </div>
+
+    <ol class="atlas">
+      {items.map((q) => (
+        <li class={`q ${q.live ? 'live' : 'draft'}`}>
+          <a href={`/questions/${q.id}`}>
+            <div class="row">
+              <div class="g">
+                <span class="qn">{q.num}</span>
+                <span class="qt">{q.theme}</span>
+              </div>
+              <div class="c">
+                <div class="head">
+                  <h2>{q.question}</h2>
+                  {q.live ? <span class="status live">open</span> : <span class="status">in progress</span>}
+                </div>
+                <p class="verdict">{q.verdict}.</p>
+                <div class="plot" style={`--h:${pct(q.hope.pos)}; --d:${pct(q.despair.pos)}`}>
+                  <div class="span">
+                    <span class="track"></span><span class="seg"></span>
+                    <span class="dot h"></span><span class="dot d"></span>
+                  </div>
+                  <div class="ends">
+                    <span class="end h">{q.hope.lens}</span>
+                    <span class="end d">{q.despair.lens}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="more">
+    <p class="ml">Other domains</p>
+    <ul class="domnav">
+      {others.map((c) => (
+        <li><a href={`/categories/${c.slug}`}>{c.name}</a></li>
+      ))}
+    </ul>
+    <p class="all"><a href="/">← Read every question on one axis</a></p>
+  </section>
+</BaseLayout>
+
+<style>
+  .chead { padding-block: clamp(3rem, 8vh, 5rem) clamp(1.5rem, 4vh, 2.5rem); }
+  .crumb { font-family: var(--mono); font-size: 0.74rem; color: var(--ink-3); }
+  .crumb a { color: var(--ink-2); border-bottom: 1px solid var(--line-2); }
+  .crumb a:hover { color: var(--hope); border-color: var(--hope); }
+  .crumb .sep { color: var(--line-2); margin: 0 0.3em; }
+  .chead h1 { font-family: var(--display); font-weight: 640; font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.04; letter-spacing: -0.035em; margin-top: 1.2rem; text-wrap: balance; }
+  .chead .blurb { max-width: 46ch; margin-top: 1.3rem; font-family: var(--serif); font-size: var(--fs-lede); line-height: 1.5; color: var(--ink-2); text-wrap: pretty; }
+  .chead .count { font-family: var(--mono); font-size: 0.74rem; color: var(--ink-3); margin-top: 1.3rem; }
+
+  /* the shared hope↔despair axis + rows — same language as the home atlas */
+  .atlas-wrap { margin-top: clamp(1.5rem, 4vh, 2.4rem); }
+  .scale-row { margin-top: 0; }
+  .scale .rule { display: block; height: 1px; background: linear-gradient(90deg, var(--hope), color-mix(in srgb, var(--ink) 12%, transparent) 50%, var(--despair)); }
+  .scale .labs { display: flex; justify-content: space-between; margin-top: 0.5rem; }
+  .scale .lab { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.14em; text-transform: uppercase; }
+  .scale .lab.h { color: var(--hope); } .scale .lab.d { color: var(--despair); }
+
+  .atlas { list-style: none; margin-top: clamp(1.4rem, 3.5vh, 2.2rem); }
+  .q { border-top: 1px solid var(--line); }
+  .q:first-child { border-top: 0; }
+  .q a { display: block; padding-block: clamp(1.9rem, 4.4vh, 2.8rem); }
+  .q .qn { font-family: var(--display); font-weight: 600; font-size: 1.7rem; line-height: 1; color: var(--ink-3); letter-spacing: -0.03em; transition: color 0.4s; display: block; }
+  .q .qt { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-3); margin-top: 0.5rem; line-height: 1.5; display: block; }
+  .q:hover .qn { color: var(--hope); }
+  .q .head { display: flex; align-items: baseline; justify-content: space-between; gap: 1.5rem; }
+  .q h2 { font-family: var(--display); font-weight: 560; font-size: clamp(1.6rem, 3.4vw, 2.45rem); line-height: 1.04; letter-spacing: -0.03em; max-width: 20ch; text-wrap: balance; transition: color 0.4s; }
+  .q.live:hover h2 { color: var(--hope); }
+  .q.draft h2 { font-weight: 500; color: var(--ink-2); }
+  .q .status { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); white-space: nowrap; flex: none; }
+  .q .status.live { color: var(--hope); }
+  .q .status.live::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--hope); margin-right: 0.45em; vertical-align: 0.05em; }
+  .q .verdict { font-family: var(--serif); font-style: italic; font-size: 1.08rem; color: var(--ink-3); margin-top: 0.7rem; }
+
+  .plot { margin-top: 1.4rem; }
+  .span { position: relative; height: 10px; }
+  .span .track { position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--line); }
+  .span .seg { position: absolute; top: 50%; transform: translateY(-50%); left: var(--h); right: calc(100% - var(--d)); height: 1.5px; background: linear-gradient(90deg, var(--hope), var(--despair)); opacity: 0.8; }
+  .span .dot { position: absolute; top: 50%; width: 8px; height: 8px; border-radius: 50%; transform: translate(-50%, -50%); transition: box-shadow 0.4s; }
+  .span .dot.h { left: var(--h); background: var(--hope); }
+  .span .dot.d { left: var(--d); background: var(--despair); }
+  .q:hover .span .dot.h { box-shadow: 0 0 0 4px color-mix(in srgb, var(--hope) 15%, transparent); }
+  .q:hover .span .dot.d { box-shadow: 0 0 0 4px color-mix(in srgb, var(--despair) 15%, transparent); }
+  .ends { display: flex; justify-content: space-between; gap: 1.5rem; margin-top: 0.55rem; }
+  .ends .end { font-family: var(--serif); font-style: italic; font-size: 0.92rem; color: var(--ink-3); }
+  .ends .end.d { text-align: right; }
+  @media (max-width: 560px) { .ends { font-size: 0.84rem; } }
+
+  .more { margin-top: clamp(3rem, 8vh, 5rem); border-top: 1px solid var(--line-2); padding-top: clamp(1.8rem, 4vh, 2.6rem); }
+  .more .ml { font-family: var(--display); font-weight: 600; font-size: 0.82rem; color: var(--ink-3); }
+  .domnav { list-style: none; display: flex; flex-wrap: wrap; gap: 0.6rem 1.8rem; margin-top: 1rem; }
+  .domnav a { font-family: var(--display); font-weight: 540; font-size: 1.05rem; color: var(--ink); border-bottom: 1px solid var(--line-2); padding-bottom: 1px; transition: color 0.3s, border-color 0.3s; }
+  .domnav a:hover { color: var(--hope); border-color: var(--hope); }
+  .all { margin-top: 1.8rem; font-family: var(--mono); font-size: 0.74rem; }
+  .all a { color: var(--ink-2); border-bottom: 1px solid var(--line-2); }
+  .all a:hover { color: var(--hope); border-color: var(--hope); }
+</style>
+</BaseLayout>

@@ -248,13 +248,18 @@ a failed or schema-broken ingest never breaks production; it just flags stalenes
 
 ## 11. Must-have datasets
 
+> **The full question-by-question map now lives in [[docs/DATASET-ATLAS.md]]** — every
+> planned article mapped to its datasets, sub-questions, access paths, and license gates
+> (including the domains this table is thin on: the green transition, tolerance, and
+> science/R&D). This section stays as the day-1 summary.
+
 The full landscape by domain — then the **tight day-1 set** (don't integrate all of this at
 once).
 
 | Domain | Source(s) | Gives | Access | License |
 |---|---|---|---|---|
 | **Keystone** | **Our World in Data** | most indicators, harmonized | catalog / grapher / bulk | CC BY |
-| **Economy/poverty** | **World Bank WDI**, IMF, WID, Maddison | GDP, poverty, inequality, infra | great REST API + bulk | CC BY 4.0 |
+| **Economy/poverty** | **World Bank WDI** + **PIP** (Poverty & Inequality Platform), IMF, WID, Maddison | GDP, poverty **counts**, mean income, societal poverty, inequality, infra | two REST APIs (WDI = rates; PIP = counts/mean/societal) + bulk | CC BY 4.0 |
 | **Demography** | **UN WPP** | population (the denominators), fertility, urbanization | bulk | CC BY |
 | **Health/mortality** | **WHO GHO**, UN IGME, IHME GBD | life exp, child/maternal mortality, disease, vaccines | OData API / bulk | mixed (IHME care) |
 | **Violence/conflict** | **UCDP**, UNODC, UNHCR, SIPRI, ACLED | battle deaths, homicide, displacement, mil. spend | API / bulk | CC BY (ACLED restricted) |
@@ -268,7 +273,16 @@ once).
 
 1. **Our World in Data** — the keystone adapter; unlocks most of the atlas. *(do first)*
 2. **World Bank WDI** — best official API; economy/health/education breadth.
-3. **UN WPP (population)** — the denominators for every per-capita rate.
+3. **UN WPP (population)** — the denominators for every per-capita rate. **`unwpp` adapter BUILT
+   (2026-06-13):** the Data Portal `/data` API now requires a bearer token, so the adapter pulls the
+   ungated bulk **Demographic Indicators** CSVs instead (`…/CSV_FILES/WPP2024_Demographic_Indicators_{Medium,OtherVariants}.csv.gz`,
+   CC BY 3.0 IGO). One gzip carries every indicator for every location, 1950–2100; `fetch()` gunzips,
+   keeps only an allowlist of LocIDs (so the snapshot stays ~1 MB), and caches per-run so one download
+   serves every WPP indicator. Pick the column with `sourceColumn` (TFR, MAC, SRB, CNMR, TPopulation1July…),
+   the location with `entityFilter` (name / ISO3 / LocID), the projection variant with `filter.variant`
+   (Low/High), and scale thousands→units with `valueScale`. Powers the fertility article's low/high
+   projection fan, sex ratio at birth, and net migration by income group. **Gotcha:** the file is CRLF —
+   the trailing `\r` is stripped on load.
 4. **The three live articles' primaries:** **UCDP + UNHCR + UNODC** (violence), **WHO GHO / UN
    IGME** (health), **Global Carbon Project + NASA GISTEMP + Ember** (climate).
 
@@ -294,6 +308,47 @@ some IHME) — chart-and-link, don't re-host.
 > shape from OWID's CSV) now runs through the same pipeline, producing validated World extreme
 > poverty (47.1%→10.4%, 1981–2024) and GDP-per-capita series with full provenance. `RawSnapshot`
 > is generalized to `body`/`ext` (csv|json).
+>
+> **PIP adapter (2026-06-12):** the WDI REST API carries only poverty *rates*, never *counts*. The
+> **Poverty & Inequality Platform** adapter (`scripts/ingest/pip.ts`, a *second, separate* World Bank
+> API) pulls the authoritative **number of poor** (`pop_in_poverty`), **mean income**, and the
+> **societal/relative rate** (`spr`) straight from the producer — at any poverty line and PPP base,
+> 1981→nowcast. The lesson reinforced: **don't reconstruct what the source publishes** — a
+> rate×population derive was prototyped, then deleted once PIP gave the count directly (§1.3). One
+> `/pip-grp` fetch per poverty line serves every measure for World + all regions (memoised); 35
+> poverty indicators issue 3 network calls. Confirmed against the Bank's figures: World 870M extreme
+> poor (2022, $3.00/2021 PPP); 48.3% under the $8.30 line. **Extended 2026-06-12:** the same payload
+> also carries `poverty_gap`/`poverty_severity` → a free **depth** indicator (`economy.poverty_gap.*`,
+> ×100): World gap 22.4→3.5%, Sub-Saharan Africa stuck ~16% (incidence vs intensity).
+>
+> **Cross-section bars (2026-06-12):** MPI and Gini are one-or-two survey points per country, so they
+> are **committed bespoke artifacts** (`kind: 'bars'`), not registry series — `scripts/analysis/
+> poverty-cross-sections.ts` fetches + snapshots the OWID graphers (snapshot-everything) and emits
+> `src/data/derived/{mpi,gini}-by-country.json`, rendered by `src/lib/bars.ts`. Same pattern as
+> `convergence-scatter`: outside the pipeline, inputs still snapshotted.
+>
+> **Climate adapters (2026-06-13):** the Q3 climate article earned three small primary-source
+> adapters where OWID's series sit outside the licence gate. **`copernicus`** (`scripts/ingest/
+> copernicus.ts`, C3S free-reuse licence) reads the **ECMWF Climate Pulse** flat CSV of daily
+> ERA5 global 2 m temperature, averages it to complete calendar years, and **re-baselines to
+> 1951–80 inside `normalize()`** (a disclosed anomaly recompute from the absolute column) so the
+> ERA5 line overlays GISTEMP — two independent records agreeing to ~0.1°C, and the most current of
+> them. The Climate Data Store API (key + NetCDF) was deliberately avoided; Climate Pulse is a
+> plain CSV reachable from Node with a browser User-Agent. ERA5 publishes only a **global** series
+> there (no land/ocean), which is why the land-vs-ocean split stays on Berkeley. **`berkeley`**
+> (`scripts/ingest/
+> berkeley.ts`, CC BY) parses Berkeley Earth's whitespace summary files for the **land** and
+> **land+ocean** temperature anomaly on one shared 1951–80 baseline — the land-vs-ocean split the
+> single global curve hides (OWID's temperature series is OGL v3, link-only). **`sealevel`**
+> (`scripts/ingest/sealevel.ts`, PD) reads the EPA datahub sea-level CSV, stitching the CSIRO
+> reconstruction (1880–) and NOAA satellite altimetry (1993–) on a shared 1880 datum and
+> converting inches→cm. Arctic September sea-ice rides the **existing `owid` adapter** (NSIDC
+> data underneath, year-grained so it parses cleanly; PD via a `license` override). Slug `slug`
+> selects the file in both new adapters; both return a single World series (derive defaults to
+> `identity`). The `arctic-sea-ice` grapher's daily-grain *sea-level* sibling could **not** use
+> the OWID adapter (no `year` column) — hence the dedicated `sealevel` adapter.
+>
+> **Climate physical-state adapters (2026-06-13):** the climate mega-article added four more small public-domain/CC-BY adapters for the parts of the Earth system OWID doesn't carry cleanly: **`noaagml`** (NOAA GML — CH₄ & N₂O concentration, annual global means), **`oceanheat`** (NOAA NCEI — global ocean heat content 0–2000m, fixed-width .dat), **`icesheet`** (NASA GRACE via OWID — Greenland/Antarctica mass, daily→year-end), and **`wgms`** (World Glacier Monitoring Service — reference-glacier mass balance CSV, mm→m w.e.). All global-by-nature. Pattern identical to berkeley/sealevel/copernicus.
 >
 > **OWID-first, deliberately:** we did *not* build bespoke adapters for UCDP / UNHCR / WHO /
 > NASA / Ember — OWID already re-publishes those series cleanly under CC BY, so a separate

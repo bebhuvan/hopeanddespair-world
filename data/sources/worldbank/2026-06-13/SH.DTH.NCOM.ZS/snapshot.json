@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "SH.DTH.NCOM.ZS",
+  "vintage": "2026-06-13",
+  "url": "https://data.worldbank.org/indicator/SH.DTH.NCOM.ZS",
+  "checksum": "ec1d0a86a0932219587c2658804ee6875d4e6ea77ac1acd7dfe7cb9fdbaaa5d4",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T10:36:37.528Z",
+  "adapterVersion": "1.0.0"
+}

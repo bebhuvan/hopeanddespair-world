@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "income-share-top-10-before-tax-wid",
+  "vintage": "2026-06-12",
+  "url": "https://ourworldindata.org/grapher/income-share-top-10-before-tax-wid",
+  "checksum": "59ceaeece7b30f39dd4588bd676c7b4b73a1448af143d05f786363d754ff985d",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:44:34.147Z",
+  "adapterVersion": "1.0.0"
+}

@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "violence.battle_deaths.europe",
+    "unit": "deaths",
+    "points": 37
+  },
+  "wasDerivedFrom": [
+    "Europe"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Europe"
+      }
+    ],
+    "agent": "adapter:ucdp@1.0.0",
+    "used": {
+      "source": "ucdp",
+      "slug": "brd",
+      "url": "https://ucdp.uu.se/downloads/brd/ucdp-brd-conf-261-csv.zip",
+      "vintage": "2026-06-12",
+      "checksum": "b34ecb57f1fc0e73d4bfd7b080212da429af3135a8d360b1c902e45506f81147",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UCDP Battle-Related Deaths Dataset"
+}

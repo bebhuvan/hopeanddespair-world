@@ -1,0 +1,61 @@
+{
+  "indicatorId": "economy.poverty_300.nga",
+  "entity": "NGA",
+  "entityName": "Nigeria",
+  "unit": "%",
+  "points": [
+    {
+      "t": 1985,
+      "value": 51.06
+    },
+    {
+      "t": 1992,
+      "value": 55.17
+    },
+    {
+      "t": 1996,
+      "value": 60.91
+    },
+    {
+      "t": 2003,
+      "value": 51.1
+    },
+    {
+      "t": 2010,
+      "value": 38.49
+    },
+    {
+      "t": 2012,
+      "value": 37.44
+    },
+    {
+      "t": 2015,
+      "value": 35.77
+    },
+    {
+      "t": 2018,
+      "value": 34.19
+    },
+    {
+      "t": 2022,
+      "value": 41.82
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "share-of-population-in-extreme-poverty",
+    "url": "https://ourworldindata.org/grapher/share-of-population-in-extreme-poverty",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-13",
+    "checksum": "7493385eab22101ec74164a6a725e198cbef88193ca1ec98de4330d7429f47e4",
+    "definition": "Share of Nigeria's population living below $3.00 a day (2021 PPP), all available survey years 1985–2022.",
+    "attribution": "World Bank — Poverty and Inequality Platform, via Our World in Data",
+    "primarySource": "World Bank — Poverty and Inequality Platform"
+  },
+  "recipe": [
+    {
+      "op": "country_series",
+      "detail": "Nigeria ($3.00/day) survey points extracted from the OWID grapher"
+    }
+  ]
+}

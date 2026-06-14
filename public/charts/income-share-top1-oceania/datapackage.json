@@ -1,0 +1,38 @@
+{
+  "name": "inequality-income_share_top1-oceania",
+  "title": "The share of income received by the richest 1% of the population. Income here is measured before taxes and benefits.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/income-share-top-1-before-tax-wid"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "inequality-income_share_top1-oceania",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "inequality_income_share_top1_oceania",
+            "type": "number",
+            "unit": "%"
+          }
+        ]
+      }
+    }
+  ]
+}

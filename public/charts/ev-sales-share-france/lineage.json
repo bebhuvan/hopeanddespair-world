@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "transport.ev_sales_share.france",
+    "unit": "percent",
+    "points": 16
+  },
+  "wasDerivedFrom": [
+    "France"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity France"
+      }
+    ],
+    "agent": "adapter:iea@1.0.0",
+    "used": {
+      "source": "iea",
+      "slug": "evs",
+      "url": "https://api.iea.org/evs?region=France&csv=true",
+      "vintage": "2026-06-13",
+      "checksum": "2eb43317d0f6007b31f98f07dc5d094070ed36af8c87a13e1d9f11424056a803",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "IEA — Global EV Data Explorer (CC BY 4.0)"
+}

@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "SH.TBS.INCD",
+  "vintage": "2026-06-11",
+  "url": "https://data.worldbank.org/indicator/SH.TBS.INCD",
+  "checksum": "114d145ce4937d72e187ffe4cf54621d7c730542790d9c8e88fb14bce17924e0",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-11T14:36:07.475Z",
+  "adapterVersion": "1.0.0"
+}

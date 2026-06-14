@@ -1,0 +1,38 @@
+{
+  "name": "climate-temperature_anomaly_era5-world",
+  "title": "Global temperature anomaly, ERA5 reanalysis (vs 1951–1980), World",
+  "licenses": [
+    {
+      "name": "Copernicus Climate Change Service (C3S) — free reuse with attribution",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Copernicus Climate Change Service (C3S) / ECMWF — ERA5, via Climate Pulse",
+      "path": "https://sites.ecmwf.int/data/climatepulse/data/series/era5_daily_series_2t_global.csv"
+    }
+  ],
+  "created": "2026-06-13",
+  "resources": [
+    {
+      "name": "climate-temperature_anomaly_era5-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "climate_temperature_anomaly_era5_world",
+            "type": "number",
+            "unit": "°C"
+          }
+        ]
+      }
+    }
+  ]
+}

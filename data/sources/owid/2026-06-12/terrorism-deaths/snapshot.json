@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "terrorism-deaths",
+  "vintage": "2026-06-12",
+  "url": "https://ourworldindata.org/grapher/terrorism-deaths",
+  "checksum": "7a805488e4dc947462fa7c90109f6235840537fd58da054ff75f06a5284f2370",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:42:20.788Z",
+  "adapterVersion": "1.0.0"
+}

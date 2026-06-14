@@ -1,0 +1,10 @@
+{
+  "source": "owid",
+  "slug": "median-age",
+  "vintage": "2026-06-13",
+  "url": "https://ourworldindata.org/grapher/median-age",
+  "checksum": "9d8f0ad39ed406efea85c9fdf7d1e2f49fd73d4e0eb1ddf6f01b011912cdfe43",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-13T14:27:26.307Z",
+  "adapterVersion": "1.0.0"
+}

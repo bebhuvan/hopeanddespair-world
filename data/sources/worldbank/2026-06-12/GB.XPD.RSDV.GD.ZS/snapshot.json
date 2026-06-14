@@ -1,0 +1,10 @@
+{
+  "source": "worldbank",
+  "slug": "GB.XPD.RSDV.GD.ZS",
+  "vintage": "2026-06-12",
+  "url": "https://data.worldbank.org/indicator/GB.XPD.RSDV.GD.ZS",
+  "checksum": "4d3e7ae2e5be1ea3258f12d3af8a18f7d6d5d9b8fcb596d7f1ab75976ef5b8c3",
+  "license": "CC BY 4.0",
+  "fetchedAt": "2026-06-12T13:44:20.873Z",
+  "adapterVersion": "1.0.0"
+}
