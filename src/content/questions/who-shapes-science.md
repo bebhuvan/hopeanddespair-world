@@ -16,7 +16,7 @@ atlas:
 caveats:
   - "<b>OpenAlex counts scholarly works, not only journal articles.</b> Its graph includes articles, books, proceedings, preprints, repositories, and other research objects where metadata exists. That breadth is the point, but it is broader than older journal-article statistics."
   - "<b>Country counts are country-attributed, not nationally exclusive.</b> A paper with authors in China and Germany can count for both. That is correct for collaboration, but it means country bars are not slices of one pie."
-  - "<b>Citations are an influence proxy, not a truth meter.</b> Citation-normalized top-10% status is useful because it adjusts for field and year, but citations still follow language, prestige, network, and topic fashions."
+  - "<b>Citations are an influence proxy, not a truth meter.</b> Citation-normalized top-10% status is useful because it adjusts for field and year, but citations still follow language, prestige, network, and topic fashions, and some national literatures cite heavily within themselves."
   - "Everything OpenAlex-derived here is snapshotted through the official API under CC0. The article uses grouped aggregates, not live requests at page load."
 
 intro:
@@ -29,7 +29,8 @@ movements:
     question: "How large is the visible research system?"
     claim: "OpenAlex records about 10.6 million scholarly works published in 2024, up from under 100,000 in 1900."
     dropCap: true
-    explainer: "Start with the scale, because it changes the meaning of every other chart. In 1900, OpenAlex records about 92,000 scholarly works. By 2000 it records 3.8 million. By 2024, 10.6 million. Some of that is better indexing and broader metadata. But the broad fact is not subtle: science became an industrial-scale human activity.\n\nThat is hopeful if your problem needs more eyes, instruments, languages, and local knowledge. It is terrifying if your problem is judgment. The scarce resource is no longer a place to publish. It is attention, synthesis, replication, and knowing which claims actually changed the map."
+    sidenote: { mark: "a", text: "<b>Why the recent years dip.</b> OpenAlex keeps finding and adding older works for years after they appear, so the last few years of any count are provisional and read low. The 2020 peak partly reflects this: 2020 has simply had more time to fill in than 2024. Read the recent slope as unsettled, not as proof that science is shrinking." }
+    explainer: "Start with the scale, because it changes the meaning of every other chart. In 1900, OpenAlex records about 92,000 scholarly works. By 2000 it records 3.8 million. By 2024, 10.6 million. The line is not a clean climb to the present. It peaks near 11.4 million around 2020, then dips, but that dip is mostly a counting effect: the newest years are still being indexed. A real slowdown and a simple lag look the same for now. Some of the long-run rise is better indexing too. The broad fact survives all of it: science became an industrial-scale human activity.\n\nThat is hopeful if your problem needs more eyes, instruments, languages, and local knowledge. It is terrifying if your problem is judgment. The scarce resource is no longer a place to publish. It is attention, synthesis, replication, and knowing which claims actually changed the map."
     captionLeft: "<b>Scholarly works published per year</b> · World · OpenAlex records"
     captionRight: "1900 - 2024"
     source: "Source · OpenAlex · CC0 1.0"
@@ -44,12 +45,13 @@ movements:
     take:
       hope: "More people, institutions, and fields can now contribute to the formal record of knowledge."
       despair: "A literature this large can bury signal under output, incentives, and unreadable abundance."
-      confusion: "The count mixes real growth with better indexing; it measures the visible system, not pure discovery."
+      confusion: "The count mixes real growth with better indexing, and the post-2020 years are still filling in, so recent dips may be lag, not decline."
 
   - eyebrow: "The geography"
     fig: "FIG. 2"
     question: "Where is new science being produced now?"
     claim: "In 2024, China and the United States are nearly tied in OpenAlex country-attributed works."
+    sidenote: { mark: "b", text: "<b>Indonesia at number four</b> surprises most readers, and it is part real, part measurement quirk. Indonesia built strong national open-access repositories and journal platforms that OpenAlex indexes well, which lifts its visible count above what its research spending alone would predict. The bar is a footprint in the graph, not a claim that Indonesia out-produces Germany in every sense." }
     explainer: "This is the first big map change. In OpenAlex's 2024 country grouping, China appears on about 1.28 million works and the United States on about 1.21 million. India and Indonesia follow at about 450,000 each, with the United Kingdom, Germany, France, Brazil, Italy, Japan, Canada, and Spain behind them.\n\nDo not read this as a quality ranking. It is a presence ranking. Large countries, large university systems, publication incentives, and collaboration all matter. But presence matters. The old mental picture of science as a North Atlantic archive with everyone else reading along is obsolete."
     captionLeft: "<b>Works by author-institution country</b> · 2024 · million"
     captionRight: "country-attributed, not exclusive"
@@ -133,8 +135,8 @@ movements:
     chart:
       id: "s5"
       dataRefs: ["openalex-field-medicine", "openalex-field-social-sciences", "openalex-field-engineering", "openalex-field-computer-science", "openalex-field-environmental-science"]
-      ymax: 1.8
-      yTicks: [0,0.45,0.9,1.35,1.8]
+      ymax: 2.1
+      yTicks: [0,0.7,1.4,2.1]
       xTicks: [2000,2005,2010,2015,2020,2024]
       series:
         - { name: "Medicine", color: "hope", data: [[2000,0.56],[2024,1.63]] }
@@ -169,7 +171,7 @@ movements:
       confusion: "A fast-growing field may still be smaller than a slower-growing field; growth and size answer different questions."
 
   - eyebrow: "The opening"
-    fig: "FIG. 4"
+    fig: "FIG. 7"
     question: "Where is research most open to read?"
     claim: "In large fields, open-access shares now commonly sit above 60%."
     explainer: "The access story is more interesting by field than in total. In 2024, large OpenAlex fields such as earth and planetary sciences, agricultural and biological sciences, biochemistry, environmental science, mathematics, physics, neuroscience, and medicine all sit around the low-to-high sixties or low seventies in open-access share.\n\nThat is a real change in the social contract of science. It means a student, patient advocate, engineer, journalist, or small-city researcher can often reach the paper without a subscription wall. It does not make the paper understandable, trustworthy, translated, or reusable. But the locked door is opening."
@@ -177,7 +179,7 @@ movements:
     captionRight: "fields with at least 100,000 works"
     source: "Source · OpenAlex · CC0 1.0"
     chart:
-      id: "s4"
+      id: "s7"
       dataRef: "openalex-open-access-by-field-2024"
       ymax: 100
       yTicks: [0,25,50,75,100]
@@ -191,7 +193,7 @@ movements:
       confusion: "Open-access metadata is imperfect, and fields differ in preprint, repository, and journal culture."
 
   - eyebrow: "The collaboration"
-    fig: "FIG. 5"
+    fig: "FIG. 8"
     question: "Is science becoming more international?"
     claim: "The share of works with institutions in more than one country rose from about 5.0% in 2000 to 12.6% in 2024."
     explainer: "The graph is knitting together. In 2000, only about one in twenty OpenAlex works had authorship institutions from more than one country. By 2024 it is about one in eight. That is not a majority. Most research is still nationally contained. But the direction is clear.\n\nInternational collaboration is not automatically virtuous. It can reproduce hierarchy, with rich-country labs setting agendas and poorer-country partners supplying sites, samples, or local access. But it also means problems can be attacked at the scale they actually exist: pandemics, climate, food systems, migration, oceans, and AI are not domestic objects."
@@ -199,7 +201,7 @@ movements:
     captionRight: "2000 - 2024"
     source: "Source · OpenAlex · CC0 1.0"
     chart:
-      id: "s5"
+      id: "s8"
       dataRef: "openalex-international-collaboration-share"
       ymax: 15
       yTicks: [0,5,10,15]
@@ -213,7 +215,7 @@ movements:
       confusion: "Country counts depend on institutional metadata, so unaffiliated or poorly parsed works are easier to miss."
 
   - eyebrow: "The missing world"
-    fig: "FIG. 6"
+    fig: "FIG. 9"
     question: "Is the Global South entering the visible graph?"
     claim: "The share of works with a Global South institution rose from about 4.5% in 2000 to 30.4% in 2024."
     explainer: "This is the most hopeful line in the piece. OpenAlex's Global South institution flag appears on about 4.5 percent of works in 2000 and about 30.4 percent in 2024. That is not equality. It is a large opening in the formal map of knowledge.\n\nThe hard part is what the line does not say. A paper can include a Global South institution while the money, journal prestige, equipment, language, citation network, and theory-making power sit elsewhere. Participation is not control. Still, a world where more researchers can appear in the graph is different from one where they are invisible."
@@ -221,7 +223,7 @@ movements:
     captionRight: "2000 - 2024"
     source: "Source · OpenAlex · CC0 1.0"
     chart:
-      id: "s6"
+      id: "s9"
       dataRef: "openalex-global-south-share"
       ymax: 35
       yTicks: [0,10,20,30]
@@ -235,7 +237,7 @@ movements:
       confusion: "OpenAlex's Global South flag is institution-based; author identity, funding control, and leadership are harder questions."
 
   - eyebrow: "The institutions"
-    fig: "FIG. 7"
+    fig: "FIG. 10"
     question: "Who produces the visible record?"
     claim: "Education institutions dominate, but hospitals, facilities, governments, companies, and nonprofits all appear at scale."
     explainer: "OpenAlex is useful because it does not stop at papers. It connects works to institutions, and those institutions have types. In 2024, education institutions appear on about 5.5 million works. Healthcare and facilities each appear around one million. Government, companies, nonprofits, funders, archives, and others form the rest.\n\nThat is the modern research system: universities, hospitals, national labs, companies, field stations, repositories, funders, and infrastructure. Treating science as only universities misses how medicine, AI, energy, defence, agriculture, and climate knowledge are actually made."
@@ -243,7 +245,7 @@ movements:
     captionRight: "author institutions"
     source: "Source · OpenAlex · CC0 1.0"
     chart:
-      id: "s7"
+      id: "s10"
       dataRef: "openalex-institution-types-2024"
       ymax: 6
       yTicks: [0,1.5,3,4.5,6]
@@ -256,15 +258,15 @@ movements:
       confusion: "Institution-type metadata is coarse; the same organization can play several roles in the research system."
 
   - eyebrow: "The attention"
-    fig: "FIG. 8"
+    fig: "FIG. 11"
     question: "Who gets highly cited?"
     claim: "Among large 2020 producers, smaller rich research systems can have a higher top-cited share than the biggest producers."
-    explainer: "Volume and attention are different maps. Using 2020 works so citations have time to accumulate, OpenAlex's citation-normalized top-10% flag puts Australia, the Netherlands, Switzerland, Italy, the United Kingdom, China, Spain, Germany, Canada, South Korea, the United States, and Poland near the top among countries with at least 75,000 country-attributed works.\n\nThis does not mean these countries are simply 'better'. Highly cited work follows field mix, language, collaboration networks, prestige, journal placement, and rich-country visibility. But it does show the key point: the country that produces the most works is not automatically the country whose works receive the most attention per work."
+    explainer: "Volume and attention are different maps, and laying one over the other breaks the obvious story. Using 2020 works so citations have time to accumulate, OpenAlex's citation-normalized top-10% flag ranks Australia first at about 27 percent, with the Netherlands, Switzerland, Italy, and the United Kingdom close behind. The surprise is lower down the list. China, the largest producer by raw volume, sits sixth at about 22 percent, above Germany and Canada. The United States, the old prestige center, lands near the bottom of this group at about 16 percent.\n\nRead this as a signal, not a scoreboard. Highly cited work follows field mix, language, collaboration networks, journal placement, and rich-country visibility. China's high share in particular is contested, because part of its citation flow circulates inside its own fast-growing literature. The United States reads low partly because OpenAlex indexes a wide American tail of reports and repository items that almost nothing cites. The narrow but real takeaway: producing the most work is not the same as producing the most-noticed work."
     captionLeft: "<b>Top-cited share by country</b> · 2020 works · % in top citation percentile band"
     captionRight: "countries with at least 75,000 works"
     source: "Source · OpenAlex · CC0 1.0"
     chart:
-      id: "s8"
+      id: "s11"
       dataRef: "openalex-top10-share-by-country-2020"
       ymax: 30
       yTicks: [0,5,10,15,20,25,30]

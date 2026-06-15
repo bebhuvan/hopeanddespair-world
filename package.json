@@ -18,7 +18,8 @@
     "check:size": "size-limit",
     "check:nojs": "test -z \"$(find dist -name '*.js' -not -path '*/pagefind/*' 2>/dev/null)\" && echo 'OK: zero external JS on content pages (search index under /pagefind only)' || (echo 'FAIL: external JS found outside /pagefind' && find dist -name '*.js' -not -path '*/pagefind/*' && exit 1)",
     "check:nolib": "! grep -rlE 'd3\\.(min|v[0-9]|select|scale)|chart\\.js|new Chart\\(|Highcharts|Plotly|echarts|recharts' dist --include='*.html' --include='*.js' || (echo 'FAIL: a charting library leaked into the build' && exit 1)",
-    "verify": "pnpm prose:lint && pnpm build && pnpm check:size && pnpm check:nojs && pnpm check:nolib",
+    "check:axes": "tsx scripts/check-axes.ts",
+    "verify": "pnpm prose:lint && pnpm check:axes && pnpm build && pnpm check:size && pnpm check:nojs && pnpm check:nolib",
     "og": "tsx scripts/make-og.ts",
     "cf:dev": "wrangler dev",
     "deploy": "pnpm build && wrangler deploy"
