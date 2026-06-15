@@ -1,0 +1,129 @@
+{
+  "indicatorId": "science.openalex_english_share.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "% of works",
+  "points": [
+    {
+      "t": 2000,
+      "value": 71
+    },
+    {
+      "t": 2001,
+      "value": 68.9
+    },
+    {
+      "t": 2002,
+      "value": 71.3
+    },
+    {
+      "t": 2003,
+      "value": 70.1
+    },
+    {
+      "t": 2004,
+      "value": 69.1
+    },
+    {
+      "t": 2005,
+      "value": 69.7
+    },
+    {
+      "t": 2006,
+      "value": 69.8
+    },
+    {
+      "t": 2007,
+      "value": 69.7
+    },
+    {
+      "t": 2008,
+      "value": 68.9
+    },
+    {
+      "t": 2009,
+      "value": 68.6
+    },
+    {
+      "t": 2010,
+      "value": 68.3
+    },
+    {
+      "t": 2011,
+      "value": 68.9
+    },
+    {
+      "t": 2012,
+      "value": 68.3
+    },
+    {
+      "t": 2013,
+      "value": 68.3
+    },
+    {
+      "t": 2014,
+      "value": 67.3
+    },
+    {
+      "t": 2015,
+      "value": 66.5
+    },
+    {
+      "t": 2016,
+      "value": 65.4
+    },
+    {
+      "t": 2017,
+      "value": 68.6
+    },
+    {
+      "t": 2018,
+      "value": 71.2
+    },
+    {
+      "t": 2019,
+      "value": 71.8
+    },
+    {
+      "t": 2020,
+      "value": 74.2
+    },
+    {
+      "t": 2021,
+      "value": 77.5
+    },
+    {
+      "t": 2022,
+      "value": 79.1
+    },
+    {
+      "t": 2023,
+      "value": 79.8
+    },
+    {
+      "t": 2024,
+      "value": 79.2
+    }
+  ],
+  "derivedFrom": [
+    "01d91b29d589f42eed3f8917fb25def05868a9214a5d9525140c25e97667ceae",
+    "cc8ced8d6bd2f63d2e8f715f31cd05c0f0133dfb2d787fea9655857423e724d0"
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "works language:en / all works, group_by publication_year",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,language:en&group_by=publication_year&per-page=100",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-15",
+    "checksum": "93403ffe464584735421cbd5edfc86571225fe3bfd6e06310903c43bf5be2f3b",
+    "definition": "Share of OpenAlex works detected as English, by publication year.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "ratio",
+      "detail": "divided yearly works with language:en by all works in the same publication year, 2000-2024"
+    }
+  ]
+}

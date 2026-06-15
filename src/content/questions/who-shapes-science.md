@@ -17,10 +17,14 @@ caveats:
   - "<b>OpenAlex counts scholarly works, not only journal articles.</b> Its graph includes articles, books, proceedings, preprints, repositories, and other research objects where metadata exists. That breadth is the point, but it is broader than older journal-article statistics."
   - "<b>Country counts are country-attributed, not nationally exclusive.</b> A paper with authors in China and Germany can count for both. That is correct for collaboration, but it means country bars are not slices of one pie."
   - "<b>Citations are an influence proxy, not a truth meter.</b> Citation-normalized top-10% status is useful because it adjusts for field and year, but citations still follow language, prestige, network, and topic fashions, and some national literatures cite heavily within themselves."
+  - "<b>OpenAlex sees the indexed world, not all of science.</b> Like every large bibliographic database, it covers English-language and DOI-bearing work best, and it under-counts local-language journals, books, and scholarship outside the main indexing pipelines. The whole graph is the visible part of science, not its full extent."
+  - "<b>A work count measures visibility, not value.</b> Appearing in the graph is not the same as being correct, replicated, useful, or even read. Output rises through genuine discovery, but also through pressure to publish and through predatory journals, which inflate some countries and fields more than others."
+  - "<b>The data shows participation, not power.</b> OpenAlex is strong on who appears, where, and in what field. It is weak on who paid, who led, whose question it was, and who holds first and corresponding authorship. The article's central tension, participation versus control, lives largely in what this data cannot see."
   - "Everything OpenAlex-derived here is snapshotted through the official API under CC0. The article uses grouped aggregates, not live requests at page load."
 
 intro:
   - "The lazy story is that science publishes more papers every year. True, but thin. <a href=\"https://openalex.org\" rel=\"noopener\">OpenAlex</a> lets us ask the better question: <em>who is connected to the graph of knowledge, where are they, what fields dominate, what is open, and who gets attention?</em>"
+  - "A word on where these numbers come from. OpenAlex is a free, open catalogue of the world's scholarly record, run by the non-profit OurResearch and placed in the public domain. It was built as an open answer to the paywalled indexes that long decided who counted as part of the literature, such as Web of Science and Scopus. It now links hundreds of millions of works to their authors, institutions, countries, fields, and citations. That openness is the whole reason a page like this one can rebuild the map directly, instead of trusting a commercial gatekeeper. It also casts a wider net than the old indexes, so its counts run higher and should not be read as the same thing as journal-only statistics."
   - "Read that way, the answer is not one mood. The hopeful version is real: knowledge is more open, less Western, and more collaborative than it was in 2000. The despairing version is also real: visibility still concentrates around rich institutions, old prestige systems, and fields with money, labs, English, and citation machinery behind them."
 
 movements:
@@ -172,6 +176,51 @@ movements:
 
   - eyebrow: "The opening"
     fig: "FIG. 7"
+    question: "How much of new research is free to read?"
+    claim: "Open access climbed from about 17% of works in 2000 to about 61% in 2024."
+    explainer: "Counting works is one thing. Counting which ones a stranger can actually open is another. In 2000, about 17 percent of that year's works were open access. The share barely moved for a decade, sitting in the low twenties through the late 2000s. Then it turned sharply upward: about 32 percent by 2015, about 49 percent by 2020, and about 61 percent by 2024.\n\nThe bend is not an accident. Through the 2010s preprint servers spread beyond physics, research funders began requiring open deposit, and national policies such as Europe's Plan S pushed public research toward open journals. The result is a quiet inversion. For most of the modern record, reading the frontier meant paying for it. Now, for the first time, most new work is open by default."
+    captionLeft: "<b>Open-access share of works</b> · World · % of OpenAlex works"
+    captionRight: "2000 - 2024"
+    source: "Source · OpenAlex · CC0 1.0"
+    chart:
+      id: "s7"
+      dataRef: "openalex-open-access-share-world"
+      x0: 2000
+      x1: 2024
+      ymax: 75
+      yTicks: [0,25,50,75]
+      xTicks: [2000,2005,2010,2015,2020,2024]
+      valueSuffix: "%"
+      series:
+        - { name: "Open access", color: "hope", data: [[2000,17.2],[2024,61.1]] }
+    take:
+      hope: "Most new research is now reachable by anyone with a connection, not only by people inside subscribing institutions."
+      despair: "Open to read is still not open to understand, reproduce, or build on, and some open access is paid for by author fees that exclude poorer labs."
+      confusion: "OpenAlex's open-access flag mixes gold, green, hybrid, and bronze routes, which differ in how durable and reusable the access really is."
+
+  - eyebrow: "The opening"
+    fig: "FIG. 8"
+    question: "What kind of open is it?"
+    claim: "About 39% of 2024 works are still paywalled; the open majority is spread across five different routes."
+    explainer: "Open access is not one thing. OpenAlex sorts each work into a route. In 2024 about 39 percent are closed, behind a paywall. The rest are open in five different ways. The largest open routes are green, where an author self-archives a copy, and diamond, where the journal is open and charges the author nothing. Gold journals are open but usually charge a publication fee. Hybrid and bronze are open articles sitting inside otherwise paywalled venues, and bronze in particular can be switched off at a publisher's discretion.\n\nThe split matters for the despair reading. Diamond and green cost a reader nothing and an author little, so they widen access without a wallet test. Gold and hybrid shift the cost from readers to authors, which can move the barrier from rich libraries to funded labs. So more open is real, but how durable and how fair that openness is depends on which route is growing."
+    captionLeft: "<b>Works by open-access route</b> · 2024 · million"
+    captionRight: "OpenAlex oa_status"
+    source: "Source · OpenAlex · CC0 1.0"
+    chart:
+      id: "s8"
+      dataRef: "openalex-oa-status-2024"
+      ymax: 5
+      yTicks: [0,1,2,3,4,5]
+      xTicks: [0,1,2,3,4,5]
+      series:
+        - { name: "Works", color: "stone", data: [[2024,4.13]] }
+    take:
+      hope: "Most of the literature is now open in some form, and the no-fee routes, diamond and green, are a large part of it."
+      despair: "Author-paid routes can move the barrier from readers to researchers, favouring funded labs over poorer ones."
+      confusion: "Route labels come from metadata and licences that change over time, and bronze access can be withdrawn."
+
+  - eyebrow: "The opening"
+    fig: "FIG. 9"
     question: "Where is research most open to read?"
     claim: "In large fields, open-access shares now commonly sit above 60%."
     explainer: "The access story is more interesting by field than in total. In 2024, large OpenAlex fields such as earth and planetary sciences, agricultural and biological sciences, biochemistry, environmental science, mathematics, physics, neuroscience, and medicine all sit around the low-to-high sixties or low seventies in open-access share.\n\nThat is a real change in the social contract of science. It means a student, patient advocate, engineer, journalist, or small-city researcher can often reach the paper without a subscription wall. It does not make the paper understandable, trustworthy, translated, or reusable. But the locked door is opening."
@@ -179,7 +228,7 @@ movements:
     captionRight: "fields with at least 100,000 works"
     source: "Source · OpenAlex · CC0 1.0"
     chart:
-      id: "s7"
+      id: "s9"
       dataRef: "openalex-open-access-by-field-2024"
       ymax: 100
       yTicks: [0,25,50,75,100]
@@ -192,8 +241,29 @@ movements:
       despair: "Open to read is not open to understand, reproduce, translate, or build on."
       confusion: "Open-access metadata is imperfect, and fields differ in preprint, repository, and journal culture."
 
+  - eyebrow: "The medium"
+    fig: "FIG. 10"
+    question: "Where does the visible record actually live?"
+    claim: "Journals still hold most works, but repositories now carry nearly a fifth of the annual record."
+    explainer: "A work has to live somewhere, and that somewhere is changing. In 2024, journals are still the main home of the record, with about 6.2 million works. But repositories, the open archives where authors deposit preprints and accepted manuscripts, now carry about 1.9 million, close to a fifth of the year's total. Ebook platforms, book series, and a long tail of conferences and data catalogues make up the rest.\n\nThis is the plumbing behind the openness story. The rise of repositories is much of what green open access means in practice, and preprint servers are why some fields now circulate findings months before formal publication. It also stretches what counts as the literature, because a deposited manuscript and a peer-reviewed article both appear in the graph, even though they have passed through very different amounts of checking."
+    captionLeft: "<b>Works by source type</b> · 2024 · million"
+    captionRight: "primary location"
+    source: "Source · OpenAlex · CC0 1.0"
+    chart:
+      id: "s10"
+      dataRef: "openalex-source-types-2024"
+      ymax: 8
+      yTicks: [0,2,4,6,8]
+      xTicks: [0,2,4,6,8]
+      series:
+        - { name: "Works", color: "stone", data: [[2024,6.24]] }
+    take:
+      hope: "Open repositories and preprints now carry a large slice of the record, speeding how findings spread."
+      despair: "Mixing checked and unchecked work in one graph makes it easier to mistake a draft for a settled result."
+      confusion: "Source-type metadata is coarse, and the same work can exist as both a preprint and a journal article."
+
   - eyebrow: "The collaboration"
-    fig: "FIG. 8"
+    fig: "FIG. 11"
     question: "Is science becoming more international?"
     claim: "The share of works with institutions in more than one country rose from about 5.0% in 2000 to 12.6% in 2024."
     explainer: "The graph is knitting together. In 2000, only about one in twenty OpenAlex works had authorship institutions from more than one country. By 2024 it is about one in eight. That is not a majority. Most research is still nationally contained. But the direction is clear.\n\nInternational collaboration is not automatically virtuous. It can reproduce hierarchy, with rich-country labs setting agendas and poorer-country partners supplying sites, samples, or local access. But it also means problems can be attacked at the scale they actually exist: pandemics, climate, food systems, migration, oceans, and AI are not domestic objects."
@@ -201,7 +271,7 @@ movements:
     captionRight: "2000 - 2024"
     source: "Source · OpenAlex · CC0 1.0"
     chart:
-      id: "s8"
+      id: "s11"
       dataRef: "openalex-international-collaboration-share"
       ymax: 15
       yTicks: [0,5,10,15]
@@ -215,7 +285,7 @@ movements:
       confusion: "Country counts depend on institutional metadata, so unaffiliated or poorly parsed works are easier to miss."
 
   - eyebrow: "The missing world"
-    fig: "FIG. 9"
+    fig: "FIG. 12"
     question: "Is the Global South entering the visible graph?"
     claim: "The share of works with a Global South institution rose from about 4.5% in 2000 to 30.4% in 2024."
     explainer: "This is the most hopeful line in the piece. OpenAlex's Global South institution flag appears on about 4.5 percent of works in 2000 and about 30.4 percent in 2024. That is not equality. It is a large opening in the formal map of knowledge.\n\nThe hard part is what the line does not say. A paper can include a Global South institution while the money, journal prestige, equipment, language, citation network, and theory-making power sit elsewhere. Participation is not control. Still, a world where more researchers can appear in the graph is different from one where they are invisible."
@@ -223,7 +293,7 @@ movements:
     captionRight: "2000 - 2024"
     source: "Source · OpenAlex · CC0 1.0"
     chart:
-      id: "s9"
+      id: "s12"
       dataRef: "openalex-global-south-share"
       ymax: 35
       yTicks: [0,10,20,30]
@@ -236,8 +306,32 @@ movements:
       despair: "Being present in the graph is not the same as setting the agenda or receiving equal credit."
       confusion: "OpenAlex's Global South flag is institution-based; author identity, funding control, and leadership are harder questions."
 
+  - eyebrow: "The language"
+    fig: "FIG. 13"
+    question: "What language is the visible record written in?"
+    claim: "About 79% of 2024 works are in English, and that dominance has not faded in two decades."
+    explainer: "Visibility has a language. Across the whole period, most of the indexed record is in English: about 71 percent in 2000. The share actually slipped through the 2000s as more local-language work was indexed, reaching about 66 percent by 2015. Then it climbed again, to about 79 percent by 2024. Read the recent rise with care. Non-English and local journals tend to enter OpenAlex more slowly, so the newest years over-count English much as they under-count everything else.\n\nThe honest summary is not decline. English dominance is sticky, sitting between two-thirds and four-fifths of the visible record for two decades. After English, the largest languages in 2024 are Portuguese, Spanish, German, and Indonesian, the last echoing the same national platforms that lifted Indonesia up the country ranking. A researcher who writes in another language is not absent from science. They are just harder to see in this graph, and harder to cite."
+    captionLeft: "<b>English-language share of works</b> · World · % of OpenAlex works"
+    captionRight: "2000 - 2024"
+    source: "Source · OpenAlex · CC0 1.0"
+    chart:
+      id: "s13"
+      dataRef: "openalex-english-share-world"
+      x0: 2000
+      x1: 2024
+      ymax: 100
+      yTicks: [0,25,50,75,100]
+      xTicks: [2000,2005,2010,2015,2020,2024]
+      valueSuffix: "%"
+      series:
+        - { name: "English", color: "stone", data: [[2000,71],[2024,79.2]] }
+    take:
+      hope: "More non-English work is indexed than two decades ago, so the record is less exclusively Anglophone than at its peak."
+      despair: "Writing in English still decides who is easily found and cited; other-language scholarship stays harder to see."
+      confusion: "Language is auto-detected and missing for some works, and recent years over-count English because local journals index slowly."
+
   - eyebrow: "The institutions"
-    fig: "FIG. 10"
+    fig: "FIG. 14"
     question: "Who produces the visible record?"
     claim: "Education institutions dominate, but hospitals, facilities, governments, companies, and nonprofits all appear at scale."
     explainer: "OpenAlex is useful because it does not stop at papers. It connects works to institutions, and those institutions have types. In 2024, education institutions appear on about 5.5 million works. Healthcare and facilities each appear around one million. Government, companies, nonprofits, funders, archives, and others form the rest.\n\nThat is the modern research system: universities, hospitals, national labs, companies, field stations, repositories, funders, and infrastructure. Treating science as only universities misses how medicine, AI, energy, defence, agriculture, and climate knowledge are actually made."
@@ -245,7 +339,7 @@ movements:
     captionRight: "author institutions"
     source: "Source · OpenAlex · CC0 1.0"
     chart:
-      id: "s10"
+      id: "s14"
       dataRef: "openalex-institution-types-2024"
       ymax: 6
       yTicks: [0,1.5,3,4.5,6]
@@ -258,7 +352,7 @@ movements:
       confusion: "Institution-type metadata is coarse; the same organization can play several roles in the research system."
 
   - eyebrow: "The attention"
-    fig: "FIG. 11"
+    fig: "FIG. 15"
     question: "Who gets highly cited?"
     claim: "Among large 2020 producers, smaller rich research systems can have a higher top-cited share than the biggest producers."
     explainer: "Volume and attention are different maps, and laying one over the other breaks the obvious story. Using 2020 works so citations have time to accumulate, OpenAlex's citation-normalized top-10% flag ranks Australia first at about 27 percent, with the Netherlands, Switzerland, Italy, and the United Kingdom close behind. The surprise is lower down the list. China, the largest producer by raw volume, sits sixth at about 22 percent, above Germany and Canada. The United States, the old prestige center, lands near the bottom of this group at about 16 percent.\n\nRead this as a signal, not a scoreboard. Highly cited work follows field mix, language, collaboration networks, journal placement, and rich-country visibility. China's high share in particular is contested, because part of its citation flow circulates inside its own fast-growing literature. The United States reads low partly because OpenAlex indexes a wide American tail of reports and repository items that almost nothing cites. The narrow but real takeaway: producing the most work is not the same as producing the most-noticed work."
@@ -266,7 +360,7 @@ movements:
     captionRight: "countries with at least 75,000 works"
     source: "Source · OpenAlex · CC0 1.0"
     chart:
-      id: "s11"
+      id: "s15"
       dataRef: "openalex-top10-share-by-country-2020"
       ymax: 30
       yTicks: [0,5,10,15,20,25,30]
@@ -308,15 +402,21 @@ methodology:
   - { term: "Country share", detail: "The country-share chart divides each country's yearly country-attributed work count by all OpenAlex works in that publication year. Because country counts are non-exclusive, shares should be read as footprint, not mutually exclusive slices." }
   - { term: "Field time series", detail: "Field lines filter works by <code>primary_topic.field.id</code>, group by publication year, and show selected large fields from 2000 through 2024. The article stops at 2024 because 2025 and 2026 are still subject to indexing lag." }
   - { term: "Field growth multiples", detail: "The field-growth bar divides each selected field's 2024 output by its 2000 output. This answers what accelerated fastest, not what is largest." }
+  - { term: "Open access over time", detail: "The open-access trend divides each year's <code>is_oa:true</code> work count by all works in that year, from the full-history <code>works?group_by=publication_year</code> snapshots. OpenAlex's open-access flag pools gold, green, hybrid, and bronze routes, which differ in how durable and reusable the access is." }
   - { term: "Open access by field", detail: "The field openness chart divides 2024 <code>is_oa:true</code> field counts by all 2024 field counts and shows large fields with at least 100,000 works." }
+  - { term: "Open-access route", detail: "The route chart groups 2024 works by <code>open_access.oa_status</code>: diamond and gold are open journals (diamond charges no author fee), green is self-archived, hybrid and bronze are open articles in paywalled venues, and closed is paywalled." }
+  - { term: "Source type", detail: "The source-type chart groups 2024 works by <code>primary_location.source.type</code> (journal, repository, ebook platform, and so on). Repository largely means preprint servers and institutional archives." }
+  - { term: "Language", detail: "The language line divides yearly works with <code>language:en</code> by all works in that year. Language is auto-detected and missing for some works, and local-language journals index more slowly, so recent years over-count English." }
   - { term: "International collaboration", detail: "The collaboration line divides yearly works with <code>countries_distinct_count &gt; 1</code> by all yearly works from 2000 to 2024." }
   - { term: "Global South participation", detail: "The Global South line divides yearly works with <code>authorships.institutions.is_global_south:true</code> by all yearly works. It is institution-based, not author-identity-based." }
   - { term: "Citation influence", detail: "The attention chart uses 2020 works marked by OpenAlex as <code>citation_normalized_percentile.is_in_top_10_percent:true</code>, divided by all 2020 works for countries with at least 75,000 country-attributed works." }
 
 sources:
-  - { id: "openalex", name: "OpenAlex", url: "https://openalex.org", license: "CC0 1.0", vintage: "2026-06-13", note: "Used for works, country attribution, fields, open access, collaboration, Global South participation, institution types, and citation-normalized top-cited shares." }
+  - { id: "openalex", name: "OpenAlex", url: "https://openalex.org", license: "CC0 1.0", vintage: "2026-06-15", note: "Used for works, country attribution, fields, open access and its routes, source types, language, collaboration, Global South participation, institution types, and citation-normalized top-cited shares." }
 
 revisions:
+  - { date: "2026-06-15", text: "Added the open-access route mix (diamond/gold/green/hybrid/bronze/closed), a source-type chart (journals vs repositories), and an English-language-share line; Title-cased the institution and source-type labels." }
+  - { date: "2026-06-15", text: "Added an open-access-over-time line (17% to 61%, 2000-2024); flagged the post-2020 indexing dip in the total-works chart; sharpened the citation-attention section on China's high and contested top-cited share; added a brief on what OpenAlex is and what it does not measure." }
   - { date: "2026-06-13", text: "Expanded from a thin output-count article into an OpenAlex graph story: geography, fields, openness, collaboration, Global South participation, institutions, and citation attention." }
 ---
 

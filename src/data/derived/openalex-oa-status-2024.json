@@ -1,0 +1,65 @@
+{
+  "chartId": "openalex-oa-status-2024",
+  "kind": "bars",
+  "title": "Works by open-access route, 2024",
+  "unit": "works, million",
+  "yearSpan": "2024",
+  "bars": [
+    {
+      "label": "Closed",
+      "value": 4.13,
+      "color": "despair"
+    },
+    {
+      "label": "Green",
+      "value": 1.84,
+      "color": "hope"
+    },
+    {
+      "label": "Diamond",
+      "value": 1.71,
+      "color": "hope"
+    },
+    {
+      "label": "Gold",
+      "value": 1.51,
+      "color": "ochre"
+    },
+    {
+      "label": "Hybrid",
+      "value": 0.89,
+      "color": "ochre"
+    },
+    {
+      "label": "Bronze",
+      "value": 0.55,
+      "color": "stone"
+    }
+  ],
+  "xmax": 5,
+  "xTicks": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "provenance": {
+    "source": "openalex",
+    "sourceIndicator": "works group_by open_access.oa_status",
+    "url": "https://api.openalex.org/works?filter=from_publication_date:2024-01-01,to_publication_date:2024-12-31&group_by=open_access.oa_status&per-page=200",
+    "license": "CC0 1.0",
+    "vintage": "2026-06-15",
+    "checksum": "6b8bb2b78300a3b25b1f603da0473b15cb62fbf9b77368e1a06ea1c148f77d6e",
+    "definition": "Works published in 2024 by open-access route. Diamond and gold are open journals (diamond charges no author fee); green is self-archived; hybrid and bronze are open articles in otherwise paywalled venues; closed is paywalled.",
+    "attribution": "OpenAlex",
+    "primarySource": "OpenAlex"
+  },
+  "recipe": [
+    {
+      "op": "openalex_group_by",
+      "detail": "group 2024 works by open-access route (open_access.oa_status); show counts in millions"
+    }
+  ]
+}

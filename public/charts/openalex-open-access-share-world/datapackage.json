@@ -1,0 +1,38 @@
+{
+  "name": "science-works_open_access_share-world",
+  "title": "Share of OpenAlex works marked open access, by publication year.",
+  "licenses": [
+    {
+      "name": "CC0 1.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "OpenAlex",
+      "path": "https://api.openalex.org/works?filter=is_oa:true&group_by=publication_year"
+    }
+  ],
+  "created": "2026-06-12",
+  "resources": [
+    {
+      "name": "science-works_open_access_share-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "science_works_open_access_share_world",
+            "type": "number",
+            "unit": "% of works"
+          }
+        ]
+      }
+    }
+  ]
+}

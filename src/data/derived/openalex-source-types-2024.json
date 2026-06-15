@@ -6,37 +6,37 @@
   "yearSpan": "2024",
   "bars": [
     {
-      "label": "journal",
+      "label": "Journal",
       "value": 6.24,
       "color": "hope"
     },
     {
-      "label": "repository",
-      "value": 1.9,
+      "label": "Repository",
+      "value": 1.91,
       "color": "hope"
     },
     {
-      "label": "ebook platform",
-      "value": 0.45,
+      "label": "Ebook platform",
+      "value": 0.46,
       "color": "hope"
     },
     {
-      "label": "book series",
+      "label": "Book series",
       "value": 0.22,
       "color": "ochre"
     },
     {
-      "label": "igsnCatalog",
+      "label": "IGSN catalog",
       "value": 0.04,
       "color": "ochre"
     },
     {
-      "label": "conference",
+      "label": "Conference",
       "value": 0.03,
       "color": "ochre"
     },
     {
-      "label": "other",
+      "label": "Other",
       "value": 0,
       "color": "stone"
     }
@@ -54,8 +54,8 @@
     "sourceIndicator": "works group_by primary_location.source.type",
     "url": "https://api.openalex.org/works?filter=from_publication_date:2024-01-01,to_publication_date:2024-12-31&group_by=primary_location.source.type&per-page=200",
     "license": "CC0 1.0",
-    "vintage": "2026-06-13",
-    "checksum": "3971d2981d9b7768c480f11540d1aab0f240f5b36b7558d531e5c8e431d1de56",
+    "vintage": "2026-06-15",
+    "checksum": "c911070f21934305de7cde44588fae27d2bb1d91322281a1fbe02192aef779c0",
     "definition": "Works published in 2024, grouped by the source type of their primary location in OpenAlex.",
     "attribution": "OpenAlex",
     "primarySource": "OpenAlex"

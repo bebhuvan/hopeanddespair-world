@@ -1,0 +1,30 @@
+{
+  "entity": {
+    "id": "science.openalex_english_share.world",
+    "unit": "% of works",
+    "points": 25
+  },
+  "wasDerivedFrom": [
+    "01d91b29d589f42eed3f8917fb25def05868a9214a5d9525140c25e97667ceae",
+    "cc8ced8d6bd2f63d2e8f715f31cd05c0f0133dfb2d787fea9655857423e724d0"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "ratio",
+        "detail": "divided yearly works with language:en by all works in the same publication year, 2000-2024"
+      }
+    ],
+    "agent": "adapter:openalex@openalex-extras-1.0.0",
+    "used": {
+      "source": "openalex",
+      "slug": "works?filter=language:en&group_by=publication_year",
+      "url": "https://api.openalex.org/works?filter=from_publication_date:2000-01-01,to_publication_date:2024-12-31,language:en&group_by=publication_year&per-page=100",
+      "vintage": "2026-06-15",
+      "checksum": "93403ffe464584735421cbd5edfc86571225fe3bfd6e06310903c43bf5be2f3b",
+      "license": "CC0 1.0"
+    }
+  },
+  "primarySource": "OpenAlex"
+}

@@ -165,6 +165,14 @@ function cleanLabel(s: string) {
     .replace('Iran, Islamic Republic of', 'Iran');
 }
 
+// OpenAlex lowercases the institution/source-type facet display names (unlike country/field names);
+// Title-Case them for display. Mirrors titleType in openalex-extras.ts — keep the two in sync.
+function titleType(s: string) {
+  const o: Record<string, string> = { igsnCatalog: 'IGSN catalog', 'ebook platform': 'Ebook platform' };
+  return o[s] ?? s.charAt(0).toUpperCase() + s.slice(1);
+}
+const titleBars = (bars: Bar[]) => bars.map((b) => ({ ...b, label: titleType(b.label) }));
+
 function byName(groups: Group[]) {
   const out: Record<string, number> = {};
   for (const g of groups) out[cleanLabel(g.key_display_name)] = g.count;
@@ -399,7 +407,7 @@ async function main() {
     title: 'Works by institution type, 2024',
     unit: 'works, million',
     yearSpan: '2024',
-    bars: top(inst2024.groups, 9, 1_000_000, 2),
+    bars: titleBars(top(inst2024.groups, 9, 1_000_000, 2)),
     xmax: 6,
     xTicks: [0, 1.5, 3, 4.5, 6],
     sourceIndicator: 'works group_by authorships.institutions.type',
@@ -416,7 +424,7 @@ async function main() {
     title: 'Works by source type, 2024',
     unit: 'works, million',
     yearSpan: '2024',
-    bars: top(sourceTypes2024.groups, 8, 1_000_000, 2),
+    bars: titleBars(top(sourceTypes2024.groups, 8, 1_000_000, 2)),
     xmax: 8,
     xTicks: [0, 2, 4, 6, 8],
     sourceIndicator: 'works group_by primary_location.source.type',

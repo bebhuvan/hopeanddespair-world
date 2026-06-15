@@ -6,47 +6,47 @@
   "yearSpan": "2024",
   "bars": [
     {
-      "label": "education",
+      "label": "Education",
       "value": 5.51,
       "color": "hope"
     },
     {
-      "label": "healthcare",
-      "value": 1.03,
+      "label": "Healthcare",
+      "value": 1.04,
       "color": "hope"
     },
     {
-      "label": "facility",
+      "label": "Facility",
       "value": 1.02,
       "color": "hope"
     },
     {
-      "label": "government",
-      "value": 0.54,
+      "label": "Government",
+      "value": 0.55,
       "color": "ochre"
     },
     {
-      "label": "company",
+      "label": "Company",
       "value": 0.4,
       "color": "ochre"
     },
     {
-      "label": "nonprofit",
+      "label": "Nonprofit",
       "value": 0.29,
       "color": "ochre"
     },
     {
-      "label": "other",
+      "label": "Other",
       "value": 0.15,
       "color": "stone"
     },
     {
-      "label": "funder",
-      "value": 0.13,
+      "label": "Funder",
+      "value": 0.12,
       "color": "stone"
     },
     {
-      "label": "archive",
+      "label": "Archive",
       "value": 0.04,
       "color": "stone"
     }
@@ -64,8 +64,8 @@
     "sourceIndicator": "works group_by authorships.institutions.type",
     "url": "https://api.openalex.org/works?filter=from_publication_date:2024-01-01,to_publication_date:2024-12-31&group_by=authorships.institutions.type&per-page=200",
     "license": "CC0 1.0",
-    "vintage": "2026-06-13",
-    "checksum": "7b3e2ca6adfa99f7df139d861bf528c92ebd2c3c21b6819d041b074d7dfb30ff",
+    "vintage": "2026-06-15",
+    "checksum": "ab73338eceb6a340ada6e867f30ec5a2573d426dfc50c765f36c06e9ab32db55",
     "definition": "Works published in 2024, grouped by type of authorship institutions attached in OpenAlex.",
     "attribution": "OpenAlex",
     "primarySource": "OpenAlex"

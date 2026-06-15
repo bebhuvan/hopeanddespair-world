@@ -1,0 +1,30 @@
+{
+  "entity": {
+    "id": "science.works_open_access_share.world",
+    "unit": "% of works",
+    "points": 125
+  },
+  "wasDerivedFrom": [
+    "115405cc90d594fe506b9b822394bf994bc6734caae06167c59aa6a520533b71",
+    "ec6fc47b5c90e85f9414c7afaad233bf83fdae0d6f45b69754c01175522ae52a"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "ratio",
+        "detail": "divided yearly open-access works (is_oa:true) by all works in the same publication year"
+      }
+    ],
+    "agent": "adapter:openalex@openalex-oa-share-1.0.0",
+    "used": {
+      "source": "openalex",
+      "slug": "works?filter=is_oa:true&group_by=publication_year",
+      "url": "https://api.openalex.org/works?filter=is_oa:true&group_by=publication_year",
+      "vintage": "2026-06-12",
+      "checksum": "124c4aff0a606ae9aeba4eac91608bfb69002c0e23ce7127c811522a4e94a41e",
+      "license": "CC0 1.0"
+    }
+  },
+  "primarySource": "OpenAlex"
+}
