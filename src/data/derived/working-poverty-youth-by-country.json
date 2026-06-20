@@ -1,0 +1,98 @@
+{
+  "chartId": "working-poverty-youth-by-country",
+  "kind": "bars",
+  "title": "Youth working poverty by country",
+  "unit": "Employed youth (15–24) in extreme poverty, %",
+  "yearSpan": "2023–2023",
+  "bars": [
+    {
+      "label": "Madagascar",
+      "value": 89.8,
+      "color": "despair"
+    },
+    {
+      "label": "DR Congo",
+      "value": 82.2,
+      "color": "despair"
+    },
+    {
+      "label": "Mozambique",
+      "value": 80.5,
+      "color": "despair"
+    },
+    {
+      "label": "Malawi",
+      "value": 71.7,
+      "color": "despair"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 38.2,
+      "color": "ochre"
+    },
+    {
+      "label": "Kenya",
+      "value": 36.6,
+      "color": "ochre"
+    },
+    {
+      "label": "Nigeria",
+      "value": 36.4,
+      "color": "ochre"
+    },
+    {
+      "label": "Indonesia",
+      "value": 8.4,
+      "color": "hope"
+    },
+    {
+      "label": "India",
+      "value": 8.3,
+      "color": "hope"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 5.4,
+      "color": "hope"
+    },
+    {
+      "label": "Vietnam",
+      "value": 1.4,
+      "color": "hope"
+    },
+    {
+      "label": "Brazil",
+      "value": 0.9,
+      "color": "hope"
+    },
+    {
+      "label": "China",
+      "value": 0.2,
+      "color": "hope"
+    }
+  ],
+  "xmax": 95,
+  "xTicks": [
+    0,
+    30,
+    60,
+    90
+  ],
+  "provenance": {
+    "source": "ilostat",
+    "sourceIndicator": "DF_SDG_0111_SEX_AGE_RT [SEX_T, AGE_YTHADULT_Y15-24]",
+    "url": "https://ilostat.ilo.org",
+    "license": "CC BY 4.0",
+    "vintage": "2023–2023",
+    "checksum": "cd3f1348c3a8c9d1c920d899e63562de19da25f25d2652815e3f17221420ef43",
+    "definition": "Share of employed young people aged 15–24 living in extreme poverty (under $2.15 a day), latest year per country. The young carry the worst of working poverty. A curated 13-country spread sorted descending.",
+    "attribution": "ILOSTAT — International Labour Organization",
+    "primarySource": "ILOSTAT — ILO (SDG 1.1.1)"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 13 curated countries sorted descending"
+    }
+  ]
+}

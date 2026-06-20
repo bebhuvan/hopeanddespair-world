@@ -1,0 +1,85 @@
+{
+  "indicatorId": "social-protection-income-high",
+  "entity": "X05",
+  "entityName": "High income",
+  "unit": "% covered",
+  "points": [
+    {
+      "t": 2009,
+      "value": 76.6
+    },
+    {
+      "t": 2010,
+      "value": 77.1
+    },
+    {
+      "t": 2011,
+      "value": 77.8
+    },
+    {
+      "t": 2012,
+      "value": 78.4
+    },
+    {
+      "t": 2013,
+      "value": 79.2
+    },
+    {
+      "t": 2014,
+      "value": 80.1
+    },
+    {
+      "t": 2015,
+      "value": 81
+    },
+    {
+      "t": 2016,
+      "value": 82.2
+    },
+    {
+      "t": 2017,
+      "value": 83.3
+    },
+    {
+      "t": 2018,
+      "value": 84.4
+    },
+    {
+      "t": 2019,
+      "value": 85
+    },
+    {
+      "t": 2020,
+      "value": 84.9
+    },
+    {
+      "t": 2021,
+      "value": 85.5
+    },
+    {
+      "t": 2022,
+      "value": 85.7
+    },
+    {
+      "t": 2023,
+      "value": 85.9
+    }
+  ],
+  "provenance": {
+    "source": "ilostat",
+    "sourceIndicator": "DF_SDG_0131_SEX_SOC_RT [REF_AREA=X05, SEX_T, SOC_CONTIG_TOTAL]",
+    "url": "https://ilostat.ilo.org",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-20",
+    "checksum": "derived",
+    "definition": "Proportion of the population covered by at least one social protection cash benefit (SDG indicator 1.3.1). High income economies.",
+    "attribution": "ILOSTAT — International Labour Organization",
+    "primarySource": "ILOSTAT — ILO (SDG 1.3.1)"
+  },
+  "recipe": [
+    {
+      "op": "pick_area",
+      "detail": "ILO aggregate area X05 (High income)"
+    }
+  ]
+}

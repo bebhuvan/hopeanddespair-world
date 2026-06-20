@@ -1,0 +1,53 @@
+{
+  "chartId": "informal-employment-by-income",
+  "kind": "bars",
+  "title": "Informal work, by national income level",
+  "unit": "% of all jobs that are informal · 2024 · world average 57.77%",
+  "xmax": 100,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "bars": [
+    {
+      "label": "Low income",
+      "value": 89.19,
+      "color": "despair"
+    },
+    {
+      "label": "Lower-middle income",
+      "value": 83.82,
+      "color": "despair"
+    },
+    {
+      "label": "Upper-middle income",
+      "value": 53.22,
+      "color": "ochre"
+    },
+    {
+      "label": "High income",
+      "value": 8.9,
+      "color": "hope"
+    }
+  ],
+  "provenance": {
+    "source": "ilostat",
+    "sourceIndicator": "DF_EMP_2IFL_SEX_RT [REF_AREA=X02..X05, SEX_T]",
+    "url": "https://ilostat.ilo.org",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-20",
+    "checksum": "derived",
+    "definition": "Share of total employment that is informal — no contract, no social-insurance coverage, outside the reach of labour law — by national income group, latest settled year. ILO modelled estimates.",
+    "attribution": "ILOSTAT — International Labour Organization",
+    "primarySource": "ILOSTAT — ILO (modelled)"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest-year informal employment rate per ILO income aggregate"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "indicatorId": "working-poverty-adult-world",
+  "entity": "X01",
+  "entityName": "Adults (25+)",
+  "unit": "% of employed",
+  "points": [
+    {
+      "t": 2000,
+      "value": 32.59
+    },
+    {
+      "t": 2001,
+      "value": 31.36
+    },
+    {
+      "t": 2002,
+      "value": 29.94
+    },
+    {
+      "t": 2003,
+      "value": 27.9
+    },
+    {
+      "t": 2004,
+      "value": 25.79
+    },
+    {
+      "t": 2005,
+      "value": 23.64
+    },
+    {
+      "t": 2006,
+      "value": 22.41
+    },
+    {
+      "t": 2007,
+      "value": 20.84
+    },
+    {
+      "t": 2008,
+      "value": 19.87
+    },
+    {
+      "t": 2009,
+      "value": 18.9
+    },
+    {
+      "t": 2010,
+      "value": 16.97
+    },
+    {
+      "t": 2011,
+      "value": 15.37
+    },
+    {
+      "t": 2012,
+      "value": 14.09
+    },
+    {
+      "t": 2013,
+      "value": 11.79
+    },
+    {
+      "t": 2014,
+      "value": 10.81
+    },
+    {
+      "t": 2015,
+      "value": 9.74
+    },
+    {
+      "t": 2016,
+      "value": 9
+    },
+    {
+      "t": 2017,
+      "value": 8.41
+    },
+    {
+      "t": 2018,
+      "value": 7.84
+    },
+    {
+      "t": 2019,
+      "value": 7.48
+    },
+    {
+      "t": 2020,
+      "value": 8.07
+    },
+    {
+      "t": 2021,
+      "value": 7.71
+    },
+    {
+      "t": 2022,
+      "value": 7.41
+    },
+    {
+      "t": 2023,
+      "value": 7.12
+    }
+  ],
+  "provenance": {
+    "source": "ilostat",
+    "sourceIndicator": "DF_SDG_0111_SEX_AGE_RT [X01, SEX_T, 25+]",
+    "url": "https://ilostat.ilo.org",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-20",
+    "checksum": "derived",
+    "definition": "Share of employed people living in a household below the extreme-poverty line ($2.15/day, 2017 PPP). ILO SDG indicator 1.1.1. Employed adults aged 25+, World.",
+    "attribution": "ILOSTAT — International Labour Organization",
+    "primarySource": "ILOSTAT — ILO (SDG 1.1.1)"
+  },
+  "recipe": [
+    {
+      "op": "pick_dims",
+      "detail": "World, both sexes, ages 25+"
+    }
+  ]
+}

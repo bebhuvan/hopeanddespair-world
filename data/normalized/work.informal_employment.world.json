@@ -1,0 +1,105 @@
+[
+  {
+    "indicatorId": "work.informal_employment.world",
+    "entity": "X01",
+    "entityName": "World",
+    "unit": "% of total employment",
+    "points": [
+      {
+        "t": 2004,
+        "value": 60.613
+      },
+      {
+        "t": 2005,
+        "value": 59.982
+      },
+      {
+        "t": 2006,
+        "value": 59.622
+      },
+      {
+        "t": 2007,
+        "value": 59.18
+      },
+      {
+        "t": 2008,
+        "value": 58.944
+      },
+      {
+        "t": 2009,
+        "value": 59.105
+      },
+      {
+        "t": 2010,
+        "value": 58.815
+      },
+      {
+        "t": 2011,
+        "value": 58.498
+      },
+      {
+        "t": 2012,
+        "value": 58.218
+      },
+      {
+        "t": 2013,
+        "value": 57.88
+      },
+      {
+        "t": 2014,
+        "value": 57.683
+      },
+      {
+        "t": 2015,
+        "value": 57.403
+      },
+      {
+        "t": 2016,
+        "value": 57.15
+      },
+      {
+        "t": 2017,
+        "value": 57.084
+      },
+      {
+        "t": 2018,
+        "value": 56.811
+      },
+      {
+        "t": 2019,
+        "value": 56.821
+      },
+      {
+        "t": 2020,
+        "value": 56.957
+      },
+      {
+        "t": 2021,
+        "value": 57.59
+      },
+      {
+        "t": 2022,
+        "value": 57.468
+      },
+      {
+        "t": 2023,
+        "value": 57.618
+      },
+      {
+        "t": 2024,
+        "value": 57.773
+      }
+    ],
+    "provenance": {
+      "source": "ilostat",
+      "sourceIndicator": "DF_EMP_2IFL_SEX_RT [REF_AREA=X01, SEX=SEX_T]",
+      "url": "https://sdmx.ilo.org/rest/data/DF_EMP_2IFL_SEX_RT/all?startPeriod=1990",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-20",
+      "checksum": "99948f24c58bbc129dd93f78429cebdb15238c9764d4baa2d95d6cf1ad98ade5",
+      "definition": "Informal employment rate, World",
+      "attribution": "ILOSTAT — International Labour Organization",
+      "primarySource": "ILOSTAT — International Labour Organization (SDG 8.3.1 family, modelled)"
+    }
+  }
+]

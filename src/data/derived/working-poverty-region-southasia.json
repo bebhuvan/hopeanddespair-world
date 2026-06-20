@@ -1,0 +1,129 @@
+{
+  "indicatorId": "working-poverty-region-southasia",
+  "entity": "X56",
+  "entityName": "Southern Asia",
+  "unit": "% of employed",
+  "points": [
+    {
+      "t": 2000,
+      "value": 42.74
+    },
+    {
+      "t": 2001,
+      "value": 42.84
+    },
+    {
+      "t": 2002,
+      "value": 42.69
+    },
+    {
+      "t": 2003,
+      "value": 41.8
+    },
+    {
+      "t": 2004,
+      "value": 40.69
+    },
+    {
+      "t": 2005,
+      "value": 38.72
+    },
+    {
+      "t": 2006,
+      "value": 36.66
+    },
+    {
+      "t": 2007,
+      "value": 34.2
+    },
+    {
+      "t": 2008,
+      "value": 32.82
+    },
+    {
+      "t": 2009,
+      "value": 31.15
+    },
+    {
+      "t": 2010,
+      "value": 26.67
+    },
+    {
+      "t": 2011,
+      "value": 24.83
+    },
+    {
+      "t": 2012,
+      "value": 22.99
+    },
+    {
+      "t": 2013,
+      "value": 20.72
+    },
+    {
+      "t": 2014,
+      "value": 18.54
+    },
+    {
+      "t": 2015,
+      "value": 16.07
+    },
+    {
+      "t": 2016,
+      "value": 13.77
+    },
+    {
+      "t": 2017,
+      "value": 12
+    },
+    {
+      "t": 2018,
+      "value": 10.6
+    },
+    {
+      "t": 2019,
+      "value": 9.75
+    },
+    {
+      "t": 2020,
+      "value": 10.34
+    },
+    {
+      "t": 2021,
+      "value": 9.13
+    },
+    {
+      "t": 2022,
+      "value": 7.96
+    },
+    {
+      "t": 2023,
+      "value": 6.95
+    },
+    {
+      "t": 2024,
+      "value": 6.02
+    },
+    {
+      "t": 2025,
+      "value": 5.31
+    }
+  ],
+  "provenance": {
+    "source": "ilostat",
+    "sourceIndicator": "DF_SDG_0111_SEX_AGE_RT [REF_AREA=X56, SEX_T, 15+]",
+    "url": "https://ilostat.ilo.org",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-20",
+    "checksum": "derived",
+    "definition": "Share of employed people living in a household below the extreme-poverty line ($2.15/day, 2017 PPP). ILO SDG indicator 1.1.1. Southern Asia.",
+    "attribution": "ILOSTAT — International Labour Organization",
+    "primarySource": "ILOSTAT — ILO (SDG 1.1.1)"
+  },
+  "recipe": [
+    {
+      "op": "pick_area",
+      "detail": "ILO aggregate area X56 (Southern Asia)"
+    }
+  ]
+}

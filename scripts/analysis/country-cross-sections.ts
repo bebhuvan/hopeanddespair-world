@@ -93,6 +93,44 @@ async function wbLatest(indicator: string): Promise<Record<string, { year: numbe
   return out;
 }
 
+/** Latest value per ISO3 country from an ILOSTAT SDMX dataflow. Fetches the full all-areas CSV
+    once and snapshots it under its OWN source family (`ilostat-countries`) so it never clobbers the
+    aggregates-only snapshot the pipeline adapter writes under `ilostat`. Skips the X-prefixed
+    aggregate areas; `dims` selects the SDMX dimensions (e.g. SEX=SEX_T, AGE=AGE_YTHADULT_YGE15). */
+async function ilostatLatest(dataflow: string, dims: Record<string, string>): Promise<Record<string, { year: number; value: number }>> {
+  let text: string;
+  const base = 'data/sources/ilostat-countries';
+  const path = existsSync(join(ROOT, base)) ? latestDir(base, join(dataflow, 'raw.csv')) : '';
+  if (path) text = readFileSync(path, 'utf8');
+  else {
+    const url = `https://sdmx.ilo.org/rest/data/${dataflow}/all?startPeriod=1990`;
+    const res = await fetch(url, { headers: { Accept: 'application/vnd.sdmx.data+csv', 'Accept-Language': 'en' } });
+    if (!res.ok) throw new Error(`ILOSTAT ${dataflow}: HTTP ${res.status}`);
+    text = await res.text();
+    const dir = join(ROOT, 'data/sources/ilostat-countries', VINTAGE, dataflow);
+    mkdirSync(dir, { recursive: true });
+    writeFileSync(join(dir, 'raw.csv'), text);
+    writeFileSync(join(dir, 'snapshot.json'), JSON.stringify({ source: 'ilostat', slug: dataflow, vintage: VINTAGE, url, checksum: sha256(text), license: 'CC BY 4.0', fetchedAt: new Date().toISOString() }, null, 2));
+    console.log(`  ↓ fetched + snapshotted ILOSTAT ${dataflow}`);
+  }
+  const lines = text.trim().split('\n');
+  const head = lines[0].split(',');
+  const ix = (n: string) => head.indexOf(n);
+  const iRA = ix('REF_AREA'), iT = ix('TIME_PERIOD'), iV = ix('OBS_VALUE'), iM = ix('UNIT_MULT');
+  const dimIx = Object.keys(dims).map((k) => [ix(k), dims[k]] as const);
+  const out: Record<string, { year: number; value: number }> = {};
+  for (let i = 1; i < lines.length; i++) {
+    const f = lines[i].split(',');           // note columns trail OBS_VALUE; leading cols are comma-free
+    const code = f[iRA];
+    if (!code || code.length !== 3 || /^X/.test(code)) continue;   // ISO3 countries only, skip aggregates
+    if (!dimIx.every(([j, v]) => f[j] === v)) continue;
+    const year = +f[iT], mult = iM >= 0 ? parseInt(f[iM], 10) || 0 : 0, value = +f[iV] * 10 ** mult;
+    if (!isFinite(year) || !isFinite(value)) continue;
+    if (!out[code] || year > out[code].year) out[code] = { year, value };
+  }
+  return out;
+}
+
 /** Per-country ratio of two indicators (e.g. under-5 mortality, poorest fifth ÷ richest fifth) —
     the within-country lens: one number that says how much deadlier it is to be born poor. */
 function ratioLatest(num: Record<string, { year: number; value: number }>, den: Record<string, { year: number; value: number }>): Record<string, { year: number; value: number }> {
@@ -103,7 +141,7 @@ function ratioLatest(num: Record<string, { year: number; value: number }>, den: 
   return out;
 }
 
-type Src = { kind: 'owid'; slug: string; col?: number; sumCols?: [number, number] } | { kind: 'wb'; indicator: string } | { kind: 'wb-ratio'; num: string; den: string };
+type Src = { kind: 'owid'; slug: string; col?: number; sumCols?: [number, number] } | { kind: 'wb'; indicator: string } | { kind: 'wb-ratio'; num: string; den: string } | { kind: 'ilostat'; dataflow: string; dims: Record<string, string> };
 interface Dim {
   chartId: string; title: string; unit: string; src: Src;
   set: [string, string][];
@@ -209,6 +247,29 @@ const CONFIG: Dim[] = [
     src: { kind: 'wb', indicator: 'SL.UEM.TOTL.ZS' }, dir: 'neutral', xmax: 35, xTicks: [0, 10, 20, 30],
     set: [['ZAF', 'South Africa'], ['ESP', 'Spain'], ['BRA', 'Brazil'], ['EGY', 'Egypt'], ['IND', 'India'], ['USA', 'United States'], ['MEX', 'Mexico'], ['CHN', 'China'], ['DEU', 'Germany'], ['JPN', 'Japan'], ['VNM', 'Vietnam'], ['THA', 'Thailand']],
     attribution: 'ILO, via World Bank', primarySource: 'International Labour Organization (ILO modelled estimate)', license: 'CC BY 4.0', sourceUrl: 'https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS', sourceIndicator: 'SL.UEM.TOTL.ZS', definition: 'Unemployment as a share of the labour force (ILO modelled estimate), latest year per country. In low-income economies a low rate reflects informal survival work, not security.' },
+  { chartId: 'working-poverty-by-country', title: 'Working poverty by country', unit: 'Employed people living on under $2.15 a day, %',
+    src: { kind: 'ilostat', dataflow: 'DF_SDG_0111_SEX_AGE_RT', dims: { SEX: 'SEX_T', AGE: 'AGE_YTHADULT_YGE15' } }, dir: 'higher-bad', xmax: 90, xTicks: [0, 30, 60, 90],
+    set: [['MDG', 'Madagascar'], ['COD', 'DR Congo'], ['MOZ', 'Mozambique'], ['MWI', 'Malawi'], ['ETH', 'Ethiopia'], ['NGA', 'Nigeria'], ['KEN', 'Kenya'], ['BGD', 'Bangladesh'], ['IND', 'India'], ['IDN', 'Indonesia'], ['VNM', 'Vietnam'], ['BRA', 'Brazil'], ['CHN', 'China'], ['USA', 'United States']],
+    attribution: 'ILOSTAT — International Labour Organization', primarySource: 'ILOSTAT — ILO (SDG 1.1.1)', license: 'CC BY 4.0', sourceUrl: 'https://ilostat.ilo.org', sourceIndicator: 'DF_SDG_0111_SEX_AGE_RT [SEX_T, AGE_YTHADULT_YGE15]', definition: 'Share of employed people aged 15+ living in extreme poverty — a household income below $2.15 a day (2017 PPP) — latest year per country. Work that does not lift a family out of poverty.' },
+  { chartId: 'social-protection-by-country', title: 'Social protection by country', unit: 'People covered by at least one cash benefit, %',
+    src: { kind: 'ilostat', dataflow: 'DF_SDG_0131_SEX_SOC_RT', dims: { SEX: 'SEX_T', SOC: 'SOC_CONTIG_TOTAL' } }, dir: 'higher-good', xmax: 100, xTicks: [0, 25, 50, 75, 100],
+    set: [['DNK', 'Denmark'], ['FRA', 'France'], ['JPN', 'Japan'], ['USA', 'United States'], ['BRA', 'Brazil'], ['CHN', 'China'], ['ZAF', 'South Africa'], ['IND', 'India'], ['IDN', 'Indonesia'], ['BGD', 'Bangladesh'], ['NGA', 'Nigeria'], ['ETH', 'Ethiopia'], ['COD', 'DR Congo']],
+    attribution: 'ILOSTAT — International Labour Organization', primarySource: 'ILOSTAT — ILO (SDG 1.3.1)', license: 'CC BY 4.0', sourceUrl: 'https://ilostat.ilo.org', sourceIndicator: 'DF_SDG_0131_SEX_SOC_RT [SEX_T, SOC_CONTIG_TOTAL]', definition: 'Share of the population receiving at least one social-protection cash benefit (SDG 1.3.1), latest year per country. The safety net behind a job, where it exists.' },
+  { chartId: 'vulnerable-employment-by-country', title: 'Vulnerable employment by country', unit: 'Own-account & unpaid family workers, % of employment',
+    src: { kind: 'wb', indicator: 'SL.EMP.VULN.ZS' }, dir: 'higher-bad', xmax: 90, xTicks: [0, 30, 60, 90],
+    set: [['NER', 'Niger'], ['TCD', 'Chad'], ['ETH', 'Ethiopia'], ['NGA', 'Nigeria'], ['BGD', 'Bangladesh'], ['IND', 'India'], ['VNM', 'Vietnam'], ['IDN', 'Indonesia'], ['EGY', 'Egypt'], ['BRA', 'Brazil'], ['CHN', 'China'], ['ZAF', 'South Africa'], ['USA', 'United States'], ['DEU', 'Germany']],
+    attribution: 'ILO, via World Bank', primarySource: 'International Labour Organization (ILO modelled estimate)', license: 'CC BY 4.0', sourceUrl: 'https://data.worldbank.org/indicator/SL.EMP.VULN.ZS', sourceIndicator: 'SL.EMP.VULN.ZS', definition: 'Vulnerable employment — own-account and contributing family workers as a share of total employment (ILO modelled estimate), latest year per country. Work with no employer behind it.' },
+  // NOTE: a labour-share-by-country bar was tried and dropped — country-level labour share inverts
+  // (informal subsistence economies impute most income as labour, so Nigeria reads ~75% > Switzerland),
+  // which would contradict FIG.7's GDP-weighted income-group chart and mislead. The income strip stands.
+  { chartId: 'working-poverty-youth-by-country', title: 'Youth working poverty by country', unit: 'Employed youth (15–24) in extreme poverty, %',
+    src: { kind: 'ilostat', dataflow: 'DF_SDG_0111_SEX_AGE_RT', dims: { SEX: 'SEX_T', AGE: 'AGE_YTHADULT_Y15-24' } }, dir: 'higher-bad', xmax: 95, xTicks: [0, 30, 60, 90],
+    set: [['MDG', 'Madagascar'], ['COD', 'DR Congo'], ['MOZ', 'Mozambique'], ['MWI', 'Malawi'], ['ETH', 'Ethiopia'], ['NGA', 'Nigeria'], ['KEN', 'Kenya'], ['BGD', 'Bangladesh'], ['IND', 'India'], ['IDN', 'Indonesia'], ['VNM', 'Vietnam'], ['BRA', 'Brazil'], ['CHN', 'China']],
+    attribution: 'ILOSTAT — International Labour Organization', primarySource: 'ILOSTAT — ILO (SDG 1.1.1)', license: 'CC BY 4.0', sourceUrl: 'https://ilostat.ilo.org', sourceIndicator: 'DF_SDG_0111_SEX_AGE_RT [SEX_T, AGE_YTHADULT_Y15-24]', definition: 'Share of employed young people aged 15–24 living in extreme poverty (under $2.15 a day), latest year per country. The young carry the worst of working poverty.' },
+  { chartId: 'female-labour-by-country', title: 'Women in the labour force by country', unit: 'Women aged 15+ in the labour force, %',
+    src: { kind: 'wb', indicator: 'SL.TLF.CACT.FE.ZS' }, dir: 'higher-good', xmax: 90, xTicks: [0, 30, 60, 90],
+    set: [['SWE', 'Sweden'], ['VNM', 'Vietnam'], ['CHN', 'China'], ['BRA', 'Brazil'], ['USA', 'United States'], ['IDN', 'Indonesia'], ['BGD', 'Bangladesh'], ['IND', 'India'], ['EGY', 'Egypt'], ['IRN', 'Iran'], ['IRQ', 'Iraq'], ['DZA', 'Algeria']],
+    attribution: 'ILO, via World Bank', primarySource: 'International Labour Organization (ILO modelled estimate)', license: 'CC BY 4.0', sourceUrl: 'https://data.worldbank.org/indicator/SL.TLF.CACT.FE.ZS', sourceIndicator: 'SL.TLF.CACT.FE.ZS', definition: 'Female labour-force participation — share of women aged 15+ working or seeking paid work (ILO modelled estimate), latest year per country. Most unpaid care and subsistence work is not counted here.' },
   { chartId: 'animals-slaughtered-by-country', title: 'Animals slaughtered by country', unit: 'Land animals slaughtered for meat per year, billion', scale: 1e9, logColor: true,
     src: { kind: 'owid', slug: 'animals-slaughtered-for-meat', sumCols: [3, 9] }, dir: 'neutral', xmax: 20, xTicks: [0, 5, 10, 15, 20],
     set: [['CHN', 'China'], ['USA', 'United States'], ['IDN', 'Indonesia'], ['BRA', 'Brazil'], ['IND', 'India'], ['MEX', 'Mexico'], ['RUS', 'Russia'], ['JPN', 'Japan'], ['FRA', 'France'], ['DEU', 'Germany'], ['NGA', 'Nigeria']],
@@ -265,6 +326,8 @@ for (const d of CONFIG) {
     ? parseOwid(await owidCsv(d.src.slug), d.src.col, d.src.sumCols)
     : d.src.kind === 'wb-ratio'
     ? ratioLatest(await wbLatest(d.src.num), await wbLatest(d.src.den))
+    : d.src.kind === 'ilostat'
+    ? await ilostatLatest(d.src.dataflow, d.src.dims)
     : await wbLatest(d.src.indicator);
   const scale = d.scale ?? 1, dec = d.decimals ?? 1;
   const ok = (c: string) => latest[c] && latest[c].year >= MIN_YEAR;

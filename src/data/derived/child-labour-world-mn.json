@@ -1,0 +1,33 @@
+{
+  "indicatorId": "child-labour-world-mn",
+  "entity": "X01",
+  "entityName": "World",
+  "unit": "million children",
+  "points": [
+    {
+      "t": 2020,
+      "value": 159.99
+    },
+    {
+      "t": 2024,
+      "value": 137.56
+    }
+  ],
+  "provenance": {
+    "source": "ilostat",
+    "sourceIndicator": "DF_CLD_XCHL_SEX_AGE_NB [X01, SEX_T, 5–17]",
+    "url": "https://ilostat.ilo.org",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-20",
+    "checksum": "derived",
+    "definition": "Children aged 5–17 in child labour worldwide, in millions — the ILO & UNICEF Global Estimates (two rounds, 2020 and 2024).",
+    "attribution": "ILOSTAT — International Labour Organization",
+    "primarySource": "ILO & UNICEF — Global Estimates of Child Labour"
+  },
+  "recipe": [
+    {
+      "op": "scale",
+      "detail": "child-labour-world count ÷ 1e6"
+    }
+  ]
+}

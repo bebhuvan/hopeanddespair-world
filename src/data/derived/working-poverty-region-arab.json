@@ -1,0 +1,129 @@
+{
+  "indicatorId": "working-poverty-region-arab",
+  "entity": "X36",
+  "entityName": "Arab States",
+  "unit": "% of employed",
+  "points": [
+    {
+      "t": 2000,
+      "value": 2.03
+    },
+    {
+      "t": 2001,
+      "value": 2.16
+    },
+    {
+      "t": 2002,
+      "value": 2.26
+    },
+    {
+      "t": 2003,
+      "value": 2.35
+    },
+    {
+      "t": 2004,
+      "value": 2.41
+    },
+    {
+      "t": 2005,
+      "value": 2.38
+    },
+    {
+      "t": 2006,
+      "value": 2.4
+    },
+    {
+      "t": 2007,
+      "value": 2.39
+    },
+    {
+      "t": 2008,
+      "value": 2.48
+    },
+    {
+      "t": 2009,
+      "value": 2.5
+    },
+    {
+      "t": 2010,
+      "value": 2.35
+    },
+    {
+      "t": 2011,
+      "value": 3.17
+    },
+    {
+      "t": 2012,
+      "value": 3.25
+    },
+    {
+      "t": 2013,
+      "value": 3.9
+    },
+    {
+      "t": 2014,
+      "value": 4.39
+    },
+    {
+      "t": 2015,
+      "value": 5.27
+    },
+    {
+      "t": 2016,
+      "value": 6.33
+    },
+    {
+      "t": 2017,
+      "value": 6.26
+    },
+    {
+      "t": 2018,
+      "value": 6.23
+    },
+    {
+      "t": 2019,
+      "value": 6.27
+    },
+    {
+      "t": 2020,
+      "value": 7.64
+    },
+    {
+      "t": 2021,
+      "value": 7.92
+    },
+    {
+      "t": 2022,
+      "value": 8.04
+    },
+    {
+      "t": 2023,
+      "value": 8.32
+    },
+    {
+      "t": 2024,
+      "value": 8.76
+    },
+    {
+      "t": 2025,
+      "value": 9.17
+    }
+  ],
+  "provenance": {
+    "source": "ilostat",
+    "sourceIndicator": "DF_SDG_0111_SEX_AGE_RT [REF_AREA=X36, SEX_T, 15+]",
+    "url": "https://ilostat.ilo.org",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-20",
+    "checksum": "derived",
+    "definition": "Share of employed people living in a household below the extreme-poverty line ($2.15/day, 2017 PPP). ILO SDG indicator 1.1.1. Arab States.",
+    "attribution": "ILOSTAT — International Labour Organization",
+    "primarySource": "ILOSTAT — ILO (SDG 1.1.1)"
+  },
+  "recipe": [
+    {
+      "op": "pick_area",
+      "detail": "ILO aggregate area X36 (Arab States)"
+    }
+  ]
+}

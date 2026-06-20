@@ -1,0 +1,98 @@
+{
+  "chartId": "working-poverty-by-country",
+  "kind": "bars",
+  "title": "Working poverty by country",
+  "unit": "Employed people living on under $2.15 a day, %",
+  "yearSpan": "2025–2025",
+  "bars": [
+    {
+      "label": "Madagascar",
+      "value": 86,
+      "color": "despair"
+    },
+    {
+      "label": "DR Congo",
+      "value": 80.3,
+      "color": "despair"
+    },
+    {
+      "label": "Mozambique",
+      "value": 79.6,
+      "color": "despair"
+    },
+    {
+      "label": "Malawi",
+      "value": 73.1,
+      "color": "despair"
+    },
+    {
+      "label": "Kenya",
+      "value": 33.1,
+      "color": "ochre"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 28.2,
+      "color": "hope"
+    },
+    {
+      "label": "Nigeria",
+      "value": 27.9,
+      "color": "hope"
+    },
+    {
+      "label": "Indonesia",
+      "value": 5.6,
+      "color": "hope"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 4.9,
+      "color": "hope"
+    },
+    {
+      "label": "India",
+      "value": 3.6,
+      "color": "hope"
+    },
+    {
+      "label": "Vietnam",
+      "value": 1.4,
+      "color": "hope"
+    },
+    {
+      "label": "Brazil",
+      "value": 0.6,
+      "color": "hope"
+    },
+    {
+      "label": "China",
+      "value": 0.1,
+      "color": "hope"
+    }
+  ],
+  "xmax": 90,
+  "xTicks": [
+    0,
+    30,
+    60,
+    90
+  ],
+  "provenance": {
+    "source": "ilostat",
+    "sourceIndicator": "DF_SDG_0111_SEX_AGE_RT [SEX_T, AGE_YTHADULT_YGE15]",
+    "url": "https://ilostat.ilo.org",
+    "license": "CC BY 4.0",
+    "vintage": "2025–2025",
+    "checksum": "9ba21d33817a2cdec96bfb696c2405376b9e992d4cdac1f1d29ab9298b13c424",
+    "definition": "Share of employed people aged 15+ living in extreme poverty — a household income below $2.15 a day (2017 PPP) — latest year per country. Work that does not lift a family out of poverty. A curated 13-country spread sorted descending.",
+    "attribution": "ILOSTAT — International Labour Organization",
+    "primarySource": "ILOSTAT — ILO (SDG 1.1.1)"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 13 curated countries sorted descending"
+    }
+  ]
+}

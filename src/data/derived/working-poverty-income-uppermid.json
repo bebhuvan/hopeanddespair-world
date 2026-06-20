@@ -1,0 +1,129 @@
+{
+  "indicatorId": "working-poverty-income-uppermid",
+  "entity": "X04",
+  "entityName": "Upper-middle income",
+  "unit": "% of employed",
+  "points": [
+    {
+      "t": 2000,
+      "value": 42.28
+    },
+    {
+      "t": 2001,
+      "value": 39.67
+    },
+    {
+      "t": 2002,
+      "value": 36.33
+    },
+    {
+      "t": 2003,
+      "value": 32.65
+    },
+    {
+      "t": 2004,
+      "value": 29.34
+    },
+    {
+      "t": 2005,
+      "value": 25.62
+    },
+    {
+      "t": 2006,
+      "value": 24.17
+    },
+    {
+      "t": 2007,
+      "value": 22.08
+    },
+    {
+      "t": 2008,
+      "value": 20.74
+    },
+    {
+      "t": 2009,
+      "value": 19.26
+    },
+    {
+      "t": 2010,
+      "value": 17.14
+    },
+    {
+      "t": 2011,
+      "value": 14.21
+    },
+    {
+      "t": 2012,
+      "value": 12.3
+    },
+    {
+      "t": 2013,
+      "value": 7.53
+    },
+    {
+      "t": 2014,
+      "value": 6.36
+    },
+    {
+      "t": 2015,
+      "value": 4.82
+    },
+    {
+      "t": 2016,
+      "value": 4.06
+    },
+    {
+      "t": 2017,
+      "value": 3.5
+    },
+    {
+      "t": 2018,
+      "value": 2.76
+    },
+    {
+      "t": 2019,
+      "value": 2.26
+    },
+    {
+      "t": 2020,
+      "value": 2.37
+    },
+    {
+      "t": 2021,
+      "value": 2.07
+    },
+    {
+      "t": 2022,
+      "value": 1.85
+    },
+    {
+      "t": 2023,
+      "value": 1.67
+    },
+    {
+      "t": 2024,
+      "value": 1.52
+    },
+    {
+      "t": 2025,
+      "value": 1.45
+    }
+  ],
+  "provenance": {
+    "source": "ilostat",
+    "sourceIndicator": "DF_SDG_0111_SEX_AGE_RT [REF_AREA=X04, SEX_T, 15+]",
+    "url": "https://ilostat.ilo.org",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-20",
+    "checksum": "derived",
+    "definition": "Share of employed people living in a household below the extreme-poverty line ($2.15/day, 2017 PPP). ILO SDG indicator 1.1.1. Upper-middle income economies.",
+    "attribution": "ILOSTAT — International Labour Organization",
+    "primarySource": "ILOSTAT — ILO (SDG 1.1.1)"
+  },
+  "recipe": [
+    {
+      "op": "pick_area",
+      "detail": "ILO aggregate area X04 (Upper-middle income)"
+    }
+  ]
+}

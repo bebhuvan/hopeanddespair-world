@@ -1,0 +1,99 @@
+{
+  "chartId": "social-protection-by-country",
+  "kind": "bars",
+  "title": "Social protection by country",
+  "unit": "People covered by at least one cash benefit, %",
+  "yearSpan": "2019–2025",
+  "bars": [
+    {
+      "label": "Denmark",
+      "value": 100,
+      "color": "hope"
+    },
+    {
+      "label": "France",
+      "value": 99.4,
+      "color": "hope"
+    },
+    {
+      "label": "Japan",
+      "value": 94.6,
+      "color": "hope"
+    },
+    {
+      "label": "United States",
+      "value": 78.8,
+      "color": "hope"
+    },
+    {
+      "label": "China",
+      "value": 75.6,
+      "color": "hope"
+    },
+    {
+      "label": "Brazil",
+      "value": 71.2,
+      "color": "hope"
+    },
+    {
+      "label": "India",
+      "value": 64.3,
+      "color": "ochre"
+    },
+    {
+      "label": "Indonesia",
+      "value": 54.3,
+      "color": "ochre"
+    },
+    {
+      "label": "South Africa",
+      "value": 49.3,
+      "color": "ochre"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 22,
+      "color": "despair"
+    },
+    {
+      "label": "Nigeria",
+      "value": 14.8,
+      "color": "despair"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 11.5,
+      "color": "despair"
+    },
+    {
+      "label": "DR Congo",
+      "value": 5.2,
+      "color": "despair"
+    }
+  ],
+  "xmax": 100,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "provenance": {
+    "source": "ilostat",
+    "sourceIndicator": "DF_SDG_0131_SEX_SOC_RT [SEX_T, SOC_CONTIG_TOTAL]",
+    "url": "https://ilostat.ilo.org",
+    "license": "CC BY 4.0",
+    "vintage": "2019–2025",
+    "checksum": "4b00fcd18e33aa752e030a11318077537c652102dd8fd048a684af55f9540848",
+    "definition": "Share of the population receiving at least one social-protection cash benefit (SDG 1.3.1), latest year per country. The safety net behind a job, where it exists. A curated 13-country spread sorted descending.",
+    "attribution": "ILOSTAT — International Labour Organization",
+    "primarySource": "ILOSTAT — ILO (SDG 1.3.1)"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 13 curated countries sorted descending"
+    }
+  ]
+}

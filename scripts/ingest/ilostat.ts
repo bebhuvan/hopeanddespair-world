@@ -4,13 +4,29 @@ import type { Adapter, IndicatorSpec, RawSnapshot, CanonicalSeries } from '../..
 /* ILOSTAT adapter — the ILO's labour statistics over the SDMX 2.1 REST API (sdmx.ilo.org), CC BY
    4.0. The bulk files moved and the rplumber API returns empty, but SDMX works: a `DF_`-prefixed
    dataflow + the SDMX-CSV Accept header returns clean tidy rows. We keep what the World Bank's
-   ILO mirror lacks — working poverty (annual) and the child-labour estimates. The download spans
-   all countries, so we trim the snapshot to the requested entity (default World = REF_AREA X01).
-   spec.filter selects the SDMX dimensions (SEX, AGE, …); UNIT_MULT scales the value. */
+   ILO mirror lacks — working poverty (annual), informality, and the child-labour estimates.
+   The download spans every country plus the ILO aggregate areas (X-codes: World, income groups,
+   regions). We trim the snapshot to the AGGREGATE rows only (REF_AREA matching /^X/) so one
+   faithful snapshot per slug serves every world/region/income-group spec without slug collisions
+   (snapshots are keyed by slug); individual-country cuts come from the cross-section analysis
+   script, which snapshots separately. spec.filter selects the SDMX dimensions (REF_AREA defaults
+   to X01 = World, plus SEX, AGE, …); UNIT_MULT scales the value. */
 
-const ADAPTER_VERSION = '1.0.0';
+const ADAPTER_VERSION = '1.1.0';
 const sha256 = (s: string) => createHash('sha256').update(s).digest('hex');
 const BASE = 'https://sdmx.ilo.org/rest/data/';
+
+/* ILO REF_AREA aggregate codes → display names (the cuts this atlas reads). The full CL_AREA
+   codelist has ~75 X-codes; these are the ones our specs select. Names match the project's
+   house style (the WB-region wording elsewhere on the site) so charts read consistently. */
+const AREA_NAMES: Record<string, string> = {
+  X01: 'World',
+  X02: 'Low income', X03: 'Lower-middle income', X04: 'Upper-middle income', X05: 'High income',
+  X06: 'Africa', X13: 'Sub-Saharan Africa', X10: 'Northern Africa',
+  X21: 'Americas', X26: 'Latin America & Caribbean', X34: 'Northern America',
+  X36: 'Arab States', X40: 'Asia & Pacific', X45: 'Eastern Asia', X49: 'South-East Asia & Pacific',
+  X56: 'Southern Asia', X60: 'Europe & Central Asia',
+};
 
 /** Minimal RFC-4180 CSV parser — SDMX note columns can contain quoted commas. */
 function parseCSV(text: string): string[][] {
@@ -34,18 +50,18 @@ export const ilostat: Adapter = {
   homepage: 'https://ilostat.ilo.org',
 
   async fetch(spec: IndicatorSpec): Promise<RawSnapshot> {
-    const refArea = spec.filter?.REF_AREA ?? 'X01'; // X01 = World
     const url = `${BASE}${spec.slug}/all?startPeriod=1990`;
     // The SDMX server 500s without Accept-Language (curl/browsers send it; undici omits it).
     const res = await fetch(url, { headers: { Accept: 'application/vnd.sdmx.data+csv', 'Accept-Language': 'en' } });
     if (!res.ok) throw new Error(`ILOSTAT ${spec.slug}: HTTP ${res.status}`);
     const full = res.headers ? await res.text() : '';
-    // Trim the snapshot to the requested entity so the committed bytes stay small (the source
-    // returns every country); we record exactly the rows we use.
+    // Trim the snapshot to the ILO AGGREGATE areas (X-codes: World, income groups, regions). One
+    // snapshot per slug then serves every world/region/income-group spec (snapshots are keyed by
+    // slug, so per-entity trimming would collide); per-country cuts snapshot separately downstream.
     const rows = parseCSV(full);
     const header = rows[0];
     const iRA = header.indexOf('REF_AREA');
-    const kept = [header, ...rows.slice(1).filter((r) => r[iRA] === refArea)];
+    const kept = [header, ...rows.slice(1).filter((r) => /^X/.test(r[iRA]))];
     const body = kept.map((r) => r.map((f) => (f.includes(',') || f.includes('"') ? `"${f.replace(/"/g, '""')}"` : f)).join(',')).join('\n');
     return {
       source: 'ilostat', slug: spec.slug,
@@ -74,8 +90,10 @@ export const ilostat: Adapter = {
       points.push({ t: year, value });
     }
     points.sort((a, b) => a.t - b.t);
+    const refArea = (filter.REF_AREA as string) ?? 'X01';
+    const entityName = AREA_NAMES[refArea] ?? refArea;
     return [{
-      indicatorId: spec.id, entity: 'World', entityName: 'World', unit: spec.unit, points,
+      indicatorId: spec.id, entity: refArea, entityName, unit: spec.unit, points,
       provenance: {
         source: 'ilostat', sourceIndicator: `${spec.slug} [${Object.entries(filter).map(([k, v]) => `${k}=${v}`).join(', ')}]`,
         url: raw.url, license: raw.license, vintage: raw.vintage, checksum: raw.checksum,

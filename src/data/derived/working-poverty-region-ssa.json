@@ -1,0 +1,129 @@
+{
+  "indicatorId": "working-poverty-region-ssa",
+  "entity": "X13",
+  "entityName": "Sub-Saharan Africa",
+  "unit": "% of employed",
+  "points": [
+    {
+      "t": 2000,
+      "value": 61.09
+    },
+    {
+      "t": 2001,
+      "value": 60.09
+    },
+    {
+      "t": 2002,
+      "value": 59.48
+    },
+    {
+      "t": 2003,
+      "value": 58.36
+    },
+    {
+      "t": 2004,
+      "value": 55.14
+    },
+    {
+      "t": 2005,
+      "value": 53.78
+    },
+    {
+      "t": 2006,
+      "value": 52.24
+    },
+    {
+      "t": 2007,
+      "value": 50.94
+    },
+    {
+      "t": 2008,
+      "value": 49.59
+    },
+    {
+      "t": 2009,
+      "value": 48.81
+    },
+    {
+      "t": 2010,
+      "value": 47.47
+    },
+    {
+      "t": 2011,
+      "value": 45.8
+    },
+    {
+      "t": 2012,
+      "value": 44.22
+    },
+    {
+      "t": 2013,
+      "value": 43.46
+    },
+    {
+      "t": 2014,
+      "value": 42.45
+    },
+    {
+      "t": 2015,
+      "value": 42.46
+    },
+    {
+      "t": 2016,
+      "value": 42.33
+    },
+    {
+      "t": 2017,
+      "value": 42.11
+    },
+    {
+      "t": 2018,
+      "value": 41.77
+    },
+    {
+      "t": 2019,
+      "value": 41.5
+    },
+    {
+      "t": 2020,
+      "value": 43.32
+    },
+    {
+      "t": 2021,
+      "value": 43.09
+    },
+    {
+      "t": 2022,
+      "value": 42.28
+    },
+    {
+      "t": 2023,
+      "value": 41.47
+    },
+    {
+      "t": 2024,
+      "value": 40.81
+    },
+    {
+      "t": 2025,
+      "value": 40.07
+    }
+  ],
+  "provenance": {
+    "source": "ilostat",
+    "sourceIndicator": "DF_SDG_0111_SEX_AGE_RT [REF_AREA=X13, SEX_T, 15+]",
+    "url": "https://ilostat.ilo.org",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-20",
+    "checksum": "derived",
+    "definition": "Share of employed people living in a household below the extreme-poverty line ($2.15/day, 2017 PPP). ILO SDG indicator 1.1.1. Sub-Saharan Africa.",
+    "attribution": "ILOSTAT — International Labour Organization",
+    "primarySource": "ILOSTAT — ILO (SDG 1.1.1)"
+  },
+  "recipe": [
+    {
+      "op": "pick_area",
+      "detail": "ILO aggregate area X13 (Sub-Saharan Africa)"
+    }
+  ]
+}

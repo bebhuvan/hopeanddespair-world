@@ -1,0 +1,141 @@
+{
+  "note": "Audited figures the article may cite. Regenerate with scripts/analysis/work-and-jobs.ts. ILOSTAT CC BY 4.0.",
+  "workingPoverty": {
+    "worldFirst": {
+      "t": 2000,
+      "value": 34.73
+    },
+    "worldLast": {
+      "t": 2025,
+      "value": 7.9
+    },
+    "lowIncomeLast": {
+      "t": 2025,
+      "value": 50.52
+    },
+    "highIncomeLast": {
+      "t": 2025,
+      "value": 0.01
+    },
+    "ssaFirst": {
+      "t": 2000,
+      "value": 61.09
+    },
+    "ssaLast": {
+      "t": 2025,
+      "value": 40.07
+    },
+    "eastAsiaFirst": {
+      "t": 2000,
+      "value": 47.35
+    },
+    "eastAsiaLast": {
+      "t": 2025,
+      "value": 0.69
+    },
+    "southAsiaLast": {
+      "t": 2025,
+      "value": 5.31
+    },
+    "youthLast": {
+      "t": 2023,
+      "value": 16.01
+    },
+    "adultLast": {
+      "t": 2023,
+      "value": 7.12
+    },
+    "womenLast": {
+      "t": 2023,
+      "value": 8.86
+    },
+    "menLast": {
+      "t": 2023,
+      "value": 7.93
+    }
+  },
+  "informality": {
+    "worldLast": {
+      "t": 2024,
+      "value": 57.77
+    },
+    "byIncome": [
+      {
+        "group": "Low income",
+        "value": 89.19
+      },
+      {
+        "group": "Lower-middle income",
+        "value": 83.82
+      },
+      {
+        "group": "Upper-middle income",
+        "value": 53.22
+      },
+      {
+        "group": "High income",
+        "value": 8.9
+      }
+    ]
+  },
+  "socialProtection": {
+    "worldFirst": {
+      "t": 2009,
+      "value": 38.7
+    },
+    "worldLast": {
+      "t": 2023,
+      "value": 52.4
+    },
+    "incomeLow": {
+      "t": 2023,
+      "value": 9.7
+    },
+    "incomeHigh": {
+      "t": 2023,
+      "value": 85.9
+    },
+    "unemploymentBranch": {
+      "t": 2023,
+      "value": 16.7
+    },
+    "childrenBranch": {
+      "t": 2023,
+      "value": 28.2
+    },
+    "pensionBranch": {
+      "t": 2023,
+      "value": 79.6
+    }
+  },
+  "labourShare": {
+    "worldFirst": {
+      "t": 2004,
+      "value": 54
+    },
+    "worldLast": {
+      "t": 2024,
+      "value": 52.5
+    },
+    "incomeLow": {
+      "t": 2024,
+      "value": 38.2
+    },
+    "incomeHigh": {
+      "t": 2024,
+      "value": 54.3
+    }
+  },
+  "childLabourSchool": {
+    "y2020": {
+      "total": 159.99,
+      "inSchool": 104.06,
+      "outSchool": 55.92
+    },
+    "y2024": {
+      "total": 137.56,
+      "inSchool": 86.39,
+      "outSchool": 51.17
+    }
+  }
+}

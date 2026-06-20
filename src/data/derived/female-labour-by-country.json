@@ -1,0 +1,93 @@
+{
+  "chartId": "female-labour-by-country",
+  "kind": "bars",
+  "title": "Women in the labour force by country",
+  "unit": "Women aged 15+ in the labour force, %",
+  "yearSpan": "2024–2024",
+  "bars": [
+    {
+      "label": "Vietnam",
+      "value": 68.9,
+      "color": "hope"
+    },
+    {
+      "label": "Sweden",
+      "value": 61.7,
+      "color": "hope"
+    },
+    {
+      "label": "China",
+      "value": 59.4,
+      "color": "hope"
+    },
+    {
+      "label": "United States",
+      "value": 56.6,
+      "color": "hope"
+    },
+    {
+      "label": "Brazil",
+      "value": 53.6,
+      "color": "hope"
+    },
+    {
+      "label": "Indonesia",
+      "value": 53.6,
+      "color": "hope"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 38.7,
+      "color": "ochre"
+    },
+    {
+      "label": "India",
+      "value": 32.4,
+      "color": "ochre"
+    },
+    {
+      "label": "Egypt",
+      "value": 18.5,
+      "color": "despair"
+    },
+    {
+      "label": "Algeria",
+      "value": 14.3,
+      "color": "despair"
+    },
+    {
+      "label": "Iran",
+      "value": 14.1,
+      "color": "despair"
+    },
+    {
+      "label": "Iraq",
+      "value": 11,
+      "color": "despair"
+    }
+  ],
+  "xmax": 90,
+  "xTicks": [
+    0,
+    30,
+    60,
+    90
+  ],
+  "provenance": {
+    "source": "wb",
+    "sourceIndicator": "SL.TLF.CACT.FE.ZS",
+    "url": "https://data.worldbank.org/indicator/SL.TLF.CACT.FE.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2024–2024",
+    "checksum": "3b80d989a9c98f6426c02b272be0714feea94d148adbf3457672d39c7a34caca",
+    "definition": "Female labour-force participation — share of women aged 15+ working or seeking paid work (ILO modelled estimate), latest year per country. Most unpaid care and subsistence work is not counted here. A curated 12-country spread sorted descending.",
+    "attribution": "ILO, via World Bank",
+    "primarySource": "International Labour Organization (ILO modelled estimate)"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 12 curated countries sorted descending"
+    }
+  ]
+}

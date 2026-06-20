@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "work.informal_employment.world",
+    "unit": "% of total employment",
+    "points": 21
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "identity",
+        "detail": "normalized directly from source"
+      }
+    ],
+    "agent": "adapter:ilostat@1.1.0",
+    "used": {
+      "source": "ilostat",
+      "slug": "DF_EMP_2IFL_SEX_RT",
+      "url": "https://sdmx.ilo.org/rest/data/DF_EMP_2IFL_SEX_RT/all?startPeriod=1990",
+      "vintage": "2026-06-20",
+      "checksum": "99948f24c58bbc129dd93f78429cebdb15238c9764d4baa2d95d6cf1ad98ade5",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "ILOSTAT — International Labour Organization (SDG 8.3.1 family, modelled)"
+}

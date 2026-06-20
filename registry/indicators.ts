@@ -1868,6 +1868,18 @@ export const INDICATORS: IndicatorSpec[] = [
     validate: { min: 0, max: 500_000_000, monotonicJump: 1, requireProvenance: true },
     primarySource: 'ILO & UNICEF — Global Estimates of Child Labour',
   },
+  {
+    // The despair counter-melody to working poverty: most of the world's workers have no contract
+    // and no safety net. ILO modelled estimates (Nov. 2025), aggregates only (no per-country).
+    id: 'work.informal_employment.world',
+    title: 'Informal employment rate, World',
+    unit: '% of total employment',
+    chartId: 'informal-employment-world',
+    adapter: 'ilostat', slug: 'DF_EMP_2IFL_SEX_RT',
+    filter: { SEX: 'SEX_T' }, yearMax: 2024, // the ILO modelled series nowcasts to 2027; cap at the last settled year
+    validate: { min: 0, max: 100, monotonicJump: 1, requireProvenance: true },
+    primarySource: 'ILOSTAT — International Labour Organization (SDG 8.3.1 family, modelled)',
+  },
 
   // ════════ HEALTH, deepened — the great wins (and the counter-arc). All re-host (CC BY). ════════
   {

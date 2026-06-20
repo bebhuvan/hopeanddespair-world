@@ -1,0 +1,151 @@
+{
+  "chartId": "work-quality-by-income",
+  "kind": "heatgrid",
+  "title": "The three faces of insecure work, across the income ladder",
+  "cols": [
+    {
+      "key": "x02",
+      "label": "Low income",
+      "short": "Low"
+    },
+    {
+      "key": "x03",
+      "label": "Lower-middle income",
+      "short": "Lower-middle"
+    },
+    {
+      "key": "x04",
+      "label": "Upper-middle income",
+      "short": "Upper-middle"
+    },
+    {
+      "key": "x05",
+      "label": "High income",
+      "short": "High"
+    }
+  ],
+  "rows": [
+    {
+      "label": "Working poverty",
+      "short": "Working poor",
+      "unit": "% of employed under $2.15/day",
+      "cells": [
+        {
+          "col": "x02",
+          "value": 51.18,
+          "year": 2024,
+          "t": 0,
+          "display": "51%"
+        },
+        {
+          "col": "x03",
+          "value": 10.69,
+          "year": 2024,
+          "t": 0.79,
+          "display": "11%"
+        },
+        {
+          "col": "x04",
+          "value": 1.52,
+          "year": 2024,
+          "t": 0.97,
+          "display": "1.5%"
+        },
+        {
+          "col": "x05",
+          "value": 0.01,
+          "year": 2024,
+          "t": 1,
+          "display": "0.0%"
+        }
+      ]
+    },
+    {
+      "label": "Informal employment",
+      "short": "Informal",
+      "unit": "% of jobs informal",
+      "cells": [
+        {
+          "col": "x02",
+          "value": 89.19,
+          "year": 2024,
+          "t": 0,
+          "display": "89%"
+        },
+        {
+          "col": "x03",
+          "value": 83.82,
+          "year": 2024,
+          "t": 0.07,
+          "display": "84%"
+        },
+        {
+          "col": "x04",
+          "value": 53.22,
+          "year": 2024,
+          "t": 0.45,
+          "display": "53%"
+        },
+        {
+          "col": "x05",
+          "value": 8.9,
+          "year": 2024,
+          "t": 1,
+          "display": "8.9%"
+        }
+      ]
+    },
+    {
+      "label": "Underemployment",
+      "short": "Want more hours",
+      "unit": "% wanting more hours",
+      "cells": [
+        {
+          "col": "x02",
+          "value": 10.96,
+          "year": 2024,
+          "t": 0,
+          "display": "11%"
+        },
+        {
+          "col": "x03",
+          "value": 4.73,
+          "year": 2024,
+          "t": 0.73,
+          "display": "4.7%"
+        },
+        {
+          "col": "x04",
+          "value": 4.96,
+          "year": 2024,
+          "t": 0.71,
+          "display": "5.0%"
+        },
+        {
+          "col": "x05",
+          "value": 2.47,
+          "year": 2024,
+          "t": 1,
+          "display": "2.5%"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source": "ilostat",
+    "sourceIndicator": "DF_SDG_0111 · DF_EMP_2IFL · DF_EMP_2TRU [REF_AREA=X02..X05]",
+    "url": "https://ilostat.ilo.org",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-20",
+    "checksum": "derived",
+    "definition": "Working poverty, informal employment and time-related underemployment for each national income group, latest settled year, shaded within each row from the worst group (red) to the best (green). No cross-row composite. Columns run poorest to richest.",
+    "attribution": "ILOSTAT — International Labour Organization",
+    "primarySource": "ILOSTAT — ILO"
+  },
+  "recipe": [
+    {
+      "op": "row_minmax",
+      "detail": "per-row min–max of the latest income-group values; lower (less bad work) maps to green"
+    }
+  ]
+}

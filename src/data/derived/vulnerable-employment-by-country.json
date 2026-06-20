@@ -1,0 +1,103 @@
+{
+  "chartId": "vulnerable-employment-by-country",
+  "kind": "bars",
+  "title": "Vulnerable employment by country",
+  "unit": "Own-account & unpaid family workers, % of employment",
+  "yearSpan": "2024–2024",
+  "bars": [
+    {
+      "label": "Chad",
+      "value": 90.2,
+      "color": "despair"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 84.5,
+      "color": "despair"
+    },
+    {
+      "label": "Niger",
+      "value": 84,
+      "color": "despair"
+    },
+    {
+      "label": "India",
+      "value": 72.1,
+      "color": "despair"
+    },
+    {
+      "label": "Nigeria",
+      "value": 66.7,
+      "color": "despair"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 57.7,
+      "color": "ochre"
+    },
+    {
+      "label": "Vietnam",
+      "value": 51.9,
+      "color": "ochre"
+    },
+    {
+      "label": "Indonesia",
+      "value": 50.3,
+      "color": "ochre"
+    },
+    {
+      "label": "China",
+      "value": 33.8,
+      "color": "ochre"
+    },
+    {
+      "label": "Brazil",
+      "value": 26.3,
+      "color": "hope"
+    },
+    {
+      "label": "Egypt",
+      "value": 24.1,
+      "color": "hope"
+    },
+    {
+      "label": "South Africa",
+      "value": 11.7,
+      "color": "hope"
+    },
+    {
+      "label": "Germany",
+      "value": 4.4,
+      "color": "hope"
+    },
+    {
+      "label": "United States",
+      "value": 3.9,
+      "color": "hope"
+    }
+  ],
+  "xmax": 90,
+  "xTicks": [
+    0,
+    30,
+    60,
+    90
+  ],
+  "provenance": {
+    "source": "wb",
+    "sourceIndicator": "SL.EMP.VULN.ZS",
+    "url": "https://data.worldbank.org/indicator/SL.EMP.VULN.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2024–2024",
+    "checksum": "98ccb86a97fdf91e60b7e0c643278b74e721f245f5df26f991beb082d23cb44a",
+    "definition": "Vulnerable employment — own-account and contributing family workers as a share of total employment (ILO modelled estimate), latest year per country. Work with no employer behind it. A curated 14-country spread sorted descending.",
+    "attribution": "ILO, via World Bank",
+    "primarySource": "International Labour Organization (ILO modelled estimate)"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest value per country, 14 curated countries sorted descending"
+    }
+  ]
+}

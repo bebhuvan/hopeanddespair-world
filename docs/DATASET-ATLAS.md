@@ -103,7 +103,7 @@ roster is already on disk; the gap was the *distribution and multidimensional* s
 | **World Bank Gini** (`SI.POV.GINI`) + **shared prosperity** (`SI.SPR.*`, bottom-40 growth) | within-country inequality; is growth reaching the poor? | WB adapter, today | CC BY 4.0 → re-host |
 | **Maddison** | the 2,000-year arc; the Great Divergence and the catch-up | OWID | re-host |
 | **UNICEF / WB child poverty** | the demographic face — children ~2× as likely to be extreme-poor | UNICEF tables / WB | verify → likely re-host |
-| **ILO ILOSTAT** | working poverty, informality, child labour | OWID or ILO API | CC BY 4.0 → re-host |
+| **ILO ILOSTAT** ✅ **LIVE** | working poverty (world→income→region→country, +youth/sex), informality, vulnerable employment, child labour — the flagship of *"Is work getting better or worse?"* (kicker 15, built 2026-06-20) | **`ilostat` adapter** (`scripts/ingest/ilostat.ts`, SDMX 2.1; v1.1.0 keeps all ILO aggregate X-codes per snapshot) + `scripts/analysis/work-and-jobs.ts` composites; per-country via the cross-section script | CC BY 4.0 → re-host |
 | **World Bank Findex** | financial inclusion (account ownership) | WB adapter | CC BY 4.0 → re-host |
 
 > **Vintage note (2026-06-11):** PIP rebased to 2021 PPP in June 2025; the extreme line is now
