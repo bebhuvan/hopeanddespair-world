@@ -19,7 +19,7 @@ atlas:
 
 caveats:
   - "World totals hide more than they show here, which is the point. Wherever the data allows, this piece drops from the global line to regions and to individual countries, because the average is the least honest number on the page."
-  - "We borrow the question from the World Bank's Atlas of Global Development 2026, but not its method. The Atlas uses a stage-conditional, country-level model; we use a simpler world-and-region trend comparison we can show in full. The direction agrees; our magnitudes are our own."
+  - "We borrow the question from the World Bank's Atlas of Global Development 2026, but not its method. The Atlas uses a stage-conditional, country-level model; we use a simpler world-and-region trend comparison we can show in full. The direction agrees, and so does the shape: the Atlas, by its own route, finds the slowdown pooling in Sub-Saharan Africa and a cluster of stalled countries, the same divergence this piece draws. Our magnitudes are our own; the few forward figures we quote are the Atlas's, marked as theirs."
   - "Pace is measured against 2000–2013, an extraordinary period. Some of what reads as a slowdown is the end of an exceptional sprint, not the onset of decline. The piece keeps that distinction in view."
 
 intro:
@@ -84,7 +84,7 @@ movements:
     fig: "FIG. 3"
     question: "If the rate fell almost everywhere, did the problem shrink?"
     claim: "In headcount the world's poor fell from 2.3 billion to about 850 million, but Sub-Saharan Africa's nearly doubled, and it now holds seven in ten of all the extreme poor."
-    explainer: "A falling rate and a falling number are not the same thing, and the space between them is where this story turns. Counted in people rather than percentages, the world's retreat from poverty is staggering: about 2.3 billion lived in extreme poverty in 1990 and roughly 850 million do today, even as the planet added more than two and a half billion people. Almost all of that drop happened in Asia. East Asia went from 1.2 billion poor to under fifty million; South Asia from about 500 million to some sixty. Sub-Saharan Africa moved the opposite way. It counted 321 million poor in 1990 and about 582 million now, close to double, because its poverty rate eased only slowly while its population grew fast enough to outrun the decline. That reorders the whole map. In 1990 roughly one in seven of the world's extreme poor lived in Sub-Saharan Africa; today it is nearly seven in ten. Subtract that one region and global poverty looks all but finished. Add it back and most of what remains sits in a single place."
+    explainer: "A falling rate and a falling number are not the same thing, and the space between them is where this story turns. Counted in people rather than percentages, the world's retreat from poverty is staggering: about 2.3 billion lived in extreme poverty in 1990 and roughly 850 million do today, even as the planet added more than two and a half billion people. Almost all of that drop happened in Asia. East Asia went from 1.2 billion poor to under fifty million; South Asia from about 500 million to some sixty. Sub-Saharan Africa moved the opposite way. It counted 321 million poor in 1990 and about 582 million now, close to double, because its poverty rate eased only slowly while its population grew fast enough to outrun the decline. That reorders the whole map. In 1990 roughly one in seven of the world's extreme poor lived in Sub-Saharan Africa; today it is nearly seven in ten. Subtract that one region and global poverty looks all but finished. Add it back and most of what remains sits in a single place. The World Bank's own Atlas reaches the same place from the other direction: more than half the world's poor now live in countries where poverty is no longer falling, and it counts forty-three where progress has stalled or gone into reverse."
     captionLeft: "<b>People in extreme poverty</b> · millions under $3.00 a day · by region · 2021 PPP"
     captionRight: "every region emptied but one"
     source: "Source · World Bank — Poverty and Inequality Platform · CC BY 4.0"
@@ -255,7 +255,7 @@ movements:
     fig: "FIG. 9"
     question: "Did women's gains slow with the rest?"
     claim: "Less than most: women's share of parliamentary seats more than doubled since 1997, and girls' secondary enrolment nearly doubled since 1970."
-    explainer: "Two measures of women's lives barely flinched. In 1997 women held under twelve percent of the world's parliamentary seats; by 2025 they held more than twenty-seven. Girls' secondary-school enrolment rose from about forty percent in 1970 to over seventy-five today. Neither has reached parity, and a seat in a chamber is not the same as power inside it. But both kept climbing through the decade that slowed almost everything else, for the same reason connectivity did: they started far from finished, with a long way still to run. The pattern of the whole piece holds even here. Where the gap is widest, the movement stays fast; it is the gains nearest completion that stall."
+    explainer: "Two measures of women's lives barely flinched. In 1997 women held under twelve percent of the world's parliamentary seats; by 2025 they held more than twenty-seven. Girls' secondary-school enrolment rose from about forty percent in 1970 to over seventy-five today. Neither has reached parity, and a seat in a chamber is not the same as power inside it. But both kept climbing through the decade that slowed almost everything else, for the same reason connectivity did: they started far from finished, with a long way still to run. The pattern of the whole piece holds even here. Where the gap is widest, the movement stays fast; it is the gains nearest completion that stall. The furthest-from-finished part of women's lives, paid work, shows it plainly: the World Bank's Atlas reckons that at the current pace the world is still more than three centuries from parity there."
     captionLeft: "<b>Women's advancement</b> · % · parliamentary seats and girls' secondary enrolment"
     captionRight: "the gains still climbing"
     source: "Source · IPU, UN Women & UNESCO — via World Bank WDI, Data360 · CC BY 4.0"
@@ -356,7 +356,7 @@ movements:
   - eyebrow: "The exception"
     fig: "FIG. 13"
     question: "Is anything moving faster than before?"
-    claim: "One thing is: internet use spread faster after 2013 than before it, the lone line on the page that accelerated."
+    claim: "One thing is: internet use spread faster after 2013 than before it, the standout accelerator on a page of slowdowns."
     explainer: "Against the broad slowdown, the internet ran the other way. In 2005 about one person in six was online; by 2024 it was roughly seven in ten, and the climb was steeper in the last decade than the one before. It is the clearest accelerator on this page. But even here the map matters more than the line. Europe and East Asia are above eighty and ninety percent, near saturation. Sub-Saharan Africa, starting from almost nothing in 2005, has reached only about a third. The frontier that lags on poverty and lifespan lags online too. Mobile phones, by contrast, have hit their ceiling: with more than one subscription per person worldwide, their once-explosive growth has slowed to a fifth of its old pace, not because the spread failed but because it finished."
     captionLeft: "<b>Internet use</b> · % of people online · world"
     captionRight: "the one line that sped up"
@@ -440,6 +440,34 @@ movements:
       hope: "Outside one region, most of these seven measures have reached nearly the whole world, which no earlier generation could say."
       despair: "One region places last on every one of these measures at once, the divergence compressed into a single dark column."
       confusion: "Income predicts most of the shading but not every cell, so even the clearest map keeps an argument inside it."
+  - eyebrow: "The fork ahead"
+    fig: "FIG. 17"
+    question: "So is the slowdown simply the end of the story?"
+    claim: "No: the same point in 2025 fans into four futures — stay on the current path and poverty climbs to 15.5% by 2050; move the way Korea once did and it falls to 1.2%."
+    explainer: "Every chart so far has looked backward. This one looks ahead, and it is the only place the question stops being about measurement and turns into a question about choice. The solid line is the world's extreme-poverty rate as it actually ran, from about 36 percent in 2000 to roughly 10 percent now, the pandemic bump and all. From the point where that line ends, the World Bank's Atlas draws four dashed futures, each the world rate in 2050 if the typical poor country moved at a different speed. Stay on the present path and the rate drifts back up to 15.5 percent, the first sustained rise the series has ever shown. Let poor countries grow at the pace a typical developer has managed and it eases to 8.5. Match Brazil's better decades and it reaches 4.8. Move the way South Korea once did, from among the poorest places on earth to among the richest, and extreme poverty all but vanishes, down to 1.2 percent. The distance between the top dashed line and the bottom one is neither forecast nor fate. It is the price or the reward of pace, the same divergence that split the regions, now aimed at the years ahead. Which line the world lands on turns almost entirely on whether the frontier that stalled finds a fast decade of its own."
+    captionLeft: "<b>Global extreme poverty, to 2050</b> · % under $3.00 a day · solid = recorded, dashed = World Bank Atlas scenarios"
+    captionRight: "one start, four endings"
+    source: "Source · World Bank — Poverty and Inequality Platform (the recorded line) & Atlas of Global Development 2026 (the 2050 scenarios, quoted) · CC BY 4.0"
+    chart:
+      id: "m17"
+      dataRefs: ["progress-poverty-actual", "", "", "", ""]
+      ymax: 40
+      yTicks: [0, 10, 20, 30, 40]
+      xTicks: [2000, 2025, 2050]
+      x0: 2000
+      x1: 2050
+      valueSuffix: "%"
+      annots: [{ x: 2024, label: "projections to 2050" }]
+      series:
+        - { name: "", color: "stone", data: [[2000, 36.2], [2024, 10.4]] }
+        - { name: "Current path", color: "despair", dashed: true, data: [[2024, 10.4], [2050, 15.5]] }
+        - { name: "Typical path", color: "ochre", dashed: true, data: [[2024, 10.4], [2050, 8.5]] }
+        - { name: "Brazil's path", color: "uncertain", dashed: true, data: [[2024, 10.4], [2050, 4.8]] }
+        - { name: "Korea's path", color: "hope", dashed: true, data: [[2024, 10.4], [2050, 1.2]] }
+    take:
+      hope: "The future is not fixed: a Korea-paced frontier would push extreme poverty close to zero by 2050."
+      despair: "On the path the world is actually on, the poverty rate turns back up for the first time in the series, toward 15.5 percent."
+      confusion: "Four numbers branch from a single point, so 'what happens next' is less a forecast than a question about the pace we choose."
 
 pullQuote:
   text: "Progress did not fade evenly. It arrived in some places, reversed in a couple, and never quite reached the rest."
@@ -465,21 +493,23 @@ lenses:
 
 hopeCase: "Read the levels, not the speeds, and the story is triumphant. People live longer than ever, fewer are poor than ever, fewer children die than ever, more are online than ever. Two of the most populous regions on earth crossed from mass poverty to near-elimination inside a generation. A slowdown from that pace is still forward motion, and much of it is the arithmetic of success: a number near its ceiling is hard to push higher. On the genuinely unfinished frontier, connectivity is still gaining speed, and Sub-Saharan Africa's lifespan and access are climbing even where its poverty is stuck. The job is not done, but the direction across almost every line is still up."
 
-despairCase: "Read the speeds and the map, and the story darkens. The gains that matter most have been cut to a quarter or a third of their old pace, and the remaining poverty has pooled almost entirely in one region whose largest economies have barely moved. Two basic gains, freedom from hunger and protection from measles, have reversed outright. The surge that set the benchmark was powered by China's once-in-history rise and an open-trade era now closing, tailwinds that will not return. If the frontier that has stalled does not find its own decade of speed, the global line does not just slow. It splits permanently into a finished world and a stranded one."
+despairCase: "Read the speeds and the map, and the story darkens. The gains that matter most have been cut to a quarter or a third of their old pace, and the remaining poverty has pooled almost entirely in one region whose largest economies have barely moved. Two basic gains, freedom from hunger and protection from measles, have reversed outright. The surge that set the benchmark was powered by China's once-in-history rise and an open-trade era now closing, tailwinds that will not return. The World Bank's Atlas puts a number on the stake: stay on the present path and six hundred million more people could be in extreme poverty by 2050, the global rate climbing back toward fifteen percent instead of falling. If the frontier that has stalled does not find its own decade of speed, the global line does not just slow. It splits permanently into a finished world and a stranded one."
 
-whatWouldChangeIt: "Watch the frontier, not the average. The number that matters is whether Sub-Saharan Africa's poverty rate finally breaks downward and whether its life expectancy keeps closing the gap, because that single region now holds most of the unfinished work. Watch the two reversals: if undernourishment and vaccination turn back down, the backsliding was a shock, not a trend. And watch whether the world line reattaches to its old pace in even two or three measures, which would argue for a plateau after a sprint rather than a stall. Faster on the frontier and the hope case wins. A widening gap, and the verdict tilts toward a world permanently split."
+whatWouldChangeIt: "Watch the frontier, not the average. The number that matters is whether Sub-Saharan Africa's poverty rate finally breaks downward and whether its life expectancy keeps closing the gap, because that single region now holds most of the unfinished work. Watch the two reversals: if undernourishment and vaccination turn back down, the backsliding was a shock, not a trend. And watch whether the world line reattaches to its old pace in even two or three measures, which would argue for a plateau after a sprint rather than a stall. Speed on the frontier is not hypothetical: Singapore and South Korea crossed from among the world's poorest to among its richest within a lifetime, the Atlas's own evidence that a stalled place can still find a fast decade. Faster on the frontier and the hope case wins. A widening gap, and the verdict tilts toward a world permanently split."
 
 methodology:
   - term: "Divergence, not a single line"
     detail: "Wherever the data allows, the piece reads world, then region, then country, because the global average is a weighted blend of opposite trends. The regional poverty, life-expectancy and internet series are the same World Bank and Our World in Data measures shown un-averaged; the country pairs (India and Nigeria) are drawn from the same poverty source."
   - term: "Pace, not level"
-    detail: "For each world series we fit a straight line by least squares over 2000–2013 and again over 2013 to the latest year, giving an annual rate of change, signed so improvement is always positive. The pace-ratio chart is the recent rate divided by the earlier one; below 100% means the gain slowed. This is a deliberately simple, fully visible measure, not the World Bank Atlas's stage-conditional country model, which is why our numbers differ from theirs."
+    detail: "For each world series we fit a straight line by least squares over 2000–2013 and again over 2013 to the latest year, giving an annual rate of change, signed so improvement is always positive. The pace-ratio chart is the recent rate divided by the earlier one; below 100% means the gain slowed. This is a deliberately simple, fully visible measure, not the World Bank Atlas's stage-conditional country model. Theirs scores each country against how fast comparable countries moved historically, so that a speed of 80 means outpacing eighty percent of past cases; ours divides one decade's slope by the previous decade's, in plain units anyone can recompute. That is why our numbers differ from theirs."
   - term: "Reversals are shown as lines, not bars"
     detail: "Two measures, undernourishment and measles coverage, have a recent rate that turned negative — they went backwards. A bar clamped to zero would read as 'barely moved', so they are pulled out of the pace chart and shown as their own series, where the turn is visible."
   - term: "The closing grid is shaded row by row, not as a score"
     detail: "The final chart colours each region on each measure from the worst region (red) to the best (green), but every row is scaled on its own. There is no overall index, and no cell is comparable to a cell in another row, because a year of life and a point of poverty do not share a scale. The columns are ordered by one stated variable, income per person, so the eye can see whether outcomes track wealth, not by a hidden ranking. The women's empowerment figure uses the exact V-Dem index the Atlas uses, where elsewhere we lean on World Bank measures."
   - term: "Why there is no headline 'cost in people'"
-    detail: "It is tempting to extend the fast 2000s poverty trend forward and count the 'extra' poor today. We refuse that figure: a poverty rate is bounded at zero, so a straight line from the fast years runs below zero within a decade and manufactures a dramatic but meaningless number. The honest statements are about pace, about the actual headcount today (about 847 million), and about where that poverty now lives."
+    detail: "It is tempting to extend the fast 2000s poverty trend forward and count the 'extra' poor today. We refuse that figure: a poverty rate is bounded at zero, so a straight line from the fast years runs below zero within a decade and manufactures a dramatic but meaningless number. The honest statements are about pace, about the actual headcount today (about 847 million), and about where that poverty now lives. Where the piece does cite a forward number — the climb toward fifteen percent and six hundred million more poor by 2050 — it is the Atlas's own projection on its own method, quoted and linked rather than recomputed here."
+  - term: "The closing fork is the Atlas's projection, drawn on our line"
+    detail: "The final chart's solid line is our own World Bank poverty series. The four dashed paths to 2050 are the Atlas's published scenarios, quoted and redrawn from the single point where our data ends, not modelled by us. They are illustrative endpoints rather than forecasts; the spread between them is the argument, that the future of the frontier is a matter of pace and not a fixed line."
   - term: "Prose and number audit"
     detail: "Explanatory text was drafted with AI assistance and then checked line by line against the derived data series; every quantitative claim traces to a figure produced by the project's pipeline. No outside numbers were introduced."
 
@@ -531,7 +561,7 @@ sources:
     url: "https://data360.worldbank.org/en/atlas/global-progress/"
     license: "Cited for the question and framing, not re-hosted"
     vintage: "2026"
-    note: "The source of the slowing-progress question; uses a different, stage-conditional method, so its magnitudes differ from ours."
+    note: "The source of the slowing-progress question. We also quote a few of its figures: about 600 million more poor and a rate near 15 percent by 2050, the 43 stalled countries, and the finding that more than half the world's poor now live where poverty is not falling. It uses a different, stage-conditional method, so its past magnitudes differ from ours. These forward figures are quoted, not recomputed."
 ---
 
 This piece reads one question at three altitudes — world, region, country — because the global

@@ -1,7 +1,35 @@
 # Article plan — *Is human progress slowing down?*
 
-**Status: BUILT 2026-06-17, reframed to divergence 2026-06-18.** Lives at
+**Status: BUILT 2026-06-17, reframed to divergence 2026-06-18, source-backed pass 2026-06-20.** Lives at
 `src/content/questions/is-human-progress-slowing-down.md` (kicker 14, theme "Human Development").
+
+**2026-06-20 — back-to-the-source pass (no rebuild, prose/sources only):** Re-read the Atlas and its
+sub-pages and folded in its *own* (link-only, attributed) figures rather than deriving new ones —
+honouring the number-audit invariant by quoting, not recomputing. Changes: (1) the Atlas's forward
+projection now appears in `despairCase` and methodology — *600M more poor / rate toward 15% by 2050*;
+(2) FIG. 3 enlists the Atlas's corroboration of the divergence — *>½ the poor now live where poverty
+isn't falling, 43 stalled countries* — so the piece agrees with the source instead of implicitly
+out-honesting it (caveat 2 updated to say the *shape* agrees too); (3) FIG. 9 adds the Atlas's
+*>3 centuries to paid-work parity*; (4) `whatWouldChangeIt` gains a concrete "speed is possible"
+case (Singapore/South Korea, the Atlas's own example — *not* the unverifiable "Türkiye 36 years");
+(5) the borrowed **speed-score** is now made concrete in methodology ("80 = faster than 80% of past
+cases"); (6) fixed a soft overclaim — FIG. 13's "the lone line that accelerated" → "standout
+accelerator", since our own pace ratios show electricity (110%) and sanitation (105%) also rose.
+Discarded on verification: the "150M→69M escape-rate" and "Türkiye 36-year" figures (could not be
+confirmed in the source). `pnpm verify` green; article = 0 prose-lint fails / 0 warnings.
+
+**2026-06-20 — FIG. 17 "The fork ahead" (new closing movement):** recreated the Atlas's fan chart
+("Global poverty could increase if current trends continue") as our own inline SVG, the project's
+*first forward-looking chart*. **Solid line = our PIP world series** (`progress-poverty-actual`,
+re-hostable CC BY, 2000=36%→2024=10.4% with the COVID bump); **four dashed paths to 2050 = the
+Atlas's published scenarios, quoted not modelled** — Current 15.5, Typical 8.5, Brazil's 4.8,
+Korea's 1.2 — fanning from our last actual point. Sanctioned by [[CHARTS.md]] line 39 ("line +
+labeled benchmark path… a named, sourced target, never our invention"). Placed last (after the map)
+so the piece closes on agency — the future of the frontier is a question of pace — paying off the
+Korea reference added to `whatWouldChangeIt` the same day. Disclosure in a dedicated methodology
+term. Renderer note: missing `dataRefs` slots (empty strings) fall back to the inline 2-point series
+data, so one real historical ref + four inline dashed projections coexist in one chart. Movements
+now **17**.
 Companion to [[NORTH_STAR.md]], [[WRITING.md]], [[CHARTS.md]], [[DATA.md]]. Template:
 [[ARTICLE-violence-plan.md]] / the debt build.
 
