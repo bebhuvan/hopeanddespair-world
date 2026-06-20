@@ -1,0 +1,190 @@
+{
+  "chartId": "debt-fragility-plane",
+  "kind": "scatter",
+  "title": "Where does fragility actually live?",
+  "xLabel": "External liquidity stress — debt service, % of exports",
+  "yLabel": "Fiscal crowding — interest, % of revenue",
+  "xmax": 55,
+  "ymax": 65,
+  "xThreshold": 25,
+  "yThreshold": 20,
+  "points": [
+    {
+      "x": 38.3,
+      "y": 5.1,
+      "pop": 85.334,
+      "region": "defaulted",
+      "label": "Argentina",
+      "defaulted": true
+    },
+    {
+      "x": 19.5,
+      "y": 5.8,
+      "pop": 94.587,
+      "region": "defaulted",
+      "label": "Zimbabwe",
+      "defaulted": true
+    },
+    {
+      "x": 23.4,
+      "y": 7.4,
+      "pop": 25.971,
+      "region": "stressed",
+      "label": "Türkiye",
+      "defaulted": false
+    },
+    {
+      "x": 49.2,
+      "y": 55.8,
+      "pop": 90.925,
+      "region": "severe",
+      "label": "Egypt",
+      "defaulted": false
+    },
+    {
+      "x": 23.7,
+      "y": 57.1,
+      "pop": 99.434,
+      "region": "defaulted",
+      "label": "Sri Lanka",
+      "defaulted": true
+    },
+    {
+      "x": 9.4,
+      "y": 25.4,
+      "pop": 70.50800000000001,
+      "region": "defaulted",
+      "label": "Ghana",
+      "defaulted": true
+    },
+    {
+      "x": 21,
+      "y": 4.4,
+      "pop": 164.127,
+      "region": "defaulted",
+      "label": "Lebanon",
+      "defaulted": true
+    },
+    {
+      "x": 39.5,
+      "y": 61.3,
+      "pop": 70.072,
+      "region": "severe",
+      "label": "Pakistan",
+      "defaulted": false
+    },
+    {
+      "x": 21.9,
+      "y": 17.5,
+      "pop": 52.900000000000006,
+      "region": "stressed",
+      "label": "Nigeria",
+      "defaulted": false
+    },
+    {
+      "x": 27.2,
+      "y": 29.3,
+      "pop": 65.59,
+      "region": "stressed",
+      "label": "Kenya",
+      "defaulted": false
+    },
+    {
+      "x": 15.8,
+      "y": 27.7,
+      "pop": 40.126,
+      "region": "stressed",
+      "label": "Bangladesh",
+      "defaulted": false
+    },
+    {
+      "x": 28.9,
+      "y": 30.1,
+      "pop": 62.501,
+      "region": "stressed",
+      "label": "Angola",
+      "defaulted": false
+    },
+    {
+      "x": 30.5,
+      "y": 28.2,
+      "pop": 114.943,
+      "region": "defaulted",
+      "label": "Zambia",
+      "defaulted": true
+    },
+    {
+      "x": 11.5,
+      "y": 7.8,
+      "pop": 32.297,
+      "region": "defaulted",
+      "label": "Ethiopia",
+      "defaulted": true
+    },
+    {
+      "x": 26.2,
+      "y": 14.4,
+      "pop": 83.13199999999999,
+      "region": "stressed",
+      "label": "Tunisia",
+      "defaulted": false
+    },
+    {
+      "x": 26.7,
+      "y": 16.2,
+      "pop": 87.28399999999999,
+      "region": "stressed",
+      "label": "Brazil",
+      "defaulted": false
+    },
+    {
+      "x": 9.5,
+      "y": 24,
+      "pop": 58.425000000000004,
+      "region": "stressed",
+      "label": "Mexico",
+      "defaulted": false
+    },
+    {
+      "x": 10.5,
+      "y": 24.3,
+      "pop": 81.286,
+      "region": "stressed",
+      "label": "India",
+      "defaulted": false
+    },
+    {
+      "x": 24.7,
+      "y": 15.1,
+      "pop": 40.189,
+      "region": "stressed",
+      "label": "Indonesia",
+      "defaulted": false
+    },
+    {
+      "x": 16.3,
+      "y": 19.7,
+      "pop": 76.356,
+      "region": "stressed",
+      "label": "South Africa",
+      "defaulted": false
+    }
+  ],
+  "provenance": {
+    "source": "unctad+worldbank",
+    "sourceIndicator": "UNCTAD WoD 2025 + World Bank IDS",
+    "url": "https://unctad.org/publication/world-of-debt",
+    "license": "Link-only — UNCTAD publication terms (display + cite); World Bank IDS is CC BY 4.0",
+    "vintage": "2026-06-17",
+    "checksum": "c087bb43604849dc2b367a893143343f875c2be0a3ada1765ef4d9ec7c6beab1",
+    "definition": "Each country positioned by external liquidity stress (WB debt-service/exports) against fiscal crowding (UNCTAD interest/revenue); bubble = public debt %GDP. Defaulted countries (grey) post distorted interest ratios — see note.",
+    "attribution": "UN Trade and Development (UNCTAD), A World of Debt 2025; World Bank International Debt Statistics",
+    "primarySource": "UNCTAD; World Bank"
+  },
+  "recipe": [
+    {
+      "op": "two_axis_position",
+      "detail": "x = debt service %exports (WB), y = interest %revenue (UNCTAD), size = debt %GDP; 2D position, never collapsed to one score; defaulted flag carried"
+    }
+  ]
+}

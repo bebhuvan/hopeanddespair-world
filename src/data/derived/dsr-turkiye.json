@@ -1,0 +1,109 @@
+{
+  "indicatorId": "debt.dsr.tr",
+  "entity": "TR",
+  "entityName": "Türkiye",
+  "unit": "% of income to debt service (private non-financial sector)",
+  "points": [
+    {
+      "t": 2005,
+      "value": 5.8
+    },
+    {
+      "t": 2006,
+      "value": 8.2
+    },
+    {
+      "t": 2007,
+      "value": 8.1
+    },
+    {
+      "t": 2008,
+      "value": 11.1
+    },
+    {
+      "t": 2009,
+      "value": 7.2
+    },
+    {
+      "t": 2010,
+      "value": 7.3
+    },
+    {
+      "t": 2011,
+      "value": 10.3
+    },
+    {
+      "t": 2012,
+      "value": 9.6
+    },
+    {
+      "t": 2013,
+      "value": 10.3
+    },
+    {
+      "t": 2014,
+      "value": 11.5
+    },
+    {
+      "t": 2015,
+      "value": 14.2
+    },
+    {
+      "t": 2016,
+      "value": 14.2
+    },
+    {
+      "t": 2017,
+      "value": 15.6
+    },
+    {
+      "t": 2018,
+      "value": 26.7
+    },
+    {
+      "t": 2019,
+      "value": 13.7
+    },
+    {
+      "t": 2020,
+      "value": 17.1
+    },
+    {
+      "t": 2021,
+      "value": 19.3
+    },
+    {
+      "t": 2022,
+      "value": 13.8
+    },
+    {
+      "t": 2023,
+      "value": 29.8
+    },
+    {
+      "t": 2024,
+      "value": 28.7
+    },
+    {
+      "t": 2025,
+      "value": 26.9
+    }
+  ],
+  "provenance": {
+    "source": "bis",
+    "sourceIndicator": "WS_DSR [Q.TR.P]",
+    "url": "https://data.bis.org/topics/DSR",
+    "license": "BIS terms — link-only (display with attribution; not re-hosted)",
+    "vintage": "2026-06-17",
+    "checksum": "1a1b77efe7de0b5fe60ca369b81da1669be57910b2e547532031c107336ecc36",
+    "definition": "Debt-service ratio, private non-financial sector, Türkiye — share of income devoted to debt service. Annual end-of-period (latest quarter each year).",
+    "attribution": "Bank for International Settlements (BIS)",
+    "primarySource": "BIS debt service ratios"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "BIS DSR private non-financial sector, Türkiye; quarterly folded to annual end-of-period"
+    }
+  ]
+}

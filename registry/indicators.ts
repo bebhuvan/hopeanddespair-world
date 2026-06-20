@@ -2093,6 +2093,91 @@ export const INDICATORS: IndicatorSpec[] = [
     validate: { min: 0, max: 200_000_000_000, monotonicJump: 1, requireProvenance: true },
     primarySource: 'FAOSTAT — via Our World in Data',
   },
+
+  /* ── "Is human progress slowing down?" — two new series pulled via the Data360 adapter
+     (WB-origin, CC BY 4.0). The rest of the story composes series already on disk. ── */
+  {
+    // A concrete, hard-counted component of women's political standing — share of national-parliament
+    // seats held by women (FIG. 9). The Atlas's actual sixth headline, the V-Dem *empowerment index*,
+    // is carried exactly by progress.women_empowerment.* below (FIG. 10); this is its companion, not a
+    // proxy for it.
+    id: 'progress.women_parliament.world',
+    title: 'Seats held by women in national parliaments',
+    unit: '% of seats',
+    chartId: 'women-parliament-world',
+    adapter: 'data360',
+    slug: 'WB_WDI_SG_GEN_PARL_ZS',
+    data360: { databaseId: 'WB_WDI', refArea: 'WLD' },
+    derive: { op: 'identity' },
+    validate: { min: 0, max: 60, monotonicJump: 5, requireProvenance: true },
+    primarySource: 'IPU & UN Women — via World Bank WDI / Data360',
+  },
+  {
+    // The Atlas's sixth headline, the EXACT metric (not the parliament proxy): V-Dem women's
+    // political empowerment index, via OWID — same source and path as our liberal-democracy series.
+    id: 'progress.women_empowerment.world',
+    title: "Women's political empowerment index, World",
+    unit: 'index (0–1)',
+    chartId: 'women-empowerment-world',
+    adapter: 'owid',
+    slug: 'women-political-empowerment-index',
+    sourceColumn: 'wom_emp_vdem__estimate_best',   // MUST set: the trailing column is owid_region (a label)
+    entityFilter: ['World'],
+    derive: { op: 'pick_entity', entity: 'World' },
+    validate: { min: 0, max: 1, monotonicJump: 1, requireProvenance: true },
+    primarySource: 'V-Dem (Democracy report v16) — via Our World in Data',
+  },
+  // Women's political empowerment by continent (population-weighted: the average woman's experience).
+  // The twist this surfaces: the index does NOT track income — Asia sits below Africa, unlike poverty
+  // or health. A different map, which is the whole "depends on the lens" point.
+  ...(['Asia (population-weighted)', 'Africa (population-weighted)', 'South America (population-weighted)',
+       'Europe (population-weighted)'] as const).map((region) => ({
+    id: `progress.women_empowerment.${rslug(region)}`,
+    title: `Women's political empowerment index, ${region.replace(/ \(population-weighted\)/, '')}`,
+    unit: 'index (0–1)',
+    chartId: `women-empowerment-${rslug(region)}`,
+    adapter: 'owid' as const, slug: 'women-political-empowerment-index', sourceColumn: 'wom_emp_vdem__estimate_best',
+    entityFilter: [region], derive: { op: 'pick_entity' as const, entity: region },
+    validate: { min: 0, max: 1, monotonicJump: 1, requireProvenance: true },
+    primarySource: 'V-Dem (Democracy report v16) — via Our World in Data',
+  })),
+  {
+    // World population — the denominator that turns the poverty-rate counterfactual into people.
+    id: 'progress.population.world',
+    title: 'World population',
+    unit: 'people',
+    chartId: 'population-world',
+    adapter: 'data360',
+    slug: 'WB_WDI_SP_POP_TOTL',
+    data360: { databaseId: 'WB_WDI', refArea: 'WLD' },
+    derive: { op: 'identity' },
+    validate: { min: 0, max: 10_000_000_000, monotonicJump: 0.05, requireProvenance: true },
+    primarySource: 'UN World Population Prospects — via World Bank WDI / Data360',
+  },
+  {
+    // Child stunting — an Atlas slowdown indicator (lower is better).
+    id: 'progress.stunting.world', title: 'Child stunting', unit: '% of under-5s',
+    chartId: 'stunting-world', adapter: 'data360', slug: 'WB_WDI_SH_STA_STNT_ME_ZS',
+    data360: { databaseId: 'WB_WDI', refArea: 'WLD' }, derive: { op: 'identity' },
+    validate: { min: 0, max: 60, monotonicJump: 5, requireProvenance: true },
+    primarySource: 'UNICEF/WHO/World Bank Joint Malnutrition Estimates — via Data360',
+  },
+  {
+    // Measles immunization coverage — an Atlas access indicator (higher is better).
+    id: 'progress.immunization.world', title: 'Measles immunization coverage', unit: '% of children',
+    chartId: 'immunization-world', adapter: 'data360', slug: 'WB_WDI_SH_IMM_MEAS',
+    data360: { databaseId: 'WB_WDI', refArea: 'WLD' }, derive: { op: 'identity' },
+    validate: { min: 0, max: 100, monotonicJump: 10, requireProvenance: true },
+    primarySource: 'WHO/UNICEF — via World Bank WDI / Data360',
+  },
+  {
+    // Tertiary enrolment — one of the Atlas's three accelerating measures (higher is better).
+    id: 'progress.tertiary.world', title: 'Tertiary-education enrolment', unit: '% gross',
+    chartId: 'tertiary-world', adapter: 'data360', slug: 'WB_WDI_SE_TER_ENRR',
+    data360: { databaseId: 'WB_WDI', refArea: 'WLD' }, derive: { op: 'identity' },
+    validate: { min: 0, max: 100, monotonicJump: 6, requireProvenance: true },
+    primarySource: 'UNESCO Institute for Statistics — via World Bank WDI / Data360',
+  },
 ];
 
 export const byId = (id: string) => INDICATORS.find((s) => s.id === id);

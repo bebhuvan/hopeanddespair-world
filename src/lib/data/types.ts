@@ -56,10 +56,23 @@ export interface IndicatorSpec {
   title: string;
   unit: string;
   chartId?: string;              // clean slug for public artifacts + article dataRef
-  adapter: 'owid' | 'worldbank' | 'ucdp' | 'ember' | 'openalex' | 'nasa' | 'ilostat' | 'convergence' | 'pip' | 'who' | 'berkeley' | 'sealevel' | 'copernicus' | 'iea' | 'unwpp' | 'censusidb' | 'oecd' | 'noaagml' | 'oceanheat' | 'icesheet' | 'wgms';
-  slug: string;                  // OWID chart slug · WB code · UCDP key · Ember path · OpenAlex query · NASA file · ILOSTAT dataflow · WHO GHO indicator code
+  adapter: 'owid' | 'worldbank' | 'ucdp' | 'ember' | 'openalex' | 'nasa' | 'ilostat' | 'convergence' | 'pip' | 'who' | 'berkeley' | 'sealevel' | 'copernicus' | 'iea' | 'unwpp' | 'censusidb' | 'oecd' | 'noaagml' | 'oceanheat' | 'icesheet' | 'wgms' | 'bis' | 'unctad' | 'boc' | 'data360';
+  slug: string;                  // OWID chart slug · WB code · UCDP key · Ember path · OpenAlex query · NASA file · ILOSTAT dataflow · WHO GHO indicator code · BIS dataflow (WS_CBPOL/WS_GLI/WS_DSR)
   // IEA Global EV Data Explorer (CC BY 4.0): one CSV per region, picked by these three dimensions.
   iea?: { parameter: string; mode: string; powertrain: string; category?: string };
+  // BIS SDMX (link-only — chart, cite, never re-host): the SDMX series key selects the dimensions
+  // (FREQ.DIM…, e.g. "M.US" for the Fed policy rate, "Q.USD.3P.N.A.I.B" for dollar credit outside
+  // the US); `measure` keeps one UNIT_MEASURE when a key returns both a level and a growth row.
+  // Sub-annual data is folded to annual end-of-period (last quarter/month present in each year).
+  bis?: { key: string; measure?: string };
+  // World Bank Data360 (the Atlas of Global Development surface — data360api.worldbank.org). `slug`
+  // is the INDICATOR id (e.g. "WB_WDI_SP_DYN_LE00_IN"); `databaseId` is the dataset (e.g. "WB_WDI").
+  // `refArea` pins one reference area (e.g. "WLD" = World) to keep the payload to one page; omit it to
+  // pull every area (paginated) and select downstream with entityFilter/derive. Rows carry SDMX-style
+  // disaggregation dims (SEX/AGE/URBANISATION/COMP_BREAKDOWN_1..3); the adapter keeps only the total
+  // slice (_T / _Z) unless `filter` overrides a dim. WB-origin datasets are CC BY 4.0 (re-hostable);
+  // third-party datasets on Data360 may be restricted → set gate: 'link-only' + a `license` override.
+  data360?: { databaseId: string; refArea?: string };
   filter?: Record<string, string>; // SDMX dimension filter, e.g. { REF_AREA: 'X01', SEX: 'SEX_T', AGE: 'AGE_YTHADULT_YGE15' }
   seriesName?: string;           // Ember: which energy source row to read (e.g. "Clean", "Fossil", "Wind and solar")
   sourceColumn?: string;         // which column to read (default: the single value column; Ember: the metric field)

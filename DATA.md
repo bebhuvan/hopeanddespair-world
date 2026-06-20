@@ -350,6 +350,21 @@ some IHME) — chart-and-link, don't re-host.
 >
 > **Climate physical-state adapters (2026-06-13):** the climate mega-article added four more small public-domain/CC-BY adapters for the parts of the Earth system OWID doesn't carry cleanly: **`noaagml`** (NOAA GML — CH₄ & N₂O concentration, annual global means), **`oceanheat`** (NOAA NCEI — global ocean heat content 0–2000m, fixed-width .dat), **`icesheet`** (NASA GRACE via OWID — Greenland/Antarctica mass, daily→year-end), and **`wgms`** (World Glacier Monitoring Service — reference-glacier mass balance CSV, mm→m w.e.). All global-by-nature. Pattern identical to berkeley/sealevel/copernicus.
 >
+> **`data360` adapter (2026-06-17):** the **World Bank Data360** API (`data360api.worldbank.org`)
+> — the surface behind the *Atlas of Global Development* — is a public, no-auth SDMX-shaped JSON API
+> harmonising hundreds of datasets (WDI + IMF/UN/OECD-sourced) under one schema. `spec.slug` is the
+> INDICATOR id (e.g. `WB_WDI_SP_DYN_LE00_IN`), `spec.data360.databaseId` the dataset (`WB_WDI`), and
+> `spec.data360.refArea` optionally pins one area (e.g. `WLD` = World) to a single page; omit it to
+> pull every area (the adapter pages through `skip` — a full pull is ~17k rows) and select downstream
+> with `entityFilter`/`derive`. Rows carry SDMX disaggregation dims (SEX/AGE/URBANISATION/
+> COMP_BREAKDOWN_1..3); the adapter keeps **only the total slice** (`_T`/`_Z`) unless `spec.filter`
+> overrides a dim — the same anti-double-count guard as the OWID multi-column gotcha. **Licence is
+> per-dataset, not per-platform:** WB-origin datasets are CC BY 4.0 (the adapter default, re-hostable);
+> third-party Data360 datasets "may not be redistributed without the provider's consent," so those
+> specs MUST set `gate: 'link-only'` + a `license` override (BIS/EM-DAT pattern). Built for the planned
+> keystone/"global progress" work; overlaps the classic `worldbank` adapter for WDI (use whichever
+> exposes the series more cleanly).
+>
 > **OWID-first, deliberately:** we did *not* build bespoke adapters for UCDP / UNHCR / WHO /
 > NASA / Ember — OWID already re-publishes those series cleanly under CC BY, so a separate
 > adapter would duplicate work and maintenance for a one-person project. Add a primary-source

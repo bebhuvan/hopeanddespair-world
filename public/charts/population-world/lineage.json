@@ -1,29 +1,27 @@
 {
   "entity": {
-    "id": "demography.population.world",
+    "id": "progress.population.world",
     "unit": "people",
-    "points": 74
+    "points": 65
   },
-  "wasDerivedFrom": [
-    "OWID_WRL"
-  ],
+  "wasDerivedFrom": [],
   "wasGeneratedBy": {
     "activity": "pipeline",
     "recipe": [
       {
-        "op": "pick_entity",
-        "detail": "selected entity World"
+        "op": "identity",
+        "detail": "normalized directly from source"
       }
     ],
-    "agent": "adapter:owid@1.0.0",
+    "agent": "adapter:data360@1.0.0",
     "used": {
-      "source": "owid",
-      "slug": "population-long-run-with-projections",
-      "url": "https://ourworldindata.org/grapher/population-long-run-with-projections",
-      "vintage": "2026-06-13",
-      "checksum": "8eed9ee6374769f84bd508573255ca83dd4b6e1c1107e1e574993605249ecf07",
+      "source": "data360",
+      "slug": "WB_WDI_SP_POP_TOTL",
+      "url": "https://data360.worldbank.org/en/indicator/WB_WDI_SP_POP_TOTL",
+      "vintage": "2026-06-18",
+      "checksum": "58dcce43fc469f69f293504f1beb79d0816333ebeecac8344e20a4c401b9022b",
       "license": "CC BY 4.0"
     }
   },
-  "primarySource": "UN World Population Prospects (2024); HYDE; Gapminder — via Our World in Data"
+  "primarySource": "UN World Population Prospects — via World Bank WDI / Data360"
 }

@@ -28,6 +28,7 @@
 10. Are we getting smarter? (education & knowledge)
 11. Are we happier?
 12. Is the living world dying? (biodiversity & nature)
+13. Is inflation under control — and whose currency decides? — **planned** (dollar spine; new question, 2026-06-16)
 
 Each question below lists its **sub-questions** (every chart is a sub-question) and the data
 that answers them. The regional cut is not an afterthought: every question must answer both
@@ -240,6 +241,33 @@ Pritchett, Jones; IHME 2020 link-only) is cited throughout. `census-idb` dropped
 cross-section — verify CC BY before any ingest; qualitative for now) · pronatalist-policy *outcomes*
 (no clean panel — the failure is the finding) · contraceptive prevalence + female schooling as a
 fuller M10 mechanism (one OWID ingest away) · the post-2024 Korea nadir (named in prose; series ends 2023).
+
+## Q13 · Inflation & the dollar — planned (dollar spine)
+
+**Full build plan: [[ARTICLE-inflation-plan.md]]** (~12 movements, four acts). A new question
+earned by the 2021–23 surge. The spine is **the dollar**: the world prices, borrows, and saves in
+a currency the US Fed controls, so the same shock breaks unevenly. Verdict (recommended, confirm):
+*confusion with a despair spine* — "under control" is a rich-world sentence.
+
+| Dataset | Gives | Path | License → Gate |
+|---|---|---|---|
+| **World Bank** (`FP.CPI.TOTL.ZG`, `FP.CPI.TOTL`, `NY.GDP.DEFL.KD.ZG`) | CPI inflation + index + deflator cross-check, by country & income-group, 1960– | WB adapter, today | CC BY 4.0 → re-host — **verify IMF-IFS third-party flag** per indicator; OWID own-processed is the clean fallback |
+| **OWID** own-processed inflation series | clean CC-BY inflation where WB carries the IMF third-party flag | OWID adapter | CC BY → re-host |
+| **FAO Food Price Index** + WB/OWID energy prices | the M3 trigger overlay (the supply-shock spark) | OWID/FAO | CC BY → re-host |
+| **Federal Reserve H.10 — Nominal Broad USD Index** | the dollar-strength spine line (M8) | **new small `fed` adapter**, direct from federalreserve.gov (**not** FRED) | US-gov **PD → re-host** |
+| **BIS Global Liquidity Indicators** — USD credit to non-banks outside the US | the ~$13tn "global dollar debt" (M9) — genuinely BIS-unique, no open mirror | **new `bis` adapter** (bulk CSV preferred over SDMX) | BIS custom terms → **link-only** (chart + cite + link out) |
+| **BIS central-bank policy rates** | the synchronized global hiking cycle, Fed-led (M7) | `bis` adapter | **link-only** |
+| **BIS debt-service ratios + credit to non-financial sector** | the EM debt-burden mechanism (M10) | `bis` adapter | **link-only** |
+| **IMF WEO** advanced-vs-emerging aggregates & projections | the canonical split | **link-only** — cite; chart the WB income-group cut instead | restricted |
+| **DXY** (ICE) | the headline dollar index | **link-only** — Fed broad index is the re-hostable stand-in | proprietary |
+| Real wages (prices vs pay), Argentina/Venezuela "true" estimates | the lived squeeze; the contested-number honesty move (M6) | WB/ILO (verify CC BY); academic reconstructions | gap register / link-only |
+
+> **The license headline (researched 2026-06-16):** BIS is **link-only** across the board — a
+> custom BIS-copyright licence, not CC BY/CC0/PD. Its statistics terms permit *display* with
+> attribution, so we chart from BIS and link `↓ source` to `data.bis.org`, but we never re-host
+> the CSV. Identical to the EM-DAT pattern in Q3 (M5). The dollar spine is therefore fully
+> tellable; its charts carry a link-out, while the re-hostable CPI + Fed-dollar-index spine carries
+> the verifiable load. IMF and FRED are likewise link-only for re-hosting.
 
 ## Q8–12 · Shortlists (one line each, build when scheduled)
 

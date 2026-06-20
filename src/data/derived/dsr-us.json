@@ -1,0 +1,109 @@
+{
+  "indicatorId": "debt.dsr.us",
+  "entity": "US",
+  "entityName": "United States",
+  "unit": "% of income to debt service (private non-financial sector)",
+  "points": [
+    {
+      "t": 2005,
+      "value": 17.1
+    },
+    {
+      "t": 2006,
+      "value": 17.9
+    },
+    {
+      "t": 2007,
+      "value": 18.5
+    },
+    {
+      "t": 2008,
+      "value": 17.5
+    },
+    {
+      "t": 2009,
+      "value": 16.7
+    },
+    {
+      "t": 2010,
+      "value": 15.6
+    },
+    {
+      "t": 2011,
+      "value": 14.9
+    },
+    {
+      "t": 2012,
+      "value": 14.4
+    },
+    {
+      "t": 2013,
+      "value": 14.5
+    },
+    {
+      "t": 2014,
+      "value": 14.4
+    },
+    {
+      "t": 2015,
+      "value": 14.5
+    },
+    {
+      "t": 2016,
+      "value": 14.8
+    },
+    {
+      "t": 2017,
+      "value": 14.9
+    },
+    {
+      "t": 2018,
+      "value": 14.7
+    },
+    {
+      "t": 2019,
+      "value": 14.7
+    },
+    {
+      "t": 2020,
+      "value": 14.1
+    },
+    {
+      "t": 2021,
+      "value": 13.9
+    },
+    {
+      "t": 2022,
+      "value": 14.8
+    },
+    {
+      "t": 2023,
+      "value": 14.5
+    },
+    {
+      "t": 2024,
+      "value": 14.4
+    },
+    {
+      "t": 2025,
+      "value": 14.1
+    }
+  ],
+  "provenance": {
+    "source": "bis",
+    "sourceIndicator": "WS_DSR [Q.US.P]",
+    "url": "https://data.bis.org/topics/DSR",
+    "license": "BIS terms — link-only (display with attribution; not re-hosted)",
+    "vintage": "2026-06-17",
+    "checksum": "57e7394c33dfb1ebf0d27e7910ff35b6b36bd4cb68ee3740d4acef7383770075",
+    "definition": "Debt-service ratio, private non-financial sector, United States — share of income devoted to debt service. Annual end-of-period (latest quarter each year).",
+    "attribution": "Bank for International Settlements (BIS)",
+    "primarySource": "BIS debt service ratios"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "BIS DSR private non-financial sector, United States; quarterly folded to annual end-of-period"
+    }
+  ]
+}

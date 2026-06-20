@@ -20,6 +20,8 @@ import { noaagml } from './ingest/noaagml.ts';
 import { oceanheat } from './ingest/oceanheat.ts';
 import { icesheet } from './ingest/icesheet.ts';
 import { wgms } from './ingest/wgms.ts';
+import { bis } from './ingest/bis.ts';
+import { data360 } from './ingest/data360.ts';
 import { validateSeries, report } from './lib/validate.ts';
 import { derive } from './lib/derive.ts';
 import { toCSV, datapackage, lineage } from './lib/provenance.ts';
@@ -28,7 +30,7 @@ import type { Adapter, ValidationIssue } from '../src/lib/data/types.ts';
 /* The offline ingestion pipeline (DATA.md §2): fetch → snapshot → normalize → validate →
    derive → validate → write artifacts. Run with `pnpm data`. Static build reads the output. */
 
-const adapters: Record<string, Adapter> = { owid, worldbank, ucdp, ember, openalex, nasa, ilostat, convergence, pip, who, berkeley, sealevel, copernicus, iea, unwpp, noaagml, oceanheat, icesheet, wgms };
+const adapters: Record<string, Adapter> = { owid, worldbank, ucdp, ember, openalex, nasa, ilostat, convergence, pip, who, berkeley, sealevel, copernicus, iea, unwpp, noaagml, oceanheat, icesheet, wgms, bis, data360 };
 const ROOT = process.cwd();
 const w = (p: string, c: string) => { mkdirSync(dirname(p), { recursive: true }); writeFileSync(p, c); };
 

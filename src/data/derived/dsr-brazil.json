@@ -1,0 +1,109 @@
+{
+  "indicatorId": "debt.dsr.br",
+  "entity": "BR",
+  "entityName": "Brazil",
+  "unit": "% of income to debt service (private non-financial sector)",
+  "points": [
+    {
+      "t": 2005,
+      "value": 17.3
+    },
+    {
+      "t": 2006,
+      "value": 15.5
+    },
+    {
+      "t": 2007,
+      "value": 11.6
+    },
+    {
+      "t": 2008,
+      "value": 19.5
+    },
+    {
+      "t": 2009,
+      "value": 14.1
+    },
+    {
+      "t": 2010,
+      "value": 13.5
+    },
+    {
+      "t": 2011,
+      "value": 16.8
+    },
+    {
+      "t": 2012,
+      "value": 14.6
+    },
+    {
+      "t": 2013,
+      "value": 16
+    },
+    {
+      "t": 2014,
+      "value": 17.9
+    },
+    {
+      "t": 2015,
+      "value": 24.1
+    },
+    {
+      "t": 2016,
+      "value": 23.7
+    },
+    {
+      "t": 2017,
+      "value": 19.2
+    },
+    {
+      "t": 2018,
+      "value": 18
+    },
+    {
+      "t": 2019,
+      "value": 18.2
+    },
+    {
+      "t": 2020,
+      "value": 16.6
+    },
+    {
+      "t": 2021,
+      "value": 20.4
+    },
+    {
+      "t": 2022,
+      "value": 25.5
+    },
+    {
+      "t": 2023,
+      "value": 24.3
+    },
+    {
+      "t": 2024,
+      "value": 26.1
+    },
+    {
+      "t": 2025,
+      "value": 29.2
+    }
+  ],
+  "provenance": {
+    "source": "bis",
+    "sourceIndicator": "WS_DSR [Q.BR.P]",
+    "url": "https://data.bis.org/topics/DSR",
+    "license": "BIS terms — link-only (display with attribution; not re-hosted)",
+    "vintage": "2026-06-17",
+    "checksum": "6c54dc8e6e144db79a9bf25d76fe5168561841eb13e92b35862872987f0c15aa",
+    "definition": "Debt-service ratio, private non-financial sector, Brazil — share of income devoted to debt service. Annual end-of-period (latest quarter each year).",
+    "attribution": "Bank for International Settlements (BIS)",
+    "primarySource": "BIS debt service ratios"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "BIS DSR private non-financial sector, Brazil; quarterly folded to annual end-of-period"
+    }
+  ]
+}

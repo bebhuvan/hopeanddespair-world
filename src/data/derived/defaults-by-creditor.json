@@ -1,0 +1,59 @@
+{
+  "chartId": "defaults-by-creditor",
+  "kind": "bars",
+  "title": "Who is owed the debt in default?",
+  "unit": "US$ billions in default, by creditor, 2024",
+  "yearSpan": "2024–2024",
+  "bars": [
+    {
+      "label": "Other official",
+      "value": 70,
+      "color": "stone"
+    },
+    {
+      "label": "China",
+      "value": 54.4,
+      "color": "ochre"
+    },
+    {
+      "label": "Paris Club",
+      "value": 47.9,
+      "color": "uncertain"
+    },
+    {
+      "label": "Private creditors",
+      "value": 28.5,
+      "color": "despair"
+    },
+    {
+      "label": "World Bank (IBRD+IDA)",
+      "value": 2.3,
+      "color": "stone"
+    }
+  ],
+  "xmax": 100,
+  "xTicks": [
+    0,
+    50,
+    100,
+    150,
+    200
+  ],
+  "provenance": {
+    "source": "boc-boe",
+    "sourceIndicator": "DEBT_<creditor>",
+    "url": "https://www.bankofcanada.ca/2025/10/staff-analytical-note-2025-24/",
+    "license": "Bank of Canada — reuse with attribution",
+    "vintage": "2026-06-17",
+    "checksum": "3254296c3a4745c81b327c4aaf7eeb80c2c7be3ceb3089bf7c6494bd45d79644",
+    "definition": "Sovereign debt in default by creditor class, 2024, US$ billions.",
+    "attribution": "Bank of Canada & Bank of England — Sovereign Default Database (Beers, Ferretti et al.)",
+    "primarySource": "BoC–BoE Sovereign Default Database 2025"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "creditor split of defaulted debt, 2024"
+    }
+  ]
+}

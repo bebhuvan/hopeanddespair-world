@@ -1,0 +1,109 @@
+{
+  "indicatorId": "debt.dsr.za",
+  "entity": "ZA",
+  "entityName": "South Africa",
+  "unit": "% of income to debt service (private non-financial sector)",
+  "points": [
+    {
+      "t": 2005,
+      "value": 8.3
+    },
+    {
+      "t": 2006,
+      "value": 9.5
+    },
+    {
+      "t": 2007,
+      "value": 10.6
+    },
+    {
+      "t": 2008,
+      "value": 11.5
+    },
+    {
+      "t": 2009,
+      "value": 10.3
+    },
+    {
+      "t": 2010,
+      "value": 9.2
+    },
+    {
+      "t": 2011,
+      "value": 8.3
+    },
+    {
+      "t": 2012,
+      "value": 8.3
+    },
+    {
+      "t": 2013,
+      "value": 8.2
+    },
+    {
+      "t": 2014,
+      "value": 8.4
+    },
+    {
+      "t": 2015,
+      "value": 8.9
+    },
+    {
+      "t": 2016,
+      "value": 9.1
+    },
+    {
+      "t": 2017,
+      "value": 9.1
+    },
+    {
+      "t": 2018,
+      "value": 9.1
+    },
+    {
+      "t": 2019,
+      "value": 9.1
+    },
+    {
+      "t": 2020,
+      "value": 8.3
+    },
+    {
+      "t": 2021,
+      "value": 7
+    },
+    {
+      "t": 2022,
+      "value": 7.4
+    },
+    {
+      "t": 2023,
+      "value": 8.1
+    },
+    {
+      "t": 2024,
+      "value": 8.4
+    },
+    {
+      "t": 2025,
+      "value": 8.3
+    }
+  ],
+  "provenance": {
+    "source": "bis",
+    "sourceIndicator": "WS_DSR [Q.ZA.P]",
+    "url": "https://data.bis.org/topics/DSR",
+    "license": "BIS terms — link-only (display with attribution; not re-hosted)",
+    "vintage": "2026-06-17",
+    "checksum": "c3a560e905ff5a0f546f15dbb3493042e44216cd3ec6b4e1471859ccea9d5347",
+    "definition": "Debt-service ratio, private non-financial sector, South Africa — share of income devoted to debt service. Annual end-of-period (latest quarter each year).",
+    "attribution": "Bank for International Settlements (BIS)",
+    "primarySource": "BIS debt service ratios"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "BIS DSR private non-financial sector, South Africa; quarterly folded to annual end-of-period"
+    }
+  ]
+}

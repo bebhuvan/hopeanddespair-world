@@ -1,0 +1,109 @@
+{
+  "chartId": "debt-foreign-currency-share",
+  "kind": "bars",
+  "title": "Share of international debt issued in foreign currency",
+  "unit": "% of international debt securities in a foreign currency · 2024",
+  "yearSpan": "2024-Q4",
+  "xmax": 100,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "bars": [
+    {
+      "label": "Argentina",
+      "value": 100,
+      "color": "despair"
+    },
+    {
+      "label": "Türkiye",
+      "value": 99.8,
+      "color": "despair"
+    },
+    {
+      "label": "Indonesia",
+      "value": 99.8,
+      "color": "despair"
+    },
+    {
+      "label": "Nigeria",
+      "value": 98.2,
+      "color": "despair"
+    },
+    {
+      "label": "Brazil",
+      "value": 97.7,
+      "color": "despair"
+    },
+    {
+      "label": "Chile",
+      "value": 97.2,
+      "color": "despair"
+    },
+    {
+      "label": "India",
+      "value": 95.2,
+      "color": "despair"
+    },
+    {
+      "label": "Mexico",
+      "value": 94.3,
+      "color": "ochre"
+    },
+    {
+      "label": "Thailand",
+      "value": 92.6,
+      "color": "ochre"
+    },
+    {
+      "label": "Canada",
+      "value": 92,
+      "color": "ochre"
+    },
+    {
+      "label": "Australia",
+      "value": 89.3,
+      "color": "ochre"
+    },
+    {
+      "label": "Japan",
+      "value": 87.2,
+      "color": "ochre"
+    },
+    {
+      "label": "United States",
+      "value": 65.1,
+      "color": "hope"
+    },
+    {
+      "label": "South Africa",
+      "value": 65,
+      "color": "hope"
+    },
+    {
+      "label": "United Kingdom",
+      "value": 54.5,
+      "color": "hope"
+    }
+  ],
+  "provenance": {
+    "source": "bis",
+    "sourceIndicator": "WS_DEBT_SEC2_PUB [foreign ÷ all currencies, amounts outstanding]",
+    "url": "https://data.bis.org/topics/IDS",
+    "license": "BIS terms — link-only (display with attribution; not re-hosted)",
+    "vintage": "2024-Q4",
+    "checksum": "dde32ac08c89469721f5fcc7901dba3297f40bae510f3f00c720af2f3487e75f",
+    "definition": "Foreign-currency international debt securities outstanding as a share of all international debt securities outstanding, by issuer nationality, 2024-Q4. High = the country must borrow abroad in money it does not print ('original sin').",
+    "attribution": "Bank for International Settlements (BIS) — International Debt Securities",
+    "primarySource": "BIS debt securities statistics"
+  },
+  "recipe": [
+    {
+      "op": "ratio",
+      "detail": "foreign-currency outstanding ÷ all-currency outstanding (BIS IDS, nationality basis, total maturities); colour = share, not size"
+    }
+  ]
+}

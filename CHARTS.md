@@ -42,6 +42,16 @@ Per the growth rule below, two jobs have earned a template:
 Same bake-ins as the eight (temperature colours, watermark, four artifacts, text summary).
 The pace template carries a mandatory figure note naming whose benchmark it is.
 
+## The third earned addition (2026-06-18)
+
+| The job (sub-question) | Chart | Earned by |
+|---|---|---|
+| **The divergence grid** — across many measures at once, where does each place stand *relative to the others*? | heat grid, region × measure (`src/lib/heatgrid.ts`, `heatGrid()`, `kind: 'heatgrid'`) | the progress article's closing synthesis: every movement reads one measure across regions, but the *thesis* is the region×measure interaction, which no single line can show. One cell per region/measure, **shaded per-row** from the worst region (despair red) to the best (hope green). **Hard rule against the dashboard trap:** each row is scaled independently — there is **no cross-row composite**, because colour must never imply a year of life and a point of poverty share a scale. Columns ordered by one *declared* variable (GDP per person), not a hidden ranking. Use only as an end-of-piece synthesis of measures already shown, never as a substitute for the narrative charts |
+
+Same bake-ins (temperature colours, watermark, portrait mobile twin). Cell text colour is set via inline
+`style="fill:…"`, never the `fill` attribute — Chart.astro's `.chart text { fill }` rule would otherwise
+override it. No CSV/PNG twins (like bars/area, it sets `dataRef: undefined`).
+
 ## The grammar — how charts compose into one answer
 
 A single chart answers a sub-question; the *sequence* answers the question. The order is not
@@ -144,8 +154,15 @@ downgraded to a simpler type for clarity, say so in the figure note.
 - **Slope** needs label-collision avoidance when two entities share a near value (visible in
   the mockup). Fix in `render-charts.ts`: dodge labels vertically; drop the value when the
   name is enough.
-- **Stacked** top edges are smoothed but bottom edges are straight (fine at fill opacity);
-  revisit if a band reads wrong.
+- **Stacked / 100%-stacked area** is built in `src/lib/area.ts` (`kind: 'area'`, normalised to
+  share per year, bands directly labelled at the right edge, fill-opacity 0.74) — first used for
+  the debt article's creditor-shift-over-time chart. The renderer draws **straight** segments
+  between annual points; where a stock series whipsaws year to year (e.g. defaulted-debt shares
+  jumping as one big country defaults or cures), **smooth the underlying amounts in the analysis
+  script** (a centred multi-year moving average with edge replication so the true endpoints
+  survive — see `creditor-history.ts`) rather than in the renderer, and **disclose it in the
+  figure caption** ("· 5-year smoothed"). The endpoint must keep its real value: a plain shrinking
+  window silently muted the China-overtakes-Paris-Club crossover, the chart's whole point.
 - **Stat-in-prose** is HTML/CSS, not SVG — it has no downloadable artifact by design.
 
 ## Performance note

@@ -1,0 +1,58 @@
+{
+  "chartId": "debt-creditor-by-region",
+  "kind": "bars",
+  "title": "Who each region owes",
+  "unit": "share of external public debt owed to private creditors, by region",
+  "yearSpan": "2026-06-17",
+  "xmax": 100,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "bars": [
+    {
+      "label": "Latin America",
+      "value": 71,
+      "color": "uncertain",
+      "note": "· official + multilateral 29%"
+    },
+    {
+      "label": "Developing Asia",
+      "value": 60,
+      "color": "uncertain",
+      "note": "· official + multilateral 40%"
+    },
+    {
+      "label": "Africa",
+      "value": 42,
+      "color": "uncertain",
+      "note": "· official + multilateral 58%"
+    },
+    {
+      "label": "Europe & C. Asia",
+      "value": 34,
+      "color": "uncertain",
+      "note": "· official + multilateral 66%"
+    }
+  ],
+  "provenance": {
+    "source": "unctad",
+    "sourceIndicator": "Private-creditor share of external public debt, amount-weighted by region",
+    "url": "https://unctad.org/publication/world-of-debt",
+    "license": "Link-only — UNCTAD publication terms (display + cite; not re-hosted)",
+    "vintage": "2026-06-17",
+    "checksum": "c087bb43604849dc2b367a893143343f875c2be0a3ada1765ef4d9ec7c6beab1",
+    "definition": "Share of external public debt owed to private creditors (bondholders, banks), amount-weighted across each region. The remainder is owed to official bilateral lenders (including China) and multilateral institutions. High private share = exposure to market runs; high official share = exposure to slow, fragmented restructuring.",
+    "attribution": "UN Trade and Development (UNCTAD) — A World of Debt 2025",
+    "primarySource": "UNCTAD; World Bank IDS"
+  },
+  "recipe": [
+    {
+      "op": "aggregate_by_region",
+      "detail": "external-debt-weighted mean of private-creditor share across each region's countries, latest year"
+    }
+  ]
+}
