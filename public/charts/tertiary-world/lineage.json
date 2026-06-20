@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "progress.tertiary.world",
+    "unit": "% gross",
+    "points": 55
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "identity",
+        "detail": "normalized directly from source"
+      }
+    ],
+    "agent": "adapter:data360@1.0.0",
+    "used": {
+      "source": "data360",
+      "slug": "WB_WDI_SE_TER_ENRR",
+      "url": "https://data360.worldbank.org/en/indicator/WB_WDI_SE_TER_ENRR",
+      "vintage": "2026-06-18",
+      "checksum": "23bdef2a54aef35ea0c1e9379adc8798ca6456f9fa9e8d52ff0496e0490661da",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UNESCO Institute for Statistics — via World Bank WDI / Data360"
+}

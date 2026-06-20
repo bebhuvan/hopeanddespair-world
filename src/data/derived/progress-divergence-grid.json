@@ -1,0 +1,399 @@
+{
+  "chartId": "progress-divergence-grid",
+  "kind": "heatgrid",
+  "title": "Where each region stands today, across the measures this piece tracks",
+  "cols": [
+    {
+      "key": "ssf",
+      "label": "Sub-Saharan Africa",
+      "short": "Africa"
+    },
+    {
+      "key": "sas",
+      "label": "South Asia",
+      "short": "S. Asia"
+    },
+    {
+      "key": "mea",
+      "label": "Middle East & N. Africa",
+      "short": "MENA"
+    },
+    {
+      "key": "lcn",
+      "label": "Latin America",
+      "short": "L. Am."
+    },
+    {
+      "key": "eas",
+      "label": "East Asia & Pacific",
+      "short": "E. Asia"
+    },
+    {
+      "key": "ecs",
+      "label": "Europe & Central Asia",
+      "short": "Europe"
+    }
+  ],
+  "rows": [
+    {
+      "label": "Extreme poverty",
+      "short": "Poverty",
+      "unit": "% under $3.00/day",
+      "cells": [
+        {
+          "col": "ssf",
+          "value": 45.1,
+          "year": 2024,
+          "t": 0,
+          "display": "45%"
+        },
+        {
+          "col": "sas",
+          "value": 3.8,
+          "year": 2024,
+          "t": 0.93,
+          "display": "3.8%"
+        },
+        {
+          "col": "mea",
+          "value": 14.4,
+          "year": 2024,
+          "t": 0.69,
+          "display": "14%"
+        },
+        {
+          "col": "lcn",
+          "value": 4.3,
+          "year": 2024,
+          "t": 0.92,
+          "display": "4.3%"
+        },
+        {
+          "col": "eas",
+          "value": 2,
+          "year": 2024,
+          "t": 0.97,
+          "display": "2.0%"
+        },
+        {
+          "col": "ecs",
+          "value": 0.6,
+          "year": 2024,
+          "t": 1,
+          "display": "0.6%"
+        }
+      ]
+    },
+    {
+      "label": "Undernourishment",
+      "short": "Hunger",
+      "unit": "% of people",
+      "cells": [
+        {
+          "col": "ssf",
+          "value": 21.88,
+          "year": 2023,
+          "t": 0,
+          "display": "22%"
+        },
+        {
+          "col": "sas",
+          "value": 11.65,
+          "year": 2023,
+          "t": 0.54,
+          "display": "12%"
+        },
+        {
+          "col": "mea",
+          "value": 12.65,
+          "year": 2023,
+          "t": 0.48,
+          "display": "13%"
+        },
+        {
+          "col": "lcn",
+          "value": 5.34,
+          "year": 2023,
+          "t": 0.87,
+          "display": "5.3%"
+        },
+        {
+          "col": "eas",
+          "value": 3.45,
+          "year": 2023,
+          "t": 0.97,
+          "display": "3.5%"
+        },
+        {
+          "col": "ecs",
+          "value": 2.79,
+          "year": 2023,
+          "t": 1,
+          "display": "2.8%"
+        }
+      ]
+    },
+    {
+      "label": "Child mortality",
+      "short": "Child deaths",
+      "unit": "per 1,000 births",
+      "cells": [
+        {
+          "col": "ssf",
+          "value": 71.2,
+          "year": 2024,
+          "t": 0,
+          "display": "71"
+        },
+        {
+          "col": "sas",
+          "value": 26.8,
+          "year": 2024,
+          "t": 0.7,
+          "display": "27"
+        },
+        {
+          "col": "mea",
+          "value": 36.4,
+          "year": 2024,
+          "t": 0.55,
+          "display": "36"
+        },
+        {
+          "col": "lcn",
+          "value": 15.4,
+          "year": 2024,
+          "t": 0.88,
+          "display": "15"
+        },
+        {
+          "col": "eas",
+          "value": 13.2,
+          "year": 2024,
+          "t": 0.91,
+          "display": "13"
+        },
+        {
+          "col": "ecs",
+          "value": 7.8,
+          "year": 2024,
+          "t": 1,
+          "display": "8"
+        }
+      ]
+    },
+    {
+      "label": "Maternal mortality",
+      "short": "Maternal",
+      "unit": "per 100,000 births",
+      "cells": [
+        {
+          "col": "ssf",
+          "value": 448,
+          "year": 2023,
+          "t": 0,
+          "display": "448"
+        },
+        {
+          "col": "sas",
+          "value": 120,
+          "year": 2023,
+          "t": 0.75,
+          "display": "120"
+        },
+        {
+          "col": "mea",
+          "value": 47,
+          "year": 2023,
+          "t": 0.92,
+          "display": "47"
+        },
+        {
+          "col": "lcn",
+          "value": 77,
+          "year": 2023,
+          "t": 0.85,
+          "display": "77"
+        },
+        {
+          "col": "eas",
+          "value": 66,
+          "year": 2023,
+          "t": 0.87,
+          "display": "66"
+        },
+        {
+          "col": "ecs",
+          "value": 11,
+          "year": 2023,
+          "t": 1,
+          "display": "11"
+        }
+      ]
+    },
+    {
+      "label": "Life expectancy",
+      "short": "Life exp.",
+      "unit": "years",
+      "cells": [
+        {
+          "col": "ssf",
+          "value": 62.8,
+          "year": 2024,
+          "t": 0,
+          "display": "63"
+        },
+        {
+          "col": "sas",
+          "value": 72.56,
+          "year": 2024,
+          "t": 0.62,
+          "display": "73"
+        },
+        {
+          "col": "mea",
+          "value": 72.31,
+          "year": 2024,
+          "t": 0.6,
+          "display": "72"
+        },
+        {
+          "col": "lcn",
+          "value": 75.82,
+          "year": 2024,
+          "t": 0.82,
+          "display": "76"
+        },
+        {
+          "col": "eas",
+          "value": 76.74,
+          "year": 2024,
+          "t": 0.88,
+          "display": "77"
+        },
+        {
+          "col": "ecs",
+          "value": 78.6,
+          "year": 2024,
+          "t": 1,
+          "display": "79"
+        }
+      ]
+    },
+    {
+      "label": "Measles vaccination",
+      "short": "Measles",
+      "unit": "% of infants",
+      "cells": [
+        {
+          "col": "ssf",
+          "value": 69.08,
+          "year": 2024,
+          "t": 0,
+          "display": "69%"
+        },
+        {
+          "col": "sas",
+          "value": 96.9,
+          "year": 2024,
+          "t": 1,
+          "display": "97%"
+        },
+        {
+          "col": "mea",
+          "value": 84.36,
+          "year": 2024,
+          "t": 0.55,
+          "display": "84%"
+        },
+        {
+          "col": "lcn",
+          "value": 86.03,
+          "year": 2024,
+          "t": 0.61,
+          "display": "86%"
+        },
+        {
+          "col": "eas",
+          "value": 89.8,
+          "year": 2024,
+          "t": 0.74,
+          "display": "90%"
+        },
+        {
+          "col": "ecs",
+          "value": 94.07,
+          "year": 2024,
+          "t": 0.9,
+          "display": "94%"
+        }
+      ]
+    },
+    {
+      "label": "Internet use",
+      "short": "Internet",
+      "unit": "% of people",
+      "cells": [
+        {
+          "col": "ssf",
+          "value": 33.6,
+          "year": 2024,
+          "t": 0,
+          "display": "34%"
+        },
+        {
+          "col": "sas",
+          "value": 62.8,
+          "year": 2024,
+          "t": 0.51,
+          "display": "63%"
+        },
+        {
+          "col": "mea",
+          "value": 61.5,
+          "year": 2024,
+          "t": 0.49,
+          "display": "62%"
+        },
+        {
+          "col": "lcn",
+          "value": 81.7,
+          "year": 2024,
+          "t": 0.84,
+          "display": "82%"
+        },
+        {
+          "col": "eas",
+          "value": 86.6,
+          "year": 2024,
+          "t": 0.92,
+          "display": "87%"
+        },
+        {
+          "col": "ecs",
+          "value": 90.9,
+          "year": 2024,
+          "t": 1,
+          "display": "91%"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source": "derived",
+    "sourceIndicator": "global-progress (counterfactual)",
+    "url": "https://data360.worldbank.org/en/atlas/global-progress/",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "derived",
+    "definition": "Latest available value for each world region on each measure, shaded within each row from the worst region (red) to the best (green). The scaling is independent per row — there is no cross-measure composite. Columns are ordered by GDP per person, poorest to richest.",
+    "attribution": "World Bank, WHO, UNICEF, FAO, ITU (via WDI & PIP)",
+    "primarySource": "World Bank WDI; World Bank PIP"
+  },
+  "recipe": [
+    {
+      "op": "row_minmax",
+      "detail": "per-row min–max of the latest regional values; the better end (lower for poverty/mortality, higher for life expectancy/coverage/access) maps to green"
+    }
+  ]
+}

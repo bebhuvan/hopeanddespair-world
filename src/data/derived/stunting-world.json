@@ -1,0 +1,119 @@
+{
+  "indicatorId": "progress.stunting.world",
+  "entity": "WLD",
+  "entityName": "World",
+  "unit": "% of under-5s",
+  "points": [
+    {
+      "t": 2000,
+      "value": 33.07
+    },
+    {
+      "t": 2001,
+      "value": 32.72
+    },
+    {
+      "t": 2002,
+      "value": 32.41
+    },
+    {
+      "t": 2003,
+      "value": 32.04
+    },
+    {
+      "t": 2004,
+      "value": 31.63
+    },
+    {
+      "t": 2005,
+      "value": 31.21
+    },
+    {
+      "t": 2006,
+      "value": 30.73
+    },
+    {
+      "t": 2007,
+      "value": 30.11
+    },
+    {
+      "t": 2008,
+      "value": 29.4
+    },
+    {
+      "t": 2009,
+      "value": 28.66
+    },
+    {
+      "t": 2010,
+      "value": 27.88
+    },
+    {
+      "t": 2011,
+      "value": 27.11
+    },
+    {
+      "t": 2012,
+      "value": 26.4
+    },
+    {
+      "t": 2013,
+      "value": 25.76
+    },
+    {
+      "t": 2014,
+      "value": 25.17
+    },
+    {
+      "t": 2015,
+      "value": 24.62
+    },
+    {
+      "t": 2016,
+      "value": 24.06
+    },
+    {
+      "t": 2017,
+      "value": 23.49
+    },
+    {
+      "t": 2018,
+      "value": 22.99
+    },
+    {
+      "t": 2019,
+      "value": 22.6
+    },
+    {
+      "t": 2020,
+      "value": 22.39
+    },
+    {
+      "t": 2021,
+      "value": 22.38
+    },
+    {
+      "t": 2022,
+      "value": 22.64
+    },
+    {
+      "t": 2023,
+      "value": 22.91
+    },
+    {
+      "t": 2024,
+      "value": 23.2
+    }
+  ],
+  "provenance": {
+    "source": "data360",
+    "sourceIndicator": "WB_WDI · WB_WDI_SH_STA_STNT_ME_ZS",
+    "url": "https://data360.worldbank.org/en/indicator/WB_WDI_SH_STA_STNT_ME_ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-18",
+    "checksum": "c74238b657d82feacdabf51e03b4698781e72c8f16cda4656c53687d479ccd5a",
+    "definition": "Child stunting",
+    "attribution": "World Bank Data360",
+    "primarySource": "UNICEF/WHO/World Bank Joint Malnutrition Estimates — via Data360"
+  }
+}

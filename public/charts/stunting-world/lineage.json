@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "progress.stunting.world",
+    "unit": "% of under-5s",
+    "points": 25
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "identity",
+        "detail": "normalized directly from source"
+      }
+    ],
+    "agent": "adapter:data360@1.0.0",
+    "used": {
+      "source": "data360",
+      "slug": "WB_WDI_SH_STA_STNT_ME_ZS",
+      "url": "https://data360.worldbank.org/en/indicator/WB_WDI_SH_STA_STNT_ME_ZS",
+      "vintage": "2026-06-18",
+      "checksum": "c74238b657d82feacdabf51e03b4698781e72c8f16cda4656c53687d479ccd5a",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UNICEF/WHO/World Bank Joint Malnutrition Estimates — via Data360"
+}

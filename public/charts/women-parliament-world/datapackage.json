@@ -1,0 +1,38 @@
+{
+  "name": "progress-women_parliament-world",
+  "title": "Seats held by women in national parliaments",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank Data360",
+      "path": "https://data360.worldbank.org/en/indicator/WB_WDI_SG_GEN_PARL_ZS"
+    }
+  ],
+  "created": "2026-06-18",
+  "resources": [
+    {
+      "name": "progress-women_parliament-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "progress_women_parliament_world",
+            "type": "number",
+            "unit": "% of seats"
+          }
+        ]
+      }
+    }
+  ]
+}

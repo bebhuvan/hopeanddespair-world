@@ -1,0 +1,52 @@
+{
+  "chartId": "progress-poverty-by-region",
+  "kind": "bars",
+  "title": "Extreme poverty today, by region",
+  "unit": "% living on under $3.00 a day · latest available year",
+  "xmax": 50,
+  "xTicks": [
+    0,
+    15,
+    30,
+    45
+  ],
+  "bars": [
+    {
+      "label": "Sub-Saharan Africa",
+      "value": 45.09,
+      "color": "despair"
+    },
+    {
+      "label": "Latin America",
+      "value": 4.28,
+      "color": "hope"
+    },
+    {
+      "label": "South Asia",
+      "value": 3.78,
+      "color": "hope"
+    },
+    {
+      "label": "East Asia & Pacific",
+      "value": 1.97,
+      "color": "hope"
+    }
+  ],
+  "provenance": {
+    "source": "derived",
+    "sourceIndicator": "global-progress (counterfactual)",
+    "url": "https://data360.worldbank.org/en/atlas/global-progress/",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "derived",
+    "definition": "Share of each region living on under $3.00 a day (2021 PPP), latest available year. The world average fell because Asia and Latin America all but eliminated extreme poverty; Sub-Saharan Africa did not.",
+    "attribution": "World Bank — Poverty and Inequality Platform",
+    "primarySource": "World Bank PIP"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest-year extreme-poverty rate per region"
+    }
+  ]
+}

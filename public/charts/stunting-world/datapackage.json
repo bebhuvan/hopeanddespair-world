@@ -1,0 +1,38 @@
+{
+  "name": "progress-stunting-world",
+  "title": "Child stunting",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank Data360",
+      "path": "https://data360.worldbank.org/en/indicator/WB_WDI_SH_STA_STNT_ME_ZS"
+    }
+  ],
+  "created": "2026-06-18",
+  "resources": [
+    {
+      "name": "progress-stunting-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "progress_stunting_world",
+            "type": "number",
+            "unit": "% of under-5s"
+          }
+        ]
+      }
+    }
+  ]
+}

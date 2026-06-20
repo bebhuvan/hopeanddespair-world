@@ -1,0 +1,28 @@
+{
+  "note": "Audited figures the article may cite. Regenerate with scripts/analysis/global-progress.ts. No counterfactual people-count: extrapolating a floored poverty rate is invalid.",
+  "povertyLatestYear": 2024,
+  "povertyActualPct": 10.4,
+  "povertyDeclineHist": 1.58,
+  "povertyDeclineRecent": 0.41,
+  "worldPopulation": 8141808945,
+  "peopleInExtremePovertyMillions": 847,
+  "lifeExpActual": 73.17,
+  "lifeExpCounterfactual": 74.84,
+  "lifeExpGapYears": 1.67,
+  "paceRatios": {
+    "life_exp": 33,
+    "poverty": 26,
+    "child_mort": 38,
+    "maternal": 36,
+    "stunting": 45,
+    "undernourish": -22,
+    "literacy": 77,
+    "tertiary": 84,
+    "immunization": -11,
+    "sanitation": 105,
+    "electricity": 110,
+    "internet": 139,
+    "mobile": 20,
+    "women_parl": 87
+  }
+}

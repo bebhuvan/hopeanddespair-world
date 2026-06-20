@@ -1,0 +1,38 @@
+{
+  "name": "economy-poverty_rate_3000-world",
+  "title": "Population below $30.00/day (2021 PPP), World",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — Poverty and Inequality Platform (PIP)",
+      "path": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=30&ppp_version=2021&format=json&group_by=wb"
+    }
+  ],
+  "created": "2026-06-18",
+  "resources": [
+    {
+      "name": "economy-poverty_rate_3000-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "economy_poverty_rate_3000_world",
+            "type": "number",
+            "unit": "% of population"
+          }
+        ]
+      }
+    }
+  ]
+}

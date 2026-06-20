@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "economy.poverty_rate_3000.world",
+    "unit": "% of population",
+    "points": 46
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "identity",
+        "detail": "normalized directly from source"
+      }
+    ],
+    "agent": "adapter:pip@1.0.0",
+    "used": {
+      "source": "pip",
+      "slug": "pip-grp/wb/30.00/2021",
+      "url": "https://api.worldbank.org/pip/v1/pip-grp?country=all&year=all&povline=30&ppp_version=2021&format=json&group_by=wb",
+      "vintage": "2026-06-18",
+      "checksum": "c9bcb057162044291eec81f0b60f5562b4ec2f7d3d85876540f662bf5a7028f1",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "World Bank — Poverty and Inequality Platform"
+}

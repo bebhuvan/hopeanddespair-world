@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "progress.women_empowerment.europe",
+    "unit": "index (0–1)",
+    "points": 120
+  },
+  "wasDerivedFrom": [
+    "Europe (population-weighted)"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Europe (population-weighted)"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "women-political-empowerment-index",
+      "url": "https://ourworldindata.org/grapher/women-political-empowerment-index",
+      "vintage": "2026-06-18",
+      "checksum": "7aebb21b1c5cfb25655c0fa2694647a4ca613acf284fc9a65bc5595f26e79576",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "V-Dem (Democracy report v16) — via Our World in Data"
+}

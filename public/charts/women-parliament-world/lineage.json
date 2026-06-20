@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "progress.women_parliament.world",
+    "unit": "% of seats",
+    "points": 29
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "identity",
+        "detail": "normalized directly from source"
+      }
+    ],
+    "agent": "adapter:data360@1.0.0",
+    "used": {
+      "source": "data360",
+      "slug": "WB_WDI_SG_GEN_PARL_ZS",
+      "url": "https://data360.worldbank.org/en/indicator/WB_WDI_SG_GEN_PARL_ZS",
+      "vintage": "2026-06-18",
+      "checksum": "b2b7362ae41f3ef73350bb4c43d3736b30ba9cf14ad673ea49b40263c4418c03",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "IPU & UN Women — via World Bank WDI / Data360"
+}

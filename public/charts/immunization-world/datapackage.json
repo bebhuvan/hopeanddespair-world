@@ -1,0 +1,38 @@
+{
+  "name": "progress-immunization-world",
+  "title": "Measles immunization coverage",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank Data360",
+      "path": "https://data360.worldbank.org/en/indicator/WB_WDI_SH_IMM_MEAS"
+    }
+  ],
+  "created": "2026-06-18",
+  "resources": [
+    {
+      "name": "progress-immunization-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "progress_immunization_world",
+            "type": "number",
+            "unit": "% of children"
+          }
+        ]
+      }
+    }
+  ]
+}

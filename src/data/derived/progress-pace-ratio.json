@@ -1,0 +1,99 @@
+{
+  "chartId": "progress-pace-ratio",
+  "kind": "bars",
+  "title": "Pace of progress, 2013–2024 as a share of the 2000–2013 pace",
+  "unit": "% of the previous decade’s pace · red = slowed · green = sped up",
+  "xmax": 140,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "refLines": [
+    {
+      "y": 100,
+      "label": "same pace as the 2000s"
+    }
+  ],
+  "bars": [
+    {
+      "label": "Mobile subscriptions",
+      "value": 20,
+      "color": "despair"
+    },
+    {
+      "label": "Extreme poverty",
+      "value": 26,
+      "color": "despair"
+    },
+    {
+      "label": "Life expectancy",
+      "value": 33,
+      "color": "despair"
+    },
+    {
+      "label": "Maternal mortality",
+      "value": 36,
+      "color": "despair"
+    },
+    {
+      "label": "Child mortality",
+      "value": 38,
+      "color": "despair"
+    },
+    {
+      "label": "Child stunting",
+      "value": 45,
+      "color": "despair"
+    },
+    {
+      "label": "Adult literacy",
+      "value": 77,
+      "color": "despair"
+    },
+    {
+      "label": "Tertiary enrolment",
+      "value": 84,
+      "color": "despair"
+    },
+    {
+      "label": "Women in parliament",
+      "value": 87,
+      "color": "ochre"
+    },
+    {
+      "label": "Safe sanitation",
+      "value": 105,
+      "color": "ochre"
+    },
+    {
+      "label": "Electricity access",
+      "value": 110,
+      "color": "ochre"
+    },
+    {
+      "label": "Internet use",
+      "value": 139,
+      "color": "hope"
+    }
+  ],
+  "provenance": {
+    "source": "derived",
+    "sourceIndicator": "global-progress (counterfactual)",
+    "url": "https://data360.worldbank.org/en/atlas/global-progress/",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-12",
+    "checksum": "derived",
+    "definition": "For each world series, the least-squares annual rate of improvement over 2013–2024 divided by the rate over 2000–2013 (signed so improving is positive). Below 100% = the gain slowed; above = it sped up. Two measures whose rate turned negative (undernourishment, measles coverage) are shown separately as lines. A transparent world-aggregate measure — not the Atlas’s stage-conditional country model.",
+    "attribution": "Author’s calculation on World Bank / OWID series",
+    "primarySource": "World Bank WDI, Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pace_ratio",
+      "detail": "slope(2013..latest)/slope(2000..2013) per indicator; sign flipped for lower-is-better; reversals excluded"
+    }
+  ]
+}
