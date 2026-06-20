@@ -1,0 +1,106 @@
+{
+  "chartId": "debt-owed-china-by-country",
+  "kind": "bars",
+  "title": "Who owes China the most",
+  "unit": "bilateral public debt owed to China · US$ billions · 2023",
+  "yearSpan": "2023",
+  "xmax": 25,
+  "xTicks": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25
+  ],
+  "decimals": 1,
+  "bars": [
+    {
+      "label": "Pakistan",
+      "value": 22.6,
+      "color": "despair"
+    },
+    {
+      "label": "Argentina",
+      "value": 7.7,
+      "color": "ochre"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 6.7,
+      "color": "ochre"
+    },
+    {
+      "label": "Sri Lanka",
+      "value": 6,
+      "color": "ochre"
+    },
+    {
+      "label": "Kenya",
+      "value": 6,
+      "color": "ochre"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 5.5,
+      "color": "ochre"
+    },
+    {
+      "label": "Laos",
+      "value": 5.3,
+      "color": "ochre"
+    },
+    {
+      "label": "Nigeria",
+      "value": 5.2,
+      "color": "ochre"
+    },
+    {
+      "label": "Uzbekistan",
+      "value": 4.2,
+      "color": "stone"
+    },
+    {
+      "label": "Cambodia",
+      "value": 4.1,
+      "color": "stone"
+    },
+    {
+      "label": "Egypt",
+      "value": 4,
+      "color": "stone"
+    },
+    {
+      "label": "Côte d'Ivoire",
+      "value": 3.8,
+      "color": "stone"
+    },
+    {
+      "label": "Zambia",
+      "value": 3.6,
+      "color": "stone"
+    },
+    {
+      "label": "DR Congo",
+      "value": 3.5,
+      "color": "stone"
+    }
+  ],
+  "provenance": {
+    "source": "worldbank-ids",
+    "sourceIndicator": "World Bank IDS DT.DOD.BLAT.CD, counterpart-area = China",
+    "url": "https://databank.worldbank.org/source/international-debt-statistics",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-19",
+    "checksum": "59ac708663d614c9fb5261740df5fb6c2bdd85cde7613d95b879ae26ec50833a",
+    "definition": "Outstanding bilateral public & publicly guaranteed debt owed to China, by country, 2023, US$ billions. Official bilateral figure; excludes loans classified to Chinese commercial or policy banks, so it is a lower bound.",
+    "attribution": "World Bank International Debt Statistics",
+    "primarySource": "WB IDS (source 6), counterpart-area China (730)"
+  },
+  "recipe": [
+    {
+      "op": "rank",
+      "detail": "DT.DOD.BLAT.CD, counterpart China, top 14 borrowers, US$bn"
+    }
+  ]
+}

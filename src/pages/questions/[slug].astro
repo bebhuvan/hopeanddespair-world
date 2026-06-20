@@ -7,6 +7,8 @@ import { windowSeries } from '../../lib/smooth';
 import { gitHistory, fileHistoryUrl } from '../../lib/repo';
 import { smartenDeep } from '../../lib/typo';
 import { buildMovements } from '../../lib/article-charts';
+import { GALLERIES } from '../../lib/galleries';
+import { AUTHOR } from '../../lib/site';
 import { buildDimensions } from '../../lib/keystone-charts';
 import Chart from '../../components/Chart.astro';
 
@@ -49,6 +51,8 @@ if (published && d.evidence) {
 // not a stub — as long as it is published and has movements.
 const hasMovements = d.status === 'published' && (d.movements?.length ?? 0) > 0;
 const movements = buildMovements((published || hasMovements) ? d.movements ?? [] : []);
+const gallerySlug = Astro.params.slug as string;
+const galleryCount = GALLERIES[gallerySlug]?.items.length ?? 0;
 
 // The keystone hub — each dimension a mini-suite of real derived series, grouped by temperature.
 const dimensions = buildDimensions(d.dimensions ?? []);
@@ -98,6 +102,11 @@ const heroName = (d.evidence?.heroLabel ?? '').split(/\s*[/·]\s*/)[0];
 const canonical = `https://hopeanddespair.world/questions/${q.id}`;
 const pubYear = new Date(q.data.publishedAt).getFullYear();
 const updated = history[0]?.date ?? null;
+// Living-document date: the file's last git commit (zero-maintenance), labelled "Updated"; falls
+// back to the publish date for an article with no commit trail yet.
+const stampISO = updated ?? new Date(q.data.publishedAt).toISOString().slice(0, 10);
+const stampLabel = updated ? 'Updated' : 'Published';
+const stamp = new Date(stampISO).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 const citation = `Hope & Despair. “${d.question}.” Hope & Despair, ${pubYear}. ${canonical}.`;
 const bibtex = `@misc{hopeanddespair:${q.id},
   author       = {{Hope & Despair}},
@@ -139,6 +148,19 @@ const figStart = 1;
         <p class="kicker">Question {d.kickerNumber} <span class="sep">·</span> {d.theme}</p>
         <h1 class="title">{d.question}</h1>
         <p class="lede">{d.dek}</p>
+        <p class="byline">
+          <span class:list={['stat', d.status === 'draft' ? 'wip' : 'live']}>{d.status === 'draft' ? 'Work in progress' : 'Living document'}</span>
+          <span class="dot">·</span>
+          <span class="by">By {AUTHOR}</span>
+          <span class="dot">·</span>
+          <span class="stamp">{stampLabel} {stamp}</span>
+          {galleryCount > 0 && (
+            <>
+              <span class="dot">·</span>
+              <a class="glink" href={`/questions/${gallerySlug}/gallery`}>All {galleryCount} charts &rarr;</a>
+            </>
+          )}
+        </p>
       </div>
     </div>
 
@@ -523,6 +545,18 @@ const figStart = 1;
   .kicker .sep { color: var(--ink-3); }
   .title { font-family: var(--display); font-weight: 640; font-size: clamp(2.7rem, 6.2vw, 5rem); line-height: 1.04; letter-spacing: -0.04em; margin-top: 1.4rem; max-width: 15ch; text-wrap: balance; }
   .lede { max-width: var(--measure); margin-top: 2.1rem; font-size: clamp(1.32rem, 1.9vw, 1.6rem); line-height: 1.46; color: var(--ink-2); text-wrap: pretty; }
+  .byline { margin-top: 1.6rem; font-family: var(--mono); font-size: 0.78rem; color: var(--ink-3); display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5em; }
+  .byline .by { color: var(--ink-2); }
+  .byline .dot { color: var(--line-2); }
+  /* status pill — deliberately NEUTRAL (not the hope/despair palette) so it never reads as a verdict */
+  .byline .stat { display: inline-flex; align-items: center; gap: 0.45em; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.7rem; }
+  .byline .stat::before { content: ""; width: 6px; height: 6px; border-radius: 50%; }
+  .byline .stat.live { color: var(--ink-2); }
+  .byline .stat.live::before { background: var(--ink-3); }
+  .byline .stat.wip { color: #B07A12; }
+  .byline .stat.wip::before { background: #C7901A; }
+  .byline .glink { color: var(--ink-2); border-bottom: 1px solid var(--line-2); transition: color 0.3s, border-color 0.3s; }
+  .byline .glink:hover { color: var(--hope); border-color: var(--hope); }
   .draft-note { max-width: 60ch; padding-left: 1.4rem; border-left: 2px solid color-mix(in srgb, var(--hope) 45%, transparent); color: var(--ink-2); }
   .draft-note a { color: var(--hope); }
 

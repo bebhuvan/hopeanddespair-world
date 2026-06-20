@@ -1,0 +1,66 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { smartenDeep } from '../lib/typo';
+import { GALLERIES } from '../lib/galleries';
+
+const qs = await getCollection('questions');
+const galleries = Object.entries(GALLERIES).map(([slug, g]) => {
+  const q = qs.find((x) => x.id === slug);
+  return {
+    slug, headline: smartenDeep(g.headline), blurb: smartenDeep(g.blurb),
+    count: g.items.length, theme: q?.data.theme ?? '', question: q?.data.question ?? '', num: q?.data.kickerNumber ?? '',
+  };
+});
+---
+<BaseLayout title="Charts — Hope & Despair" description="Curated chart galleries: each takes one question and ranks it many ways, so the disagreement between the charts becomes the argument.">
+  <section class="ghead">
+    <p class="crumb"><a href="/">The Atlas</a> <span class="sep">/</span> Charts</p>
+    <h1>Charts, by the question they answer</h1>
+    <p class="blurb">Not a wall of statistics. Each gallery takes a single question and ranks the world several ways at once — and the disagreement between the charts is the point. A chart here always arrives with the lens that keeps it honest, and a way back to the full story.</p>
+  </section>
+
+  <section class="list">
+    {galleries.map((g) => (
+      <a class="gcard" href={`/questions/${g.slug}/gallery`}>
+        <div class="g"><span class="qn">{g.num}</span><span class="qt">{g.theme}</span></div>
+        <div class="c">
+          <h2>{g.headline}</h2>
+          <p class="bl">{g.blurb}</p>
+          <p class="meta">{g.count} charts · {g.question} <span aria-hidden="true">&rarr;</span></p>
+        </div>
+      </a>
+    ))}
+  </section>
+
+  <section class="more">
+    <p class="all"><a href="/">&larr; Back to the Atlas</a></p>
+  </section>
+</BaseLayout>
+
+<style>
+  .ghead { padding-block: clamp(3rem, 8vh, 5rem) clamp(1.2rem, 3vh, 2rem); }
+  .crumb { font-family: var(--mono); font-size: 0.74rem; color: var(--ink-3); }
+  .crumb a { color: var(--ink-2); border-bottom: 1px solid var(--line-2); }
+  .crumb a:hover { color: var(--hope); border-color: var(--hope); }
+  .crumb .sep { color: var(--line-2); margin: 0 0.3em; }
+  .ghead h1 { font-family: var(--display); font-weight: 640; font-size: clamp(2.2rem, 5.4vw, 3.8rem); line-height: 1.05; letter-spacing: -0.035em; margin-top: 1.2rem; text-wrap: balance; }
+  .ghead .blurb { max-width: 54ch; margin-top: 1.3rem; font-family: var(--serif); font-size: var(--fs-lede); line-height: 1.5; color: var(--ink-2); text-wrap: pretty; }
+
+  .list { margin-top: clamp(1.6rem, 4vh, 2.6rem); }
+  .gcard { display: flex; gap: clamp(1rem, 3vw, 2.4rem); border-top: 1px solid var(--line); padding-block: clamp(1.9rem, 4.4vh, 2.8rem); }
+  .gcard:first-child { border-top: 0; }
+  .gcard .g { flex: none; width: clamp(3rem, 8vw, 5rem); }
+  .gcard .qn { font-family: var(--display); font-weight: 600; font-size: 1.7rem; line-height: 1; color: var(--ink-3); letter-spacing: -0.03em; display: block; transition: color 0.4s; }
+  .gcard .qt { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-3); margin-top: 0.5rem; line-height: 1.5; display: block; }
+  .gcard:hover .qn { color: var(--hope); }
+  .gcard h2 { font-family: var(--display); font-weight: 560; font-size: clamp(1.5rem, 3.2vw, 2.25rem); line-height: 1.06; letter-spacing: -0.03em; max-width: 24ch; text-wrap: balance; transition: color 0.4s; }
+  .gcard:hover h2 { color: var(--hope); }
+  .gcard .bl { font-family: var(--serif); font-size: 1.02rem; line-height: 1.5; color: var(--ink-2); margin-top: 0.8rem; max-width: 60ch; text-wrap: pretty; }
+  .gcard .meta { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-3); margin-top: 1rem; }
+
+  .more { margin-top: clamp(3rem, 8vh, 5rem); border-top: 1px solid var(--line-2); padding-top: clamp(1.8rem, 4vh, 2.6rem); }
+  .all { font-family: var(--mono); font-size: 0.74rem; }
+  .all a { color: var(--ink-2); border-bottom: 1px solid var(--line-2); }
+  .all a:hover { color: var(--hope); border-color: var(--hope); }
+</style>

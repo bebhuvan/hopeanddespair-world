@@ -1,0 +1,110 @@
+{
+  "chartId": "debt-service-exports-by-country",
+  "kind": "bars",
+  "title": "How much of export earnings goes to creditors",
+  "unit": "total debt service as a share of exports · % · 2023",
+  "yearSpan": "2023",
+  "xmax": 90,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75
+  ],
+  "decimals": 0,
+  "refLines": [
+    {
+      "y": 25,
+      "label": "warning line"
+    }
+  ],
+  "bars": [
+    {
+      "label": "El Salvador",
+      "value": 83.1,
+      "color": "despair"
+    },
+    {
+      "label": "Brazil",
+      "value": 53.5,
+      "color": "despair"
+    },
+    {
+      "label": "Argentina",
+      "value": 51.4,
+      "color": "despair"
+    },
+    {
+      "label": "Kazakhstan",
+      "value": 50.3,
+      "color": "despair"
+    },
+    {
+      "label": "Mozambique",
+      "value": 46.2,
+      "color": "despair"
+    },
+    {
+      "label": "Pakistan",
+      "value": 43.6,
+      "color": "despair"
+    },
+    {
+      "label": "Papua New Guinea",
+      "value": 42.2,
+      "color": "despair"
+    },
+    {
+      "label": "Jamaica",
+      "value": 38,
+      "color": "ochre"
+    },
+    {
+      "label": "Colombia",
+      "value": 36.7,
+      "color": "ochre"
+    },
+    {
+      "label": "Lebanon",
+      "value": 34.5,
+      "color": "ochre"
+    },
+    {
+      "label": "Angola",
+      "value": 33.5,
+      "color": "ochre"
+    },
+    {
+      "label": "Uzbekistan",
+      "value": 32.6,
+      "color": "ochre"
+    },
+    {
+      "label": "Mongolia",
+      "value": 31.6,
+      "color": "ochre"
+    },
+    {
+      "label": "Egypt",
+      "value": 30.4,
+      "color": "ochre"
+    }
+  ],
+  "provenance": {
+    "source": "worldbank-ids",
+    "sourceIndicator": "World Bank IDS DT.TDS.DECT.EX.ZS — debt service to exports",
+    "url": "https://databank.worldbank.org/source/international-debt-statistics",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-19",
+    "checksum": "cf5c4c7eee0a7ef64495110507644f0d0f79fea76de514fda08fd9e9960e9899",
+    "definition": "Total external debt service (principal + interest) as a percentage of exports of goods, services and primary income, by country, 2023. A quarter of exports is a commonly cited warning threshold.",
+    "attribution": "World Bank International Debt Statistics",
+    "primarySource": "WB IDS (source 6), DT.TDS.DECT.EX.ZS"
+  },
+  "recipe": [
+    {
+      "op": "rank",
+      "detail": "DT.TDS.DECT.EX.ZS, top 14, % of exports, ref line at 25%"
+    }
+  ]
+}
