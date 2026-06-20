@@ -2,9 +2,11 @@
 dist/
 .astro/
 
-# raw source bytes → R2/Git-LFS at scale, not git (DATA.md §2). The snapshot.json manifest
-# (checksum + vintage + license) stays tracked; the bytes are reproducible from it.
-data/sources/**/raw.*
+# raw source snapshots → not git (DATA.md §2): large (~700 MB) + reproducible — each derived
+# series in src/data/derived carries its own vintage + checksum, and the analysis scripts re-fetch.
+# Kept local; at scale these belong in R2/Git-LFS. (If you ever need a manifest tracked, add a
+# narrow "!data/sources/.../snapshot.json" exception and `git add -f` it.)
+data/sources/
 
 # deps
 node_modules/
