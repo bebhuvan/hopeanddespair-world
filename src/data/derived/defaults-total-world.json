@@ -1,0 +1,285 @@
+{
+  "indicatorId": "debt.defaults_total.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "US$ billions in default",
+  "points": [
+    {
+      "t": 1960,
+      "value": 13.4
+    },
+    {
+      "t": 1961,
+      "value": 15.3
+    },
+    {
+      "t": 1962,
+      "value": 14.7
+    },
+    {
+      "t": 1963,
+      "value": 15.1
+    },
+    {
+      "t": 1964,
+      "value": 16.9
+    },
+    {
+      "t": 1965,
+      "value": 18.4
+    },
+    {
+      "t": 1966,
+      "value": 17.6
+    },
+    {
+      "t": 1967,
+      "value": 15.2
+    },
+    {
+      "t": 1968,
+      "value": 16.2
+    },
+    {
+      "t": 1969,
+      "value": 16.6
+    },
+    {
+      "t": 1970,
+      "value": 20.4
+    },
+    {
+      "t": 1971,
+      "value": 17.9
+    },
+    {
+      "t": 1972,
+      "value": 18.9
+    },
+    {
+      "t": 1973,
+      "value": 18.8
+    },
+    {
+      "t": 1974,
+      "value": 20.5
+    },
+    {
+      "t": 1975,
+      "value": 19.2
+    },
+    {
+      "t": 1976,
+      "value": 19.6
+    },
+    {
+      "t": 1977,
+      "value": 28
+    },
+    {
+      "t": 1978,
+      "value": 30.6
+    },
+    {
+      "t": 1979,
+      "value": 36.3
+    },
+    {
+      "t": 1980,
+      "value": 35.9
+    },
+    {
+      "t": 1981,
+      "value": 37.1
+    },
+    {
+      "t": 1982,
+      "value": 68.8
+    },
+    {
+      "t": 1983,
+      "value": 126.4
+    },
+    {
+      "t": 1984,
+      "value": 142.9
+    },
+    {
+      "t": 1985,
+      "value": 184.1
+    },
+    {
+      "t": 1986,
+      "value": 266.9
+    },
+    {
+      "t": 1987,
+      "value": 365.5
+    },
+    {
+      "t": 1988,
+      "value": 303.9
+    },
+    {
+      "t": 1989,
+      "value": 358
+    },
+    {
+      "t": 1990,
+      "value": 470.9
+    },
+    {
+      "t": 1991,
+      "value": 406.4
+    },
+    {
+      "t": 1992,
+      "value": 289.4
+    },
+    {
+      "t": 1993,
+      "value": 363.9
+    },
+    {
+      "t": 1994,
+      "value": 367.6
+    },
+    {
+      "t": 1995,
+      "value": 268.3
+    },
+    {
+      "t": 1996,
+      "value": 284.4
+    },
+    {
+      "t": 1997,
+      "value": 242.2
+    },
+    {
+      "t": 1998,
+      "value": 268.1
+    },
+    {
+      "t": 1999,
+      "value": 349.6
+    },
+    {
+      "t": 2000,
+      "value": 274.2
+    },
+    {
+      "t": 2001,
+      "value": 312.4
+    },
+    {
+      "t": 2002,
+      "value": 314.5
+    },
+    {
+      "t": 2003,
+      "value": 370.8
+    },
+    {
+      "t": 2004,
+      "value": 370.6
+    },
+    {
+      "t": 2005,
+      "value": 374.3
+    },
+    {
+      "t": 2006,
+      "value": 285.7
+    },
+    {
+      "t": 2007,
+      "value": 212.9
+    },
+    {
+      "t": 2008,
+      "value": 213.1
+    },
+    {
+      "t": 2009,
+      "value": 201.7
+    },
+    {
+      "t": 2010,
+      "value": 203.4
+    },
+    {
+      "t": 2011,
+      "value": 168.8
+    },
+    {
+      "t": 2012,
+      "value": 490.3
+    },
+    {
+      "t": 2013,
+      "value": 519.4
+    },
+    {
+      "t": 2014,
+      "value": 222.6
+    },
+    {
+      "t": 2015,
+      "value": 197.8
+    },
+    {
+      "t": 2016,
+      "value": 243.2
+    },
+    {
+      "t": 2017,
+      "value": 243
+    },
+    {
+      "t": 2018,
+      "value": 428.8
+    },
+    {
+      "t": 2019,
+      "value": 281.2
+    },
+    {
+      "t": 2020,
+      "value": 432.6
+    },
+    {
+      "t": 2021,
+      "value": 350.9
+    },
+    {
+      "t": 2022,
+      "value": 500.6
+    },
+    {
+      "t": 2023,
+      "value": 471.1
+    },
+    {
+      "t": 2024,
+      "value": 425
+    }
+  ],
+  "provenance": {
+    "source": "boc-boe",
+    "sourceIndicator": "DEBT_TOTAL",
+    "url": "https://www.bankofcanada.ca/2025/10/staff-analytical-note-2025-24/",
+    "license": "Bank of Canada — reuse with attribution",
+    "vintage": "2026-06-17",
+    "checksum": "3254296c3a4745c81b327c4aaf7eeb80c2c7be3ceb3089bf7c6494bd45d79644",
+    "definition": "Total stock of sovereign government debt in default worldwide, US$ billions, year-end.",
+    "attribution": "Bank of Canada & Bank of England — Sovereign Default Database (Beers, Ferretti et al.)",
+    "primarySource": "BoC–BoE Sovereign Default Database 2025"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "World rows; US$ millions ÷ 1000 → billions"
+    }
+  ]
+}

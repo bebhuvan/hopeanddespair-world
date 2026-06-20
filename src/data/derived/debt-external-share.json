@@ -1,0 +1,103 @@
+{
+  "chartId": "debt-external-share",
+  "kind": "bars",
+  "title": "External debt as a share of total public debt",
+  "unit": "% of public debt owed to foreign creditors · latest year",
+  "yearSpan": "2026-06-17",
+  "xmax": 70,
+  "xTicks": [
+    0,
+    20,
+    40,
+    60
+  ],
+  "bars": [
+    {
+      "label": "Ethiopia",
+      "value": 61.9,
+      "color": "despair"
+    },
+    {
+      "label": "Ghana",
+      "value": 50.3,
+      "color": "despair"
+    },
+    {
+      "label": "Kenya",
+      "value": 50.3,
+      "color": "despair"
+    },
+    {
+      "label": "Sri Lanka",
+      "value": 49.7,
+      "color": "despair"
+    },
+    {
+      "label": "Senegal",
+      "value": 48.6,
+      "color": "despair"
+    },
+    {
+      "label": "Zambia",
+      "value": 48.5,
+      "color": "despair"
+    },
+    {
+      "label": "Mozambique",
+      "value": 47,
+      "color": "despair"
+    },
+    {
+      "label": "Egypt",
+      "value": 32.8,
+      "color": "ochre"
+    },
+    {
+      "label": "Mexico",
+      "value": 28.7,
+      "color": "ochre"
+    },
+    {
+      "label": "Nigeria",
+      "value": 22.9,
+      "color": "ochre"
+    },
+    {
+      "label": "Argentina",
+      "value": 22.9,
+      "color": "ochre"
+    },
+    {
+      "label": "Brazil",
+      "value": 10,
+      "color": "hope"
+    },
+    {
+      "label": "Thailand",
+      "value": 9.9,
+      "color": "hope"
+    },
+    {
+      "label": "India",
+      "value": 7.3,
+      "color": "hope"
+    }
+  ],
+  "provenance": {
+    "source": "unctad",
+    "sourceIndicator": "External public debt ÷ total public debt",
+    "url": "https://unctad.org/publication/world-of-debt",
+    "license": "Link-only — UNCTAD publication terms (display + cite; not re-hosted)",
+    "vintage": "2026-06-17",
+    "checksum": "c087bb43604849dc2b367a893143343f875c2be0a3ada1765ef4d9ec7c6beab1",
+    "definition": "External public debt as a share of total public debt, latest year. High = the government owes most of its debt to foreigners, in a currency it cannot print; low = it borrows at home in its own money. The real exposure to original sin and to a sudden stop.",
+    "attribution": "UN Trade and Development (UNCTAD) — A World of Debt 2025",
+    "primarySource": "UNCTAD; World Bank IDS"
+  },
+  "recipe": [
+    {
+      "op": "ratio",
+      "detail": "external public debt %GDP ÷ total public debt %GDP, latest year; colour = exposure band"
+    }
+  ]
+}

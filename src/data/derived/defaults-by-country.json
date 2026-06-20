@@ -1,0 +1,99 @@
+{
+  "chartId": "defaults-by-country",
+  "kind": "bars",
+  "title": "Who actually holds the world’s defaulted debt",
+  "unit": "US$ billions in default, 2024",
+  "yearSpan": "2024",
+  "xmax": 100,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "bars": [
+    {
+      "label": "Venezuela",
+      "value": 96.4,
+      "color": "despair"
+    },
+    {
+      "label": "Russia",
+      "value": 49.8,
+      "color": "despair"
+    },
+    {
+      "label": "Iraq",
+      "value": 43.3,
+      "color": "despair"
+    },
+    {
+      "label": "Lebanon",
+      "value": 43,
+      "color": "despair"
+    },
+    {
+      "label": "Sri Lanka",
+      "value": 30.1,
+      "color": "ochre"
+    },
+    {
+      "label": "Ukraine",
+      "value": 28.3,
+      "color": "ochre"
+    },
+    {
+      "label": "Pakistan",
+      "value": 18.4,
+      "color": "ochre"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 16.5,
+      "color": "ochre"
+    },
+    {
+      "label": "Belarus",
+      "value": 15,
+      "color": "ochre"
+    },
+    {
+      "label": "Cuba",
+      "value": 14.5,
+      "color": "stone"
+    },
+    {
+      "label": "Zambia",
+      "value": 10.4,
+      "color": "stone"
+    },
+    {
+      "label": "Sudan",
+      "value": 10.2,
+      "color": "stone"
+    },
+    {
+      "label": "Zimbabwe",
+      "value": 8.6,
+      "color": "stone"
+    }
+  ],
+  "provenance": {
+    "source": "boc-boe",
+    "sourceIndicator": "Sovereign debt in default by country, 2024",
+    "url": "https://www.bankofcanada.ca/2025/10/staff-analytical-note-2025-24/",
+    "license": "Bank of Canada — reuse with attribution",
+    "vintage": "2026-06-17",
+    "checksum": "3254296c3a4745c81b327c4aaf7eeb80c2c7be3ceb3089bf7c6494bd45d79644",
+    "definition": "Sovereign government debt in default, by country, 2024, US$ billions. The thirteen largest hold about 92% of the world total.",
+    "attribution": "Bank of Canada & Bank of England — Sovereign Default Database",
+    "primarySource": "BoC–BoE Sovereign Default Database 2025"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "top 13 sovereigns by US$ in default, 2024"
+    }
+  ]
+}

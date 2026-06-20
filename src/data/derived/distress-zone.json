@@ -1,0 +1,73 @@
+{
+  "indicatorId": "debt.distress_zone.lic",
+  "entity": "LIC",
+  "entityName": "In debt distress or at high risk",
+  "unit": "number of low-income countries",
+  "points": [
+    {
+      "t": 2013,
+      "value": 15
+    },
+    {
+      "t": 2015,
+      "value": 17
+    },
+    {
+      "t": 2017,
+      "value": 27
+    },
+    {
+      "t": 2018,
+      "value": 28
+    },
+    {
+      "t": 2019,
+      "value": 34
+    },
+    {
+      "t": 2020,
+      "value": 35
+    },
+    {
+      "t": 2021,
+      "value": 36
+    },
+    {
+      "t": 2022,
+      "value": 37
+    },
+    {
+      "t": 2023,
+      "value": 36
+    },
+    {
+      "t": 2024,
+      "value": 35
+    },
+    {
+      "t": 2025,
+      "value": 33
+    },
+    {
+      "t": 2026,
+      "value": 32
+    }
+  ],
+  "provenance": {
+    "source": "imf-dsf",
+    "sourceIndicator": "List of LIC DSAs for PRGT-Eligible Countries — risk-of-debt-distress ratings",
+    "url": "https://www.imf.org/external/pubs/ft/dsa/dsalist.pdf",
+    "license": "IMF — published DSA risk ratings (facts); displayed and cited, source PDF not re-hosted",
+    "vintage": "2026-06-18",
+    "checksum": "94ec49c6fc2b77a4701bc6bb325451656dcf6cb4ef3f530d5b32299dbf45be62",
+    "definition": "Number of PRGT-eligible low-income countries the IMF–World Bank DSF rates as in debt distress OR at high risk of debt distress, by year.",
+    "attribution": "IMF–World Bank Debt Sustainability Framework for Low-Income Countries",
+    "primarySource": "IMF List of LIC DSAs for PRGT-Eligible Countries (Internet Archive captures, one per year)"
+  },
+  "recipe": [
+    {
+      "op": "count_ratings",
+      "detail": "count of PRGT-eligible LICs by IMF risk-of-debt-distress rating, by year"
+    }
+  ]
+}

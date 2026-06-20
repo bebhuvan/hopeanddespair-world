@@ -1,0 +1,110 @@
+{
+  "chartId": "interest-revenue-by-country",
+  "kind": "bars",
+  "title": "Where the budget goes to creditors first",
+  "unit": "% of government revenue spent on public-debt interest · latest year",
+  "yearSpan": "2024",
+  "xmax": 70,
+  "xTicks": [
+    0,
+    20,
+    40,
+    60
+  ],
+  "decimals": 0,
+  "refLines": [
+    {
+      "y": 20,
+      "label": "a fifth of revenue"
+    }
+  ],
+  "bars": [
+    {
+      "label": "Pakistan",
+      "value": 61,
+      "color": "despair"
+    },
+    {
+      "label": "Sri Lanka",
+      "value": 57,
+      "color": "despair"
+    },
+    {
+      "label": "Egypt",
+      "value": 56,
+      "color": "despair"
+    },
+    {
+      "label": "Malawi",
+      "value": 36,
+      "color": "ochre"
+    },
+    {
+      "label": "Yemen",
+      "value": 33,
+      "color": "ochre"
+    },
+    {
+      "label": "Costa Rica",
+      "value": 32,
+      "color": "ochre"
+    },
+    {
+      "label": "Angola",
+      "value": 30,
+      "color": "ochre"
+    },
+    {
+      "label": "Kenya",
+      "value": 29,
+      "color": "ochre"
+    },
+    {
+      "label": "Zambia",
+      "value": 28,
+      "color": "ochre"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 28,
+      "color": "ochre"
+    },
+    {
+      "label": "Bahrain",
+      "value": 26,
+      "color": "ochre"
+    },
+    {
+      "label": "Ghana",
+      "value": 25,
+      "color": "ochre"
+    },
+    {
+      "label": "Uganda",
+      "value": 25,
+      "color": "ochre"
+    },
+    {
+      "label": "Guinea-Bissau",
+      "value": 25,
+      "color": "ochre"
+    }
+  ],
+  "provenance": {
+    "source": "unctad",
+    "sourceIndicator": "Public debt interest payments as a share of revenues",
+    "url": "https://unctad.org/publication/world-of-debt",
+    "license": "Link-only — UNCTAD publication terms (display + cite; not re-hosted)",
+    "vintage": "2026-06-17",
+    "checksum": "c087bb43604849dc2b367a893143343f875c2be0a3ada1765ef4d9ec7c6beab1",
+    "definition": "Public-debt interest payments as a share of general government revenue, latest year. The share of every dollar of revenue a government must hand to creditors before it can spend on anything else — the most direct fiscal-distress gauge.",
+    "attribution": "UN Trade and Development (UNCTAD) — A World of Debt 2025",
+    "primarySource": "UNCTAD; IMF WEO"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "interest ÷ revenue by country, latest year, top 14; colour by severity, ref line at the one-fifth tripwire"
+    }
+  ]
+}

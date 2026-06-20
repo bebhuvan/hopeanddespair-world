@@ -1,0 +1,267 @@
+{
+  "chartId": "debt-by-borrower",
+  "kind": "area",
+  "title": "What the world's debt is made of, by who owes it",
+  "unit": "share of total world debt, by borrower",
+  "x0": 2008,
+  "x1": 2025,
+  "xTicks": [
+    2008,
+    2013,
+    2018,
+    2025
+  ],
+  "bands": [
+    {
+      "name": "Governments",
+      "color": "uncertain",
+      "data": [
+        [
+          2008,
+          64.4
+        ],
+        [
+          2009,
+          78.1
+        ],
+        [
+          2010,
+          81.1
+        ],
+        [
+          2011,
+          79.5
+        ],
+        [
+          2012,
+          83.7
+        ],
+        [
+          2013,
+          81.4
+        ],
+        [
+          2014,
+          80.1
+        ],
+        [
+          2015,
+          83.5
+        ],
+        [
+          2016,
+          86.1
+        ],
+        [
+          2017,
+          89
+        ],
+        [
+          2018,
+          84.7
+        ],
+        [
+          2019,
+          89.9
+        ],
+        [
+          2020,
+          111.5
+        ],
+        [
+          2021,
+          98.6
+        ],
+        [
+          2022,
+          88.1
+        ],
+        [
+          2023,
+          91.5
+        ],
+        [
+          2024,
+          89.9
+        ],
+        [
+          2025,
+          95.6
+        ]
+      ]
+    },
+    {
+      "name": "Corporations",
+      "color": "ochre",
+      "data": [
+        [
+          2008,
+          78.9
+        ],
+        [
+          2009,
+          88.5
+        ],
+        [
+          2010,
+          85
+        ],
+        [
+          2011,
+          80.9
+        ],
+        [
+          2012,
+          85.6
+        ],
+        [
+          2013,
+          87.3
+        ],
+        [
+          2014,
+          85.2
+        ],
+        [
+          2015,
+          91.6
+        ],
+        [
+          2016,
+          91.3
+        ],
+        [
+          2017,
+          96
+        ],
+        [
+          2018,
+          90.1
+        ],
+        [
+          2019,
+          93
+        ],
+        [
+          2020,
+          106.6
+        ],
+        [
+          2021,
+          95.8
+        ],
+        [
+          2022,
+          92.8
+        ],
+        [
+          2023,
+          92.1
+        ],
+        [
+          2024,
+          89.2
+        ],
+        [
+          2025,
+          93.3
+        ]
+      ]
+    },
+    {
+      "name": "Households",
+      "color": "stone",
+      "data": [
+        [
+          2008,
+          60.4
+        ],
+        [
+          2009,
+          67.8
+        ],
+        [
+          2010,
+          64.6
+        ],
+        [
+          2011,
+          59.3
+        ],
+        [
+          2012,
+          60.2
+        ],
+        [
+          2013,
+          59.7
+        ],
+        [
+          2014,
+          56.5
+        ],
+        [
+          2015,
+          58.6
+        ],
+        [
+          2016,
+          59.3
+        ],
+        [
+          2017,
+          62.5
+        ],
+        [
+          2018,
+          59.9
+        ],
+        [
+          2019,
+          62.3
+        ],
+        [
+          2020,
+          69.8
+        ],
+        [
+          2021,
+          64.3
+        ],
+        [
+          2022,
+          62.2
+        ],
+        [
+          2023,
+          61.5
+        ],
+        [
+          2024,
+          58.5
+        ],
+        [
+          2025,
+          59.8
+        ]
+      ]
+    }
+  ],
+  "provenance": {
+    "source": "bis",
+    "sourceIndicator": "WS_TC — Credit to G/N/H from all sectors, % of GDP, all reporting countries",
+    "url": "https://data.bis.org/topics/TOTAL_CREDIT",
+    "license": "BIS terms — link-only (chart + cite + link, not re-hosted)",
+    "vintage": "2026-06-18",
+    "checksum": "e9a43e2acf4dcee2458322b6bcbebb2265a64d06cdcdf2c025c6cad9f7ae66e8",
+    "definition": "Total credit to governments, non-financial corporations, and households across all BIS-reporting economies, each as a share of the three-sector total, by year. Underlying values are credit as a percentage of GDP at market value, adjusted for breaks; the chart normalises them to borrower shares.",
+    "attribution": "Bank for International Settlements — Total Credit Statistics",
+    "primarySource": "BIS WS_TC, all reporting countries (5A)"
+  },
+  "recipe": [
+    {
+      "op": "composition_over_time",
+      "detail": "BIS credit-to-GDP for government / corporations / households, all reporting countries, Q4 each year, normalised to borrower shares"
+    }
+  ]
+}

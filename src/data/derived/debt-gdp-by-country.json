@@ -1,0 +1,109 @@
+{
+  "chartId": "debt-gdp-by-country",
+  "kind": "bars",
+  "title": "Public debt as a share of GDP, latest year",
+  "unit": "% of GDP · green = calm advanced borrower · red = in debt distress",
+  "yearSpan": "2026-06-17",
+  "xmax": 250,
+  "xTicks": [
+    0,
+    60,
+    120,
+    180,
+    240
+  ],
+  "bars": [
+    {
+      "label": "Japan",
+      "value": 236.7,
+      "color": "hope"
+    },
+    {
+      "label": "Singapore",
+      "value": 174.3,
+      "color": "hope"
+    },
+    {
+      "label": "Lebanon",
+      "value": 164.1,
+      "color": "despair"
+    },
+    {
+      "label": "Italy",
+      "value": 135.3,
+      "color": "hope"
+    },
+    {
+      "label": "United States",
+      "value": 120.8,
+      "color": "hope"
+    },
+    {
+      "label": "Zambia",
+      "value": 114.9,
+      "color": "despair"
+    },
+    {
+      "label": "France",
+      "value": 113.1,
+      "color": "hope"
+    },
+    {
+      "label": "United Kingdom",
+      "value": 101.2,
+      "color": "hope"
+    },
+    {
+      "label": "Sri Lanka",
+      "value": 99.4,
+      "color": "despair"
+    },
+    {
+      "label": "Egypt",
+      "value": 90.9,
+      "color": "despair"
+    },
+    {
+      "label": "Argentina",
+      "value": 85.3,
+      "color": "despair"
+    },
+    {
+      "label": "Ghana",
+      "value": 70.5,
+      "color": "despair"
+    },
+    {
+      "label": "Germany",
+      "value": 63.9,
+      "color": "stone"
+    },
+    {
+      "label": "Nigeria",
+      "value": 52.9,
+      "color": "stone"
+    },
+    {
+      "label": "Indonesia",
+      "value": 40.2,
+      "color": "stone"
+    }
+  ],
+  "provenance": {
+    "source": "unctad",
+    "sourceIndicator": "Public debt as a share of GDP",
+    "url": "https://unctad.org/publication/world-of-debt",
+    "license": "Link-only — UNCTAD publication terms (display + cite; not re-hosted)",
+    "vintage": "2026-06-17",
+    "checksum": "c087bb43604849dc2b367a893143343f875c2be0a3ada1765ef4d9ec7c6beab1",
+    "definition": "General government gross debt, % of GDP, latest available year; a curated spread of calm high-debt advanced economies against the distress tail. Link-only: charted and cited, not re-hosted.",
+    "attribution": "UN Trade and Development (UNCTAD) — A World of Debt 2025",
+    "primarySource": "UNCTAD; IMF WEO"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest-year public-debt %GDP, curated spread, sorted descending; colour = distress status not debt level"
+    }
+  ]
+}

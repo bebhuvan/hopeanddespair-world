@@ -2,6 +2,8 @@ import { fullChart } from './charts';
 import { scatterChart } from './scatter';
 import { barChart } from './bars';
 import { multiLine, countryBars } from './keystone-charts';
+import { stackedArea } from './area';
+import { heatGrid } from './heatgrid';
 
 /* Literal temperature hexes (mirrors tokens.css): charts must render identically on the
    page and in the standalone downloadable SVG, where CSS custom properties don't exist. */
@@ -39,6 +41,18 @@ export function buildMovements(mvs: any[]) {
     if (barArt?.kind === 'bars') {
       const r = barChart({ ...barArt, bars: barArt.bars.map((b: any) => ({ ...b, color: COL[b.color] ?? b.color })) });
       return { ...mv, ...r, real: true, kind: 'bars', prov: barArt.provenance ?? null, recipe: barArt.recipe ?? null, dataRef: undefined, regionalChart, countryChart };
+    }
+    // 100%-stacked composition over time (kind: 'area') — creditor / instrument mix re-weighting by
+    // decade. Bands carry colour tokens, resolved to literal hex here; rendered by the area kit.
+    if (barArt?.kind === 'area') {
+      const r = stackedArea({ ...barArt, bands: barArt.bands.map((b: any) => ({ ...b, color: COL[b.color] ?? b.color })) });
+      return { ...mv, ...r, real: true, kind: 'area', prov: barArt.provenance ?? null, recipe: barArt.recipe ?? null, dataRef: undefined, regionalChart, countryChart };
+    }
+    // Divergence heat grid (kind: 'heatgrid') — region × measure, each cell shaded by where that
+    // region stands today. Cells carry their own literal colours, so no token resolution here.
+    if (barArt?.kind === 'heatgrid') {
+      const r = heatGrid(barArt);
+      return { ...mv, ...r, real: true, kind: 'heatgrid', prov: barArt.provenance ?? null, recipe: barArt.recipe ?? null, dataRef: undefined, regionalChart, countryChart };
     }
     const win = (pts: any[]) => pts.filter((p: any) =>
       (mv.chart.x0 == null || p.t >= mv.chart.x0) && (mv.chart.x1 == null || p.t <= mv.chart.x1));

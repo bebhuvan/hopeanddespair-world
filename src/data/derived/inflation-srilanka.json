@@ -1,0 +1,53 @@
+{
+  "indicatorId": "inflation.cpi.lk",
+  "entity": "LK",
+  "entityName": "Sri Lanka",
+  "unit": "consumer-price inflation, % per year",
+  "points": [
+    {
+      "t": 2018,
+      "value": 2.1
+    },
+    {
+      "t": 2019,
+      "value": 3.5
+    },
+    {
+      "t": 2020,
+      "value": 6.2
+    },
+    {
+      "t": 2021,
+      "value": 7
+    },
+    {
+      "t": 2022,
+      "value": 49.7
+    },
+    {
+      "t": 2023,
+      "value": 16.5
+    },
+    {
+      "t": 2024,
+      "value": -0.4
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "FP.CPI.TOTL.ZG",
+    "url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-18",
+    "checksum": "9ba6221fdc75b435ba184680cd85c8e53e795c115ee601667d5e29a90ae5e7bc",
+    "definition": "Annual consumer-price inflation, Sri Lanka, 2018–2024; the cost-of-living shock around its sovereign default (2022).",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "IMF International Financial Statistics & World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "Sri Lanka CPI inflation, 2018–2024"
+    }
+  ]
+}

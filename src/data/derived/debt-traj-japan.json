@@ -1,0 +1,85 @@
+{
+  "indicatorId": "debt.public_debt_gdp.jp",
+  "entity": "JP",
+  "entityName": "Japan",
+  "unit": "% of GDP",
+  "points": [
+    {
+      "t": 2010,
+      "value": 205.9
+    },
+    {
+      "t": 2011,
+      "value": 219.2
+    },
+    {
+      "t": 2012,
+      "value": 226.1
+    },
+    {
+      "t": 2013,
+      "value": 229.5
+    },
+    {
+      "t": 2014,
+      "value": 233.3
+    },
+    {
+      "t": 2015,
+      "value": 228.3
+    },
+    {
+      "t": 2016,
+      "value": 232.4
+    },
+    {
+      "t": 2017,
+      "value": 231.3
+    },
+    {
+      "t": 2018,
+      "value": 232.4
+    },
+    {
+      "t": 2019,
+      "value": 236.4
+    },
+    {
+      "t": 2020,
+      "value": 258.4
+    },
+    {
+      "t": 2021,
+      "value": 253.7
+    },
+    {
+      "t": 2022,
+      "value": 248.3
+    },
+    {
+      "t": 2023,
+      "value": 240
+    },
+    {
+      "t": 2024,
+      "value": 236.7
+    }
+  ],
+  "provenance": {
+    "source": "unctad",
+    "sourceIndicator": "Public debt as a share of GDP",
+    "url": "https://unctad.org/publication/world-of-debt",
+    "license": "Link-only — UNCTAD publication terms (display + cite; not re-hosted)",
+    "vintage": "2026-06-17",
+    "checksum": "c087bb43604849dc2b367a893143343f875c2be0a3ada1765ef4d9ec7c6beab1",
+    "definition": "General government gross debt, % of GDP, Japan, 2010–2024.",
+    "attribution": "UN Trade and Development (UNCTAD) — A World of Debt 2025",
+    "primarySource": "UNCTAD; IMF WEO"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "Japan public-debt %GDP time series"
+    }
+  ]
+}

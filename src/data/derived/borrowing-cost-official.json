@@ -1,0 +1,101 @@
+{
+  "indicatorId": "debt.borrowing_cost_official.lmy",
+  "entity": "LMY",
+  "entityName": "Official lenders",
+  "unit": "average interest on new external debt commitments, %",
+  "points": [
+    {
+      "t": 2005,
+      "value": 3.5
+    },
+    {
+      "t": 2006,
+      "value": 3.7
+    },
+    {
+      "t": 2007,
+      "value": 3.5
+    },
+    {
+      "t": 2008,
+      "value": 2.7
+    },
+    {
+      "t": 2009,
+      "value": 1.9
+    },
+    {
+      "t": 2010,
+      "value": 1.9
+    },
+    {
+      "t": 2011,
+      "value": 2
+    },
+    {
+      "t": 2012,
+      "value": 1.9
+    },
+    {
+      "t": 2013,
+      "value": 1.5
+    },
+    {
+      "t": 2014,
+      "value": 2
+    },
+    {
+      "t": 2015,
+      "value": 2
+    },
+    {
+      "t": 2016,
+      "value": 2
+    },
+    {
+      "t": 2017,
+      "value": 2.1
+    },
+    {
+      "t": 2018,
+      "value": 2.6
+    },
+    {
+      "t": 2019,
+      "value": 2.3
+    },
+    {
+      "t": 2020,
+      "value": 1.5
+    },
+    {
+      "t": 2021,
+      "value": 1.5
+    },
+    {
+      "t": 2022,
+      "value": 2
+    },
+    {
+      "t": 2023,
+      "value": 3.7
+    }
+  ],
+  "provenance": {
+    "source": "worldbank-ids",
+    "sourceIndicator": "World Bank IDS DT.INR.OFFT — average interest on new external debt commitments",
+    "url": "https://databank.worldbank.org/source/international-debt-statistics",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-19",
+    "checksum": "922d77ffc27558f07136babe90edcec388f5b72b96e892e765de5838e3a132e0",
+    "definition": "Average interest rate on new external debt commitments from official lenders to low & middle income countries, % per year.",
+    "attribution": "World Bank International Debt Statistics",
+    "primarySource": "World Bank IDS (source 6) API, low & middle income, all creditors"
+  },
+  "recipe": [
+    {
+      "op": "fetch",
+      "detail": "WB IDS DT.INR.OFFT, country=LMY, counterpart=World"
+    }
+  ]
+}

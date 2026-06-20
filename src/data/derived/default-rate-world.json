@@ -1,0 +1,205 @@
+{
+  "indicatorId": "debt.default_rate.world",
+  "entity": "World",
+  "entityName": "World",
+  "unit": "% of world public debt in default",
+  "points": [
+    {
+      "t": 1980,
+      "value": 1.61
+    },
+    {
+      "t": 1981,
+      "value": 1.55
+    },
+    {
+      "t": 1982,
+      "value": 2.61
+    },
+    {
+      "t": 1983,
+      "value": 6.19
+    },
+    {
+      "t": 1984,
+      "value": 4.34
+    },
+    {
+      "t": 1985,
+      "value": 4.53
+    },
+    {
+      "t": 1986,
+      "value": 5.48
+    },
+    {
+      "t": 1987,
+      "value": 6.2
+    },
+    {
+      "t": 1988,
+      "value": 4.84
+    },
+    {
+      "t": 1989,
+      "value": 5.61
+    },
+    {
+      "t": 1990,
+      "value": 6.4
+    },
+    {
+      "t": 1991,
+      "value": 4.63
+    },
+    {
+      "t": 1992,
+      "value": 3.02
+    },
+    {
+      "t": 1993,
+      "value": 3.35
+    },
+    {
+      "t": 1994,
+      "value": 2.96
+    },
+    {
+      "t": 1995,
+      "value": 1.98
+    },
+    {
+      "t": 1996,
+      "value": 2.02
+    },
+    {
+      "t": 1997,
+      "value": 1.72
+    },
+    {
+      "t": 1998,
+      "value": 1.7
+    },
+    {
+      "t": 1999,
+      "value": 1.67
+    },
+    {
+      "t": 2000,
+      "value": 1.25
+    },
+    {
+      "t": 2001,
+      "value": 1.41
+    },
+    {
+      "t": 2002,
+      "value": 1.34
+    },
+    {
+      "t": 2003,
+      "value": 1.38
+    },
+    {
+      "t": 2004,
+      "value": 1.2
+    },
+    {
+      "t": 2005,
+      "value": 1.15
+    },
+    {
+      "t": 2006,
+      "value": 0.86
+    },
+    {
+      "t": 2007,
+      "value": 0.6
+    },
+    {
+      "t": 2008,
+      "value": 0.52
+    },
+    {
+      "t": 2009,
+      "value": 0.44
+    },
+    {
+      "t": 2010,
+      "value": 0.4
+    },
+    {
+      "t": 2011,
+      "value": 0.29
+    },
+    {
+      "t": 2012,
+      "value": 0.82
+    },
+    {
+      "t": 2013,
+      "value": 0.86
+    },
+    {
+      "t": 2014,
+      "value": 0.36
+    },
+    {
+      "t": 2015,
+      "value": 0.32
+    },
+    {
+      "t": 2016,
+      "value": 0.37
+    },
+    {
+      "t": 2017,
+      "value": 0.36
+    },
+    {
+      "t": 2018,
+      "value": 0.59
+    },
+    {
+      "t": 2019,
+      "value": 0.37
+    },
+    {
+      "t": 2020,
+      "value": 0.5
+    },
+    {
+      "t": 2021,
+      "value": 0.37
+    },
+    {
+      "t": 2022,
+      "value": 0.53
+    },
+    {
+      "t": 2023,
+      "value": 0.47
+    },
+    {
+      "t": 2024,
+      "value": 0.41
+    }
+  ],
+  "provenance": {
+    "source": "boc-boe",
+    "sourceIndicator": "DEBT_DEFRATE_WORLD_PUBLIC_DEBT",
+    "url": "https://www.bankofcanada.ca/2025/10/staff-analytical-note-2025-24/",
+    "license": "Bank of Canada — reuse with attribution",
+    "vintage": "2026-06-17",
+    "checksum": "3254296c3a4745c81b327c4aaf7eeb80c2c7be3ceb3089bf7c6494bd45d79644",
+    "definition": "Sovereign debt in default as a share of total world public debt, %.",
+    "attribution": "Bank of Canada & Bank of England — Sovereign Default Database (Beers, Ferretti et al.)",
+    "primarySource": "BoC–BoE Sovereign Default Database 2025"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "World rows, default rate vs world public debt"
+    }
+  ]
+}

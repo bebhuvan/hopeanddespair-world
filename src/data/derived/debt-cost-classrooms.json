@@ -1,0 +1,134 @@
+{
+  "chartId": "debt-cost-classrooms",
+  "kind": "bars",
+  "title": "What does debt cost, in classrooms?",
+  "unit": "public interest payments ÷ public education spending (×)",
+  "yearSpan": "2026-06-17",
+  "xmax": 7,
+  "xTicks": [
+    0,
+    1,
+    2,
+    4,
+    6
+  ],
+  "bars": [
+    {
+      "label": "Nigeria",
+      "value": 6.5,
+      "color": "despair"
+    },
+    {
+      "label": "Sri Lanka",
+      "value": 4.8,
+      "color": "despair"
+    },
+    {
+      "label": "Lebanon",
+      "value": 4.2,
+      "color": "despair"
+    },
+    {
+      "label": "Pakistan",
+      "value": 3,
+      "color": "despair"
+    },
+    {
+      "label": "Ghana",
+      "value": 2.3,
+      "color": "despair"
+    },
+    {
+      "label": "Indonesia",
+      "value": 2,
+      "color": "despair"
+    },
+    {
+      "label": "Zambia",
+      "value": 1.8,
+      "color": "despair"
+    },
+    {
+      "label": "Angola",
+      "value": 1.7,
+      "color": "despair"
+    },
+    {
+      "label": "Egypt",
+      "value": 1.5,
+      "color": "despair"
+    },
+    {
+      "label": "India",
+      "value": 1.2,
+      "color": "despair"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 1.1,
+      "color": "despair"
+    },
+    {
+      "label": "Mexico",
+      "value": 1,
+      "color": "despair"
+    },
+    {
+      "label": "Kenya",
+      "value": 1,
+      "color": "despair"
+    },
+    {
+      "label": "Brazil",
+      "value": 0.8,
+      "color": "hope"
+    },
+    {
+      "label": "South Africa",
+      "value": 0.7,
+      "color": "hope"
+    },
+    {
+      "label": "Tunisia",
+      "value": 0.5,
+      "color": "hope"
+    },
+    {
+      "label": "Türkiye",
+      "value": 0.5,
+      "color": "hope"
+    },
+    {
+      "label": "Argentina",
+      "value": 0.4,
+      "color": "hope"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 0.2,
+      "color": "hope"
+    },
+    {
+      "label": "Zimbabwe",
+      "value": 0,
+      "color": "hope"
+    }
+  ],
+  "provenance": {
+    "source": "unctad+worldbank",
+    "sourceIndicator": "UNCTAD WoD 2025 + World Bank IDS",
+    "url": "https://unctad.org/publication/world-of-debt",
+    "license": "Link-only — UNCTAD publication terms (display + cite); World Bank IDS is CC BY 4.0",
+    "vintage": "2026-06-17",
+    "checksum": "c087bb43604849dc2b367a893143343f875c2be0a3ada1765ef4d9ec7c6beab1",
+    "definition": "UNCTAD ratio of public-debt interest payments to public education expenditure, latest year. Above 1× a government spends more servicing creditors than on schools.",
+    "attribution": "UN Trade and Development (UNCTAD), A World of Debt 2025; World Bank International Debt Statistics",
+    "primarySource": "UNCTAD; World Bank"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "UNCTAD interest-to-education ratio, latest available year, sorted descending"
+    }
+  ]
+}

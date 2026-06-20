@@ -13,17 +13,21 @@ export interface BarSpec {
   xmax: number;
   xTicks: number[];
   xLabel?: string;
-  fmt?: (v: number) => string;   // value-label formatter (default: one decimal)
+  fmt?: (v: number) => string;   // value-label formatter (default: `decimals` places)
+  decimals?: number;             // value-label decimal places when no `fmt` given (default 1; use 0 for counts)
+  // Vertical reference rule(s) at an x-value (e.g. 100 = "same pace") — dashed, labelled at the top.
+  refLines?: { y: number; label: string }[];
 }
 
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const wm = (W: number, H: number) => `<text x="${W - 2}" y="${H - 3}" text-anchor="end" class="wm">hopeanddespair.world</text>`;
 
 export function barChart(o: BarSpec): Rendered {
-  const fmt = o.fmt ?? ((v: number) => v.toFixed(1));
+  const fmt = o.fmt ?? ((v: number) => v.toFixed(o.decimals ?? 1));
   const n = o.bars.length;
   const rowH = 30, barH = 17;
-  const W = 920, m = { l: 196, r: 64, t: 14, b: 42 };
+  // extra headroom when a ref line is present, so its label sits in the top margin (not over row 1)
+  const W = 920, m = { l: 196, r: 64, t: o.refLines?.length ? 28 : 14, b: 42 };
   const H = m.t + m.b + n * rowH;
   const x0 = m.l, x1 = W - m.r;
   const X = (v: number) => x0 + (Math.max(0, v) / o.xmax) * (x1 - x0);
@@ -47,6 +51,12 @@ export function barChart(o: BarSpec): Rendered {
     const vl = b.note ? `${fmt(b.value)}  ${b.note}` : fmt(b.value);
     g += `<text x="${(X(b.value) + 7).toFixed(1)}" y="${(cy + 4).toFixed(1)}" fill="#7C7A72" class="ser">${esc(vl)}</text>`;
   });
+  // vertical reference rule(s) — refLine.y is read on the x-axis (e.g. 100 = "same pace")
+  for (const r of o.refLines ?? []) {
+    const x = X(r.y);
+    g += `<line x1="${x.toFixed(1)}" y1="${m.t}" x2="${x.toFixed(1)}" y2="${H - m.b}" stroke="#2B2823" stroke-opacity="0.5" stroke-width="1" stroke-dasharray="4 3"/>`;
+    g += `<text x="${(x + 4).toFixed(1)}" y="${(m.t - 8).toFixed(1)}" fill="#7C7A72" class="ser">${esc(r.label)}</text>`;
+  }
   // axis title
   if (o.xLabel) g += `<text x="${((x0 + x1) / 2).toFixed(1)}" y="${H - 8}" text-anchor="middle" class="axt" fill="#7C7A72">${esc(o.xLabel)}</text>`;
   g += wm(W, H);
@@ -57,7 +67,7 @@ export function barChart(o: BarSpec): Rendered {
     scaled to a phone that gutter eats the plot and the names turn to 6px mush. Here the name sits
     ABOVE its bar at full width, the value rides the bar end, rows are taller, fonts baked legible. */
 export function barChartMobile(o: BarSpec): Rendered {
-  const fmt = o.fmt ?? ((v: number) => v.toFixed(1));
+  const fmt = o.fmt ?? ((v: number) => v.toFixed(o.decimals ?? 1));
   const n = o.bars.length;
   const W = 390, m = { l: 4, r: 10, t: 4, b: 26 };
   const rowH = 44, barH = 15;
@@ -85,6 +95,10 @@ export function barChartMobile(o: BarSpec): Rendered {
     const past = X(b.value) + 6, inside = past + vl.length * 7.4 > W - m.r;
     g += `<text x="${(inside ? X(b.value) - 6 : past).toFixed(1)}" y="${(barY + barH - 3).toFixed(1)}" text-anchor="${inside ? 'end' : 'start'}" fill="${inside ? '#FFFFFF' : '#7C7A72'}" class="ser" style="font-size:13px">${esc(vl)}</text>`;
   });
+  for (const r of o.refLines ?? []) {
+    const x = X(r.y);
+    g += `<line x1="${x.toFixed(1)}" y1="${m.t}" x2="${x.toFixed(1)}" y2="${H - m.b}" stroke="#2B2823" stroke-opacity="0.5" stroke-width="1" stroke-dasharray="4 3"/>`;
+  }
   if (o.xLabel) g += `<text x="${((x0 + x1) / 2).toFixed(1)}" y="${(H - 6).toFixed(1)}" text-anchor="middle" class="axt" fill="#7C7A72" style="font-size:12px">${esc(o.xLabel)}</text>`;
   // page-only twin — no watermark (the desktop render carries it for downloads)
   return { viewBox: `0 0 ${W} ${H}`, inner: g };

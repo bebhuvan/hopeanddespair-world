@@ -1,0 +1,104 @@
+{
+  "chartId": "imf-arrangements-by-country",
+  "kind": "bars",
+  "title": "Countries with the most IMF arrangements since 1992",
+  "unit": "number of IMF financing arrangements, 1992–2026",
+  "yearSpan": "1992–2026",
+  "xmax": 15,
+  "xTicks": [
+    0,
+    5,
+    10,
+    15
+  ],
+  "decimals": 0,
+  "bars": [
+    {
+      "label": "Ukraine",
+      "value": 13,
+      "color": "despair"
+    },
+    {
+      "label": "Armenia",
+      "value": 11,
+      "color": "despair"
+    },
+    {
+      "label": "Pakistan",
+      "value": 11,
+      "color": "despair"
+    },
+    {
+      "label": "Senegal",
+      "value": 10,
+      "color": "stone"
+    },
+    {
+      "label": "Burkina Faso",
+      "value": 9,
+      "color": "stone"
+    },
+    {
+      "label": "Georgia",
+      "value": 9,
+      "color": "despair"
+    },
+    {
+      "label": "Mozambique",
+      "value": 9,
+      "color": "stone"
+    },
+    {
+      "label": "Rwanda",
+      "value": 9,
+      "color": "stone"
+    },
+    {
+      "label": "Argentina",
+      "value": 8,
+      "color": "despair"
+    },
+    {
+      "label": "Chad",
+      "value": 8,
+      "color": "stone"
+    },
+    {
+      "label": "Honduras",
+      "value": 8,
+      "color": "stone"
+    },
+    {
+      "label": "Jordan",
+      "value": 8,
+      "color": "despair"
+    },
+    {
+      "label": "Kenya",
+      "value": 8,
+      "color": "stone"
+    },
+    {
+      "label": "Kyrgyz Republic",
+      "value": 8,
+      "color": "stone"
+    }
+  ],
+  "provenance": {
+    "source": "imf-mona",
+    "sourceIndicator": "MONA — count of Fund arrangements approved, by member",
+    "url": "https://www.imf.org/external/np/fin/mona/",
+    "license": "IMF — arrangement records (facts); displayed and cited, source files not re-hosted",
+    "vintage": "2026-06-18",
+    "checksum": "6d7da85da2d5d95eb4086fb3031018a7cf751e614e2107ef29338a75b7218a2b",
+    "definition": "Number of distinct IMF financing arrangements (Stand-By, Extended Fund Facility, ECF/PRGF and other facilities) a country has had approved, 1992 onward, from the IMF Monitoring of Fund Arrangements database (historical 1992–2003 + current 2000–present, deduplicated). MONA does not extend before ~1992, so lifetime totals (e.g. Argentina from 1958) are larger. Red = mostly crisis bailouts; grey = mostly concessional low-income programmes.",
+    "attribution": "International Monetary Fund — Monitoring of Fund Arrangements (MONA)",
+    "primarySource": "IMF MONA historical + current arrangement files"
+  },
+  "recipe": [
+    {
+      "op": "count_arrangements",
+      "detail": "merge MONA historical + current, dedupe by country + approval date, count arrangements per country, rank top 14; colour = dominant facility class"
+    }
+  ]
+}

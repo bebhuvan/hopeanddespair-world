@@ -1,0 +1,71 @@
+{
+  "chartId": "restructuring-haircuts",
+  "kind": "bars",
+  "title": "What creditors lose when a country restructures",
+  "unit": "present-value haircut, % · selected restructurings",
+  "yearSpan": "2000–2012",
+  "xmax": 100,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "decimals": 0,
+  "refLines": [
+    {
+      "y": 45,
+      "label": "200-year average"
+    }
+  ],
+  "bars": [
+    {
+      "label": "Iraq 2006",
+      "value": 89,
+      "color": "ochre"
+    },
+    {
+      "label": "Argentina 2005",
+      "value": 77,
+      "color": "ochre"
+    },
+    {
+      "label": "Ecuador 2009",
+      "value": 68,
+      "color": "ochre"
+    },
+    {
+      "label": "Greece 2012",
+      "value": 65,
+      "color": "ochre"
+    },
+    {
+      "label": "Russia 2000",
+      "value": 51,
+      "color": "ochre"
+    },
+    {
+      "label": "Uruguay 2003",
+      "value": 10,
+      "color": "stone"
+    }
+  ],
+  "provenance": {
+    "source": "trebesch",
+    "sourceIndicator": "Sovereign-debt restructuring present-value (SZ) haircuts, selected cases",
+    "url": "https://www.nber.org/papers/w32599",
+    "license": "Academic datasets — link-only (displayed and cited, not re-hosted)",
+    "vintage": "2026-06-19",
+    "checksum": "451f5eaa83f8e0ade4eb6eb28b681f395939f1a1bb47f73b0a13e1faa757cff3",
+    "definition": "Present-value creditor loss (1 − PV new / PV old) in selected sovereign-debt restructurings. Reference line is the ~45% average across 327 restructurings since 1815.",
+    "attribution": "Cruces & Trebesch (2013); Graf von Luckner, Meyer, Reinhart & Trebesch (2024); Zettelmeyer, Trebesch & Gulati (2013)",
+    "primarySource": "Published haircut tables (transcribed, not re-hosted)"
+  },
+  "recipe": [
+    {
+      "op": "transcribe",
+      "detail": "present-value haircuts from published Table 2 of each paper; ref line = GMRT 2024 200-year average"
+    }
+  ]
+}

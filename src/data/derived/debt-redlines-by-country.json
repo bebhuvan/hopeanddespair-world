@@ -1,0 +1,233 @@
+{
+  "chartId": "debt-redlines-by-country",
+  "kind": "bars",
+  "title": "How many red lines does a country cross?",
+  "unit": "count of six cited danger thresholds breached",
+  "yearSpan": "2026-06-17",
+  "xmax": 6,
+  "xTicks": [
+    0,
+    2,
+    4,
+    6
+  ],
+  "bars": [
+    {
+      "label": "Pakistan",
+      "value": 5,
+      "color": "despair",
+      "lines": [
+        "reserves < 3 months of imports",
+        "debt service > 25% of exports",
+        "public debt > 70% of GDP",
+        "interest > 20% of revenue",
+        "interest > education spending"
+      ]
+    },
+    {
+      "label": "Egypt",
+      "value": 4,
+      "color": "despair",
+      "lines": [
+        "debt service > 25% of exports",
+        "public debt > 70% of GDP",
+        "interest > 20% of revenue",
+        "interest > education spending"
+      ]
+    },
+    {
+      "label": "Ghana †",
+      "value": 4,
+      "color": "despair",
+      "lines": [
+        "reserves < 3 months of imports",
+        "public debt > 70% of GDP",
+        "interest > 20% of revenue",
+        "interest > education spending"
+      ]
+    },
+    {
+      "label": "Sri Lanka †",
+      "value": 4,
+      "color": "despair",
+      "lines": [
+        "reserves < 3 months of imports",
+        "public debt > 70% of GDP",
+        "interest > 20% of revenue",
+        "interest > education spending"
+      ]
+    },
+    {
+      "label": "Zambia †",
+      "value": 4,
+      "color": "despair",
+      "lines": [
+        "debt service > 25% of exports",
+        "public debt > 70% of GDP",
+        "interest > 20% of revenue",
+        "interest > education spending"
+      ]
+    },
+    {
+      "label": "Angola",
+      "value": 3,
+      "color": "ochre",
+      "lines": [
+        "debt service > 25% of exports",
+        "interest > 20% of revenue",
+        "interest > education spending"
+      ]
+    },
+    {
+      "label": "Argentina †",
+      "value": 3,
+      "color": "ochre",
+      "lines": [
+        "short-term debt > 100% of reserves (Guidotti-Greenspan)",
+        "debt service > 25% of exports",
+        "public debt > 70% of GDP"
+      ]
+    },
+    {
+      "label": "India",
+      "value": 3,
+      "color": "ochre",
+      "lines": [
+        "public debt > 70% of GDP",
+        "interest > 20% of revenue",
+        "interest > education spending"
+      ]
+    },
+    {
+      "label": "Kenya",
+      "value": 3,
+      "color": "ochre",
+      "lines": [
+        "debt service > 25% of exports",
+        "interest > 20% of revenue",
+        "interest > education spending"
+      ]
+    },
+    {
+      "label": "Tunisia",
+      "value": 3,
+      "color": "ochre",
+      "lines": [
+        "short-term debt > 100% of reserves (Guidotti-Greenspan)",
+        "debt service > 25% of exports",
+        "public debt > 70% of GDP"
+      ]
+    },
+    {
+      "label": "Zimbabwe †",
+      "value": 3,
+      "color": "ochre",
+      "lines": [
+        "short-term debt > 100% of reserves (Guidotti-Greenspan)",
+        "reserves < 3 months of imports",
+        "public debt > 70% of GDP"
+      ]
+    },
+    {
+      "label": "Bangladesh",
+      "value": 2,
+      "color": "ochre",
+      "lines": [
+        "interest > 20% of revenue",
+        "interest > education spending"
+      ]
+    },
+    {
+      "label": "Brazil",
+      "value": 2,
+      "color": "ochre",
+      "lines": [
+        "debt service > 25% of exports",
+        "public debt > 70% of GDP"
+      ]
+    },
+    {
+      "label": "Lebanon †",
+      "value": 2,
+      "color": "ochre",
+      "lines": [
+        "public debt > 70% of GDP",
+        "interest > education spending"
+      ]
+    },
+    {
+      "label": "Mexico",
+      "value": 2,
+      "color": "ochre",
+      "lines": [
+        "interest > 20% of revenue",
+        "interest > education spending"
+      ]
+    },
+    {
+      "label": "Ethiopia †",
+      "value": 1,
+      "color": "hope",
+      "lines": [
+        "reserves < 3 months of imports"
+      ]
+    },
+    {
+      "label": "Indonesia",
+      "value": 1,
+      "color": "hope",
+      "lines": [
+        "interest > education spending"
+      ]
+    },
+    {
+      "label": "Nigeria",
+      "value": 1,
+      "color": "hope",
+      "lines": [
+        "interest > education spending"
+      ]
+    },
+    {
+      "label": "South Africa",
+      "value": 1,
+      "color": "hope",
+      "lines": [
+        "public debt > 70% of GDP"
+      ]
+    },
+    {
+      "label": "Türkiye",
+      "value": 1,
+      "color": "hope",
+      "lines": [
+        "short-term debt > 100% of reserves (Guidotti-Greenspan)"
+      ]
+    },
+    {
+      "label": "Venezuela †",
+      "value": 1,
+      "color": "hope",
+      "lines": [
+        "public debt > 70% of GDP"
+      ]
+    }
+  ],
+  "provenance": {
+    "source": "unctad+worldbank",
+    "sourceIndicator": "UNCTAD WoD 2025 + World Bank IDS",
+    "url": "https://unctad.org/publication/world-of-debt",
+    "license": "Link-only — UNCTAD publication terms (display + cite); World Bank IDS is CC BY 4.0",
+    "vintage": "2026-06-17",
+    "checksum": "c087bb43604849dc2b367a893143343f875c2be0a3ada1765ef4d9ec7c6beab1",
+    "definition": "Number of six named solvency/liquidity thresholds each country breaches (Guidotti-Greenspan ST-debt/reserves; reserves<3mo; debt-service>25% exports; debt>70% GDP; interest>20% revenue; interest>education). A count of cited red lines, not a weighted index.",
+    "attribution": "UN Trade and Development (UNCTAD), A World of Debt 2025; World Bank International Debt Statistics",
+    "primarySource": "UNCTAD; World Bank"
+  },
+  "recipe": [
+    {
+      "op": "threshold_count",
+      "detail": "count of six named cited thresholds; † = in default/restructuring → interest-based gauges read artificially low (the gauge lies; never ranked healthy)"
+    }
+  ]
+}

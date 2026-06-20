@@ -1,0 +1,241 @@
+{
+  "indicatorId": "trade.openness.world",
+  "entity": "WLD",
+  "entityName": "World",
+  "unit": "% of GDP (exports + imports)",
+  "points": [
+    {
+      "t": 1970,
+      "value": 25.8
+    },
+    {
+      "t": 1971,
+      "value": 25.8
+    },
+    {
+      "t": 1972,
+      "value": 26
+    },
+    {
+      "t": 1973,
+      "value": 29
+    },
+    {
+      "t": 1974,
+      "value": 33.8
+    },
+    {
+      "t": 1975,
+      "value": 32
+    },
+    {
+      "t": 1976,
+      "value": 32.8
+    },
+    {
+      "t": 1977,
+      "value": 33.1
+    },
+    {
+      "t": 1978,
+      "value": 33.5
+    },
+    {
+      "t": 1979,
+      "value": 35.7
+    },
+    {
+      "t": 1980,
+      "value": 38.5
+    },
+    {
+      "t": 1981,
+      "value": 39
+    },
+    {
+      "t": 1982,
+      "value": 37
+    },
+    {
+      "t": 1983,
+      "value": 36.1
+    },
+    {
+      "t": 1984,
+      "value": 37.4
+    },
+    {
+      "t": 1985,
+      "value": 37
+    },
+    {
+      "t": 1986,
+      "value": 34.5
+    },
+    {
+      "t": 1987,
+      "value": 35.8
+    },
+    {
+      "t": 1988,
+      "value": 37.6
+    },
+    {
+      "t": 1989,
+      "value": 38
+    },
+    {
+      "t": 1990,
+      "value": 38
+    },
+    {
+      "t": 1991,
+      "value": 37.9
+    },
+    {
+      "t": 1992,
+      "value": 40.7
+    },
+    {
+      "t": 1993,
+      "value": 40.3
+    },
+    {
+      "t": 1994,
+      "value": 41.2
+    },
+    {
+      "t": 1995,
+      "value": 42.9
+    },
+    {
+      "t": 1996,
+      "value": 43
+    },
+    {
+      "t": 1997,
+      "value": 44.8
+    },
+    {
+      "t": 1998,
+      "value": 45.5
+    },
+    {
+      "t": 1999,
+      "value": 45.9
+    },
+    {
+      "t": 2000,
+      "value": 50.3
+    },
+    {
+      "t": 2001,
+      "value": 49.2
+    },
+    {
+      "t": 2002,
+      "value": 49.2
+    },
+    {
+      "t": 2003,
+      "value": 50.8
+    },
+    {
+      "t": 2004,
+      "value": 54.4
+    },
+    {
+      "t": 2005,
+      "value": 56.4
+    },
+    {
+      "t": 2006,
+      "value": 58.6
+    },
+    {
+      "t": 2007,
+      "value": 59
+    },
+    {
+      "t": 2008,
+      "value": 60.6
+    },
+    {
+      "t": 2009,
+      "value": 52.1
+    },
+    {
+      "t": 2010,
+      "value": 56.4
+    },
+    {
+      "t": 2011,
+      "value": 59.5
+    },
+    {
+      "t": 2012,
+      "value": 59.4
+    },
+    {
+      "t": 2013,
+      "value": 58.7
+    },
+    {
+      "t": 2014,
+      "value": 58.1
+    },
+    {
+      "t": 2015,
+      "value": 55.7
+    },
+    {
+      "t": 2016,
+      "value": 53.9
+    },
+    {
+      "t": 2017,
+      "value": 55.6
+    },
+    {
+      "t": 2018,
+      "value": 57.1
+    },
+    {
+      "t": 2019,
+      "value": 55.9
+    },
+    {
+      "t": 2020,
+      "value": 52
+    },
+    {
+      "t": 2021,
+      "value": 56.7
+    },
+    {
+      "t": 2022,
+      "value": 62.4
+    },
+    {
+      "t": 2023,
+      "value": 58.2
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "NE.TRD.GNFS.ZS",
+    "url": "https://data.worldbank.org/indicator/NE.TRD.GNFS.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-17",
+    "checksum": "3fe1078da2042700e098452fea6ba927c1fbfee3a89ad5a7c2469838505e246c",
+    "definition": "Trade (exports plus imports of goods and services) as a share of world GDP — the standard openness measure.",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "World Bank national accounts"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "World trade openness, 1970–2023"
+    }
+  ]
+}
