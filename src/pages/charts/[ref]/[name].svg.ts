@@ -5,8 +5,15 @@ import type { APIRoute } from 'astro';
 import { chartSvgs } from '../../../lib/chart-svgs';
 
 export async function getStaticPaths() {
-  return (await chartSvgs()).map((a) => ({ params: { ref: a.ref, name: a.name }, props: { svg: a.svg } }));
+  return (await chartSvgs()).map((a) => ({ params: { ref: a.ref, name: a.name }, props: { svg: a.svg, file: a.file } }));
 }
 
-export const GET: APIRoute = ({ props }) =>
-  new Response((props as { svg: string }).svg, { headers: { 'Content-Type': 'image/svg+xml; charset=utf-8' } });
+export const GET: APIRoute = ({ props }) => {
+  const { svg, file } = props as { svg: string; file: string };
+  // Content-Disposition forces a download with a human filename even on direct navigation or when a
+  // browser ignores the anchor's download attribute — so the link always saves a file, never previews.
+  return new Response(svg, { headers: {
+    'Content-Type': 'image/svg+xml; charset=utf-8',
+    'Content-Disposition': `attachment; filename="${file}.svg"`,
+  } });
+};

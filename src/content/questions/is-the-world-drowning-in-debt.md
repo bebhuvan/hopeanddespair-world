@@ -19,7 +19,7 @@ atlas:
 
 caveats:
   - "Debt figures are reported by governments and compiled by the IMF, World Bank, BIS and UNCTAD. Where a country is in crisis, its own numbers are often the least reliable — a gap this piece treats as part of the story, not a footnote."
-  - "Several gauges here mix sources with different licences. The composite charts are displayed and cited but not offered for download, per UNCTAD and BIS terms."
+  - "Several gauges here mix sources with different licences. Every chart can be downloaded as an image, but where a source's terms restrict redistribution the underlying data is not offered for download, per UNCTAD and BIS terms."
   - "A handful of countries stand in for a pattern. The cast is curated to show the spread, not to rank every nation."
   - "This piece is about public, sovereign debt, what governments owe. Household and corporate debt, which in the rich world dwarfs it, is shown once for scale and then set aside as a separate story for another question."
 

@@ -33,7 +33,9 @@ export function buildMovements(mvs: any[]) {
     if (mv.chart.dataRef === 'convergence-scatter') {
       const sc = derivedById['convergence-scatter'];
       const r = scatterChart(sc);
-      return { ...mv, ...r, real: true, prov: sc?.provenance ?? null, recipe: sc?.recipe ?? null, dataRef: undefined, regionalChart, countryChart };
+      return { ...mv, ...r, real: true, prov: sc?.provenance ?? null, recipe: sc?.recipe ?? null,
+        dataRef: undefined, imgRef: mv.chart.dataRef, linkOnly: /link-only|by-nc/i.test(sc?.provenance?.license ?? ''),
+        regionalChart, countryChart };
     }
     // Cross-section bar artifacts (kind: 'bars') — MPI, Gini: a ranking across categories, not a
     // line over time. Render with barChart; colours arrive as tokens, resolved to literal hex here.
@@ -43,19 +45,25 @@ export function buildMovements(mvs: any[]) {
         bars: barArt.bars.map((b: any) => ({ ...b, color: COL[b.color] ?? b.color,
           segments: b.segments?.map((s: any) => ({ ...s, color: COL[s.color] ?? s.color })) })),
         legend: barArt.legend?.map((l: any) => ({ ...l, color: COL[l.color] ?? l.color })) });
-      return { ...mv, ...r, real: true, kind: 'bars', prov: barArt.provenance ?? null, recipe: barArt.recipe ?? null, dataRef: undefined, regionalChart, countryChart };
+      return { ...mv, ...r, real: true, kind: 'bars', prov: barArt.provenance ?? null, recipe: barArt.recipe ?? null,
+        dataRef: undefined, imgRef: mv.chart.dataRef, linkOnly: /link-only|by-nc/i.test(barArt.provenance?.license ?? ''),
+        regionalChart, countryChart };
     }
     // 100%-stacked composition over time (kind: 'area') — creditor / instrument mix re-weighting by
     // decade. Bands carry colour tokens, resolved to literal hex here; rendered by the area kit.
     if (barArt?.kind === 'area') {
       const r = stackedArea({ ...barArt, bands: barArt.bands.map((b: any) => ({ ...b, color: COL[b.color] ?? b.color })) });
-      return { ...mv, ...r, real: true, kind: 'area', prov: barArt.provenance ?? null, recipe: barArt.recipe ?? null, dataRef: undefined, regionalChart, countryChart };
+      return { ...mv, ...r, real: true, kind: 'area', prov: barArt.provenance ?? null, recipe: barArt.recipe ?? null,
+        dataRef: undefined, imgRef: mv.chart.dataRef, linkOnly: /link-only|by-nc/i.test(barArt.provenance?.license ?? ''),
+        regionalChart, countryChart };
     }
     // Divergence heat grid (kind: 'heatgrid') — region × measure, each cell shaded by where that
     // region stands today. Cells carry their own literal colours, so no token resolution here.
     if (barArt?.kind === 'heatgrid') {
       const r = heatGrid(barArt);
-      return { ...mv, ...r, real: true, kind: 'heatgrid', prov: barArt.provenance ?? null, recipe: barArt.recipe ?? null, dataRef: undefined, regionalChart, countryChart };
+      return { ...mv, ...r, real: true, kind: 'heatgrid', prov: barArt.provenance ?? null, recipe: barArt.recipe ?? null,
+        dataRef: undefined, imgRef: mv.chart.dataRef, linkOnly: /link-only|by-nc/i.test(barArt.provenance?.license ?? ''),
+        regionalChart, countryChart };
     }
     const win = (pts: any[]) => pts.filter((p: any) =>
       (mv.chart.x0 == null || p.t >= mv.chart.x0) && (mv.chart.x1 == null || p.t <= mv.chart.x1));
@@ -79,8 +87,13 @@ export function buildMovements(mvs: any[]) {
       : mv.chart.series.map((s: any) => ({ ...s, color: COL[s.color] }));
     const r = fullChart({ ...mv.chart, series });
     const primary = ref ?? refs?.find(Boolean) ?? null;
+    // `dataRef` is the registry id whose data.csv/datapackage live under public/charts/<id>/ — it gates
+    // the *data* downloads. `imgRef` is the same id but only gates the *image* (png/svg) download, which
+    // is a transformative artifact we can always offer even when a source's terms withhold the data.
+    // For line charts the two coincide; composite charts (above) carry imgRef but null dataRef.
+    const dataRef = mv.chart.dataRef ?? mv.chart.dataRefs?.find((id: string) => derivedById[id]) ?? mv.chart.dataRefs?.[0];
     return { ...mv, ...r, real: !!primary, prov: primary?.provenance ?? null, recipe: primary?.recipe ?? null,
-      dataRef: mv.chart.dataRef ?? mv.chart.dataRefs?.find((id: string) => derivedById[id]) ?? mv.chart.dataRefs?.[0],
+      dataRef, imgRef: dataRef, linkOnly: /link-only|by-nc/i.test(primary?.provenance?.license ?? ''),
       regionalChart, countryChart };
   });
 }

@@ -233,6 +233,15 @@ Not all open data may be re-hosted. The registry's `license` drives a **gate**:
 Encode this once; the pipeline refuses to publish a downloadable CSV for a link-only source and
 emits a link instead. Attribution text is generated from the registry for every chart.
 
+**Image vs. data — two different gates.** A chart *image* (the baked PNG/SVG) is a transformative
+artifact we render ourselves, so it is **always offered for download**, even for link-only sources;
+the gate only withholds the *underlying data* (`data.csv`, `datapackage.json`, `lineage.json`). In
+code: `imgRef` (set on every real chart) drives the image download; `dataRef` + a `linkOnly` flag
+(`/link-only|by-nc/` on the source license) drives the data downloads. Composite charts built outside
+the registry (area/bars/heatgrid, via `scripts/analysis/*`) carry `imgRef` but no `dataRef`, so they
+get an image download and no data files. Saved images are named from the chart caption, not the route
+placeholder (`fig9.png`). See `src/lib/article-charts.ts`, `chart-svgs.ts`, `pages/questions/[slug].astro`.
+
 ---
 
 ## 10. The update / revision loop (the "living atlas")

@@ -23,6 +23,10 @@ const d = smartenDeep(q.data);
 // site default when an article has none (e.g. a draft); BaseLayout supplies /og.png for undefined.
 const ogImage = existsSync(`public/og/${q.id}.png`) ? `/og/${q.id}.png` : undefined;
 const tempCol = (t: string) => (t === 'cool' ? 'var(--hope)' : 'var(--despair)');
+// A human download filename from a chart's caption/label, so a saved image reads
+// "who-the-worlds-defaulted-debt-is-owed-to.png" — not the routing placeholder "fig9.png".
+const fileSlug = (s: string) => (s ?? '').replace(/<[^>]+>/g, '').split('·')[0].trim().toLowerCase()
+  .replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '').slice(0, 64) || 'chart';
 const published = d.status === 'published' && d.evidence;
 
 // Evidence — the static four-magnification row + signals (built at compile time; no client JS)
@@ -205,10 +209,10 @@ const figStart = 1;
                     <div class="sc"><Chart c={c} /></div>
                     {c.note && <p class="knote" set:html={c.note} />}
                     <div class="kfoot">
-                      {!c.linkOnly && (
-                        <span class="tools"><a href={`/charts/${c.dataRef}/chart.png`} download>↓ png</a><a href={`/charts/${c.dataRef}/chart.svg`} download>↓ svg</a><a href={`/charts/${c.dataRef}/data.csv`} download>↓ data, csv</a><a href={`/charts/${c.dataRef}/datapackage.json`}>↓ data package</a><a href={`/charts/${c.dataRef}/lineage.json`}>↗ lineage</a></span>
+                      {c.dataRef && (
+                        <span class="tools"><a href={`/charts/${c.dataRef}/chart.png`} download={`${fileSlug(c.label)}.png`}>↓ png</a><a href={`/charts/${c.dataRef}/chart.svg`} download={`${fileSlug(c.label)}.svg`}>↓ svg</a>{!c.linkOnly && (<><a href={`/charts/${c.dataRef}/data.csv`} download>↓ data, csv</a><a href={`/charts/${c.dataRef}/datapackage.json`}>↓ data package</a><a href={`/charts/${c.dataRef}/lineage.json`}>↗ lineage</a></>)}</span>
                       )}
-                      <span class="src">{srcLine(c.prov)}{c.linkOnly ? ' · link-only, not for download' : ''}</span>
+                      <span class="src">{srcLine(c.prov)}{c.linkOnly ? ' · data link-only' : ''}</span>
                     </div>
                   </figure>
                 ))}
@@ -218,8 +222,8 @@ const figStart = 1;
                     <div class="sc"><Chart c={dm.regionalChart} /></div>
                     {dm.regionalChart.note && <p class="knote" set:html={dm.regionalChart.note} />}
                     <div class="kfoot">
-                      {!dm.regionalChart.linkOnly && (
-                        <span class="tools"><a href={`/charts/${dm.regionalChart.dataRef}/regions.png`} download>↓ png</a><a href={`/charts/${dm.regionalChart.dataRef}/regions.svg`} download>↓ svg</a></span>
+                      {dm.regionalChart.dataRef && (
+                        <span class="tools"><a href={`/charts/${dm.regionalChart.dataRef}/regions.png`} download={`${fileSlug(dm.regional.label)}.png`}>↓ png</a><a href={`/charts/${dm.regionalChart.dataRef}/regions.svg`} download={`${fileSlug(dm.regional.label)}.svg`}>↓ svg</a></span>
                       )}
                       <span class="src">{srcLine(dm.regionalChart.prov)}</span>
                     </div>
@@ -337,10 +341,10 @@ const figStart = 1;
             <div class="cap"><span set:html={mv.captionLeft} /><span>{mv.captionRight}</span></div>
             <div class="sc"><Chart c={mv} /></div>
             <figcaption>
-              {mv.real && mv.dataRef && (
-                <div class="tools"><a href={`/charts/${mv.dataRef}/fig${figStart + i}.png`} download>↓ png</a><a href={`/charts/${mv.dataRef}/fig${figStart + i}.svg`} download>↓ svg</a><a href={`/charts/${mv.dataRef}/data.csv`} download>↓ data, csv</a><a href={`/charts/${mv.dataRef}/datapackage.json`}>↓ data package</a><a href={`/charts/${mv.dataRef}/lineage.json`}>↗ lineage</a></div>
+              {mv.real && mv.imgRef && (
+                <div class="tools"><a href={`/charts/${mv.imgRef}/fig${figStart + i}.png`} download={`${fileSlug(mv.captionLeft)}.png`}>↓ png</a><a href={`/charts/${mv.imgRef}/fig${figStart + i}.svg`} download={`${fileSlug(mv.captionLeft)}.svg`}>↓ svg</a>{mv.dataRef && !mv.linkOnly && (<><a href={`/charts/${mv.dataRef}/data.csv`} download>↓ data, csv</a><a href={`/charts/${mv.dataRef}/datapackage.json`}>↓ data package</a><a href={`/charts/${mv.dataRef}/lineage.json`}>↗ lineage</a></>)}</div>
               )}
-              <div class="src">{mv.source}</div>
+              <div class="src">{mv.source}{mv.linkOnly ? ' · data link-only' : ''}</div>
             </figcaption>
             {mv.real && mv.prov && (
               <details class="prov">
@@ -374,10 +378,10 @@ const figStart = 1;
                   <div class="sc"><Chart c={mv.regionalChart} /></div>
                   {mv.regionalChart.note && <p class="knote" set:html={mv.regionalChart.note} />}
                   <div class="kfoot">
-                    {!mv.regionalChart.linkOnly && (
-                      <span class="tools"><a href={`/charts/${mv.regionalChart.dataRef}/regions.png`} download>↓ png</a><a href={`/charts/${mv.regionalChart.dataRef}/regions.svg`} download>↓ svg</a></span>
+                    {mv.regionalChart.dataRef && (
+                      <span class="tools"><a href={`/charts/${mv.regionalChart.dataRef}/regions.png`} download={`${fileSlug(mv.regional.label)}.png`}>↓ png</a><a href={`/charts/${mv.regionalChart.dataRef}/regions.svg`} download={`${fileSlug(mv.regional.label)}.svg`}>↓ svg</a></span>
                     )}
-                    <span class="src">{srcLine(mv.regionalChart.prov)}{mv.regionalChart.linkOnly ? ' · link-only, not for download' : ''}</span>
+                    <span class="src">{srcLine(mv.regionalChart.prov)}</span>
                   </div>
                 </figure>
               )}
@@ -387,10 +391,10 @@ const figStart = 1;
                   <div class="sc"><Chart c={mv.countryChart} /></div>
                   {mv.countryChart.note && <p class="knote" set:html={mv.countryChart.note} />}
                   <div class="kfoot">
-                    {!mv.countryChart.linkOnly && (
-                      <span class="tools"><a href={`/charts/${mv.countryChart.dataRef}/bars.png`} download>↓ png</a><a href={`/charts/${mv.countryChart.dataRef}/bars.svg`} download>↓ svg</a></span>
+                    {mv.countryChart.dataRef && (
+                      <span class="tools"><a href={`/charts/${mv.countryChart.dataRef}/bars.png`} download={`${fileSlug(mv.countries.label)}.png`}>↓ png</a><a href={`/charts/${mv.countryChart.dataRef}/bars.svg`} download={`${fileSlug(mv.countries.label)}.svg`}>↓ svg</a></span>
                     )}
-                    <span class="src">{srcLine(mv.countryChart.prov)}{mv.countryChart.linkOnly ? ' · link-only, not for download' : ''}</span>
+                    <span class="src">{srcLine(mv.countryChart.prov)}</span>
                   </div>
                 </figure>
               )}
