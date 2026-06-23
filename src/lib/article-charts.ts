@@ -39,7 +39,10 @@ export function buildMovements(mvs: any[]) {
     // line over time. Render with barChart; colours arrive as tokens, resolved to literal hex here.
     const barArt = mv.chart.dataRef ? derivedById[mv.chart.dataRef] : null;
     if (barArt?.kind === 'bars') {
-      const r = barChart({ ...barArt, bars: barArt.bars.map((b: any) => ({ ...b, color: COL[b.color] ?? b.color })) });
+      const r = barChart({ ...barArt,
+        bars: barArt.bars.map((b: any) => ({ ...b, color: COL[b.color] ?? b.color,
+          segments: b.segments?.map((s: any) => ({ ...s, color: COL[s.color] ?? s.color })) })),
+        legend: barArt.legend?.map((l: any) => ({ ...l, color: COL[l.color] ?? l.color })) });
       return { ...mv, ...r, real: true, kind: 'bars', prov: barArt.provenance ?? null, recipe: barArt.recipe ?? null, dataRef: undefined, regionalChart, countryChart };
     }
     // 100%-stacked composition over time (kind: 'area') — creditor / instrument mix re-weighting by

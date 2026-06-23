@@ -1,8 +1,8 @@
 {
   "chartId": "debt-redlines-by-country",
   "kind": "bars",
-  "title": "How many red lines does a country cross?",
-  "unit": "count of six cited danger thresholds breached",
+  "title": "Which red lines does a country cross?",
+  "unit": "count of six cited danger thresholds · red = external/liquidity (default triggers) · amber = domestic/fiscal",
   "yearSpan": "2026-06-17",
   "xmax": 6,
   "xTicks": [
@@ -22,6 +22,25 @@
         "public debt > 70% of GDP",
         "interest > 20% of revenue",
         "interest > education spending"
+      ],
+      "external": [
+        "reserves < 3 months of imports",
+        "debt service > 25% of exports"
+      ],
+      "domestic": [
+        "public debt > 70% of GDP",
+        "interest > 20% of revenue",
+        "interest > education spending"
+      ],
+      "segments": [
+        {
+          "value": 2,
+          "color": "despair"
+        },
+        {
+          "value": 3,
+          "color": "ochre"
+        }
       ]
     },
     {
@@ -33,6 +52,24 @@
         "public debt > 70% of GDP",
         "interest > 20% of revenue",
         "interest > education spending"
+      ],
+      "external": [
+        "debt service > 25% of exports"
+      ],
+      "domestic": [
+        "public debt > 70% of GDP",
+        "interest > 20% of revenue",
+        "interest > education spending"
+      ],
+      "segments": [
+        {
+          "value": 1,
+          "color": "despair"
+        },
+        {
+          "value": 3,
+          "color": "ochre"
+        }
       ]
     },
     {
@@ -44,6 +81,24 @@
         "public debt > 70% of GDP",
         "interest > 20% of revenue",
         "interest > education spending"
+      ],
+      "external": [
+        "reserves < 3 months of imports"
+      ],
+      "domestic": [
+        "public debt > 70% of GDP",
+        "interest > 20% of revenue",
+        "interest > education spending"
+      ],
+      "segments": [
+        {
+          "value": 1,
+          "color": "despair"
+        },
+        {
+          "value": 3,
+          "color": "ochre"
+        }
       ]
     },
     {
@@ -55,6 +110,24 @@
         "public debt > 70% of GDP",
         "interest > 20% of revenue",
         "interest > education spending"
+      ],
+      "external": [
+        "reserves < 3 months of imports"
+      ],
+      "domestic": [
+        "public debt > 70% of GDP",
+        "interest > 20% of revenue",
+        "interest > education spending"
+      ],
+      "segments": [
+        {
+          "value": 1,
+          "color": "despair"
+        },
+        {
+          "value": 3,
+          "color": "ochre"
+        }
       ]
     },
     {
@@ -66,26 +139,159 @@
         "public debt > 70% of GDP",
         "interest > 20% of revenue",
         "interest > education spending"
-      ]
-    },
-    {
-      "label": "Angola",
-      "value": 3,
-      "color": "ochre",
-      "lines": [
-        "debt service > 25% of exports",
+      ],
+      "external": [
+        "debt service > 25% of exports"
+      ],
+      "domestic": [
+        "public debt > 70% of GDP",
         "interest > 20% of revenue",
         "interest > education spending"
+      ],
+      "segments": [
+        {
+          "value": 1,
+          "color": "despair"
+        },
+        {
+          "value": 3,
+          "color": "ochre"
+        }
       ]
     },
     {
       "label": "Argentina †",
       "value": 3,
-      "color": "ochre",
+      "color": "despair",
       "lines": [
         "short-term debt > 100% of reserves (Guidotti-Greenspan)",
         "debt service > 25% of exports",
         "public debt > 70% of GDP"
+      ],
+      "external": [
+        "short-term debt > 100% of reserves (Guidotti-Greenspan)",
+        "debt service > 25% of exports"
+      ],
+      "domestic": [
+        "public debt > 70% of GDP"
+      ],
+      "segments": [
+        {
+          "value": 2,
+          "color": "despair"
+        },
+        {
+          "value": 1,
+          "color": "ochre"
+        }
+      ]
+    },
+    {
+      "label": "Tunisia",
+      "value": 3,
+      "color": "despair",
+      "lines": [
+        "short-term debt > 100% of reserves (Guidotti-Greenspan)",
+        "debt service > 25% of exports",
+        "public debt > 70% of GDP"
+      ],
+      "external": [
+        "short-term debt > 100% of reserves (Guidotti-Greenspan)",
+        "debt service > 25% of exports"
+      ],
+      "domestic": [
+        "public debt > 70% of GDP"
+      ],
+      "segments": [
+        {
+          "value": 2,
+          "color": "despair"
+        },
+        {
+          "value": 1,
+          "color": "ochre"
+        }
+      ]
+    },
+    {
+      "label": "Zimbabwe †",
+      "value": 3,
+      "color": "despair",
+      "lines": [
+        "short-term debt > 100% of reserves (Guidotti-Greenspan)",
+        "reserves < 3 months of imports",
+        "public debt > 70% of GDP"
+      ],
+      "external": [
+        "short-term debt > 100% of reserves (Guidotti-Greenspan)",
+        "reserves < 3 months of imports"
+      ],
+      "domestic": [
+        "public debt > 70% of GDP"
+      ],
+      "segments": [
+        {
+          "value": 2,
+          "color": "despair"
+        },
+        {
+          "value": 1,
+          "color": "ochre"
+        }
+      ]
+    },
+    {
+      "label": "Angola",
+      "value": 3,
+      "color": "despair",
+      "lines": [
+        "debt service > 25% of exports",
+        "interest > 20% of revenue",
+        "interest > education spending"
+      ],
+      "external": [
+        "debt service > 25% of exports"
+      ],
+      "domestic": [
+        "interest > 20% of revenue",
+        "interest > education spending"
+      ],
+      "segments": [
+        {
+          "value": 1,
+          "color": "despair"
+        },
+        {
+          "value": 2,
+          "color": "ochre"
+        }
+      ]
+    },
+    {
+      "label": "Kenya",
+      "value": 3,
+      "color": "despair",
+      "lines": [
+        "debt service > 25% of exports",
+        "interest > 20% of revenue",
+        "interest > education spending"
+      ],
+      "external": [
+        "debt service > 25% of exports"
+      ],
+      "domestic": [
+        "interest > 20% of revenue",
+        "interest > education spending"
+      ],
+      "segments": [
+        {
+          "value": 1,
+          "color": "despair"
+        },
+        {
+          "value": 2,
+          "color": "ochre"
+        }
       ]
     },
     {
@@ -96,36 +302,47 @@
         "public debt > 70% of GDP",
         "interest > 20% of revenue",
         "interest > education spending"
-      ]
-    },
-    {
-      "label": "Kenya",
-      "value": 3,
-      "color": "ochre",
-      "lines": [
-        "debt service > 25% of exports",
+      ],
+      "external": [],
+      "domestic": [
+        "public debt > 70% of GDP",
         "interest > 20% of revenue",
         "interest > education spending"
+      ],
+      "segments": [
+        {
+          "value": 0,
+          "color": "despair"
+        },
+        {
+          "value": 3,
+          "color": "ochre"
+        }
       ]
     },
     {
-      "label": "Tunisia",
-      "value": 3,
-      "color": "ochre",
+      "label": "Brazil",
+      "value": 2,
+      "color": "despair",
       "lines": [
-        "short-term debt > 100% of reserves (Guidotti-Greenspan)",
         "debt service > 25% of exports",
         "public debt > 70% of GDP"
-      ]
-    },
-    {
-      "label": "Zimbabwe †",
-      "value": 3,
-      "color": "ochre",
-      "lines": [
-        "short-term debt > 100% of reserves (Guidotti-Greenspan)",
-        "reserves < 3 months of imports",
+      ],
+      "external": [
+        "debt service > 25% of exports"
+      ],
+      "domestic": [
         "public debt > 70% of GDP"
+      ],
+      "segments": [
+        {
+          "value": 1,
+          "color": "despair"
+        },
+        {
+          "value": 1,
+          "color": "ochre"
+        }
       ]
     },
     {
@@ -135,15 +352,21 @@
       "lines": [
         "interest > 20% of revenue",
         "interest > education spending"
-      ]
-    },
-    {
-      "label": "Brazil",
-      "value": 2,
-      "color": "ochre",
-      "lines": [
-        "debt service > 25% of exports",
-        "public debt > 70% of GDP"
+      ],
+      "external": [],
+      "domestic": [
+        "interest > 20% of revenue",
+        "interest > education spending"
+      ],
+      "segments": [
+        {
+          "value": 0,
+          "color": "despair"
+        },
+        {
+          "value": 2,
+          "color": "ochre"
+        }
       ]
     },
     {
@@ -153,6 +376,21 @@
       "lines": [
         "public debt > 70% of GDP",
         "interest > education spending"
+      ],
+      "external": [],
+      "domestic": [
+        "public debt > 70% of GDP",
+        "interest > education spending"
+      ],
+      "segments": [
+        {
+          "value": 0,
+          "color": "despair"
+        },
+        {
+          "value": 2,
+          "color": "ochre"
+        }
       ]
     },
     {
@@ -162,54 +400,153 @@
       "lines": [
         "interest > 20% of revenue",
         "interest > education spending"
+      ],
+      "external": [],
+      "domestic": [
+        "interest > 20% of revenue",
+        "interest > education spending"
+      ],
+      "segments": [
+        {
+          "value": 0,
+          "color": "despair"
+        },
+        {
+          "value": 2,
+          "color": "ochre"
+        }
       ]
     },
     {
       "label": "Ethiopia †",
       "value": 1,
-      "color": "hope",
+      "color": "despair",
       "lines": [
         "reserves < 3 months of imports"
-      ]
-    },
-    {
-      "label": "Indonesia",
-      "value": 1,
-      "color": "hope",
-      "lines": [
-        "interest > education spending"
-      ]
-    },
-    {
-      "label": "Nigeria",
-      "value": 1,
-      "color": "hope",
-      "lines": [
-        "interest > education spending"
-      ]
-    },
-    {
-      "label": "South Africa",
-      "value": 1,
-      "color": "hope",
-      "lines": [
-        "public debt > 70% of GDP"
+      ],
+      "external": [
+        "reserves < 3 months of imports"
+      ],
+      "domestic": [],
+      "segments": [
+        {
+          "value": 1,
+          "color": "despair"
+        },
+        {
+          "value": 0,
+          "color": "ochre"
+        }
       ]
     },
     {
       "label": "Türkiye",
       "value": 1,
-      "color": "hope",
+      "color": "despair",
       "lines": [
         "short-term debt > 100% of reserves (Guidotti-Greenspan)"
+      ],
+      "external": [
+        "short-term debt > 100% of reserves (Guidotti-Greenspan)"
+      ],
+      "domestic": [],
+      "segments": [
+        {
+          "value": 1,
+          "color": "despair"
+        },
+        {
+          "value": 0,
+          "color": "ochre"
+        }
+      ]
+    },
+    {
+      "label": "Indonesia",
+      "value": 1,
+      "color": "ochre",
+      "lines": [
+        "interest > education spending"
+      ],
+      "external": [],
+      "domestic": [
+        "interest > education spending"
+      ],
+      "segments": [
+        {
+          "value": 0,
+          "color": "despair"
+        },
+        {
+          "value": 1,
+          "color": "ochre"
+        }
+      ]
+    },
+    {
+      "label": "Nigeria",
+      "value": 1,
+      "color": "ochre",
+      "lines": [
+        "interest > education spending"
+      ],
+      "external": [],
+      "domestic": [
+        "interest > education spending"
+      ],
+      "segments": [
+        {
+          "value": 0,
+          "color": "despair"
+        },
+        {
+          "value": 1,
+          "color": "ochre"
+        }
+      ]
+    },
+    {
+      "label": "South Africa",
+      "value": 1,
+      "color": "ochre",
+      "lines": [
+        "public debt > 70% of GDP"
+      ],
+      "external": [],
+      "domestic": [
+        "public debt > 70% of GDP"
+      ],
+      "segments": [
+        {
+          "value": 0,
+          "color": "despair"
+        },
+        {
+          "value": 1,
+          "color": "ochre"
+        }
       ]
     },
     {
       "label": "Venezuela †",
       "value": 1,
-      "color": "hope",
+      "color": "ochre",
       "lines": [
         "public debt > 70% of GDP"
+      ],
+      "external": [],
+      "domestic": [
+        "public debt > 70% of GDP"
+      ],
+      "segments": [
+        {
+          "value": 0,
+          "color": "despair"
+        },
+        {
+          "value": 1,
+          "color": "ochre"
+        }
       ]
     }
   ],
@@ -220,14 +557,25 @@
     "license": "Link-only — UNCTAD publication terms (display + cite); World Bank IDS is CC BY 4.0",
     "vintage": "2026-06-17",
     "checksum": "c087bb43604849dc2b367a893143343f875c2be0a3ada1765ef4d9ec7c6beab1",
-    "definition": "Number of six named solvency/liquidity thresholds each country breaches (Guidotti-Greenspan ST-debt/reserves; reserves<3mo; debt-service>25% exports; debt>70% GDP; interest>20% revenue; interest>education). A count of cited red lines, not a weighted index.",
+    "definition": "Six named, cited danger thresholds, split into two families. EXTERNAL/liquidity (the default triggers): Guidotti-Greenspan ST-debt>reserves; reserves<3mo imports; debt-service>25% exports. DOMESTIC/fiscal (a heavy but, in own currency, survivable load): debt>70% GDP; interest>20% revenue; interest>education. A stacked count of each family, not a weighted index — a country deep in domestic lines but none external (India, Japan) is heavy, not in danger.",
     "attribution": "UN Trade and Development (UNCTAD), A World of Debt 2025; World Bank International Debt Statistics",
     "primarySource": "UNCTAD; World Bank"
   },
   "recipe": [
     {
-      "op": "threshold_count",
-      "detail": "count of six named cited thresholds; † = in default/restructuring → interest-based gauges read artificially low (the gauge lies; never ranked healthy)"
+      "op": "threshold_count_split",
+      "detail": "count of six named cited thresholds split into external/liquidity vs domestic/fiscal families, sorted by external count then total; † = in default/restructuring → interest-based gauges read artificially low (the gauge lies; never ranked healthy)"
+    }
+  ],
+  "decimals": 0,
+  "legend": [
+    {
+      "label": "External · liquidity",
+      "color": "despair"
+    },
+    {
+      "label": "Domestic · fiscal",
+      "color": "ochre"
     }
   ]
 }

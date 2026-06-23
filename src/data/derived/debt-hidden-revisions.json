@@ -1,0 +1,68 @@
+{
+  "chartId": "debt-hidden-revisions",
+  "kind": "bars",
+  "title": "Debt revealed after concealment, by country",
+  "unit": "% of GDP added to reported government debt when hidden borrowing surfaced",
+  "yearSpan": "2026-06-23",
+  "xmax": 30,
+  "xTicks": [
+    0,
+    10,
+    20,
+    30
+  ],
+  "bars": [
+    {
+      "label": "Senegal",
+      "value": 25.3,
+      "color": "despair"
+    },
+    {
+      "label": "Mozambique",
+      "value": 9,
+      "color": "despair"
+    },
+    {
+      "label": "Dominican Republic",
+      "value": 4.63,
+      "color": "ochre"
+    },
+    {
+      "label": "Pakistan",
+      "value": 1,
+      "color": "ochre"
+    },
+    {
+      "label": "Zambia",
+      "value": 0.9,
+      "color": "ochre"
+    },
+    {
+      "label": "Ecuador",
+      "value": 0.7,
+      "color": "ochre"
+    },
+    {
+      "label": "Türkiye",
+      "value": 0.13,
+      "color": "ochre"
+    }
+  ],
+  "provenance": {
+    "source": "worldbank-gep",
+    "sourceIndicator": "Global Economic Prospects, June 2026 — figure B3.1.1.A",
+    "url": "https://www.worldbank.org/en/publication/global-economic-prospects",
+    "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution",
+    "vintage": "2026-06-23",
+    "checksum": "2337cd1ee3db92260a62e6f2c8eb4d8be211ffc44196a2a84fa87ae0b9d8a60c",
+    "definition": "Debt-stock revision associated with a hidden-debt revelation, measured as a percent of GDP, for seven country episodes over the past two decades. Episode dates span 2005 (Dominican Republic, Türkiye) to 2025 (Senegal).",
+    "attribution": "World Bank — Global Economic Prospects, June 2026 (CC BY 3.0 IGO)",
+    "primarySource": "Manger et al. (2025); World Bank International Debt Statistics"
+  },
+  "recipe": [
+    {
+      "op": "transcribe_chart_pack",
+      "detail": "figure B3.1.1.A, GEP June 2026, debt-stock revisions by country, sorted descending"
+    }
+  ]
+}

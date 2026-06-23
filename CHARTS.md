@@ -163,6 +163,14 @@ downgraded to a simpler type for clarity, say so in the figure note.
   survive — see `creditor-history.ts`) rather than in the renderer, and **disclose it in the
   figure caption** ("· 5-year smoothed"). The endpoint must keep its real value: a plain shrinking
   window silently muted the China-overtakes-Paris-Club crossover, the chart's whole point.
+- **Segmented (stacked) bars** — `bars.ts` accepts an optional `segments: {value,color}[]` per bar
+  (drawn left → right, widths summing to `value`) plus a top `legend`, so a *count* can be split into
+  named families instead of flattened into one bar. First used 2026-06-23 by the debt article's red-lines
+  chart (`debt-vulnerability.ts`): the six danger thresholds split into **external/liquidity** (red, the
+  default triggers) vs **domestic/fiscal** (amber, survivable) — which is what makes India's all-domestic
+  3/6 read as heavy-but-safe rather than near-distress. Gotcha: the legend uses class `ser`, which the
+  desktop render balloons to 24px (`Chart.astro` `.chart-d:not(.twin)`), so legend text is pinned to 16px
+  inline and the layout reserves ~9.7 units/char — keep legend labels short (two words) or they overrun the row.
 - **Stat-in-prose** is HTML/CSS, not SVG — it has no downloadable artifact by design.
 
 ## Performance note

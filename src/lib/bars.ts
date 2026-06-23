@@ -7,7 +7,13 @@ import type { Rendered } from './charts';
    Colours are passed as literal hex (from article-charts' COL) so the page and the standalone SVG
    render identically. */
 
-export interface Bar { label: string; value: number; color: string; note?: string }
+export interface Bar {
+  label: string; value: number; color: string; note?: string;
+  // Optional stacked segments (left → right). When present the bar is drawn as coloured segments
+  // whose widths sum to `value`; used to split a count into named families (e.g. external vs
+  // domestic red lines) instead of one flat bar. `value` must equal the sum of segment values.
+  segments?: { value: number; color: string }[];
+}
 export interface BarSpec {
   bars: Bar[];              // pre-sorted; drawn top → bottom in the given order
   xmax: number;
@@ -17,6 +23,8 @@ export interface BarSpec {
   decimals?: number;             // value-label decimal places when no `fmt` given (default 1; use 0 for counts)
   // Vertical reference rule(s) at an x-value (e.g. 100 = "same pace") — dashed, labelled at the top.
   refLines?: { y: number; label: string }[];
+  // Optional legend for segmented bars — small swatches above the plot.
+  legend?: { label: string; color: string }[];
 }
 
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -26,8 +34,8 @@ export function barChart(o: BarSpec): Rendered {
   const fmt = o.fmt ?? ((v: number) => v.toFixed(o.decimals ?? 1));
   const n = o.bars.length;
   const rowH = 30, barH = 17;
-  // extra headroom when a ref line is present, so its label sits in the top margin (not over row 1)
-  const W = 920, m = { l: 196, r: 64, t: o.refLines?.length ? 28 : 14, b: 42 };
+  // extra headroom when a ref line or legend is present, so its label sits in the top margin
+  const W = 920, m = { l: 196, r: 64, t: (o.refLines?.length ? 28 : 14) + (o.legend?.length ? 20 : 0), b: 42 };
   const H = m.t + m.b + n * rowH;
   const x0 = m.l, x1 = W - m.r;
   const X = (v: number) => x0 + (Math.max(0, v) / o.xmax) * (x1 - x0);
@@ -39,11 +47,33 @@ export function barChart(o: BarSpec): Rendered {
     g += `<line class="${t === 0 ? 'grid0' : 'grid'}" x1="${x.toFixed(1)}" y1="${m.t}" x2="${x.toFixed(1)}" y2="${H - m.b}"/>`;
     g += `<text x="${x.toFixed(1)}" y="${H - m.b + 18}" text-anchor="middle">${t}</text>`;
   }
+  // legend (segmented bars) — swatches in the top margin, left-aligned to the plot. Pinned to a
+  // compact 16px (the .ser default balloons to 24px on the desktop render, which overflows the row).
+  if (o.legend?.length) {
+    let lx = x0; const ly = 14;
+    for (const lg of o.legend) {
+      g += `<rect x="${lx.toFixed(1)}" y="${(ly - 10).toFixed(1)}" width="12" height="12" rx="2" fill="${lg.color}" fill-opacity="0.86"/>`;
+      g += `<text x="${(lx + 17).toFixed(1)}" y="${ly}" fill="#7C7A72" class="ser" style="font-size:16px">${esc(lg.label)}</text>`;
+      lx += 17 + lg.label.length * 9.7 + 28;
+    }
+  }
   // bars + labels
   o.bars.forEach((b, i) => {
     const cy = m.t + i * rowH + rowH / 2;
-    const w = Math.max(1.5, X(b.value) - x0);
-    g += `<rect x="${x0}" y="${(cy - barH / 2).toFixed(1)}" width="${w.toFixed(1)}" height="${barH}" rx="1.5" fill="${b.color}" fill-opacity="0.86"/>`;
+    const by = (cy - barH / 2).toFixed(1);
+    if (b.segments?.length) {
+      // stacked segments, left → right, with a thin gap between them
+      let sx = x0;
+      for (const seg of b.segments) {
+        const sw = (Math.max(0, seg.value) / o.xmax) * (x1 - x0);
+        if (sw <= 0) continue;
+        g += `<rect x="${sx.toFixed(1)}" y="${by}" width="${Math.max(1.5, sw - 1.5).toFixed(1)}" height="${barH}" rx="1.5" fill="${seg.color}" fill-opacity="0.86"/>`;
+        sx += sw;
+      }
+    } else {
+      const w = Math.max(1.5, X(b.value) - x0);
+      g += `<rect x="${x0}" y="${by}" width="${w.toFixed(1)}" height="${barH}" rx="1.5" fill="${b.color}" fill-opacity="0.86"/>`;
+    }
     // category label (left gutter, right-aligned to the axis). Classed so mobile can size it to
     // the row height without overlap (it lives in a tight 30-unit band, unlike the axis ticks).
     g += `<text class="cat" x="${(x0 - 10).toFixed(1)}" y="${(cy + 4).toFixed(1)}" text-anchor="end" fill="#2B2823">${esc(b.label)}</text>`;
@@ -69,7 +99,7 @@ export function barChart(o: BarSpec): Rendered {
 export function barChartMobile(o: BarSpec): Rendered {
   const fmt = o.fmt ?? ((v: number) => v.toFixed(o.decimals ?? 1));
   const n = o.bars.length;
-  const W = 390, m = { l: 4, r: 10, t: 4, b: 26 };
+  const W = 390, m = { l: 4, r: 10, t: 4 + (o.legend?.length ? 20 : 0), b: 26 };
   const rowH = 44, barH = 15;
   const H = m.t + n * rowH + m.b;
   const x0 = m.l, x1 = W - m.r;
@@ -83,13 +113,32 @@ export function barChartMobile(o: BarSpec): Rendered {
     const tw = String(t).length * 8, tx = Math.min(Math.max(x, 3 + tw / 2), W - 3 - tw / 2);
     g += `<text x="${tx.toFixed(1)}" y="${(H - m.b + 17).toFixed(1)}" text-anchor="middle" style="font-size:12px">${t}</text>`;
   }
+  // legend (segmented bars) — compact swatches at the top
+  if (o.legend?.length) {
+    let lx = x0; const ly = 12;
+    for (const lg of o.legend) {
+      g += `<rect x="${lx.toFixed(1)}" y="${ly - 9}" width="10" height="10" rx="2" fill="${lg.color}" fill-opacity="0.86"/>`;
+      g += `<text x="${(lx + 14).toFixed(1)}" y="${ly}" fill="#7C7A72" style="font-size:12px">${esc(lg.label)}</text>`;
+      lx += 14 + lg.label.length * 7.5 + 16;
+    }
+  }
   o.bars.forEach((b, i) => {
     const top = m.t + i * rowH;
     const labelY = top + 15, barY = top + 23;
-    const bw = Math.max(1.5, X(b.value) - x0);
     // name above the bar, full width
     g += `<text x="${x0.toFixed(1)}" y="${labelY.toFixed(1)}" text-anchor="start" fill="#2B2823" style="font-size:14px">${esc(b.label)}</text>`;
-    g += `<rect x="${x0}" y="${barY.toFixed(1)}" width="${bw.toFixed(1)}" height="${barH}" rx="1.5" fill="${b.color}" fill-opacity="0.86"/>`;
+    if (b.segments?.length) {
+      let sx = x0;
+      for (const seg of b.segments) {
+        const sw = (Math.max(0, seg.value) / o.xmax) * (x1 - x0);
+        if (sw <= 0) continue;
+        g += `<rect x="${sx.toFixed(1)}" y="${barY.toFixed(1)}" width="${Math.max(1.5, sw - 1.5).toFixed(1)}" height="${barH}" rx="1.5" fill="${seg.color}" fill-opacity="0.86"/>`;
+        sx += sw;
+      }
+    } else {
+      const bw = Math.max(1.5, X(b.value) - x0);
+      g += `<rect x="${x0}" y="${barY.toFixed(1)}" width="${bw.toFixed(1)}" height="${barH}" rx="1.5" fill="${b.color}" fill-opacity="0.86"/>`;
+    }
     // value rides just past the bar end, or tucks inside when the bar runs to the edge
     const vl = b.note ? `${fmt(b.value)}  ${b.note}` : fmt(b.value);
     const past = X(b.value) + 6, inside = past + vl.length * 7.4 > W - m.r;
