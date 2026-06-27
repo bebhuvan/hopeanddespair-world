@@ -1,0 +1,50 @@
+{
+  "chartId": "jobs-challenge-estimates",
+  "kind": "bars",
+  "title": "One decade, three answers",
+  "unit": "jobs the decade to 2035 must absorb in EMDEs · millions · by counting method",
+  "yearSpan": "2025–35",
+  "xmax": 1300,
+  "xTicks": [
+    0,
+    300,
+    600,
+    900,
+    1200
+  ],
+  "decimals": 0,
+  "bars": [
+    {
+      "label": "Youth method",
+      "value": 1229.4,
+      "color": "uncertain"
+    },
+    {
+      "label": "Working-age method",
+      "value": 447.1,
+      "color": "uncertain"
+    },
+    {
+      "label": "Ratio method",
+      "value": 269.2,
+      "color": "uncertain"
+    }
+  ],
+  "provenance": {
+    "source": "worldbank-jobs",
+    "sourceIndicator": "The Global Jobs Challenge (2026) — figure 2.7.A",
+    "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+    "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution",
+    "vintage": "2026-06-27",
+    "checksum": "4cd4b0f1f10fd8ea0b4332b1ec570fcfc0b8248768ce0635b7b02e553f97705c",
+    "definition": "Size of the EMDE jobs challenge over 2025–35 under three methods. Youth method: all new entrants to the working-age population. Working-age method: the net change in the working-age population. Ratio method: that net change scaled by each country’s 2010–19 employment ratio. The same decade looks four times larger or smaller depending on the lens.",
+    "attribution": "World Bank — The Global Jobs Challenge (2026), CC BY 3.0 IGO",
+    "primarySource": "ILOSTAT; UN World Population Prospects 2024; WEO"
+  },
+  "recipe": [
+    {
+      "op": "transcribe_chart_pack",
+      "detail": "figure 2.7.A, jobs-challenge estimates, thousands→millions"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "education-primary_enrollment-ssf",
+  "title": "School enrollment, primary (% gross)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/SE.PRM.ENRR"
+    }
+  ],
+  "created": "2026-06-21",
+  "resources": [
+    {
+      "name": "education-primary_enrollment-ssf",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "education_primary_enrollment_ssf",
+            "type": "number",
+            "unit": "% gross"
+          }
+        ]
+      }
+    }
+  ]
+}

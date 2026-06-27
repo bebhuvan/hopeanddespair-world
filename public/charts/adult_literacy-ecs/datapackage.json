@@ -1,0 +1,38 @@
+{
+  "name": "education-adult_literacy-ecs",
+  "title": "Literacy rate, adult total (% of people ages 15 and above)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/SE.ADT.LITR.ZS"
+    }
+  ],
+  "created": "2026-06-21",
+  "resources": [
+    {
+      "name": "education-adult_literacy-ecs",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "education_adult_literacy_ecs",
+            "type": "number",
+            "unit": "%"
+          }
+        ]
+      }
+    }
+  ]
+}

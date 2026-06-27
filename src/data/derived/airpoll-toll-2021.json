@@ -1,0 +1,49 @@
+{
+  "chartId": "airpoll-toll-2021",
+  "kind": "bars",
+  "title": "Air-pollution deaths by source, World",
+  "unit": "million deaths per year",
+  "yearSpan": "2021",
+  "bars": [
+    {
+      "label": "Joint total",
+      "value": 6.57,
+      "color": "despair"
+    },
+    {
+      "label": "Ambient (outdoor)",
+      "value": 4.32,
+      "color": "despair"
+    },
+    {
+      "label": "Household (cooking)",
+      "value": 2.9,
+      "color": "ochre"
+    }
+  ],
+  "xmax": 7,
+  "xTicks": [
+    0,
+    2,
+    4,
+    6
+  ],
+  "provenance": {
+    "source": "who",
+    "sourceIndicator": "AIR_35/AIR_41/AIR_11",
+    "url": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/AIR_35/AIR_41/AIR_11",
+    "license": "CC BY-NC-SA 3.0 IGO",
+    "vintage": "2021",
+    "checksum": "5d1c180e9532240a61485a486a9dccc69c9d85ffe395064267c6752e9a7cd89d",
+    "definition": "Deaths attributable to ambient (outdoor) air pollution, household (indoor) air pollution, and their joint effect, World, 2021. Joint total is below the sum because the two exposures overlap.",
+    "attribution": "WHO Global Health Observatory",
+    "primarySource": "WHO Global Health Estimates 2021",
+    "notes": "CC BY-NC-SA 3.0 IGO — link-only; charted but not re-hosted."
+  },
+  "recipe": [
+    {
+      "op": "who_gho_total",
+      "detail": "WHO GHO all-cause, both-sex, GLOBAL totals for 2021 — AIR_35 (joint), AIR_41 (ambient), AIR_11 (household), in millions."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "youth-neet-world",
+  "title": "Youth not in employment, education or training (NEET), World",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "ILOSTAT — International Labour Organization",
+      "path": "https://sdmx.ilo.org/rest/data/DF_EIP_2EET_SEX_RT/all?startPeriod=1990"
+    }
+  ],
+  "created": "2026-06-21",
+  "resources": [
+    {
+      "name": "youth-neet-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "youth_neet_world",
+            "type": "number",
+            "unit": "% of youth population"
+          }
+        ]
+      }
+    }
+  ]
+}

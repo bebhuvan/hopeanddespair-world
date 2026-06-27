@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "education.tertiary_enrollment.lcn",
+    "unit": "% gross",
+    "points": 26
+  },
+  "wasDerivedFrom": [
+    "LCN"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity LCN"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SE.TER.ENRR",
+      "url": "https://data.worldbank.org/indicator/SE.TER.ENRR",
+      "vintage": "2026-06-21",
+      "checksum": "ed7899c4a5fb246f2ffad19baa01eeff36c54f7d601405697708c00a4e34a5ac",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UNESCO Institute for Statistics, via World Bank"
+}

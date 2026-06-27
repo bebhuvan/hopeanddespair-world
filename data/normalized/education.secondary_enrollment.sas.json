@@ -1,0 +1,125 @@
+[
+  {
+    "indicatorId": "education.secondary_enrollment.sas",
+    "entity": "SAS",
+    "entityName": "South Asia",
+    "unit": "% gross",
+    "points": [
+      {
+        "t": 1999,
+        "value": 45.0820808410645
+      },
+      {
+        "t": 2000,
+        "value": 47.5083808898926
+      },
+      {
+        "t": 2001,
+        "value": 47.4841194152832
+      },
+      {
+        "t": 2002,
+        "value": 49.3626518249512
+      },
+      {
+        "t": 2003,
+        "value": 51.5610618591309
+      },
+      {
+        "t": 2004,
+        "value": 52.7400093078613
+      },
+      {
+        "t": 2005,
+        "value": 54.9015197753906
+      },
+      {
+        "t": 2006,
+        "value": 55.623348236084
+      },
+      {
+        "t": 2007,
+        "value": 57.7001304626465
+      },
+      {
+        "t": 2008,
+        "value": 60.2229614257812
+      },
+      {
+        "t": 2009,
+        "value": 59.9533882141113
+      },
+      {
+        "t": 2010,
+        "value": 63.2981491088867
+      },
+      {
+        "t": 2011,
+        "value": 65.2862091064453
+      },
+      {
+        "t": 2012,
+        "value": 67.8703536987305
+      },
+      {
+        "t": 2013,
+        "value": 68.1029891967773
+      },
+      {
+        "t": 2014,
+        "value": 72.9314117431641
+      },
+      {
+        "t": 2015,
+        "value": 72.9351806640625
+      },
+      {
+        "t": 2016,
+        "value": 74.687141418457
+      },
+      {
+        "t": 2017,
+        "value": 73.4670028686523
+      },
+      {
+        "t": 2018,
+        "value": 75.0400314331055
+      },
+      {
+        "t": 2019,
+        "value": 74.9521636962891
+      },
+      {
+        "t": 2020,
+        "value": 77.0081481933594
+      },
+      {
+        "t": 2021,
+        "value": 79.3212738037109
+      },
+      {
+        "t": 2022,
+        "value": 79.9404983520508
+      },
+      {
+        "t": 2023,
+        "value": 77.9340286254883
+      },
+      {
+        "t": 2024,
+        "value": 76.874153137207
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SE.SEC.ENRR",
+      "url": "https://data.worldbank.org/indicator/SE.SEC.ENRR",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-21",
+      "checksum": "81253c0932c1f996d43e39b9c117fe92c102dcfe7c179e010242042363ad9aa8",
+      "definition": "School enrollment, secondary (% gross)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "UNESCO Institute for Statistics, via World Bank"
+    }
+  }
+]

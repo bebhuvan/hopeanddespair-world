@@ -1,0 +1,51 @@
+{
+  "chartId": "airpoll-data-deserts",
+  "kind": "bars",
+  "gate": "link-only",
+  "title": "The air no one measures",
+  "unit": "percent",
+  "yearSpan": "2024",
+  "bars": [
+    {
+      "label": "Countries with no government PM2.5 monitoring",
+      "value": 36,
+      "color": "despair"
+    },
+    {
+      "label": "Countries that monitor but don’t share fully",
+      "value": 28,
+      "color": "ochre"
+    },
+    {
+      "label": "Countries fully transparent with their data",
+      "value": 27,
+      "color": "hope"
+    }
+  ],
+  "xmax": 100,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "provenance": {
+    "source": "openaq",
+    "sourceIndicator": "OpenAQ 2024 Landscape",
+    "url": "https://openaq.org/reports/the-air-quality-data-landscape/",
+    "license": "report (cite)",
+    "vintage": "2024",
+    "checksum": "bae4789add35fcd41ab905c88ae6ecffafa4a989536df71ef7a8a67a0a954683",
+    "definition": "Government PM2.5 data availability worldwide. 36% of countries run no public monitoring (≈1 billion people across 71 countries unmonitored, 9 of 10 in low/lower-middle-income countries); of those that do, only 27% are fully transparent and only 54 share maximally-open station-level data.",
+    "attribution": "OpenAQ — The Air Quality Data Landscape (2024)",
+    "primarySource": "OpenAQ 2024 report; figures cited, not re-hosted."
+  },
+  "recipe": [
+    {
+      "op": "monitoring_landscape",
+      "detail": "Three states of national air-quality data — none, hidden, open — from the OpenAQ 2024 landscape."
+    }
+  ],
+  "illustrative": false
+}

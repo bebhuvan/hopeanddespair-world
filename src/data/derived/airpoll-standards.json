@@ -1,0 +1,56 @@
+{
+  "chartId": "airpoll-standards",
+  "kind": "bars",
+  "gate": "link-only",
+  "title": "The yardstick is a choice: legal PM2.5 limits as a multiple of the WHO guideline",
+  "unit": "× the 2021 WHO guideline (5 µg/m³)",
+  "yearSpan": "2024",
+  "bars": [
+    {
+      "label": "India (legal annual limit, 40 µg/m³)",
+      "value": 8,
+      "color": "despair"
+    },
+    {
+      "label": "United States (9 µg/m³, tightened 2024)",
+      "value": 1.8,
+      "color": "ochre"
+    },
+    {
+      "label": "European Union (from 2030, 10 µg/m³)",
+      "value": 2,
+      "color": "ochre"
+    },
+    {
+      "label": "WHO 2021 guideline (5 µg/m³)",
+      "value": 1,
+      "color": "hope"
+    }
+  ],
+  "xmax": 8,
+  "xTicks": [
+    0,
+    2,
+    4,
+    6,
+    8
+  ],
+  "provenance": {
+    "source": "who-standards",
+    "sourceIndicator": "WHO AQG 2021 + national standards",
+    "url": "https://www.who.int/publications/i/item/9789240034228",
+    "license": "cite",
+    "vintage": "2024",
+    "checksum": "ca297ef2a8a40486e307ab1a2e69af30b514cea7bb1f1ba2af73072903689abc",
+    "definition": "National legal PM2.5 limits expressed as a multiple of the WHO 2021 guideline of 5 µg/m³. When the WHO halved its guideline in 2021, it pushed ~99% of humanity into non-compliance overnight with no change in the air. India’s legal limit is 8× the guideline; the US tightened its annual standard to 9 µg/m³ in 2024; 158 countries have no PM2.5 standard at all, and of the 94 that do, 37 breach their own.",
+    "attribution": "WHO Global Air Quality Guidelines 2021; national air-quality standards",
+    "primarySource": "WHO + national legislation; cited, not re-hosted."
+  },
+  "recipe": [
+    {
+      "op": "standard_multiple",
+      "detail": "Legal limits as a multiple of the WHO guideline — the yardstick as a policy choice."
+    }
+  ],
+  "illustrative": false
+}

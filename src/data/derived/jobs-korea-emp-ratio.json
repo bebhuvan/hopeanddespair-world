@@ -1,0 +1,129 @@
+{
+  "indicatorId": "jobs.emp_ratio.korea",
+  "entity": "KOR",
+  "entityName": "Korea",
+  "unit": "employment-to-population ratio · %",
+  "points": [
+    {
+      "t": 1979,
+      "value": 36.4
+    },
+    {
+      "t": 1980,
+      "value": 36.1
+    },
+    {
+      "t": 1981,
+      "value": 36.4
+    },
+    {
+      "t": 1982,
+      "value": 36.8
+    },
+    {
+      "t": 1983,
+      "value": 36.5
+    },
+    {
+      "t": 1984,
+      "value": 35.9
+    },
+    {
+      "t": 1985,
+      "value": 36.9
+    },
+    {
+      "t": 1986,
+      "value": 37.8
+    },
+    {
+      "t": 1987,
+      "value": 39.5
+    },
+    {
+      "t": 1988,
+      "value": 40.4
+    },
+    {
+      "t": 1989,
+      "value": 41.6
+    },
+    {
+      "t": 1990,
+      "value": 42.4
+    },
+    {
+      "t": 1991,
+      "value": 43.3
+    },
+    {
+      "t": 1992,
+      "value": 43.7
+    },
+    {
+      "t": 1993,
+      "value": 43.8
+    },
+    {
+      "t": 1994,
+      "value": 44.7
+    },
+    {
+      "t": 1995,
+      "value": 45.5
+    },
+    {
+      "t": 1996,
+      "value": 46.1
+    },
+    {
+      "t": 1997,
+      "value": 46.4
+    },
+    {
+      "t": 1998,
+      "value": 43.3
+    },
+    {
+      "t": 1999,
+      "value": 43.8
+    },
+    {
+      "t": 2000,
+      "value": 45.3
+    },
+    {
+      "t": 2001,
+      "value": 45.8
+    },
+    {
+      "t": 2002,
+      "value": 46.8
+    },
+    {
+      "t": 2003,
+      "value": 46.5
+    },
+    {
+      "t": 2004,
+      "value": 47.2
+    }
+  ],
+  "provenance": {
+    "source": "worldbank-jobs",
+    "sourceIndicator": "The Global Jobs Challenge (2026) — figure A.4.A",
+    "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+    "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution",
+    "vintage": "2026-06-27",
+    "checksum": "b7f817d65d72597ca84eb9a2cfed29de1235895e6772bdaecf684ca24facd051",
+    "definition": "Korea's employment-to-population ratio, 1979–2004 — rising through its youth-surge growth episode.",
+    "attribution": "World Bank — The Global Jobs Challenge (2026), CC BY 3.0 IGO",
+    "primarySource": "ILOSTAT; Feenstra, Inklaar & Timmer (2015)"
+  },
+  "recipe": [
+    {
+      "op": "transcribe_chart_pack",
+      "detail": "figure A.4.A, Korea employment ratio"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "indicatorId": "air_pollution.clean_cooking.ecs",
+  "entity": "ECS",
+  "entityName": "Europe & Central Asia",
+  "unit": "% of population",
+  "points": [
+    {
+      "t": 2000,
+      "value": 95.3960037460603
+    },
+    {
+      "t": 2001,
+      "value": 95.6321494038445
+    },
+    {
+      "t": 2002,
+      "value": 95.8650521577571
+    },
+    {
+      "t": 2003,
+      "value": 96.0673914300689
+    },
+    {
+      "t": 2004,
+      "value": 96.270216723274
+    },
+    {
+      "t": 2005,
+      "value": 96.4660957363461
+    },
+    {
+      "t": 2006,
+      "value": 96.6279800431251
+    },
+    {
+      "t": 2007,
+      "value": 96.7856590143101
+    },
+    {
+      "t": 2008,
+      "value": 96.9289084780956
+    },
+    {
+      "t": 2009,
+      "value": 97.0332796821624
+    },
+    {
+      "t": 2010,
+      "value": 97.1621804311578
+    },
+    {
+      "t": 2011,
+      "value": 97.2571693494436
+    },
+    {
+      "t": 2012,
+      "value": 97.3335924753934
+    },
+    {
+      "t": 2013,
+      "value": 97.4117318285191
+    },
+    {
+      "t": 2014,
+      "value": 97.4794369712531
+    },
+    {
+      "t": 2015,
+      "value": 97.5305786695354
+    },
+    {
+      "t": 2016,
+      "value": 97.5471890079039
+    },
+    {
+      "t": 2017,
+      "value": 97.5986226882698
+    },
+    {
+      "t": 2018,
+      "value": 97.608840942813
+    },
+    {
+      "t": 2019,
+      "value": 97.6207110840802
+    },
+    {
+      "t": 2020,
+      "value": 97.6307515638654
+    },
+    {
+      "t": 2021,
+      "value": 97.6097133151123
+    },
+    {
+      "t": 2022,
+      "value": 97.6024998094723
+    },
+    {
+      "t": 2023,
+      "value": 97.5905438280326
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "EG.CFT.ACCS.ZS",
+    "url": "https://data.worldbank.org/indicator/EG.CFT.ACCS.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-27",
+    "checksum": "913e2177ddb6ca9bdbd8d4f6bcfb8ed09ebc71b0767e98f1b3371d5a7b5cde58",
+    "definition": "Access to clean fuels and technologies for cooking (% of population)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO Household Energy Database — via World Bank WDI"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity ECS"
+    }
+  ],
+  "derivedFrom": [
+    "ECS"
+  ]
+}

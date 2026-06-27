@@ -29,6 +29,8 @@
 11. Are we happier?
 12. Is the living world dying? (biodiversity & nature)
 13. Is inflation under control — and whose currency decides? — **planned** (dollar spine; new question, 2026-06-16)
+14. Is the air getting cleaner or deadlier? — **planned** (air pollution; new question, 2026-06-26)
+15. Is AI making the world better or worse? — **planned** (two-exponentials spine; new question, 2026-06-27)
 
 Each question below lists its **sub-questions** (every chart is a sub-question) and the data
 that answers them. The regional cut is not an afterthought: every question must answer both
@@ -110,6 +112,25 @@ roster is already on disk; the gap was the *distribution and multidimensional* s
 > **$3.00/day** and ~125M more people fall under it (713M→838M for 2022) with nobody getting poorer.
 > Our snapshots are a vintage behind — re-ingest is a revision event *and* a chart (the line moved,
 > not the people). See the plan doc §5.
+
+---
+
+## Q16 · The global jobs challenge — *can the world create enough jobs?* — BUILT (2026-06-27)
+
+**Full build plan: [[ARTICLE-jobs-challenge-plan.md]]** (kicker 16, 15 movements). The companion to
+Q15: *future quantity* of jobs (the 1.2bn youth wave, the dividend-or-drag fork) vs Q15's *current
+quality*. Built entirely from one CC BY 3.0 IGO report's own figure workbooks — not the registry.
+
+| Dataset | Gives | Path | License → Gate |
+|---|---|---|---|
+| **World Bank — The Global Jobs Challenge (2026)** ✅ **LIVE** | the whole article: youth wave (ES.1.A), youth-by-region handoff (1.2.B), working-age change (1.2.D) + WAP-growth time series (2.3.B), peak-cohort proof (2.2.F) + Korea/Singapore employment (A.4.A/A.5.A), potential growth (ES.1.D), income-at-peak (3.3.B) + schooling gap (4.3.B), AI preparedness (3.4.A) + internet divide (3.4.B), young NEET (1.2.C), 3-way jobs estimates (2.7.A), country bulges (2.8.C), recession scarring (3.2.B), sectoral shift (2.5.E), female participation (2.4.B), investment↔jobs lever (ES.1.F) | snapshot `data/sources/worldbank-jobs/2026-06-27/` (7 xlsx workbooks + transcribed CSVs); `scripts/analysis/global-jobs-challenge.ts` → `jobs-*` derived series + `jobs-challenge-facts.json` | **CC BY 3.0 IGO → re-host w/ attribution** |
+| underlying primaries | **UN WPP 2024** (demography), **ILOSTAT** (NEET/employment), **WDI** (income/internet), **Kose & Ohnsorge 2024** (potential growth) — all re-hostable | re-derived *through* the report's figures (exact WB regional groupings) | open → re-host |
+| proprietary co-sources | **IMF AI Preparedness Index** (Cazzaniga et al. 2024) for 3.4.A; **Haver Analytics** for ES.1.F | shown as the WB published them — **cite/credit-only, not re-hosted as data** | © original authors → cite |
+
+> **Pattern note:** same as the GEP debt update — a World Bank CC BY 3.0 IGO report is re-derivable
+> from its own chart pack, but vendor series *inside* its figures (Haver, ICRG, IMF indices, Penn World
+> Table, Gallup) stay cite-only. The bar kit has no grouped bars, so 2000-vs-2035 comparisons are
+> slopegraphs or directional bars-with-note.
 
 ---
 
@@ -268,6 +289,142 @@ a currency the US Fed controls, so the same shock breaks unevenly. Verdict (reco
 > the CSV. Identical to the EM-DAT pattern in Q3 (M5). The dollar spine is therefore fully
 > tellable; its charts carry a link-out, while the re-hostable CPI + Fed-dollar-index spine carries
 > the verifiable load. IMF and FRED are likewise link-only for re-hosting.
+
+## Q14 · Air pollution — is the air getting cleaner or deadlier? — planned
+
+**Full build plan: [[ARTICLE-airpollution-plan.md]]** (8 acts, ~22 movements; the hard-balance verdict,
+the data-transparency signature act, the forgotten-poisons act). A new question, scoped 2026-06-26. Air pollution is the **best-served topic on the whole atlas** —
+the problem is not finding data but the *license gate* and reconciling three data **types** that
+don't agree: modeled *burden* (deaths), measured/modeled *concentration* (exposure), inventoried
+*emissions* (sources). Verdict held as a deliberate **hard balance** (like fertility): the wins are
+real and fast (China's plunge, clean-cooking, cleanup pays) and the catastrophe is real and vast
+(~7M deaths/yr, ~99% breathing unsafe air, the monitor deserts) — both true, no overall lean.
+Kept distinct from Q3/climate: the **Q3 boundary** is wildfire smoke (climate-driven PM2.5 erasing
+cleanup) — that beat hands *to* this article, as the energy hinge hands Q3 to Q4.
+
+> **Research vintage (2026-06-26):** scoped via a deep-research pass; the source facts below were
+> then **adversarially verified** (3 independent web-checking skeptics per claim, 2/3-refute kills) —
+> **23 of 25 claims confirmed**. Two EDGAR claims were **corrected** (folded in below): EDGAR carries
+> **9** air-pollutant species (not 10 — CH4 is a GHG, not in the AP set), is split into **~26–30 IPCC
+> sectors** (not 8), and is licensed under the **EC reuse notice** (acknowledge source), **not CC BY
+> 4.0**. ACAG **CC BY 4.0 confirmed** (the load-bearing one). Still carry a manual number-audit before
+> any figure enters prose, per the invariant; licenses marked **verify** below remain unconfirmed.
+
+### Burden — deaths & DALYs (the despair half)
+| Dataset | Gives | Path | License → Gate |
+|---|---|---|---|
+| **IHME / GBD 2023** (rel. Oct 2025; current cycle) | deaths & DALYs attributable to ambient PM2.5, ozone, household air, **lead** — by country/age/sex/**SDI** (the income lens), with uncertainty intervals, 1990– | GBD Results Tool (vizhub) | **IHME Free-of-Charge Non-Commercial User Agreement** → **link-only / re-derive**, never re-host raw bulk |
+| **State of Global Air** (HEI+IHME) | the journalist-friendly packaged cut (rankings, country profiles); confirmed it **mirrors GBD**, not independent | SoGA CSV | inherits IHME terms → link-only; historically the friendliest *face* |
+| **WHO** attributable deaths + GHE | WHO's own toll (~**7M/yr**, vs GBD/IHME ~**6.7M/yr**) — the divergence is a *confusion* beat | OWID mirror; WHO direct CC BY-NC-SA → link-only | mixed |
+| **OWID air-pollution** | deaths, DALYs, indoor-vs-outdoor split — **GBD-sourced**; PM2.5 exposure — ACAG/WB-sourced | **OWID adapter** (append `.csv`) | **⚠ split gate:** OWID's **GBD/IHME** graphers are **link-only** ("a license that doesn't allow us to redistribute it" — CC BY covers only OWID's *viz/code*, not the series). Only the **WB/ACAG-sourced** OWID series (exposure) are CC BY → re-host. |
+
+### Exposure — concentrations (what people actually breathe)
+| Dataset | Gives | Path | License → Gate |
+|---|---|---|---|
+| **ACAG / SatPM2.5** (Van Donkelaar, WashU) | satellite-derived global surface **PM2.5** grids, **V6.GL.03 (1998–2024)**, 0.01°+0.1° (V6.GL.02.04/1998–2023 now retired); regional country/state summary files for global+US+Canada+China+India; the V5 product carries explicit uncertainty grids | **open AWS S3 `s3://satpmdata/`** (`--no-sign-request`, no account); new small adapter or direct | **CC BY 4.0 → re-host** ✓ verified 2026-06-26 |
+| **WHO Ambient AQ Database** | ground-monitor city-level PM2.5/PM10/NO2, ~6,000+ cities | WHO direct / OWID | WHO CC → re-host **verify** |
+| **OpenAQ** | live + historical ground-sensor PM2.5/NO2/O3/SO2/CO worldwide; coverage-biased to rich countries (the bias is a story) | OpenAQ REST API | **CC BY 4.0 → re-host** |
+| **SPARTAN** | reference-grade ground PM2.5/PM10 + AERONET, sited for the **Global South** — the ground-truth that *validates* the satellite models (and a hope beat: closing the gap) | research network | open **verify** |
+| **Copernicus CAMS** (ECMWF) | reanalysis/forecast concentration fields, all pollutants | heavy grids; `copernicus` adapter exists (Q3) | Copernicus (free, attribution) → re-host |
+
+### Emissions — sources (the hope levers; where it comes from)
+| Dataset | Gives | Path | License → Gate |
+|---|---|---|---|
+| **EDGAR** (EC JRC) | **v8.1 Air Pollutants**, annual **1970–2022** + monthly 2000–2022, **9 species** (CO, NOx, NMVOC, NH3, SO2, PM10, PM2.5, BC, OC — *no CH4*; that's EDGAR's separate GHG product); country series + **0.1° gridded**, ~26–30 IPCC sectors | bulk CSV adapter | **EC reuse notice** (reuse authorised, source acknowledged) → **re-host w/ attribution** — *not* labelled CC BY 4.0 |
+| **Climate TRACE** | **V4.4.0 (Apr 2025)** — **asset/facility-level** emissions, GHGs *and* air pollutants, ~**2.76M sources from ~745M assets** — the "this *specific* plant/port" capability EDGAR lacks | bulk CSV / API | open data → re-host **verify CC BY 4.0** |
+| **CEDS** | historical anthropogenic emissions by sector (the model-feeding inventory) | bulk CSV | CC BY → re-host |
+
+### Regional / country
+| Dataset | Gives | Path | Gate |
+|---|---|---|---|
+| **World Bank WDI** (`EN.ATM.PM25.MC.*`) | "PM2.5 mean annual exposure" (sourced from ACAG) + % exposed above WHO guideline, by country/income group | WB adapter, today | CC BY 4.0 → re-host |
+| **EEA** (Europe) | Europe air-quality + emissions, exceedances | EEA direct | re-usable w/ attribution **verify** |
+| **US EPA AQS** | US monitor network, the Clean-Air-Act trend (and the wildfire reversal) | EPA bulk/API | PD → re-host |
+| **India CPCB / China MEE** | the two ambient-pollution heavyweights' national networks | OpenAQ often mirrors; national portals | varying openness **verify** → likely link-only |
+
+### Data gaps & honest-disclosure (the article's spine — a three-act movement)
+The **transparency/governance story is the meta-finding**, quantified by the **OpenAQ 2024 report**
+(*Open Air Quality Data: The Global Landscape 2024*, the primary source):
+- Only **27%** of countries share **fully transparent** AQ data; **55%** share publicly in some form.
+- **36%** of countries **do not monitor at all** (only 64% run continuous monitoring — up just 3% since 2022).
+- **~1 billion people across 71 countries** have **no government monitoring** — **9 of 10 of them in
+  low / lower-middle-income countries.** Only **54 countries** share maximally-open station-level data.
+
+The three acts: **deserts** (capacity gap — can't afford monitors) → **secrets** (the monitor-but-
+don't-share band — political-will gap, distinct from capacity) → **the fix** (SPARTAN, Afri-SET,
+satellites, low-cost sensors closing both). The inequity *is* the finding: **the least-measured and
+least-shared places are the worst-affected.** Other honest gaps to name in-piece: the **WHO vs
+IHME** death-toll divergence; **ambient toll spans 3M–9M/yr** across the literature (modeled point
+estimate hiding a wide band); **rising tolls reflect steeper exposure-response science, not worse
+air**; PM2.5 dominates while **ozone / NO2 / SO2 / ultrafines / indoor** are far thinner; burden
+estimates **lag years** behind (GBD 2021 published 2024).
+
+### The under-asked angles (each with its dataset)
+| Angle | Temperature | Best open dataset |
+|---|---|---|
+| **Wildfire smoke erasing gains** — since ~2016 it shaped PM2.5 in ~¾ of contiguous US states, eroding ~25% of decades of cleanup (Nature 2023, `s41586-023-06522-6`) | despair (**Q3 boundary**) | ACAG + the Nature paper; US EPA AQS |
+| **Indoor falling as clean-cooking spreads** vs ambient rising in industrializing Asia | the bifocal tension | OWID/WB clean-cooking access + GBD household split |
+| **Monitor-desert + data-secrecy equity** | despair/confusion | OpenAQ 2024 report |
+| **Environmental Kuznets / China's post-2013 plunge** (dirty-then-clean — law or excuse?) | hope, with a catch | ACAG China summary files |
+| **Ozone rising while PM falls** (the pollutant heat worsens, controls miss) | hidden divergence | EDGAR precursors + CAMS |
+| **Legal standards vs WHO guidelines** (India's limit ~4× WHO) + **WHO 2021 tightening → ~99% non-compliant** | confusion | WHO 2021 guidelines + national standards + ACAG exposure |
+| **Beyond lungs** — cardiovascular, dementia/cognition, birth outcomes, mental health | reframes the toll | GBD cause linkages + Lancet Countdown |
+| **Within-country inequity** — poorer/minority neighborhoods near highways/ports/industry | justice | OpenAQ station-level + EPA |
+| **The unlegislated sources** — shipping/port NO2/SO2, agriculture/ammonia, crop-burning | sources nobody fixes | EDGAR / Climate TRACE sector splits |
+| **COVID-2020 natural experiment** (what-if-we-stopped — air recovers fast, toll barely dents) | confusion | OpenAQ + CAMS time series |
+| **Economic cost** — GDP / labour productivity lost (cleaning *pays*) | hope lever | World Bank cost-of-pollution |
+
+**Still to verify individually** (the verify pass didn't reach these — vintage + license unconfirmed):
+**AQLI** (EPIC/UChicago — the life-expectancy framing), **NASA SEDAC**, **Lancet Countdown**,
+**PurpleAir** low-cost sensors, **Aclima/Google** mobile monitoring, **clean-cooking** access
+panels (WB/IEA/WHO — the household-air hope beat's spine).
+
+**Priority path:** OWID air-pollution graphers + WB `EN.ATM.PM25.*` first (zero/cheap, CC BY, cover
+burden + exposure + the income cut). Then the **ACAG S3 adapter** (the gridded exposure spine, *if*
+CC BY 4.0 confirms). EDGAR + Climate TRACE when the sources act needs facility detail. OpenAQ 2024
+report powers the transparency movement with no ingest (cite + the four-category map).
+
+---
+
+## Q17 · AI — is AI making the world better or worse? — planned
+
+**Full build plan: [[ARTICLE-ai-plan.md]]** (8 movements, the *two-exponentials* spine, the
+**twin-curve** signature device, verdict held as **confusion — earned, not forced**). A new
+question, scoped 2026-06-27. AI is the **most-measured technology in history**: the problem is not
+finding data but that the data splits cleanly into *two layers that mirror the spine* — a
+re-hostable CC-BY **inputs** layer (compute, capability, cost, infrastructure — Epoch + OWID) and a
+link-only **outcomes** layer (what it does to lives — all forecast or one-vendor sample). The thesis
+lives in the gap: the inputs are exponential and certain; the outcomes diverge by a *quadrillion
+dollars*. Two axes run through it and **do not line up** — economics (boom-vs-bust) and existential
+risk (p(doom) ~0 → ~99%); plotting researchers across both is the M7 artifact.
+
+### Inputs — compute, capability, cost (the re-hostable CC-BY spine)
+| Dataset | Gives | Path | License → Gate |
+|---|---|---|---|
+| **OWID — AI page** | ~60 graphers re-publishing Epoch + AI Index: capability-vs-human, compute/params/data, hardware $/perf, data-centre electricity share, models-by-country, investment (CSET), AI job postings, adoption-vs-GDP, public opinion, governance bills, incidents | **existing `owid` adapter** — cheapest, **do first** (carries M1–M4 + M8 with zero new code) | CC BY → re-host |
+| **Epoch — Models / Capabilities / Data Centers / Chip Sales / GPU Clusters / Hardware / Polling** | 3,500+ models (1950–), benchmark scores, **data-centre power & build timelines** (satellite+permits), chip deployment, 500+ clusters, 170+ accelerators, usage polling | **new small `epoch` adapter** — *only* for series OWID doesn't mirror (power, chip owners, inference price) | CC BY → re-host (verified 2026-06-27) |
+| **Epoch — Trends** | the headline growth rates: compute **5×/yr**, training cost **3.5×/yr**, inference price **−40×/yr**, algorithmic efficiency **3×/yr**, context **30×/yr**; ~$38B/GW, 800k-H100 largest cluster | quoted as facts (cite the trend page) | CC BY → re-host |
+
+### Outcomes — what it does to lives (the contested, link-only layer)
+| Dataset | Gives | Path | License → Gate |
+|---|---|---|---|
+| **Forecasting Research Institute — *Economic Effects of AI*** (Karger et al., surveyed Oct 2025–Feb 2026) | the **five-camp** forecast spread (economists/industry/policy/superforecasters/public) conditioned on capability scenarios; the variance-decomposition reveal (disagreement is the *economics*, not the *tech*); the policy split (retraining vs job-guarantee); top-10% wealth share → 80% rapid | **transcribe-chart-pack** → inline SVG; cite + link | **link-only** (no open-data licence stated) |
+| **Anthropic Economic Index** | **measured** Claude usage by task/occupation: augmentation **52%** vs automation **45%**; ~**49%** of jobs have ≥¼ of tasks touched; mid-high-wage skew broadening down | transcribe; Hugging Face tables **verify licence** before any re-host | link-only until verified |
+| **METR — task time horizon** | autonomous-task length doubling **~every 7 months**, 2019→Nov 2025 — the cleanest capability-as-agency curve | cite published numbers; chart from them | **link-only** (GitHub data carries a do-not-train *canary*, not a reuse licence) |
+| **Field et al. 2025 — *Why do experts disagree on p(doom)?*** + signed statements | the existential-axis distribution (LeCun ~0, Hinton 10–20%, Bengio ~20%, mean ~14%, Yudkowsky >95%, Yampolskiy ~99%) + the tool-vs-agent split that explains it | **take-strip** from published figures | link-only / cite |
+| **Stanford HAI — AI Index** (2026) | the master compendium (investment, opinion, education, policy) — cross-check only | cite; re-derive from underlying where raw is offered | **CC BY-ND** → **never re-host the figures** |
+| **AI Incident Database** | catalogued real-world AI harms (snapshot download) — optional despair texture | snapshot; **verify licence** | unconfirmed → cite/link |
+
+> **The licence headline (researched 2026-06-27):** the split *is* the spine. **Epoch is CC BY
+> across all 11 datasets** (the re-hostable inputs backbone, and OWID already mirrors most of it —
+> so the `owid` adapter does the heavy lifting before any new code). The **outcomes** layer is
+> uniformly link-only: FRI has no data licence, METR ships a do-not-train canary (not a reuse
+> grant), Anthropic's tables need verifying, and the **AI Index is CC BY-*ND*** — figures cite-only,
+> re-derive from underlying. Same transcribe-chart-pack + epistemic-tag discipline as the debt/jobs
+> builds. The thesis survives the gate intact: the measured half is fully re-hostable, the contested
+> half is charted-and-linked behind loud "this is a forecast / one model's users" tags.
+
+---
 
 ## Q8–12 · Shortlists (one line each, build when scheduled)
 

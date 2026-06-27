@@ -1,0 +1,184 @@
+{
+  "indicatorId": "education.govt_expenditure.sas",
+  "entity": "SAS",
+  "entityName": "South Asia",
+  "unit": "% of GDP",
+  "points": [
+    {
+      "t": 1979,
+      "value": 1.8491849899292
+    },
+    {
+      "t": 1980,
+      "value": 1.82088500261307
+    },
+    {
+      "t": 1981,
+      "value": 1.75685495138169
+    },
+    {
+      "t": 1982,
+      "value": 1.78507000207901
+    },
+    {
+      "t": 1983,
+      "value": 1.71164000034332
+    },
+    {
+      "t": 1984,
+      "value": 1.69414502382278
+    },
+    {
+      "t": 1985,
+      "value": 1.92365998029709
+    },
+    {
+      "t": 1986,
+      "value": 2.07445496320724
+    },
+    {
+      "t": 1987,
+      "value": 2.07898503541946
+    },
+    {
+      "t": 1990,
+      "value": 1.96502494812012
+    },
+    {
+      "t": 1991,
+      "value": 2.17062002420426
+    },
+    {
+      "t": 1997,
+      "value": 2.65692502260208
+    },
+    {
+      "t": 1998,
+      "value": 3.05140995979309
+    },
+    {
+      "t": 1999,
+      "value": 2.89331007003784
+    },
+    {
+      "t": 2000,
+      "value": 2.9751501083374
+    },
+    {
+      "t": 2001,
+      "value": 2.94015502929688
+    },
+    {
+      "t": 2002,
+      "value": 2.58498990535736
+    },
+    {
+      "t": 2003,
+      "value": 3.11435008049011
+    },
+    {
+      "t": 2004,
+      "value": 3.1719400882721
+    },
+    {
+      "t": 2005,
+      "value": 3.27670001983642
+    },
+    {
+      "t": 2006,
+      "value": 3.14284992218018
+    },
+    {
+      "t": 2007,
+      "value": 2.8597149848938
+    },
+    {
+      "t": 2008,
+      "value": 2.9298700094223
+    },
+    {
+      "t": 2009,
+      "value": 2.66707503795624
+    },
+    {
+      "t": 2010,
+      "value": 3.377690076828
+    },
+    {
+      "t": 2011,
+      "value": 2.96443998813629
+    },
+    {
+      "t": 2012,
+      "value": 2.7364399433136
+    },
+    {
+      "t": 2013,
+      "value": 2.49213999509811
+    },
+    {
+      "t": 2014,
+      "value": 2.78542835232231
+    },
+    {
+      "t": 2015,
+      "value": 2.6844950914383
+    },
+    {
+      "t": 2016,
+      "value": 3.5662499666214
+    },
+    {
+      "t": 2017,
+      "value": 3.44930493831635
+    },
+    {
+      "t": 2018,
+      "value": 3.22926235819159
+    },
+    {
+      "t": 2019,
+      "value": 3.89212886881753
+    },
+    {
+      "t": 2020,
+      "value": 3.1916501133819
+    },
+    {
+      "t": 2021,
+      "value": 3.29945958568872
+    },
+    {
+      "t": 2022,
+      "value": 3.09202235990416
+    },
+    {
+      "t": 2023,
+      "value": 2.16213826344701
+    },
+    {
+      "t": 2024,
+      "value": 2.86143825839217
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SE.XPD.TOTL.GD.ZS",
+    "url": "https://data.worldbank.org/indicator/SE.XPD.TOTL.GD.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-21",
+    "checksum": "f36821410fb8cc53fbe556f490cad2efa309a33b2c0c56be568323fa70e017da",
+    "definition": "Government expenditure on education, total (% of GDP)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "UNESCO Institute for Statistics, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity SAS"
+    }
+  ],
+  "derivedFrom": [
+    "SAS"
+  ]
+}

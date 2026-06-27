@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "education.primary_enrollment.lcn",
+    "unit": "% gross",
+    "points": 32
+  },
+  "wasDerivedFrom": [
+    "LCN"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity LCN"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SE.PRM.ENRR",
+      "url": "https://data.worldbank.org/indicator/SE.PRM.ENRR",
+      "vintage": "2026-06-21",
+      "checksum": "ab05c727f99111aba40204ec209ff746622a04d2dd05d070263d076384a9b48c",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UNESCO Institute for Statistics, via World Bank"
+}

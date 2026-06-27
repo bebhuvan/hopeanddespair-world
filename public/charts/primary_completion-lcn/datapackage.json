@@ -1,0 +1,38 @@
+{
+  "name": "education-primary_completion-lcn",
+  "title": "Primary completion rate, total (% of relevant age group)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/SE.PRM.CMPT.ZS"
+    }
+  ],
+  "created": "2026-06-21",
+  "resources": [
+    {
+      "name": "education-primary_completion-lcn",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "education_primary_completion_lcn",
+            "type": "number",
+            "unit": "% of relevant age group"
+          }
+        ]
+      }
+    }
+  ]
+}

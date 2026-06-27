@@ -1,0 +1,46 @@
+{
+  "chartId": "airpoll-lead-cause",
+  "kind": "bars",
+  "gate": "link-only",
+  "title": "Lead kills the heart, not the IQ — where its ~1.5M deaths land",
+  "unit": "percent of lead-attributable deaths",
+  "yearSpan": "2021",
+  "bars": [
+    {
+      "label": "Cardiovascular (heart attack, stroke)",
+      "value": 94,
+      "color": "despair"
+    },
+    {
+      "label": "Other causes",
+      "value": 6,
+      "color": "stone"
+    }
+  ],
+  "xmax": 100,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "provenance": {
+    "source": "gbd",
+    "sourceIndicator": "GBD lead exposure",
+    "url": "https://ourworldindata.org/lead-pollution",
+    "license": "IHME (link-only)",
+    "vintage": "2021",
+    "checksum": "988e96154e95f0a9cb178e1fe194a3e441302ad47d41a47f8b099c06d891e841",
+    "definition": "Of the ~1.5 million deaths the Global Burden of Disease attributes to lead exposure each year, roughly 94% are cardiovascular — not the lost-IQ story lead is usually filed under. A 2023 Lancet Planetary Health re-analysis put the toll ~6× higher than GBD-2019, at a US$6.0 trillion (6.9% of GDP) cost.",
+    "attribution": "IHME Global Burden of Disease; Larsen & Sánchez-Triana 2023 (Lancet Planetary Health)",
+    "primarySource": "GBD/IHME — link-only; charted and cited, not re-hosted."
+  },
+  "recipe": [
+    {
+      "op": "cause_share",
+      "detail": "Cardiovascular vs other share of lead-attributable deaths (GBD)."
+    }
+  ],
+  "illustrative": false
+}

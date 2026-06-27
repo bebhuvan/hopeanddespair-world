@@ -1,0 +1,51 @@
+{
+  "chartId": "airpoll-wildfire-region",
+  "kind": "bars",
+  "gate": "link-only",
+  "title": "Wildfire-smoke deaths are upside-down — the toll is in the global South",
+  "unit": "percent of ~1.53M annual smoke deaths",
+  "yearSpan": "2024",
+  "bars": [
+    {
+      "label": "Sub-Saharan Africa",
+      "value": 39,
+      "color": "despair"
+    },
+    {
+      "label": "Rest of the low- & middle-income world",
+      "value": 52,
+      "color": "despair"
+    },
+    {
+      "label": "High-income countries (the photogenic megafires)",
+      "value": 9,
+      "color": "ochre"
+    }
+  ],
+  "xmax": 100,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "provenance": {
+    "source": "chen2024",
+    "sourceIndicator": "Chen et al. 2024",
+    "url": "https://doi.org/10.1016/S2542-5196(24)00255-0",
+    "license": "journal (link-only)",
+    "vintage": "2024",
+    "checksum": "97bddbc1fdd59c52db84c1f056ea0ca2b1b8df67d5b3b54832be134624b87597",
+    "definition": "Landscape-fire smoke is attributed ~1.53 million deaths a year; more than 90% fall in low- and middle-income countries and ~39% in sub-Saharan Africa — savanna and crop burning, not the televised megafires. Smoke out-kills flame roughly 10:1 (Australia’s 2019–20 Black Summer: 417 smoke deaths vs 33 from flame).",
+    "attribution": "Chen et al. 2024 (The Lancet Planetary Health)",
+    "primarySource": "Peer-reviewed; figures cited, not re-hosted."
+  },
+  "recipe": [
+    {
+      "op": "regional_share",
+      "detail": "Where landscape-fire smoke deaths actually fall, by income geography."
+    }
+  ],
+  "illustrative": false
+}

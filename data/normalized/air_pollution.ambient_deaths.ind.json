@@ -1,0 +1,45 @@
+[
+  {
+    "indicatorId": "air_pollution.ambient_deaths.ind",
+    "entity": "IND",
+    "entityName": "India",
+    "unit": "deaths per year",
+    "points": [
+      {
+        "t": 1990,
+        "value": 737400
+      },
+      {
+        "t": 1995,
+        "value": 795200
+      },
+      {
+        "t": 2000,
+        "value": 857300
+      },
+      {
+        "t": 2005,
+        "value": 895900
+      },
+      {
+        "t": 2010,
+        "value": 957000
+      },
+      {
+        "t": 2015,
+        "value": 1090400
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "absolute_deaths_from_ambient_pm2_5_air_pollution__state_of_global_air",
+      "url": "https://ourworldindata.org/grapher/absolute-number-of-deaths-from-ambient-particulate-air-pollution",
+      "license": "IHME / State of Global Air — link-only (non-commercial)",
+      "vintage": "2026-06-27",
+      "checksum": "92689c129be04b888cf8b45cb09cc3378d331b62d991f1cc71325060ab6587a3",
+      "definition": "Deaths from ambient PM2.5 air pollution, India",
+      "attribution": "Our World in Data",
+      "primarySource": "State of Global Air (Health Effects Institute; IHME GBD), via Our World in Data"
+    }
+  }
+]

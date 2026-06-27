@@ -1,0 +1,384 @@
+{
+  "note": "Audited figures the Q16 article may cite. Regenerate with scripts/analysis/global-jobs-challenge.ts. Source: World Bank, The Global Jobs Challenge (2026), CC BY 3.0 IGO. Numbers not tied to a charted figure are transcribed from the report text/figures noted.",
+  "youthWave": {
+    "peak": {
+      "t": 2035,
+      "value": 1.23
+    },
+    "y2025": {
+      "t": 2025,
+      "value": 1.15
+    },
+    "y1975": {
+      "t": 1975,
+      "value": 0.62
+    }
+  },
+  "youthByRegion": {
+    "EAP": {
+      "y2000": 307.9,
+      "y2035": 285
+    },
+    "ECA": {
+      "y2000": 74.9,
+      "y2035": 65.2
+    },
+    "LAC": {
+      "y2000": 98.3,
+      "y2035": 98.8
+    },
+    "MNA": {
+      "y2000": 100.1,
+      "y2035": 168.7
+    },
+    "SAR": {
+      "y2000": 242.4,
+      "y2035": 278.1
+    },
+    "SSA": {
+      "y2000": 135.7,
+      "y2035": 332.2
+    },
+    "ssaMultiple": 2.4
+  },
+  "wapChange": {
+    "SSA": {
+      "c2000_25": 389.7,
+      "c2025_35": 234.3,
+      "c2035_50": 390.4
+    },
+    "SAR": {
+      "c2000_25": 411,
+      "c2025_35": 107.9,
+      "c2035_50": 57.9
+    },
+    "MNA": {
+      "c2000_25": 234.3,
+      "c2025_35": 101.8,
+      "c2035_50": 122.1
+    },
+    "LAC": {
+      "c2000_25": 127.8,
+      "c2025_35": 24.2,
+      "c2035_50": -2.6
+    },
+    "ECA": {
+      "c2000_25": 11.7,
+      "c2025_35": 2.7,
+      "c2035_50": -19.9
+    },
+    "EAP": {
+      "c2000_25": 265.4,
+      "c2025_35": -24.8,
+      "c2035_50": -180.8
+    }
+  },
+  "peakCohort": {
+    "EAP": {
+      "period": "1978-1988",
+      "max": 345.7
+    },
+    "SSA": {
+      "period": "2025-2035",
+      "max": 332.2
+    },
+    "SAR": {
+      "period": "2011-2021",
+      "max": 300.9
+    },
+    "MNA": {
+      "period": "2025-2035",
+      "max": 168.7
+    },
+    "LAC": {
+      "period": "2006-2016",
+      "max": 106.3
+    },
+    "ECA": {
+      "period": "1994-2004",
+      "max": 77.5
+    }
+  },
+  "potentialGrowth": {
+    "2000-09": {
+      "emde": 5.9,
+      "ae": 2.3
+    },
+    "2010-19": {
+      "emde": 5.2,
+      "ae": 1.5
+    },
+    "2020-29": {
+      "emde": 4.1,
+      "ae": 1.3
+    }
+  },
+  "gdppcEve": {
+    "LAC": {
+      "year": 2006,
+      "gdppc": 7.6,
+      "debtPctGdp": 46.3
+    },
+    "MNA": {
+      "year": 2024,
+      "gdppc": 4.7,
+      "debtPctGdp": 45.8
+    },
+    "EAP": {
+      "year": 1978,
+      "gdppc": 2.2,
+      "debtPctGdp": 24.3
+    },
+    "ECA": {
+      "year": 1994,
+      "gdppc": 1.9,
+      "debtPctGdp": 52.2
+    },
+    "SAR": {
+      "year": 2011,
+      "gdppc": 1.9,
+      "debtPctGdp": 57.7
+    },
+    "SSA": {
+      "year": 2024,
+      "gdppc": 1.2,
+      "debtPctGdp": 57.4
+    }
+  },
+  "aiPrep": {
+    "EMDEs with a large jobs challenge": 0.29,
+    "Other EMDEs": 0.44
+  },
+  "internet": {
+    "EMDEs with a large jobs challenge": 29,
+    "Other EMDEs": 80.6
+  },
+  "neet": {
+    "SAR": {
+      "y2005": 79.2,
+      "y2025": 73,
+      "rate2025": 24.4
+    },
+    "SSA": {
+      "y2005": 33.1,
+      "y2025": 61,
+      "rate2025": 22.8
+    },
+    "MNA": {
+      "y2005": 40.8,
+      "y2025": 47.2,
+      "rate2025": 32.6
+    },
+    "EAP": {
+      "y2005": 63.9,
+      "y2025": 37.9,
+      "rate2025": 13.7
+    },
+    "LAC": {
+      "y2005": 21.9,
+      "y2025": 20.4,
+      "rate2025": 19.7
+    },
+    "ECA": {
+      "y2005": 17.1,
+      "y2025": 8.4,
+      "rate2025": 15.8
+    }
+  },
+  "estimates": {
+    "Youth method": 1229.4,
+    "Working-age method": 447.1,
+    "Ratio method": 269.2
+  },
+  "bulgeByCountry": {
+    "IND": 90.6,
+    "NGA": 39.9,
+    "PAK": 35.5,
+    "ETH": 24,
+    "COD": 23.4,
+    "EGY": 15.3,
+    "BGD": 14.5,
+    "TZA": 14.3,
+    "IDN": 12.7,
+    "PHL": 10.4
+  },
+  "investmentEmployment": {
+    "Low": 1.7,
+    "High": 2.7
+  },
+  "femaleParticipation": {
+    "MNA": {
+      "ratio": 0.2,
+      "lfpRate": 49.3
+    },
+    "SAR": {
+      "ratio": 0.3,
+      "lfpRate": 61.2
+    },
+    "EAP": {
+      "ratio": 0.4,
+      "lfpRate": 67.3
+    },
+    "LAC": {
+      "ratio": 0.4,
+      "lfpRate": 68.9
+    },
+    "ECA": {
+      "ratio": 0.5,
+      "lfpRate": 70.2
+    },
+    "SSA": {
+      "ratio": 0.5,
+      "lfpRate": 65.9
+    },
+    "AEsLfpRate": 77.5
+  },
+  "sectoral": {
+    "EMDEs_1991": {
+      "agriculture": 51.9,
+      "industry": 19.4,
+      "services": 28.7
+    },
+    "EMDEs_2023": {
+      "agriculture": 30.3,
+      "industry": 24.2,
+      "services": 45.5
+    },
+    "Low-income_1991": {
+      "agriculture": 70.5,
+      "industry": 9.1,
+      "services": 20.3
+    },
+    "Low-income_2023": {
+      "agriculture": 57.6,
+      "industry": 10.8,
+      "services": 31.7
+    }
+  },
+  "scarring": {
+    "FCS": {
+      "post2020": 57.6,
+      "post2009": 24.2
+    },
+    "LICs": {
+      "post2020": 42.9,
+      "post2009": 23.8
+    },
+    "EMDEs": {
+      "post2020": 26.7,
+      "post2009": 17.1
+    },
+    "World": {
+      "post2020": 23.9,
+      "post2009": 21.7
+    },
+    "AEs": {
+      "post2020": 13.2,
+      "post2009": 39.5
+    },
+    "AEsPost2009": 39.5
+  },
+  "schoolingByRegion": {
+    "EAP": 8.7,
+    "ECA": 11.1,
+    "LAC": 8.6,
+    "MNA": 7.9,
+    "SAR": 5.6,
+    "SSA": 4.4
+  },
+  "prose": {
+    "youthCohortBillion": {
+      "value": 1.2,
+      "unit": "billion young people reach working age in EMDEs, 2025–35",
+      "where": "Executive Summary"
+    },
+    "illustrativeEmployed2035": {
+      "value": 400,
+      "unit": "million of the 1.2bn would be employed in 2035 (illustrative)",
+      "where": "Executive Summary / Ch.2 §2.4"
+    },
+    "illustrativeNeet2035": {
+      "value": 300,
+      "unit": "million of the 1.2bn would be NEET in 2035 (illustrative)",
+      "where": "Executive Summary / Ch.1"
+    },
+    "fcsYouth": {
+      "value": "over one-fifth",
+      "count": "270 million",
+      "unit": "young people in fragile and conflict-affected situations reach working age by 2035 — over one-fifth of the 1.2bn",
+      "where": "figure 1.1.D / Ch.1"
+    },
+    "femaleEmploymentLever": {
+      "value": "20–50%",
+      "unit": "potential rise in GDP per capita from raising women’s employment to men’s level",
+      "where": "Ch.4 / Pennings 2022"
+    },
+    "ssaYouth2035": {
+      "value": "over 330 million",
+      "unit": "young people in Sub-Saharan Africa in 2035, ~2.5× the year-2000 figure",
+      "where": "Executive Summary"
+    },
+    "eastAsiaPeak": {
+      "value": "almost 350 million",
+      "unit": "young people entered working age in East Asia & Pacific in the decade to 1988",
+      "where": "Executive Summary"
+    },
+    "youngEmdeNeet2025": {
+      "value": "~240 million",
+      "unit": "young EMDE NEETs as of 2025",
+      "where": "figure 2.4 / Ch.2"
+    },
+    "aiExposure": {
+      "world": 40,
+      "advanced": 60,
+      "unit": "% of jobs exposed to AI (≈60% in advanced economies)",
+      "where": "figure 3.4 / Cazzaniga et al. 2024"
+    },
+    "offline": {
+      "value": 2.7,
+      "unit": "billion people remain offline",
+      "where": "Ch.3"
+    },
+    "licDataCapacity": {
+      "value": "under 0.1%",
+      "unit": "of global data-centre capacity is in low-income countries",
+      "where": "Ch.3"
+    },
+    "licChatgpt": {
+      "value": "under 1%",
+      "unit": "of global ChatGPT use is in low-income countries",
+      "where": "Ch.3"
+    },
+    "schoolingGap": {
+      "youthSurge": 4.3,
+      "otherEmde": 8.6,
+      "advanced": 12.4,
+      "unit": "mean years of schooling",
+      "where": "figure 4.3 / UIS"
+    },
+    "koreaTertiary": {
+      "from": 31.3,
+      "to": 70.2,
+      "unit": "% tertiary enrollment, Korea 1985→1997",
+      "where": "appendix A.4"
+    },
+    "pandemicJobsLost": {
+      "value": "over 250 million",
+      "unit": "jobs lost globally in 2020 — about four times the global financial crisis",
+      "where": "Ch.5"
+    },
+    "threePillars": [
+      "foundational infrastructure",
+      "a business-enabling environment",
+      "mobilizing private capital"
+    ],
+    "fiveSectors": [
+      "infrastructure (including energy)",
+      "agribusiness and farming",
+      "health",
+      "tourism",
+      "value-added manufacturing"
+    ],
+    "bangaEpigraph": "A job is the best way to drive a nail in the coffin of poverty."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "education.secondary_enrollment.eas",
+    "unit": "% gross",
+    "points": 55
+  },
+  "wasDerivedFrom": [
+    "EAS"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity EAS"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SE.SEC.ENRR",
+      "url": "https://data.worldbank.org/indicator/SE.SEC.ENRR",
+      "vintage": "2026-06-21",
+      "checksum": "81253c0932c1f996d43e39b9c117fe92c102dcfe7c179e010242042363ad9aa8",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UNESCO Institute for Statistics, via World Bank"
+}

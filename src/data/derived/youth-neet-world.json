@@ -1,0 +1,120 @@
+{
+  "indicatorId": "youth.neet.world",
+  "entity": "X01",
+  "entityName": "World",
+  "unit": "% of youth population",
+  "points": [
+    {
+      "t": 2005,
+      "value": 22.69
+    },
+    {
+      "t": 2006,
+      "value": 22.556
+    },
+    {
+      "t": 2007,
+      "value": 22.287
+    },
+    {
+      "t": 2008,
+      "value": 22.088
+    },
+    {
+      "t": 2009,
+      "value": 22.172
+    },
+    {
+      "t": 2010,
+      "value": 21.893
+    },
+    {
+      "t": 2011,
+      "value": 21.451
+    },
+    {
+      "t": 2012,
+      "value": 21.171
+    },
+    {
+      "t": 2013,
+      "value": 21.175
+    },
+    {
+      "t": 2014,
+      "value": 21.11
+    },
+    {
+      "t": 2015,
+      "value": 21.22
+    },
+    {
+      "t": 2016,
+      "value": 21.381
+    },
+    {
+      "t": 2017,
+      "value": 21.434
+    },
+    {
+      "t": 2018,
+      "value": 21.401
+    },
+    {
+      "t": 2019,
+      "value": 21.327
+    },
+    {
+      "t": 2020,
+      "value": 22.702
+    },
+    {
+      "t": 2021,
+      "value": 21.375
+    },
+    {
+      "t": 2022,
+      "value": 20.398
+    },
+    {
+      "t": 2023,
+      "value": 19.698
+    },
+    {
+      "t": 2024,
+      "value": 19.919
+    },
+    {
+      "t": 2025,
+      "value": 20.045
+    },
+    {
+      "t": 2026,
+      "value": 20.126
+    },
+    {
+      "t": 2027,
+      "value": 20.217
+    }
+  ],
+  "provenance": {
+    "source": "ilostat",
+    "sourceIndicator": "DF_EIP_2EET_SEX_RT [REF_AREA=X01, SEX=SEX_T]",
+    "url": "https://sdmx.ilo.org/rest/data/DF_EIP_2EET_SEX_RT/all?startPeriod=1990",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-21",
+    "checksum": "3bdad5ac1d7a0406495ad533c8a44d7d854dcdd3e69af05176829783de1ac4e7",
+    "definition": "Youth not in employment, education or training (NEET), World",
+    "attribution": "ILOSTAT — International Labour Organization",
+    "primarySource": "International Labour Organization (ILOSTAT, modelled estimates)"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity World"
+    }
+  ],
+  "derivedFrom": [
+    "X01"
+  ]
+}

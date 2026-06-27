@@ -1,0 +1,125 @@
+{
+  "chartId": "jobs-sectoral-shift",
+  "kind": "bars",
+  "title": "Off the farm, into services",
+  "unit": "share of employment by sector · % · 1991 vs 2023",
+  "yearSpan": "1991–2023",
+  "xmax": 100,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "decimals": 0,
+  "legend": [
+    {
+      "label": "Agriculture",
+      "color": "ochre"
+    },
+    {
+      "label": "Industry",
+      "color": "uncertain"
+    },
+    {
+      "label": "Services",
+      "color": "stone"
+    }
+  ],
+  "bars": [
+    {
+      "label": "EMDEs · 1991",
+      "value": 100,
+      "color": "stone",
+      "segments": [
+        {
+          "value": 51.9,
+          "color": "ochre"
+        },
+        {
+          "value": 19.4,
+          "color": "uncertain"
+        },
+        {
+          "value": 28.7,
+          "color": "stone"
+        }
+      ]
+    },
+    {
+      "label": "EMDEs · 2023",
+      "value": 100,
+      "color": "stone",
+      "segments": [
+        {
+          "value": 30.3,
+          "color": "ochre"
+        },
+        {
+          "value": 24.2,
+          "color": "uncertain"
+        },
+        {
+          "value": 45.5,
+          "color": "stone"
+        }
+      ]
+    },
+    {
+      "label": "Low-income · 1991",
+      "value": 99.9,
+      "color": "stone",
+      "segments": [
+        {
+          "value": 70.5,
+          "color": "ochre"
+        },
+        {
+          "value": 9.1,
+          "color": "uncertain"
+        },
+        {
+          "value": 20.3,
+          "color": "stone"
+        }
+      ]
+    },
+    {
+      "label": "Low-income · 2023",
+      "value": 100.1,
+      "color": "stone",
+      "segments": [
+        {
+          "value": 57.6,
+          "color": "ochre"
+        },
+        {
+          "value": 10.8,
+          "color": "uncertain"
+        },
+        {
+          "value": 31.7,
+          "color": "stone"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source": "worldbank-jobs",
+    "sourceIndicator": "The Global Jobs Challenge (2026) — figure 2.5.E",
+    "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+    "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution",
+    "vintage": "2026-06-27",
+    "checksum": "2d68896b60a835a2a35df15e3efb2eb4154d8a98c46c039d5d92b0fb342165e0",
+    "definition": "Share of total employment in agriculture, industry and services for EMDEs and low-income countries, 1991 and 2023. Work is leaving the farm — but moving mostly to services, while industry, the classic ladder out of poverty, barely grows.",
+    "attribution": "World Bank — The Global Jobs Challenge (2026), CC BY 3.0 IGO",
+    "primarySource": "ILOSTAT; UN World Population Prospects 2024"
+  },
+  "recipe": [
+    {
+      "op": "transcribe_chart_pack",
+      "detail": "figure 2.5.E, sectoral employment shares"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "jobs.youth_region.mna",
+    "unit": "young people aged 15–24 · millions",
+    "points": 2
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "transcribe_chart_pack",
+        "detail": "figure 1.2.B, MNA youth 2000 & 2035, thousands→millions"
+      }
+    ],
+    "agent": "adapter:worldbank-jobs@jobs-1.0.0",
+    "used": {
+      "source": "worldbank-jobs",
+      "slug": "figure 1.2.B",
+      "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+      "vintage": "2026-06-27",
+      "checksum": "4a92433ddacc0af8cb220d3195727673b4ef05001e250a75309a87878b83f99d",
+      "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution"
+    }
+  },
+  "primarySource": "UN World Population Prospects 2024"
+}

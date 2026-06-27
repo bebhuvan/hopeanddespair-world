@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "jobs.emp_ratio.korea",
+    "unit": "employment-to-population ratio · %",
+    "points": 26
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "transcribe_chart_pack",
+        "detail": "figure A.4.A, Korea employment ratio"
+      }
+    ],
+    "agent": "adapter:worldbank-jobs@jobs-1.0.0",
+    "used": {
+      "source": "worldbank-jobs",
+      "slug": "figure A.4.A",
+      "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+      "vintage": "2026-06-27",
+      "checksum": "b7f817d65d72597ca84eb9a2cfed29de1235895e6772bdaecf684ca24facd051",
+      "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution"
+    }
+  },
+  "primarySource": "ILOSTAT; Feenstra, Inklaar & Timmer (2015)"
+}

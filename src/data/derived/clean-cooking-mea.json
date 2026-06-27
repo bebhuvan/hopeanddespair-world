@@ -1,0 +1,124 @@
+{
+  "indicatorId": "air_pollution.clean_cooking.mea",
+  "entity": "MEA",
+  "entityName": "Middle East, North Africa, Afghanistan & Pakistan",
+  "unit": "% of population",
+  "points": [
+    {
+      "t": 2000,
+      "value": 62.6594010318437
+    },
+    {
+      "t": 2001,
+      "value": 64.2333545487115
+    },
+    {
+      "t": 2002,
+      "value": 65.521988699734
+    },
+    {
+      "t": 2003,
+      "value": 66.5805699282754
+    },
+    {
+      "t": 2004,
+      "value": 67.7157093040052
+    },
+    {
+      "t": 2005,
+      "value": 68.7053156996309
+    },
+    {
+      "t": 2006,
+      "value": 69.5430583494283
+    },
+    {
+      "t": 2007,
+      "value": 70.4006477735109
+    },
+    {
+      "t": 2008,
+      "value": 71.1644816425019
+    },
+    {
+      "t": 2009,
+      "value": 71.7336531606532
+    },
+    {
+      "t": 2010,
+      "value": 72.2247666884129
+    },
+    {
+      "t": 2011,
+      "value": 72.680299560102
+    },
+    {
+      "t": 2012,
+      "value": 73.2864771170311
+    },
+    {
+      "t": 2013,
+      "value": 73.8205516999457
+    },
+    {
+      "t": 2014,
+      "value": 74.2465013826845
+    },
+    {
+      "t": 2015,
+      "value": 74.8548951582627
+    },
+    {
+      "t": 2016,
+      "value": 75.4430603172851
+    },
+    {
+      "t": 2017,
+      "value": 75.8061271457959
+    },
+    {
+      "t": 2018,
+      "value": 76.2667761033233
+    },
+    {
+      "t": 2019,
+      "value": 76.7406469048732
+    },
+    {
+      "t": 2020,
+      "value": 77.1511351924818
+    },
+    {
+      "t": 2021,
+      "value": 77.5462596875773
+    },
+    {
+      "t": 2022,
+      "value": 78.0405170756645
+    },
+    {
+      "t": 2023,
+      "value": 78.617471658088
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "EG.CFT.ACCS.ZS",
+    "url": "https://data.worldbank.org/indicator/EG.CFT.ACCS.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-27",
+    "checksum": "913e2177ddb6ca9bdbd8d4f6bcfb8ed09ebc71b0767e98f1b3371d5a7b5cde58",
+    "definition": "Access to clean fuels and technologies for cooking (% of population)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO Household Energy Database — via World Bank WDI"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity MEA"
+    }
+  ],
+  "derivedFrom": [
+    "MEA"
+  ]
+}

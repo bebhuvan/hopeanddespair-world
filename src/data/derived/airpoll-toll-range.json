@@ -1,0 +1,56 @@
+{
+  "chartId": "airpoll-toll-range",
+  "kind": "bars",
+  "gate": "link-only",
+  "title": "How wide is the \"millions\"? Outdoor-PM2.5 death estimates",
+  "unit": "million deaths per year",
+  "yearSpan": "2015 — 2021",
+  "bars": [
+    {
+      "label": "Lelieveld 2015 (outdoor PM2.5 + ozone)",
+      "value": 3.3,
+      "color": "ochre"
+    },
+    {
+      "label": "WHO 2021 (ambient, this article)",
+      "value": 4.32,
+      "color": "despair"
+    },
+    {
+      "label": "GBD 2021 (ambient PM2.5)",
+      "value": 4.7,
+      "color": "despair"
+    },
+    {
+      "label": "Vohra 2021 (fossil-fuel PM2.5 only)",
+      "value": 8.7,
+      "color": "despair"
+    }
+  ],
+  "xmax": 9,
+  "xTicks": [
+    0,
+    3,
+    6,
+    9
+  ],
+  "provenance": {
+    "source": "multi",
+    "sourceIndicator": "published estimates",
+    "url": "https://ourworldindata.org/air-pollution",
+    "license": "mixed (link-only)",
+    "vintage": "2021",
+    "checksum": "7d593b94fdf205b9249f09d3c5860aab36cd5eb85ba836e94b1c01bc2808b347",
+    "definition": "Published annual death estimates attributable to outdoor air pollution. Estimates diverge because they use different exposure-response functions and pollutant scopes — not because the air differs. Lelieveld et al. 2015 (PNAS); WHO Global Health Estimates 2021; GBD 2021 (IHME); Vohra et al. 2021 (Environmental Research, fossil-fuel combustion PM2.5).",
+    "attribution": "Lelieveld 2015; WHO 2021; IHME GBD 2021; Vohra 2021",
+    "primarySource": "Compiled from four peer-reviewed estimates — GBD figures are IHME-licensed (link-only).",
+    "notes": "Transcribed headline figures; GBD/IHME-derived → link-only, charted but not re-hosted."
+  },
+  "recipe": [
+    {
+      "op": "literature_range",
+      "detail": "Four published outdoor-air-pollution death estimates, 2015–2021, shown as a spread to make the modelling uncertainty legible."
+    }
+  ],
+  "illustrative": false
+}

@@ -1,0 +1,85 @@
+{
+  "indicatorId": "jobs.youth_wave.emde",
+  "entity": "EMDEs",
+  "entityName": "EMDEs",
+  "unit": "young people aged 15–24 · billions",
+  "points": [
+    {
+      "t": 1955,
+      "value": 0.38
+    },
+    {
+      "t": 1965,
+      "value": 0.43
+    },
+    {
+      "t": 1975,
+      "value": 0.62
+    },
+    {
+      "t": 1985,
+      "value": 0.79
+    },
+    {
+      "t": 1995,
+      "value": 0.89
+    },
+    {
+      "t": 2005,
+      "value": 1.06
+    },
+    {
+      "t": 2015,
+      "value": 1.08
+    },
+    {
+      "t": 2025,
+      "value": 1.15
+    },
+    {
+      "t": 2035,
+      "value": 1.23
+    },
+    {
+      "t": 2045,
+      "value": 1.15
+    },
+    {
+      "t": 2055,
+      "value": 1.18
+    },
+    {
+      "t": 2065,
+      "value": 1.19
+    },
+    {
+      "t": 2075,
+      "value": 1.15
+    },
+    {
+      "t": 2085,
+      "value": 1.12
+    },
+    {
+      "t": 2095,
+      "value": 1.1
+    }
+  ],
+  "provenance": {
+    "source": "worldbank-jobs",
+    "sourceIndicator": "The Global Jobs Challenge (2026) — figure ES.1.A",
+    "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+    "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution",
+    "vintage": "2026-06-27",
+    "checksum": "35aa32bc08735564878067e0fc2f8ebe2892e504b7d96afea30130f3868bf065",
+    "definition": "Number of young people aged 15–24 living in emerging market and developing economies, by year; the cohort crests in the decade to 2035 and is not projected to be matched again this century.",
+    "attribution": "World Bank — The Global Jobs Challenge (2026), CC BY 3.0 IGO",
+    "primarySource": "UN World Population Prospects 2024"
+  },
+  "recipe": [
+    {
+      "op": "transcribe_chart_pack",
+      "detail": "figure ES.1.A, EMDE youth 15–24, billions"
+    }
+  ]
+}

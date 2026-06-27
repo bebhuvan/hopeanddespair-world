@@ -1,0 +1,38 @@
+{
+  "name": "jobs-emp_ratio-korea",
+  "title": "Korea's employment-to-population ratio, 1979–2004 — rising through its youth-surge growth episode.",
+  "licenses": [
+    {
+      "name": "CC BY 3.0 IGO — World Bank, re-hosted with attribution",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — The Global Jobs Challenge (2026), CC BY 3.0 IGO",
+      "path": "https://www.worldbank.org/en/research/publication/global-jobs-challenge"
+    }
+  ],
+  "created": "2026-06-27",
+  "resources": [
+    {
+      "name": "jobs-emp_ratio-korea",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "jobs_emp_ratio_korea",
+            "type": "number",
+            "unit": "employment-to-population ratio · %"
+          }
+        ]
+      }
+    }
+  ]
+}

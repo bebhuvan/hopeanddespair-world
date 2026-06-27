@@ -1,0 +1,71 @@
+{
+  "chartId": "jobs-peak-cohort-region",
+  "kind": "bars",
+  "title": "Every region gets one peak",
+  "unit": "largest 10-year youth inflow on record · millions (period shown)",
+  "yearSpan": "1978–2035",
+  "xmax": 360,
+  "xTicks": [
+    0,
+    90,
+    180,
+    270,
+    360
+  ],
+  "decimals": 0,
+  "bars": [
+    {
+      "label": "East Asia & Pacific",
+      "value": 345.7,
+      "color": "stone",
+      "note": "1978–1988"
+    },
+    {
+      "label": "Sub-Saharan Africa",
+      "value": 332.2,
+      "color": "despair",
+      "note": "2025–2035"
+    },
+    {
+      "label": "South Asia",
+      "value": 300.9,
+      "color": "stone",
+      "note": "2011–2021"
+    },
+    {
+      "label": "Middle East & North Africa",
+      "value": 168.7,
+      "color": "despair",
+      "note": "2025–2035"
+    },
+    {
+      "label": "Latin America & Caribbean",
+      "value": 106.3,
+      "color": "stone",
+      "note": "2006–2016"
+    },
+    {
+      "label": "Europe & Central Asia",
+      "value": 77.5,
+      "color": "stone",
+      "note": "1994–2004"
+    }
+  ],
+  "provenance": {
+    "source": "worldbank-jobs",
+    "sourceIndicator": "The Global Jobs Challenge (2026) — figure 2.2.F",
+    "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+    "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution",
+    "vintage": "2026-06-27",
+    "checksum": "74d9c14cd7db6f8b9eb007485bc227a05151913a4dcc4d3eb03b1d738758f973",
+    "definition": "Each EMDE region's largest increase in the youth population (aged 15–24) over any 10-year period, and when it fell. East Asia & Pacific's peak (to 1988) powered its growth miracle; Sub-Saharan Africa and the Middle East & North Africa reach their largest-ever peaks only now.",
+    "attribution": "World Bank — The Global Jobs Challenge (2026), CC BY 3.0 IGO",
+    "primarySource": "UN World Population Prospects 2024"
+  },
+  "recipe": [
+    {
+      "op": "transcribe_chart_pack",
+      "detail": "figure 2.2.F, peak youth cohort by region, millions + period"
+    }
+  ]
+}

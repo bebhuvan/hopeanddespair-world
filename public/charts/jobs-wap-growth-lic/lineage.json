@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "jobs.wap_growth.lic",
+    "unit": "working-age population growth · % per year",
+    "points": 51
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "transcribe_chart_pack",
+        "detail": "figure 2.3.B, lic working-age population growth"
+      }
+    ],
+    "agent": "adapter:worldbank-jobs@jobs-1.0.0",
+    "used": {
+      "source": "worldbank-jobs",
+      "slug": "figure 2.3.B",
+      "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+      "vintage": "2026-06-27",
+      "checksum": "b6c6ee3cd6c1aaf3287b3a7d4c8bc00304bd160ea39c415ae83ec28b1274f32e",
+      "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution"
+    }
+  },
+  "primarySource": "UN World Population Prospects 2024"
+}

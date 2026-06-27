@@ -1,0 +1,60 @@
+{
+  "chartId": "airpoll-by-cause-2021",
+  "kind": "bars",
+  "title": "Ambient air-pollution deaths by cause, World",
+  "unit": "million deaths per year",
+  "yearSpan": "2021",
+  "bars": [
+    {
+      "label": "Ischaemic heart disease",
+      "value": 1.93,
+      "color": "despair"
+    },
+    {
+      "label": "Stroke",
+      "value": 1.01,
+      "color": "despair"
+    },
+    {
+      "label": "COPD",
+      "value": 0.62,
+      "color": "ochre"
+    },
+    {
+      "label": "Lower-respiratory infections",
+      "value": 0.57,
+      "color": "ochre"
+    },
+    {
+      "label": "Lung cancer",
+      "value": 0.19,
+      "color": "stone"
+    }
+  ],
+  "xmax": 2,
+  "xTicks": [
+    0,
+    0.5,
+    1,
+    1.5,
+    2
+  ],
+  "provenance": {
+    "source": "who",
+    "sourceIndicator": "AIR_41",
+    "url": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/AIR_41",
+    "license": "CC BY-NC-SA 3.0 IGO",
+    "vintage": "2021",
+    "checksum": "a60d3ae2ba387a3454e53c3a2945ae149a5cd564c47a2a7d17c0a30606b6b8a7",
+    "definition": "Deaths attributable to ambient (outdoor) air pollution by disease, World, 2021. Cardiovascular causes (ischaemic heart disease + stroke) dominate.",
+    "attribution": "WHO Global Health Observatory",
+    "primarySource": "WHO Global Health Estimates 2021",
+    "notes": "CC BY-NC-SA 3.0 IGO — link-only; charted but not re-hosted."
+  },
+  "recipe": [
+    {
+      "op": "who_gho_by_cause",
+      "detail": "WHO GHO AIR_41, both-sex, GLOBAL 2021, split by GHE cause (IHD, stroke, COPD, LRI, lung cancer), in millions."
+    }
+  ]
+}

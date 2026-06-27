@@ -1,0 +1,128 @@
+{
+  "indicatorId": "education.govt_expenditure.world",
+  "entity": "WLD",
+  "entityName": "World",
+  "unit": "% of GDP",
+  "points": [
+    {
+      "t": 1999,
+      "value": 4.03683495521545
+    },
+    {
+      "t": 2000,
+      "value": 3.78288507461548
+    },
+    {
+      "t": 2001,
+      "value": 3.90370011329651
+    },
+    {
+      "t": 2002,
+      "value": 3.86491990089417
+    },
+    {
+      "t": 2003,
+      "value": 4.05078494548797
+    },
+    {
+      "t": 2004,
+      "value": 3.94351994991302
+    },
+    {
+      "t": 2005,
+      "value": 4.02098989486694
+    },
+    {
+      "t": 2006,
+      "value": 3.99198496341705
+    },
+    {
+      "t": 2007,
+      "value": 4.04881000518799
+    },
+    {
+      "t": 2008,
+      "value": 4.22755002975464
+    },
+    {
+      "t": 2009,
+      "value": 4.65950012207031
+    },
+    {
+      "t": 2010,
+      "value": 4.18953990936279
+    },
+    {
+      "t": 2011,
+      "value": 4.06764507293701
+    },
+    {
+      "t": 2012,
+      "value": 4.03481006622315
+    },
+    {
+      "t": 2013,
+      "value": 4.34479999542236
+    },
+    {
+      "t": 2014,
+      "value": 4.20045018196106
+    },
+    {
+      "t": 2015,
+      "value": 4.21141505241394
+    },
+    {
+      "t": 2016,
+      "value": 4.15415000915528
+    },
+    {
+      "t": 2017,
+      "value": 4.09265494346619
+    },
+    {
+      "t": 2018,
+      "value": 4.18293023109436
+    },
+    {
+      "t": 2019,
+      "value": 4.15775012969971
+    },
+    {
+      "t": 2020,
+      "value": 4.34224486351013
+    },
+    {
+      "t": 2021,
+      "value": 4.19910710491722
+    },
+    {
+      "t": 2022,
+      "value": 3.86129930773508
+    },
+    {
+      "t": 2023,
+      "value": 3.56927475138052
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SE.XPD.TOTL.GD.ZS",
+    "url": "https://data.worldbank.org/indicator/SE.XPD.TOTL.GD.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-21",
+    "checksum": "f36821410fb8cc53fbe556f490cad2efa309a33b2c0c56be568323fa70e017da",
+    "definition": "Government expenditure on education, total (% of GDP)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "UNESCO Institute for Statistics, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity WLD"
+    }
+  ],
+  "derivedFrom": [
+    "WLD"
+  ]
+}

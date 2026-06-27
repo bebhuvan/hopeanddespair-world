@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "education.out_of_school_primary.europe_and_northern_america",
+    "unit": "children",
+    "points": 24
+  },
+  "wasDerivedFrom": [
+    "Europe and Northern America (SDG)"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity Europe and Northern America (SDG)"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "out-of-school-children-of-primary-school-age-by-world-region",
+      "url": "https://ourworldindata.org/grapher/out-of-school-children-of-primary-school-age-by-world-region",
+      "vintage": "2026-06-21",
+      "checksum": "c18b721b373ef2ff94204c33969c5f115670030382dfa11ba5bea970e4fe6b12",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UNESCO Institute for Statistics — via Our World in Data"
+}

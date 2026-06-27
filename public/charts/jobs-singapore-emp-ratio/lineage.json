@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "jobs.emp_ratio.singapore",
+    "unit": "employment-to-population ratio · %",
+    "points": 23
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "transcribe_chart_pack",
+        "detail": "figure A.5.A, Singapore employment ratio"
+      }
+    ],
+    "agent": "adapter:worldbank-jobs@jobs-1.0.0",
+    "used": {
+      "source": "worldbank-jobs",
+      "slug": "figure A.5.A",
+      "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+      "vintage": "2026-06-27",
+      "checksum": "0ce3c54692fcf8d1401d4f032adb1f1e5d9987bf7efa4fd405f9a781dbcc8d96",
+      "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution"
+    }
+  },
+  "primarySource": "ILOSTAT; Feenstra, Inklaar & Timmer (2015)"
+}

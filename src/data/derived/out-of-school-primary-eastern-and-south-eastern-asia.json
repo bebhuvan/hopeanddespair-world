@@ -1,0 +1,124 @@
+{
+  "indicatorId": "education.out_of_school_primary.eastern_and_south_eastern_asia",
+  "entity": "Eastern and South-Eastern Asia (SDG)",
+  "entityName": "Eastern and South-Eastern Asia (SDG)",
+  "unit": "children",
+  "points": [
+    {
+      "t": 2000,
+      "value": 11740000
+    },
+    {
+      "t": 2001,
+      "value": 10880000
+    },
+    {
+      "t": 2002,
+      "value": 10200000
+    },
+    {
+      "t": 2003,
+      "value": 9818000
+    },
+    {
+      "t": 2004,
+      "value": 10700000
+    },
+    {
+      "t": 2005,
+      "value": 9926000
+    },
+    {
+      "t": 2006,
+      "value": 8881000
+    },
+    {
+      "t": 2007,
+      "value": 7924000
+    },
+    {
+      "t": 2008,
+      "value": 7099000
+    },
+    {
+      "t": 2009,
+      "value": 6392000
+    },
+    {
+      "t": 2010,
+      "value": 5696000
+    },
+    {
+      "t": 2011,
+      "value": 5228000
+    },
+    {
+      "t": 2012,
+      "value": 5045000
+    },
+    {
+      "t": 2013,
+      "value": 5165000
+    },
+    {
+      "t": 2014,
+      "value": 5400000
+    },
+    {
+      "t": 2015,
+      "value": 5620000
+    },
+    {
+      "t": 2016,
+      "value": 5884000
+    },
+    {
+      "t": 2017,
+      "value": 6216000
+    },
+    {
+      "t": 2018,
+      "value": 6616000
+    },
+    {
+      "t": 2019,
+      "value": 6956000
+    },
+    {
+      "t": 2020,
+      "value": 7291000
+    },
+    {
+      "t": 2021,
+      "value": 7638000
+    },
+    {
+      "t": 2022,
+      "value": 7904000
+    },
+    {
+      "t": 2023,
+      "value": 8175000
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "out_of_school_children_of_primary_school_age__both_sexes__number",
+    "url": "https://ourworldindata.org/grapher/out-of-school-children-of-primary-school-age-by-world-region",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-21",
+    "checksum": "c18b721b373ef2ff94204c33969c5f115670030382dfa11ba5bea970e4fe6b12",
+    "definition": "Children in the official primary school age range who are not enrolled in either primary or secondary education.",
+    "attribution": "Our World in Data",
+    "primarySource": "UNESCO Institute for Statistics — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity Eastern and South-Eastern Asia (SDG)"
+    }
+  ],
+  "derivedFrom": [
+    "Eastern and South-Eastern Asia (SDG)"
+  ]
+}

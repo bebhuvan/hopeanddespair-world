@@ -1,0 +1,117 @@
+[
+  {
+    "indicatorId": "air_pollution.clean_cooking.idn",
+    "entity": "IDN",
+    "entityName": "Indonesia",
+    "unit": "% of population",
+    "points": [
+      {
+        "t": 2000,
+        "value": 6.7
+      },
+      {
+        "t": 2001,
+        "value": 7.7
+      },
+      {
+        "t": 2002,
+        "value": 9.2
+      },
+      {
+        "t": 2003,
+        "value": 11
+      },
+      {
+        "t": 2004,
+        "value": 13.3
+      },
+      {
+        "t": 2005,
+        "value": 16.3
+      },
+      {
+        "t": 2006,
+        "value": 20
+      },
+      {
+        "t": 2007,
+        "value": 24.6
+      },
+      {
+        "t": 2008,
+        "value": 29.4
+      },
+      {
+        "t": 2009,
+        "value": 34.9
+      },
+      {
+        "t": 2010,
+        "value": 40.3
+      },
+      {
+        "t": 2011,
+        "value": 46.1
+      },
+      {
+        "t": 2012,
+        "value": 51.5
+      },
+      {
+        "t": 2013,
+        "value": 57
+      },
+      {
+        "t": 2014,
+        "value": 61.9
+      },
+      {
+        "t": 2015,
+        "value": 66.8
+      },
+      {
+        "t": 2016,
+        "value": 71.3
+      },
+      {
+        "t": 2017,
+        "value": 75.3
+      },
+      {
+        "t": 2018,
+        "value": 78.7
+      },
+      {
+        "t": 2019,
+        "value": 81.85
+      },
+      {
+        "t": 2020,
+        "value": 84.6
+      },
+      {
+        "t": 2021,
+        "value": 86.9
+      },
+      {
+        "t": 2022,
+        "value": 88.8
+      },
+      {
+        "t": 2023,
+        "value": 90.6
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "EG.CFT.ACCS.ZS",
+      "url": "https://data.worldbank.org/indicator/EG.CFT.ACCS.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-27",
+      "checksum": "913e2177ddb6ca9bdbd8d4f6bcfb8ed09ebc71b0767e98f1b3371d5a7b5cde58",
+      "definition": "Access to clean fuels and technologies for cooking (% of population)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "WHO Household Energy Database — via World Bank WDI"
+    }
+  }
+]

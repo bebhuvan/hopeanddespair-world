@@ -1,0 +1,38 @@
+{
+  "name": "air_pollution-pm25_exposure-lic",
+  "title": "Annual population-weighted average concentration of fine particulate matter (PM2.5) in the air, measured in micrograms per cubic meter (µg/m³). Fine particulate matter (PM2.5) are particles with a diameter of 2.5 micrometers or less, which can pose significant health risks.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/pm25-air-pollution"
+    }
+  ],
+  "created": "2026-06-27",
+  "resources": [
+    {
+      "name": "air_pollution-pm25_exposure-lic",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "air_pollution_pm25_exposure_lic",
+            "type": "number",
+            "unit": "micrograms per cubic metre"
+          }
+        ]
+      }
+    }
+  ]
+}

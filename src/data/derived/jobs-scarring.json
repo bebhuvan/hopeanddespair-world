@@ -1,0 +1,59 @@
+{
+  "chartId": "jobs-scarring",
+  "kind": "bars",
+  "title": "Going backwards",
+  "unit": "economies poorer per capita than before the pandemic · % of group · 2019 → 2025",
+  "yearSpan": "2019–25",
+  "xmax": 60,
+  "xTicks": [
+    0,
+    20,
+    40,
+    60
+  ],
+  "decimals": 0,
+  "bars": [
+    {
+      "label": "Fragile & conflict-affected",
+      "value": 57.6,
+      "color": "despair"
+    },
+    {
+      "label": "Low-income countries",
+      "value": 42.9,
+      "color": "despair"
+    },
+    {
+      "label": "EMDEs",
+      "value": 26.7,
+      "color": "ochre"
+    },
+    {
+      "label": "World",
+      "value": 23.9,
+      "color": "stone"
+    },
+    {
+      "label": "Advanced economies",
+      "value": 13.2,
+      "color": "stone"
+    }
+  ],
+  "provenance": {
+    "source": "worldbank-jobs",
+    "sourceIndicator": "The Global Jobs Challenge (2026) — figure 3.2.B",
+    "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+    "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution",
+    "vintage": "2026-06-27",
+    "checksum": "359c64733c159666a32002e6981d92697ade093a125aec2d8d64c3b15a763e62",
+    "definition": "Share of economies in each group whose GDP per capita in 2025 remains below its 2019 level. After the 2008 crisis it was advanced economies that lagged (39.5%); after the pandemic the damage flipped to the poorest — most fragile states are poorer than before.",
+    "attribution": "World Bank — The Global Jobs Challenge (2026), CC BY 3.0 IGO",
+    "primarySource": "World Bank (2026a)"
+  },
+  "recipe": [
+    {
+      "op": "transcribe_chart_pack",
+      "detail": "figure 3.2.B, economies poorer 5 years after recession, post-2020"
+    }
+  ]
+}

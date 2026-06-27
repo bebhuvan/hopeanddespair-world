@@ -1,0 +1,117 @@
+[
+  {
+    "indicatorId": "air_pollution.clean_cooking.nga",
+    "entity": "NGA",
+    "entityName": "Nigeria",
+    "unit": "% of population",
+    "points": [
+      {
+        "t": 2000,
+        "value": 0.7
+      },
+      {
+        "t": 2001,
+        "value": 0.7
+      },
+      {
+        "t": 2002,
+        "value": 0.7
+      },
+      {
+        "t": 2003,
+        "value": 0.8
+      },
+      {
+        "t": 2004,
+        "value": 0.9
+      },
+      {
+        "t": 2005,
+        "value": 0.9
+      },
+      {
+        "t": 2006,
+        "value": 1
+      },
+      {
+        "t": 2007,
+        "value": 1.1
+      },
+      {
+        "t": 2008,
+        "value": 1.3
+      },
+      {
+        "t": 2009,
+        "value": 1.5
+      },
+      {
+        "t": 2010,
+        "value": 1.8
+      },
+      {
+        "t": 2011,
+        "value": 2.2
+      },
+      {
+        "t": 2012,
+        "value": 2.7
+      },
+      {
+        "t": 2013,
+        "value": 3.4
+      },
+      {
+        "t": 2014,
+        "value": 4.3
+      },
+      {
+        "t": 2015,
+        "value": 5.7
+      },
+      {
+        "t": 2016,
+        "value": 7.4
+      },
+      {
+        "t": 2017,
+        "value": 9.7
+      },
+      {
+        "t": 2018,
+        "value": 12.5
+      },
+      {
+        "t": 2019,
+        "value": 15.7
+      },
+      {
+        "t": 2020,
+        "value": 18.9
+      },
+      {
+        "t": 2021,
+        "value": 21.85
+      },
+      {
+        "t": 2022,
+        "value": 24.4
+      },
+      {
+        "t": 2023,
+        "value": 26.2
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "EG.CFT.ACCS.ZS",
+      "url": "https://data.worldbank.org/indicator/EG.CFT.ACCS.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-27",
+      "checksum": "913e2177ddb6ca9bdbd8d4f6bcfb8ed09ebc71b0767e98f1b3371d5a7b5cde58",
+      "definition": "Access to clean fuels and technologies for cooking (% of population)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "WHO Household Energy Database — via World Bank WDI"
+    }
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "jobs.youth_wave.emde",
+    "unit": "young people aged 15–24 · billions",
+    "points": 15
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "transcribe_chart_pack",
+        "detail": "figure ES.1.A, EMDE youth 15–24, billions"
+      }
+    ],
+    "agent": "adapter:worldbank-jobs@jobs-1.0.0",
+    "used": {
+      "source": "worldbank-jobs",
+      "slug": "figure ES.1.A",
+      "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+      "vintage": "2026-06-27",
+      "checksum": "35aa32bc08735564878067e0fc2f8ebe2892e504b7d96afea30130f3868bf065",
+      "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution"
+    }
+  },
+  "primarySource": "UN World Population Prospects 2024"
+}

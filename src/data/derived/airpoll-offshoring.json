@@ -1,0 +1,45 @@
+{
+  "chartId": "airpoll-offshoring",
+  "kind": "bars",
+  "gate": "rehost",
+  "title": "Death made elsewhere: PM2.5 deaths embodied in traded goods",
+  "unit": "million deaths per year",
+  "yearSpan": "2017",
+  "bars": [
+    {
+      "label": "All outdoor PM2.5 deaths",
+      "value": 5.1,
+      "color": "stone"
+    },
+    {
+      "label": "…driven by richer countries’ consumption, dying in poorer ones",
+      "value": 0.8,
+      "color": "despair"
+    }
+  ],
+  "xmax": 6,
+  "xTicks": [
+    0,
+    2,
+    4,
+    6
+  ],
+  "provenance": {
+    "source": "illinois-idb",
+    "sourceIndicator": "IDB-3251572",
+    "url": "https://databank.illinois.edu/datasets/IDB-3251572",
+    "license": "CC BY 4.0",
+    "vintage": "2017",
+    "checksum": "c8adbf30c19aa1ff81cc0b61c8752f876885475aad206cbf4faba38b980ef770",
+    "definition": "Of roughly 5.1 million annual PM2.5 deaths, about 800,000 occur because a richer country (≥50% higher GDP per capita) consumed goods produced in a poorer country’s air. The United States is the largest net importer of this embodied mortality, and the gap widened 32% between 2007 and 2017. Standard Value-of-Statistical-Life accounting prices those lives toward zero by construction.",
+    "attribution": "Consumption-based PM2.5 mortality dataset (University of Illinois Databank, CC BY 4.0)",
+    "primarySource": "CC BY 4.0 — derived figures re-hostable with attribution."
+  },
+  "recipe": [
+    {
+      "op": "embodied_mortality",
+      "detail": "PM2.5 deaths displaced from consumer to producer countries via trade."
+    }
+  ],
+  "illustrative": false
+}

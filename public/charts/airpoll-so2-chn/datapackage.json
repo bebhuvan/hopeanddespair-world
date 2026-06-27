@@ -1,0 +1,38 @@
+{
+  "name": "air_pollution-so2-chn",
+  "title": "Nitrogen oxides (NOₓ) are gases that are mainly formed during the burning of fossil fuels. Exposure to NOₓ gases can have negative impacts on respiratory health. NOₓ gases can also lead to the formation of ozone – another air pollutant.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/long-run-air-pollution"
+    }
+  ],
+  "created": "2026-06-27",
+  "resources": [
+    {
+      "name": "air_pollution-so2-chn",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "air_pollution_so2_chn",
+            "type": "number",
+            "unit": "tonnes per year"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "air_pollution.nh3.world",
+    "unit": "tonnes per year",
+    "points": 123
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity OWID_WRL"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "long-run-air-pollution",
+      "url": "https://ourworldindata.org/grapher/long-run-air-pollution",
+      "vintage": "2026-06-27",
+      "checksum": "f9b156c64266e524edf6e19afc28807650a8931fbdca3793afd8f5e88dc12336",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Community Emissions Data System (CEDS; Hoesly et al.) — via Our World in Data"
+}

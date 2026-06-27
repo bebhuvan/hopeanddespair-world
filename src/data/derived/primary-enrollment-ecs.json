@@ -1,0 +1,132 @@
+{
+  "indicatorId": "education.primary_enrollment.ecs",
+  "entity": "ECS",
+  "entityName": "Europe & Central Asia",
+  "unit": "% gross",
+  "points": [
+    {
+      "t": 1999,
+      "value": 106.351379394531
+    },
+    {
+      "t": 2000,
+      "value": 104.001197814941
+    },
+    {
+      "t": 2001,
+      "value": 104.970207214355
+    },
+    {
+      "t": 2002,
+      "value": 105.540267944336
+    },
+    {
+      "t": 2003,
+      "value": 104.293769836426
+    },
+    {
+      "t": 2004,
+      "value": 103.689987182617
+    },
+    {
+      "t": 2005,
+      "value": 102.640342712402
+    },
+    {
+      "t": 2006,
+      "value": 102.209281921387
+    },
+    {
+      "t": 2007,
+      "value": 101.992767333984
+    },
+    {
+      "t": 2008,
+      "value": 101.62899017334
+    },
+    {
+      "t": 2009,
+      "value": 101.233612060547
+    },
+    {
+      "t": 2010,
+      "value": 101.274749755859
+    },
+    {
+      "t": 2011,
+      "value": 101.192428588867
+    },
+    {
+      "t": 2012,
+      "value": 101.023292541504
+    },
+    {
+      "t": 2013,
+      "value": 102.128631591797
+    },
+    {
+      "t": 2014,
+      "value": 101.195068359375
+    },
+    {
+      "t": 2015,
+      "value": 100.50414276123
+    },
+    {
+      "t": 2016,
+      "value": 100.152008056641
+    },
+    {
+      "t": 2017,
+      "value": 99.9920501708984
+    },
+    {
+      "t": 2018,
+      "value": 100.49089050293
+    },
+    {
+      "t": 2019,
+      "value": 100.92504119873
+    },
+    {
+      "t": 2020,
+      "value": 100.668319702148
+    },
+    {
+      "t": 2021,
+      "value": 100.687881469727
+    },
+    {
+      "t": 2022,
+      "value": 100.426940917969
+    },
+    {
+      "t": 2023,
+      "value": 100.080513000488
+    },
+    {
+      "t": 2024,
+      "value": 99.9414596557617
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SE.PRM.ENRR",
+    "url": "https://data.worldbank.org/indicator/SE.PRM.ENRR",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-21",
+    "checksum": "ab05c727f99111aba40204ec209ff746622a04d2dd05d070263d076384a9b48c",
+    "definition": "School enrollment, primary (% gross)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "UNESCO Institute for Statistics, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity ECS"
+    }
+  ],
+  "derivedFrom": [
+    "ECS"
+  ]
+}

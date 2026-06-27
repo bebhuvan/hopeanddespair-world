@@ -1,0 +1,136 @@
+{
+  "indicatorId": "air_pollution.pm25_exposure.npl",
+  "entity": "NPL",
+  "entityName": "Nepal",
+  "unit": "micrograms per cubic metre",
+  "points": [
+    {
+      "t": 1998,
+      "value": 24.8
+    },
+    {
+      "t": 1999,
+      "value": 25.9
+    },
+    {
+      "t": 2000,
+      "value": 34.2
+    },
+    {
+      "t": 2001,
+      "value": 37.6
+    },
+    {
+      "t": 2002,
+      "value": 34.8
+    },
+    {
+      "t": 2003,
+      "value": 36.2
+    },
+    {
+      "t": 2004,
+      "value": 38.4
+    },
+    {
+      "t": 2005,
+      "value": 35.2
+    },
+    {
+      "t": 2006,
+      "value": 39.2
+    },
+    {
+      "t": 2007,
+      "value": 40.6
+    },
+    {
+      "t": 2008,
+      "value": 43.2
+    },
+    {
+      "t": 2009,
+      "value": 46.8
+    },
+    {
+      "t": 2010,
+      "value": 41.8
+    },
+    {
+      "t": 2011,
+      "value": 42.8
+    },
+    {
+      "t": 2012,
+      "value": 43.9
+    },
+    {
+      "t": 2013,
+      "value": 41.4
+    },
+    {
+      "t": 2014,
+      "value": 43.1
+    },
+    {
+      "t": 2015,
+      "value": 46.3
+    },
+    {
+      "t": 2016,
+      "value": 48
+    },
+    {
+      "t": 2017,
+      "value": 47.6
+    },
+    {
+      "t": 2018,
+      "value": 52.6
+    },
+    {
+      "t": 2019,
+      "value": 47.7
+    },
+    {
+      "t": 2020,
+      "value": 41.7
+    },
+    {
+      "t": 2021,
+      "value": 50.2
+    },
+    {
+      "t": 2022,
+      "value": 44.3
+    },
+    {
+      "t": 2023,
+      "value": 41.9
+    },
+    {
+      "t": 2024,
+      "value": 40.7
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "population_weighted_pm25",
+    "url": "https://ourworldindata.org/grapher/pm25-air-pollution",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-27",
+    "checksum": "d5e80bdc2cc9b7ef83f0140d20f42d49043ce42fe549032195986e8dfb31ae16",
+    "definition": "Annual population-weighted average concentration of fine particulate matter (PM2.5) in the air, measured in micrograms per cubic meter (µg/m³). Fine particulate matter (PM2.5) are particles with a diameter of 2.5 micrometers or less, which can pose significant health risks.",
+    "attribution": "Our World in Data",
+    "primarySource": "Atmospheric Composition Analysis Group (van Donkelaar et al., V6.GL) — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity NPL"
+    }
+  ],
+  "derivedFrom": [
+    "NPL"
+  ]
+}

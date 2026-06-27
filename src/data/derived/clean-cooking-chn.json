@@ -1,0 +1,124 @@
+{
+  "indicatorId": "air_pollution.clean_cooking.chn",
+  "entity": "CHN",
+  "entityName": "China",
+  "unit": "% of population",
+  "points": [
+    {
+      "t": 2000,
+      "value": 40.3
+    },
+    {
+      "t": 2001,
+      "value": 41.6
+    },
+    {
+      "t": 2002,
+      "value": 42.8
+    },
+    {
+      "t": 2003,
+      "value": 44.1
+    },
+    {
+      "t": 2004,
+      "value": 45.7
+    },
+    {
+      "t": 2005,
+      "value": 47.4
+    },
+    {
+      "t": 2006,
+      "value": 49.1
+    },
+    {
+      "t": 2007,
+      "value": 51.2
+    },
+    {
+      "t": 2008,
+      "value": 53.2
+    },
+    {
+      "t": 2009,
+      "value": 55.3
+    },
+    {
+      "t": 2010,
+      "value": 57.9
+    },
+    {
+      "t": 2011,
+      "value": 60.3
+    },
+    {
+      "t": 2012,
+      "value": 63.1
+    },
+    {
+      "t": 2013,
+      "value": 65.9
+    },
+    {
+      "t": 2014,
+      "value": 69
+    },
+    {
+      "t": 2015,
+      "value": 71.6
+    },
+    {
+      "t": 2016,
+      "value": 74.2
+    },
+    {
+      "t": 2017,
+      "value": 76.9
+    },
+    {
+      "t": 2018,
+      "value": 79.5
+    },
+    {
+      "t": 2019,
+      "value": 81.6
+    },
+    {
+      "t": 2020,
+      "value": 83.8
+    },
+    {
+      "t": 2021,
+      "value": 85.6
+    },
+    {
+      "t": 2022,
+      "value": 87.2
+    },
+    {
+      "t": 2023,
+      "value": 88.7
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "EG.CFT.ACCS.ZS",
+    "url": "https://data.worldbank.org/indicator/EG.CFT.ACCS.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-27",
+    "checksum": "913e2177ddb6ca9bdbd8d4f6bcfb8ed09ebc71b0767e98f1b3371d5a7b5cde58",
+    "definition": "Access to clean fuels and technologies for cooking (% of population)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO Household Energy Database — via World Bank WDI"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity CHN"
+    }
+  ],
+  "derivedFrom": [
+    "CHN"
+  ]
+}

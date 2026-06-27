@@ -1,0 +1,124 @@
+{
+  "indicatorId": "education.out_of_school_primary.sub_saharan_africa",
+  "entity": "Sub-Saharan Africa (SDG)",
+  "entityName": "Sub-Saharan Africa (SDG)",
+  "unit": "children",
+  "points": [
+    {
+      "t": 2000,
+      "value": 39560000
+    },
+    {
+      "t": 2001,
+      "value": 38260000
+    },
+    {
+      "t": 2002,
+      "value": 37160000
+    },
+    {
+      "t": 2003,
+      "value": 36330000
+    },
+    {
+      "t": 2004,
+      "value": 35740000
+    },
+    {
+      "t": 2005,
+      "value": 35140000
+    },
+    {
+      "t": 2006,
+      "value": 34720000
+    },
+    {
+      "t": 2007,
+      "value": 34500000
+    },
+    {
+      "t": 2008,
+      "value": 34030000
+    },
+    {
+      "t": 2009,
+      "value": 33710000
+    },
+    {
+      "t": 2010,
+      "value": 33530000
+    },
+    {
+      "t": 2011,
+      "value": 33500000
+    },
+    {
+      "t": 2012,
+      "value": 33760000
+    },
+    {
+      "t": 2013,
+      "value": 34280000
+    },
+    {
+      "t": 2014,
+      "value": 34920000
+    },
+    {
+      "t": 2015,
+      "value": 35620000
+    },
+    {
+      "t": 2016,
+      "value": 36470000
+    },
+    {
+      "t": 2017,
+      "value": 37100000
+    },
+    {
+      "t": 2018,
+      "value": 37410000
+    },
+    {
+      "t": 2019,
+      "value": 37560000
+    },
+    {
+      "t": 2020,
+      "value": 37420000
+    },
+    {
+      "t": 2021,
+      "value": 37140000
+    },
+    {
+      "t": 2022,
+      "value": 36620000
+    },
+    {
+      "t": 2023,
+      "value": 36110000
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "out_of_school_children_of_primary_school_age__both_sexes__number",
+    "url": "https://ourworldindata.org/grapher/out-of-school-children-of-primary-school-age-by-world-region",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-21",
+    "checksum": "c18b721b373ef2ff94204c33969c5f115670030382dfa11ba5bea970e4fe6b12",
+    "definition": "Children in the official primary school age range who are not enrolled in either primary or secondary education.",
+    "attribution": "Our World in Data",
+    "primarySource": "UNESCO Institute for Statistics — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity Sub-Saharan Africa (SDG)"
+    }
+  ],
+  "derivedFrom": [
+    "Sub-Saharan Africa (SDG)"
+  ]
+}

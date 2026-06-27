@@ -1,0 +1,152 @@
+{
+  "indicatorId": "education.mean_years_schooling.world",
+  "entity": "OWID_WRL",
+  "entityName": "World",
+  "unit": "years",
+  "points": [
+    {
+      "t": 1870,
+      "value": 0.46026796
+    },
+    {
+      "t": 1875,
+      "value": 0.5161778
+    },
+    {
+      "t": 1880,
+      "value": 0.5989987
+    },
+    {
+      "t": 1885,
+      "value": 0.6794388
+    },
+    {
+      "t": 1890,
+      "value": 0.78066266
+    },
+    {
+      "t": 1895,
+      "value": 0.8785696
+    },
+    {
+      "t": 1900,
+      "value": 1.00808
+    },
+    {
+      "t": 1905,
+      "value": 1.1512768
+    },
+    {
+      "t": 1910,
+      "value": 1.2853836
+    },
+    {
+      "t": 1915,
+      "value": 1.4412706
+    },
+    {
+      "t": 1920,
+      "value": 1.6373215
+    },
+    {
+      "t": 1925,
+      "value": 1.8281308
+    },
+    {
+      "t": 1930,
+      "value": 2.018216
+    },
+    {
+      "t": 1935,
+      "value": 2.2034733
+    },
+    {
+      "t": 1940,
+      "value": 2.6039193
+    },
+    {
+      "t": 1945,
+      "value": 2.8062007
+    },
+    {
+      "t": 1950,
+      "value": 3.0336335
+    },
+    {
+      "t": 1955,
+      "value": 3.250855
+    },
+    {
+      "t": 1960,
+      "value": 3.5115314
+    },
+    {
+      "t": 1965,
+      "value": 3.8569107
+    },
+    {
+      "t": 1970,
+      "value": 4.3155894
+    },
+    {
+      "t": 1975,
+      "value": 4.7661443
+    },
+    {
+      "t": 1980,
+      "value": 5.310849
+    },
+    {
+      "t": 1985,
+      "value": 5.7433367
+    },
+    {
+      "t": 1990,
+      "value": 6.174556
+    },
+    {
+      "t": 1995,
+      "value": 6.7308083
+    },
+    {
+      "t": 2000,
+      "value": 7.2817993
+    },
+    {
+      "t": 2005,
+      "value": 7.7389355
+    },
+    {
+      "t": 2010,
+      "value": 8.149967
+    },
+    {
+      "t": 2015,
+      "value": 8.478128
+    },
+    {
+      "t": 2020,
+      "value": 8.840671
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "mf_youth_and_adults__15_64_years__average_years_of_education",
+    "url": "https://ourworldindata.org/grapher/mean-years-of-schooling",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-21",
+    "checksum": "92c03f5c1fae2c5434ffe65c1e24407826a364a2257445b86c2b87ae902376fa",
+    "definition": "Average years of formal education for individuals aged 15-64.",
+    "attribution": "Our World in Data",
+    "primarySource": "UNESCO Institute for Statistics; Lee & Lee — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity World"
+    }
+  ],
+  "derivedFrom": [
+    "OWID_WRL"
+  ]
+}

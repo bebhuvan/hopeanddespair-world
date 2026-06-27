@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "education.primary_completion.ecs",
+    "unit": "% of relevant age group",
+    "points": 26
+  },
+  "wasDerivedFrom": [
+    "ECS"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity ECS"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SE.PRM.CMPT.ZS",
+      "url": "https://data.worldbank.org/indicator/SE.PRM.CMPT.ZS",
+      "vintage": "2026-06-21",
+      "checksum": "be10945174c68bcf8765f3e36772ac50e5579ef9c7c40451d98a9a691b40efa9",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UNESCO Institute for Statistics, via World Bank"
+}

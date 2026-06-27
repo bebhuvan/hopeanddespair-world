@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "air_pollution.burn_savanna.world",
+    "unit": "hectares per year",
+    "points": 23
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity OWID_WRL"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "annual-burned-area-by-landcover",
+      "url": "https://ourworldindata.org/grapher/annual-burned-area-by-landcover",
+      "vintage": "2026-06-27",
+      "checksum": "ec5b6e07353fa6b8205e98794361dad3c650881aefa4a37afb7974708852bd26",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Global Wildfire Information System (GWIS) / MODIS — via Our World in Data"
+}

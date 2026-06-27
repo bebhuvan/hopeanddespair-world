@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "youth.neet.world",
+    "unit": "% of youth population",
+    "points": 23
+  },
+  "wasDerivedFrom": [
+    "X01"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:ilostat@1.1.0",
+    "used": {
+      "source": "ilostat",
+      "slug": "DF_EIP_2EET_SEX_RT",
+      "url": "https://sdmx.ilo.org/rest/data/DF_EIP_2EET_SEX_RT/all?startPeriod=1990",
+      "vintage": "2026-06-21",
+      "checksum": "3bdad5ac1d7a0406495ad533c8a44d7d854dcdd3e69af05176829783de1ac4e7",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "International Labour Organization (ILOSTAT, modelled estimates)"
+}

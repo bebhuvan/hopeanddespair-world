@@ -1,0 +1,33 @@
+{
+  "indicatorId": "jobs.youth_region.eap",
+  "entity": "EAP",
+  "entityName": "East Asia & Pacific",
+  "unit": "young people aged 15–24 · millions",
+  "points": [
+    {
+      "t": 2000,
+      "value": 307.9
+    },
+    {
+      "t": 2035,
+      "value": 285
+    }
+  ],
+  "provenance": {
+    "source": "worldbank-jobs",
+    "sourceIndicator": "The Global Jobs Challenge (2026) — figure 1.2.B",
+    "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+    "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution",
+    "vintage": "2026-06-27",
+    "checksum": "4a92433ddacc0af8cb220d3195727673b4ef05001e250a75309a87878b83f99d",
+    "definition": "Young people aged 15–24 living in East Asia & Pacific in 2000 and (projected) 2035.",
+    "attribution": "World Bank — The Global Jobs Challenge (2026), CC BY 3.0 IGO",
+    "primarySource": "UN World Population Prospects 2024"
+  },
+  "recipe": [
+    {
+      "op": "transcribe_chart_pack",
+      "detail": "figure 1.2.B, EAP youth 2000 & 2035, thousands→millions"
+    }
+  ]
+}

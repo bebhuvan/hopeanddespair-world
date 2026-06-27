@@ -1,0 +1,45 @@
+{
+  "chartId": "jobs-internet-divide",
+  "kind": "bars",
+  "title": "You can’t catch what you can’t reach",
+  "unit": "share of people using the internet · % · latest year",
+  "yearSpan": "latest",
+  "xmax": 100,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "decimals": 0,
+  "bars": [
+    {
+      "label": "EMDEs with a large jobs challenge",
+      "value": 29,
+      "color": "despair"
+    },
+    {
+      "label": "Other EMDEs",
+      "value": 80.6,
+      "color": "hope"
+    }
+  ],
+  "provenance": {
+    "source": "worldbank-jobs",
+    "sourceIndicator": "The Global Jobs Challenge (2026) — figure 3.4.B",
+    "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+    "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution",
+    "vintage": "2026-06-27",
+    "checksum": "de3f3cdea274ce5355deb1371d4e73064a4abcef53a40428bd557d87f5aa4aaa",
+    "definition": "Median share of individuals using the internet across EMDEs, latest available year. Where the jobs challenge is largest, most people are still offline — so the productivity upside of AI is hardest to capture there.",
+    "attribution": "World Bank — The Global Jobs Challenge (2026), CC BY 3.0 IGO",
+    "primarySource": "World Development Indicators"
+  },
+  "recipe": [
+    {
+      "op": "transcribe_chart_pack",
+      "detail": "figure 3.4.B, internet use, %"
+    }
+  ]
+}

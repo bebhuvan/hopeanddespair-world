@@ -1,0 +1,120 @@
+{
+  "indicatorId": "air_pollution.burn_forest.world",
+  "entity": "OWID_WRL",
+  "entityName": "World",
+  "unit": "hectares per year",
+  "points": [
+    {
+      "t": 2002,
+      "value": 25253800
+    },
+    {
+      "t": 2003,
+      "value": 34195236
+    },
+    {
+      "t": 2004,
+      "value": 36613364
+    },
+    {
+      "t": 2005,
+      "value": 35332988
+    },
+    {
+      "t": 2006,
+      "value": 31350600
+    },
+    {
+      "t": 2007,
+      "value": 36855220
+    },
+    {
+      "t": 2008,
+      "value": 31068322
+    },
+    {
+      "t": 2009,
+      "value": 30055112
+    },
+    {
+      "t": 2010,
+      "value": 40843772
+    },
+    {
+      "t": 2011,
+      "value": 32444586
+    },
+    {
+      "t": 2012,
+      "value": 35888676
+    },
+    {
+      "t": 2013,
+      "value": 30350740
+    },
+    {
+      "t": 2014,
+      "value": 31086892
+    },
+    {
+      "t": 2015,
+      "value": 33364892
+    },
+    {
+      "t": 2016,
+      "value": 32861130
+    },
+    {
+      "t": 2017,
+      "value": 32823200
+    },
+    {
+      "t": 2018,
+      "value": 28389468
+    },
+    {
+      "t": 2019,
+      "value": 35679664
+    },
+    {
+      "t": 2020,
+      "value": 33877560
+    },
+    {
+      "t": 2021,
+      "value": 29652928
+    },
+    {
+      "t": 2022,
+      "value": 24251472
+    },
+    {
+      "t": 2023,
+      "value": 25527552
+    },
+    {
+      "t": 2024,
+      "value": 35336490
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "forest",
+    "url": "https://ourworldindata.org/grapher/annual-burned-area-by-landcover",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-27",
+    "checksum": "ec5b6e07353fa6b8205e98794361dad3c650881aefa4a37afb7974708852bd26",
+    "definition": "Area of other land types burnt by wildfires each year, in hectares. Includes wetlands, urban areas, snow and ice, bare ground, and water bodies.",
+    "attribution": "Our World in Data",
+    "primarySource": "Global Wildfire Information System (GWIS) / MODIS — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity OWID_WRL"
+    }
+  ],
+  "derivedFrom": [
+    "OWID_WRL"
+  ]
+}

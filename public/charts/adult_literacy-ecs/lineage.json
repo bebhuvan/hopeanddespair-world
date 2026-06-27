@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "education.adult_literacy.ecs",
+    "unit": "%",
+    "points": 29
+  },
+  "wasDerivedFrom": [
+    "ECS"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity ECS"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SE.ADT.LITR.ZS",
+      "url": "https://data.worldbank.org/indicator/SE.ADT.LITR.ZS",
+      "vintage": "2026-06-21",
+      "checksum": "5b58c0769d452968140f81c2d088dfbf11cf482c3a14b0fc09b5c6b0fa093b3a",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UNESCO Institute for Statistics, via World Bank"
+}

@@ -1,0 +1,132 @@
+{
+  "indicatorId": "education.primary_completion.lcn",
+  "entity": "LCN",
+  "entityName": "Latin America & Caribbean",
+  "unit": "% of relevant age group",
+  "points": [
+    {
+      "t": 1999,
+      "value": 89.9413909912109
+    },
+    {
+      "t": 2000,
+      "value": 90.3562469482422
+    },
+    {
+      "t": 2001,
+      "value": 90.2721405029297
+    },
+    {
+      "t": 2002,
+      "value": 92.1673812866211
+    },
+    {
+      "t": 2003,
+      "value": 92.5200729370117
+    },
+    {
+      "t": 2004,
+      "value": 93.2899475097656
+    },
+    {
+      "t": 2005,
+      "value": 94.3645324707031
+    },
+    {
+      "t": 2006,
+      "value": 95.6390533447266
+    },
+    {
+      "t": 2007,
+      "value": 97.3306198120117
+    },
+    {
+      "t": 2008,
+      "value": 97.4248428344727
+    },
+    {
+      "t": 2009,
+      "value": 98.3635482788086
+    },
+    {
+      "t": 2010,
+      "value": 98.868049621582
+    },
+    {
+      "t": 2011,
+      "value": 99.1697082519531
+    },
+    {
+      "t": 2012,
+      "value": 99.8715133666992
+    },
+    {
+      "t": 2013,
+      "value": 99.4533462524414
+    },
+    {
+      "t": 2014,
+      "value": 99.8396224975586
+    },
+    {
+      "t": 2015,
+      "value": 98.3829498291016
+    },
+    {
+      "t": 2016,
+      "value": 97.8241882324219
+    },
+    {
+      "t": 2017,
+      "value": 96.5334701538086
+    },
+    {
+      "t": 2018,
+      "value": 95.6381607055664
+    },
+    {
+      "t": 2019,
+      "value": 95.2948989868164
+    },
+    {
+      "t": 2020,
+      "value": 95.3600234985352
+    },
+    {
+      "t": 2021,
+      "value": 96.0848007202148
+    },
+    {
+      "t": 2022,
+      "value": 95.6000900268555
+    },
+    {
+      "t": 2023,
+      "value": 96.4864730834961
+    },
+    {
+      "t": 2024,
+      "value": 96.4503784179688
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SE.PRM.CMPT.ZS",
+    "url": "https://data.worldbank.org/indicator/SE.PRM.CMPT.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-21",
+    "checksum": "be10945174c68bcf8765f3e36772ac50e5579ef9c7c40451d98a9a691b40efa9",
+    "definition": "Primary completion rate, total (% of relevant age group)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "UNESCO Institute for Statistics, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity LCN"
+    }
+  ],
+  "derivedFrom": [
+    "LCN"
+  ]
+}

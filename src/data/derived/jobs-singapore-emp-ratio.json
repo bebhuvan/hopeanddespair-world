@@ -1,0 +1,117 @@
+{
+  "indicatorId": "jobs.emp_ratio.singapore",
+  "entity": "SGP",
+  "entityName": "Singapore",
+  "unit": "employment-to-population ratio · %",
+  "points": [
+    {
+      "t": 1997,
+      "value": 49.8
+    },
+    {
+      "t": 1998,
+      "value": 50
+    },
+    {
+      "t": 1999,
+      "value": 49.9
+    },
+    {
+      "t": 2000,
+      "value": 51.7
+    },
+    {
+      "t": 2001,
+      "value": 52.3
+    },
+    {
+      "t": 2002,
+      "value": 53.6
+    },
+    {
+      "t": 2003,
+      "value": 53
+    },
+    {
+      "t": 2004,
+      "value": 54.1
+    },
+    {
+      "t": 2005,
+      "value": 55.6
+    },
+    {
+      "t": 2006,
+      "value": 57.9
+    },
+    {
+      "t": 2007,
+      "value": 61.1
+    },
+    {
+      "t": 2008,
+      "value": 61.8
+    },
+    {
+      "t": 2009,
+      "value": 60.2
+    },
+    {
+      "t": 2010,
+      "value": 60.6
+    },
+    {
+      "t": 2011,
+      "value": 61.4
+    },
+    {
+      "t": 2012,
+      "value": 62.6
+    },
+    {
+      "t": 2013,
+      "value": 64.1
+    },
+    {
+      "t": 2014,
+      "value": 65.6
+    },
+    {
+      "t": 2015,
+      "value": 65.4
+    },
+    {
+      "t": 2016,
+      "value": 65
+    },
+    {
+      "t": 2017,
+      "value": 64.3
+    },
+    {
+      "t": 2018,
+      "value": 64.5
+    },
+    {
+      "t": 2019,
+      "value": 64.8
+    }
+  ],
+  "provenance": {
+    "source": "worldbank-jobs",
+    "sourceIndicator": "The Global Jobs Challenge (2026) — figure A.5.A",
+    "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+    "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution",
+    "vintage": "2026-06-27",
+    "checksum": "0ce3c54692fcf8d1401d4f032adb1f1e5d9987bf7efa4fd405f9a781dbcc8d96",
+    "definition": "Singapore's employment-to-population ratio through its growth episode.",
+    "attribution": "World Bank — The Global Jobs Challenge (2026), CC BY 3.0 IGO",
+    "primarySource": "ILOSTAT; Feenstra, Inklaar & Timmer (2015)"
+  },
+  "recipe": [
+    {
+      "op": "transcribe_chart_pack",
+      "detail": "figure A.5.A, Singapore employment ratio"
+    }
+  ]
+}

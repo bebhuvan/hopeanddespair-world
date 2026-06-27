@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "air_pollution.pm25_exposure.deu",
+    "unit": "micrograms per cubic metre",
+    "points": 27
+  },
+  "wasDerivedFrom": [
+    "DEU"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity DEU"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "pm25-air-pollution",
+      "url": "https://ourworldindata.org/grapher/pm25-air-pollution",
+      "vintage": "2026-06-27",
+      "checksum": "d5e80bdc2cc9b7ef83f0140d20f42d49043ce42fe549032195986e8dfb31ae16",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "Atmospheric Composition Analysis Group (van Donkelaar et al., V6.GL) — via Our World in Data"
+}

@@ -712,6 +712,155 @@ export const INDICATORS: IndicatorSpec[] = [
     validate: { min: 0, max: 100, monotonicJump: 1, requireProvenance: true },
     primarySource: 'UNESCO; Buringh & van Zanden — via Our World in Data',
   },
+  // Mean years of schooling — the deeper measure of how much education a population actually got.
+  // 1870→2020, World + continents; complements literacy by measuring duration, not just threshold.
+  {
+    id: 'education.mean_years_schooling.world',
+    title: 'Average years of schooling, World',
+    unit: 'years',
+    chartId: 'mean-years-schooling-world',
+    adapter: 'owid',
+    slug: 'mean-years-of-schooling',
+    sourceColumn: 'mf_youth_and_adults__15_64_years__average_years_of_education',
+    entityFilter: ['World'],
+    derive: { op: 'pick_entity', entity: 'World' },
+    validate: { min: 0, max: 20, monotonicJump: 1, requireProvenance: true },
+    primarySource: 'UNESCO Institute for Statistics; Lee & Lee — via Our World in Data',
+  },
+  // School enrollment ladder — primary → secondary → tertiary. WB gross enrollment ratios,
+  // World + the six standard WB regions, showing how far up the ladder the average child climbs.
+  ...([
+    ['primary', 'SE.PRM.ENRR', 'Primary school enrolment', '% gross'],
+    ['secondary', 'SE.SEC.ENRR', 'Secondary school enrolment', '% gross'],
+    ['tertiary', 'SE.TER.ENRR', 'Tertiary school enrolment', '% gross'],
+  ] as const).flatMap(([level, code, title, unit]) => ([
+    ['World', 'WLD'],
+    ...WB_REGIONS,
+  ] as const).map(([name, ent]) => ({
+    id: `education.${level}_enrollment.${ent.toLowerCase()}`,
+    title: `${title}, ${name}`,
+    unit,
+    chartId: `${level}-enrollment-${ent.toLowerCase()}`,
+    adapter: 'worldbank' as const, slug: code,
+    entityFilter: [name], derive: { op: 'pick_entity' as const, entity: ent },
+    validate: { min: 0, max: 160, monotonicJump: 5, requireProvenance: true },
+    primarySource: 'UNESCO Institute for Statistics, via World Bank',
+  }))),
+
+  // Completion rates — the "finishing" story. Enrollment is access; completion is the outcome.
+  // WB has clean World + regional series for primary and lower-secondary completion.
+  ...([
+    ['primary_completion', 'SE.PRM.CMPT.ZS', 'Primary completion rate', '% of relevant age group'],
+    ['lower_secondary_completion', 'SE.SEC.CMPT.LO.ZS', 'Lower-secondary completion rate', '% of relevant age group'],
+  ] as const).flatMap(([level, code, title, unit]) => ([
+    ['World', 'WLD'],
+    ...WB_REGIONS,
+  ] as const).map(([name, ent]) => ({
+    id: `education.${level}.${ent.toLowerCase()}`,
+    title: `${title}, ${name}`,
+    unit,
+    chartId: `${level}-${ent.toLowerCase()}`,
+    adapter: 'worldbank' as const, slug: code,
+    entityFilter: [name], derive: { op: 'pick_entity' as const, entity: ent },
+    validate: { min: 0, max: 120, monotonicJump: 5, requireProvenance: true },
+    primarySource: 'UNESCO Institute for Statistics, via World Bank',
+  }))),
+
+  // Adult vs youth literacy — the generational gap. Youth literacy is higher everywhere,
+  // showing that the rise is still underway and concentrated in younger cohorts.
+  ...([
+    ['adult_literacy', 'SE.ADT.LITR.ZS', 'Adult literacy rate (15+)', '%'],
+    ['youth_literacy', 'SE.ADT.1524.LT.ZS', 'Youth literacy rate (15-24)', '%'],
+  ] as const).flatMap(([level, code, title, unit]) => ([
+    ['World', 'WLD'],
+    ...WB_REGIONS,
+  ] as const).map(([name, ent]) => ({
+    id: `education.${level}.${ent.toLowerCase()}`,
+    title: `${title}, ${name}`,
+    unit,
+    chartId: `${level}-${ent.toLowerCase()}`,
+    adapter: 'worldbank' as const, slug: code,
+    entityFilter: [name], derive: { op: 'pick_entity' as const, entity: ent },
+    validate: { min: 0, max: 100, monotonicJump: 3, requireProvenance: true },
+    primarySource: 'UNESCO Institute for Statistics, via World Bank',
+  }))),
+
+  // Out-of-school children — the despair counterpoint to enrollment. OWID carries a clean World
+  // series plus SDG-region splits of primary-school-age children not in school (~71M in 2023).
+  {
+    id: 'education.out_of_school_primary.world',
+    title: 'Out-of-school children of primary school age, World',
+    unit: 'children',
+    chartId: 'out-of-school-primary-world',
+    adapter: 'owid',
+    slug: 'out-of-school-children-of-primary-school-age-by-world-region',
+    sourceColumn: 'out_of_school_children_of_primary_school_age__both_sexes__number',
+    entityFilter: ['World'],
+    derive: { op: 'pick_entity', entity: 'World' },
+    validate: { min: 0, max: 200_000_000, monotonicJump: 0.3, requireProvenance: true },
+    primarySource: 'UNESCO Institute for Statistics — via Our World in Data',
+  },
+  ...([
+    ['Sub-Saharan Africa (SDG)', 'sub-saharan-africa'],
+    ['Central and Southern Asia (SDG)', 'central-and-southern-asia'],
+    ['Eastern and South-Eastern Asia (SDG)', 'eastern-and-south-eastern-asia'],
+    ['Europe and Northern America (SDG)', 'europe-and-northern-america'],
+    ['Northern Africa and Western Asia (SDG)', 'northern-africa-and-western-asia'],
+  ] as const).map(([entity, slug]) => ({
+    id: `education.out_of_school_primary.${slug.replace(/-/g, '_')}`,
+    title: `Out-of-school children of primary school age, ${entity.replace(' (SDG)', '')}`,
+    unit: 'children',
+    chartId: `out-of-school-primary-${slug}`,
+    adapter: 'owid' as const,
+    slug: 'out-of-school-children-of-primary-school-age-by-world-region',
+    sourceColumn: 'out_of_school_children_of_primary_school_age__both_sexes__number',
+    entityFilter: [entity],
+    derive: { op: 'pick_entity' as const, entity },
+    validate: { min: 0, max: 120_000_000, monotonicJump: 0.3, requireProvenance: true },
+    primarySource: 'UNESCO Institute for Statistics — via Our World in Data',
+  })),
+
+  // Government education spending — "are we paying for it?" context. World + the six WB regions.
+  {
+    id: 'education.govt_expenditure.world',
+    title: 'Government expenditure on education, World',
+    unit: '% of GDP',
+    chartId: 'education-expenditure-world',
+    adapter: 'worldbank',
+    slug: 'SE.XPD.TOTL.GD.ZS',
+    entityFilter: ['World'],
+    derive: { op: 'pick_entity', entity: 'WLD' },
+    validate: { min: 0, max: 20, monotonicJump: 1, requireProvenance: true },
+    primarySource: 'UNESCO Institute for Statistics, via World Bank',
+  },
+  ...WB_REGIONS.map(([name, code]) => ({
+    id: `education.govt_expenditure.${code.toLowerCase()}`,
+    title: `Government expenditure on education, ${name}`,
+    unit: '% of GDP',
+    chartId: `education-expenditure-${code.toLowerCase()}`,
+    adapter: 'worldbank' as const,
+    slug: 'SE.XPD.TOTL.GD.ZS',
+    entityFilter: [name],
+    derive: { op: 'pick_entity' as const, entity: code },
+    validate: { min: 0, max: 20, monotonicJump: 1, requireProvenance: true },
+    primarySource: 'UNESCO Institute for Statistics, via World Bank',
+  })),
+
+  // Youth NEET — not in employment, education, or training. The post-schooling disengagement
+  // indicator: even where schooling is high, the transition to work or further study can fail.
+  {
+    id: 'youth.neet.world',
+    title: 'Youth not in employment, education or training (NEET), World',
+    unit: '% of youth population',
+    chartId: 'youth-neet-world',
+    adapter: 'ilostat',
+    slug: 'DF_EIP_2EET_SEX_RT',
+    filter: { SEX: 'SEX_T' },
+    entityFilter: ['World'],
+    derive: { op: 'pick_entity', entity: 'World' },
+    validate: { min: 0, max: 50, monotonicJump: 2, requireProvenance: true },
+    primarySource: 'International Labour Organization (ILOSTAT, modelled estimates)',
+  },
 
   // ── Freedom (confusion). V-Dem liberal-democracy index — long rise, post-2010s reversal. ──
   {
@@ -2190,6 +2339,141 @@ export const INDICATORS: IndicatorSpec[] = [
     validate: { min: 0, max: 100, monotonicJump: 6, requireProvenance: true },
     primarySource: 'UNESCO Institute for Statistics — via World Bank WDI / Data360',
   },
+
+  // ── Q14 · Air pollution (air_pollution.*) ─────────────────────────────────────────────────
+  // The re-hostable World Bank WDI spine (CC BY 4.0) for "is the air cleaner or deadlier?" — the
+  // exposure + clean-cooking series that carry the verifiable load while GBD burden stays
+  // link-only (see docs/ARTICLE-airpollution-plan.md). Run with `ONLY=air_pollution pnpm data`.
+  // PM2.5 exposure EN.ATM.PM25.MC.M3 (µg/m³, 1990–2020, ACAG-sourced); clean cooking
+  // EG.CFT.ACCS.ZS (%, 2000–2023); air-pollution mortality SH.STA.AIRP.P5 (per 100k, 2019 x-sec).
+  // PM2.5 exposure — the CURRENT ACAG V6 series via OWID (1998–2024, population-weighted), not the
+  // World Bank mirror (which stalled at 2020/V5 and told a falsely tidy "30-year decline"). V6 shows
+  // the truer arc: world rose to a ~2015 peak then fell; South Asia worsened while the rich world cleaned up.
+  {
+    id: 'air_pollution.pm25_exposure.world',
+    title: 'PM2.5 population-weighted mean exposure, World', unit: 'micrograms per cubic metre',
+    chartId: 'pm25-exposure-world', adapter: 'owid', slug: 'pm25-air-pollution',
+    sourceColumn: 'population_weighted_pm25', sourceUnit: 'micrograms per cubic metre',
+    entityFilter: ['World'], derive: { op: 'pick_entity', entity: 'OWID_WRL' },
+    validate: { min: 0, max: 200, monotonicJump: 10, requireProvenance: true },
+    primarySource: 'Atmospheric Composition Analysis Group (van Donkelaar et al., V6.GL) — via Our World in Data',
+  },
+  // …by income group — the gradient. OWID income aggregates: OWID_HIC/UMC/LMC/LIC.
+  ...(([['High-income countries', 'OWID_HIC', 'hic'], ['Upper-middle-income countries', 'OWID_UMC', 'umc'], ['Lower-middle-income countries', 'OWID_LMC', 'lmc'], ['Low-income countries', 'OWID_LIC', 'lic']]) as const).map(([name, code, slug]) => ({
+    id: `air_pollution.pm25_exposure.${slug}`,
+    title: `PM2.5 population-weighted mean exposure, ${name}`, unit: 'micrograms per cubic metre',
+    chartId: `pm25-exposure-${slug}`, adapter: 'owid' as const, slug: 'pm25-air-pollution',
+    sourceColumn: 'population_weighted_pm25', sourceUnit: 'micrograms per cubic metre',
+    entityFilter: [name], derive: { op: 'pick_entity' as const, entity: code },
+    validate: { min: 0, max: 200, monotonicJump: 10, requireProvenance: true },
+    primarySource: 'Atmospheric Composition Analysis Group (van Donkelaar et al., V6.GL) — via Our World in Data',
+  })),
+  // …key countries — South Asia rose, China plateaued, the US floor kept dropping. Wide spread so the
+  // article can cut the trend by country in several sections: the South-Asian epicentre (IND/BGD/PAK/NPL,
+  // all rising), the cleanups (CHN's post-2014 cliff, USA/GBR/DEU low-and-falling), the Gulf + Nigeria.
+  ...(([['India', 'IND'], ['China', 'CHN'], ['United States', 'USA'], ['Bangladesh', 'BGD'], ['Pakistan', 'PAK'], ['Nepal', 'NPL'], ['Nigeria', 'NGA'], ['Indonesia', 'IDN'], ['United Kingdom', 'GBR'], ['Germany', 'DEU'], ['Saudi Arabia', 'SAU']]) as const).map(([name, code]) => ({
+    id: `air_pollution.pm25_exposure.${code.toLowerCase()}`,
+    title: `PM2.5 population-weighted mean exposure, ${name}`, unit: 'micrograms per cubic metre',
+    chartId: `pm25-exposure-${code.toLowerCase()}`, adapter: 'owid' as const, slug: 'pm25-air-pollution',
+    sourceColumn: 'population_weighted_pm25', sourceUnit: 'micrograms per cubic metre',
+    entityFilter: [name], derive: { op: 'pick_entity' as const, entity: code },
+    validate: { min: 0, max: 200, monotonicJump: 20, requireProvenance: true },
+    primarySource: 'Atmospheric Composition Analysis Group (van Donkelaar et al., V6.GL) — via Our World in Data',
+  })),
+  // Clean-cooking access — World (the hope beat: 49→74%) + regions (S Asia surges, SSA crawls).
+  {
+    id: 'air_pollution.clean_cooking.world',
+    title: 'Access to clean cooking fuels & technologies, World', unit: '% of population',
+    chartId: 'clean-cooking-world', adapter: 'worldbank', slug: 'EG.CFT.ACCS.ZS',
+    entityFilter: ['World'], derive: { op: 'pick_entity', entity: 'WLD' },
+    validate: { min: 0, max: 100, monotonicJump: 5, requireProvenance: true },
+    primarySource: 'WHO Household Energy Database — via World Bank WDI',
+  },
+  ...WB_REGIONS.map(([name, code]) => ({
+    id: `air_pollution.clean_cooking.${code.toLowerCase()}`,
+    title: `Access to clean cooking, ${name}`, unit: '% of population',
+    chartId: `clean-cooking-${code.toLowerCase()}`, adapter: 'worldbank' as const, slug: 'EG.CFT.ACCS.ZS',
+    entityFilter: [name], derive: { op: 'pick_entity' as const, entity: code },
+    validate: { min: 0, max: 100, monotonicJump: 6, requireProvenance: true },
+    primarySource: 'WHO Household Energy Database — via World Bank WDI',
+  })),
+  // …and by country — India's near-miracle (the LPG push), Indonesia's fast climb, China high, vs
+  // Nigeria and Bangladesh where births outran connections. The country cut the regional view hides.
+  ...(([['India', 'IND'], ['China', 'CHN'], ['Indonesia', 'IDN'], ['Nigeria', 'NGA'], ['Bangladesh', 'BGD']]) as const).map(([name, code]) => ({
+    id: `air_pollution.clean_cooking.${code.toLowerCase()}`,
+    title: `Access to clean cooking, ${name}`, unit: '% of population',
+    chartId: `clean-cooking-${code.toLowerCase()}`, adapter: 'worldbank' as const, slug: 'EG.CFT.ACCS.ZS',
+    entityFilter: [name], derive: { op: 'pick_entity' as const, entity: code },
+    validate: { min: 0, max: 100, monotonicJump: 6, requireProvenance: true },
+    primarySource: 'WHO Household Energy Database — via World Bank WDI',
+  })),
+  // Air-pollution mortality rate — World + regions (2019 cross-section → ranked bars).
+  {
+    id: 'air_pollution.mortality.world',
+    title: 'Mortality attributed to air pollution, World', unit: 'per 100,000 (age-standardised)',
+    chartId: 'airpoll-mortality-world', adapter: 'worldbank', slug: 'SH.STA.AIRP.P5',
+    entityFilter: ['World'], derive: { op: 'pick_entity', entity: 'WLD' },
+    validate: { min: 0, max: 400, monotonicJump: 400, requireProvenance: true },
+    primarySource: 'WHO Global Health Observatory — via World Bank WDI',
+  },
+  ...WB_REGIONS.map(([name, code]) => ({
+    id: `air_pollution.mortality.${code.toLowerCase()}`,
+    title: `Mortality attributed to air pollution, ${name}`, unit: 'per 100,000 (age-standardised)',
+    chartId: `airpoll-mortality-${code.toLowerCase()}`, adapter: 'worldbank' as const, slug: 'SH.STA.AIRP.P5',
+    entityFilter: [name], derive: { op: 'pick_entity' as const, entity: code },
+    validate: { min: 0, max: 400, monotonicJump: 400, requireProvenance: true },
+    primarySource: 'WHO Global Health Observatory — via World Bank WDI',
+  })),
+  // The decoupling, made concrete: absolute ambient PM2.5 deaths over time (State of Global Air /
+  // IHME via OWID) — RISING in fast-growing Asia even as concentration fell, because population grew
+  // and aged. IHME-derived → link-only (the OWID death-RATE graphers 403 outright; this absolute slug
+  // serves but stays non-commercial). 1990–2015, per country (no World row → pick named countries).
+  ...(([['India', 'IND'], ['China', 'CHN'], ['United States', 'USA'], ['Bangladesh', 'BGD'], ['Pakistan', 'PAK'], ['Indonesia', 'IDN'], ['Nigeria', 'NGA']]) as const).map(([name, code]) => ({
+    id: `air_pollution.ambient_deaths.${code.toLowerCase()}`,
+    title: `Deaths from ambient PM2.5 air pollution, ${name}`, unit: 'deaths per year',
+    chartId: `ambient-deaths-${code.toLowerCase()}`, adapter: 'owid' as const,
+    slug: 'absolute-number-of-deaths-from-ambient-particulate-air-pollution',
+    sourceColumn: 'absolute_deaths_from_ambient_pm2_5_air_pollution__state_of_global_air',
+    sourceUnit: 'deaths per year', // OWID metadata mislabels this count column as "Percent"; renderer auto-formats (737k, 1.1M)
+    entityFilter: [name], derive: { op: 'pick_entity' as const, entity: code },
+    validate: { min: 0, max: 2000000, monotonicJump: 500000, requireProvenance: true },
+    gate: 'link-only' as const, license: 'IHME / State of Global Air — link-only (non-commercial)',
+    primarySource: 'State of Global Air (Health Effects Institute; IHME GBD), via Our World in Data',
+  })),
+  // ── The aerosol-masking paradox + the unregulated pollutant — CEDS emissions over time (Hoesly et
+  //    al.) via OWID, CC BY 4.0 (re-hostable). The story is in the long arc: sulphur peaked in 1979 and
+  //    fell (cleaning lungs, unmasking warming); China's SO2 cliff after its 2006 peak; ammonia, which
+  //    no clean-air law touches, just keeps climbing. Multi-column grapher → sourceColumn is MANDATORY
+  //    (CLAUDE.md gotcha: the adapter silently reads the LAST column otherwise).
+  ...(([
+    ['so2', 'World', 'OWID_WRL', 'world', 'Sulphur dioxide (SO₂) emissions, World', 2.0e8],
+    ['so2', 'China', 'CHN', 'chn', 'Sulphur dioxide (SO₂) emissions, China', 5.0e7],
+    ['nh3', 'World', 'OWID_WRL', 'world', 'Ammonia (NH₃) emissions, World', 1.0e8],
+    ['nox', 'World', 'OWID_WRL', 'world', 'Nitrogen oxides (NOₓ) emissions, World', 2.0e8],
+  ]) as const).map(([pol, name, code, slug, title, max]) => ({
+    id: `air_pollution.${pol}.${slug}`,
+    title, unit: 'tonnes per year',
+    chartId: `airpoll-${pol}-${slug}`, adapter: 'owid' as const, slug: 'long-run-air-pollution',
+    sourceColumn: `emissions__pollutant_${pol}__sector_all_sectors`, sourceUnit: 'tonnes per year',
+    entityFilter: [name], derive: { op: 'pick_entity' as const, entity: code }, yearMin: 1900,
+    validate: { min: 0, max, monotonicJump: max, requireProvenance: true },
+    primarySource: 'Community Emissions Data System (CEDS; Hoesly et al.) — via Our World in Data',
+  })),
+  // ── Wildfire, the honest history: the planet burns LESS land overall (savanna fires receding) yet
+  //    the dangerous forest fires grow — "less fire, more smoke." MODIS/GWIS burned area by land cover
+  //    via OWID, CC BY 4.0. World, 2002–2024. Multi-column → sourceColumn mandatory.
+  ...(([
+    ['savanna', 'savannas', 'Savanna & grassland area burned, World', 3.0e8],
+    ['forest', 'forest', 'Forest area burned, World', 1.0e8],
+  ]) as const).map(([slug, col, title, max]) => ({
+    id: `air_pollution.burn_${slug}.world`,
+    title, unit: 'hectares per year',
+    chartId: `airpoll-burn-${slug}`, adapter: 'owid' as const, slug: 'annual-burned-area-by-landcover',
+    sourceColumn: col, sourceUnit: 'hectares per year',
+    entityFilter: ['World'], derive: { op: 'pick_entity' as const, entity: 'OWID_WRL' },
+    validate: { min: 0, max, monotonicJump: max, requireProvenance: true },
+    primarySource: 'Global Wildfire Information System (GWIS) / MODIS — via Our World in Data',
+  })),
 ];
 
 export const byId = (id: string) => INDICATORS.find((s) => s.id === id);

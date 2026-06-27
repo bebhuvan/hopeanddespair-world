@@ -77,6 +77,7 @@ export interface IndicatorSpec {
   seriesName?: string;           // Ember: which energy source row to read (e.g. "Clean", "Fossil", "Wind and solar")
   sourceColumn?: string;         // which column to read (default: the single value column; Ember: the metric field)
   sourceColumns?: string[];      // OWID: sum these columns per row into one value (e.g. conflict types)
+  sourceUnit?: string;           // override the source's declared unit when its metadata is wrong (some OWID graphers mislabel counts as "Percent") — used as the series unit, validated vs registry `unit`
   entityFilter?: string[];       // restrict to these source entity names
   yearMin?: number;              // drop rows before this year (e.g. trim deep-time ice-core CO₂ to 1750+)
   yearMax?: number;              // drop rows after this year (e.g. OpenAlex tags works to future/incomplete years)

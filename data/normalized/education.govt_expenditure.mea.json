@@ -1,0 +1,117 @@
+[
+  {
+    "indicatorId": "education.govt_expenditure.mea",
+    "entity": "MEA",
+    "entityName": "Middle East, North Africa, Afghanistan & Pakistan",
+    "unit": "% of GDP",
+    "points": [
+      {
+        "t": 1975,
+        "value": 3.84899497032166
+      },
+      {
+        "t": 1976,
+        "value": 4.78996992111206
+      },
+      {
+        "t": 1977,
+        "value": 4.33670496940613
+      },
+      {
+        "t": 1980,
+        "value": 4.57553005218506
+      },
+      {
+        "t": 1981,
+        "value": 5.16767978668213
+      },
+      {
+        "t": 1982,
+        "value": 5.44717502593994
+      },
+      {
+        "t": 1983,
+        "value": 5.22148990631104
+      },
+      {
+        "t": 1984,
+        "value": 5.51744985580444
+      },
+      {
+        "t": 1986,
+        "value": 5.33007001876831
+      },
+      {
+        "t": 1989,
+        "value": 4.03414011001587
+      },
+      {
+        "t": 1996,
+        "value": 4.18530988693237
+      },
+      {
+        "t": 2004,
+        "value": 5.02110004425049
+      },
+      {
+        "t": 2006,
+        "value": 4.14588499069214
+      },
+      {
+        "t": 2008,
+        "value": 4.22755002975464
+      },
+      {
+        "t": 2010,
+        "value": 3.70917010307312
+      },
+      {
+        "t": 2012,
+        "value": 3.57230008734587
+      },
+      {
+        "t": 2013,
+        "value": 3.78372228032099
+      },
+      {
+        "t": 2015,
+        "value": 3.71272133351629
+      },
+      {
+        "t": 2016,
+        "value": 4.23311007022857
+      },
+      {
+        "t": 2017,
+        "value": 4.03832006454468
+      },
+      {
+        "t": 2018,
+        "value": 3.75143003463745
+      },
+      {
+        "t": 2019,
+        "value": 3.86019992828369
+      },
+      {
+        "t": 2020,
+        "value": 3.98417997360229
+      },
+      {
+        "t": 2022,
+        "value": 4.38311004638672
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SE.XPD.TOTL.GD.ZS",
+      "url": "https://data.worldbank.org/indicator/SE.XPD.TOTL.GD.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-21",
+      "checksum": "f36821410fb8cc53fbe556f490cad2efa309a33b2c0c56be568323fa70e017da",
+      "definition": "Government expenditure on education, total (% of GDP)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "UNESCO Institute for Statistics, via World Bank"
+    }
+  }
+]

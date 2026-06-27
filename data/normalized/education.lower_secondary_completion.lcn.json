@@ -1,0 +1,125 @@
+[
+  {
+    "indicatorId": "education.lower_secondary_completion.lcn",
+    "entity": "LCN",
+    "entityName": "Latin America & Caribbean",
+    "unit": "% of relevant age group",
+    "points": [
+      {
+        "t": 1999,
+        "value": 63.7193489074707
+      },
+      {
+        "t": 2000,
+        "value": 65.2313919067383
+      },
+      {
+        "t": 2001,
+        "value": 66.3718185424805
+      },
+      {
+        "t": 2002,
+        "value": 68.8999328613281
+      },
+      {
+        "t": 2003,
+        "value": 70.0437393188477
+      },
+      {
+        "t": 2004,
+        "value": 71.5017318725586
+      },
+      {
+        "t": 2005,
+        "value": 73.9535598754883
+      },
+      {
+        "t": 2006,
+        "value": 74.8087463378906
+      },
+      {
+        "t": 2007,
+        "value": 75.5741271972656
+      },
+      {
+        "t": 2008,
+        "value": 77.1456069946289
+      },
+      {
+        "t": 2009,
+        "value": 78.3613433837891
+      },
+      {
+        "t": 2010,
+        "value": 79.6999664306641
+      },
+      {
+        "t": 2011,
+        "value": 79.3889923095703
+      },
+      {
+        "t": 2012,
+        "value": 79.387809753418
+      },
+      {
+        "t": 2013,
+        "value": 78.8666915893555
+      },
+      {
+        "t": 2014,
+        "value": 79.7878875732422
+      },
+      {
+        "t": 2015,
+        "value": 81.3102569580078
+      },
+      {
+        "t": 2016,
+        "value": 81.995979309082
+      },
+      {
+        "t": 2017,
+        "value": 81.7657699584961
+      },
+      {
+        "t": 2018,
+        "value": 81.4356079101562
+      },
+      {
+        "t": 2019,
+        "value": 81.655632019043
+      },
+      {
+        "t": 2020,
+        "value": 82.0959701538086
+      },
+      {
+        "t": 2021,
+        "value": 83.8762283325195
+      },
+      {
+        "t": 2022,
+        "value": 83.0166397094727
+      },
+      {
+        "t": 2023,
+        "value": 81.6189270019531
+      },
+      {
+        "t": 2024,
+        "value": 81.5376586914062
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SE.SEC.CMPT.LO.ZS",
+      "url": "https://data.worldbank.org/indicator/SE.SEC.CMPT.LO.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-21",
+      "checksum": "baad5cd106dda488440d8570126b7890066d606248919beb16506c133761b688",
+      "definition": "Lower secondary completion rate, total (% of relevant age group)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "UNESCO Institute for Statistics, via World Bank"
+    }
+  }
+]

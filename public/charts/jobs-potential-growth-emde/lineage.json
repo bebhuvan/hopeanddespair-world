@@ -1,0 +1,27 @@
+{
+  "entity": {
+    "id": "jobs.potential_growth.emde",
+    "unit": "potential output growth · % per year",
+    "points": 3
+  },
+  "wasDerivedFrom": [],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "transcribe_chart_pack",
+        "detail": "figure ES.1.D, emde potential growth by decade"
+      }
+    ],
+    "agent": "adapter:worldbank-jobs@jobs-1.0.0",
+    "used": {
+      "source": "worldbank-jobs",
+      "slug": "figure ES.1.D",
+      "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+      "vintage": "2026-06-27",
+      "checksum": "3c88a94690da09827e4edefcfb5eff65040ecc531b8d0abd0d2b85978c1c0740",
+      "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution"
+    }
+  },
+  "primarySource": "Kose and Ohnsorge (2024)"
+}

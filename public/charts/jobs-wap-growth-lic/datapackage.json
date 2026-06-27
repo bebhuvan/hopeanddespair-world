@@ -1,0 +1,38 @@
+{
+  "name": "jobs-wap_growth-lic",
+  "title": "Annual growth of the working-age population (15–64) in low-income countries, 2000–2050 — near 3% throughout, the only group that does not decelerate.",
+  "licenses": [
+    {
+      "name": "CC BY 3.0 IGO — World Bank, re-hosted with attribution",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — The Global Jobs Challenge (2026), CC BY 3.0 IGO",
+      "path": "https://www.worldbank.org/en/research/publication/global-jobs-challenge"
+    }
+  ],
+  "created": "2026-06-27",
+  "resources": [
+    {
+      "name": "jobs-wap_growth-lic",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "jobs_wap_growth_lic",
+            "type": "number",
+            "unit": "working-age population growth · % per year"
+          }
+        ]
+      }
+    }
+  ]
+}

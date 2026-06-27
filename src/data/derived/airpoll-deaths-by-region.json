@@ -1,0 +1,64 @@
+{
+  "chartId": "airpoll-deaths-by-region",
+  "kind": "bars",
+  "title": "Air-pollution mortality rate by region",
+  "unit": "deaths per 100,000 (age-standardised)",
+  "yearSpan": "2019",
+  "bars": [
+    {
+      "label": "Sub-Saharan Africa",
+      "value": 168,
+      "color": "despair"
+    },
+    {
+      "label": "South Asia",
+      "value": 140,
+      "color": "despair"
+    },
+    {
+      "label": "Middle East & N. Africa",
+      "value": 127,
+      "color": "despair"
+    },
+    {
+      "label": "East Asia & Pacific",
+      "value": 96,
+      "color": "ochre"
+    },
+    {
+      "label": "Europe & Central Asia",
+      "value": 45,
+      "color": "ochre"
+    },
+    {
+      "label": "Latin America & Carib.",
+      "value": 41,
+      "color": "ochre"
+    }
+  ],
+  "xmax": 200,
+  "xTicks": [
+    0,
+    50,
+    100,
+    150,
+    200
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SH.STA.AIRP.P5",
+    "url": "https://data.worldbank.org/indicator/SH.STA.AIRP.P5",
+    "license": "CC BY 4.0",
+    "vintage": "2019",
+    "checksum": "4bd1180c092484439a436df3ba2b2750c862caa4578de361556647e9bd5c18cd",
+    "definition": "Age-standardised mortality rate attributed to ambient + household air pollution, by World Bank region, 2019.",
+    "attribution": "World Bank WDI",
+    "primarySource": "WHO Global Health Observatory — via World Bank WDI"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest (2019) value per World Bank region from SH.STA.AIRP.P5, sorted descending."
+    }
+  ]
+}

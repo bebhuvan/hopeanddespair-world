@@ -1,0 +1,172 @@
+{
+  "indicatorId": "education.lower_secondary_completion.eas",
+  "entity": "EAS",
+  "entityName": "East Asia & Pacific",
+  "unit": "% of relevant age group",
+  "points": [
+    {
+      "t": 1989,
+      "value": 56.6954383850098
+    },
+    {
+      "t": 1990,
+      "value": 56.8915405273438
+    },
+    {
+      "t": 1991,
+      "value": 57.9424285888672
+    },
+    {
+      "t": 1992,
+      "value": 61.1161308288574
+    },
+    {
+      "t": 1993,
+      "value": 62.402759552002
+    },
+    {
+      "t": 1994,
+      "value": 60.8496284484863
+    },
+    {
+      "t": 1995,
+      "value": 61.5570411682129
+    },
+    {
+      "t": 1996,
+      "value": 62.1484107971191
+    },
+    {
+      "t": 1997,
+      "value": 63.8268089294434
+    },
+    {
+      "t": 1998,
+      "value": 66.543586730957
+    },
+    {
+      "t": 1999,
+      "value": 69.3542709350586
+    },
+    {
+      "t": 2000,
+      "value": 72.4342498779297
+    },
+    {
+      "t": 2001,
+      "value": 75.4292907714844
+    },
+    {
+      "t": 2002,
+      "value": 79.0182418823242
+    },
+    {
+      "t": 2003,
+      "value": 82.2628784179688
+    },
+    {
+      "t": 2004,
+      "value": 85.6789321899414
+    },
+    {
+      "t": 2005,
+      "value": 87.7749710083008
+    },
+    {
+      "t": 2006,
+      "value": 89.2095413208008
+    },
+    {
+      "t": 2007,
+      "value": 91.4067001342773
+    },
+    {
+      "t": 2008,
+      "value": 91.1156692504883
+    },
+    {
+      "t": 2009,
+      "value": 91.3549118041992
+    },
+    {
+      "t": 2010,
+      "value": 91.3794708251953
+    },
+    {
+      "t": 2011,
+      "value": 93.2978668212891
+    },
+    {
+      "t": 2012,
+      "value": 92.1523132324219
+    },
+    {
+      "t": 2013,
+      "value": 89.9870986938477
+    },
+    {
+      "t": 2014,
+      "value": 86.9707183837891
+    },
+    {
+      "t": 2015,
+      "value": 86.3445205688477
+    },
+    {
+      "t": 2016,
+      "value": 89.5642166137695
+    },
+    {
+      "t": 2017,
+      "value": 88.4796905517578
+    },
+    {
+      "t": 2018,
+      "value": 88.1071319580078
+    },
+    {
+      "t": 2019,
+      "value": 90.7737197875977
+    },
+    {
+      "t": 2020,
+      "value": 93.2712020874023
+    },
+    {
+      "t": 2021,
+      "value": 95.1239395141602
+    },
+    {
+      "t": 2022,
+      "value": 95.9843215942383
+    },
+    {
+      "t": 2023,
+      "value": 96.9069900512695
+    },
+    {
+      "t": 2024,
+      "value": 97.298957824707
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SE.SEC.CMPT.LO.ZS",
+    "url": "https://data.worldbank.org/indicator/SE.SEC.CMPT.LO.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-21",
+    "checksum": "baad5cd106dda488440d8570126b7890066d606248919beb16506c133761b688",
+    "definition": "Lower secondary completion rate, total (% of relevant age group)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "UNESCO Institute for Statistics, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity EAS"
+    }
+  ],
+  "derivedFrom": [
+    "EAS"
+  ]
+}

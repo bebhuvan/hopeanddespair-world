@@ -1,0 +1,38 @@
+{
+  "name": "education-tertiary_enrollment-ecs",
+  "title": "School enrollment, tertiary (% gross)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/SE.TER.ENRR"
+    }
+  ],
+  "created": "2026-06-21",
+  "resources": [
+    {
+      "name": "education-tertiary_enrollment-ecs",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "education_tertiary_enrollment_ecs",
+            "type": "number",
+            "unit": "% gross"
+          }
+        ]
+      }
+    }
+  ]
+}

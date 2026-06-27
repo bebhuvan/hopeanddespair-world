@@ -1,0 +1,136 @@
+{
+  "indicatorId": "air_pollution.pm25_exposure.world",
+  "entity": "OWID_WRL",
+  "entityName": "World",
+  "unit": "micrograms per cubic metre",
+  "points": [
+    {
+      "t": 1998,
+      "value": 24.423094
+    },
+    {
+      "t": 1999,
+      "value": 23.675999
+    },
+    {
+      "t": 2000,
+      "value": 27.297579
+    },
+    {
+      "t": 2001,
+      "value": 28.323208
+    },
+    {
+      "t": 2002,
+      "value": 29.009354
+    },
+    {
+      "t": 2003,
+      "value": 30.488817
+    },
+    {
+      "t": 2004,
+      "value": 30.385767
+    },
+    {
+      "t": 2005,
+      "value": 31.140463
+    },
+    {
+      "t": 2006,
+      "value": 32.437447
+    },
+    {
+      "t": 2007,
+      "value": 33.095463
+    },
+    {
+      "t": 2008,
+      "value": 33.61173
+    },
+    {
+      "t": 2009,
+      "value": 33.221035
+    },
+    {
+      "t": 2010,
+      "value": 33.332565
+    },
+    {
+      "t": 2011,
+      "value": 35.008305
+    },
+    {
+      "t": 2012,
+      "value": 33.69053
+    },
+    {
+      "t": 2013,
+      "value": 34.075886
+    },
+    {
+      "t": 2014,
+      "value": 34.70447
+    },
+    {
+      "t": 2015,
+      "value": 35.889328
+    },
+    {
+      "t": 2016,
+      "value": 35.07474
+    },
+    {
+      "t": 2017,
+      "value": 34.270584
+    },
+    {
+      "t": 2018,
+      "value": 33.41035
+    },
+    {
+      "t": 2019,
+      "value": 32.18141
+    },
+    {
+      "t": 2020,
+      "value": 30.161303
+    },
+    {
+      "t": 2021,
+      "value": 30.902021
+    },
+    {
+      "t": 2022,
+      "value": 30.40424
+    },
+    {
+      "t": 2023,
+      "value": 30.056519
+    },
+    {
+      "t": 2024,
+      "value": 29.901594
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "population_weighted_pm25",
+    "url": "https://ourworldindata.org/grapher/pm25-air-pollution",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-27",
+    "checksum": "d5e80bdc2cc9b7ef83f0140d20f42d49043ce42fe549032195986e8dfb31ae16",
+    "definition": "Annual population-weighted average concentration of fine particulate matter (PM2.5) in the air, measured in micrograms per cubic meter (µg/m³). Fine particulate matter (PM2.5) are particles with a diameter of 2.5 micrometers or less, which can pose significant health risks.",
+    "attribution": "Our World in Data",
+    "primarySource": "Atmospheric Composition Analysis Group (van Donkelaar et al., V6.GL) — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity OWID_WRL"
+    }
+  ],
+  "derivedFrom": [
+    "OWID_WRL"
+  ]
+}

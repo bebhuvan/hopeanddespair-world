@@ -1,0 +1,37 @@
+{
+  "indicatorId": "jobs.potential_growth.emde",
+  "entity": "EMDE",
+  "entityName": "EMDEs",
+  "unit": "potential output growth · % per year",
+  "points": [
+    {
+      "t": 2005,
+      "value": 5.9
+    },
+    {
+      "t": 2015,
+      "value": 5.2
+    },
+    {
+      "t": 2025,
+      "value": 4.1
+    }
+  ],
+  "provenance": {
+    "source": "worldbank-jobs",
+    "sourceIndicator": "The Global Jobs Challenge (2026) — figure ES.1.D",
+    "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+    "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution",
+    "vintage": "2026-06-27",
+    "checksum": "3c88a94690da09827e4edefcfb5eff65040ecc531b8d0abd0d2b85978c1c0740",
+    "definition": "GDP-weighted potential output growth for EMDEs, by decade (production-function estimates from Kose and Ohnsorge 2024). The tailwind that lifted earlier youth-bulge economies has weakened.",
+    "attribution": "World Bank — The Global Jobs Challenge (2026), CC BY 3.0 IGO",
+    "primarySource": "Kose and Ohnsorge (2024)"
+  },
+  "recipe": [
+    {
+      "op": "transcribe_chart_pack",
+      "detail": "figure ES.1.D, emde potential growth by decade"
+    }
+  ]
+}

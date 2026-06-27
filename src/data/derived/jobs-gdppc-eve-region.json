@@ -1,0 +1,71 @@
+{
+  "chartId": "jobs-gdppc-eve-region",
+  "kind": "bars",
+  "title": "Poorer at the starting line",
+  "unit": "GDP per capita on the eve of the region’s peak youth surge · US$ thousands (year shown)",
+  "yearSpan": "1978–2024",
+  "xmax": 8,
+  "xTicks": [
+    0,
+    2,
+    4,
+    6,
+    8
+  ],
+  "decimals": 1,
+  "bars": [
+    {
+      "label": "Latin America & Caribbean",
+      "value": 7.6,
+      "color": "stone",
+      "note": "2006"
+    },
+    {
+      "label": "Middle East & North Africa",
+      "value": 4.7,
+      "color": "despair",
+      "note": "2024"
+    },
+    {
+      "label": "East Asia & Pacific",
+      "value": 2.2,
+      "color": "stone",
+      "note": "1978"
+    },
+    {
+      "label": "Europe & Central Asia",
+      "value": 1.9,
+      "color": "stone",
+      "note": "1994"
+    },
+    {
+      "label": "South Asia",
+      "value": 1.9,
+      "color": "stone",
+      "note": "2011"
+    },
+    {
+      "label": "Sub-Saharan Africa",
+      "value": 1.2,
+      "color": "despair",
+      "note": "2024"
+    }
+  ],
+  "provenance": {
+    "source": "worldbank-jobs",
+    "sourceIndicator": "The Global Jobs Challenge (2026) — figure 3.3.B",
+    "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+    "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution",
+    "vintage": "2026-06-27",
+    "checksum": "abd8c384f5332f0dd99a04f4728eeac7c8a1a2366f7cdf9f9faa77e0e22f1515",
+    "definition": "Median GDP per capita in each EMDE region at the start of the decade when its largest youth inflow was (or is) recorded. Sub-Saharan Africa and the Middle East & North Africa reach their peaks now, at far lower incomes than East Asia or Europe & Central Asia had at theirs.",
+    "attribution": "World Bank — The Global Jobs Challenge (2026), CC BY 3.0 IGO",
+    "primarySource": "World Development Indicators"
+  },
+  "recipe": [
+    {
+      "op": "transcribe_chart_pack",
+      "detail": "figure 3.3.B, median GDP per capita at peak, US$000"
+    }
+  ]
+}

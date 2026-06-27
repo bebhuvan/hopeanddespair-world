@@ -1,0 +1,229 @@
+{
+  "indicatorId": "jobs.wap_growth.china",
+  "entity": "CHINA",
+  "entityName": "China",
+  "unit": "working-age population growth · % per year",
+  "points": [
+    {
+      "t": 2000,
+      "value": 0.57
+    },
+    {
+      "t": 2001,
+      "value": 0.57
+    },
+    {
+      "t": 2002,
+      "value": 0.62
+    },
+    {
+      "t": 2003,
+      "value": 0.65
+    },
+    {
+      "t": 2004,
+      "value": 0.65
+    },
+    {
+      "t": 2005,
+      "value": 0.62
+    },
+    {
+      "t": 2006,
+      "value": 0.57
+    },
+    {
+      "t": 2007,
+      "value": 0.59
+    },
+    {
+      "t": 2008,
+      "value": 0.56
+    },
+    {
+      "t": 2009,
+      "value": 0.46
+    },
+    {
+      "t": 2010,
+      "value": 0.44
+    },
+    {
+      "t": 2011,
+      "value": 0.34
+    },
+    {
+      "t": 2012,
+      "value": 0.14
+    },
+    {
+      "t": 2013,
+      "value": 0.08
+    },
+    {
+      "t": 2014,
+      "value": 0.11
+    },
+    {
+      "t": 2015,
+      "value": 0.2
+    },
+    {
+      "t": 2016,
+      "value": 0.24
+    },
+    {
+      "t": 2017,
+      "value": 0.19
+    },
+    {
+      "t": 2018,
+      "value": 0.18
+    },
+    {
+      "t": 2019,
+      "value": 0.18
+    },
+    {
+      "t": 2020,
+      "value": -0.02
+    },
+    {
+      "t": 2021,
+      "value": -0.18
+    },
+    {
+      "t": 2022,
+      "value": 0.04
+    },
+    {
+      "t": 2023,
+      "value": 0.12
+    },
+    {
+      "t": 2024,
+      "value": -0.07
+    },
+    {
+      "t": 2025,
+      "value": -0.2
+    },
+    {
+      "t": 2026,
+      "value": -0.24
+    },
+    {
+      "t": 2027,
+      "value": -0.23
+    },
+    {
+      "t": 2028,
+      "value": -0.26
+    },
+    {
+      "t": 2029,
+      "value": -0.29
+    },
+    {
+      "t": 2030,
+      "value": -0.3
+    },
+    {
+      "t": 2031,
+      "value": -0.26
+    },
+    {
+      "t": 2032,
+      "value": -0.27
+    },
+    {
+      "t": 2033,
+      "value": -0.34
+    },
+    {
+      "t": 2034,
+      "value": -0.38
+    },
+    {
+      "t": 2035,
+      "value": -0.44
+    },
+    {
+      "t": 2036,
+      "value": -0.46
+    },
+    {
+      "t": 2037,
+      "value": -0.44
+    },
+    {
+      "t": 2038,
+      "value": -0.42
+    },
+    {
+      "t": 2039,
+      "value": -0.42
+    },
+    {
+      "t": 2040,
+      "value": -0.4
+    },
+    {
+      "t": 2041,
+      "value": -0.38
+    },
+    {
+      "t": 2042,
+      "value": -0.37
+    },
+    {
+      "t": 2043,
+      "value": -0.38
+    },
+    {
+      "t": 2044,
+      "value": -0.39
+    },
+    {
+      "t": 2045,
+      "value": -0.42
+    },
+    {
+      "t": 2046,
+      "value": -0.42
+    },
+    {
+      "t": 2047,
+      "value": -0.41
+    },
+    {
+      "t": 2048,
+      "value": -0.38
+    },
+    {
+      "t": 2049,
+      "value": -0.35
+    },
+    {
+      "t": 2050,
+      "value": -0.33
+    }
+  ],
+  "provenance": {
+    "source": "worldbank-jobs",
+    "sourceIndicator": "The Global Jobs Challenge (2026) — figure 2.3.B",
+    "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+    "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution",
+    "vintage": "2026-06-27",
+    "checksum": "b6c6ee3cd6c1aaf3287b3a7d4c8bc00304bd160ea39c415ae83ec28b1274f32e",
+    "definition": "Annual growth of the working-age population (15–64) in China, 2000–2050 — turning negative as it ages.",
+    "attribution": "World Bank — The Global Jobs Challenge (2026), CC BY 3.0 IGO",
+    "primarySource": "UN World Population Prospects 2024"
+  },
+  "recipe": [
+    {
+      "op": "transcribe_chart_pack",
+      "detail": "figure 2.3.B, china working-age population growth"
+    }
+  ]
+}

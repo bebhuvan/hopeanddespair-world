@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "education.youth_literacy.eas",
+    "unit": "%",
+    "points": 49
+  },
+  "wasDerivedFrom": [
+    "EAS"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity EAS"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SE.ADT.1524.LT.ZS",
+      "url": "https://data.worldbank.org/indicator/SE.ADT.1524.LT.ZS",
+      "vintage": "2026-06-21",
+      "checksum": "27c899a15beffb27b7b2d3e49db53e10a02a3d3e4d2ef711e5a87222fc25651b",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UNESCO Institute for Statistics, via World Bank"
+}

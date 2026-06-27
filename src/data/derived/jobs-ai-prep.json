@@ -1,0 +1,100 @@
+{
+  "chartId": "jobs-ai-prep",
+  "kind": "bars",
+  "title": "Least ready for the next wave",
+  "unit": "AI Preparedness Index (0–1), four components stacked · 2023",
+  "yearSpan": "2023",
+  "xmax": 0.5,
+  "xTicks": [
+    0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5
+  ],
+  "decimals": 2,
+  "legend": [
+    {
+      "label": "Digital",
+      "color": "despair"
+    },
+    {
+      "label": "Innovation",
+      "color": "ochre"
+    },
+    {
+      "label": "Human capital",
+      "color": "uncertain"
+    },
+    {
+      "label": "Regulation",
+      "color": "stone"
+    }
+  ],
+  "bars": [
+    {
+      "label": "EMDEs with a large jobs challenge",
+      "value": 0.29,
+      "color": "stone",
+      "segments": [
+        {
+          "value": 0.05,
+          "color": "despair"
+        },
+        {
+          "value": 0.09,
+          "color": "ochre"
+        },
+        {
+          "value": 0.08,
+          "color": "uncertain"
+        },
+        {
+          "value": 0.07,
+          "color": "stone"
+        }
+      ]
+    },
+    {
+      "label": "Other EMDEs",
+      "value": 0.44,
+      "color": "stone",
+      "segments": [
+        {
+          "value": 0.1,
+          "color": "despair"
+        },
+        {
+          "value": 0.11,
+          "color": "ochre"
+        },
+        {
+          "value": 0.12,
+          "color": "uncertain"
+        },
+        {
+          "value": 0.11,
+          "color": "stone"
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "source": "worldbank-jobs",
+    "sourceIndicator": "The Global Jobs Challenge (2026) — figure 3.4.A",
+    "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+    "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution",
+    "vintage": "2026-06-27",
+    "checksum": "fb3210c587a8e258c2bff06b6868822bb6328fafefe751f82dc7a555b43abf9e",
+    "definition": "Average score on the IMF AI Preparedness Index (Cazzaniga et al. 2024), as published by the World Bank, split into its four components. \"EMDEs with a large jobs challenge\" are those where young people are at least 30% of the 15+ population in 2035.",
+    "attribution": "World Bank — The Global Jobs Challenge (2026), CC BY 3.0 IGO",
+    "primarySource": "Cazzaniga et al. (2024), IMF"
+  },
+  "recipe": [
+    {
+      "op": "transcribe_chart_pack",
+      "detail": "figure 3.4.A, AI Preparedness Index components"
+    }
+  ]
+}

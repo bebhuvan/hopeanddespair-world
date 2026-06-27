@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "air_pollution.mortality.world",
+    "unit": "per 100,000 (age-standardised)",
+    "points": 1
+  },
+  "wasDerivedFrom": [
+    "WLD"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity WLD"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SH.STA.AIRP.P5",
+      "url": "https://data.worldbank.org/indicator/SH.STA.AIRP.P5",
+      "vintage": "2026-06-27",
+      "checksum": "ea8c58adbbf52b7ead640d14c8e2fbd9b923abb298ce598292594f56576232a3",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "WHO Global Health Observatory — via World Bank WDI"
+}

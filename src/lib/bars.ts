@@ -30,12 +30,30 @@ export interface BarSpec {
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const wm = (W: number, H: number) => `<text x="${W - 2}" y="${H - 3}" text-anchor="end" class="wm">hopeanddespair.world</text>`;
 
+/** Wrap legend items into rows that fit `avail` px. Item width = swatch-to-text offset (sw) +
+    label (charW px/char) + trailing gap. A 2-item legend stays on one row (unchanged); a 3–4-item
+    legend wraps instead of running off the right edge — the mobile overflow this fixes. */
+function legendRows(legend: { label: string; color: string }[], avail: number, sw: number, charW: number, gap: number) {
+  const rows: { label: string; color: string; w: number }[][] = [];
+  let row: { label: string; color: string; w: number }[] = [], w = 0;
+  for (const lg of legend) {
+    const iw = sw + lg.label.length * charW + gap;
+    if (w + iw > avail && row.length) { rows.push(row); row = []; w = 0; }
+    row.push({ ...lg, w: iw }); w += iw;
+  }
+  if (row.length) rows.push(row);
+  return rows;
+}
+
 export function barChart(o: BarSpec): Rendered {
   const fmt = o.fmt ?? ((v: number) => v.toFixed(o.decimals ?? 1));
   const n = o.bars.length;
   const rowH = 30, barH = 17;
-  // extra headroom when a ref line or legend is present, so its label sits in the top margin
-  const W = 920, m = { l: 196, r: 64, t: (o.refLines?.length ? 28 : 14) + (o.legend?.length ? 20 : 0), b: 42 };
+  // extra headroom when a ref line or legend is present, so its label sits in the top margin. A
+  // multi-item legend may wrap to several rows; reserve a row's height (20) for each.
+  const W = 920, mL = 196, mR = 64;
+  const legRows = o.legend?.length ? legendRows(o.legend, W - mR - mL, 17, 9.7, 28) : [];
+  const m = { l: mL, r: mR, t: (o.refLines?.length ? 28 : 14) + legRows.length * 20, b: 42 };
   const H = m.t + m.b + n * rowH;
   const x0 = m.l, x1 = W - m.r;
   const X = (v: number) => x0 + (Math.max(0, v) / o.xmax) * (x1 - x0);
@@ -49,14 +67,14 @@ export function barChart(o: BarSpec): Rendered {
   }
   // legend (segmented bars) — swatches in the top margin, left-aligned to the plot. Pinned to a
   // compact 16px (the .ser default balloons to 24px on the desktop render, which overflows the row).
-  if (o.legend?.length) {
-    let lx = x0; const ly = 14;
-    for (const lg of o.legend) {
+  legRows.forEach((rrow, ri) => {
+    let lx = x0; const ly = 14 + ri * 20;
+    for (const lg of rrow) {
       g += `<rect x="${lx.toFixed(1)}" y="${(ly - 10).toFixed(1)}" width="12" height="12" rx="2" fill="${lg.color}" fill-opacity="0.86"/>`;
       g += `<text x="${(lx + 17).toFixed(1)}" y="${ly}" fill="#7C7A72" class="ser" style="font-size:16px">${esc(lg.label)}</text>`;
-      lx += 17 + lg.label.length * 9.7 + 28;
+      lx += lg.w;
     }
-  }
+  });
   // bars + labels
   o.bars.forEach((b, i) => {
     const cy = m.t + i * rowH + rowH / 2;
@@ -99,7 +117,9 @@ export function barChart(o: BarSpec): Rendered {
 export function barChartMobile(o: BarSpec): Rendered {
   const fmt = o.fmt ?? ((v: number) => v.toFixed(o.decimals ?? 1));
   const n = o.bars.length;
-  const W = 390, m = { l: 4, r: 10, t: 4 + (o.legend?.length ? 20 : 0), b: 26 };
+  const W = 390, mL = 4, mR = 10;
+  const legRows = o.legend?.length ? legendRows(o.legend, W - mR - mL, 14, 7.5, 16) : [];
+  const m = { l: mL, r: mR, t: 4 + legRows.length * 18, b: 26 };
   const rowH = 44, barH = 15;
   const H = m.t + n * rowH + m.b;
   const x0 = m.l, x1 = W - m.r;
@@ -114,14 +134,14 @@ export function barChartMobile(o: BarSpec): Rendered {
     g += `<text x="${tx.toFixed(1)}" y="${(H - m.b + 17).toFixed(1)}" text-anchor="middle" style="font-size:12px">${t}</text>`;
   }
   // legend (segmented bars) — compact swatches at the top
-  if (o.legend?.length) {
-    let lx = x0; const ly = 12;
-    for (const lg of o.legend) {
+  legRows.forEach((rrow, ri) => {
+    let lx = x0; const ly = 12 + ri * 18;
+    for (const lg of rrow) {
       g += `<rect x="${lx.toFixed(1)}" y="${ly - 9}" width="10" height="10" rx="2" fill="${lg.color}" fill-opacity="0.86"/>`;
       g += `<text x="${(lx + 14).toFixed(1)}" y="${ly}" fill="#7C7A72" style="font-size:12px">${esc(lg.label)}</text>`;
-      lx += 14 + lg.label.length * 7.5 + 16;
+      lx += lg.w;
     }
-  }
+  });
   o.bars.forEach((b, i) => {
     const top = m.t + i * rowH;
     const labelY = top + 15, barY = top + 23;

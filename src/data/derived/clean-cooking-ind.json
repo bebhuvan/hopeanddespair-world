@@ -1,0 +1,124 @@
+{
+  "indicatorId": "air_pollution.clean_cooking.ind",
+  "entity": "IND",
+  "entityName": "India",
+  "unit": "% of population",
+  "points": [
+    {
+      "t": 2000,
+      "value": 22.7
+    },
+    {
+      "t": 2001,
+      "value": 23.8
+    },
+    {
+      "t": 2002,
+      "value": 24.9
+    },
+    {
+      "t": 2003,
+      "value": 26.2
+    },
+    {
+      "t": 2004,
+      "value": 27.3
+    },
+    {
+      "t": 2005,
+      "value": 28.3
+    },
+    {
+      "t": 2006,
+      "value": 29.3
+    },
+    {
+      "t": 2007,
+      "value": 30.7
+    },
+    {
+      "t": 2008,
+      "value": 31.9
+    },
+    {
+      "t": 2009,
+      "value": 33.6
+    },
+    {
+      "t": 2010,
+      "value": 35
+    },
+    {
+      "t": 2011,
+      "value": 36.95
+    },
+    {
+      "t": 2012,
+      "value": 39.3
+    },
+    {
+      "t": 2013,
+      "value": 42.4
+    },
+    {
+      "t": 2014,
+      "value": 44.8
+    },
+    {
+      "t": 2015,
+      "value": 48.4
+    },
+    {
+      "t": 2016,
+      "value": 51.8
+    },
+    {
+      "t": 2017,
+      "value": 55.3
+    },
+    {
+      "t": 2018,
+      "value": 59
+    },
+    {
+      "t": 2019,
+      "value": 62.7
+    },
+    {
+      "t": 2020,
+      "value": 66.5
+    },
+    {
+      "t": 2021,
+      "value": 70.2
+    },
+    {
+      "t": 2022,
+      "value": 73.4
+    },
+    {
+      "t": 2023,
+      "value": 76.7
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "EG.CFT.ACCS.ZS",
+    "url": "https://data.worldbank.org/indicator/EG.CFT.ACCS.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-27",
+    "checksum": "913e2177ddb6ca9bdbd8d4f6bcfb8ed09ebc71b0767e98f1b3371d5a7b5cde58",
+    "definition": "Access to clean fuels and technologies for cooking (% of population)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO Household Energy Database — via World Bank WDI"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity IND"
+    }
+  ],
+  "derivedFrom": [
+    "IND"
+  ]
+}

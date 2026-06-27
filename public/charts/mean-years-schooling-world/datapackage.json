@@ -1,0 +1,38 @@
+{
+  "name": "education-mean_years_schooling-world",
+  "title": "Average years of formal education for individuals aged 15-64.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/mean-years-of-schooling"
+    }
+  ],
+  "created": "2026-06-21",
+  "resources": [
+    {
+      "name": "education-mean_years_schooling-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "education_mean_years_schooling_world",
+            "type": "number",
+            "unit": "years"
+          }
+        ]
+      }
+    }
+  ]
+}

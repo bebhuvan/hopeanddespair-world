@@ -1,0 +1,125 @@
+[
+  {
+    "indicatorId": "education.primary_completion.sas",
+    "entity": "SAS",
+    "entityName": "South Asia",
+    "unit": "% of relevant age group",
+    "points": [
+      {
+        "t": 1999,
+        "value": 72.9934310913086
+      },
+      {
+        "t": 2000,
+        "value": 73.2091827392578
+      },
+      {
+        "t": 2001,
+        "value": 72.9853973388672
+      },
+      {
+        "t": 2002,
+        "value": 75.9950637817383
+      },
+      {
+        "t": 2003,
+        "value": 79.9442367553711
+      },
+      {
+        "t": 2004,
+        "value": 82.6651077270508
+      },
+      {
+        "t": 2005,
+        "value": 85.4228820800781
+      },
+      {
+        "t": 2006,
+        "value": 87.7274780273438
+      },
+      {
+        "t": 2007,
+        "value": 89.9575729370117
+      },
+      {
+        "t": 2008,
+        "value": 92.0575790405273
+      },
+      {
+        "t": 2009,
+        "value": 93.7507095336914
+      },
+      {
+        "t": 2010,
+        "value": 91.8194885253906
+      },
+      {
+        "t": 2011,
+        "value": 90.4560012817383
+      },
+      {
+        "t": 2012,
+        "value": 92.6713485717773
+      },
+      {
+        "t": 2013,
+        "value": 94.7800064086914
+      },
+      {
+        "t": 2014,
+        "value": 97.0457763671875
+      },
+      {
+        "t": 2015,
+        "value": 98.47509765625
+      },
+      {
+        "t": 2016,
+        "value": 98.778938293457
+      },
+      {
+        "t": 2017,
+        "value": 98.3310317993164
+      },
+      {
+        "t": 2018,
+        "value": 96.3312606811523
+      },
+      {
+        "t": 2019,
+        "value": 95.9352722167969
+      },
+      {
+        "t": 2020,
+        "value": 97.5530471801758
+      },
+      {
+        "t": 2021,
+        "value": 98.6153182983398
+      },
+      {
+        "t": 2022,
+        "value": 112.110626220703
+      },
+      {
+        "t": 2023,
+        "value": 93.8157730102539
+      },
+      {
+        "t": 2024,
+        "value": 94.3648986816406
+      }
+    ],
+    "provenance": {
+      "source": "worldbank",
+      "sourceIndicator": "SE.PRM.CMPT.ZS",
+      "url": "https://data.worldbank.org/indicator/SE.PRM.CMPT.ZS",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-21",
+      "checksum": "be10945174c68bcf8765f3e36772ac50e5579ef9c7c40451d98a9a691b40efa9",
+      "definition": "Primary completion rate, total (% of relevant age group)",
+      "attribution": "World Bank — World Development Indicators",
+      "primarySource": "UNESCO Institute for Statistics, via World Bank"
+    }
+  }
+]

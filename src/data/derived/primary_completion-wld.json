@@ -1,0 +1,176 @@
+{
+  "indicatorId": "education.primary_completion.wld",
+  "entity": "WLD",
+  "entityName": "World",
+  "unit": "% of relevant age group",
+  "points": [
+    {
+      "t": 1988,
+      "value": 83.8516998291016
+    },
+    {
+      "t": 1989,
+      "value": 83.341438293457
+    },
+    {
+      "t": 1990,
+      "value": 82.5055770874023
+    },
+    {
+      "t": 1991,
+      "value": 81.5889434814453
+    },
+    {
+      "t": 1992,
+      "value": 80.4896774291992
+    },
+    {
+      "t": 1993,
+      "value": 80.6055221557617
+    },
+    {
+      "t": 1994,
+      "value": 79.8627777099609
+    },
+    {
+      "t": 1995,
+      "value": 81.1511535644531
+    },
+    {
+      "t": 1996,
+      "value": 80.4256973266602
+    },
+    {
+      "t": 1997,
+      "value": 80.6614608764648
+    },
+    {
+      "t": 1998,
+      "value": 81.1098175048828
+    },
+    {
+      "t": 1999,
+      "value": 81.634407043457
+    },
+    {
+      "t": 2000,
+      "value": 81.9349670410156
+    },
+    {
+      "t": 2001,
+      "value": 82.7255020141602
+    },
+    {
+      "t": 2002,
+      "value": 83.2989273071289
+    },
+    {
+      "t": 2003,
+      "value": 83.5496063232422
+    },
+    {
+      "t": 2004,
+      "value": 84.1880035400391
+    },
+    {
+      "t": 2005,
+      "value": 85.0202484130859
+    },
+    {
+      "t": 2006,
+      "value": 85.3206329345703
+    },
+    {
+      "t": 2007,
+      "value": 86.4949798583984
+    },
+    {
+      "t": 2008,
+      "value": 88.2013168334961
+    },
+    {
+      "t": 2009,
+      "value": 89.0043411254883
+    },
+    {
+      "t": 2010,
+      "value": 88.5195999145508
+    },
+    {
+      "t": 2011,
+      "value": 87.7716217041016
+    },
+    {
+      "t": 2012,
+      "value": 88.0860290527344
+    },
+    {
+      "t": 2013,
+      "value": 88.3091735839844
+    },
+    {
+      "t": 2014,
+      "value": 88.1251831054688
+    },
+    {
+      "t": 2015,
+      "value": 87.8672790527344
+    },
+    {
+      "t": 2016,
+      "value": 88.4609909057617
+    },
+    {
+      "t": 2017,
+      "value": 88.2010192871094
+    },
+    {
+      "t": 2018,
+      "value": 88.0505294799805
+    },
+    {
+      "t": 2019,
+      "value": 87.8868026733398
+    },
+    {
+      "t": 2020,
+      "value": 88.0408477783203
+    },
+    {
+      "t": 2021,
+      "value": 88.6989212036133
+    },
+    {
+      "t": 2022,
+      "value": 91.0532073974609
+    },
+    {
+      "t": 2023,
+      "value": 87.3170776367188
+    },
+    {
+      "t": 2024,
+      "value": 88.0215835571289
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SE.PRM.CMPT.ZS",
+    "url": "https://data.worldbank.org/indicator/SE.PRM.CMPT.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-21",
+    "checksum": "be10945174c68bcf8765f3e36772ac50e5579ef9c7c40451d98a9a691b40efa9",
+    "definition": "Primary completion rate, total (% of relevant age group)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "UNESCO Institute for Statistics, via World Bank"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity WLD"
+    }
+  ],
+  "derivedFrom": [
+    "WLD"
+  ]
+}

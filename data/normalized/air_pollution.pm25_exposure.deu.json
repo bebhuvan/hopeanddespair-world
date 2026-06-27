@@ -1,0 +1,129 @@
+[
+  {
+    "indicatorId": "air_pollution.pm25_exposure.deu",
+    "entity": "DEU",
+    "entityName": "Germany",
+    "unit": "micrograms per cubic metre",
+    "points": [
+      {
+        "t": 1998,
+        "value": 16.5
+      },
+      {
+        "t": 1999,
+        "value": 15.4
+      },
+      {
+        "t": 2000,
+        "value": 14.9
+      },
+      {
+        "t": 2001,
+        "value": 14.7
+      },
+      {
+        "t": 2002,
+        "value": 15.8
+      },
+      {
+        "t": 2003,
+        "value": 16.3
+      },
+      {
+        "t": 2004,
+        "value": 14.7
+      },
+      {
+        "t": 2005,
+        "value": 14.8
+      },
+      {
+        "t": 2006,
+        "value": 16.1
+      },
+      {
+        "t": 2007,
+        "value": 13.5
+      },
+      {
+        "t": 2008,
+        "value": 13.9
+      },
+      {
+        "t": 2009,
+        "value": 14.9
+      },
+      {
+        "t": 2010,
+        "value": 15.5
+      },
+      {
+        "t": 2011,
+        "value": 15.3
+      },
+      {
+        "t": 2012,
+        "value": 13
+      },
+      {
+        "t": 2013,
+        "value": 13.5
+      },
+      {
+        "t": 2014,
+        "value": 13.5
+      },
+      {
+        "t": 2015,
+        "value": 12.1
+      },
+      {
+        "t": 2016,
+        "value": 11.8
+      },
+      {
+        "t": 2017,
+        "value": 11.8
+      },
+      {
+        "t": 2018,
+        "value": 12.3
+      },
+      {
+        "t": 2019,
+        "value": 10.1
+      },
+      {
+        "t": 2020,
+        "value": 8.8
+      },
+      {
+        "t": 2021,
+        "value": 9.4
+      },
+      {
+        "t": 2022,
+        "value": 9.3
+      },
+      {
+        "t": 2023,
+        "value": 8.5
+      },
+      {
+        "t": 2024,
+        "value": 9.1
+      }
+    ],
+    "provenance": {
+      "source": "owid",
+      "sourceIndicator": "population_weighted_pm25",
+      "url": "https://ourworldindata.org/grapher/pm25-air-pollution",
+      "license": "CC BY 4.0",
+      "vintage": "2026-06-27",
+      "checksum": "d5e80bdc2cc9b7ef83f0140d20f42d49043ce42fe549032195986e8dfb31ae16",
+      "definition": "Annual population-weighted average concentration of fine particulate matter (PM2.5) in the air, measured in micrograms per cubic meter (µg/m³). Fine particulate matter (PM2.5) are particles with a diameter of 2.5 micrometers or less, which can pose significant health risks.",
+      "attribution": "Our World in Data",
+      "primarySource": "Atmospheric Composition Analysis Group (van Donkelaar et al., V6.GL) — via Our World in Data"
+    }
+  }
+]

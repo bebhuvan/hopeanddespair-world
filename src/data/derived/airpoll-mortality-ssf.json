@@ -1,0 +1,32 @@
+{
+  "indicatorId": "air_pollution.mortality.ssf",
+  "entity": "SSF",
+  "entityName": "Sub-Saharan Africa",
+  "unit": "per 100,000 (age-standardised)",
+  "points": [
+    {
+      "t": 2019,
+      "value": 168.356267195049
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "SH.STA.AIRP.P5",
+    "url": "https://data.worldbank.org/indicator/SH.STA.AIRP.P5",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-27",
+    "checksum": "ea8c58adbbf52b7ead640d14c8e2fbd9b923abb298ce598292594f56576232a3",
+    "definition": "Mortality rate attributed to household and ambient air pollution, age-standardized (per 100,000 population)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO Global Health Observatory — via World Bank WDI"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity SSF"
+    }
+  ],
+  "derivedFrom": [
+    "SSF"
+  ]
+}

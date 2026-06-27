@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "air_pollution.clean_cooking.sas",
+    "unit": "% of population",
+    "points": 24
+  },
+  "wasDerivedFrom": [
+    "SAS"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity SAS"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "EG.CFT.ACCS.ZS",
+      "url": "https://data.worldbank.org/indicator/EG.CFT.ACCS.ZS",
+      "vintage": "2026-06-27",
+      "checksum": "913e2177ddb6ca9bdbd8d4f6bcfb8ed09ebc71b0767e98f1b3371d5a7b5cde58",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "WHO Household Energy Database — via World Bank WDI"
+}

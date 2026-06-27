@@ -1,0 +1,38 @@
+{
+  "name": "jobs-youth_region-mna",
+  "title": "Young people aged 15–24 living in Middle East & North Africa in 2000 and (projected) 2035.",
+  "licenses": [
+    {
+      "name": "CC BY 3.0 IGO — World Bank, re-hosted with attribution",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — The Global Jobs Challenge (2026), CC BY 3.0 IGO",
+      "path": "https://www.worldbank.org/en/research/publication/global-jobs-challenge"
+    }
+  ],
+  "created": "2026-06-27",
+  "resources": [
+    {
+      "name": "jobs-youth_region-mna",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "jobs_youth_region_mna",
+            "type": "number",
+            "unit": "young people aged 15–24 · millions"
+          }
+        ]
+      }
+    }
+  ]
+}

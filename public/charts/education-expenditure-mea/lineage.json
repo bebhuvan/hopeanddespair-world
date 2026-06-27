@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "education.govt_expenditure.mea",
+    "unit": "% of GDP",
+    "points": 24
+  },
+  "wasDerivedFrom": [
+    "MEA"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity MEA"
+      }
+    ],
+    "agent": "adapter:worldbank@1.0.0",
+    "used": {
+      "source": "worldbank",
+      "slug": "SE.XPD.TOTL.GD.ZS",
+      "url": "https://data.worldbank.org/indicator/SE.XPD.TOTL.GD.ZS",
+      "vintage": "2026-06-21",
+      "checksum": "f36821410fb8cc53fbe556f490cad2efa309a33b2c0c56be568323fa70e017da",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UNESCO Institute for Statistics, via World Bank"
+}

@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "id": "education.mean_years_schooling.world",
+    "unit": "years",
+    "points": 31
+  },
+  "wasDerivedFrom": [
+    "OWID_WRL"
+  ],
+  "wasGeneratedBy": {
+    "activity": "pipeline",
+    "recipe": [
+      {
+        "op": "pick_entity",
+        "detail": "selected entity World"
+      }
+    ],
+    "agent": "adapter:owid@1.0.0",
+    "used": {
+      "source": "owid",
+      "slug": "mean-years-of-schooling",
+      "url": "https://ourworldindata.org/grapher/mean-years-of-schooling",
+      "vintage": "2026-06-21",
+      "checksum": "92c03f5c1fae2c5434ffe65c1e24407826a364a2257445b86c2b87ae902376fa",
+      "license": "CC BY 4.0"
+    }
+  },
+  "primarySource": "UNESCO Institute for Statistics; Lee & Lee — via Our World in Data"
+}

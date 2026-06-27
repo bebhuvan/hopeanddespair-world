@@ -1,0 +1,44 @@
+{
+  "chartId": "jobs-investment-employment",
+  "kind": "bars",
+  "title": "The lever that exists",
+  "unit": "median employment growth · % per year · EMDEs, 2000–23",
+  "yearSpan": "2000–23",
+  "xmax": 3,
+  "xTicks": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "decimals": 1,
+  "bars": [
+    {
+      "label": "Low investment growth",
+      "value": 1.7,
+      "color": "stone"
+    },
+    {
+      "label": "High investment growth",
+      "value": 2.7,
+      "color": "hope"
+    }
+  ],
+  "provenance": {
+    "source": "worldbank-jobs",
+    "sourceIndicator": "The Global Jobs Challenge (2026) — figure ES.1.F",
+    "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+    "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution",
+    "vintage": "2026-06-27",
+    "checksum": "adb64c228c65683b397408a27472d09d2d2740083b740045fc702433d4be88db",
+    "definition": "Median annual employment growth in EMDEs in the bottom third versus the top third of investment growth, 2000–23 (difference significant at the 1% level). Investment is the closest thing to a lever on jobs.",
+    "attribution": "World Bank — The Global Jobs Challenge (2026), CC BY 3.0 IGO",
+    "primarySource": "Haver Analytics; ILOSTAT; WDI"
+  },
+  "recipe": [
+    {
+      "op": "transcribe_chart_pack",
+      "detail": "figure ES.1.F, employment growth by investment tercile"
+    }
+  ]
+}

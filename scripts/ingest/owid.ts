@@ -66,7 +66,7 @@ export const owid: Adapter = {
     // A summed total isn't described by any single source column, so use the registry title.
     const definition = spec.sourceColumns ? spec.title : (colMeta.descriptionShort || spec.title);
     const attribution = colMeta.attributionShort || producers.join('; ') || 'Our World in Data';
-    const sourceUnit = colMeta.unit || spec.unit; // the source's declared unit — validated vs registry
+    const sourceUnit = spec.sourceUnit || colMeta.unit || spec.unit; // source's declared unit (spec may override known-bad OWID metadata) — validated vs registry
 
     const byEntity = new Map<string, CanonicalSeries>();
     for (let r = 1; r < rows.length; r++) {

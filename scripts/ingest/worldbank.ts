@@ -43,7 +43,10 @@ export const worldbank: Adapter = {
     const byEntity = new Map<string, CanonicalSeries>();
     for (const row of rows) {
       const entityName: string = row?.country?.value;
-      const entity: string = row?.countryiso3code;
+      // WB leaves countryiso3code empty for income-group aggregates (High income, etc.) while
+      // populating it for countries and region aggregates; fall back to the 2-letter WB id (XD,
+      // XT, XN, XM) so income cuts resolve. Only rescues rows that were being skipped.
+      const entity: string = row?.countryiso3code || row?.country?.id;
       if (!entity || !entityName) continue; // skip malformed
       if (spec.entityFilter && !spec.entityFilter.includes(entityName)) continue;
       if (row.value == null) continue;

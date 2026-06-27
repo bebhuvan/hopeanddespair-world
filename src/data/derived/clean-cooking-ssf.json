@@ -1,0 +1,124 @@
+{
+  "indicatorId": "air_pollution.clean_cooking.ssf",
+  "entity": "SSF",
+  "entityName": "Sub-Saharan Africa",
+  "unit": "% of population",
+  "points": [
+    {
+      "t": 2000,
+      "value": 8.77672225610676
+    },
+    {
+      "t": 2001,
+      "value": 9.05328026171268
+    },
+    {
+      "t": 2002,
+      "value": 9.34046847629111
+    },
+    {
+      "t": 2003,
+      "value": 9.64097612882848
+    },
+    {
+      "t": 2004,
+      "value": 9.94759988815126
+    },
+    {
+      "t": 2005,
+      "value": 10.2604937496415
+    },
+    {
+      "t": 2006,
+      "value": 10.5853331349365
+    },
+    {
+      "t": 2007,
+      "value": 10.9579693929835
+    },
+    {
+      "t": 2008,
+      "value": 11.3563377699721
+    },
+    {
+      "t": 2009,
+      "value": 11.730801652049
+    },
+    {
+      "t": 2010,
+      "value": 12.1401340454783
+    },
+    {
+      "t": 2011,
+      "value": 12.587901123864
+    },
+    {
+      "t": 2012,
+      "value": 13.0742788947517
+    },
+    {
+      "t": 2013,
+      "value": 13.5832686273296
+    },
+    {
+      "t": 2014,
+      "value": 14.2093179418386
+    },
+    {
+      "t": 2015,
+      "value": 14.9172432601717
+    },
+    {
+      "t": 2016,
+      "value": 15.7000199184262
+    },
+    {
+      "t": 2017,
+      "value": 16.5879074721228
+    },
+    {
+      "t": 2018,
+      "value": 17.6023274833175
+    },
+    {
+      "t": 2019,
+      "value": 18.7348388997508
+    },
+    {
+      "t": 2020,
+      "value": 19.8295773531226
+    },
+    {
+      "t": 2021,
+      "value": 20.8972425001111
+    },
+    {
+      "t": 2022,
+      "value": 21.9077839844353
+    },
+    {
+      "t": 2023,
+      "value": 22.7531963369271
+    }
+  ],
+  "provenance": {
+    "source": "worldbank",
+    "sourceIndicator": "EG.CFT.ACCS.ZS",
+    "url": "https://data.worldbank.org/indicator/EG.CFT.ACCS.ZS",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-27",
+    "checksum": "913e2177ddb6ca9bdbd8d4f6bcfb8ed09ebc71b0767e98f1b3371d5a7b5cde58",
+    "definition": "Access to clean fuels and technologies for cooking (% of population)",
+    "attribution": "World Bank — World Development Indicators",
+    "primarySource": "WHO Household Energy Database — via World Bank WDI"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity SSF"
+    }
+  ],
+  "derivedFrom": [
+    "SSF"
+  ]
+}

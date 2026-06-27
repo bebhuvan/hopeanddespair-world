@@ -1,0 +1,55 @@
+{
+  "chartId": "airpoll-morbidity-iceberg",
+  "kind": "bars",
+  "gate": "rehost",
+  "title": "The morbidity iceberg: what the death count leaves out",
+  "unit": "million affected births per year",
+  "yearSpan": "2019",
+  "bars": [
+    {
+      "label": "Newborn deaths (in the \"7 million\")",
+      "value": 0.5,
+      "color": "stone"
+    },
+    {
+      "label": "Stillbirths attributable to PM2.5",
+      "value": 0.83,
+      "color": "despair"
+    },
+    {
+      "label": "Low-birth-weight births",
+      "value": 2.76,
+      "color": "despair"
+    },
+    {
+      "label": "Preterm births (35.7% of all)",
+      "value": 5.87,
+      "color": "despair"
+    }
+  ],
+  "xmax": 6,
+  "xTicks": [
+    0,
+    2,
+    4,
+    6
+  ],
+  "provenance": {
+    "source": "multi",
+    "sourceIndicator": "Ghosh 2021; Xue 2022",
+    "url": "https://doi.org/10.1371/journal.pmed.1003718",
+    "license": "CC BY 4.0",
+    "vintage": "2019",
+    "checksum": "3d1e5b18e6fef4808569d1cc4d2fed018b24e3b59e5cc41467767f52113152d0",
+    "definition": "PM2.5-attributable adverse birth outcomes in a single year, set against the newborn deaths already counted in the headline toll. Preterm 5.87M (35.7% of all preterm births) and low-birth-weight 2.76M from Ghosh et al. 2021 (PLOS Medicine); stillbirths 0.83M (39.7% of the global total) from Xue et al. 2022 (Nature Communications).",
+    "attribution": "Ghosh et al. 2021 (PLOS Medicine); Xue et al. 2022 (Nature Communications)",
+    "primarySource": "Both CC BY 4.0 — derived 204-country tables re-hostable with attribution."
+  },
+  "recipe": [
+    {
+      "op": "morbidity_decomposition",
+      "detail": "Visible newborn deaths vs the larger, uncounted strata of PM2.5-attributable birth harm."
+    }
+  ],
+  "illustrative": false
+}

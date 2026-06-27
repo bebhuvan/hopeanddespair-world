@@ -1,0 +1,38 @@
+{
+  "name": "air_pollution-burn_savanna-world",
+  "title": "Area of other land types burnt by wildfires each year, in hectares. Includes wetlands, urban areas, snow and ice, bare ground, and water bodies.",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Our World in Data",
+      "path": "https://ourworldindata.org/grapher/annual-burned-area-by-landcover"
+    }
+  ],
+  "created": "2026-06-27",
+  "resources": [
+    {
+      "name": "air_pollution-burn_savanna-world",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "air_pollution_burn_savanna_world",
+            "type": "number",
+            "unit": "hectares per year"
+          }
+        ]
+      }
+    }
+  ]
+}

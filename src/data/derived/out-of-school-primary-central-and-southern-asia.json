@@ -1,0 +1,124 @@
+{
+  "indicatorId": "education.out_of_school_primary.central_and_southern_asia",
+  "entity": "Central and Southern Asia (SDG)",
+  "entityName": "Central and Southern Asia (SDG)",
+  "unit": "children",
+  "points": [
+    {
+      "t": 2000,
+      "value": 54760000
+    },
+    {
+      "t": 2001,
+      "value": 51420000
+    },
+    {
+      "t": 2002,
+      "value": 48520000
+    },
+    {
+      "t": 2003,
+      "value": 45720000
+    },
+    {
+      "t": 2004,
+      "value": 43680000
+    },
+    {
+      "t": 2005,
+      "value": 41700000
+    },
+    {
+      "t": 2006,
+      "value": 39740000
+    },
+    {
+      "t": 2007,
+      "value": 37820000
+    },
+    {
+      "t": 2008,
+      "value": 35760000
+    },
+    {
+      "t": 2009,
+      "value": 34450000
+    },
+    {
+      "t": 2010,
+      "value": 32390000
+    },
+    {
+      "t": 2011,
+      "value": 30760000
+    },
+    {
+      "t": 2012,
+      "value": 29370000
+    },
+    {
+      "t": 2013,
+      "value": 28300000
+    },
+    {
+      "t": 2014,
+      "value": 26880000
+    },
+    {
+      "t": 2015,
+      "value": 25490000
+    },
+    {
+      "t": 2016,
+      "value": 23810000
+    },
+    {
+      "t": 2017,
+      "value": 21890000
+    },
+    {
+      "t": 2018,
+      "value": 20080000
+    },
+    {
+      "t": 2019,
+      "value": 18380000
+    },
+    {
+      "t": 2020,
+      "value": 17010000
+    },
+    {
+      "t": 2021,
+      "value": 15960000
+    },
+    {
+      "t": 2022,
+      "value": 15600000
+    },
+    {
+      "t": 2023,
+      "value": 15090000
+    }
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "out_of_school_children_of_primary_school_age__both_sexes__number",
+    "url": "https://ourworldindata.org/grapher/out-of-school-children-of-primary-school-age-by-world-region",
+    "license": "CC BY 4.0",
+    "vintage": "2026-06-21",
+    "checksum": "c18b721b373ef2ff94204c33969c5f115670030382dfa11ba5bea970e4fe6b12",
+    "definition": "Children in the official primary school age range who are not enrolled in either primary or secondary education.",
+    "attribution": "Our World in Data",
+    "primarySource": "UNESCO Institute for Statistics — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "pick_entity",
+      "detail": "selected entity Central and Southern Asia (SDG)"
+    }
+  ],
+  "derivedFrom": [
+    "Central and Southern Asia (SDG)"
+  ]
+}

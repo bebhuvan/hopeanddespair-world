@@ -1,0 +1,108 @@
+{
+  "chartId": "pm25-by-country",
+  "kind": "bars",
+  "title": "PM2.5 exposure — a curated spread of countries",
+  "unit": "micrograms per cubic metre",
+  "yearSpan": "2024",
+  "bars": [
+    {
+      "label": "Bangladesh",
+      "value": 65,
+      "color": "despair"
+    },
+    {
+      "label": "Pakistan",
+      "value": 53.8,
+      "color": "despair"
+    },
+    {
+      "label": "Saudi Arabia",
+      "value": 50.4,
+      "color": "despair"
+    },
+    {
+      "label": "Nigeria",
+      "value": 50,
+      "color": "despair"
+    },
+    {
+      "label": "India",
+      "value": 44.2,
+      "color": "despair"
+    },
+    {
+      "label": "Egypt",
+      "value": 41.3,
+      "color": "despair"
+    },
+    {
+      "label": "Chad",
+      "value": 39.2,
+      "color": "despair"
+    },
+    {
+      "label": "China",
+      "value": 31.3,
+      "color": "ochre"
+    },
+    {
+      "label": "Indonesia",
+      "value": 18.5,
+      "color": "ochre"
+    },
+    {
+      "label": "Mexico",
+      "value": 18.3,
+      "color": "ochre"
+    },
+    {
+      "label": "Brazil",
+      "value": 15.3,
+      "color": "ochre"
+    },
+    {
+      "label": "United Kingdom",
+      "value": 8.8,
+      "color": "hope"
+    },
+    {
+      "label": "United States",
+      "value": 7.5,
+      "color": "hope"
+    },
+    {
+      "label": "Australia",
+      "value": 5.4,
+      "color": "hope"
+    },
+    {
+      "label": "Finland",
+      "value": 5.4,
+      "color": "hope"
+    }
+  ],
+  "xmax": 90,
+  "xTicks": [
+    0,
+    30,
+    60,
+    90
+  ],
+  "provenance": {
+    "source": "owid",
+    "sourceIndicator": "pm25-air-pollution",
+    "url": "https://ourworldindata.org/grapher/pm25-air-pollution",
+    "license": "CC BY 4.0",
+    "vintage": "2024",
+    "checksum": "63b50b7482ecb65b1b0cda6b3017cae6ef04b98030dcdd42ce628fe9b6d1b1c8",
+    "definition": "Population-weighted mean annual PM2.5 exposure, 2024, across a curated 15-country spread sorted descending.",
+    "attribution": "Our World in Data",
+    "primarySource": "Atmospheric Composition Analysis Group (van Donkelaar et al., V6.GL) — via Our World in Data"
+  },
+  "recipe": [
+    {
+      "op": "cross_section_latest",
+      "detail": "latest (2024) population-weighted PM2.5 per country from OWID pm25-air-pollution, 15 curated countries sorted descending."
+    }
+  ]
+}

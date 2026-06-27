@@ -1,0 +1,38 @@
+{
+  "name": "education-govt_expenditure-lcn",
+  "title": "Government expenditure on education, total (% of GDP)",
+  "licenses": [
+    {
+      "name": "CC BY 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "World Bank — World Development Indicators",
+      "path": "https://data.worldbank.org/indicator/SE.XPD.TOTL.GD.ZS"
+    }
+  ],
+  "created": "2026-06-21",
+  "resources": [
+    {
+      "name": "education-govt_expenditure-lcn",
+      "path": "data.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "year",
+            "type": "integer"
+          },
+          {
+            "name": "education_govt_expenditure_lcn",
+            "type": "number",
+            "unit": "% of GDP"
+          }
+        ]
+      }
+    }
+  ]
+}

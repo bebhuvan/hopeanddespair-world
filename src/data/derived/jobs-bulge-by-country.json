@@ -1,0 +1,84 @@
+{
+  "chartId": "jobs-bulge-by-country",
+  "kind": "bars",
+  "title": "Where the workforce swells most",
+  "unit": "increase in working-age population (15–64) · millions · 2025–35",
+  "yearSpan": "2025–35",
+  "xmax": 95,
+  "xTicks": [
+    0,
+    25,
+    50,
+    75
+  ],
+  "decimals": 1,
+  "bars": [
+    {
+      "label": "India",
+      "value": 90.6,
+      "color": "despair"
+    },
+    {
+      "label": "Nigeria",
+      "value": 39.9,
+      "color": "despair"
+    },
+    {
+      "label": "Pakistan",
+      "value": 35.5,
+      "color": "despair"
+    },
+    {
+      "label": "Ethiopia",
+      "value": 24,
+      "color": "ochre"
+    },
+    {
+      "label": "DR Congo",
+      "value": 23.4,
+      "color": "ochre"
+    },
+    {
+      "label": "Egypt",
+      "value": 15.3,
+      "color": "ochre"
+    },
+    {
+      "label": "Bangladesh",
+      "value": 14.5,
+      "color": "ochre"
+    },
+    {
+      "label": "Tanzania",
+      "value": 14.3,
+      "color": "stone"
+    },
+    {
+      "label": "Indonesia",
+      "value": 12.7,
+      "color": "stone"
+    },
+    {
+      "label": "Philippines",
+      "value": 10.4,
+      "color": "stone"
+    }
+  ],
+  "provenance": {
+    "source": "worldbank-jobs",
+    "sourceIndicator": "The Global Jobs Challenge (2026) — figure 2.8.C",
+    "url": "https://www.worldbank.org/en/research/publication/global-jobs-challenge",
+    "license": "CC BY 3.0 IGO — World Bank, re-hosted with attribution",
+    "vintage": "2026-06-27",
+    "checksum": "50bda4a6a25247843632452a020d54f864c320435bebc768b9f48163dbd5b8f1",
+    "definition": "The ten EMDEs whose working-age population (aged 15–64) grows most in absolute terms over 2025–35. India alone must absorb more than 90 million new working-age people.",
+    "attribution": "World Bank — The Global Jobs Challenge (2026), CC BY 3.0 IGO",
+    "primarySource": "UN World Population Prospects 2024"
+  },
+  "recipe": [
+    {
+      "op": "transcribe_chart_pack",
+      "detail": "figure 2.8.C, working-age increase by country, thousands→millions"
+    }
+  ]
+}
